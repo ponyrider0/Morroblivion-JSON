@@ -1,0 +1,70 @@
+{
+    "Topic": "1evidenceSofSconspiracy3 [DIAL:01320608]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 452, 
+        "Record Flags": {}, 
+        "FormID": "01322F9C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTR08Hlaalu [QUST:0101C64D]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "That is a matter for you to study. Only the widow of the dead king, Ravani Llethan, lives at Llethan Manor now. There might be guards. Perhaps you should go to offer your condolences to the widow, and have a look around.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0TieniusSDelitian "Tienius Delitian" [NPC_:01260A79]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 60.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "TARGET - Target Reference [00000000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1evidenceSofSconspiracy1 [DIAL:0132060D]", 
+        "TCLT - Choice": "1evidenceSofSconspiracy2 [DIAL:0132060B]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 02 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwtr08Hlaalu 2", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTR08Hlaalu [QUST:0101C64D]"
+        ]
+    }
+}

@@ -1,0 +1,80 @@
+{
+    "Topic": "mwEBQArtifactExploreRuinsTopic [DIAL:01F8E3E3]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 507, 
+        "Record Flags": {}, 
+        "FormID": "01F8E3E4", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwEBQArtifact [QUST:01F8E3E9]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01F8E3E6"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6C 69 6E"
+            }, 
+            "NAM1 - Response Text": "Yes. My brother Dalin and I were planning on going in. He, however, would like to wait for more help.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000004", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6C 69 6E"
+            }, 
+            "NAM1 - Response Text": "Our father perished inside, and we wish to avenge his death. I, however, believe that this is a matter of family honor, and we should go it alone.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwEBQArtifact "Helm of Tohan" [QUST:01F8E3E9]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "mwDarisNorvayne "Daris Norvayne" [NPC_:01F8E3DB]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 14 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwEBQArtifact 20", 
+        "References": [
+            "SCRO - Global Reference": "fbmwEBQArtifact [QUST:01F8E3E9]"
+        ]
+    }
+}

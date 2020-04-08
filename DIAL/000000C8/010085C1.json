@@ -1,0 +1,89 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 638, 
+        "Record Flags": {}, 
+        "FormID": "010085C1", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSWarlords [QUST:0101C638]", 
+    "PNAM - Previous INFO": "010085C0", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 4D 53"
+            }, 
+            "NAM1 - Response Text": "Dovor said to see me?  Well, err, he said... I mean, there's this guy, and I'm supposed to ask for.. I mean, I want his stuff, right?", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 4D 53"
+            }, 
+            "NAM1 - Response Text": "Dovor says you can get it.  I don't want to know anything more than that. Go find Bels Uvenim and get his spear and his helmet.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "77 4D 53"
+            }, 
+            "NAM1 - Response Text": "He's probably hanging around the Temple. That's it.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 80.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSWarlords "The Warlords" [QUST:0101C638]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0OlvyneSDobar "Olvyne Dobar" [NPC_:01260A8F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 5A 00 00 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "setstage fbmwMSWarlords 90\r\naddtopic 1BelsSUvenim", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMSWarlords [QUST:0101C638]", 
+            "SCRO - Global Reference": "1BelsSUvenim [DIAL:01311040]"
+        ]
+    }
+}

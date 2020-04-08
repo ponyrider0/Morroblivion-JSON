@@ -1,0 +1,83 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 523, 
+        "Record Flags": {}, 
+        "FormID": "0100A236", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwVRichTrader [QUST:0100340F]", 
+    "PNAM - Previous INFO": "01F88764", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "74 72 69"
+            }, 
+            "NAM1 - Response Text": "Okay, outlander, we've made it. I thank you for your help, and Rollie would if he were allowed in the city.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "74 72 69"
+            }, 
+            "NAM1 - Response Text": "I really must speak with someone about that. Think how much he'd enjoy visiting this place. He'd be talking about it for days.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "69 73 53"
+            }, 
+            "NAM1 - Response Text": "Oh, I suppose you're wondering about compensation for your trouble?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 90.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwVRichTrader "A Man and His Guar" [QUST:0100340F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0terisSraledran "Teris Raledran" [NPC_:012606C8]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

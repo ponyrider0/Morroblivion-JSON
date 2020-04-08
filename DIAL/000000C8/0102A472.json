@@ -1,0 +1,79 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 582, 
+        "Record Flags": {}, 
+        "FormID": "0102A472", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwBMMissionary [QUST:0101B6CC]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 46 42"
+            }, 
+            "NAM1 - Response Text": "Maybe where you're from it's all right to enter someone's chambers and play with their things, but it's not all right around here!  The missionary is MINE, understand? I knew you were trouble when I first laid eyes on ya!", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "19 E0 3E"
+            }, 
+            "NAM1 - Response Text": "Now I'm going to have to teach you some manners!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMMissionary "The Missing Missionary" [QUST:0101B6CC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0erichStheSunworthy "Erich the Unworthy" [NPC_:01260B30]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 36, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "10 10 09 00 02 00 21 00 6E 64 00 00 00 16 10 05 00 01 00 72 01 00 53 10 0A 00 02 00 72 01 00 6E 9C FF FF FF", 
+        "SCTX - Result script source": "modav aggression 100\r\nstartcombat player\r\nmoddisposition player -100", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

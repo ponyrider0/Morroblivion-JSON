@@ -1,0 +1,98 @@
+{
+    "Topic": "1littleSadvice [DIAL:01310986]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 395, 
+        "Record Flags": {}, 
+        "FormID": "0132192D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
+    "PNAM - Previous INFO": "0132192C", 
+    "Add topics": [
+        "NAME - Topic": "01310CFC", 
+        "NAME - Topic": "01310C4D", 
+        "NAME - Topic": "01310CF8", 
+        "NAME - Topic": "01310CF8", 
+        "NAME - Topic": "01310C1E"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "If you need to know about clothes, and you want to talk to a clothier, talk to Milie Hastien in Balmora.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsClass:68", 
+            "Unused": "00 00", 
+            "Parameter #1": "MerchClothier "Clothier" [CLAS:00024162]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0milieShastien "Milie Hastien" [NPC_:01260116]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "noLore "noLore" [FACT:0122001C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 90.000000000000000, 
+            "Function": "GetRandomPercent:77", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

@@ -1,0 +1,103 @@
+{
+    "Topic": "1safeSplace [DIAL:01310B0F]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 844, 
+        "Record Flags": {}, 
+        "FormID": "01AA3C7B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ11a [QUST:01001DCC]", 
+    "PNAM - Previous INFO": "01AA3C7A", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "4D 57 4D"
+            }, 
+            "NAM1 - Response Text": "In seasons past, when threatened, the Ahemmusa could take shelter in the ruins of Ald Daedroth.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "4D 57 4D"
+            }, 
+            "NAM1 - Response Text": "But now the priestess Hlireni Indavel has come and restored the Daedric shrine, and worshippers of Sheogorath dwell there, protected by terrible sorceries and summonings.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "4D 57 4D"
+            }, 
+            "NAM1 - Response Text": "First, you will go to Ald Daedroth and make it safe for the Ahemmusa.  Then you will return, and I will accompany you there,", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "6D 77 4D"
+            }, 
+            "NAM1 - Response Text": "If Ald Daedroth is a safe place for my people, then I will name you Nerevarine.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ10 "The Path of the Incarnate" [QUST:01001DC9]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0sinnammuSmirpal "Sinnammu Mirpal" [NPC_:01260180]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1makeSitSsafe [DIAL:01310A04]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 05 00 00 00 55 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "SetStage fbmwMQ11a 5\r\nShowMap mwAldDaedrothMapMarker", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQ11a [QUST:01001DCC]", 
+            "SCRO - Global Reference": "mwAldDaedrothMapMarker [REFR:01000F37]"
+        ]
+    }
+}

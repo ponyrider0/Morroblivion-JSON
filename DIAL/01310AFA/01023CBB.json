@@ -1,0 +1,61 @@
+{
+    "Topic": "1ashSstatue [DIAL:01310AFA]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 290, 
+        "Record Flags": {}, 
+        "FormID": "01023CBB", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHRClearSarethi [QUST:0100431A]", 
+    "PNAM - Previous INFO": "01023CBC", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "68 79 6E"
+            }, 
+            "NAM1 - Response Text": "The ash statues are a sign of the Sixth House. But they are not the main front. Destroy Dagoth Ur. Do not get sidetracked by smaller plots.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQRedoran "Redoran Hortator" [QUST:01001DDC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0athynSsarethi "Athyn Sarethi" [NPC_:012600B2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

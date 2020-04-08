@@ -1,0 +1,88 @@
+{
+    "Topic": "1ShrineSofStheSDead [DIAL:01310FC1]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 637, 
+        "Record Flags": {}, 
+        "FormID": "01320A57", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
+    "PNAM - Previous INFO": "01320A56", 
+    "Add topics": [
+        "NAME - Topic": "01310CA1", 
+        "NAME - Topic": "01310BAC", 
+        "NAME - Topic": "01311072"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I've read about the shrine. At one point, it was rumored to hold great power. It was used by the Dunmer to harness the power of their ancestors.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Some said it could have been used to summon legions of the undead, but that's never been proven to be true.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Either way, it could have been a very powerful tool, but it was buried at the end of the First Era, along with the rest of Mournhold.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0plitiniusSmero "Plitinius Mero" [NPC_:01260AD0]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

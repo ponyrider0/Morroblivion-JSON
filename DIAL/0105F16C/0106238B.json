@@ -1,0 +1,91 @@
+{
+    "Topic": "fbmwMasterIndex1work [DIAL:0105F16C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 788, 
+        "Record Flags": {}, 
+        "FormID": "0106238B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSMasterIndex [QUST:01060A96]", 
+    "PNAM - Previous INFO": "0106238A", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Here's 500 gold for the Indoranyon Index. Now bring me the Berandas Propylon Index. All I know is that the wizard Baladas Demnevanni of Gnisis has it", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "His tower is named Arvs Drelen. The folk of Gnisis seem terrified of him, but he's lived right among them for years, so he can't be all that bad.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "mwIndexIndo "Indoranyon Propylon Index" [MISC:0116011A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSMasterIndex "Master Index" [QUST:01060A96]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0folmsSmirel "Folms Mirel" [NPC_:012603CC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 73, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "55 10 05 00 01 00 72 02 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E F4 01 00 00 39 10 0A 00 02 00 72 05 00 6E 19 00 00 00 53 10 0A 00 02 00 72 01 00 6E 05 00 00 00", 
+        "SCTX - Result script source": "ShowMap GnisisMapMarker58\r\nplayer.removeitem mwindexindo 1\r\nplayer.additem gold001 500\r\nsetstage fbmwMSMasterIndex 25\r\nmodDisposition player 5", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "GnisisMapMarker58 [REFR:0145103A]", 
+            "SCRO - Global Reference": "mwIndexIndo [MISC:0116011A]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "fbmwMSMasterIndex [QUST:01060A96]"
+        ]
+    }
+}

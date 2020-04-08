@@ -1,0 +1,72 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 527, 
+        "Record Flags": {}, 
+        "FormID": "01F8B1D1", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMAirship [QUST:0101AF81]", 
+    "PNAM - Previous INFO": "01F8B961", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "61 61 6C"
+            }, 
+            "NAM1 - Response Text": "Oh...ah...  Back again...for more..um...great...I mean, interesting...well, maybe...nice..conversation, hmmm?  You...you know...I still need someone...anyone, really...to help me find out where...that is, what happened to my...my airship...", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "61 61 6C"
+            }, 
+            "NAM1 - Response Text": "...and help me get that...that amulet I need.  I still fear that, well...that my crew has failed me.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMAirship "The Patchwork Airship" [QUST:0101AF81]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0louisSbeauchamp "Louis Beauchamp" [NPC_:01260B3C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

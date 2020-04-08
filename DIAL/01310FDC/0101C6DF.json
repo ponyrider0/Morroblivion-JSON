@@ -1,0 +1,121 @@
+{
+    "Topic": "1anonymousSwriter [DIAL:01310FDC]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 964, 
+        "Record Flags": {}, 
+        "FormID": "0101C6DF", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTR09 [QUST:0101C64E]", 
+    "PNAM - Previous INFO": "0101C6E1", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "54 54 6F"
+            }, 
+            "NAM1 - Response Text": "Here's what I've heard. I've heard that the guy who writes 'The Common Tongue' is someone named Trels Varis.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "4D 57 54"
+            }, 
+            "NAM1 - Response Text": "Now, this is not a name known to me personally. I make it a habit to know the names of people in Mournhold personally. And this guy I do not know.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "4D 57 54"
+            }, 
+            "NAM1 - Response Text": "And other people I talk to also do not know. Which is noteworthy in itself. I make the guess that this guy is well-hid, and wants to stay well-hid.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "4D 57 54"
+            }, 
+            "NAM1 - Response Text": "But where do I first hear about this guy? In the Craftsmen's Hall. So maybe that is a one place to look.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 80.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "TARGET - Target Reference [00000000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0TenTTonguesUWeerhat "'Ten-Tongues' Weerhat" [NPC_:01260AC8]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTR09 "Muckraking Journalist" [QUST:0101C64E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTR09 "Muckraking Journalist" [QUST:0101C64E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 14 00 00 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "setstage FBMWTR09 20\r\naddtopic 1lockedSdoor\r\naddtopic 1trelssvaris", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTR09 [QUST:0101C64E]", 
+            "SCRO - Global Reference": "1lockedSdoor [DIAL:01311047]", 
+            "SCRO - Global Reference": "1TrelsSVaris [DIAL:01311046]"
+        ]
+    }
+}

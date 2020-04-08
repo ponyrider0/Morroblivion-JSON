@@ -1,0 +1,95 @@
+{
+    "Topic": "1oweSmeSmoney1 [DIAL:01321B1E]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 533, 
+        "Record Flags": {}, 
+        "FormID": "0132340E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSBarbarianBookA [QUST:01008558]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "0131107E"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Well... I hesitate to set a precedent...", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "but only because I can't abide his constant whining, I'll reduce his ransom to the inconsequential sum of 1,000 septims.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Now, are you going to pay for little Dilborn or not?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 80.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "PlayerRef [PLYR:00000014]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0drathasSnerus "Drathas Nerus" [NPC_:01260AA3]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1oweSmeSmoney3 [DIAL:01321B1C]", 
+        "TCLT - Choice": "1oweSmeSmoney4 [DIAL:01321B16]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 28 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMSBarbarianBookA 40", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMSBarbarianBookA [QUST:01008558]"
+        ]
+    }
+}

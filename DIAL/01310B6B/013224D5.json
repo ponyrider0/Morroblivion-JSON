@@ -1,0 +1,66 @@
+{
+    "Topic": "1gameSrats [DIAL:01310B6B]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 261, 
+        "Record Flags": {}, 
+        "FormID": "013224D5", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHHTheExterminator [QUST:0100346F]", 
+    "PNAM - Previous INFO": "013224D4", 
+    "Add topics": [
+        "NAME - Topic": "01310C27", 
+        "NAME - Topic": "01310BCB", 
+        "NAME - Topic": "01310ABF"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "You've been expelled. I cannot discuss business with you unless you make amends.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetPCExpelled:193", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Hlaalu "Great House Hlaalu" [FACT:01220005]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0edrynoSarethi "Edryno Arethi" [NPC_:0126038D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

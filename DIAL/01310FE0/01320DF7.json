@@ -1,0 +1,93 @@
+{
+    "Topic": "1adamantiumSarmor [DIAL:01310FE0]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 708, 
+        "Record Flags": {}, 
+        "FormID": "01320DF7", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSGreetings [QUST:01F2A564]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "0131100F"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "You supply the adamantium ore and pay for my work, and I provide you with custom adamantium armor. Here.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I've had a list of armor requirements and prices printed up.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Look it over, and if you're interested, and you have the adamantium ore and the gold, speak to me again, we'll write up an order, and you'll have your new armor a day later.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSArmorCrafter "Bols Indalen's Custom Armor" [QUST:0101C613]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0bolsSindalen "Bols Indalen" [NPC_:01260AB2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 39 10 0A 00 02 00 72 03 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "player.additem 0bkucustomuarmor 1\r\nsetstage fbmwMSArmorCrafter 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0bkUcustomUarmor [BOOK:01180248]", 
+            "SCRO - Global Reference": "fbmwMSArmorCrafter [QUST:0101C613]"
+        ]
+    }
+}

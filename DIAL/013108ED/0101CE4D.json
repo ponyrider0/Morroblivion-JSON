@@ -1,0 +1,122 @@
+{
+    "Topic": "1ArethanSMandas [DIAL:013108ED]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1005, 
+        "Record Flags": {}, 
+        "FormID": "0101CE4D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHRMadMilk [QUST:01004A5D]", 
+    "PNAM - Previous INFO": "0101CE4E", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6C 79 6E"
+            }, 
+            "NAM1 - Response Text": "You can find him in the cavern of Milk.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "68 69 6D"
+            }, 
+            "NAM1 - Response Text": "On the Ald'ruhn-Caldera Road, west of Ald'ruhn, two crossroads marked by signposts are very close to one another.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "68 69 6D"
+            }, 
+            "NAM1 - Response Text": "To reach Milk, head west from the 'Gnisis' sign on the westmost signpost, and watch right for a north-branching path to Milk.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "68 69 6D"
+            }, 
+            "NAM1 - Response Text": "The Mad Lord has a few loyal followers and some outlaws have joined his \"estate.\" They will protect Arethan Mandas with their lives.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "05", 
+                "Unused": "68 69 6D"
+            }, 
+            "NAM1 - Response Text": "I would prefer that Arethan Mandas be cured of his madness, rather than killed.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "06", 
+                "Unused": "68 69 6D"
+            }, 
+            "NAM1 - Response Text": "You might want to go to Ebonheart and speak with Llerar Mandas, Arethan's father.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHRShurinbaal "House Redoran: Shurinbaal" [QUST:0100519A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0athynSsarethi "Athyn Sarethi" [NPC_:012600B2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 55 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "setstage FBMWHRMadMilk 10\r\nShowMap mwMilkMapMarker", 
+        "References": [
+            "SCRO - Global Reference": "fbmwHRMadMilk [QUST:01004A5D]", 
+            "SCRO - Global Reference": "mwMilkMapMarker [REFR:010050F1]"
+        ]
+    }
+}

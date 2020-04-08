@@ -1,0 +1,87 @@
+{
+    "Topic": "1dwarvenSlimeware [DIAL:01310858]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 651, 
+        "Record Flags": {}, 
+        "FormID": "01F8AA9B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwEBShipment [QUST:01003425]", 
+    "PNAM - Previous INFO": "01F8AA9A", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 45 42"
+            }, 
+            "NAM1 - Response Text": "It didn't used to be as much of a problem, but Bolrin at the East Empire Company has been manipulating the prices; I'm sure of it. ", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 45 42"
+            }, 
+            "NAM1 - Response Text": "And he won't give most of us a license to sell the stuff. Actually, I know for a fact that there's a shipment of limeware being held up on a ship in  Ebonheart.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "77 45 42"
+            }, 
+            "NAM1 - Response Text": " If you'd be willing to...recover it for me...I would be willing to reward you very generously. Perhaps 1,500 drakes?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwEBShipment "Liberate the Limeware" [QUST:01003425]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0alarvyneSindalas "Alarvyne Indalas" [NPC_:012604AC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "fbmwebshipmentget [DIAL:01F8A91F]", 
+        "TCLT - Choice": "fbmwebshipmentno [DIAL:01F8A921]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

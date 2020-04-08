@@ -1,0 +1,70 @@
+{
+    "Topic": "1excavationSreport [DIAL:013107B7]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 339, 
+        "Record Flags": {}, 
+        "FormID": "01320C72", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMGExcavation [QUST:01006776]", 
+    "PNAM - Previous INFO": "01F8A30D", 
+    "Add topics": [
+        "NAME - Topic": "013107B7", 
+        "NAME - Topic": "01310AEF"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "The excavation report is overdue. We've had a few... setbacks. Our native guide, Anes Vendu, is missing.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0seniliasScadiusus "Senilias Cadiusus" [NPC_:0126017C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "PlayerRef [PLYR:00000014]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 14 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmgexcavation 20", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMGExcavation [QUST:01006776]"
+        ]
+    }
+}

@@ -1,0 +1,82 @@
+{
+    "Topic": "1KingSLlethanAsSdeath2 [DIAL:013207AC]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 509, 
+        "Record Flags": {}, 
+        "FormID": "01323017", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTR05People [QUST:0101C64A]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310FD0", 
+        "NAME - Topic": "01311084", 
+        "NAME - Topic": "01311084"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Everyone knows. It's there in print, for everyone to see, in the broadside sheet called \"The Common Tongue\".", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "It says Helseth poisoned hundreds of people when he was in the West. If Helseth was a wicked murderer before, why not now?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0RavaniSLlethan "Ravani Llethan" [NPC_:01260A7A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 19 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwTR05people 25", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTR05People [QUST:0101C64A]"
+        ]
+    }
+}

@@ -1,0 +1,250 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 3209, 
+        "Record Flags": {}, 
+        "FormID": "01006BD1", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwTRSothaSilQuestScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 7, 
+        "CompiledSize": 385, 
+        "VariableCount": 21, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 73 01 00 00 16 00 23 00 03 00 1F 00 20 72 03 00 58 43 10 05 00 01 00 72 04 00 20 31 20 3D 3D 20 73 01 00 20 31 20 3D 3D 20 26 26 39 10 0A 00 02 00 72 05 00 6E 14 00 00 00 15 00 07 00 73 01 00 02 00 20 30 1C 00 01 00 22 10 00 00 19 00 00 00 16 00 0E 00 02 00 0A 00 20 73 02 00 20 31 30 20 3D 3D 1C 00 02 00 56 10 08 00 02 00 72 02 00 72 06 00 15 00 08 00 73 02 00 03 00 20 31 31 19 00 00 00 16 00 0E 00 02 00 0A 00 20 73 02 00 20 32 30 20 3D 3D 1C 00 02 00 56 10 08 00 02 00 72 02 00 72 06 00 15 00 08 00 73 02 00 03 00 20 32 31 19 00 00 00 16 00 0E 00 02 00 0A 00 20 73 02 00 20 33 30 20 3D 3D 1C 00 02 00 56 10 08 00 02 00 72 02 00 72 06 00 15 00 08 00 73 02 00 03 00 20 33 31 19 00 00 00 16 00 0E 00 02 00 0A 00 20 73 02 00 20 34 30 20 3D 3D 1C 00 02 00 56 10 08 00 02 00 72 02 00 72 06 00 15 00 09 00 73 02 00 04 00 20 31 30 30 19 00 00 00 16 00 23 00 01 00 1F 00 20 73 02 00 20 31 30 30 20 3D 3D 20 58 3A 10 05 00 01 00 72 05 00 20 37 30 20 3D 3D 20 26 26 1C 00 02 00 16 10 05 00 01 00 72 03 00 19 00 00 00 16 00 0D 00 01 00 09 00 20 73 01 00 20 31 20 3D 3D 1C 00 03 00 9E 10 05 00 01 00 72 07 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwTRSothaSilQuestScript\n\n;###Variables for the quest###\nshort Sothateleport\nshort state\nshort Azurastate\nshort doonce\nshort gamestate\n;###Variables for the Fabricant Machine###\nshort ActSothaMachDoor2State\nshort ActSothaMachDoor1State\nshort ActSothaMachInside\n;###Variables for the various doors that can't be accessed via local scripts###\nshort SothaPreDoor1state\nshort SothaPreDoor2state\nshort SothaPreDoor3state\nshort SothaPreDoor4state\nshort SothaPreDoor5state\nshort SothaPreDoor6state\nshort SothaPreDoor7state\nshort SothaPreDoor8state\nshort SothaPreDoor9state\nshort SothaPreDoor10state\nshort SothaPreDoor11state\n\nshort actsothaoilbridgeState\n\nbegin gamemode\n\n	if Player.GetInCell SothaSSilVSOuterSFloodedSHalls == 1 && Sothateleport == 1\n		setstage fbmwTRSothaSil 20\n		set Sothateleport to 0\n		fbmwAlmalexiabaseREF.disable\n	endif\n\n\n	if state==10\n		fbmwTRSothaSilAlmalexiaREF.StartConversation fbmwTRSothaSilAlmalexiaREF 1TRAlmalexiaEndTalk\n		set state to 11\n	endif\n\n	if state==20\n		fbmwTRSothaSilAlmalexiaREF.StartConversation fbmwTRSothaSilAlmalexiaREF 1TRAlmalexiaEndTalk\n		set state to 21\n	endif\n\n	if state==30\n		fbmwTRSothaSilAlmalexiaREF.StartConversation fbmwTRSothaSilAlmalexiaREF 1TRAlmalexiaEndTalk\n		set state to 31\n	endif\n\n	if state==40\n		fbmwTRSothaSilAlmalexiaREF.StartConversation fbmwTRSothaSilAlmalexiaREF 1TRAlmalexiaEndTalk\n		set state to 100\n	endif\n\n	if state == 100 && GetStage fbmwTRSothaSil ==70\n		fbmwTRSothaSilAlmalexiaREF.StartCombat Player\n	endif\n\n\n	if Sothateleport == 1\n		Player.moveto fbmwSothaTeleportMarker\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 23 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 F8 67 B5 1D"
+            }, 
+            "SCVR - Name": "Sothateleport"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "state"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "doonce"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "69 B5 1D 18 00 00 00"
+            }, 
+            "SCVR - Name": "Azurastate"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "gamestate"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000007", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "67 B5 1D 20 00 00 00"
+            }, 
+            "SCVR - Name": "ActSothaMachDoor2State"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000008", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "ActSothaMachDoor1State"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000009", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "ActSothaMachInside"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000A", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "SothaPreDoor1state"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000B", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "SothaPreDoor2state"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000C", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "SothaPreDoor3state"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000D", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "SothaPreDoor4state"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000E", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "SothaPreDoor5state"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000F", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "SothaPreDoor6state"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000010", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "SothaPreDoor7state"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000011", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "SothaPreDoor8state"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000012", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "SothaPreDoor9state"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000013", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "01 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "SothaPreDoor10state"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000014", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "6E B5 1D 08 00 00 00"
+            }, 
+            "SCVR - Name": "SothaPreDoor11state"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000015", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "actsothaoilbridgeState"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwAlmalexiabaseREF [ACHR:01F8B893]", 
+        "SCRO - Global Reference": "fbmwTRSothaSilAlmalexiaREF [ACHR:010084C5]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "SothaSSilVSOuterSFloodedSHalls [CELL:0148051F]", 
+        "SCRO - Global Reference": "fbmwTRSothaSil [QUST:0101C65C]", 
+        "SCRO - Global Reference": "1TRAlmalexiaEndTalk [DIAL:010084CB]", 
+        "SCRO - Global Reference": "fbmwSothaTeleportMarker [REFR:01006BD0]"
+    ]
+}

@@ -1,0 +1,103 @@
+{
+    "Topic": "1mustSbeSstopped [DIAL:01310FF2]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 840, 
+        "Record Flags": {}, 
+        "FormID": "01014C59", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRSothaSil [QUST:0101C65C]", 
+    "PNAM - Previous INFO": "01001C20", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "I believe it is your calling to stop Sotha Sil's mad schemings. I do not know that he can be reasoned with, outlander, but it is possible.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "If he cannot be, you must end his life. Though the idea saddens me, it is best for Morrowind...and it is best for him, as well.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "You have the power to do this. The Trueflame can kill a god, if wielded by one of noble intent. Steel yourself, outlander, and do what must be done.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "I will send you to his Clockwork City now, if you are prepared. Good luck, Nerevarine.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRSothaSil "The Mad God" [QUST:0101C65C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwAlmalexia "Almalexia" [NPC_:01F8B879]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1mustSbeSstopped1 [DIAL:01014C5F]", 
+        "TCLT - Choice": "1mustSbeSStopped2 [DIAL:01014C5D]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwTRSothaSil 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTRSothaSil [QUST:0101C65C]"
+        ]
+    }
+}

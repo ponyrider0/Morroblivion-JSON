@@ -1,0 +1,72 @@
+{
+    "Topic": "1disturbingSdreams [DIAL:013107ED]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 446, 
+        "Record Flags": {}, 
+        "FormID": "0101EC10", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwA1Dreams [QUST:0101C65D]", 
+    "PNAM - Previous INFO": "0101EC11", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 41 31"
+            }, 
+            "NAM1 - Response Text": "These dreams are the tricks of Dagoth Ur. He speaks to you, but you must resist. He bends his power to compel you, but you must resist.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "57 41 31"
+            }, 
+            "NAM1 - Response Text": "You are in danger, but your heart is wise. Heed your heart. Do not hear the voice of the Sharmat, for it will drive you mad.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwA1Dreams "Dreams of a Lost House" [QUST:0101C65D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0nibaniSmaesa "Nibani Maesa" [NPC_:0126018B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

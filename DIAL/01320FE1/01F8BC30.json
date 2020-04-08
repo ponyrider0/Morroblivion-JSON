@@ -1,0 +1,65 @@
+{
+    "Topic": "1officialSmatter5 [DIAL:01320FE1]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 305, 
+        "Record Flags": {}, 
+        "FormID": "01F8BC30", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRDBHunt [QUST:0101C654]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6D 77 54"
+            }, 
+            "NAM1 - Response Text": "There is absolutely no evidence to suggest that Athyn Llethan died anything but a natural death. I assure you. Absolutely no evidence.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 70.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "TARGET - Target Reference [00000000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0TieniusSDelitian "Tienius Delitian" [NPC_:01260A79]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1officialSmatter1 [DIAL:01320FEA]", 
+        "TCLT - Choice": "1officialSmatter2 [DIAL:01320FE8]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

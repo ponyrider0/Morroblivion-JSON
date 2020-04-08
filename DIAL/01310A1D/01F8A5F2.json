@@ -1,0 +1,86 @@
+{
+    "Topic": "1VampireSdust [DIAL:01310A1D]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 491, 
+        "Record Flags": {}, 
+        "FormID": "01F8A5F2", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
+    "PNAM - Previous INFO": "01F8A5F1", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "I need three portions of vampire dust for a spell I am currently researching. You may be able to find it in the shops of finer apothecaries or alchemists. I would prefer it to be fresh, though. Straight from a vampire.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "82", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 3.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "VampireDust "Vampire Dust" [INGR:00009182]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "22", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetVampire:40", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwVAVampDust "Dust of the Vampire" [QUST:01003BCE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0sirilonwe "Sirilonwe" [NPC_:0126017A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwvavampdust 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwVAVampDust [QUST:01003BCE]"
+        ]
+    }
+}

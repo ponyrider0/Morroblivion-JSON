@@ -1,0 +1,112 @@
+{
+    "Topic": "fbmwMasterIndex1work [DIAL:0105F16C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 923, 
+        "Record Flags": {}, 
+        "FormID": "01062385", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSMasterIndex [QUST:01060A96]", 
+    "PNAM - Previous INFO": "01062384", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Here's 500 gold for the Rotheran index. Now bring me the Falensarano Propylon Index.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "This was last known in the possession of an obscure but tough-looking outlander named Huunen.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "He was last seen headed for Maelkashishi, a Daedric shrine on the western edge of the mountains west of Maar Gan. It is a bad place.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "He's probably dead. And locating his corpse there -- and presumably the index -- may be tough.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "mwIndexRoth "Rotheran Propylon Index" [MISC:0116011C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 35.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSMasterIndex "Master Index" [QUST:01060A96]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0folmsSmirel "Folms Mirel" [NPC_:012603CC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 64, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E F4 01 00 00 39 10 0A 00 02 00 72 04 00 6E 28 00 00 00 53 10 0A 00 02 00 72 01 00 6E 05 00 00 00", 
+        "SCTX - Result script source": "player.removeitem mwindexroth 1\r\nplayer.additem gold001 500\r\nsetstage fbmwMSMasterIndex 40\r\nmodDisposition player 5", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "mwIndexRoth [MISC:0116011C]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "fbmwMSMasterIndex [QUST:01060A96]"
+        ]
+    }
+}

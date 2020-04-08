@@ -1,0 +1,27 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 726, 
+        "Record Flags": {}, 
+        "FormID": "01001284", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwSpellMarkScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 6, 
+        "CompiledSize": 170, 
+        "VariableCount": 0, 
+        "Type": "Magic Effect:256"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 11 00 9C 00 00 00 1C 00 01 00 22 10 00 00 1C 00 01 00 9E 10 05 00 01 00 72 03 00 16 00 0D 00 01 00 09 00 20 47 04 00 20 31 20 3D 3D 15 00 0A 00 72 05 00 73 03 00 02 00 20 31 18 00 0F 00 01 00 0B 00 20 58 6D 11 00 00 20 31 20 3D 3D 15 00 0A 00 72 05 00 73 03 00 02 00 20 32 17 00 02 00 01 00 15 00 0A 00 72 05 00 73 03 00 02 00 20 30 19 00 00 00 1C 00 02 00 9E 10 05 00 01 00 72 06 00 59 10 1A 00 01 00 10 00 4D 61 72 6B 65 72 20 70 6C 61 63 65 64 2E 2E 2E 00 00 00 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName mwSpellMarkScript\n\nBegin ScriptEffectStart\n	mwMarkerRat.Disable ; just in case\n	mwMarkerRat.MoveTo Player\n\n	if PlayerInMorrowind == 1\n		set aaaIntervention.World to 1\n	elseif GetPlayerInSEWorld == 1\n		set aaaIntervention.World to 2\n	else\n		set aaaIntervention.World to 0\n	endif\n\n	fbmwInterventionBackup.moveto fbmwInterventionMarker\n\n	Message \"Marker placed...\"\nEnd\n;<CSEBlock>\n;<CSECaretPos> 22 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "mwMarkerRat [ACRE:01001283]", 
+        "SCRO - Global Reference": "fbmwInterventionBackup [ACRE:01F8B6EE]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "PlayerInMorrowind [GLOB:01003249]", 
+        "SCRO - Global Reference": "aaaIntervention [QUST:01F8B6EF]", 
+        "SCRO - Global Reference": "fbmwInterventionMarker [ACRE:01F8B6ED]"
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "Topic": "1disloyaltySamongStheSGuards1 [DIAL:0132041C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 307, 
+        "Record Flags": {}, 
+        "FormID": "01F8AB84", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTR07Guard [QUST:0101C64C]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6D 77 54"
+            }, 
+            "NAM1 - Response Text": "Good. If you find evidence of disloyalty among the Guards, bring it to me.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0TieniusSDelitian "Tienius Delitian" [NPC_:01260A79]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 01 00 00 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "setstage fbmwtr07guard 1\r\naddtopic 1joinsthesroyalsguards", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTR07Guard [QUST:0101C64C]", 
+            "SCRO - Global Reference": "1joinStheSRoyalSGuards [DIAL:01310FA4]"
+        ]
+    }
+}

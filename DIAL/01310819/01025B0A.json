@@ -1,0 +1,83 @@
+{
+    "Topic": "1RedoranSHortator [DIAL:01310819]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 543, 
+        "Record Flags": {}, 
+        "FormID": "01025B0A", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQRedoranSarethi [QUST:01001DE1]", 
+    "PNAM - Previous INFO": "01025B0B", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "79 6E 53"
+            }, 
+            "NAM1 - Response Text": "With my influence, the other councilors should agree to name you Hortator. All except Bolvyn Venim.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "79 6E 53"
+            }, 
+            "NAM1 - Response Text": "He would never allow an outlander to be named Hortator, nor can you simply kill him without provoking the other councilors.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "79 6E 53"
+            }, 
+            "NAM1 - Response Text": "But if you have the support of the Redoran Council, perhaps Venim will agree to an honorable duel.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQRedoranSarethi "Convincing Sarethi" [QUST:01001DE1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0athynSsarethi "Athyn Sarethi" [NPC_:012600B2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

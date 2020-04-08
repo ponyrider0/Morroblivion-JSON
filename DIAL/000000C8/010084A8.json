@@ -1,0 +1,100 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 821, 
+        "Record Flags": {}, 
+        "FormID": "010084A8", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVMissingCompanion [QUST:01003408]", 
+    "PNAM - Previous INFO": "010084A7", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "72 65 6C"
+            }, 
+            "NAM1 - Response Text": "Thank the gods! We've found her! I never thought I'd see her again. You finding me has truly been a blessing.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "72 65 6C"
+            }, 
+            "NAM1 - Response Text": "Thank you so much for your help, outlander. I wish I had more to offer you, but please take this book. It has meant so much to the two of us.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "69 69 FF"
+            }, 
+            "NAM1 - Response Text": "I can only hope you find as much enjoyment in it as we have. Take care!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVMissingCompanion "Divided by Nix-Hounds" [QUST:01003408]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "0falanuSindaren "Falanu Indaren" [NPC_:012606E4]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0drerelSindaren "Drerel Indaren" [NPC_:012606E3]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 60, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 3C 00 00 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 15 00 0A 00 72 02 00 73 01 00 02 00 20 30", 
+        "SCTX - Result script source": "setstage FBMWMVMissingCompanion 60\r\nremoveitem 0bookskillUblock3 1\r\nplayer.additem 0bookskillUblock3 1\r\nset fbmwmvmissingcompanion.follownow to 0", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMVMissingCompanion [QUST:01003408]", 
+            "SCRO - Global Reference": "0BookSkillUBlock3 [BOOK:0118002F]"
+        ]
+    }
+}

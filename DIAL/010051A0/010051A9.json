@@ -1,0 +1,83 @@
+{
+    "Topic": "fbmwMQ01BladesYes [DIAL:010051A0]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 785, 
+        "Record Flags": {}, 
+        "FormID": "010051A9", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ01 [QUST:01F0A28D]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310868", 
+        "NAME - Topic": "01310C70"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "75 73 53"
+            }, 
+            "NAM1 - Response Text": "Good. Welcome to the service, Novice. Now you belong to the Blades. We're the Emperor's eyes and ears in the provinces.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "75 73 53"
+            }, 
+            "NAM1 - Response Text": "You can use my bed if you need to rest, but leave my personal stuff alone unless I say otherwise.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "75 73 53"
+            }, 
+            "NAM1 - Response Text": "If you like, you can improve your modest skills with our Blades Trainers now. Or if you're in a hurry. I can give you orders right away.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "75 73 53"
+            }, 
+            "NAM1 - Response Text": "But don't forget to visit the Blades Trainers.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 46, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 0E 00 00 00 1C 00 01 00 89 10 0A 00 02 00 72 03 00 6E 00 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage FBMWMQ01 14\r\nPlayer.SetFactionRank 0blades, 0\r\nmoddisposition player 10", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMQ01 [QUST:01F0A28D]", 
+            "SCRO - Global Reference": "0Blades [FACT:0122000A]"
+        ]
+    }
+}

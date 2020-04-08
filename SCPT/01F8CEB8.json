@@ -1,0 +1,32 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 512, 
+        "Record Flags": {}, 
+        "FormID": "01F8CEB8", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwSpellLockGalmsesSealScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 0, 
+        "CompiledSize": 128, 
+        "VariableCount": 1, 
+        "Type": "Magic Effect:256"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 11 00 72 00 00 00 15 00 1F 00 73 01 00 1A 00 20 58 17 14 14 00 02 00 7A 00 00 00 00 00 00 34 40 7A 00 00 00 00 00 00 54 40 16 00 23 00 03 00 1F 00 20 58 51 14 02 00 00 00 20 32 33 20 3D 3D 20 58 51 14 02 00 00 00 20 32 34 20 3D 3D 20 7C 7C 16 00 0F 00 01 00 0B 00 20 58 05 10 00 00 20 30 20 3D 3D 72 10 05 00 01 00 73 01 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwSpellLockGalmsesSealScript\n\nshort locklevel\n\nbegin scripteffectstart\n	set locklevel to rand 20 80\n	if GetObjectType == 23 || GetObjectType == 24\n		if GetLocked == 0\n			Lock locklevel\n		endif\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 15 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "F2 C3 1D 08 00 00 00"
+            }, 
+            "SCVR - Name": "locklevel"
+        }
+    ]
+}

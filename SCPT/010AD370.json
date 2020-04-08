@@ -1,0 +1,68 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 2261, 
+        "Record Flags": {}, 
+        "FormID": "010AD370", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwBMSprigganScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 3, 
+        "CompiledSize": 578, 
+        "VariableCount": 9, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 29 00 00 00 00 00 16 00 0D 00 01 00 09 00 20 73 06 00 20 33 20 3D 3D 0D 10 02 00 00 00 17 00 02 00 01 00 1E 00 00 00 19 00 00 00 11 00 00 00 10 00 08 00 0A 00 20 00 00 00 00 00 15 00 07 00 73 09 00 02 00 20 30 15 00 0D 00 73 06 00 08 00 20 73 06 00 20 31 20 2B 11 00 00 00 10 00 06 00 00 00 D3 01 00 00 16 00 0D 00 01 00 09 00 20 73 06 00 20 33 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 0D 00 0F 00 09 00 20 73 06 00 20 31 20 3D 3D 16 00 0D 00 0D 00 09 00 20 73 08 00 20 30 20 3D 3D 15 00 11 00 66 07 00 0C 00 20 66 07 00 20 58 0C 10 00 00 20 2B 16 00 0D 00 0A 00 09 00 20 66 07 00 20 31 20 3E 3D 24 11 0E 00 02 00 72 01 00 7A 00 00 00 00 00 00 F0 3F B2 10 05 00 01 00 72 02 00 8C 10 07 00 01 00 6E 01 00 00 00 3C 11 0B 00 01 00 7A 9A 99 99 99 99 99 F1 3F 16 10 05 00 01 00 72 03 00 10 10 09 00 02 00 08 00 6E 02 00 00 00 10 10 09 00 02 00 42 00 6E 64 00 00 00 10 10 09 00 02 00 43 00 6E 64 00 00 00 15 00 07 00 73 08 00 02 00 20 31 15 00 07 00 66 07 00 02 00 20 30 19 00 00 00 19 00 00 00 18 00 0D 00 11 00 09 00 20 73 06 00 20 32 20 3D 3D 16 00 0D 00 0F 00 09 00 20 73 08 00 20 31 20 3D 3D 15 00 11 00 66 07 00 0C 00 20 66 07 00 20 58 0C 10 00 00 20 2B 16 00 0D 00 0C 00 09 00 20 66 07 00 20 31 20 3E 3D 24 11 0E 00 02 00 72 01 00 7A 00 00 00 00 00 00 F0 3F B2 10 05 00 01 00 72 02 00 8C 10 07 00 01 00 6E 01 00 00 00 3C 11 0B 00 01 00 7A 33 33 33 33 33 33 F3 3F 16 10 05 00 01 00 72 03 00 10 10 09 00 02 00 08 00 6E 03 00 00 00 10 10 09 00 02 00 42 00 6E 64 00 00 00 10 10 09 00 02 00 43 00 6E 64 00 00 00 10 10 09 00 02 00 40 00 6E 50 00 00 00 10 10 09 00 02 00 3D 00 6E 64 00 00 00 10 10 09 00 02 00 3E 00 6E 64 00 00 00 15 00 07 00 73 08 00 02 00 20 32 19 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwBMSprigganScript\n;spriggan must be killed 3 times before they die permanently\n;effect is played when she revives\n;sprigganeffect script shuts off the effect\n\n\nshort deathvar\nfloat time\nshort playonce\nshort alive\n\nBegin OnActivate\n\n	If (deathvar==3)   ;after killed 3 times, she acts like dead creature\n		Activate\n	else\n		return\n	endif\nend\n\nBegin OnDeath\n	set alive to 0\n	set deathvar to  deathvar + 1\nend\n\nBegin GameMode\n	If deathvar == 3\n		return\n	endif\n\n	if (deathvar==1)\n		if playonce == 0\n			set time to ( time + GetSecondsPassed )	\n			If (time>=1)\n				PlayMagicEffectVisuals PARA 1\n				PlaySound3D 0sprigganSresurrect\n				Resurrect 1	; revives spriggan\n				SetScale 1.10  ;increase her size\n				StartCombat Player\n				ModAV Health 2\n				ModAV ResistParalysis 100\n				ModAV ResistPoison 100\n				Set playonce to 1\n				Set time to 0\n			endif\n		endif\n\n\n	elseif (deathvar==2)\n		if playonce == 1\n			set time to ( time + GetSecondsPassed )	\n			if (time>=1)\n				PlayMagicEffectVisuals PARA 1\n				PlaySound3D 0sprigganSresurrect\n				Resurrect 1	; revives spriggan when activated by player\n				SetScale 1.20  ;increase her size\n				StartCombat Player\n				ModAV Health 3\n				ModAV ResistParalysis 100\n				ModAV ResistPoison 100\n				ModAV ResistMagic 80\n				ModAV ResistFire 100\n				ModAV ResistFrost 100\n				set playonce to 2\n			endif\n		endif\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 1093 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "deathvar"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000007", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "time"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000008", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "playonce"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000009", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "alive"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "PARA [MGEF:00001887]", 
+        "SCRO - Global Reference": "0sprigganSresurrect [SOUN:01300224]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+    ]
+}

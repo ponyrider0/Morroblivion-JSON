@@ -1,0 +1,74 @@
+{
+    "Topic": "1joinSHouseSRedoran2 [DIAL:0132098E]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 519, 
+        "Record Flags": {}, 
+        "FormID": "01323090", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHRAdvancement [QUST:010037E7]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "0131095D", 
+        "NAME - Topic": "01310BE1", 
+        "NAME - Topic": "0131095D", 
+        "NAME - Topic": "01310C71", 
+        "NAME - Topic": "01310A5F"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "So be it. You are now a member of House Redoran. I will inform our trainers. Make use of them.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "If you truly wish to serve House Redoran, I can give you duties to perform. You may also check with me for advancement.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0neminda "Neminda" [NPC_:012600C8]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 01 00 00 00", 
+        "SCTX - Result script source": ";Message \"Membership Accepted...\"\r\nSetStage fbmwHRAdvancement 1", 
+        "References": [
+            "SCRO - Global Reference": "fbmwHRAdvancement [QUST:010037E7]"
+        ]
+    }
+}

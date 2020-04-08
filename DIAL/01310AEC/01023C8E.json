@@ -1,0 +1,61 @@
+{
+    "Topic": "1Nerevarine [DIAL:01310AEC]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 354, 
+        "Record Flags": {}, 
+        "FormID": "01023C8E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ11e [QUST:01001DCE]", 
+    "PNAM - Previous INFO": "01023C9D", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "You have proven to all the truth of the prophecies. Give thanks to Azura for guiding your way. The Devil is dead, and the Blight is gone. Thank you, Nerevarine, and may Azura's blessings bring you peace.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestRunning:56", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQCompletedDialogues "MQ Completed Dialogues" [QUST:010033C2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0manirai "Manirai" [NPC_:0126018C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

@@ -1,0 +1,92 @@
+{
+    "Topic": "1familySheirlooms [DIAL:01310836]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 815, 
+        "Record Flags": {}, 
+        "FormID": "01F8AA8C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMVBanditVictim [QUST:010033FF]", 
+    "PNAM - Previous INFO": "01F8AA8B", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 4D 56"
+            }, 
+            "NAM1 - Response Text": "You've found them! I'm so relieved. Here, please take this gold as payment. I was able to keep it hidden when the outlaws robbed me, and I'd be glad for you to have it. Thank you again!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwExquisiteRing01aeta "Exquisite Ring" [CLOT:01F2A522]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwExpensiveAmulet01aeta "Expensive Amulet" [CLOT:01F2A523]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVBanditVictim "Aeta Wave-Breaker's Jewels" [QUST:010033FF]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0aetaSwaveTbreaker "Aeta Wave-Breaker" [NPC_:012606D4]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 110, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 6E 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 04 00 6E 01 00 00 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00 52 10 0A 00 02 00 72 05 00 6E 2C 01 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E 2C 01 00 00", 
+        "SCTX - Result script source": "setstage fbmwmvbanditvictim 110\r\nplayer.removeitem fbmwexquisitering01aeta 1\r\nplayer.removeitem fbmwexpensiveamulet01aeta 1\r\nadditem fbmwexquisitering01aeta 1\r\nadditem fbmwexpensiveamulet01aeta 1\r\nremoveitem gold001 300\r\nplayer.additem gold001 300", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMVBanditVictim [QUST:010033FF]", 
+            "SCRO - Global Reference": "fbmwExquisiteRing01aeta [CLOT:01F2A522]", 
+            "SCRO - Global Reference": "fbmwExpensiveAmulet01aeta [CLOT:01F2A523]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]"
+        ]
+    }
+}

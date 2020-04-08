@@ -1,0 +1,68 @@
+{
+    "Topic": "1unholySritual1 [DIAL:01321A11]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 544, 
+        "Record Flags": {}, 
+        "FormID": "013233D4", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVCultistVictim [QUST:01003403]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Thank you! I'm sure they haven't gone far...although I was incapacitated, I don't believe it was that long ago they took her.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "They've probably taken her to a shrine to perform the ritual; I believe there's one to the west. It's too horrible to think about! Please hurry!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0sason "Sason" [NPC_:012606D2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 28 00 00 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "setstage fbmwmvcultistvictim 40\r\naddtopic 1escapesfromscultists", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMVCultistVictim [QUST:01003403]", 
+            "SCRO - Global Reference": "1escapeSfromScultists [DIAL:0131070C]"
+        ]
+    }
+}

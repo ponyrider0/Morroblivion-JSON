@@ -1,0 +1,88 @@
+{
+    "Topic": "1shareSaSgift [DIAL:01310A36]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 709, 
+        "Record Flags": {}, 
+        "FormID": "0101BE78", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwRomanceAhnassi [QUST:0101BE47]", 
+    "PNAM - Previous INFO": "0101BE79", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 52 6F"
+            }, 
+            "NAM1 - Response Text": "Ahnassi hopes you will visit with her friend Senyndie, and learn many fine tricks. And now it is YOUR turn to give Ahnassi a gift.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "57 52 6F"
+            }, 
+            "NAM1 - Response Text": "And Ahnassi knows JUST what she wants. FLOWERS! Of course a special friend knows JUST what flowers to get. So Ahnassi will tell you. Just two!", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "57 52 6F"
+            }, 
+            "NAM1 - Response Text": "One for you, and one for me. A pretty coda flower for Ahnassi, and a pretty gold kanet for her friend. Ahnassi can't WAIT to get her pretty flowers.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 81.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwRomanceAhnassi "Ahnassi, a Special Friend" [QUST:0101BE47]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ahnassi "Ahnassi" [NPC_:012600FD]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 52 00 00 00", 
+        "SCTX - Result script source": "setstage FBMWRomanceAhnassi 82", 
+        "References": [
+            "SCRO - Global Reference": "fbmwRomanceAhnassi [QUST:0101BE47]"
+        ]
+    }
+}

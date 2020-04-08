@@ -1,0 +1,38 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 869, 
+        "Record Flags": {}, 
+        "FormID": "0147009A", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwMQDagothTaunt01Script", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 4, 
+        "CompiledSize": 220, 
+        "VariableCount": 2, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 CE 00 00 00 16 00 37 00 01 00 33 00 20 73 02 00 20 31 20 3D 3D 20 58 3A 10 05 00 01 00 72 01 00 20 35 30 20 3E 3D 20 7C 7C 20 72 02 00 58 2F 10 05 00 01 00 72 03 00 20 30 20 3D 3D 20 7C 7C 1E 00 00 00 19 00 00 00 16 00 30 00 05 00 2C 00 20 58 01 10 05 00 01 00 72 02 00 20 33 30 30 20 3C 20 73 02 00 20 30 20 3D 3D 20 26 26 20 72 04 00 73 06 00 20 30 20 3D 3D 20 26 26 59 10 15 00 01 00 0B 00 50 6C 61 79 65 72 20 48 65 72 65 00 00 00 00 00 00 15 00 0A 00 72 04 00 73 01 00 02 00 20 31 15 00 0B 00 72 04 00 66 02 00 03 00 20 31 31 15 00 0A 00 72 04 00 73 04 00 02 00 20 31 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptName mwMQDagothTaunt01Script\n\nSHORT DoOnce\n\nBegin GameMode\n\n	If DoOnce==1 || GetStage fbmwMQ14>=50 || Player.GetItemCount 0wraithguard== 0\n		Return\n	EndIF\n\n	If GetDistance Player<300 && DoOnce==0 && (moXqueXdagothtalkengine.SpeechLock==0)\n		Message \"Player Here\"\n		Set moXqueXdagothtalkengine.SpeechIndex to 1\n		Set moXqueXdagothtalkengine.SpeechLength to 11\n		Set moXqueXdagothtalkengine.MoveSpeaker to 1\n		Set DoOnce to 1\n	EndIF\n\nEnd\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "7E BC 1D 88 00 00 00"
+            }, 
+            "SCVR - Name": "DoOnce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwMQ14 [QUST:01002C56]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "0wraithguard [ARMO:011200EB]", 
+        "SCRO - Global Reference": "moXqueXdagothtalkengine [QUST:01F8B572]"
+    ]
+}

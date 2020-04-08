@@ -1,0 +1,71 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 371, 
+        "Record Flags": {}, 
+        "FormID": "01F886BF", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSGreetings [QUST:01F2A564]", 
+    "PNAM - Previous INFO": "01F886BE", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "72 69 6D"
+            }, 
+            "NAM1 - Response Text": "So you found my father's amulet. Just hand it over and I'll let you keep whatever else you wish.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwAmuletAgustasUnique "Augustus' Amulet" [CLOT:0102B37F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Satyana "Satyana" [NPC_:012609FE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "fbmwmsagustgive [DIAL:01F8A9B8]", 
+        "TCLT - Choice": "fbmwmsagustkeep [DIAL:01F8A9BA]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 18, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "36 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "startquest fbmwmsarenimtomb\r\naddtopic 1fatherassamulet", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMSArenimTomb [QUST:0101C612]", 
+            "SCRO - Global Reference": "1fatherAsSamulet [DIAL:013108D9]"
+        ]
+    }
+}

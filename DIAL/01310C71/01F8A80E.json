@@ -1,0 +1,67 @@
+{
+    "Topic": "1duties [DIAL:01310C71]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 401, 
+        "Record Flags": {}, 
+        "FormID": "01F8A80E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMGAdvancement [QUST:0100676E]", 
+    "PNAM - Previous INFO": "01F8A80D", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "Ajira is very sorry. Ajira has much work to do on these reports so Ajira can win her bet with Galbedir. Maybe you could fetch a new ceramic bowl for Ajira?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMGFlowers "Mages Guild: Four Types of Flowers" [QUST:01006777]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ajira "Ajira" [NPC_:01260123]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 18, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 36 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "addtopic 1ceramicsbowl\r\nstartquest fbmwmgbowl", 
+        "References": [
+            "SCRO - Global Reference": "1ceramicSbowl [DIAL:01310A54]", 
+            "SCRO - Global Reference": "fbmwMGBowl [QUST:01006772]"
+        ]
+    }
+}

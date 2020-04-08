@@ -1,0 +1,94 @@
+{
+    "Topic": "1failedSinSourSquest1 [DIAL:0132093C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 865, 
+        "Record Flags": {}, 
+        "FormID": "01F8BC28", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMBrodirGrove [QUST:0101AF87]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "67 61 72"
+            }, 
+            "NAM1 - Response Text": "New theories, you say?  Let me see the book you speak of.  Hmmm.... Could this be?  Is it possible the entrance to Sovngarde lie right before me all along?", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "67 61 72"
+            }, 
+            "NAM1 - Response Text": "It makes so much sense!  You've done it!  You've found the way to Sovngarde!  All I need to do is die valiantly in combat!  But how.... ", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "67 61 72"
+            }, 
+            "NAM1 - Response Text": "I know!  You!  You must help me!  You must defeat me in armed combat and send my soul to Sovngarde!  Tell me, will you honor me with a fight to the death?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMBrodirGrove "Betrayal at Brodir Grove" [QUST:0101AF87]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ulfgarStheSunending "Ulfgar the Unending" [NPC_:01260B4A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1failedSinSourSquest2 [DIAL:0132093A]", 
+        "TCLT - Choice": "1failedSinSourSquest3 [DIAL:01320938]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 46, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 28 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwbmbrodirgrove 40\r\nplayer.removeitem 0bkusovngarde 1\r\nadditem 0bkusovngarde 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwBMBrodirGrove [QUST:0101AF87]", 
+            "SCRO - Global Reference": "0bkUSovngarde [BOOK:0118025F]"
+        ]
+    }
+}

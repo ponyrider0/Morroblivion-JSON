@@ -1,0 +1,91 @@
+{
+    "Topic": "1protectSBarenziah [DIAL:01310FD2]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 682, 
+        "Record Flags": {}, 
+        "FormID": "0100B79D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRAssassins [QUST:0101C64F]", 
+    "PNAM - Previous INFO": "01001BF2", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "You were able to hold off the assassins. Interesting. Perhaps the threat was not as great as it seemed. We commend you.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "Take this as a show of our appreciation. We are impressed with your efforts so far.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "When you are ready, speak to me about further service to your king.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 90.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRAssassins "An Assassination Attempt" [QUST:0101C64F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0KingSHlaaluSHelseth "King Hlaalu Helseth" [NPC_:01260A7D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 41, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 39 10 0A 00 02 00 72 03 00 6E 64 00 00 00 58 10 05 00 01 00 72 04 00", 
+        "SCTX - Result script source": "Player.AddItem fbmwHelsethsCollar 1\r\nsetstage fbmwTRAssassins 100\r\naddtopic 1serviceStoSyourSking", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwHelsethsCollar [CLOT:0102BAF5]", 
+            "SCRO - Global Reference": "fbmwTRAssassins [QUST:0101C64F]", 
+            "SCRO - Global Reference": "1serviceStoSyourSking [DIAL:01310FB4]"
+        ]
+    }
+}

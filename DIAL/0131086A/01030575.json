@@ -1,0 +1,61 @@
+{
+    "Topic": "1travelStogether [DIAL:0131086A]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 348, 
+        "Record Flags": {}, 
+        "FormID": "01030575", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHHEscortMerchant [QUST:01003461]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "65 6C 65"
+            }, 
+            "NAM1 - Response Text": "Not right now, I need to sell my goods here in Pelagiad. Thanks to you, everyone will know the name Tarvyn Faren as a trader who can reach his customers even with all the troubles for House Hlaalu.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 70.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHHEscortMerchant "House Hlaalu: Escort Tarvyn Faren" [QUST:01003461]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0tarvynSfaren "Tarvyn Faren" [NPC_:01260392]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

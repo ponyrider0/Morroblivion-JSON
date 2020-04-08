@@ -1,0 +1,100 @@
+{
+    "Topic": "1hostileSmudcrabs [DIAL:0131080C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 573, 
+        "Record Flags": {}, 
+        "FormID": "01320E3A", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Say Once": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwHRMudcrabNest [QUST:01004A5F]", 
+    "PNAM - Previous INFO": "01320E35", 
+    "Add topics": [
+        "NAME - Topic": "01310C1F", 
+        "NAME - Topic": "01310D07", 
+        "NAME - Topic": "01310BF7", 
+        "NAME - Topic": "01310CF3"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "You killed the mudcrabs that were bothering my guar? Thank the Tribunal! I might not have to move back to Tear after all... You look tired, outlander.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Can I offer you some Hackle-Lo?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHRMudcrabNest "House Redoran: Mudcrab Pests" [QUST:01004A5F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 2.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "0MudCrabHRMudcrabNest "Hostile Mud Crab" [CREA:010037E9]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0druleneSfalen "Drulene Falen" [NPC_:0126013E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1hostileSmudcrabs1 [DIAL:01320E37]", 
+        "TCLT - Choice": "1hostileSmudcrabs2 [DIAL:01320E39]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 28, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 28 00 00 00 53 10 0A 00 02 00 72 02 00 6E 0F 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHRMudcrabNest 40\r\nModDisposition Player 15", 
+        "References": [
+            "SCRO - Global Reference": "fbmwHRMudcrabNest [QUST:01004A5F]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

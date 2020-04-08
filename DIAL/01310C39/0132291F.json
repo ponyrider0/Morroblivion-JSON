@@ -1,0 +1,115 @@
+{
+    "Topic": "1potions [DIAL:01310C39]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 956, 
+        "Record Flags": {}, 
+        "FormID": "0132291F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
+    "PNAM - Previous INFO": "0132291E", 
+    "Add topics": [
+        "NAME - Topic": "01310C7E", 
+        "NAME - Topic": "0131077F", 
+        "NAME - Topic": "01310C39", 
+        "NAME - Topic": "01310BD6", 
+        "NAME - Topic": "01310C51", 
+        "NAME - Topic": "01310BA6", 
+        "NAME - Topic": "01310A8B", 
+        "NAME - Topic": "0131082D", 
+        "NAME - Topic": "01310C39", 
+        "NAME - Topic": "01310A19", 
+        "NAME - Topic": "01310896", 
+        "NAME - Topic": "01310897", 
+        "NAME - Topic": "01310913", 
+        "NAME - Topic": "01310898", 
+        "NAME - Topic": "013107D5", 
+        "NAME - Topic": "01310780", 
+        "NAME - Topic": "0131082E", 
+        "NAME - Topic": "01310914", 
+        "NAME - Topic": "01310915", 
+        "NAME - Topic": "0131098F"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Alchemists, apothecaries, and healers, as well as general merchants, sell commercial potions. These potions are easy and reliable, but costly.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "If you have training and skill in alchemy, and the necessary apparatus and ingredients, you can make your own homemade potions in the field.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "The eleven kinds of potions are: cure potions, restore potions, fortify potions, resist potions, aquatic potions, mysticism potions, alteration potions, illusion potions, detect potions, shield potions, and toxic potions.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0nalion "Nalion" [NPC_:012600F3]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "PlayerRef [PLYR:00000014]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

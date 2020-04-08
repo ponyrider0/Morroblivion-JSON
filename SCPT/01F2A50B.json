@@ -1,0 +1,26 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 993, 
+        "Record Flags": {}, 
+        "FormID": "01F2A50B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwMaduraSeranScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 5, 
+        "CompiledSize": 234, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0B 00 10 00 28 00 00 00 01 00 72 02 00 39 10 0A 00 02 00 72 03 00 6E 46 00 00 00 15 00 0A 00 72 03 00 73 01 00 02 00 20 30 1C 00 01 00 5E 10 00 00 11 00 00 00 10 00 06 00 00 00 A5 00 00 00 16 00 14 00 01 00 10 00 20 58 38 10 05 00 01 00 72 03 00 20 30 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 15 00 07 00 11 00 20 58 3A 10 05 00 01 00 72 03 00 20 35 30 20 3D 3D 16 00 19 00 05 00 15 00 20 72 01 00 58 01 10 05 00 01 00 72 04 00 20 32 35 36 20 3C 3D 39 10 0A 00 02 00 72 03 00 6E 46 00 00 00 15 00 0A 00 72 03 00 73 01 00 02 00 20 30 1C 00 01 00 5E 10 00 00 1C 00 01 00 53 10 0A 00 02 00 72 05 00 6E 1E 00 00 00 1C 00 01 00 56 10 05 00 01 00 72 05 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwMaduraSeranScript\n\nBegin OnPackageEnd fbmwilmadurafollow\n	SetStage fbmwILRescuePilgrim 70\n	SET fbmwILRescuePilgrim.FollowNow TO 0\n	mwMaduraSeranREF.EvaluatePackage\nEND\n\nBegin GameMode\n	if GetQuestRunning fbmwILRescuePilgrim == 0\n		return\n	endif\n\n	if GetStage fbmwILRescuePilgrim == 50\n		IF mwMaduraSeranREF.GetDistance mwAldVelothiMapMarker <= 256\n			SetStage fbmwILRescuePilgrim 70\n			SET fbmwILRescuePilgrim.FollowNow TO 0\n			mwMaduraSeranREF.EvaluatePackage\n			mwMaduraSeranREF.ModDisposition Player 30\n			mwMaduraSeranREF.StartConversation Player\n		ENDIF\n	endif\nEND\n;<CSEBlock>\n;<CSECaretPos> 362 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "mwMaduraSeranREF [ACHR:018438D9]", 
+        "SCRO - Global Reference": "fbmwilmadurafollow [PACK:01F2A57B]", 
+        "SCRO - Global Reference": "fbmwILRescuePilgrim [QUST:01006026]", 
+        "SCRO - Global Reference": "mwAldVelothiMapMarker [REFR:01451040]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 631, 
+        "Record Flags": {}, 
+        "FormID": "01F8B8E8", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMFrostGiant2 [QUST:0101B6C4]", 
+    "PNAM - Previous INFO": "01F8B8E7", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "You are here! The master told me there would be one coming! You must help. Krish is trying to take control of the castle. He has found nasty grahl to help him! You must kill them all! My master will be pleased! Your master will be pleased.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "Go now, through the Banquet Hall to the caverns. They wait down there! Go now or the master will not be happy!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMFrostGiant2 "Siege of Castle Karstaag" [QUST:0101B6C4]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMFrostGiant2 "Siege of Castle Karstaag" [QUST:0101B6C4]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwbmDulk "Dulk" [NPC_:01F8B87B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 32 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwbmFrostGiant2 50", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMFrostGiant2 [QUST:0101B6C4]"
+        ]
+    }
+}

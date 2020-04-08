@@ -1,0 +1,73 @@
+{
+    "Topic": "1foodSandSdrink1 [DIAL:01321195]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 471, 
+        "Record Flags": {}, 
+        "FormID": "013232A3", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTTSupplyMonk [QUST:01002C84]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310B8B", 
+        "NAME - Topic": "01310C9C"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Kwama eggs again? Well, I should be thankful the Temple supports an old hermit like me.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0sendusSsathis "Sendus Sathis" [NPC_:01260511]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 50, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 04 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 04 00 6E 04 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwttsupplymonk 50\r\nplayer.removeitem 0foodukwamaueggu01 4\r\nplayer.removeitem 0potionulocalubrewu01 4", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwTTSupplyMonk [QUST:01002C84]", 
+            "SCRO - Global Reference": "0foodUkwamaUeggU01 [INGR:010A0001]", 
+            "SCRO - Global Reference": "0PotionULocalUBrewU01 [ALCH:01080005]"
+        ]
+    }
+}

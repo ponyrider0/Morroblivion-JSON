@@ -1,0 +1,111 @@
+{
+    "Topic": "1murderSofSProcessusSVitellius [DIAL:01310664]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 878, 
+        "Record Flags": {}, 
+        "FormID": "01AABE38", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVDeadTaxman [QUST:01003404]", 
+    "PNAM - Previous INFO": "01AAB700", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 4D 56"
+            }, 
+            "NAM1 - Response Text": "Good to see you were able to recover the Emperor's coin. I appreciate that kind of honesty.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "57 4D 56"
+            }, 
+            "NAM1 - Response Text": "Since you've proven trustworthy, here's something you might be interested in. I'd like to see the murderer of Processus punished.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000001", 
+                "Emotion Value": 40, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "57 4D 56"
+            }, 
+            "NAM1 - Response Text": "Killing an Emperor's tax collector is punishable by death.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "57 4D 56"
+            }, 
+            "NAM1 - Response Text": "Find his murderer, bring him to justice, and the Census and Excise office will pay you 500 septims.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 200.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "Gold001 "Gold" [MISC:0000000F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 45.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVDeadTaxman "Death of a Taxman" [QUST:01003404]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0chargenSclass "Socucius Ergalla" [NPC_:01260465]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 60, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 2E 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E C8 00 00 00 02 10 0A 00 02 00 72 03 00 6E C8 00 00 00 39 10 0A 00 02 00 72 02 00 6E 30 00 00 00", 
+        "SCTX - Result script source": "setstage FBMWMVDeadTaxman 46\r\nplayer.removeitem gold001 200\r\nadditem gold001 200\r\nsetstage FBMWMVDeadTaxman 48", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMVDeadTaxman [QUST:01003404]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]"
+        ]
+    }
+}

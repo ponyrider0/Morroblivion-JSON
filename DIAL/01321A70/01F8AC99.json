@@ -1,0 +1,67 @@
+{
+    "Topic": "1darkSbusiness2 [DIAL:01321A70]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 398, 
+        "Record Flags": {}, 
+        "FormID": "01F8AC99", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMWomanScorned [QUST:0101B6DD]", 
+    "PNAM - Previous INFO": "013233F1", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000001", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "C7 16 3E"
+            }, 
+            "NAM1 - Response Text": "Very well. Not everybody has the stomach for what I need done.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000001", 
+                "Emotion Value": 20, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "C7 16 3E"
+            }, 
+            "NAM1 - Response Text": "If you change your mind, the offer will still be open.  And I trust you to keep this issue to yourself. Good day.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0kjolver "Kjolver" [NPC_:01260B12]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 14 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwBMWomanScorned 20", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMWomanScorned [QUST:0101B6DD]"
+        ]
+    }
+}

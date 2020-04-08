@@ -1,0 +1,60 @@
+{
+    "Topic": "Question [DIAL:0002411C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 201, 
+        "Record Flags": {}, 
+        "FormID": "000250A1", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "01", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Random": true
+        }
+    }, 
+    "QSTI - Quest": "GenericCurrentEvents [QUST:0002580C]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "A3 7C 04"
+            }, 
+            "NAM1 - Response Text": "Have you heard any word about the other provinces?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "CurrentEventsResponses [DIAL:00024E00]", 
+        "TCLT - Choice": "TamrielGateResponses [DIAL:00024E17]"
+    ], 
+    "Link From": [
+        "TCLF - Topic": "000000D3"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

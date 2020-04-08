@@ -1,0 +1,99 @@
+{
+    "Topic": "1KarstangzTBcharn [DIAL:01310FDD]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 818, 
+        "Record Flags": {}, 
+        "FormID": "01F8E59F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRShowPower [QUST:0101C65A]", 
+    "PNAM - Previous INFO": "01F8E59E", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "Loosely translated: the Weather Witch. At its height, the Dwemer civilization was masterful in the use of machinery.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "In a time of drought, Dwemer scholars were commissioned to create a machine that would bring rain to their lands. They created the Karstangz-Bcharn.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "Its existence was little more than a myth until recently, when the ruins opened beneath my city.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "I wish for you to activate the machine, make it to create ashstorms in Mournhold. Then, these heretics will know the power of Almalexia!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 80.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRShowPower "A Show of Power" [QUST:0101C65A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwAlmalexia "Almalexia" [NPC_:01F8B879]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 9, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00", 
+        "SCTX - Result script source": "addtopic 1ashstormssinsMournhold", 
+        "References": [
+            "SCRO - Global Reference": "1AshstormsSinSMournhold [DIAL:01310F9E]"
+        ]
+    }
+}

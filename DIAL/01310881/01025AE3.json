@@ -1,0 +1,61 @@
+{
+    "Topic": "1HlaaluSHortator [DIAL:01310881]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 357, 
+        "Record Flags": {}, 
+        "FormID": "01025AE3", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ10 [QUST:01001DC9]", 
+    "PNAM - Previous INFO": "01025AE4", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 6E"
+            }, 
+            "NAM1 - Response Text": "You are Hortator of House Hlaalu. You have fulfilled that part of the prophecy. But you must be Hortator of all three Great Houses, Redoran, Hlaalu, and Telvanni, before you have fulfilled the Fourth Trial.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQHlaalu "Hlaalu Hortator" [QUST:01001DD8]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0nibaniSmaesa "Nibani Maesa" [NPC_:0126018B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

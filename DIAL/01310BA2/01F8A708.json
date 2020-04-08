@@ -1,0 +1,92 @@
+{
+    "Topic": "1mySfriend [DIAL:01310BA2]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 808, 
+        "Record Flags": {}, 
+        "FormID": "01F8A708", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVStrayedPilgrim [QUST:01003413]", 
+    "PNAM - Previous INFO": "01F8A707", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "Yes, my friend Edras Oril and I were traveling to Vivec, and he heard a strange animal sound nearby. He's sort of an amateur naturalist, and he felt compelled to seek out what was making the noises.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "That was hours ago, and I'm afraid something terrible has happened to him. If you could find him, and bring him back safely, I'd really appreciate it.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "I'd go myself, but I'm really more of a scholar, as is he. That's why we were traveling together--a little safety in numbers, you know. Can you help?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVStrayedPilgrim "The Scholars and the Mating Kagouti" [QUST:01003413]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0thoronor "Thoronor" [NPC_:012606C6]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1mySfriendThorYes [DIAL:013225AE]", 
+        "TCLT - Choice": "1mySfriendThorNo [DIAL:013225B0]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmvstrayedpilgrim 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMVStrayedPilgrim [QUST:01003413]"
+        ]
+    }
+}

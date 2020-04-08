@@ -1,0 +1,77 @@
+{
+    "Topic": "1travelStogether2 [DIAL:013210A6]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 429, 
+        "Record Flags": {}, 
+        "FormID": "010068D5", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHTShishi [QUST:01003448]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "If you would just take care of Brerama Selas for me I could handle the rest myself, but I'll wait here if you want to poke around.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInCell:67", 
+            "Unused": "00 00", 
+            "Parameter #1": "Shishi "Shishi" [CELL:01480362]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHTShishi "House Telvanni: Shishi" [QUST:01003448]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0favesSandas "Faves Andas" [NPC_:01260214]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 22, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "15 00 0A 00 72 02 00 73 01 00 02 00 20 30 1C 00 01 00 5E 10 00 00", 
+        "SCTX - Result script source": "SET fbmwHTShishi.FollowNow TO 0\r\nmwFavesAndasREF.EvaluatePackage", 
+        "References": [
+            "SCRO - Global Reference": "mwFavesAndasREF [ACHR:01814A7A]", 
+            "SCRO - Global Reference": "fbmwHTShishi [QUST:01003448]"
+        ]
+    }
+}

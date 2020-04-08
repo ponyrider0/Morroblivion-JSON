@@ -1,0 +1,76 @@
+{
+    "Topic": "1fightSme6 [DIAL:01F8E526]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 389, 
+        "Record Flags": {}, 
+        "FormID": "0101013E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwCO7 [QUST:0101BED6]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000004", 
+                "Emotion Value": 60, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6C 65 72"
+            }, 
+            "NAM1 - Response Text": "I'm.... I'm too tired. Just can't fight anymore...  Kill me, won't you? Just tell them you had no choice, that you had to defend yourself.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000004", 
+                "Emotion Value": 60, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "61 6C 65"
+            }, 
+            "NAM1 - Response Text": "I just don't want to live like this anymore.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwCO7 "East Empire Company: Bar Brawl" [QUST:0101BED6]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0SelerSFavelnim "Seler Favelnim" [NPC_:01260B47]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1fightSme2 [DIAL:013228F8]", 
+        "TCLT - Choice": "1fightSme1 [DIAL:013228FA]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

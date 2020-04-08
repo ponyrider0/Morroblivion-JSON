@@ -1,0 +1,71 @@
+{
+    "Topic": "fbmwNerevarineresponse [DIAL:0102A437]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 288, 
+        "Record Flags": {}, 
+        "FormID": "0102A43A", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "01", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ06 [QUST:01001DBE]", 
+    "PNAM - Previous INFO": "0102A43C", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000002", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 41"
+            }, 
+            "NAM1 - Response Text": "The crazed outlander who kills our kin? Such a creature is pathetic, and will never fulfill the prophecies.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Ashlanders "Ashlanders" [FACT:01220009]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInCell:67", 
+            "Unused": "00 00", 
+            "Parameter #1": "UrshilakuSCamp "Urshilaku Camp" [CELL:01480042]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ11ukill "Cutting the Thread of Prophecy" [QUST:01001DCB]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

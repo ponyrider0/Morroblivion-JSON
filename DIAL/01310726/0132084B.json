@@ -1,0 +1,85 @@
+{
+    "Topic": "1alchemicalSformulas [DIAL:01310726]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 585, 
+        "Record Flags": {}, 
+        "FormID": "0132084B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHHIndEsp1 [QUST:01003463]", 
+    "PNAM - Previous INFO": "0101C67F", 
+    "Add topics": [
+        "NAME - Topic": "01310951", 
+        "NAME - Topic": "01310ACC", 
+        "NAME - Topic": "013109F6", 
+        "NAME - Topic": "01310B44", 
+        "NAME - Topic": "01310BCB"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "You were not supposed to kill Aurane Frernis. While it does remove the competition, House Hlaalu will lose honor.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "This may even provoke the Duke or the Empire. Try and do business as I say. Don't speculate until you can handle yourself.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "0auraneSfrernis "Aurane Frernis" [NPC_:0126034D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0nilenoSdorvayn "Nileno Dorvayn" [NPC_:01260109]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 28, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "53 10 0A 00 02 00 72 01 00 6E F6 FF FF FF 39 10 0A 00 02 00 72 02 00 6E C8 00 00 00", 
+        "SCTX - Result script source": "moddisposition player -10\r\nSetStage fbmwHHIndEsp1 200", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwHHIndEsp1 [QUST:01003463]"
+        ]
+    }
+}

@@ -1,0 +1,64 @@
+{
+    "Topic": "1taxesSfromSGnisis2 [DIAL:01320B0A]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 304, 
+        "Record Flags": {}, 
+        "FormID": "013230C8", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHRTaxCollector [QUST:0100519C]", 
+    "PNAM - Previous INFO": "013230C7", 
+    "Add topics": [
+        "NAME - Topic": "0131095D"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Not only are you lying to me about how much taxes were due, you didn't even bring 50 drakes with you. House Redoran has no use for such as you.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHRTaxCollector "House Redoran: Taxes from Gnisis" [QUST:0100519C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0hlarenSramoran "Hlaren Ramoran" [NPC_:012600AE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

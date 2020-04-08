@@ -1,0 +1,78 @@
+{
+    "Topic": "1gameSrats [DIAL:01310B6B]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 445, 
+        "Record Flags": {}, 
+        "FormID": "0100B9C2", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHHTheExterminator [QUST:0100346F]", 
+    "PNAM - Previous INFO": "0100B9C3", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "You killed the diseased rats, but you also killed some of the game rats. Yngling told me to only pay you a token fee of one drake.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 3.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHHTheExterminator "House Hlaalu: Exterminator" [QUST:0100346F]", 
+            "Parameter #2": "DiseasedRatsKilled", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHHTheExterminator "House Hlaalu: Exterminator" [QUST:0100346F]", 
+            "Parameter #2": "GameRatsKilled", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0edrynoSarethi "Edryno Arethi" [NPC_:0126038D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHHTheExterminator 100\r\nPlayer.AddItem Gold001 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwHHTheExterminator [QUST:0100346F]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]"
+        ]
+    }
+}

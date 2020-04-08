@@ -1,0 +1,91 @@
+{
+    "Topic": "1DissaplaSMine [DIAL:01310996]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 574, 
+        "Record Flags": {}, 
+        "FormID": "01F8A533", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwFGDissaplaMine [QUST:010033D7]", 
+    "PNAM - Previous INFO": "01F8A531", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "A pack of nix hounds was attacking my miners. We thought one of the miners was lost at first, but she turned up safe. Our healer, Teres Arothan went down to look for her and hasn't come back.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "Would you go down into the mines and bring back Teres Arothan if he still lives?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "20", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetPCInFaction:132", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwFightersGuild "Fighters Guild" [FACT:0100761A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwFGDissaplaMine "Fighters Guild: The Dissapla Mine" [QUST:010033D7]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0novorSdrethan "Novor Drethan" [NPC_:01260270]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1DissaplaSMine1 [DIAL:013219A3]", 
+        "TCLT - Choice": "1DissaplaSMine2 [DIAL:013219A1]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 1E 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwfgdissaplamine 30", 
+        "References": [
+            "SCRO - Global Reference": "fbmwFGDissaplaMine [QUST:010033D7]"
+        ]
+    }
+}

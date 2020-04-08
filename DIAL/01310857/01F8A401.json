@@ -1,0 +1,88 @@
+{
+    "Topic": "1CassiusSOlcinius [DIAL:01310857]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 723, 
+        "Record Flags": {}, 
+        "FormID": "01F8A401", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwEBInvisible [QUST:01003423]", 
+    "PNAM - Previous INFO": "01F8A400", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "72 65 74"
+            }, 
+            "NAM1 - Response Text": "That little twit! Of course I made him invisible. Did he tell you why? He asked me to! Came in muttering something about just wanting everyone to leave him alone, and promised to pay me 400 septims to make invisible to everyone.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "72 65 74"
+            }, 
+            "NAM1 - Response Text": "Did I get my money, though? No! He still has a debt to pay. So, when he came in a few weeks later begging me to remove it, I laughed in his face...or where I assumed it was.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwEBInvisible "An Invisible Son" [QUST:01003423]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 60.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwEBInvisible "An Invisible Son" [QUST:01003423]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0fevynSralen "Fevyn Ralen" [NPC_:012608FE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 3C 00 00 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "setstage fbmwebinvisible 60\r\naddtopic 1debtstospay", 
+        "References": [
+            "SCRO - Global Reference": "fbmwEBInvisible [QUST:01003423]", 
+            "SCRO - Global Reference": "1debtStoSpay [DIAL:01310ACE]"
+        ]
+    }
+}

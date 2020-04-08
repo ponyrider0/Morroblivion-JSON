@@ -1,0 +1,86 @@
+{
+    "Topic": "1NoteSFromSErnil [DIAL:013108A2]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 485, 
+        "Record Flags": {}, 
+        "FormID": "01AA2B05", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVSkoomaCorpse [QUST:01003411]", 
+    "PNAM - Previous INFO": "01AA2B04", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "You've got a note from Ernil for Tsiya? That's odd...Tsiya was expecting him here any day now. He's dead? Oh, no. Ernil was a good man, and always dealt fairly.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Tsiya doesn't suppose you found anything he might have been delivering to Tsiya did you?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0bkUnotefromernil "Note from Ernil" [BOOK:01180149]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVSkoomaCorpse "The Corpse and the Skooma Pipe" [QUST:01003411]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0tsiya "Tsiya" [NPC_:012606C2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1NoteSFromSErnil1 [DIAL:01320F6F]", 
+        "TCLT - Choice": "1NoteSFromSErnil2 [DIAL:01320F72]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

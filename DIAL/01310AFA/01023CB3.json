@@ -1,0 +1,101 @@
+{
+    "Topic": "1ashSstatue [DIAL:01310AFA]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 832, 
+        "Record Flags": {}, 
+        "FormID": "01023CB3", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHRSixthHouseBase [QUST:0100519B]", 
+    "PNAM - Previous INFO": "01023CB4", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 48 52"
+            }, 
+            "NAM1 - Response Text": "You found a note on Galtis Guvron's body when you asked about the ash statues? Let me see... Perhaps this \"Hanarai\" is Hanarai Assutlanipal.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "57 48 52"
+            }, 
+            "NAM1 - Response Text": "She claims to be an outcast ashlander. Her house is the first one on the right down the stairs from the Temple.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "57 48 52"
+            }, 
+            "NAM1 - Response Text": "She may be as unwilling to talk as Galtis. Take these potions in case you need them.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0bkUgaltisguvronsnote "Galtis Guvron's Note" [BOOK:011800CC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHRSixthHouseBase "House Redoran: Ash Statue" [QUST:0100519B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0llorosSsarano "Lloros Sarano" [NPC_:01260230]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 50, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 3C 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 04 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHRSixthHouseBase 60\r\nPlayer.AddItem 0purestoreuhealthuq 4\r\n; Player.AddItem 0pucureublightus 1\r\nPlayer.AddItem 0pucureucommonus 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwHRSixthHouseBase [QUST:0100519B]", 
+            "SCRO - Global Reference": "0pUrestoreUhealthUq [ALCH:010800DF]", 
+            "SCRO - Global Reference": "0pUcureUcommonUs [ALCH:010800E4]"
+        ]
+    }
+}

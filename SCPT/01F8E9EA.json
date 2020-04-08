@@ -1,0 +1,23 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 356, 
+        "Record Flags": {}, 
+        "FormID": "01F8E9EA", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwMSThiefSadriManorTrigZoneScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 65, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0B 00 1A 00 2E 00 00 00 01 00 72 01 00 16 00 14 00 01 00 10 00 20 58 3A 10 05 00 01 00 72 02 00 20 35 30 20 3C 39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwMSThiefSadriManorTrigZoneScript\n\nbegin OnTriggerActor Player\n\n	if GetStage fbmwMSThief < 50\n		SetStage fbmwMSThief 50\n	endif\n\nend\n;<CSEBlock>\n;<CSECaretPos> 59 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "fbmwMSThief [QUST:0101C633]"
+    ]
+}

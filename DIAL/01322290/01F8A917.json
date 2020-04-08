@@ -1,0 +1,73 @@
+{
+    "Topic": "1GuildSDues1 [DIAL:01322290]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 502, 
+        "Record Flags": {}, 
+        "FormID": "01F8A917", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMGPayDues [QUST:0100677F]", 
+    "PNAM - Previous INFO": "01323528", 
+    "Add topics": [
+        "NAME - Topic": "01310D0E", 
+        "NAME - Topic": "01310C20"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Good work, outlander. You are the first member to get Manwe to pay her dues. I knew I could rely on you.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Did you also convince Llarar Bereloth to join us?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ranisSathrys "Ranis Athrys" [NPC_:01260125]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 46, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E E8 03 00 00 53 10 0A 00 02 00 72 01 00 6E 0F 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmgpaydues 100\r\nplayer.removeitem gold001 1000\r\nmoddisposition player 15", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMGPayDues [QUST:0100677F]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]"
+        ]
+    }
+}

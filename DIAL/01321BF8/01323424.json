@@ -1,0 +1,59 @@
+{
+    "Topic": "1AurielAsSBowDonate [DIAL:01321BF8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 496, 
+        "Record Flags": {}, 
+        "FormID": "01323424", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSMuseum [QUST:0101C629]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Thank you, outlander. It's rare to find an item for our collection with such a distinctive aroma.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0TorasaSAram "Torasa Aram" [NPC_:01260A80]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 63, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 15 00 0A 00 72 04 00 73 0E 00 02 00 20 31 1C 00 02 00 21 10 00 00 15 00 13 00 72 04 00 73 23 00 0B 00 20 72 04 00 73 23 00 20 31 20 2B", 
+        "SCTX - Result script source": "player.removeitem fbmwAurielsBow 1\r\nset fbmwMSMuseum.aurielbow to 1\r\nmwAurielsBowMuseumREF.enable\r\nset fbmwMSMuseum.ItemsDonated to (fbmwMSMuseum.ItemsDonated + 1)", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "mwAurielsBowMuseumREF [REFR:01F8E5C5]", 
+            "SCRO - Global Reference": "fbmwAurielsBow [WEAP:01023CC4]", 
+            "SCRO - Global Reference": "fbmwMSMuseum [QUST:0101C629]"
+        ]
+    }
+}

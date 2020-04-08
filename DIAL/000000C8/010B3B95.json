@@ -1,0 +1,87 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 748, 
+        "Record Flags": {}, 
+        "FormID": "010B3B95", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMWolfGiver [QUST:0101B6DC]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "56 61 6D"
+            }, 
+            "NAM1 - Response Text": "Greetings&sUActnQuick1;. Does my form surprise you?  As a witch of Glenmoril Wyrd, I have the ability to change my shape as suits my needs.  But then, you know something of shapechanging, don't you?  That is why the Coven has come here to Solstheim.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "We have been watching events unfold, and are well aware that lycanthropy is spreading.  For some this is a blessing.  For others a curse.  For those who wish, we offer a cure, one that forever stops the change into wolf form.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Does such a thing interest you?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMWolfGiver "Rite of the Wolf Giver" [QUST:0101B6DC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0glenmorilUwitchUaltar "Ettiene of Glenmoril Wyrd" [NPC_:01260B6A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "fbmwbmRiteYes [DIAL:010B3B97]", 
+        "TCLT - Choice": "fbmwbmRiteNo [DIAL:01234354]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

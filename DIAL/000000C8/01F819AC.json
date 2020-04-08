@@ -1,0 +1,100 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 868, 
+        "Record Flags": {}, 
+        "FormID": "01F819AC", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwICWitch [QUST:0100B81F]", 
+    "PNAM - Previous INFO": "01F82284", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 41 70"
+            }, 
+            "NAM1 - Response Text": "Not long ago we drove a coven of witches from the old Daedric ruins of Ashalmawia. However, one witch escaped -- a Dark Elf named Thelsa Dral.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "75 64 69"
+            }, 
+            "NAM1 - Response Text": "But just recently egg miners from nearby Asha-Ahhe Egg Mine have complained that the mine is cursed. Perhaps Thelsa Dral has taken refuge there.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "75 64 69"
+            }, 
+            "NAM1 - Response Text": "Go to Asha-Ahhe Egg Mine, near the village of khuul, and if you find the witch Thelsa Dral, kill her. When you are sure the wicked creature is dead, return and report to me. Here is some gold for expenses.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICHaunting "Imperial Cult: The Haunting" [QUST:0100B81E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICWitch "Imperial Cult: Thelsa Dral the Witch" [QUST:0100B81F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Kaye "Kaye" [NPC_:012602E6]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 2C 01 00 00", 
+        "SCTX - Result script source": "setstage fbmwicwitch 1\r\nplayer.additem gold001 300", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwICWitch [QUST:0100B81F]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]"
+        ]
+    }
+}

@@ -1,0 +1,80 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 411, 
+        "Record Flags": {}, 
+        "FormID": "0100B9DB", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwHHGuardMerchant [QUST:01003462]", 
+    "PNAM - Previous INFO": "0100B9DA", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Great timing, outlander! The thief came in right behind you!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHHGuardMerchant "House Hlaalu: Guard Ralen Tilvur" [QUST:01003462]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHHGuardMerchant "House Hlaalu: Guard Ralen Tilvur" [QUST:01003462]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ralenStilvur "Ralen Tilvur" [NPC_:01260395]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 35, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 1C 00 01 00 21 10 00 00 1C 00 01 00 16 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "SetStage fbmwHHGuardMerchant 50\r\nmwDrarelAndusREF.Enable\r\nmwDrarelAndusREF.StartCombat Player", 
+        "References": [
+            "SCRO - Global Reference": "mwDrarelAndusREF [ACHR:01863D92]", 
+            "SCRO - Global Reference": "fbmwHHGuardMerchant [QUST:01003462]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

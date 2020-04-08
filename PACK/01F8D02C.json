@@ -1,0 +1,61 @@
+{
+    "Record Header": {
+        "Signature": "PACK", 
+        "Data Size": 160, 
+        "Record Flags": {}, 
+        "FormID": "01F8D02C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwMaarGanKindErusharaGoInside", 
+    "PKDT - General": {
+        "General": {
+            "Flags": {
+                "Must reach location": true, 
+                "Unlock doors at package start": true, 
+                "Unlock doors at location": true, 
+                "Always run": true
+            }, 
+            "Type": "08", 
+            "Unused": "00 00 00"
+        }
+    }, 
+    "PLDT - Location": {
+        "Type": 0, 
+        "Location": "01852FB1", 
+        "Radius": 0
+    }, 
+    "PSDT - Schedule": {
+        "Month": -1, 
+        "Day of week": -1, 
+        "Date": "00", 
+        "Time": -1, 
+        "Duration": 0
+    }, 
+    "PTDT - Target": {
+        "Type": 1, 
+        "Target": "01420014", 
+        "Count": 0
+    }, 
+    "Conditions": [
+        {
+            "Type": "41", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.900000000000000, 
+            "Function": "GetWindSpeed:147", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "01", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "IsRaining:62", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ]
+}

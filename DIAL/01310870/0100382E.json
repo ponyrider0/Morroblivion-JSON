@@ -1,0 +1,77 @@
+{
+    "Topic": "1BralenSCarvaren [DIAL:01310870]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 480, 
+        "Record Flags": {}, 
+        "FormID": "0100382E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHRClearSarethi [QUST:0100431A]", 
+    "PNAM - Previous INFO": "0100382D", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Thank you, outlander. I understand that my son's name will be cleared when he has been purged of the ash statue's influence.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": " I knew my son would never murder his friend, but I understand this statue influenced him in some way.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 95.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHRClearSarethi "House Redoran: Clear Varvur Sarethi's Name" [QUST:0100431A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0athynSsarethi "Athyn Sarethi" [NPC_:012600B2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 64 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHRClearSarethi 100", 
+        "References": [
+            "SCRO - Global Reference": "fbmwHRClearSarethi [QUST:0100431A]"
+        ]
+    }
+}

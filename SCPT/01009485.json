@@ -1,0 +1,26 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1272, 
+        "Record Flags": {}, 
+        "FormID": "01009485", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwShrineMaarGanMagicRock", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 5, 
+        "CompiledSize": 468, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 C4 01 00 00 00 00 16 00 15 00 04 00 11 00 20 58 3A 10 05 00 01 00 72 01 00 20 31 30 20 3D 3D 00 10 9B 00 01 00 93 00 48 65 72 65 20 4D 65 68 72 75 6E 65 73 20 44 61 67 6F 6E 20 68 65 6C 64 20 74 68 69 73 20 72 6F 63 6B 20 68 69 67 68 20 61 62 6F 76 65 20 74 68 65 20 44 75 6E 6D 65 72 2E 20 56 69 76 65 63 20 74 61 75 6E 74 65 64 20 4D 65 68 72 75 6E 65 73 20 44 61 67 6F 6E 20 73 6F 20 74 68 61 74 20 44 61 67 6F 6E 20 74 68 72 65 77 20 74 68 65 20 72 6F 63 6B 20 61 74 20 56 69 76 65 63 20 69 6E 73 74 65 61 64 20 6F 66 20 74 68 65 20 70 65 6F 70 6C 65 2E 00 00 00 00 39 10 0A 00 02 00 72 01 00 6E 14 00 00 00 58 10 05 00 01 00 72 02 00 1E 00 00 00 19 00 00 00 16 00 28 00 01 00 24 00 20 58 3A 10 05 00 01 00 72 01 00 20 33 30 20 3D 3D 20 58 54 10 05 00 01 00 72 03 00 20 31 20 3E 3D 20 26 26 39 10 0A 00 02 00 72 01 00 6E 3C 00 00 00 19 00 00 00 00 10 9B 00 01 00 93 00 48 65 72 65 20 4D 65 68 72 75 6E 65 73 20 44 61 67 6F 6E 20 68 65 6C 64 20 74 68 69 73 20 72 6F 63 6B 20 68 69 67 68 20 61 62 6F 76 65 20 74 68 65 20 44 75 6E 6D 65 72 2E 20 56 69 76 65 63 20 74 61 75 6E 74 65 64 20 4D 65 68 72 75 6E 65 73 20 44 61 67 6F 6E 20 73 6F 20 74 68 61 74 20 44 61 67 6F 6E 20 74 68 72 65 77 20 74 68 65 20 72 6F 63 6B 20 61 74 20 56 69 76 65 63 20 69 6E 73 74 65 61 64 20 6F 66 20 74 68 65 20 70 65 6F 70 6C 65 2E 00 00 00 00 1E 10 08 00 02 00 72 04 00 72 05 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwShrineMaarGanMagicRock\n\nBegin OnActivate\n	IF GetStage fbmwTTMaarGan == 10\n		MessageBox \"Here Mehrunes Dagon held this rock high above the Dunmer. Vivec taunted Mehrunes Dagon so that Dagon threw the rock at Vivec instead of the people.\"\n		SetStage fbmwTTMaarGan 20\n		AddTopic 1tauntsthesDaedra\n		Return\n	ENDIF\n\n	IF GetStage fbmwTTMaarGan == 30 && GetDeadCount mwAnhaedra >= 1\n		SetStage fbmwTTMaarGan 60\n	ENDIF\n\n	MessageBox \"Here Mehrunes Dagon held this rock high above the Dunmer. Vivec taunted Mehrunes Dagon so that Dagon threw the rock at Vivec instead of the people.\"\n	Cast 0shrineumaarganusp Player\nEnd\n;<CSEBlock>\n;<CSECaretPos> 37 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "fbmwTTMaarGan [QUST:01002C7D]", 
+        "SCRO - Global Reference": "1tauntStheSDaedra [DIAL:01310863]", 
+        "SCRO - Global Reference": "mwAnhaedra [NPC_:01005436]", 
+        "SCRO - Global Reference": "0shrineUmaarganUsp [SPEL:01060376]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+    ]
+}

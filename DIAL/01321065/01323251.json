@@ -1,0 +1,98 @@
+{
+    "Topic": "1aboutSmySfamily1 [DIAL:01321065]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 966, 
+        "Record Flags": {}, 
+        "FormID": "01323251", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwVAVampChild [QUST:01003BCA]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310A49"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Good. If you bring me back useful information, I will allow you use of the clan services here at Ashmelech...if it suits me to.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "The last I heard of any of my former family, they occupied the region that is now Sadrith Mora. You may wish to start there. Take this ring;", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "it bears my family crest. Any high elf in the region should recognize it, and may be able to give you information valuable to me. Go.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0dhaunayneSaundae "Dhaunayne Aundae" [NPC_:01260185]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ClanSAundae "Aundae Clan" [FACT:0122000C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 8, 
+            "CompiledSize": 77, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 1E 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 58 10 05 00 01 00 72 04 00 58 10 05 00 01 00 72 05 00 58 10 05 00 01 00 72 06 00 58 10 05 00 01 00 72 07 00 58 10 05 00 01 00 72 08 00", 
+        "SCTX - Result script source": "setstage fbmwvavampchild 30\r\nplayer.additem fbmwVampChildRing 1\r\naddtopic 1bears\r\naddtopic 1familyscrest\r\naddtopic 1ring\r\naddtopic 1SadrithSMora\r\naddtopic 1Services", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwVAVampChild [QUST:01003BCA]", 
+            "SCRO - Global Reference": "fbmwVampChildRing [CLOT:0101BEC3]", 
+            "SCRO - Global Reference": "1bears [DIAL:013113EE]", 
+            "SCRO - Global Reference": "1familyScrest [DIAL:01310A49]", 
+            "SCRO - Global Reference": "1ring [DIAL:01310D13]", 
+            "SCRO - Global Reference": "1SadrithSMora [DIAL:01310A24]", 
+            "SCRO - Global Reference": "1Services [DIAL:01310C04]"
+        ]
+    }
+}

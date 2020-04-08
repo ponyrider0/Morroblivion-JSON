@@ -1,0 +1,22 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 488, 
+        "Record Flags": {}, 
+        "FormID": "014703A6", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwBMColonyBaroShipScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 120, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 6A 00 00 00 16 00 12 00 03 00 0E 00 20 72 01 00 58 23 10 00 00 20 31 20 3D 3D 16 00 0F 00 01 00 0B 00 20 58 23 10 00 00 20 30 20 3D 3D 22 10 00 00 19 00 00 00 18 00 12 00 03 00 0E 00 20 72 01 00 58 23 10 00 00 20 30 20 3D 3D 16 00 0F 00 01 00 0B 00 20 58 23 10 00 00 20 31 20 3D 3D 21 10 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptName mwBMColonyBaroShipScript\n\n\nBegin GameMode\n	if (\"2BaroSEgnatius\".GetDisabled == 1)\n		if (GetDisabled == 0)\n			Disable\n		endif\n	elseif (\"2BaroSEgnatius\".GetDisabled == 0)\n		if (GetDisabled == 1)\n			Enable\n		endif\n	endif\nEnd\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "2BaroSEgnatius [ACHR:01F0073A]"
+    ]
+}

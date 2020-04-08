@@ -1,0 +1,523 @@
+{
+    "Record Header": {
+        "Signature": "QUST", 
+        "Data Size": 7953, 
+        "Record Flags": {}, 
+        "FormID": "01001DC4", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwMQ09", 
+    "SCRI - Script": "fbmwMQ09MiloGo [SCPT:0101D5AC]", 
+    "FULL - Name": "Mehra Milo and the Lost Prophecies", 
+    "ICON - Icon FileName": "darthsouth\\Quests\\morrowindmainquest.dds", 
+    "DATA - General": {
+        "Flags": {}, 
+        "Priority": 90
+    }, 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsPlayableRace:254", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestRunning:56", 
+            "Unused": "00 00", 
+            "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Stages": [
+        {
+            "INDX - Stage index": 1, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Caius Cosades was recalled to the Imperial City. He says he believes I am really the Nerevarine. He wants me to find the lost prophecies and deliver them to Nibani Maesa. His parting orders are to go to the Hall of Wisdom and Justice, where Mehra Milo will tell me how to get the lost prophecies. He says she's being watched, and if something has gone wrong, she will leave me a message under the code word 'amaya'.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 20, 
+                            "CompiledSize": 174, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 21 10 00 00 1C 00 02 00 9E 10 05 00 01 00 72 03 00 58 10 05 00 01 00 72 04 00 58 10 05 00 01 00 72 05 00 58 10 05 00 01 00 72 06 00 58 10 05 00 01 00 72 07 00 58 10 05 00 01 00 72 08 00 58 10 05 00 01 00 72 09 00 58 10 05 00 01 00 72 0A 00 58 10 05 00 01 00 72 0B 00 58 10 05 00 01 00 72 0C 00 58 10 05 00 01 00 72 0D 00 58 10 05 00 01 00 72 0E 00 58 10 05 00 01 00 72 0F 00 58 10 05 00 01 00 72 10 00 58 10 05 00 01 00 72 11 00 58 10 05 00 01 00 72 12 00 58 10 05 00 01 00 72 13 00 58 10 05 00 01 00 72 14 00", 
+                        "SCTX - Result script source": "mwNoteToAmaya.Enable\r\nfbMehraMiloREF.moveto fbmwMQ09miloJailmarker\r\nAddTopic 1divinesinterventionsscrolls\r\nAddTopic 1recalled\r\nAddTopic 1promotedstosoperative\r\nAddTopic 1dagothsur\r\nAddTopic 1corprussdisease\r\nAddTopic 1dissidentspriests\r\nAddTopic 1lostsprophecies\r\nAddTopic 1mehrasmilo\r\nAddTopic 1nerevar\r\nAddTopic 1nerevarine\r\nAddTopic 1returnstosvivec\r\nAddTopic 1secretsorder\r\nAddTopic 1servicessandshospitality\r\nAddTopic 1sixthshouse\r\nAddTopic 1theslostsprophecy\r\nAddTopic 1thessevenscurses\r\nAddTopic 1VisitSAnyone", 
+                        "References": [
+                            "SCRO - Global Reference": "mwNoteToAmaya [REFR:01872F01]", 
+                            "SCRO - Global Reference": "fbmehramiloref [ACHR:0184800B]", 
+                            "SCRO - Global Reference": "fbmwmq09milojailmarker [REFR:0101FAD7]", 
+                            "SCRO - Global Reference": "1DivineSInterventionSscrolls [DIAL:0131066B]", 
+                            "SCRO - Global Reference": "1recalled [DIAL:01310BD7]", 
+                            "SCRO - Global Reference": "1promotedStoSOperative [DIAL:013106D5]", 
+                            "SCRO - Global Reference": "1DagothSUr [DIAL:01310B5E]", 
+                            "SCRO - Global Reference": "1corprusSdisease [DIAL:01310876]", 
+                            "SCRO - Global Reference": "1DissidentSPriests [DIAL:013107B5]", 
+                            "SCRO - Global Reference": "1lostSprophecies [DIAL:01310875]", 
+                            "SCRO - Global Reference": "1MehraSMilo [DIAL:01310AF7]", 
+                            "SCRO - Global Reference": "1Nerevar [DIAL:01310C21]", 
+                            "SCRO - Global Reference": "1Nerevarine [DIAL:01310AEC]", 
+                            "SCRO - Global Reference": "1returnStoSVivec [DIAL:01310883]", 
+                            "SCRO - Global Reference": "1secretSorder [DIAL:013109FF]", 
+                            "SCRO - Global Reference": "1servicesSandShospitality [DIAL:0131067E]", 
+                            "SCRO - Global Reference": "1SixthSHouse [DIAL:01310A61]", 
+                            "SCRO - Global Reference": "1TheSLostSProphecy [DIAL:013107C8]", 
+                            "SCRO - Global Reference": "1TheSSevenSCurses [DIAL:0131081A]", 
+                            "SCRO - Global Reference": "1visitSanyone [DIAL:013109FE]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 10, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I found a note addressed to 'Amaya' in Mehra Milo's room. I think it means she's in trouble, probably imprisoned in the Ministry of Truth. I'm to tell the guard at the entrance, Alvela Saram, that I'm looking for Mehra Milo, and she'll let me in. Milo wants me to bring her two Divine Intervention scrolls. For an escape plan? She also left me two Levitation potions.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 2, 
+                            "CompiledSize": 17, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 22 10 00 00 19 11 05 00 01 00 72 02 00", 
+                        "SCTX - Result script source": "mwCaiusCosadesREF.Disable\r\nSetCellOwnership BalmoraVSCaiusSCosadesASHouse", 
+                        "References": [
+                            "SCRO - Global Reference": "mwCaiusCosadesREF [ACHR:0181083F]", 
+                            "SCRO - Global Reference": "BalmoraVSCaiusSCosadesASHouse [CELL:0148010C]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 15, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Alvela Saram gave me a key to the entrance to the Ministry of Truth. I'll need keys for other doors inside; look for them in desks. She said there's sympathy for the Dissident priests among the Ordinators, but if anyone gets killed getting her out, we'll lose that sympathy.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 20, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I gave Mehra Milo a Divine Intervention scroll. She'll meet me at Holamayan, a Dissident priest monastery, and we'll get the lost prophecies. I'll go to the East Docks in Ebonheart, find Blatta Hateria, tell her that Mehra Milo sent me, and that I want to 'go fishing'. She'll bring me to Holamayan by boat. I must speak to Vevrana Aryon, a monk at the dock at Holamayan, about Holamayan's magically hidden entrance.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 22, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Vevrana Aryon, a monk of Holamayan, says I will find Mehra Milo in the monastery here, on this island. A stone pathway north from the docks leads uphill to the entrance to Holamayan, but the portal opens only at dusk and dawn, the magical twilight hours sacred to Azura. I will find Mehra Milo in the library with Master Barelo. Later, Vevrana Aryon can arrange for my return to Vivec whenever I am ready.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 25, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Here's Gilvas Barelo's short interpretation of 'The Lost Prophecy'. 'An outlander -- foreign-born, but welcomed as a guest -- confronts seven curses beneath Red Mountain. His hand, blessed by Azura, uses a cursed blade to bring justice to House Dagoth, or House Dwemer, or both.' Maybe the prophecy was lost because Ashlanders didn't like the idea of an outlander Nerevarine.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 30, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Here's Gilvas Barelo's short interpretation of 'The Seven Curses'. 'Seven curses come from House Dagoth, or House Dwemer, or both. Fire and ash come from Red Mountain. Flesh is corprus. Ghosts, Seed, and Despair are unclear, but Curse-of-Dreams seems to refer to recent cases of soul sickness and Sleeper attacks in the towns.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 40, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Gilvas Barelo says that Dagoth Ur grows stronger while the Tribunal grows weaker. He sees the return of Saint Nerevar, even if it is only the 'spirit' of Saint Nerevar, as the best hope for salvation from Dagoth Ur's menace.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 42, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "The Temple might not be so intolerant of differences in opinion, Gilvas Barelo says, but the Ordinators under Berel Sala claim that the threat from Red Mountain and Dagoth Ur can only be resisted with a unified, resolute faith. If the Dissident priests could show they can confront Dagoth Ur more effectively than the Ordinators, the Temple and people might support the Dissident priests.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 44, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Gilvas Barelo says that faith in the Temple's protective power was strong as long as the Ordinators, Buoyant Armigers, and Tribunal could contain the blight and Dagoth Ur's creatures within the Ghostfence. But now travelers and settlements suffer from blight storms and marauding monsters, and the people fear the Temple is losing its ages-old battle with the Devil Dagoth Ur.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 46, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "The appearance of the Sixth House is clearly a sign of a coming crisis, according to Gilvas Barelo. In such troubled times, the Dunmer may turn to the ancient pillars of faith, the ancestors and the Daedra, and the prophetic visions granted by Lord Azura. Then they may look to the Nerevarine, Saint Nerevar Reborn, to lead them against the grim armies of Dagoth Ur.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 48, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "The Heirographa are the collected priestly writings of the Temple. The Apographa are the 'hidden writings' -- secrets known only at the highest levels of priesthood and inquisition. The Dissident priests have gathered much of the Apographa in Holamayan. One of the chief disputes between the Temple and the Dissident priests is that the Temple hides the truth from its followers.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 49, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "From the Apographa, Gilvas Barelo gave me a document called 'Kagrenac's Tools'. This document describes the terrible secret that the Temple conceals about the true history of the Tribunal and the corrupt nature of their divine powers. To hide this secret, the Temple persecutes the Nerevarine and the Dissident Priests. Barelo says the persecution must stop, and we must unite against the true enemy, Dagoth Ur.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 50, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "Gilvas Barelo gave me 'The Lost Prophecy' and 'The Seven Curses'. 'The Lost Prophecy' says the Nerevarine is an outlander. That may surprise the Ashlanders, but it suggest that I might really be the Nerevarine. He also gave me a document based on the Apographa called 'Kagrenac's Tools' which reveals the guilty secret behind the Tribunal's divine powers. I must bring these lost prophecies to Nibani Maesa as soon as I can.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 192, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 6C 00 01 00 68 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 43 6F 6D 70 6C 65 74 65 64 20 4D 65 68 72 61 20 4D 69 6C 6F 20 61 6E 64 20 74 68 65 20 4C 6F 73 74 20 50 72 6F 70 68 65 63 69 65 73 20 71 75 65 73 74 22 F9 16 27 00 01 00 23 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 31 35 30 19 00 00 00", 
+                        "SCTX - Result script source": "if ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qCompleted Mehra Milo and the Lost Prophecies quest%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 150\"\r\nendif"
+                    }
+                }
+            ]
+        }
+    ], 
+    "Targets": [
+        {
+            "QSTA - Target": {
+                "Target": "0101FAD7", 
+                "Flags": {}, 
+                "Unused": "00 46 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 15.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwMQ09 "Mehra Milo and the Lost Prophecies" [QUST:01001DC4]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "01847FFB", 
+                "Flags": {}, 
+                "Unused": "00 46 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 20.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwMQ09 "Mehra Milo and the Lost Prophecies" [QUST:01001DC4]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "0184800B", 
+                "Flags": {}, 
+                "Unused": "00 46 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 22.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwMQ09 "Mehra Milo and the Lost Prophecies" [QUST:01001DC4]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "018347BD", 
+                "Flags": {}, 
+                "Unused": "00 46 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 10.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwMQ09 "Mehra Milo and the Lost Prophecies" [QUST:01001DC4]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetItemCount:47", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "0scUdivineintervention "Scroll of Divine Intervention" [BOOK:011801D6]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "0184843A", 
+                "Flags": {}, 
+                "Unused": "00 46 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 10.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwMQ09 "Mehra Milo and the Lost Prophecies" [QUST:01001DC4]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "40", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetItemCount:47", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "0scUdivineintervention "Scroll of Divine Intervention" [BOOK:011801D6]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "01872F01", 
+                "Flags": {}, 
+                "Unused": "00 46 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwMQ09 "Mehra Milo and the Lost Prophecies" [QUST:01001DC4]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }
+    ]
+}

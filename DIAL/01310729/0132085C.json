@@ -1,0 +1,99 @@
+{
+    "Topic": "1TelvanniScouncilors [DIAL:01310729]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 717, 
+        "Record Flags": {}, 
+        "FormID": "0132085C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQTelvanniAryon [QUST:01002C4B]", 
+    "PNAM - Previous INFO": "0132085B", 
+    "Add topics": [
+        "NAME - Topic": "0131092C", 
+        "NAME - Topic": "01310729", 
+        "NAME - Topic": "01310B9D", 
+        "NAME - Topic": "01310C45", 
+        "NAME - Topic": "01310BDD", 
+        "NAME - Topic": "01310A9C", 
+        "NAME - Topic": "01310A24"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Here's a recent edition of the Brown Book of Great House Telvanni. It lists the current Telvanni councilors and their residences.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Let me mark the locations of the councilor's towers on your map -- Tel Aruhn, Tel Vos, Tel Mora, Tel Branora.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "And Tel Naga is right in the center of Sadrith Mora.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 4.000000000000000, 
+            "Function": "GetFactionRank:73", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Telvanni "Great House Telvanni" [FACT:01220006]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 39 10 0A 00 02 00 72 03 00 6E 05 00 00 00", 
+        "SCTX - Result script source": "Player.AddItem 0bkUBrownBook426 1\r\nSetStage fbmwMQTelvanni 5", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0bkUBrownBook426 [BOOK:01180115]", 
+            "SCRO - Global Reference": "fbmwMQTelvanni [QUST:01002C4A]"
+        ]
+    }
+}

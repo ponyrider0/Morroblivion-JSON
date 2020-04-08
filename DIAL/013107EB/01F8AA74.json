@@ -1,0 +1,70 @@
+{
+    "Topic": "1sensitiveSmatters [DIAL:013107EB]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 384, 
+        "Record Flags": {}, 
+        "FormID": "01F8AA74", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwDAMephala [QUST:01002C8A]", 
+    "PNAM - Previous INFO": "01F8AA73", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "72 6F 73"
+            }, 
+            "NAM1 - Response Text": "The great Daedra Mephala has given me information that must be acted on. If you would be willing to work with me, I'm certain Mephala would be grateful.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwDAMephala "Mephala's Quest" [QUST:01002C8A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0tarosSdral "Taros Dral" [NPC_:01260926]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1sensitiveSmatters1 [DIAL:01320C05]", 
+        "TCLT - Choice": "1sensitiveSmatters2 [DIAL:01320C07]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwdamephala 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwDAMephala [QUST:01002C8A]"
+        ]
+    }
+}

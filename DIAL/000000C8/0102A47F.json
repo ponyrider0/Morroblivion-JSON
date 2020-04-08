@@ -1,0 +1,115 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 763, 
+        "Record Flags": {}, 
+        "FormID": "0102A47F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMSadSeer [QUST:0101B6D1]", 
+    "PNAM - Previous INFO": "0102A47E", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6C 69 72"
+            }, 
+            "NAM1 - Response Text": "You've returned!  Oh, I see you haven't found Oddfrid White-Lip.  I do hope the draugrs haven't proved too much for you.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000004", 
+                "Emotion Value": 90, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "64 61 61"
+            }, 
+            "NAM1 - Response Text": "My nights are especially lonely without Oddfrid's sweet voice to keep me company.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 20, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "6C 69 72"
+            }, 
+            "NAM1 - Response Text": "You should hear her joke about the Khajiit fishmonger...now THAT'S a good one!", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "6C 69 72"
+            }, 
+            "NAM1 - Response Text": "Anyway, when you rescue Oddfrid, please return to me.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "05", 
+                "Unused": "6C 69 72"
+            }, 
+            "NAM1 - Response Text": "Now, as you can see, my dwelling is still in shambles, and there's a lot of cleaning left to do.  Goodbye.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "02", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0miscUskullUoddfrid "Oddfrid White-Lip" [MISC:0116023D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMSadSeer "The Sad Seer" [QUST:0101B6D1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0geilirStheSmumbling "Geilir the Mumbling" [NPC_:01260B50]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

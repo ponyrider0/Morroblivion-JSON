@@ -1,0 +1,105 @@
+{
+    "Topic": "1availableSforShire3 [DIAL:01320A4C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1224, 
+        "Record Flags": {}, 
+        "FormID": "013230AF", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMercCalvusQuest [QUST:01024454]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "0131107A", 
+        "NAME - Topic": "01310CFD", 
+        "NAME - Topic": "01310FEB", 
+        "NAME - Topic": "01310FEA", 
+        "NAME - Topic": "01310CF8"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Good. Our contract is for 30 days. Here are the terms. I follow you everywhere, and fight when you fight. I'm always on duty.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I follow or stay, at your command. And you'll keep me healthy and safe, if you want to get your money's worth.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "If you want to change the plan, just talk to me about it.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0CalvusSHoratius "Calvus Horatius" [NPC_:01260A98]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 9, 
+            "CompiledSize": 156, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 02 00 6E FA 00 00 00 02 10 0A 00 02 00 72 02 00 6E FA 00 00 00 39 10 0A 00 02 00 72 03 00 6E 01 00 00 00 15 00 0A 00 72 03 00 73 02 00 02 00 20 31 15 00 0A 00 72 03 00 73 01 00 02 00 20 31 15 00 0A 00 72 03 00 73 03 00 02 00 20 31 15 00 0A 00 72 03 00 73 0B 00 02 00 20 30 58 10 05 00 01 00 72 04 00 58 10 05 00 01 00 72 05 00 58 10 05 00 01 00 72 06 00 58 10 05 00 01 00 72 07 00 58 10 05 00 01 00 72 08 00 58 10 05 00 01 00 72 09 00", 
+        "SCTX - Result script source": "player.removeitem gold001 250\r\nadditem gold001 250\r\nsetstage  fbmwMercCalvusQuest 1\r\nSet fbmwMercCalvusQuest.Companion to 1\r\nSet fbmwMercCalvusQuest.follownow to 1\r\nset fbmwMercCalvusQuest.ContractCalvus to 1\r\nSet fbmwMercCalvusQuest.Setup to 0\r\naddtopic 1changeStheSplan\r\naddtopic 1heavySloads\r\naddtopic 1improveSmySeffectiveness\r\naddtopic 1keepSmeShealthy\r\naddtopic 1Profit\r\naddtopic 1CompanionShare", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "fbmwMercCalvusQuest [QUST:01024454]", 
+            "SCRO - Global Reference": "1changeStheSplan [DIAL:01310FEA]", 
+            "SCRO - Global Reference": "1heavySloads [DIAL:01311041]", 
+            "SCRO - Global Reference": "1improveSmySeffectiveness [DIAL:01310F93]", 
+            "SCRO - Global Reference": "1keepSmeShealthy [DIAL:01310FEB]", 
+            "SCRO - Global Reference": "1profit [DIAL:0131108A]", 
+            "SCRO - Global Reference": "1CompanionShare [DIAL:0101B320]"
+        ]
+    }
+}

@@ -1,0 +1,101 @@
+{
+    "Topic": "1work [DIAL:01310D0E]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 775, 
+        "Record Flags": {}, 
+        "FormID": "01322EA7", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTownVivec [QUST:0101C649]", 
+    "PNAM - Previous INFO": "01030598", 
+    "Add topics": [
+        "NAME - Topic": "01310CD9", 
+        "NAME - Topic": "01310B78", 
+        "NAME - Topic": "01310B0A", 
+        "NAME - Topic": "01310B0A", 
+        "NAME - Topic": "01310CFD"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "We've had seven killings in Vivec recently. All the victims had their throats slit. Most did not appear to have struggled.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Five victims were outlanders. Two were Ordinators. The two Ordinators were armed and on duty. Their weapons were still in their belts.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Nothing was removed from the victim's bodies.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTownVivec "Mysterious Killings in Vivec" [QUST:0101C649]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0elamSandas "Elam Andas" [NPC_:012605B8]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1work3 [DIAL:01322E96]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 40, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 0A 00 00 00 58 10 05 00 01 00 72 03 00 58 10 05 00 01 00 72 04 00 1C 00 01 00 21 10 00 00", 
+        "SCTX - Result script source": "setstage fbmwtownvivec 10\r\naddtopic 1sevensvictims\r\naddtopic 1witnesses\r\nfbdreamerprophetref.enable", 
+        "References": [
+            "SCRO - Global Reference": "fbdreamerprophetref [ACHR:01845227]", 
+            "SCRO - Global Reference": "fbmwTownVivec [QUST:0101C649]", 
+            "SCRO - Global Reference": "1sevenSvictims [DIAL:013109B1]", 
+            "SCRO - Global Reference": "1witnesses [DIAL:01310BB4]"
+        ]
+    }
+}

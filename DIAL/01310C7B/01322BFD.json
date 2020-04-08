@@ -1,0 +1,97 @@
+{
+    "Topic": "1chores [DIAL:01310C7B]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 516, 
+        "Record Flags": {}, 
+        "FormID": "01322BFD", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHTAdvancement [QUST:0100EB54]", 
+    "PNAM - Previous INFO": "01322BFC", 
+    "Add topics": [
+        "NAME - Topic": "01310B78", 
+        "NAME - Topic": "01310CC2", 
+        "NAME - Topic": "01310A24"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "You're the outlander that has caused so much trouble. No, don't get me wrong. I am pleased at what you have already accomplished.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I may have a few things for you to do later, but for now speak with Galos Mathendis, my Mouth in Sadrith Mora.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "02", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetPCInFaction:132", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Telvanni "Great House Telvanni" [FACT:01220006]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0aryon "Aryon" [NPC_:0126040A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "83", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 3.000000000000000, 
+            "Function": "GetFactionRank:73", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Telvanni "Great House Telvanni" [FACT:01220006]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "81", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 3.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHTAdvancement "Great House Telvanni" [QUST:0100EB54]", 
+            "Parameter #2": "TelvanniAdvancement", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

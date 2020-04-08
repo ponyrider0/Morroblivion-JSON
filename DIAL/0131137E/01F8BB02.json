@@ -1,0 +1,77 @@
+{
+    "Topic": "1extraSpayment [DIAL:0131137E]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 517, 
+        "Record Flags": {}, 
+        "FormID": "01F8BB02", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwCO5 [QUST:0101BED3]", 
+    "PNAM - Previous INFO": "01F8BB01", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6D 77 43"
+            }, 
+            "NAM1 - Response Text": "He's demanding a ridiculous sum of money - I won't even repeat what it is - or else he'll refuse to take any of the ore back to the mainland. This is unacceptable, and something needs to be done about it.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6D 77 43"
+            }, 
+            "NAM1 - Response Text": "I've tried reasoning with him to no avail; I'd like you to talk to him.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStageDone:59", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwCOChoice "East Empire Company: Making a Choice" [QUST:0101BEDB]", 
+            "Parameter #2": "040 I have agreed to help Falco. I should report to him for assignments from now on.", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0FalcoSGalenus "Falco Galenus" [NPC_:01260B0B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 14 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwco5 20", 
+        "References": [
+            "SCRO - Global Reference": "fbmwCO5 [QUST:0101BED3]"
+        ]
+    }
+}

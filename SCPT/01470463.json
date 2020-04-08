@@ -1,0 +1,23 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 744, 
+        "Record Flags": {}, 
+        "FormID": "01470463", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwBMStal02Script", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 194, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 B2 00 00 00 00 00 39 10 0A 00 02 00 72 01 00 6E 1E 00 00 00 B2 10 05 00 01 00 72 02 00 16 00 15 00 07 00 11 00 20 58 3A 10 05 00 01 00 72 01 00 20 32 30 20 3E 3D 16 00 1F 00 01 00 1B 00 20 72 01 00 73 05 00 20 31 20 3D 3D 20 72 01 00 73 06 00 20 30 20 3D 3D 20 26 26 15 00 0A 00 72 01 00 73 06 00 02 00 20 31 18 00 1F 00 01 00 1B 00 20 72 01 00 73 05 00 20 32 20 3D 3D 20 72 01 00 73 06 00 20 32 20 3D 3D 20 26 26 15 00 0A 00 72 01 00 73 06 00 02 00 20 33 17 00 02 00 01 00 15 00 0A 00 72 01 00 73 06 00 02 00 20 30 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwBMStal02Script\n\nbegin onactivate\n	SetStage fbmwBMEarth 30\n	playsound3d 0BMSpipeSmedium\n	if GetStage fbmwBMEarth >= 20\n		if (fbmwBMEarth.soundpuzzlenumber == 1)&&(fbmwBMEarth.answerright == 0)\n			set fbmwBMEarth.answerright to 1\n		elseif (fbmwBMEarth.soundpuzzlenumber == 2)&&(fbmwBMEarth.answerright == 2)\n			set fbmwBMEarth.answerright to 3		\n		else\n			set fbmwBMEarth.answerright to 0\n		endif\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 14 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "fbmwBMEarth [QUST:0101AF8E]", 
+        "SCRO - Global Reference": "0BMSpipeSmedium [SOUN:01300235]"
+    ]
+}

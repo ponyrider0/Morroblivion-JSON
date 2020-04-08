@@ -1,0 +1,146 @@
+{
+    "Topic": "1counselSofSSulTMatuul [DIAL:013106D7]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1309, 
+        "Record Flags": {}, 
+        "FormID": "01AAD5C5", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ10 [QUST:01001DC9]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "Good. First, I would give you warning. When you are called 'Nerevarine,' the word must spread, and many must hear.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "Your enemies will hear, and come seeking your blood.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "And such friends as you may have among the Great Houses, those who heed the words of the Temple, they may forget their love for you.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "If you have business with the People of the Houses and Temple, you may wish to conduct that business first, before you are named 'Nerevarine.'", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "05", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "Second, I tell you, seek the counsel of Wise Woman Nibani Maesa, for you are an Outlander, and ignorant of the ways of our people.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "06", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "Nibani Maesa can tell you of the other tribes, of their ways, and of their ashkhans.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "07", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "If you do not know these things, you will make many mistakes, and waste precious time. That is my counsel.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "08", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "Now, if you wish to be named Urshilaku Nerevarine, we may speak of these things.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ10 "The Path of the Incarnate" [QUST:01001DC9]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0sulTmatuul "Sul-Matuul" [NPC_:01260350]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1need [DIAL:01310CFC]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMQ11u 1", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQ11u [QUST:01001DCA]"
+        ]
+    }
+}

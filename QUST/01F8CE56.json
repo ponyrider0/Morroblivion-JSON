@@ -1,0 +1,65 @@
+{
+    "Record Header": {
+        "Signature": "QUST", 
+        "Data Size": 446, 
+        "Record Flags": {}, 
+        "FormID": "01F8CE56", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwMTSMartialCraft", 
+    "FULL - Name": "Threads of the Webspinner: Martial Craft", 
+    "ICON - Icon FileName": "darthsouth\\Quests\\moragtong.dds", 
+    "DATA - General": {
+        "Flags": {}, 
+        "Priority": 50
+    }, 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsPlayableRace:254", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestRunning:56", 
+            "Unused": "00 00", 
+            "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Stages": [
+        {
+            "INDX - Stage index": 100, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "I have returned the Belt of Sanguine Martial Craft, one of the twenty-seven Threads of the Webspinner.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 23, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 13 00 72 01 00 73 02 00 0B 00 20 72 01 00 73 02 00 20 35 20 2B", 
+                        "SCTX - Result script source": "Set fbmwMTAdvancement.MTReputation TO fbmwMTAdvancement.MTReputation + 5", 
+                        "References": [
+                            "SCRO - Global Reference": "fbmwMTAdvancement [QUST:01010565]"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

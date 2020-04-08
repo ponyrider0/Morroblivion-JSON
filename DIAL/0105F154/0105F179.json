@@ -1,0 +1,68 @@
+{
+    "Topic": "fbmwMasterIndex1Falasmaryon1 [DIAL:0105F154]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 244, 
+        "Record Flags": {}, 
+        "FormID": "0105F179", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMSMasterIndex [QUST:01060A96]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Then off you go....", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0folmsSmirel "Folms Mirel" [NPC_:012603CC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0indexUmaster "Master Propylon Index" [MISC:01160236]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 03 00 02 00 20 31", 
+        "SCTX - Result script source": "set fbmwMSMasterindex.Falasmaryon to 1", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMSMasterIndex [QUST:01060A96]"
+        ]
+    }
+}

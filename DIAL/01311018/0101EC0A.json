@@ -1,0 +1,72 @@
+{
+    "Topic": "1ArnsaSThendas [DIAL:01311018]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 547, 
+        "Record Flags": {}, 
+        "FormID": "0101EC0A", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSEstateSale [QUST:0101C61E]", 
+    "PNAM - Previous INFO": "0101EC09", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 4D 53"
+            }, 
+            "NAM1 - Response Text": "An insufferable woman, frankly.  Brainless, too, if you want my honest opinion.  I've tried to deal with her rationally, but she simply won't hear it.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "57 4D 53"
+            }, 
+            "NAM1 - Response Text": "She doesn't understand what this collection means to me.  Keeps ranting about 'sentimental value', and how I'm trying to dishonor her husband's memory.  Now she won't even talk to me.  That's where you come in.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSEstateSale "Estate Sale" [QUST:0101C61E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0GeonSAuline "Geon Auline" [NPC_:01260A7F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

@@ -1,0 +1,147 @@
+{
+    "Topic": "fbmwMQ12continue [DIAL:0102627C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1630, 
+        "Record Flags": {}, 
+        "FormID": "0102627D", 
+        "Version Control Info": "0A 16 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ12 [QUST:01002C51]", 
+    "PNAM - Previous INFO": "0102627E", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 80"
+            }, 
+            "NAM1 - Response Text": "[There is a brief sensation of motion in total darkness, floating, but without a sense of weight or direction.]", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 80"
+            }, 
+            "NAM1 - Response Text": "Now. I will notify the Temple that you are our champion.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "00 00 80"
+            }, 
+            "NAM1 - Response Text": "There shall be no more persecution of the Dissident Priests, and I hope both sides shall swiftly be reconciled.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "We have time for questions, if you like.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "05", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "Or you may leave, as you wish.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "06", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "But I think there are at least two things you ought to know before you leave: how to use Wraithguard.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "07", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "And, how to defeat Dagoth Ur.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetPCInFaction:132", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Temple "Temple" [FACT:01220002]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwVivec "Vivec" [NPC_:0102626A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 16, 
+            "CompiledSize": 188, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 03 00 6E 32 00 00 00 39 10 0A 00 02 00 72 04 00 6E 01 00 00 00 55 10 05 00 01 00 72 05 00 1C 00 01 00 52 10 0A 00 02 00 72 06 00 6E 01 00 00 00 58 10 05 00 01 00 72 07 00 58 10 05 00 01 00 72 08 00 58 10 05 00 01 00 72 09 00 58 10 05 00 01 00 72 0A 00 58 10 05 00 01 00 72 0B 00 1C 00 01 00 02 10 0A 00 02 00 72 0C 00 6E 01 00 00 00 A9 10 0D 00 03 00 72 0D 00 72 0E 00 6E 06 00 00 00 A9 10 0D 00 03 00 72 0F 00 72 0E 00 6E 02 00 00 00 A9 10 0D 00 03 00 72 10 00 72 0E 00 6E 02 00 00 00 1C 00 02 00 21 10 00 00 F8 10 07 00 01 00 6E 05 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMQ12 50\r\nSetStage fbmwMQ13 1\r\nShowMap mwGhostgateMapMarker\r\nplayer.removeitem 0miscuwraithguardunouequip 1\r\naddtopic 1bittersrecriminations\r\naddtopic 1business\r\naddtopic 1counsel\r\naddtopic 1explanations\r\naddtopic 1questions\r\nplayer.additem 0wraithguard 1\r\nmodfactionreaction 0temple 0nerevarine 6\r\nmodfactionreaction 0redoran 0nerevarine 2\r\nmodfactionreaction 0hlaalu 0nerevarine 2\r\nmwWulfREF.enable\r\nmodpcfame 5", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "mwWulfREF [ACHR:01872804]", 
+            "SCRO - Global Reference": "fbmwMQ12 [QUST:01002C51]", 
+            "SCRO - Global Reference": "fbmwMQ13 [QUST:01002C55]", 
+            "SCRO - Global Reference": "mwGhostgateMapMarker [REFR:0100C571]", 
+            "SCRO - Global Reference": "0miscUwraithguardUnoUequip [MISC:011600E3]", 
+            "SCRO - Global Reference": "1bitterSrecriminations [DIAL:013106DA]", 
+            "SCRO - Global Reference": "1business [DIAL:01310BCB]", 
+            "SCRO - Global Reference": "1Counsel [DIAL:01310C2C]", 
+            "SCRO - Global Reference": "1explanations [DIAL:01310A05]", 
+            "SCRO - Global Reference": "1questions [DIAL:01310B7D]", 
+            "SCRO - Global Reference": "0wraithguard [ARMO:011200EB]", 
+            "SCRO - Global Reference": "0Temple [FACT:01220002]", 
+            "SCRO - Global Reference": "0Nerevarine [FACT:01220014]", 
+            "SCRO - Global Reference": "0Redoran [FACT:01220000]", 
+            "SCRO - Global Reference": "0Hlaalu [FACT:01220005]"
+        ]
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 459, 
+        "Record Flags": {}, 
+        "FormID": "0101E4FA", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwTR09DoorScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 109, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 5D 00 00 00 00 00 16 00 0D 00 03 00 09 00 20 73 01 00 20 31 20 21 3D 58 10 05 00 01 00 72 01 00 59 10 20 00 01 00 16 00 4E 65 77 20 54 6F 70 69 63 3A 20 4C 6F 63 6B 65 64 20 44 6F 6F 72 00 00 00 00 00 00 15 00 07 00 73 01 00 02 00 20 31 17 00 02 00 01 00 0D 10 02 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwTR09DoorScript\n\nshort doonce\n\nbegin onactivate\n	if doonce != 1\n		addtopic 1lockedSdoor\n		message \"New Topic: Locked Door\"\n		set doonce to 1\n	else\n		activate\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 147 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "45 20 30 49 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "6F 73 65 74 55 64 6F"
+            }, 
+            "SCVR - Name": "doonce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "1lockedSdoor [DIAL:01311047]"
+    ]
+}

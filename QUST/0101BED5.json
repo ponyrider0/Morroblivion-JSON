@@ -1,0 +1,153 @@
+{
+    "Record Header": {
+        "Signature": "QUST", 
+        "Data Size": 1665, 
+        "Record Flags": {}, 
+        "FormID": "0101BED5", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwCO6a", 
+    "SCRI - Script": "fbmwCo6aQscript [SCPT:01033F0E]", 
+    "FULL - Name": "East Empire Company: Aiding and Abetting", 
+    "ICON - Icon FileName": "darthsouth\\Quests\\eastempirecompany.dds", 
+    "DATA - General": {
+        "Flags": {}, 
+        "Priority": 85
+    }, 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsPlayableRace:254", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestRunning:56", 
+            "Unused": "00 00", 
+            "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Stages": [
+        {
+            "INDX - Stage index": 10, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Carnius has asked me to help cover up Uryn Maren's theft of ore from the mines. I need to find the locked chest in his house and get the ore out.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 20, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I've taken all the ore out of the chest in Uryn Maren's house, and should report back to Carnius.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 30, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Carnius is concerned that Uryn Maren is still under suspicion, but needs him to steal more ore. I've been tasked with distracting the guard in the mine so Uryn can sneak into the storeroom. I should find Uryn in the mine and come up with a plan.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 40, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I've talked to Uryn Maren, who is going to sneak over near the storeroom. Once I've gotten the guard out of the way, he'll sneak in.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 50, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Uryn Maren has completed his task. I should report back to Carnius.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 60, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "Carnius was pleased that Uryn Maren was able to get the job done.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 198, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 72 00 01 00 6E 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 43 6F 6D 70 6C 65 74 65 64 20 45 61 73 74 20 45 6D 70 69 72 65 20 43 6F 6D 70 61 6E 79 3A 20 41 69 64 69 6E 67 20 61 6E 64 20 41 62 65 74 74 69 6E 67 20 71 75 65 73 74 22 F9 16 27 00 01 00 23 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 31 30 30 19 00 00 00", 
+                        "SCTX - Result script source": "if ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qCompleted East Empire Company: Aiding and Abetting quest%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 100\"\r\nendif\r\n"
+                    }
+                }
+            ]
+        }
+    ]
+}

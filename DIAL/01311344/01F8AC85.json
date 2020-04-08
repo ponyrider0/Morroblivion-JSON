@@ -1,0 +1,72 @@
+{
+    "Topic": "1thatSnightSatSsea [DIAL:01311344]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 393, 
+        "Record Flags": {}, 
+        "FormID": "01F8AC85", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMCursedCaptain [QUST:0101AF8B]", 
+    "PNAM - Previous INFO": "01F8AC84", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000004", 
+                "Emotion Value": 20, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "Now that Geilir has lifted my curse, I feel like I can finally put the tragedy behind me.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 10, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "I know what I did, and I'll have to live with it.  But life goes on, and I feel I may now be able to find some peace.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0thormoorSgrayTwave "Thormoor Gray-Wave" [NPC_:01260B4F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMCursedCaptain "The Cursed Captain" [QUST:0101AF8B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

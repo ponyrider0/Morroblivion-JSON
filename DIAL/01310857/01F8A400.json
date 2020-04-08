@@ -1,0 +1,79 @@
+{
+    "Topic": "1CassiusSOlcinius [DIAL:01310857]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 585, 
+        "Record Flags": {}, 
+        "FormID": "01F8A400", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwEBInvisible [QUST:01003423]", 
+    "PNAM - Previous INFO": "01F8A3FF", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "72 65 74"
+            }, 
+            "NAM1 - Response Text": "My son is what??? That explains why I haven't seen him for days. He's a good boy, just a bit out of touch with things. I really appreciate you helping him out here.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "72 65 74"
+            }, 
+            "NAM1 - Response Text": " I'd do it myself, but I really can't take the time to leave the store. Here, take this to help you along.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwEBInvisible "An Invisible Son" [QUST:01003423]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0lucretinausSolcinius "Lucretinaus Olcinius" [NPC_:012604B9]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 4B 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwebinvisible 50\r\nplayer.additem gold001 75", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwEBInvisible [QUST:01003423]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]"
+        ]
+    }
+}

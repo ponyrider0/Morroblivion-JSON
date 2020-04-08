@@ -1,0 +1,56 @@
+{
+    "Topic": "1unholySritual3 [DIAL:01321A15]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 371, 
+        "Record Flags": {}, 
+        "FormID": "013233D6", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVCultistVictim [QUST:01003403]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 100, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Thank you! Thank you so much. I'll follow you. I believe he's east of this shrine.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0malexa "Malexa" [NPC_:012606D3]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 42, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 2D 00 00 00 39 10 0A 00 02 00 72 01 00 6E 32 00 00 00 15 00 0A 00 72 01 00 73 01 00 02 00 20 31", 
+        "SCTX - Result script source": "setstage fbmwmvcultistvictim 45\r\nsetstage fbmwmvcultistvictim 50\r\nset fbmwmvcultistvictim.follownow to 1", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMVCultistVictim [QUST:01003403]"
+        ]
+    }
+}

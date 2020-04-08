@@ -1,0 +1,83 @@
+{
+    "Topic": "1duties [DIAL:01310C71]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 498, 
+        "Record Flags": {}, 
+        "FormID": "01322BD2", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTTAdvancement [QUST:01010561]", 
+    "PNAM - Previous INFO": "01F8A817", 
+    "Add topics": [
+        "NAME - Topic": "01310C9C", 
+        "NAME - Topic": "01310AB2", 
+        "NAME - Topic": "01310A0A"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I am old and will soon retire. You are one of the most promising Diviners.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "If you want to replace me as Archcanon of the Temple, you must complete the Pilgrimages of the Four Corners.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 7.000000000000000, 
+            "Function": "GetFactionRank:73", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Temple "Temple" [FACT:01220002]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0tholerSsaryoni "Tholer Saryoni" [NPC_:012603A0]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 18, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 36 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "addtopic 1fourscorners\r\nstartquest fbmwttaldsotha", 
+        "References": [
+            "SCRO - Global Reference": "1FourSCorners [DIAL:01310A0A]", 
+            "SCRO - Global Reference": "fbmwTTAldSotha [QUST:01F0A292]"
+        ]
+    }
+}

@@ -1,0 +1,99 @@
+{
+    "Topic": "1SixthSHouseSbase [DIAL:01310815]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 719, 
+        "Record Flags": {}, 
+        "FormID": "01005332", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ07 [QUST:01001DBF]", 
+    "PNAM - Previous INFO": "01AAFA8F", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 4D 51"
+            }, 
+            "NAM1 - Response Text": "Champion Raesa Pullia at Fort Buckmoth says a patrol found a Sixth House base in a cave the locals call Ilunibi.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 4D 51"
+            }, 
+            "NAM1 - Response Text": "However, the one trooper who escaped to report has died of corprus disease.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "6D 77 4D"
+            }, 
+            "NAM1 - Response Text": "Before he died, the trooper reported fighting with monsters and cultists, and something about a powerful Sixth House priest called Dagoth Gares.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "6D 77 4D"
+            }, 
+            "NAM1 - Response Text": "But go talk to Raesa Pullia at Fort Buckmoth. She'll have all the details.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 5.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ07 "Sixth House Base" [QUST:01001DBF]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0caiusScosades "Caius Cosades" [NPC_:01260135]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 07 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMQ07 7", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQ07 [QUST:01001DBF]"
+        ]
+    }
+}

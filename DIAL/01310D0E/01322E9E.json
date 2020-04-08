@@ -1,0 +1,95 @@
+{
+    "Topic": "1work [DIAL:01310D0E]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 653, 
+        "Record Flags": {}, 
+        "FormID": "01322E9E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Say Once": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwTownAldBevene [QUST:0101C641]", 
+    "PNAM - Previous INFO": "01F0A388", 
+    "Add topics": [
+        "NAME - Topic": "01310932", 
+        "NAME - Topic": "01310932", 
+        "NAME - Topic": "013108B1"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I made a firejade amulet for a customer, Ienas Sarandas.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I made delivery, and received my first payment, but Sera Ienas is behind time for his final payment, and I can wait no longer.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I will pay you 25 drakes if you will find Sera Ienas Sarandas and either recover and return my amulet, or extract the overdue payment of 50 drakes for me.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0beveneSreleth "Bevene Releth" [NPC_:01260067]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "PlayerRef [PLYR:00000014]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwTownAldBevene 1", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTownAldBevene [QUST:0101C641]"
+        ]
+    }
+}

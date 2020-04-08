@@ -1,0 +1,88 @@
+{
+    "Topic": "1donateSCyrodilicSbrandy [DIAL:0131069E]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 303, 
+        "Record Flags": {}, 
+        "FormID": "01F8AA1D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwICDinner [QUST:01008499]", 
+    "PNAM - Previous INFO": "01F8AA1C", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6D 77 49"
+            }, 
+            "NAM1 - Response Text": "You're being tiresome. Go away.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICalms "Imperial Cult: Alms" [QUST:0102D8BE]", 
+            "Parameter #2": "banorgave", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICDinner "Imperial Cult: Brandy for the Fundraising Dinner" [QUST:01008499]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICRich "Imperial Cult: Donation from Cunius Pelelius" [QUST:0100849A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0banorSseran "Banor Seran" [NPC_:01260127]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "53 10 0A 00 02 00 72 01 00 6E EC FF FF FF", 
+        "SCTX - Result script source": "moddisposition player -20", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

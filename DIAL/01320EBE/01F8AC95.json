@@ -1,0 +1,58 @@
+{
+    "Topic": "1hireSanSexplorer2 [DIAL:01320EBE]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 461, 
+        "Record Flags": {}, 
+        "FormID": "01F8AC95", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwBMFalmer [QUST:0101B6C2]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000004", 
+                "Emotion Value": 80, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "1C 31 FF"
+            }, 
+            "NAM1 - Response Text": "Well, that IS disappointing.  You listened so intently to my tale, I thought for sure you'd want to help me.  Oh well.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "20 39 FF"
+            }, 
+            "NAM1 - Response Text": "If you change your mind, the job is open.  Unless, of course, I find another interested party.  Good day.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 28, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "53 10 0A 00 02 00 72 01 00 6E EC FF FF FF 39 10 0A 00 02 00 72 02 00 6E 28 00 00 00", 
+        "SCTX - Result script source": "moddisposition player -20\r\nsetstage fbmwBMFalmer 40", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwBMFalmer [QUST:0101B6C2]"
+        ]
+    }
+}

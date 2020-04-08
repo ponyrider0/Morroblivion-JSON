@@ -1,0 +1,57 @@
+{
+    "Topic": "AAADestination [DIAL:01000D47]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 200, 
+        "Record Flags": {}, 
+        "FormID": "0100EC85", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "aaaVivecTransport [QUST:0100EC81]", 
+    "PNAM - Previous INFO": "0100EC84", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "65 20 74"
+            }, 
+            "NAM1 - Response Text": "Would you like to go to another canton?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0arenSmaren "Aren Maren" [NPC_:01260426]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "DDDCancel [DIAL:0100EC94]", 
+        "TCLT - Choice": "DDDArena [DIAL:0100EC8A]", 
+        "TCLT - Choice": "DDDForeign [DIAL:0100EC8B]", 
+        "TCLT - Choice": "DDDTemple [DIAL:0100EC8E]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

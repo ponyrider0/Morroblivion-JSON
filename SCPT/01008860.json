@@ -1,0 +1,36 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 437, 
+        "Record Flags": {}, 
+        "FormID": "01008860", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwbmSkaalAttackScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 77, 
+        "VariableCount": 1, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 3F 00 00 00 16 00 20 00 02 00 1C 00 20 73 01 00 20 30 20 3D 3D 20 58 38 10 05 00 01 00 72 02 00 20 31 20 3D 3D 20 26 26 1C 00 01 00 5E 10 00 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwbmSkaalAttackScript\nshort DoOnce\nBegin GameMode\n	if(DoOnce == 0)&&(GetQuestRunning fbmwbmSkaalAttack == 1)\n		fbmwbmSkaalGuard2ref.evp\n		set DoOnce to 1\n	endif\nEnd\n;<CSEBlock>\n;<CSECaretPos> 113 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "21 10 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 03 00 21 10 00 00"
+            }, 
+            "SCVR - Name": "DoOnce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwbmSkaalGuard2ref [ACHR:01F08466]", 
+        "SCRO - Global Reference": "fbmwBMSkaalAttack [QUST:0101B6D2]"
+    ]
+}

@@ -1,0 +1,98 @@
+{
+    "Topic": "1newSclothes [DIAL:01310A77]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 733, 
+        "Record Flags": {}, 
+        "FormID": "01321E1F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHTTheranaClothes [QUST:0100344E]", 
+    "PNAM - Previous INFO": "01001291", 
+    "Add topics": [
+        "NAME - Topic": "01310823", 
+        "NAME - Topic": "01310A9C", 
+        "NAME - Topic": "01310C77", 
+        "NAME - Topic": "01310C6D"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Take this skirt and deliver it to Mistress Therana. She lives in Tel Branora and can be... eccentric at times.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Take these Almsivi Intervention scrolls.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Don't hesitate to use them if Therana becomes... difficult.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0felisaSulessen "Felisa Ulessen" [NPC_:0126040E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetPCInFaction:132", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Telvanni "Great House Telvanni" [FACT:01220006]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 59, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 0A 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 02 00 00 00 55 10 05 00 01 00 72 05 00", 
+        "SCTX - Result script source": "SetStage fbmwHTTheranaClothes 10\r\nPlayer.AddItem 0theranaAsSskirt 1\r\nPlayer.AddItem 0scUalmsiviintervention 2\r\nShowMap mwTelBranoraMapMarker", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwHTTheranaClothes [QUST:0100344E]", 
+            "SCRO - Global Reference": "0theranaAsSskirt [CLOT:01140144]", 
+            "SCRO - Global Reference": "0scUalmsiviintervention [BOOK:01180227]", 
+            "SCRO - Global Reference": "mwTelBranoraMapMarker [REFR:0100BE36]"
+        ]
+    }
+}

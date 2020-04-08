@@ -1,0 +1,75 @@
+{
+    "Topic": "fbmwMQdrathasmexy [DIAL:01025AEF]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 507, 
+        "Record Flags": {}, 
+        "FormID": "013230F9", 
+        "Version Control Info": "0A 16 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMQTelvanniDratha [QUST:01002C4D]", 
+    "TPIC - Topic": "01320B31", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310CFD", 
+        "NAME - Topic": "01310CFC"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Well. Aren't you the cutest thing. And that wink is so adorable... I MUST have it. Here! Hello? Who's on duty?", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I need someone to hold this fellow's head while I gouge that cute little winking eye out...", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0dratha "Dratha" [NPC_:01260411]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 28, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 1E 00 00 00 53 10 0A 00 02 00 72 02 00 6E F6 FF FF FF", 
+        "SCTX - Result script source": "setstage fbmwMQTelvanniDratha 30\r\nmoddisposition player -10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQTelvanniDratha [QUST:01002C4D]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

@@ -1,0 +1,69 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 281, 
+        "Record Flags": {}, 
+        "FormID": "01009A91", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ08 [QUST:01001DC0]", 
+    "PNAM - Previous INFO": "01009A90", 
+    "Add topics": [
+        "NAME - Topic": "013109FA"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "4D 57 4D"
+            }, 
+            "NAM1 - Response Text": "I have Lord Fyr's Dwemer boots. That's what you're here for, aren't you?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 25.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ08 "Corprus Cure" [QUST:01001DC0]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "FBMWTempDwemer "Yagrum Bagarn" [NPC_:010033C5]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 9, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00", 
+        "SCTX - Result script source": "addtopic 1mySrace", 
+        "References": [
+            "SCRO - Global Reference": "1mySrace [DIAL:01310C2A]"
+        ]
+    }
+}

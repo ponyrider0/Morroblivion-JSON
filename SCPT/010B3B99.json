@@ -1,0 +1,109 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 2478, 
+        "Record Flags": {}, 
+        "FormID": "010B3B99", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwbmWolfGiverScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 11, 
+        "CompiledSize": 524, 
+        "VariableCount": 9, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 FE 01 00 00 15 00 09 00 66 09 00 04 00 20 30 2E 35 16 00 2C 00 01 00 28 00 20 58 3A 10 05 00 01 00 72 02 00 20 31 30 30 20 3D 3D 20 72 01 00 58 2F 10 05 00 01 00 72 03 00 20 30 20 3D 3D 20 26 26 39 10 0A 00 02 00 72 02 00 6E 69 00 00 00 19 00 00 00 16 00 21 00 02 00 1D 00 20 58 3A 10 05 00 01 00 72 02 00 20 33 30 20 3D 3D 20 73 07 00 20 30 20 3D 3D 20 26 26 1C 00 01 00 83 18 0C 00 01 05 00 52 04 00 01 05 00 52 05 00 15 00 07 00 73 07 00 02 00 20 31 19 00 00 00 16 00 27 00 01 00 23 00 20 58 3A 10 05 00 01 00 72 06 00 20 30 20 3E 20 58 3A 10 05 00 01 00 72 06 00 20 31 30 30 20 3C 20 26 26 15 00 07 00 73 08 00 02 00 20 31 18 00 27 00 01 00 23 00 20 58 3A 10 05 00 01 00 72 07 00 20 30 20 3E 20 58 3A 10 05 00 01 00 72 07 00 20 31 30 30 20 3C 20 26 26 15 00 07 00 73 08 00 02 00 20 31 18 00 27 00 01 00 23 00 20 58 3A 10 05 00 01 00 72 08 00 20 30 20 3E 20 58 3A 10 05 00 01 00 72 08 00 20 31 30 30 20 3C 20 26 26 15 00 07 00 73 08 00 02 00 20 31 18 00 27 00 01 00 23 00 20 58 3A 10 05 00 01 00 72 09 00 20 30 20 3E 20 58 3A 10 05 00 01 00 72 09 00 20 31 30 30 20 3C 20 26 26 15 00 07 00 73 08 00 02 00 20 31 17 00 02 00 01 00 15 00 07 00 73 08 00 02 00 20 30 19 00 00 00 16 00 16 00 07 00 12 00 20 58 3A 10 05 00 01 00 72 02 00 20 31 32 30 20 3D 3D 15 00 0A 00 72 0A 00 73 02 00 02 00 20 31 15 00 0A 00 72 0A 00 73 01 00 02 00 20 30 15 00 0A 00 72 0A 00 73 10 00 02 00 20 30 15 00 0A 00 72 0A 00 73 11 00 02 00 20 30 15 00 0A 00 72 0B 00 73 01 00 02 00 20 30 37 10 05 00 01 00 72 0A 00 37 10 05 00 01 00 72 0B 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwbmWolfGiverScript\nshort DoOncetelep\nshort WorkForSisterCompleted; Used by dialogue\nshort SpokenwithFallaise; Used by dialogue\nshort SpokenwithEttiene; Used by dialogue\nshort playfool; Used by dialogue, TODO\nshort workingforhircine; Used by dialogue, set internally\nfloat fQuestDelayTime \nBegin GameMode\n	set fQuestDelayTime to 0.5\n	if(GetStage fbmwBMWolfGiver == 100)&&(Player.GetItemCount 0ingredUwolfUheart == 0)\n		SetStage fbmwBMWolfGiver 105\n	endif\n	if(GetStage fbmwBMWolfGiver == 30)&&(DoOncetelep == 0)\n		Player.Call fbmwMoveToFunct  fbmwbmteleportmarkerRef\n		set DoOncetelep to 1\n	endif\n	if(GetStage fbmwBMCeremony2 > 0)&&(GetStage fbmwBMCeremony2 <  100)\n		set workingforhircine to 1\n	elseif(GetStage fbmwBMBearHunt2 > 0)&&(GetStage fbmwBMBearHunt2 <  100)\n		set workingforhircine to 1\n	elseif(GetStage fbmwBMFrostGiant2 > 0)&&(GetStage fbmwBMFrostGiant2 <  100)\n		set workingforhircine to 1\n	elseif(GetStage fbmwBMWildHunt > 0)&&(GetStage fbmwbmWildHunt<  100)\n		set workingforhircine to 1\n	else\n		set workingforhircine to 0\n	endif\n	if(GetStage fbmwbmWolfGiver == 120)\n		set fbmwBMAAAImAWere.isday to 1\n		set fbmwBMAAAImAWere.iswerewolf to 0\n		set fbmwBMAAAImAWere.haskilledaswere to 0\n		set fbmwBMAAAImAWere.DoOncebloodlust to 0\n		set fbmwbmWereStart.infectday to 0\n		stopquest fbmwBMAAAImAWere\n		stopquest fbmwbmWereStart\n	endif\nEnd\n;<CSEBlock>\n;<CSECaretPos> 1087 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 08 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "40 F8 2C 00 00 00 00"
+            }, 
+            "SCVR - Name": "WorkForSisterCompleted"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "SpokenwithFallaise"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "6E 65 4C 4F 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "0D 0A 0D 0A 0D 0A 0D"
+            }, 
+            "SCVR - Name": "playfool"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 08 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "3F F8 2C 00 00 00 00"
+            }, 
+            "SCVR - Name": "SpokenwithEttiene"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000007", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "DoOncetelep"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000008", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "workingforhircine"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000009", 
+                "Unused": "00 00 00 08 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "05 45 38 00 00 00 00"
+            }, 
+            "SCVR - Name": "fQuestDelayTime"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "fbmwBMWolfGiver [QUST:0101B6DC]", 
+        "SCRO - Global Reference": "0ingredUwolfUheart [INGR:010A0077]", 
+        "SCRO - Global Reference": "fbmwMoveToFunct [SCPT:010A10D4]", 
+        "SCRO - Global Reference": "fbmwbmteleportmarkerRef [REFR:010B5480]", 
+        "SCRO - Global Reference": "fbmwBMCeremony2 [QUST:0101AF8A]", 
+        "SCRO - Global Reference": "fbmwBMBearHunt2 [QUST:0101AF85]", 
+        "SCRO - Global Reference": "fbmwBMFrostGiant2 [QUST:0101B6C4]", 
+        "SCRO - Global Reference": "fbmwBMWildHunt [QUST:0101B6DA]", 
+        "SCRO - Global Reference": "fbmwBMAAAImAWere [QUST:01F8B08D]", 
+        "SCRO - Global Reference": "fbmwBMWereStart [QUST:01F8BCBE]"
+    ]
+}

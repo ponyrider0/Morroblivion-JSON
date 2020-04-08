@@ -1,0 +1,102 @@
+{
+    "Topic": "1NerevarineSprophecies [DIAL:013106D3]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 933, 
+        "Record Flags": {}, 
+        "FormID": "0101DD6D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ06 [QUST:01001DBE]", 
+    "PNAM - Previous INFO": "0101DD6C", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "There are many Nerevarine prophecies, and they suggest many things. Aspect and uncertain parents. The moon-and-star. Sleepers. Seven curses.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "The curses' bane. The prophecy of the Stranger. The prophecy of the Seven Visions. The lost prophecies.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "Ask me of these things. If you are patient. If you would be wise. Or, if you are impatient to know, just ask:", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "'Do I pass the test of the Nerevarine prophecies?' Go ahead, outlander. I am the wise woman. Ask your questions. And I will answer.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0nibaniSmaesa "Nibani Maesa" [NPC_:0126018B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 45.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ06 "Meet Sul-Matuul" [QUST:01001DBE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 36, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 58 10 05 00 01 00 72 04 00", 
+        "SCTX - Result script source": "addtopic 1thesstranger\r\naddtopic 1thessevensvisions\r\naddtopic 1lostsprophecies\r\naddtopic 1passsthestest", 
+        "References": [
+            "SCRO - Global Reference": "1theSStranger [DIAL:013109EE]", 
+            "SCRO - Global Reference": "1theSSevenSVisions [DIAL:013107BF]", 
+            "SCRO - Global Reference": "1lostSprophecies [DIAL:01310875]", 
+            "SCRO - Global Reference": "1passStheStest [DIAL:013109BB]"
+        ]
+    }
+}

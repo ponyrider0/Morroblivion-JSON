@@ -1,0 +1,80 @@
+{
+    "Topic": "1greaterSpurpose [DIAL:01311358]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 429, 
+        "Record Flags": {}, 
+        "FormID": "01F8B1FC", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMDraugr [QUST:0101AF8D]", 
+    "PNAM - Previous INFO": "01F8B1FB", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "72 73 74"
+            }, 
+            "NAM1 - Response Text": "Fight with me. Together we might vanquish these creatures, send them back to their unholy plane. I will lower the barrier, and we will cleanse the land of this scourge.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 62.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMDraugr "The Skaal Test of Strength" [QUST:0101AF8D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 67.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMDraugr "The Skaal Test of Strength" [QUST:0101AF8D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwbmDraugrAesliip "Aesliip" [NPC_:01F8B1AC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "fbmwbmDraugrKill [DIAL:01F8B218]", 
+        "TCLT - Choice": "fbmwbmDraugrNoKill [DIAL:01F8B21A]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 43 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwbmDraugr 67", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMDraugr [QUST:0101AF8D]"
+        ]
+    }
+}

@@ -1,0 +1,77 @@
+{
+    "Topic": "1householdSslaves [DIAL:0131081D]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 511, 
+        "Record Flags": {}, 
+        "FormID": "01320EA1", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "mwBuySlavesQuest [QUST:01F8E376]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310CAF", 
+        "NAME - Topic": "01310C6A", 
+        "NAME - Topic": "01310C46", 
+        "NAME - Topic": "0131085E", 
+        "NAME - Topic": "01310C02", 
+        "NAME - Topic": "01310C1A", 
+        "NAME - Topic": "01310CA3", 
+        "NAME - Topic": "01310BC4", 
+        "NAME - Topic": "01310CA2", 
+        "NAME - Topic": "0131095A", 
+        "NAME - Topic": "01310CA5", 
+        "NAME - Topic": "01310CBB", 
+        "NAME - Topic": "01310C01"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "The following slaves are available for purchase: S'Bakha, a Khajiit male; Manilian Scerius, an Imperial male; Menelras, a Bosmer male;", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Ciralinde, an Altmer female; Jadier Mannick, a Breton male, and Davina, a Redguard female.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0savileSimayn "Savile Imayn" [NPC_:01260480]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

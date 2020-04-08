@@ -1,0 +1,90 @@
+{
+    "Topic": "1Stalhrim [DIAL:013113CD]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 687, 
+        "Record Flags": {}, 
+        "FormID": "01014C0B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwCO8 [QUST:0101BED7]", 
+    "PNAM - Previous INFO": "01014C0A", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "You are not the first to seek it. Outsiders like this woman have been here before; always demanding, always offering payment that is useless to us.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "But they get nothing. The Skaal give them nothing because they call it sacred; we give them nothing because we know they would misuse it.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwCO8 "East Empire Company: Discovery in the Mine" [QUST:0101BED7]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0graring "Graring" [NPC_:01260B54]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 41, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 15 00 0A 00 72 04 00 73 01 00 02 00 20 31", 
+        "SCTX - Result script source": "addtopic 1misuseSit\r\naddtopic 1sacred\r\naddtopic 1Skaal\r\nset fbmwCO8.fbmwgraringconvinced to 1", 
+        "References": [
+            "SCRO - Global Reference": "1misuseSit [DIAL:013113BB]", 
+            "SCRO - Global Reference": "1sacred [DIAL:013113DE]", 
+            "SCRO - Global Reference": "1Skaal [DIAL:013113ED]", 
+            "SCRO - Global Reference": "fbmwCO8 [QUST:0101BED7]"
+        ]
+    }
+}

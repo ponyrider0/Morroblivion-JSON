@@ -1,0 +1,94 @@
+{
+    "Topic": "1troubleSwithSbandits [DIAL:013106F7]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 465, 
+        "Record Flags": {}, 
+        "FormID": "01320758", 
+        "Version Control Info": "1F 13 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHRGuardGuarHerds [QUST:01004A56]", 
+    "PNAM - Previous INFO": "0100D9D7", 
+    "Add topics": [
+        "NAME - Topic": "01310C59"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Well, I guess I owe you some more hackle-lo. I'm glad to hear that the bandits won't be troubling us again.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHRGuardGuarHerds "House Redoran: Trouble with Bandits" [QUST:01004A56]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "0banditUscarredUdeUhrggh "Glaum" [NPC_:01260217]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "0banditUscruffyUdeUhrggh "Gaban" [NPC_:01260216]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0druleneSfalen "Drulene Falen" [NPC_:0126013E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1troubleSwithSbandits1 [DIAL:01320755]", 
+        "TCLT - Choice": "1troubleSwithSbandits2 [DIAL:01320757]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 28, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 32 00 00 00 53 10 0A 00 02 00 72 02 00 6E 05 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHRGuardGuarHerds 50\r\nModDisposition player 5", 
+        "References": [
+            "SCRO - Global Reference": "fbmwHRGuardGuarHerds [QUST:01004A56]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

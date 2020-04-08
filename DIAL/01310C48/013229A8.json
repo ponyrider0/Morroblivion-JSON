@@ -1,0 +1,98 @@
+{
+    "Topic": "1muddled [DIAL:01310C48]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 721, 
+        "Record Flags": {}, 
+        "FormID": "013229A8", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVMonsterDisease [QUST:01003409]", 
+    "PNAM - Previous INFO": "01F8A78B", 
+    "Add topics": [
+        "NAME - Topic": "0131078B", 
+        "NAME - Topic": "01310CFC", 
+        "NAME - Topic": "01310C7E", 
+        "NAME - Topic": "01310C7E", 
+        "NAME - Topic": "01310CFC", 
+        "NAME - Topic": "01310AA6", 
+        "NAME - Topic": "01310C7E", 
+        "NAME - Topic": "01310C93"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I'm just having some problems concentrating since the  slaughterfish bite. Having some problems controlling myself, too. You have a problem with that?", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Huh? Well? Sorry...I really need some help. Maybe you can get me to a healer? To hell with the healers. I don't need one!", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "That Mehra Drora is a healer, but I don't like the way she looks at me. All of Gnisis is like that. Don't look at me!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0din "Din" [NPC_:0126091D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1muddled1 [DIAL:013229A3]", 
+        "TCLT - Choice": "1muddled2 [DIAL:013229A5]", 
+        "TCLT - Choice": "1muddled3 [DIAL:013229A7]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

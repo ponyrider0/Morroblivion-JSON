@@ -1,0 +1,95 @@
+{
+    "Topic": "1HlaaluSHortator [DIAL:01310881]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 687, 
+        "Record Flags": {}, 
+        "FormID": "01320F1E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQHlaaluOmani [QUST:01001DD9]", 
+    "PNAM - Previous INFO": "01025ABC", 
+    "Add topics": [
+        "NAME - Topic": "01310B05", 
+        "NAME - Topic": "01310BDA", 
+        "NAME - Topic": "013109F6", 
+        "NAME - Topic": "01310944", 
+        "NAME - Topic": "01310BDA"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Yes. I've just heard of Orvas Dren's unfortunate death. As for your request to be named Hortator of House Hlaalu...", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I believe there'll be no further delays. You have my vote, and I'm sure you'll be able to persuade the other councilors as well.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Once all the councilors agree, speak with Crassius Curio again. He will give you the Belt of the Hortator.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "0OrvasSDrenSDruglord "Orvas Dren" [NPC_:012604A7]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0velandaSomani "Velanda Omani" [NPC_:012604AA]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 32 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMQHlaaluOmani 50", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQHlaaluOmani [QUST:01001DD9]"
+        ]
+    }
+}

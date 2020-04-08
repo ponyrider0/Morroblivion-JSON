@@ -1,0 +1,58 @@
+{
+    "Topic": "fbmwMShatandskirttakeskirt [DIAL:0102A4CE]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 557, 
+        "Record Flags": {}, 
+        "FormID": "0102A4CF", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSHatandSkirt [QUST:0101C622]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "54 65 6D"
+            }, 
+            "NAM1 - Response Text": "Thank you. Thank you again. The skirt is probably worth a lot. And I understand about the hat. One has to draw the line somewhere. But I'm really, really grateful for your help. And I'll never get mixed up with smugglers -- or scamps -- again.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Ingwold "Inwold" [NPC_:01260A5C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 46, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 39 10 0A 00 02 00 72 03 00 6E 37 00 00 00", 
+        "SCTX - Result script source": "player.additem 0extravagantuskirtu02 1\r\nremoveitem 0extravagantuskirtu02 1\r\nsetstage fbmwmshatandskirt 55", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0extravagantUskirtU02 [CLOT:01140033]", 
+            "SCRO - Global Reference": "fbmwMSHatandSkirt [QUST:0101C622]"
+        ]
+    }
+}

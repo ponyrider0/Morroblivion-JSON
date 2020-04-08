@@ -1,0 +1,75 @@
+{
+    "Topic": "1BrallionAsSRing [DIAL:013108A3]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 237, 
+        "Record Flags": {}, 
+        "FormID": "01F8A44B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTGssGreedySlaver [QUST:0100933E]", 
+    "PNAM - Previous INFO": "01F8A44A", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "61 6C 6C"
+            }, 
+            "NAM1 - Response Text": "What do I want with a slaver's ring?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwExquisiteRingBrallion "Brallion's Exquisite Ring" [CLOT:0102BAE1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTGssGreedySlaver "Thieves Guild: Bal Molagmer, Brallion's Ring" [QUST:0100933E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ilmeniSdren "Ilmeni Dren" [NPC_:0126038F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1BrallionAsSRing3 [DIAL:01320F7B]", 
+        "TCLT - Choice": "1BrallionAsSRing4 [DIAL:01320F7D]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

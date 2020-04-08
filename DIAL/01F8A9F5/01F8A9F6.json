@@ -1,0 +1,81 @@
+{
+    "Topic": "fbmwicrichslave [DIAL:01F8A9F5]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 619, 
+        "Record Flags": {}, 
+        "FormID": "01F8A9F6", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwICRich [QUST:0100849A]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "69 75 73"
+            }, 
+            "NAM1 - Response Text": "This is most awkward. Since you confront me with this, I presume you intend blackmail? If you hope for cash, I must disappoint you -- I have no ready cash at present.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "69 75 73"
+            }, 
+            "NAM1 - Response Text": "You must content yourself with these pieces of raw ebony. I'm sure you can get your 500 drakes for them... and more. Now, leave me.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStageDone:59", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICRich "Imperial Cult: Donation from Cunius Pelelius" [QUST:0100849A]", 
+            "Parameter #2": "035 I spoke to a slave in the Caldera Mines, and he said the 'boss man' sneaks in at night, takes ebony, puts it in a bag, then takes it away. Perhaps this is not solid enough evidence to take to the guards. But perhaps, if confronted with this testimony, Cunius Pelelius may reconsider his unwillingness to donate 500 gold to the Widows and Orphans Fund.", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0cuniusSpelelius "Cunius Pelelius" [NPC_:012603D0]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 03 00 00 00 39 10 0A 00 02 00 72 03 00 6E 28 00 00 00", 
+        "SCTX - Result script source": "player.additem 0ingredurawuebonyu01 3\r\nsetstage fbmwicrich 40", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0ingredUrawUebonyU01 [INGR:010A0009]", 
+            "SCRO - Global Reference": "fbmwICRich [QUST:0100849A]"
+        ]
+    }
+}

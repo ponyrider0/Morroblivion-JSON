@@ -1,0 +1,39 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 934, 
+        "Record Flags": {}, 
+        "FormID": "01F8E3A9", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwSpellIcarianFlightScriptEffect", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 0, 
+        "CompiledSize": 228, 
+        "VariableCount": 2, 
+        "Type": "Magic Effect:256"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 11 00 84 00 00 00 15 00 1D 00 66 01 00 18 00 20 58 00 11 12 00 01 00 0E 00 66 4A 75 6D 70 48 65 69 67 68 74 4D 69 6E 15 00 1D 00 66 02 00 18 00 20 58 00 11 12 00 01 00 0E 00 66 4A 75 6D 70 48 65 69 67 68 74 4D 61 78 69 14 1B 00 02 00 0E 00 66 4A 75 6D 70 48 65 69 67 68 74 4D 69 6E 7A 00 00 00 00 00 94 C1 40 69 14 1B 00 02 00 0E 00 66 4A 75 6D 70 48 65 69 67 68 74 4D 61 78 7A 00 00 00 00 00 94 C1 40 11 00 00 00 10 00 06 00 13 00 08 00 00 00 34 11 00 00 11 00 00 00 10 00 06 00 12 00 36 00 00 00 69 14 15 00 02 00 0E 00 66 4A 75 6D 70 48 65 69 67 68 74 4D 69 6E 66 01 00 69 14 15 00 02 00 0E 00 66 4A 75 6D 70 48 65 69 67 68 74 4D 61 78 66 02 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwSpellIcarianFlightScriptEffect\n\nfloat originalMin\nfloat originalMax\n\nbegin scripteffectstart\n\n	set originalMin to GetGameSetting fJumpHeightMin\n	set originalMax to GetGameSetting fJumpHeightMax\n\n	SetNumericGameSetting fJumpHeightMin 9000\n	SetNumericGameSetting fJumpHeightMax 9000\n\nend\n\nbegin scripteffectupdate\n	ResetFallDamageTimer\nend\n\nbegin scripteffectfinish\n\n	SetNumericGameSetting fJumpHeightMin originalMin\n	SetNumericGameSetting fJumpHeightMax originalMax\n\nend\n;<CSEBlock>\n;<CSECaretPos> 11 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD 4C 1F C5 1D"
+            }, 
+            "SCVR - Name": "originalMin"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD 4C 1F C5 1D"
+            }, 
+            "SCVR - Name": "originalMax"
+        }
+    ]
+}

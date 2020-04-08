@@ -1,0 +1,102 @@
+{
+    "Topic": "1duties [DIAL:01310C71]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 652, 
+        "Record Flags": {}, 
+        "FormID": "01003820", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHRAdvancement [QUST:010037E7]", 
+    "PNAM - Previous INFO": "0100381F", 
+    "Add topics": [
+        "NAME - Topic": "013108E8"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "I would consider sponsoring an outlander.  I have done so before, when the circumstances warranted it.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Archmaster Bolvyn Venim holds my son hostage for a crime I know he did not commit.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": " If you want me as your sponsor, you must rescue my son, Varvur Sarethi, and return him to me.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 3.000000000000000, 
+            "Function": "GetFactionRank:73", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Redoran "Great House Redoran" [FACT:01220000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHRGuardSarethi "House Redoran: Guard Sarethi Manor" [QUST:01004A57]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0athynSsarethi "Athyn Sarethi" [NPC_:012600B2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 01 00 00 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "SetStage fbmwHRRescueSarethi 1\r\nAddTopic 1VarvurSSarethi", 
+        "References": [
+            "SCRO - Global Reference": "fbmwHRRescueSarethi [QUST:01005198]", 
+            "SCRO - Global Reference": "1VarvurSSarethi [DIAL:013108E8]"
+        ]
+    }
+}

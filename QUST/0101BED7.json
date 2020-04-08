@@ -1,0 +1,201 @@
+{
+    "Record Header": {
+        "Signature": "QUST", 
+        "Data Size": 2218, 
+        "Record Flags": {}, 
+        "FormID": "0101BED7", 
+        "Version Control Info": "01 12 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwCO8", 
+    "SCRI - Script": "fbmwCO8QuScript [SCPT:01014C11]", 
+    "FULL - Name": "East Empire Company: Discovery in the Mine", 
+    "ICON - Icon FileName": "darthsouth\\Quests\\eastempirecompany.dds", 
+    "DATA - General": {
+        "Flags": {}, 
+        "Priority": 87
+    }, 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsPlayableRace:254", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestRunning:56", 
+            "Unused": "00 00", 
+            "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Stages": [
+        {
+            "INDX - Stage index": 10, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Falco informed me of a strange block of ice found in a burial cavern discovered in the mine. He's asked me to go speak to Graring, one of the local Nords about it. He and his companions can be found at the junction of the Harstrad and Islid rivers to the northeast of here.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 8, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 21 10 00 00", 
+                        "SCTX - Result script source": "fbmwCoventinaScelataREF.enable", 
+                        "References": [
+                            "SCRO - Global Reference": "fbmwCoventinaScelataREF [ACHR:01F021B2]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 20, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I found Graring and his companions under attack, but the assailant has been defeated.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 30, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Graring explained that the ice is called \"Stalhrim\", and is very valuable. He's given me a special pick axe to chip off some Stalhrim from the block in the mine.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 40, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I've chipped off a piece of the Stalhrim, and should take it to Graring.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 50, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Graring has agreed to construct weapons and armor out of the Stahlrim, if I bring him the raw materials. He's suggested that there is a finite amount of it on the island, so I should be careful of what I choose.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 60, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "Falco is glad the Nords are willing to work with us, and has instructed me to bring Graring all the Stalhrim I can find.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 224, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 14 00 72 01 00 73 02 00 0C 00 20 72 01 00 73 02 00 20 31 32 20 2B 16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 74 00 01 00 70 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 43 6F 6D 70 6C 65 74 65 64 20 45 61 73 74 20 45 6D 70 69 72 65 20 43 6F 6D 70 61 6E 79 3A 20 44 69 73 63 6F 76 65 72 79 20 69 6E 20 74 68 65 20 4D 69 6E 65 20 71 75 65 73 74 22 F9 16 27 00 01 00 23 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 31 30 30 19 00 00 00", 
+                        "SCTX - Result script source": "Set fbmwCOAdvancement.CompanyReputation TO fbmwCOAdvancement.CompanyReputation + 12\r\n\r\nif ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qCompleted East Empire Company: Discovery in the Mine quest%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 100\"\r\nendif", 
+                        "References": [
+                            "SCRO - Global Reference": "fbmwCOAdvancement [QUST:01004AD9]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 100, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "Graring is dead, making it impossible to get any information about the Stalhrim.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 150, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "I have killed Graring.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,96 @@
+{
+    "Topic": "1embezzledSfunds [DIAL:013108CA]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 319, 
+        "Record Flags": {}, 
+        "FormID": "01F8AAB7", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwICMossanon [QUST:0100B81C]", 
+    "PNAM - Previous INFO": "01F8AAB6", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 49 43"
+            }, 
+            "NAM1 - Response Text": "I have confessed. Now what do you propose to do?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "01", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStageDone:59", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICMossanon "Imperial Cult: Pledge from Canctunian Ponius" [QUST:0100B81C]", 
+            "Parameter #2": "003 I found Mossanon in Sadrith Mora and confronted him about the embezzled funds. He admitted his crime, and offered to return 2500 gold -- he had spent the rest -- and pay back the rest as soon as he could, if I'd promise to keep his whereabouts secret from Canctunian Ponius. I refused to keep his secret, and he refused to return the gold.", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "01", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStageDone:59", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICMossanon "Imperial Cult: Pledge from Canctunian Ponius" [QUST:0100B81C]", 
+            "Parameter #2": "002 I found Mossanon in Sadrith Mora and confronted him about the embezzled funds. He admitted his crime, and offered to return 2500 gold -- he had spent the rest -- and pay back the rest as soon as he could, if I'd promise to keep his whereabouts secret from Canctunian Ponius. I took no immediate action, giving myself time to consider his offer.", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStageDone:59", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICMossanon "Imperial Cult: Pledge from Canctunian Ponius" [QUST:0100B81C]", 
+            "Parameter #2": "011 I found Mossanon in Sadrith Mora and confronted him about the embezzled funds. He admitted his crime, and offered to return 2500 gold -- he had spent the rest -- and pay back the rest as soon as he could, if I'd promise to keep his whereabouts secret from Canctunian Ponius. I promised to keep his secret, but I think he suspected I would not honor my promise, and he refused to return the gold.", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 15.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICMossanon "Imperial Cult: Pledge from Canctunian Ponius" [QUST:0100B81C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Mossanon "Mossanon" [NPC_:01260A2B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "fbmwicdemandgold [DIAL:01F8A9F7]", 
+        "TCLT - Choice": "fbmwicpromisesecret [DIAL:01F8A9FC]", 
+        "TCLT - Choice": "fbmwictakenoaction [DIAL:01F8AA01]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

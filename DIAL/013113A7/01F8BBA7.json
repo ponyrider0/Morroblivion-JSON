@@ -1,0 +1,99 @@
+{
+    "Topic": "1mySairship [DIAL:013113A7]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 845, 
+        "Record Flags": {}, 
+        "FormID": "01F8BBA7", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMAirship [QUST:0101AF81]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "69 73 53"
+            }, 
+            "NAM1 - Response Text": "I...built an airship, you see.  Quite a...quite a...um...beautiful craft, if I may be so...bold. Some scavenged Dwemer equip...um...parts, a few, you know....ahh...long-lasting levitation spells.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "69 73 53"
+            }, 
+            "NAM1 - Response Text": "Very clever...a capital idea, I know!  Even hired a gang of...well, a crew I guess you'd call them.  They were to fly far...to the north!  Away from all this dust...to Solstheim!", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "69 73 53"
+            }, 
+            "NAM1 - Response Text": "I paid them...paid them rather well.  They were to locate Hrothmund's Barrow, and find a certain...um...item.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMAirship "The Patchwork Airship" [QUST:0101AF81]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMAirship "The Patchwork Airship" [QUST:0101AF81]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0louisSbeauchamp "Louis Beauchamp" [NPC_:01260B3C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "setstage fbmwbmAirship 10\r\naddtopic 1hrothmundassbarrow", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMAirship [QUST:0101AF81]", 
+            "SCRO - Global Reference": "1HrothmundAsSBarrow [DIAL:01311335]"
+        ]
+    }
+}

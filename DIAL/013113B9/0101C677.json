@@ -1,0 +1,65 @@
+{
+    "Topic": "1aidingSme [DIAL:013113B9]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 208, 
+        "Record Flags": {}, 
+        "FormID": "0101C677", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwCOChoice [QUST:0101BEDB]", 
+    "PNAM - Previous INFO": "0101C676", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6C 63 6F"
+            }, 
+            "NAM1 - Response Text": "Have you decided to do what is right?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 22.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwCOChoice "East Empire Company: Making a Choice" [QUST:0101BEDB]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0FalcoSGalenus "Falco Galenus" [NPC_:01260B0B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1aidingSme1 [DIAL:01322695]", 
+        "TCLT - Choice": "1aidingSme2 [DIAL:01322697]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

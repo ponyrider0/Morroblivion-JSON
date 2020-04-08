@@ -1,0 +1,68 @@
+{
+    "Topic": "1NotShisSrealSname [DIAL:013107E9]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 624, 
+        "Record Flags": {}, 
+        "FormID": "01F8AA6E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVBountyHunter [QUST:01003401]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "72 69 63"
+            }, 
+            "NAM1 - Response Text": "Well, of course. It's just a translation from the Argonian. That would translate to something like Hajeekius, Hajesheeus, maybe Haj-Ei. Literal translations can get a little awkward sometimes.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "72 69 63"
+            }, 
+            "NAM1 - Response Text": "Most folks don't bother to learn the language of these savages; they find it too hard to pronounce. For me, though, it makes business a little bit easier.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0dranasSsarathram "Dranas Sarathram" [NPC_:012606F5]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 50 00 00 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "setstage fbmwmvbountyhunter 80\r\naddtopic 1hidesshisseyessisshajtei", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMVBountyHunter [QUST:01003401]", 
+            "SCRO - Global Reference": "1HidesSHisSEyesSisSHajTEi [DIAL:01310686]"
+        ]
+    }
+}

@@ -1,0 +1,83 @@
+{
+    "Topic": "1someSnotoriousSthieves [DIAL:013106BB]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 658, 
+        "Record Flags": {}, 
+        "FormID": "01F8AA30", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVBanditVictim [QUST:010033FF]", 
+    "PNAM - Previous INFO": "01F8AA2F", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "61 53 77"
+            }, 
+            "NAM1 - Response Text": "Yes, just a few hours ago I was robbed. I'm certain it was the group led by the Khajiit, Dro'zhirr. They stole all of my jewelry, but most importantly, they got two family heirlooms of mine.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "61 53 77"
+            }, 
+            "NAM1 - Response Text": "They've been in my family for years. If you can return them to me, I'd gladly pay your their weight in gold.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVBanditVictim "Aeta Wave-Breaker's Jewels" [QUST:010033FF]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0aetaSwaveTbreaker "Aeta Wave-Breaker" [NPC_:012606D4]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1someSnotoriousSthieves1 [DIAL:01320544]", 
+        "TCLT - Choice": "1someSnotoriousSthieves2 [DIAL:01320546]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 14 00 00 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "setstage fbmwmvbanditvictim 20\r\naddtopic 1familysheirlooms\r\naddtopic 1droazhirr", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMVBanditVictim [QUST:010033FF]", 
+            "SCRO - Global Reference": "1familySheirlooms [DIAL:01310836]", 
+            "SCRO - Global Reference": "1DroAZhirr [DIAL:01310BBF]"
+        ]
+    }
+}

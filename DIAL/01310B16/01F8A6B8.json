@@ -1,0 +1,84 @@
+{
+    "Topic": "1compassion [DIAL:01310B16]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 663, 
+        "Record Flags": {}, 
+        "FormID": "01F8A6B8", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTTCompassion [QUST:01F0A295]", 
+    "PNAM - Previous INFO": "01F8A6B7", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 54 54"
+            }, 
+            "NAM1 - Response Text": "You cured Bulfim gra-Shugarz and have proven your compassion. You might be interested in this book, which has an important lesson on the rewards of compassion. Were you able to preserve the potion?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTTCompassion "Temple: Compassion" [QUST:01F0A295]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTTCompassion "Temple: Compassion" [QUST:01F0A295]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0tulsSvalen "Tuls Valen" [NPC_:0126050A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "fbmwttcompno [DIAL:01F8A979]", 
+        "TCLT - Choice": "fbmwttcompyes [DIAL:01F8A976]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 63, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 63 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 A9 10 0D 00 03 00 72 04 00 72 05 00 6E 05 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwttcompassion 99\r\nplayer.additem 0bookskillurestoration3 1\r\nmodfactionreaction 0temple playerfaction 5\r\nmoddisposition player 10", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwTTCompassion [QUST:01F0A295]", 
+            "SCRO - Global Reference": "0bookskillUrestoration3 [BOOK:01180020]", 
+            "SCRO - Global Reference": "0Temple [FACT:01220002]", 
+            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]"
+        ]
+    }
+}

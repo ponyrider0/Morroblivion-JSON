@@ -1,0 +1,72 @@
+{
+    "Topic": "1goSfree1 [DIAL:01322A1C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 594, 
+        "Record Flags": {}, 
+        "FormID": "013235EB", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHTSlaveRebellion [QUST:0100344A]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310ADD"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 100, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Yes, I am free now. I will free the others and lead them back to Black Marsh.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0keyUabebaalslavesU01 "Abebaal Slave Key" [KEYM:0140014B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0eleedalUlei "Eleedal-Lei" [NPC_:01260657]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 99, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 15 00 0E 00 47 04 00 09 00 20 47 04 00 20 31 30 20 2B 59 10 1F 00 01 00 12 00 53 6C 61 76 65 73 20 46 72 65 65 64 3A 20 25 2E 30 66 01 00 47 04 00 05 00 00 00 53 10 0A 00 02 00 72 01 00 6E 32 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHTSlaveRebellion 50\r\nPlayer.RemoveItem 0keyUabebaalslavesU01 1\r\nSet FreedSlavesCounter TO FreedSlavesCounter + 10\r\nMESSAGE \"Slaves Freed: %.0f\", FreedSlavesCounter, 5\r\nModDisposition Player 50", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwHTSlaveRebellion [QUST:0100344A]", 
+            "SCRO - Global Reference": "0keyUabebaalslavesU01 [KEYM:0140014B]", 
+            "SCRO - Global Reference": "FreedSlavesCounter [GLOB:01001289]"
+        ]
+    }
+}

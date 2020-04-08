@@ -1,0 +1,60 @@
+{
+    "Record Header": {
+        "Signature": "QUST", 
+        "Data Size": 482, 
+        "Record Flags": {}, 
+        "FormID": "0101C62F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwMSPropylon", 
+    "FULL - Name": "Maelkashishi Propylon Index", 
+    "ICON - Icon FileName": "darthsouth\\Quests\\miscquest-town.dds", 
+    "DATA - General": {
+        "Flags": {}, 
+        "Priority": 70
+    }, 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsPlayableRace:254", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestRunning:56", 
+            "Unused": "00 00", 
+            "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Stages": [
+        {
+            "INDX - Stage index": 1, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "Crazy-Legs Arantamo told me about a 'propylon index' -- a key needed to use transportation devices called 'propylons' in Dunmer strongholds. He also told me that someone who had one of these index things went to a Daedric shine called Maelkashishi and never came back.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 2046, 
+        "Record Flags": {}, 
+        "FormID": "01F8CC54", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "moXscrXtrapXwritePERdata", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 11, 
+        "CompiledSize": 256, 
+        "VariableCount": 0, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 F2 00 00 00 15 00 0D 00 72 01 00 66 0C 00 05 00 20 30 2E 32 35 15 00 0D 00 72 01 00 66 0D 00 05 00 20 30 2E 35 30 15 00 0D 00 72 01 00 66 0E 00 05 00 20 30 2E 37 35 15 00 0D 00 72 01 00 66 0F 00 05 00 20 31 2E 30 30 15 00 0D 00 72 01 00 66 10 00 05 00 20 31 2E 32 35 15 00 0C 00 72 01 00 66 06 00 04 00 20 5A 02 00 15 00 0C 00 72 01 00 66 07 00 04 00 20 5A 03 00 15 00 0C 00 72 01 00 66 08 00 04 00 20 5A 04 00 15 00 0C 00 72 01 00 66 09 00 04 00 20 5A 05 00 15 00 0C 00 72 01 00 66 0A 00 04 00 20 5A 06 00 15 00 0C 00 72 01 00 66 0B 00 04 00 20 5A 07 00 15 00 0C 00 72 01 00 66 1E 00 04 00 20 5A 08 00 15 00 0C 00 72 01 00 66 1F 00 04 00 20 5A 09 00 15 00 0C 00 72 01 00 66 20 00 04 00 20 5A 0A 00 37 10 05 00 01 00 72 0B 00 11 00 00 00", 
+    "SCTX - Script Source": "scn moXscrXtrapXwritePERdata\n\n;CONSTRUCTION NOTE: QUEST = moXqstXtrapXwritePERdata, autostart and self-terminate.\n\n\nBegin GameMode\n\n;PrinttoConsole \"MOTRP: Saving Permanent Data to Register.\"\n\n; PRobes have been Shifted to Dynamic Data\n\n;Set moXqstXtrapXmeomorystorage.XProbeIDA1 to \"Lockpick\"\n;Set moXqstXtrapXmeomorystorage.XProbeIDA2 to \"Lockpick\"\n;Set moXqstXtrapXmeomorystorage.XProbeIDA3 to \"Lockpick\"\n;Set moXqstXtrapXmeomorystorage.XProbeIDA4 to \"Lockpick\"\n;Set moXqstXtrapXmeomorystorage.XProbeIDA5 to \"Lockpick\"\n\n	Set moXqstXtrapXmeomorystorage.XProbeMULTA1 to 0.25  \n	Set moXqstXtrapXmeomorystorage.XProbeMULTA2 to 0.50\n	Set moXqstXtrapXmeomorystorage.XProbeMULTA3 to 0.75\n	Set moXqstXtrapXmeomorystorage.XProbeMULTA4 to 1.00\n	Set moXqstXtrapXmeomorystorage.XProbeMULTA5 to 1.25\n\n	Set moXqstXtrapXmeomorystorage.XSpellIDA1 to \"TestFireball\"		\n	Set moXqstXtrapXmeomorystorage.XSpellIDA2 to \"TestShock\"		\n	Set moXqstXtrapXmeomorystorage.XSpellIDA3 to \"TestFrost\"		\n	Set moXqstXtrapXmeomorystorage.XSpellIDA4 to \"StandardDisintegrateWeapon3Journeyman\"		\n	Set moXqstXtrapXmeomorystorage.XSpellIDA5 to \"StandardSilence5Master\"		\n	Set moXqstXtrapXmeomorystorage.XSpellIDA6 to \"StandardParalyze3Journeyman\"\n	Set moXqstXtrapXmeomorystorage.XSpellIDA7 to \"StandardDisintegrateArmor4Expert\"		\n	Set moXqstXtrapXmeomorystorage.XSpellIDA8 to \"StandardBurden4Expert\"\n	Set moXqstXtrapXmeomorystorage.XSpellIDA9 to \"StandardDispelSelf4Expert\"\n\n\n\n;PrinttoConsole \"MOTRP: Finished Saving Permanent Data to Register.\"\n	StopQuest moXqstXtrapXwritePERMmemory\n\n\nEnd\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "moXqstXtrapXmeomorystorage [QUST:01F8CCB0]", 
+        "SCRO - Global Reference": "TestFireball [SPEL:000359BA]", 
+        "SCRO - Global Reference": "TestShock [SPEL:000B6C2B]", 
+        "SCRO - Global Reference": "TestFrost [SPEL:0001FD00]", 
+        "SCRO - Global Reference": "StandardDisintegrateWeapon3Journeyman [SPEL:000A97A5]", 
+        "SCRO - Global Reference": "StandardSilence5Master [SPEL:000AA04D]", 
+        "SCRO - Global Reference": "StandardParalyze3Journeyman [SPEL:000A9838]", 
+        "SCRO - Global Reference": "StandardDisintegrateArmor4Expert [SPEL:000A97A4]", 
+        "SCRO - Global Reference": "StandardBurden4Expert [SPEL:000A97C4]", 
+        "SCRO - Global Reference": "StandardDispelSelf4Expert [SPEL:000A9833]", 
+        "SCRO - Global Reference": "moXqstXtrapXwritePERMmemory [QUST:01F8CCAE]"
+    ]
+}

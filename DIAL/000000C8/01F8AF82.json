@@ -1,0 +1,103 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 680, 
+        "Record Flags": {}, 
+        "FormID": "01F8AF82", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true, 
+            "Say Once": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwTRDBAttack [QUST:0101C653]", 
+    "PNAM - Previous INFO": "01F8AF81", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000006", 
+                "Emotion Value": 100, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": "You say you've been attacked by assassins?", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000003", 
+                "Emotion Value": 100, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": " From your description, and the look of that dart you found, it sounds like the work of the Dark Brotherhood.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000003", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": "I'm not sure who you angered, but stay away from me. I suppose this should be officially reported, though.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000003", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": "Speak to Apelles Matius in Ebonheart about this matter.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsClass:68", 
+            "Unused": "00 00", 
+            "Parameter #1": "Guard "Guard" [CLAS:00034E6E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRDBAttack "Dark Brotherhood Attacks" [QUST:0101C653]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 1E 00 00 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "setstage fbmwTRDBAttack 30\r\naddtopic 1DarkSBrotherhood", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTRDBAttack [QUST:0101C653]", 
+            "SCRO - Global Reference": "1DarkSBrotherhood [DIAL:01310833]"
+        ]
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "Topic": "1Almalexia5 [DIAL:01009DC3]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 716, 
+        "Record Flags": {}, 
+        "FormID": "01009DD3", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwTRSothaSil [QUST:0101C65C]", 
+    "TPIC - Topic": "01009DBF", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "61 6C 65"
+            }, 
+            "NAM1 - Response Text": "Your story is unbelievable. But... rumors here say Almalexia is no longer in Mournhold, and she plans to be gone indefinitely.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "61 6C 65"
+            }, 
+            "NAM1 - Response Text": "They say she exhausted her body and spirit in the war against Dagoth Ur.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "61 6C 65"
+            }, 
+            "NAM1 - Response Text": "But now she plans to travel in disguise among the people, living the life of a mortal, and recovering her love for the world. ", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "61 6C 65"
+            }, 
+            "NAM1 - Response Text": "The Temple plans to keep this a secret, for fear of starting a panic among the Faithful. Now... I don't know what to think.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0GalsaSAndrano "Galsa Andrano" [NPC_:01260A81]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ14 "Destroy Dagoth Ur" [QUST:01002C56]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

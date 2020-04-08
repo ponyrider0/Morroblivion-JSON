@@ -1,0 +1,77 @@
+{
+    "Topic": "1assist [DIAL:01311089]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 459, 
+        "Record Flags": {}, 
+        "FormID": "01AA3CD8", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSWarlords [QUST:0101C638]", 
+    "PNAM - Previous INFO": "01AA3CD7", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 4D 53"
+            }, 
+            "NAM1 - Response Text": "You've done us an incredible service thus far.  With one minor task left, you can put us in a position to start work on my greater purpose.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "57 4D 53"
+            }, 
+            "NAM1 - Response Text": "Our greater purpose, I mean.  Yes, well.  Let us talk of Suldreni Salandas.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSWarlords "The Warlords" [QUST:0101C638]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0DovorSOren "Dovor Oren" [NPC_:01260A8D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 9, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00", 
+        "SCTX - Result script source": "addtopic 1SuldreniSSalandas", 
+        "References": [
+            "SCRO - Global Reference": "1SuldreniSSalandas [DIAL:01310FD1]"
+        ]
+    }
+}

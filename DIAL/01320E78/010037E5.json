@@ -1,0 +1,88 @@
+{
+    "Topic": "1RedoranSHortator2 [DIAL:01320E78]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 576, 
+        "Record Flags": {}, 
+        "FormID": "010037E5", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQRedoranLlethri [QUST:01001DDE]", 
+    "PNAM - Previous INFO": "013231B5", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "69 73 61"
+            }, 
+            "NAM1 - Response Text": "I spoke with Athyn Sarethi. I like what he told me about you. You get things done, and show good judgement. Your story is crazy.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "69 73 61"
+            }, 
+            "NAM1 - Response Text": "But your story doesn't matter to me, as long as you can do something about Dagoth Ur and his servants.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "69 73 61"
+            }, 
+            "NAM1 - Response Text": "I'm making you my choice for Hortator of House Redoran.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQRedoranSarethi "Convincing Sarethi" [QUST:01001DE1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0garisaSllethri "Garisa Llethri" [NPC_:012600AA]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 32 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMQRedoranLlethri 50", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQRedoranLlethri [QUST:01001DDE]"
+        ]
+    }
+}

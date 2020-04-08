@@ -1,0 +1,77 @@
+{
+    "Topic": "1ashSstorm [DIAL:01310B62]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 417, 
+        "Record Flags": {}, 
+        "FormID": "01023CC2", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHRFindDalobar [QUST:0100431F]", 
+    "PNAM - Previous INFO": "01023CC1", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 48 52"
+            }, 
+            "NAM1 - Response Text": "Just before the storm hit, I saw someone leading some pack guar up to the Rothan Tomb. I hope they made it okay.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHRFindDalobar "House Redoran: Find Mathis Dalobar" [QUST:0100431F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHRFindDalobar "House Redoran: Find Mathis Dalobar" [QUST:0100431F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInCell:67", 
+            "Unused": "00 00", 
+            "Parameter #1": "MaarSGan "Maar Gan" [CELL:01480040]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 1E 00 00 00 55 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "SetStage fbmwHRFindDalobar 30\r\nShowMap mwRothanAncestralTombMapMarker", 
+        "References": [
+            "SCRO - Global Reference": "fbmwHRFindDalobar [QUST:0100431F]", 
+            "SCRO - Global Reference": "mwRothanAncestralTombMapMarker [REFR:0100754C]"
+        ]
+    }
+}

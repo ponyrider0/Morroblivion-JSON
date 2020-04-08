@@ -1,0 +1,44 @@
+{
+    "Record Header": {
+        "Signature": "PACK", 
+        "Data Size": 111, 
+        "Record Flags": {}, 
+        "FormID": "01F8D05D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwMaarGanGuardPatrolNightEnd", 
+    "PKDT - General": {
+        "General": {
+            "Flags": {
+                "Must reach location": true, 
+                "Skip fallout behavior": true
+            }, 
+            "Type": "06", 
+            "Unused": "00 00 00"
+        }
+    }, 
+    "PLDT - Location": {
+        "Type": 0, 
+        "Location": "01F8CFFF", 
+        "Radius": 0
+    }, 
+    "PSDT - Schedule": {
+        "Month": -1, 
+        "Day of week": -1, 
+        "Date": "00", 
+        "Time": 21, 
+        "Duration": 10
+    }, 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetDistance:1", 
+            "Unused": "00 00", 
+            "Parameter #1": "[REFR:01F8D001] (places XMarker [STAT:0000003B] in GRUP Cell Persistent Children of [CELL:01380001] (in WrldMorrowind "Morrowind" [WRLD:01380000]) at -5,24)", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ]
+}

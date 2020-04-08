@@ -1,0 +1,370 @@
+{
+    "Record Header": {
+        "Signature": "QUST", 
+        "Data Size": 2299, 
+        "Record Flags": {}, 
+        "FormID": "01003475", 
+        "Version Control Info": "1F 13 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwHRArobarKidnap", 
+    "SCRI - Script": "fbmwHRarobarKidnapScript [SCPT:0102F6E6]", 
+    "FULL - Name": "House Redoran: Miner Arobar's Support", 
+    "ICON - Icon FileName": "darthsouth\\Quests\\houseredoran.dds", 
+    "DATA - General": {
+        "Flags": {}, 
+        "Priority": 80
+    }, 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsPlayableRace:254", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestRunning:56", 
+            "Unused": "00 00", 
+            "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Stages": [
+        {
+            "INDX - Stage index": 1
+        }, 
+        {
+            "INDX - Stage index": 10, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Miner Arobar told me that he would not support me on the Council.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 20, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Athyn Sarethi asked me to go to Sadrith Mora and find out who is pressuring Miner Arobar and how.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 45, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Athyn Sarethi asked me to rescue Nartise Arobar from Tel Naga.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 2, 
+                            "CompiledSize": 16, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 21 10 00 00 1C 00 02 00 21 10 00 00", 
+                        "SCTX - Result script source": "mwNartiseArobarREF.enable\r\nmwGalmirREF.enable", 
+                        "References": [
+                            "SCRO - Global Reference": "mwNartiseArobarREF [ACHR:01872F31]", 
+                            "SCRO - Global Reference": "mwGalmirREF [ACHR:01842E32]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 50, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Nartise Arobar agreed to follow me to the docks.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 4, 
+                            "CompiledSize": 39, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 16 10 05 00 01 00 72 04 00 1C 00 02 00 16 10 05 00 01 00 72 04 00 1C 00 03 00 16 10 05 00 01 00 72 04 00", 
+                        "SCTX - Result script source": "mwGalmirREF.startcombat player\r\nmwReryneaSalasREF.startcombat player\r\nmwDrodosGalenREF.startcombat player", 
+                        "References": [
+                            "SCRO - Global Reference": "mwGalmirREF [ACHR:01842E32]", 
+                            "SCRO - Global Reference": "mwReryneaSalasREF [ACHR:01842E31]", 
+                            "SCRO - Global Reference": "mwDrodosGalenREF [ACHR:01842E30]", 
+                            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 70, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Nartise Arobar arrived safely at the Wolverine Hall docks.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 100, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "Miner Arobar thanked me for rescuing his daughter and pledged to support me on the Council.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 2, 
+                            "CompiledSize": 227, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 14 00 72 02 00 73 01 00 0C 00 20 72 02 00 73 01 00 20 31 30 20 2B 1C 00 01 00 22 10 00 00 16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 6F 00 01 00 6B 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 43 6F 6D 70 6C 65 74 65 64 20 48 6F 75 73 65 20 52 65 64 6F 72 61 6E 3A 20 4D 69 6E 65 72 20 41 72 6F 62 61 72 27 73 20 53 75 70 70 6F 72 74 20 71 75 65 73 74 22 F9 16 27 00 01 00 23 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 31 30 30 19 00 00 00", 
+                        "SCTX - Result script source": "Set fbmwHRAdvancement.RedoranReputation TO fbmwHRAdvancement.RedoranReputation + 10\r\n\r\nmwNartiseArobarREF.Disable\r\n\r\nif ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qCompleted House Redoran: Miner Arobar's Support quest%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 100\"\r\nendif", 
+                        "References": [
+                            "SCRO - Global Reference": "mwNartiseArobarREF [ACHR:01872F31]", 
+                            "SCRO - Global Reference": "fbmwHRAdvancement [QUST:010037E7]"
+                        ]
+                    }
+                }
+            ]
+        }
+    ], 
+    "Targets": [
+        {
+            "QSTA - Target": {
+                "Target": "018076E3", 
+                "Flags": {}, 
+                "Unused": "00 4C 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 20.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwHRArobarKidnap "House Redoran: Miner Arobar's Support" [QUST:01003475]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwHRArobarKidnap "House Redoran: Miner Arobar's Support" [QUST:01003475]", 
+                    "Parameter #2": "NartiseKidnapped", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "0145103C", 
+                "Flags": {}, 
+                "Unused": "00 4C 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 20.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwHRArobarKidnap "House Redoran: Miner Arobar's Support" [QUST:01003475]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwHRArobarKidnap "House Redoran: Miner Arobar's Support" [QUST:01003475]", 
+                    "Parameter #2": "NartiseKidnapped", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "018076E3", 
+                "Flags": {}, 
+                "Unused": "00 4C 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 10.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwHRArobarKidnap "House Redoran: Miner Arobar's Support" [QUST:01003475]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "0184B318", 
+                "Flags": {}, 
+                "Unused": "00 4C 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 70.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwHRArobarKidnap "House Redoran: Miner Arobar's Support" [QUST:01003475]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "01009CA6", 
+                "Flags": {}, 
+                "Unused": "00 4C 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 50.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwHRArobarKidnap "House Redoran: Miner Arobar's Support" [QUST:01003475]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "01872F31", 
+                "Flags": {}, 
+                "Unused": "00 4C 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 45.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwHRArobarKidnap "House Redoran: Miner Arobar's Support" [QUST:01003475]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }
+    ]
+}

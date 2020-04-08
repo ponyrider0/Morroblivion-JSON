@@ -1,0 +1,119 @@
+{
+    "Topic": "1DivineSMetaphysics [DIAL:0131075F]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 872, 
+        "Record Flags": {}, 
+        "FormID": "010060E7", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMGDwarves [QUST:01006773]", 
+    "PNAM - Previous INFO": "010060E8", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "Yes, I can now translate these books. This first one is Bthuand Mzahnch's refutation of a popular theory from Nerevar's time.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "61 64 61"
+            }, 
+            "NAM1 - Response Text": "A few tones of Dwemer believed that using the power Lorkhan's Heart was an unjustifiable risk.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "61 64 61"
+            }, 
+            "NAM1 - Response Text": "\"The Egg of Time\" contains Bthuand's arguments against this idea, many of which are quite compelling.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "61 64 61"
+            }, 
+            "NAM1 - Response Text": "The next book, \"Divine Metaphysics,\" is an explanation of how the Dwemer tried to make a new god, Anumidium, using Kagrenac's tools and the sacred tones on Lorkhan's heart.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0bkUDivineMetaphysics "Divine Metaphysics" [BOOK:011801E8]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0bkUhanginggardenswasten "Hanging Gardens..." [BOOK:011800BB]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0bkUEggOfTime "The Egg of Time" [BOOK:011801E7]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0baladasSdemnevanni "Baladas Demnevanni" [NPC_:01260409]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 46 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMGDwarves 70", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMGDwarves [QUST:01006773]"
+        ]
+    }
+}

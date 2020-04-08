@@ -1,0 +1,82 @@
+{
+    "Topic": "1HlaaluSHortator4 [DIAL:01320F02]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 543, 
+        "Record Flags": {}, 
+        "FormID": "0132320B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQHlaaluDren [QUST:01001DD7]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310BDA", 
+        "NAME - Topic": "01310AD9", 
+        "NAME - Topic": "013109D1"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "So you've been putting your nose in places it's not meant to be, eh? I see how it is. If the title of Hortator is all you want, you're welcome to it.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "It won't cost me anything at all. I'll make sure Nevena Ules and Velanda Omani understand exactly where we stand.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0bkUdrenblackmail "Dren's Note" [BOOK:0118021A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0OrvasSDrenSDruglord "Orvas Dren" [NPC_:012604A7]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 32 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMQHlaaluDren 50", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQHlaaluDren [QUST:01001DD7]"
+        ]
+    }
+}

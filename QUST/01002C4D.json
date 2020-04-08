@@ -1,0 +1,147 @@
+{
+    "Record Header": {
+        "Signature": "QUST", 
+        "Data Size": 2314, 
+        "Record Flags": {}, 
+        "FormID": "01002C4D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwMQTelvanniDratha", 
+    "FULL - Name": "Convincing Mistress Dratha", 
+    "ICON - Icon FileName": "darthsouth\\Quests\\morrowindmainquest.dds", 
+    "DATA - General": {
+        "Flags": {}, 
+        "Priority": 70
+    }, 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsPlayableRace:254", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestRunning:56", 
+            "Unused": "00 00", 
+            "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Stages": [
+        {
+            "INDX - Stage index": 1
+        }, 
+        {
+            "INDX - Stage index": 5, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I asked Mouth Raven Omayn if Mistress Dratha would vote for me as Hortator of House Telvanni. Omayn said I would have to speak directly to Dratha on a matter of such importance.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 10, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I asked Mouth Raven Omayn if Mistress Dratha would vote for me as Hortator of House Telvanni. Omayn said that might be a problem, since Dratha hates men. Omayn suggested I do everything possible to improve her disposition before I asked her.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 30, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I asked Mistress Dratha if she would vote for me as Hortator of House Telvanni. She wouldn't even listen to my story. I hope I can find some way to improve her disposition before I try again.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 50, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "I asked Mistress Dratha if she would vote for me as Hortator of House Telvanni. After hearing my story, she agreed without hesitation to give me her vote.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 207, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 13 00 72 01 00 73 01 00 0B 00 20 72 01 00 73 01 00 20 31 20 2B 16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 64 00 01 00 60 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 43 6F 6D 70 6C 65 74 65 64 20 43 6F 6E 76 69 6E 63 69 6E 67 20 4D 69 73 74 72 65 73 73 20 44 72 61 74 68 61 20 71 75 65 73 74 22 F9 16 27 00 01 00 23 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 31 30 30 19 00 00 00", 
+                        "SCTX - Result script source": "SET fbmwMQTelvanni.HortVotes TO fbmwMQTelvanni.HortVotes + 1\r\n\r\nif ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qCompleted Convincing Mistress Dratha quest%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 100\"\r\nendif", 
+                        "References": [
+                            "SCRO - Global Reference": "fbmwMQTelvanni [QUST:01002C4A]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 60, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "Once I got Mistress Dratha to listen to my story, she was more than willing to name me Hortator of House Telvanni.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 207, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 13 00 72 01 00 73 01 00 0B 00 20 72 01 00 73 01 00 20 31 20 2B 16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 64 00 01 00 60 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 43 6F 6D 70 6C 65 74 65 64 20 43 6F 6E 76 69 6E 63 69 6E 67 20 4D 69 73 74 72 65 73 73 20 44 72 61 74 68 61 20 71 75 65 73 74 22 F9 16 27 00 01 00 23 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 31 30 30 19 00 00 00", 
+                        "SCTX - Result script source": "SET fbmwMQTelvanni.HortVotes TO fbmwMQTelvanni.HortVotes + 1\r\n\r\nif ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qCompleted Convincing Mistress Dratha quest%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 100\"\r\nendif", 
+                        "References": [
+                            "SCRO - Global Reference": "fbmwMQTelvanni [QUST:01002C4A]"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

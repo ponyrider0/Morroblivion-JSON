@@ -1,0 +1,79 @@
+{
+    "Topic": "1task [DIAL:01311098]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 633, 
+        "Record Flags": {}, 
+        "FormID": "01F8BA87", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRShowPower [QUST:0101C65A]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": "Since the horrendous attack on the city, there have been some alarming developments. One of the most troublesome has been a cult that has recently formed, led by a young Dunmer named Eno Romari.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": "They call themselves the End of Times. In these troubled times, I fear the cult is gaining in popularity.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRShowPower "A Show of Power" [QUST:0101C65A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwAlmalexia "Almalexia" [NPC_:01F8B879]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "setstage fbmwtrShowPower 10\r\naddtopic 1endsofstimes\r\naddtopic 1enosromari", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTRShowPower [QUST:0101C65A]", 
+            "SCRO - Global Reference": "1EndSofSTimes [DIAL:01311033]", 
+            "SCRO - Global Reference": "1EnoSRomari [DIAL:01311061]"
+        ]
+    }
+}

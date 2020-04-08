@@ -1,0 +1,80 @@
+{
+    "Topic": "1repairSmySbots5 [DIAL:013213E5]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 504, 
+        "Record Flags": {}, 
+        "FormID": "013232DD", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMSBattleBots1 [QUST:0101C618]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Excellent! Thank you very much. Now, let me start my repairs. Come back in a little while, and I'll have these warbots ready to go.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ignatiusUflaccus "Ignatius Flaccus" [NPC_:01260AA7]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 3.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0miscUdwrvUgear00 "Rusty Dwemer Cog" [MISC:011600A9]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 46, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 14 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 03 00 00 00 15 00 0A 00 72 02 00 73 05 00 02 00 20 30", 
+        "SCTX - Result script source": "setstage fbmwMSBattleBots1 20\r\nPlayer.RemoveItem 0miscudwrvugear00 3\r\nset fbmwMSBattleBots1.BotFix to 0", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMSBattleBots1 [QUST:0101C618]", 
+            "SCRO - Global Reference": "0miscUdwrvUgear00 [MISC:011600A9]"
+        ]
+    }
+}

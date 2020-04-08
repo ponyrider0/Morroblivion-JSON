@@ -1,0 +1,113 @@
+{
+    "Topic": "1forgeStheSblade [DIAL:01310FF0]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 962, 
+        "Record Flags": {}, 
+        "FormID": "01011A61", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRBlade [QUST:0101C651]", 
+    "PNAM - Previous INFO": "01011A5F", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "The blade is reforged! Our time has almost arrived. There is but one obstacle that stands in our way, though it pains me to believe it is so.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "Sotha Sil. I cannot count the times I have fought by the Magician's side.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "It was he who stood with me the day I fought in Mournhold and banished Mehrunes Dagon to the depths of Oblivion.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "It was Sotha Sil who was able to delve the mysteries of Kagrenac's tools, and raise me to my rightful station.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "05", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "Now, though, the Tinkerer has become unstable.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0nerevarbladeU01Uflame "Trueflame" [WEAP:01011A63]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwAlmalexia "Almalexia" [NPC_:01F8B879]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 41, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 64 00 00 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 36 10 05 00 01 00 72 04 00", 
+        "SCTX - Result script source": "setstage fbmwTRblade 100\r\naddtopic 1SothaSSil\r\naddtopic 1unstable\r\nstartquest fbmwTRsothasil", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTRBlade [QUST:0101C651]", 
+            "SCRO - Global Reference": "1SothaSSil [DIAL:01310BAF]", 
+            "SCRO - Global Reference": "1unstable [DIAL:0131107B]", 
+            "SCRO - Global Reference": "fbmwTRSothaSil [QUST:0101C65C]"
+        ]
+    }
+}

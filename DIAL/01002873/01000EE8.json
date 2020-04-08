@@ -1,0 +1,85 @@
+{
+    "Topic": "1entertainStheSpatrons6 [DIAL:01002873]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 573, 
+        "Record Flags": {}, 
+        "FormID": "01000EE8", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMSEntertainers [QUST:01002199]", 
+    "PNAM - Previous INFO": "01000EE7", 
+    "Add topics": [
+        "NAME - Topic": "01310B8B"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "So, since you don't HAVE four large kwama eggs, how did you propose to juggle them?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0dulneaSralaal "Dulnea Ralaal" [NPC_:01260118]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "PlayerRef [PLYR:00000014]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 72, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 53 10 0A 00 02 00 72 05 00 6E F1 FF FF FF 1C 00 02 00 53 10 0A 00 02 00 72 05 00 6E F1 FF FF FF 1C 00 03 00 53 10 0A 00 02 00 72 05 00 6E F1 FF FF FF 1C 00 04 00 53 10 0A 00 02 00 72 05 00 6E F1 FF FF FF", 
+        "SCTX - Result script source": "dulnea.ModDisposition player -15\r\nfbmwTravenMarvosREF.ModDisposition player -15\r\nmwAlvisTeriREF.ModDisposition player -15\r\nmwMerilHlaanoREF.ModDisposition player -15", 
+        "References": [
+            "SCRO - Global Reference": "Dulnea [ACHR:0181080F]", 
+            "SCRO - Global Reference": "fbmwTravenMarvosREF [ACHR:01810810]", 
+            "SCRO - Global Reference": "mwAlvisTeriREF [ACHR:018149DC]", 
+            "SCRO - Global Reference": "mwMerilHlaanoREF [ACHR:01810811]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

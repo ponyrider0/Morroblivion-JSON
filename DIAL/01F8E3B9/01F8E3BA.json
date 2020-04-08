@@ -1,0 +1,91 @@
+{
+    "Topic": "mwMQBackPath02Deeds [DIAL:01F8E3B9]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 649, 
+        "Record Flags": {}, 
+        "FormID": "01F8E3BA", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQTheBackPath [QUST:01002C54]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "0131074A", 
+        "NAME - Topic": "0131074B"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "I see. I thought I had heard of you. But I had not realized that all these good deeds you describe were your handiwork. Yes. I am satisfied of your motivations and character.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "I believe I can trust you. If you can find Kagrenac's Planbook and Kagrenac's Journals and bring them to me, I will do my best to restore Wraithguard to its proper functions.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetPCFame:249", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "02", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0miscUwraithguardUnoUequip "Unique Dwemer Artifact" [MISC:011600E3]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "FBMWTempDwemer "Yagrum Bagarn" [NPC_:010033C5]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 03 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMQTheBackPath 3", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQTheBackPath [QUST:01002C54]"
+        ]
+    }
+}

@@ -1,0 +1,88 @@
+{
+    "Topic": "1findStheSCaptain [DIAL:0131134B]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 729, 
+        "Record Flags": {}, 
+        "FormID": "01F8B032", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMSmugglers [QUST:0101B6D3]", 
+    "PNAM - Previous INFO": "01F8B031", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "65 61 53"
+            }, 
+            "NAM1 - Response Text": "There was a terrible battle. We were caught completely by surprise. And in the aftermath we realized that Captain Carius was missing. I searched thoroughly, and there was no sign of his body, so I do not believe he is dead. And these wolf creatures...", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "They were horrible and fierce. You must find him. There is a Nord village on the north end of this island. They may know something about what has occured.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMSmugglers "The Frostmoth Smugglers" [QUST:0101B6D3]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMCariusGone "The Disappearance of Captain Carius" [QUST:0101AF88]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0saenusSlusius "Saenus Lusius" [NPC_:01260B1C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "setstage fbmwbmcariusgone 10\r\naddtopic 1nordsvillage", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMCariusGone [QUST:0101AF88]", 
+            "SCRO - Global Reference": "1NordSvillage [DIAL:0131138D]"
+        ]
+    }
+}

@@ -1,0 +1,103 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 943, 
+        "Record Flags": {}, 
+        "FormID": "01F82B35", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwICMarshmerrow [QUST:0100B822]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 49 43"
+            }, 
+            "NAM1 - Response Text": "We need five units of muck for cure common disease potions. A farmer in Gnisis, Abishpulu Shand, has a muckspunge patch near his hut, and Chaplain Ogrul at Fort Darius has a deal with Shand to gather muck there for free.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "65 73 55"
+            }, 
+            "NAM1 - Response Text": "Let me put Gnisis on your map. And while you're in Gnisis, visit Chaplain Ogrul and give him these four Restore Health potions. And ask him if he'll teach you a few tricks.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "65 73 55"
+            }, 
+            "NAM1 - Response Text": "When you have the muck, bring it back to me. And here's 80 drakes for the silt strider fare. It's a long walk.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICMarshmerrow "Imperial Cult: Gathering Marshmerrow" [QUST:0100B822]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICMuck "Imperial Cult: Gathering Muck" [QUST:0100B82C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0SynnolianSTunifus "Synnolian Tunifus" [NPC_:012602E2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 50, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 50 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 04 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwicmuck 1\r\nplayer.additem gold001 80\r\nplayer.additem 0purestoreuhealthub 4", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwICMuck [QUST:0100B82C]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "0pUrestoreUhealthUb [ALCH:010800DE]"
+        ]
+    }
+}

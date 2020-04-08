@@ -1,0 +1,79 @@
+{
+    "Topic": "1AshstormsSinSMournhold [DIAL:01310F9E]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 709, 
+        "Record Flags": {}, 
+        "FormID": "01F8BA17", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRShowPower [QUST:0101C65A]", 
+    "PNAM - Previous INFO": "01F8BA16", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "That's correct. While these storms may be common on the island of Vvardenfell, they do not occur here, so far removed from the Red Mountain. Now, though, they will, and these heretics will understand the power of the Tribunal. The power of Almalexia!", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": "Take this, and use it to activate the machine. You will have to divine its workings on your own, but I believe you are up to the task.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 80.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRShowPower "A Show of Power" [QUST:0101C65A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwAlmalexia "Almalexia" [NPC_:01F8B879]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 50 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwtrShowPower 80\r\nplayer.additem 0miscudwrvuweather 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwTRShowPower [QUST:0101C65A]", 
+            "SCRO - Global Reference": "0miscUdwrvUweather [MISC:01160232]"
+        ]
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 557, 
+        "Record Flags": {}, 
+        "FormID": "014703B3", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwBMColonyFactor1UMidScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 120, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 6A 00 00 00 16 00 1F 00 02 00 1B 00 20 72 01 00 73 05 00 20 33 31 20 3D 3D 20 58 23 10 00 00 20 31 20 3D 3D 20 26 26 21 10 00 00 15 00 07 00 73 01 00 02 00 20 30 18 00 1D 00 02 00 19 00 20 72 01 00 73 05 00 20 33 31 20 21 3D 20 73 01 00 20 30 20 3D 3D 20 26 26 22 10 00 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptName mwBMColonyFactor1UMidScript\n\nshort doonce\n\nbegin gamemode\n	if fbmwCOAdvancement.colonyState == 31 && GetDisabled == 1\n		Enable\n		set doonce to 0\n	elseif fbmwCOAdvancement.colonyState != 31 && doonce == 0\n		Disable\n		set doonce to 1\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 197 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "doonce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwCOAdvancement [QUST:01004AD9]"
+    ]
+}

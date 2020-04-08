@@ -1,0 +1,107 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1430, 
+        "Record Flags": {}, 
+        "FormID": "01F8B86B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwMSBattleBotsScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 7, 
+        "CompiledSize": 267, 
+        "VariableCount": 9, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 FD 00 00 00 16 00 0D 00 07 00 09 00 20 73 05 00 20 30 20 3D 3D 16 00 15 00 05 00 11 00 20 58 3A 10 05 00 01 00 72 03 00 20 32 30 20 3D 3D 16 00 17 00 03 00 13 00 20 72 04 00 58 43 10 05 00 01 00 72 05 00 20 30 20 3D 3D 1C 00 01 00 21 10 00 00 1C 00 02 00 21 10 00 00 15 00 07 00 73 05 00 02 00 20 31 19 00 00 00 19 00 00 00 19 00 00 00 16 00 2A 00 08 00 26 00 20 58 3A 10 05 00 01 00 72 03 00 20 36 30 20 3E 3D 20 58 3A 10 05 00 01 00 72 03 00 20 31 30 30 20 21 3D 20 26 26 16 00 0F 00 06 00 0B 00 20 73 07 00 20 47 06 00 20 21 3D 15 00 09 00 73 07 00 04 00 20 47 06 00 15 00 0D 00 73 08 00 08 00 20 73 08 00 20 31 20 2B 16 00 0C 00 02 00 08 00 20 73 08 00 20 33 20 3E 36 10 05 00 01 00 72 07 00 37 10 05 00 01 00 72 03 00 19 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwMSBattleBotsScript\n\nshort BetOn\nshort betAmount\nshort battleOn\nshort Win\nshort BotFix\nshort CurrentDay\nshort DaysPassed\n\nBegin GameMode\n	if ( BotFix == 0 )\n		If GetStage fbmwMSBattleBots1 == 20\n			if ( Player.GetInCell MournholdVSIgnatiusSFlaccusASHouse == 0 )\n				fbmwBattleBot1.Enable\n				fbmwBattleBot2.Enable\n				set BotFix to 1\n			endif\n		endif\n	endif\n\n	If GetStage fbmwMSBattleBots1 >= 60 && GetStage fbmwMSBattleBots1 != 100\n		If CurrentDay != GameDaysPassed\n			set CurrentDay to GameDaysPassed\n			set DaysPassed to DaysPassed + 1\n			If DaysPassed > 3\n				StartQuest fbmwMSBattleBots2\n				StopQuest fbmwMSBattleBots1\n			endif\n		endif\n	endif\nEnd\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "BetOn"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 08 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "1D 0C 49 00 00 00 00"
+            }, 
+            "SCVR - Name": "betAmount"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "battleOn"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "7E A2 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "Win"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "BotFix"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000007", 
+                "Unused": "6E 65 4C 4F 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "0D 0A 0D 0A 0D 0A 0D"
+            }, 
+            "SCVR - Name": "CurrentDay"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000008", 
+                "Unused": "6E 65 4C 4F 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "0D 0A 0D 0A 73 67 6F"
+            }, 
+            "SCVR - Name": "DaysPassed"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwBattleBot1 [ACRE:01F8B89B]", 
+        "SCRO - Global Reference": "fbmwBattleBot2 [ACRE:01F8B89E]", 
+        "SCRO - Global Reference": "fbmwMSBattleBots1 [QUST:0101C618]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "MournholdVSIgnatiusSFlaccusASHouse [CELL:014804D8]", 
+        "SCRO - Global Reference": "GameDaysPassed [GLOB:00000039]", 
+        "SCRO - Global Reference": "fbmwMSBattleBots2 [QUST:0101C619]"
+    ]
+}

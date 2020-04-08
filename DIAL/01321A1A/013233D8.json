@@ -1,0 +1,82 @@
+{
+    "Topic": "1mustSgetShome1 [DIAL:01321A1A]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 525, 
+        "Record Flags": {}, 
+        "FormID": "013233D8", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVRunawaySlave [QUST:01003410]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310C30", 
+        "NAME - Topic": "01310D1D"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "You want to help me? That a rare thing in these parts, I tell you what.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Maybe you get us there, maybe not, but I rather be on my way than have them find me here.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0reehUjah "Reeh-Jah" [NPC_:012606E6]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 37, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 1E 00 00 00 58 10 05 00 01 00 72 02 00 15 00 0A 00 72 01 00 73 01 00 02 00 20 31", 
+        "SCTX - Result script source": "setstage fbmwmvrunawayslave 30\r\naddtopic 1reehtjah\r\nset fbmwmvrunawayslave.follownow to 1", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMVRunawaySlave [QUST:01003410]", 
+            "SCRO - Global Reference": "1ReehTJah [DIAL:01310BF0]"
+        ]
+    }
+}

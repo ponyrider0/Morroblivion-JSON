@@ -1,0 +1,66 @@
+{
+    "Topic": "fbmwMSPerformersTalk [DIAL:01F8E8C1]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 362, 
+        "Record Flags": {}, 
+        "FormID": "01F8E8C3", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSPerformers [QUST:0101C62D]", 
+    "PNAM - Previous INFO": "01F8E8C2", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "65 72 79"
+            }, 
+            "NAM1 - Response Text": "No, serjo, it's only me here. My master, Sedura Kena Telvanni Hordalf Xyr, is at his winter estate. Is there something I can do for you?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 2.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSPerformers "A Star is Born" [QUST:0101C62D]", 
+            "Parameter #2": "questionAsked", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0gureryneSselvilo "Gureryne Selvilo" [NPC_:01260A9A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 03 00 02 00 20 33", 
+        "SCTX - Result script source": "set fbmwMSPerformers.questionAsked to 3", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMSPerformers [QUST:0101C62D]"
+        ]
+    }
+}

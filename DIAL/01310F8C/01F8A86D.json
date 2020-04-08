@@ -1,0 +1,101 @@
+{
+    "Topic": "1disloyaltySamongStheSGuards [DIAL:01310F8C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 897, 
+        "Record Flags": {}, 
+        "FormID": "01F8A86D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTR07Guard [QUST:0101C64C]", 
+    "PNAM - Previous INFO": "01005326", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6D 77 54"
+            }, 
+            "NAM1 - Response Text": "This is Ivulen Irano's handwriting on the note you found. He notes the watches when Dralen, Aren, and Irano are the only guards in the Throne Room. I believe I'll change the watch schedules to prevent that.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6D 77 54"
+            }, 
+            "NAM1 - Response Text": "And I'll need to keep a close eye on all three. Very shrewd work. You've brought me clear evidence of disloyalty among the guards.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "6D 77 54"
+            }, 
+            "NAM1 - Response Text": "Now I need your help finding evidence of conspiracy against King Helseth among the Hlaalu nobles.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0bkUIranoUnote "Handwritten Note" [BOOK:01180240]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTR07Guard "Disloyalty Among the Guards" [QUST:0101C64C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0TieniusSDelitian "Tienius Delitian" [NPC_:01260A79]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 46, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 64 00 00 00 53 10 0A 00 02 00 72 02 00 6E 0A 00 00 00 58 10 05 00 01 00 72 03 00 36 10 05 00 01 00 72 04 00", 
+        "SCTX - Result script source": "setstage fbmwtr07guard 100\r\nmoddisposition player 10\r\naddtopic 1evidencesofsconspiracy\r\nstartquest fbmwtr08hlaalu", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTR07Guard [QUST:0101C64C]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "1evidenceSofSconspiracy [DIAL:01310F99]", 
+            "SCRO - Global Reference": "fbmwTR08Hlaalu [QUST:0101C64D]"
+        ]
+    }
+}

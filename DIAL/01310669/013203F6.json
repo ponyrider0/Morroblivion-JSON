@@ -1,0 +1,82 @@
+{
+    "Topic": "1attackSonSaSguarShideStrader [DIAL:01310669]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 825, 
+        "Record Flags": {}, 
+        "FormID": "013203F6", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMVOutcastAshlanders [QUST:0100340A]", 
+    "PNAM - Previous INFO": "013203F5", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "You are suggesting we have done this thing? That is fine, for it is true.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Kashtes and I have taken the hides, and in our possession they will remain. Prepare to meet your gods, for no one may take what is now ours.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0emulTran "Emul-Ran" [NPC_:012606D9]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 105, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 03 00 1C 00 01 00 0F 10 09 00 02 00 21 00 6E 64 00 00 00 1C 00 01 00 53 10 0A 00 02 00 72 04 00 6E 9C FF FF FF 1C 00 01 00 16 10 05 00 01 00 72 04 00 1C 00 02 00 0F 10 09 00 02 00 21 00 6E 64 00 00 00 1C 00 02 00 53 10 0A 00 02 00 72 04 00 6E 9C FF FF FF 1C 00 02 00 16 10 05 00 01 00 72 04 00", 
+        "SCTX - Result script source": "addtopic 1girithassguarshides\r\nmwKashtesIlabaelREF.SetAV Aggression 100\r\nmwKashtesIlabaelREF.ModDisposition Player -100\r\nmwKashtesIlabaelREF.StartCombat Player\r\nmwEmulRanREF.SetAV Aggression 100\r\nmwEmulRanREF.ModDisposition Player -100\r\nmwEmulRanREF.StartCombat Player", 
+        "References": [
+            "SCRO - Global Reference": "mwKashtesIlabaelREF [ACHR:0183FE37]", 
+            "SCRO - Global Reference": "mwEmulRanREF [ACHR:0183FE35]", 
+            "SCRO - Global Reference": "1GirithAsSguarShides [DIAL:01310738]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

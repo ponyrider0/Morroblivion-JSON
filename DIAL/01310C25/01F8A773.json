@@ -1,0 +1,80 @@
+{
+    "Topic": "1slander [DIAL:01310C25]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 453, 
+        "Record Flags": {}, 
+        "FormID": "01F8A773", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwILFalseOrdinator [QUST:010058E5]", 
+    "PNAM - Previous INFO": "01F8A772", 
+    "Add topics": [
+        "NAME - Topic": "01310688"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "So you found Suryn Athones and silenced him. Good. We want good relations with the Ordinators, but we can't tolerate slanders on our character.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0FraldStheSWhite "Frald the White" [NPC_:012602D9]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwILFalseOrdinator "Imperial Legion: Suryn Athones' Slanders" [QUST:010058E5]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "0surynSathones "Suryn Athones" [NPC_:012605BD]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 28, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 64 00 00 00 53 10 0A 00 02 00 72 02 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwilfalseordinator 100\r\nmoddisposition player 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwILFalseOrdinator [QUST:010058E5]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

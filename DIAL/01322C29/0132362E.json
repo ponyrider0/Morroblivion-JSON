@@ -1,0 +1,66 @@
+{
+    "Topic": "1riddle8 [DIAL:01322C29]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 280, 
+        "Record Flags": {}, 
+        "FormID": "0132362E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwILCourtesy [QUST:010058E3]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "It has a tail, a side, and a head\r\nI call it what I call a snake\r\nIt has no body, and it is dead...", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0salynSsarethi "Salyn Sarethi" [NPC_:01260779]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetActorValue:14", 
+            "Unused": "00 00", 
+            "Parameter #1": "Intelligence [ACVA:00000001]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1riddle10 [DIAL:01322C2D]", 
+        "TCLT - Choice": "1riddle12 [DIAL:01322C2F]", 
+        "TCLT - Choice": "1riddle6 [DIAL:01322C25]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

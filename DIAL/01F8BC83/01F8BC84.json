@@ -1,0 +1,58 @@
+{
+    "Topic": "fbmwmsBouncerLeave [DIAL:01F8BC83]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 364, 
+        "Record Flags": {}, 
+        "FormID": "01F8BC84", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMSBouncer [QUST:0101C61B]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 4D 53"
+            }, 
+            "NAM1 - Response Text": "No, I'm not coming with you, you dirty freak! *hic* Who knows what revolting tricks you'll pull when we're alone. *hic*  GET AWAY FROM ME! You won't take me in! You can't! VICTORY! OR...VICTORY!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0denegor "Denegor" [NPC_:01260AAB]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 9, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "16 10 05 00 01 00 72 01 00", 
+        "SCTX - Result script source": "startcombat player", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

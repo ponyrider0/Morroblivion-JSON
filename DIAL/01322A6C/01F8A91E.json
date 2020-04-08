@@ -1,0 +1,68 @@
+{
+    "Topic": "1Eggmine1 [DIAL:01322A6C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 513, 
+        "Record Flags": {}, 
+        "FormID": "01F8A91E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwILGnisisBlight [QUST:010058E7]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6E 65 72"
+            }, 
+            "NAM1 - Response Text": "Good. Now the miners can go back to work. We'll still have to put guards in the lower parts of the eggmine, but at least the villagers can get their eggs. Take these 100 drakes as a reward.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwILGnisisBlight "Imperial Legion: Gnisis Eggmine" [QUST:010058E7]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0generalSdarius "General Darius" [NPC_:01260051]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 46, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 64 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwilgnisisblight 100\r\nmoddisposition player 10\r\nplayer.additem gold001 100", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwILGnisisBlight [QUST:010058E7]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]"
+        ]
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "Topic": "1DahrkSMezalf1 [DIAL:01321C03]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 790, 
+        "Record Flags": {}, 
+        "FormID": "01323428", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHTDahrkMezalf [QUST:01003439]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310D13"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Yes, this is the ring I was looking for. As a reward, I will order my centurion to assist you. I have made some improvements to this one. You may also find this storm ring to be of some minor use.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "mwCenturionShockBaladas "Shock Centurion" [CREA:01F8E7EC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwRingofDahrkMezalf "Ring of Dahrk Mezalf" [CLOT:0102BB32]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0baladasSdemnevanni "Baladas Demnevanni" [NPC_:01260409]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 7, 
+            "CompiledSize": 93, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 03 00 6E 64 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 04 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E 01 00 00 00 1C 00 02 00 89 10 0A 00 02 00 72 06 00 6E 01 00 00 00 15 00 07 00 47 07 00 02 00 20 31 53 10 0A 00 02 00 72 01 00 6E 14 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHTDahrkMezalf 100\r\nPlayer.RemoveItem fbmwRingofDahrkMezalf 1\r\nPlayer.AddItem fbmwRingofLightningStorm 1\r\nmwCenturionShockREF.SetFactionRank PlayerFaction, 1\r\nset mwShockCenturionFollow to 1\r\nModDisposition player 20", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "mwCenturionShockREF [ACRE:01F8E7ED]", 
+            "SCRO - Global Reference": "fbmwHTDahrkMezalf [QUST:01003439]", 
+            "SCRO - Global Reference": "fbmwRingofDahrkMezalf [CLOT:0102BB32]", 
+            "SCRO - Global Reference": "fbmwRingofLightningStorm [CLOT:0102BB1C]", 
+            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]", 
+            "SCRO - Global Reference": "mwShockCenturionFollow [GLOB:01F8E7F2]"
+        ]
+    }
+}

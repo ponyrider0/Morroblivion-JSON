@@ -1,0 +1,103 @@
+{
+    "Topic": "1estate [DIAL:013113E3]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 718, 
+        "Record Flags": {}, 
+        "FormID": "01322CFF", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwCOEstate [QUST:0101BEDC]", 
+    "PNAM - Previous INFO": "01322CEE", 
+    "Add topics": [
+        "NAME - Topic": "01310CF5"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "The plans for it have been on the table for quite some time. Carnius just never got around to doing anything about it;", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "it was clear he never had any intention of staying. It's now your choice, however. I've put Aldam Berendus in charge of the construction team.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "You should find him and have him explain the situation to you.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0FalcoSGalenus "Falco Galenus" [NPC_:01260B0B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwCOEstate "East Empire Company: The Factor's Estate" [QUST:0101BEDC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 27, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 0A 00 00 00 1C 00 01 00 9E 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "setstage fbmwCOestate 10\r\nfbmwAldamREF.moveto fbmwcotorch2marker", 
+        "References": [
+            "SCRO - Global Reference": "fbmwAldamREF [ACHR:01F07C90]", 
+            "SCRO - Global Reference": "fbmwCOEstate [QUST:0101BEDC]", 
+            "SCRO - Global Reference": "fbmwcotorch2marker [REFR:0102DB5E]"
+        ]
+    }
+}

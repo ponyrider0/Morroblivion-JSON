@@ -1,0 +1,124 @@
+{
+    "Topic": "1theSEmpire [DIAL:01310B44]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 971, 
+        "Record Flags": {}, 
+        "FormID": "013221FD", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
+    "PNAM - Previous INFO": "013221FC", 
+    "Add topics": [
+        "NAME - Topic": "01310B44", 
+        "NAME - Topic": "0131079A", 
+        "NAME - Topic": "01310CB4", 
+        "NAME - Topic": "01310BB1", 
+        "NAME - Topic": "01310B45", 
+        "NAME - Topic": "01310931", 
+        "NAME - Topic": "01310BB2", 
+        "NAME - Topic": "01310C5A", 
+        "NAME - Topic": "01310ADD", 
+        "NAME - Topic": "01310B72", 
+        "NAME - Topic": "01310C02", 
+        "NAME - Topic": "01310C00", 
+        "NAME - Topic": "01310C9E", 
+        "NAME - Topic": "01310B44", 
+        "NAME - Topic": "01310C9E", 
+        "NAME - Topic": "01310A59", 
+        "NAME - Topic": "01310B72", 
+        "NAME - Topic": "01310A34"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "The Empire of Tamriel encompasses the nine Imperial provinces: Skyrim, High Rock, Hammerfell, Summerset Isle, Valenwood, Elsweyr, Black Marsh, Morrowind, and the ancient Imperial province itself, Cyrodiil.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Dating from the First Era Cyrodilic Empire, the Empire is almost 4000 years ago.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "But more properly, the current Empire dates from the beginning of the Third Era and the crowning of Tiber Septim as Emperor of Morrowind over 400 years ago.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "The current emperor is Uriel Septim, 24th of the Septim line.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsClass:68", 
+            "Unused": "00 00", 
+            "Parameter #1": "Savant "Savant" [CLAS:00023E6B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "PlayerRef [PLYR:00000014]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

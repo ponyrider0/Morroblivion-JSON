@@ -1,0 +1,83 @@
+{
+    "Topic": "1escape [DIAL:01310CB6]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 560, 
+        "Record Flags": {}, 
+        "FormID": "0100FCB0", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHRStronghold [QUST:0100347A]", 
+    "PNAM - Previous INFO": "0100FCAF", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6C 65 6E"
+            }, 
+            "NAM1 - Response Text": "These ordinators are tough. If you open the door, we can make a run for it.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6C 65 6E"
+            }, 
+            "NAM1 - Response Text": "Or, if you find the key to these cells, I'll bide my time and sneak out when the Ordinators aren't watching.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "6C 65 6E"
+            }, 
+            "NAM1 - Response Text": "All the guards use the same key for all the cells. I'm sure there's one somewhere nearby.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0freleneSacques "Frelene Acques" [NPC_:0126043F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1escape1 [DIAL:01322B64]", 
+        "TCLT - Choice": "1escape2 [DIAL:01322B67]", 
+        "TCLT - Choice": "1escape3 [DIAL:0100AECC]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 8C 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHRStronghold 140", 
+        "References": [
+            "SCRO - Global Reference": "fbmwHRStronghold [QUST:0100347A]"
+        ]
+    }
+}

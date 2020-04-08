@@ -1,0 +1,109 @@
+{
+    "Topic": "1overdueSpayment7 [DIAL:01320FC5]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1617, 
+        "Record Flags": {}, 
+        "FormID": "01323223", 
+        "Version Control Info": "0A 16 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTownAldRuhn [QUST:01F0A39C]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310CDC", 
+        "NAME - Topic": "013108F5", 
+        "NAME - Topic": "01310CCB", 
+        "NAME - Topic": "01310D13", 
+        "NAME - Topic": "01310CCA", 
+        "NAME - Topic": "01310D13", 
+        "NAME - Topic": "01310BEF", 
+        "NAME - Topic": "01310BB6"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Here. Take these items and return them. Give the brocade shirt and silk pants to Bivale Teneran. Give the racer suede belt to Tiras Sadus.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Give the ebony ring and the glass ring to Daynes Redothril. Give the designer shoes to Llether Vari. Give the firejade amulet to Bevene Releth.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "They are all merchants in Ald'ruhn. Return the goods, with my apologies.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ienasSsarandas "Ienas Sarandas" [NPC_:0126002B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "PlayerRef [PLYR:00000014]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1overdueSpayment9 [DIAL:01320FC3]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 9, 
+            "CompiledSize": 263, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00 52 10 0A 00 02 00 72 04 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E 01 00 00 00 52 10 0A 00 02 00 72 05 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 06 00 6E 01 00 00 00 52 10 0A 00 02 00 72 06 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 07 00 6E 01 00 00 00 52 10 0A 00 02 00 72 07 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 08 00 6E 01 00 00 00 52 10 0A 00 02 00 72 08 00 6E 01 00 00 00 53 10 0A 00 02 00 72 01 00 6E 1E 00 00 00 F8 10 07 00 01 00 6E 01 00 00 00 39 10 0A 00 02 00 72 09 00 6E 2D 00 00 00", 
+        "SCTX - Result script source": "Player.additem fbmw0SarandasUshoesU2 1\r\nremoveitem fbmw0SarandasUshoesU2 1\r\nplayer.additem fbmw0SarandasUshirtU2 1\r\nremoveitem fbmw0SarandasUshirtU2 1\r\nplayer.additem fbmw0SarandusUringU2 1\r\nremoveitem fbmw0SarandusUringU2 1\r\nplayer.additem fbmw0SarandusUringU1 1\r\nremoveitem fbmw0SarandusUringU1 1\r\nplayer.additem  fbmw0SarandasUpantsU2 1\r\nremoveitem  fbmw0SarandasUpantsU2 1\r\nplayer.additem fbm0SarandusUbelt 1\r\nremoveitem fbm0SarandusUbelt 1\r\nplayer.additem fbmw0SarandusUamulet 1\r\nremoveitem fbmw0SarandusUamulet 1\r\nmoddisposition Player 30\r\nModPCFame 1\r\nSetStage fbmwTownAldRuhn 45", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmw0sarandasUshoesU2 [CLOT:011401A5]", 
+            "SCRO - Global Reference": "fbmw0sarandasUshirtU2 [CLOT:011401A4]", 
+            "SCRO - Global Reference": "fbmw0sarandusUringU2 [CLOT:01F0A34E]", 
+            "SCRO - Global Reference": "fbmw0sarandusUringU1 [CLOT:01F0A34F]", 
+            "SCRO - Global Reference": "fbmw0sarandasUpantsU2 [CLOT:011401A3]", 
+            "SCRO - Global Reference": "fbm0sarandusUbelt [MISC:01F0A353]", 
+            "SCRO - Global Reference": "fbmw0sarandusUamulet [CLOT:01F0A350]", 
+            "SCRO - Global Reference": "fbmwTownAldRuhn [QUST:01F0A39C]"
+        ]
+    }
+}

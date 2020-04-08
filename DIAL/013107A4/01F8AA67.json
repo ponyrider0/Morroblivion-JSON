@@ -1,0 +1,81 @@
+{
+    "Topic": "1dreamsSandSvisions [DIAL:013107A4]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 562, 
+        "Record Flags": {}, 
+        "FormID": "01F8AA67", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSWhiteGuar [QUST:0101C63A]", 
+    "PNAM - Previous INFO": "01F8AA66", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "68 61 6D"
+            }, 
+            "NAM1 - Response Text": "The past seven nights, I have had dreams of a White Guar. I know this to be an animal sent by the gods to help my tribe. We have been suffering greatly from disease, and none of my magic will cure the ailment.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "68 61 6D"
+            }, 
+            "NAM1 - Response Text": "Find this White Guar for us, stranger. Let it lead you to a new hope for my people.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSWhiteGuar "Dreams of a White Guar" [QUST:0101C63A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0urshamusaSrapli "Urshamusa Rapli" [NPC_:01260929]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1dreamsSandSvisions1 [DIAL:01320943]", 
+        "TCLT - Choice": "1dreamsSandSvisions2 [DIAL:01320945]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 14 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmswhiteguar 20", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMSWhiteGuar [QUST:0101C63A]"
+        ]
+    }
+}

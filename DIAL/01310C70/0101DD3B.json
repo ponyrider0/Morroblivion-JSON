@@ -1,0 +1,147 @@
+{
+    "Topic": "1Orders [DIAL:01310C70]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1674, 
+        "Record Flags": {}, 
+        "FormID": "0101DD3B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ07 [QUST:01001DBF]", 
+    "PNAM - Previous INFO": "0101DD3A", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "4D 57 4D"
+            }, 
+            "NAM1 - Response Text": "With Dagoth Gares dead, the Sixth House shrine is no longer a threat. You've more than earned a promotion to the rank of Traveler.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "20 30 68"
+            }, 
+            "NAM1 - Response Text": "I'm very worried that you have corprus disease. But I have some good news in that department.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "20 30 68"
+            }, 
+            "NAM1 - Response Text": "I canvassed my informants for possible treatments, just in case you contracted the disease during your mission.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "4D 57 4D"
+            }, 
+            "NAM1 - Response Text": "I learned from Fast Eddie that your best chance of getting cured is Divayth Fyr, an ancient Telvanni wizard who runs a Corprusarium for victims of the disease.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "05", 
+                "Unused": "4D 57 4D"
+            }, 
+            "NAM1 - Response Text": "Here. Take this Dwemer artifact and 1000 drakes, and go to Tel Fyr. Divayth Fyr will like the Dwemer artifact. A gift may sweeten his disposition.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "06", 
+                "Unused": "4D 57 4D"
+            }, 
+            "NAM1 - Response Text": "The gold is for expenses. And here're a couple of Levitation potions. I hear you'll need them in Telvanni towers, because wizards don't use stairs.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "07", 
+                "Unused": "4D 57 4D"
+            }, 
+            "NAM1 - Response Text": "So get moving, and get that corprus disease cured. Then hurry back. I think I know how to get the lost prophecies Nibani Maesa asked for.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ07 "Sixth House Base" [QUST:01001DBF]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ08 "Corprus Cure" [QUST:01001DC0]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0caiusScosades "Caius Cosades" [NPC_:01260135]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 6, 
+            "CompiledSize": 100, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 01 00 00 00 1C 00 01 00 8A 10 0A 00 02 00 72 03 00 6E 01 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E E8 03 00 00 1C 00 01 00 02 10 0A 00 02 00 72 06 00 6E 03 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMQ08 1\r\nPlayer.modFactionRank 0blades, 1\r\nModDisposition Player 10\r\nPlayer.AddItem 0miscudwrvuartifact50 1\r\nPlayer.AddItem gold001 1000\r\nPlayer.AddItem 0pULevitationUQ 3", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMQ08 [QUST:01001DC0]", 
+            "SCRO - Global Reference": "0Blades [FACT:0122000A]", 
+            "SCRO - Global Reference": "0miscUdwrvUartifact50 [MISC:011600A5]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "0pULevitationUQ [ALCH:0101454D]"
+        ]
+    }
+}

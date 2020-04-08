@@ -1,0 +1,83 @@
+{
+    "Topic": "1safeSplace [DIAL:01310B0F]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 607, 
+        "Record Flags": {}, 
+        "FormID": "010104B6", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ11a [QUST:01001DCC]", 
+    "PNAM - Previous INFO": "010104B5", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 4D 51"
+            }, 
+            "NAM1 - Response Text": "We need a place to go where our herds and people can be safe from the blight and blight monsters. For us, it is a matter of life and death.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 4D 51"
+            }, 
+            "NAM1 - Response Text": "We hope some happy day the Nerevarine of prophecy will defeat Dagoth Ur, and cast down the false gods, and the blight will be gone.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "77 4D 51"
+            }, 
+            "NAM1 - Response Text": "Then we can live here in peace. But if we do not find a safe place now, we will not survive to see that happy day.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ11a "Ahemmusa Nereverine" [QUST:01001DCC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0yenammu "Yenammu" [NPC_:0126033C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

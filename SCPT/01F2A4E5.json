@@ -1,0 +1,57 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1395, 
+        "Record Flags": {}, 
+        "FormID": "01F2A4E5", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwebboneghostscript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 197, 
+        "VariableCount": 3, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 15 00 0F 00 00 00 15 00 07 00 73 03 00 02 00 20 31 11 00 00 00 10 00 08 00 0A 00 1D 00 00 00 00 00 15 00 07 00 73 01 00 02 00 20 31 39 10 0A 00 02 00 72 01 00 6E 5A 00 00 00 11 00 00 00 10 00 06 00 00 00 75 00 00 00 16 00 0D 00 07 00 09 00 20 73 01 00 20 31 20 3D 3D 29 11 0B 00 01 00 7A 00 00 00 00 00 00 F0 3F 16 00 0C 00 02 00 08 00 20 73 03 00 20 30 20 3E 15 00 10 00 73 03 00 0B 00 20 73 03 00 20 30 2E 30 35 20 2D 29 11 05 00 01 00 73 03 00 18 00 0D 00 01 00 09 00 20 73 03 00 20 30 20 3C 3D 15 00 07 00 73 01 00 02 00 20 30 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwebboneghostscript\r\n\r\nshort FadeFlag\r\nshort onDeathFlag\r\nshort Fader\r\n\r\nbegin onLoad\r\n   set Fader to 1         ; initialize our variable here\r\nend\r\n\r\nbegin onDeath\r\n   set FadeFlag to 1      ; activate gameMode loop\r\n         ; turn off shaders which may conflict with saa\r\n	setstage fbmwebbone 90\r\nend\r\n\r\nbegin gameMode\r\n   if FadeFlag == 1       ; only passes after death\r\n      saa 1               ; set actor alpha to 100% - \"just in case\"\r\n    \r\n      if Fader > 0        ; because we set it to 1 in onLoad, this will pass\r\n         set Fader to (Fader - 0.05) ; Decrement our var by 0.05\r\n         saa Fader                   ; and use that var for our actor alpha\r\n\r\n      elseif Fader <= 0   ; When invisible, let's clean up\r\n         set FadeFlag to 0\r\n\r\n;-- Disabling a respawning, reoccurring creature will cause game bloat.  Disabling this creatures has been Disabled.\r\n;        disable          ; disable the dead/invisible NPC\r\n\r\n      endif\r\n   endif\r\nend\r\n", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "6E 65 4C 4F 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "0D 0A 0D 0A 0D 0A 0D"
+            }, 
+            "SCVR - Name": "FadeFlag"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "61 79 42 6F 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "45 6D 69 74 74 65 72"
+            }, 
+            "SCVR - Name": "onDeathFlag"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "9F 0C 27 00 00 00 00"
+            }, 
+            "SCVR - Name": "Fader"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwEBBone [QUST:0100341D]"
+    ]
+}

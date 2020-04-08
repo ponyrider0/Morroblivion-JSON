@@ -1,0 +1,25 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 725, 
+        "Record Flags": {}, 
+        "FormID": "01F2A505", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwteresarothanscript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 4, 
+        "CompiledSize": 158, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0B 00 10 00 28 00 00 00 01 00 72 02 00 39 10 0A 00 02 00 72 03 00 6E 46 00 00 00 15 00 0A 00 72 03 00 73 01 00 02 00 20 30 1C 00 01 00 5E 10 00 00 11 00 00 00 10 00 06 00 00 00 59 00 00 00 16 00 29 00 03 00 25 00 20 58 01 10 05 00 01 00 72 04 00 20 32 35 36 20 3C 3D 20 58 3A 10 05 00 01 00 72 03 00 20 37 30 20 3C 20 26 26 39 10 0A 00 02 00 72 03 00 6E 46 00 00 00 15 00 0A 00 72 03 00 73 01 00 02 00 20 30 1C 00 01 00 5E 10 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwTeresArothanScript\n\nBegin OnPackageEnd fbmwfgdissaplaminefollow\n	SetStage fbmwFGDissaplaMine 70\n	SET fbmwFGDissaplaMine.FollowNow TO 0\n	mwTeresArothanREF.EvaluatePackage\nEND\n\nBegin GameMode\n	IF GetDistance mwNovorDrethanREF <= 256 && GetStage fbmwFGDissaplaMine < 70\n		SetStage fbmwFGDissaplaMine 70\n		SET fbmwFGDissaplaMine.FollowNow TO 0\n		mwTeresArothanREF.EvaluatePackage\n	ENDIF\nEND\n;<CSEBlock>\n;<CSECaretPos> 397 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "mwTeresArothanREF [ACHR:01841A4C]", 
+        "SCRO - Global Reference": "fbmwfgdissaplaminefollow [PACK:01F2A577]", 
+        "SCRO - Global Reference": "fbmwFGDissaplaMine [QUST:010033D7]", 
+        "SCRO - Global Reference": "mwNovorDrethanREF [ACHR:01841A50]"
+    ]
+}

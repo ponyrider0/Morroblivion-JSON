@@ -1,0 +1,111 @@
+{
+    "Topic": "1NerevarineScult [DIAL:0131086E]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 904, 
+        "Record Flags": {}, 
+        "FormID": "01014230", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ04 [QUST:01001DB9]", 
+    "PNAM - Previous INFO": "01014231", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "72 6E 53"
+            }, 
+            "NAM1 - Response Text": "The Temple worships Nerevar as a saint and hero, but prophecies of his reincarnation are punished as wicked heresy.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "72 6E 53"
+            }, 
+            "NAM1 - Response Text": "The Nerevarine cult claims the Tribunal are false gods, hence the Temple's persecution of the Nerevarine cult.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "72 6E 53"
+            }, 
+            "NAM1 - Response Text": "A group called the Dissident Priests disputes Temple doctrine on the Nerevarine prophecies.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "72 6E 53"
+            }, 
+            "NAM1 - Response Text": "The proscribed book 'Progress of Truth' describes their beliefs. Get a copy of 'Progress of Truth' for Caius Cosades.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "05", 
+                "Unused": "72 6E 53"
+            }, 
+            "NAM1 - Response Text": "That will tell him things he needs to know about the Nerevarine cult.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ04a "Milo Informant" [QUST:01F0A290]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0mehraSmilo "Mehra Milo" [NPC_:012601E1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 28, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 39 10 0A 00 02 00 72 02 00 6E 32 00 00 00", 
+        "SCTX - Result script source": "moddisposition player 10\r\nsetstage FBMWMQ04a 50", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMQ04a [QUST:01F0A290]"
+        ]
+    }
+}

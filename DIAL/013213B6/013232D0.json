@@ -1,0 +1,83 @@
+{
+    "Topic": "1BloodwormSHelmSell [DIAL:013213B6]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 551, 
+        "Record Flags": {}, 
+        "FormID": "013232D0", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSMuseum [QUST:0101C629]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "013108F2"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "While I admit I find it repulsive, it's an intriguing piece for our collection.  Thank you, outlander.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0TorasaSAram "Torasa Aram" [NPC_:01260A80]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0bloodwormUhelmUunique "Bloodworm Helm" [ARMO:0112010F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 58, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 68 42 00 00 15 00 0A 00 72 05 00 73 07 00 02 00 20 31 1C 00 02 00 21 10 00 00", 
+        "SCTX - Result script source": "player.removeitem 0bloodwormUhelmUunique 1\r\nplayer.additem Gold001 17000\r\nset fbmwMSMuseum.helmbloodworm to 1\r\nmwBloodwormMuseumREF.enable", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "mwBloodwormMuseumREF [REFR:01F04656]", 
+            "SCRO - Global Reference": "0bloodwormUhelmUunique [ARMO:0112010F]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "fbmwMSMuseum [QUST:0101C629]"
+        ]
+    }
+}

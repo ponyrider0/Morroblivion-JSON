@@ -1,0 +1,24 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 484, 
+        "Record Flags": {}, 
+        "FormID": "01470473", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwBMstoneNikulasScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 3, 
+        "CompiledSize": 129, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 71 00 00 00 00 00 16 00 15 00 02 00 11 00 20 58 3A 10 05 00 01 00 72 01 00 20 39 30 20 3E 3D 1E 10 08 00 02 00 72 02 00 72 03 00 00 10 40 00 01 00 38 00 59 6F 75 20 68 61 76 65 20 62 65 65 6E 20 67 72 61 6E 74 65 64 20 74 68 65 20 67 69 66 74 20 6F 66 20 4E 69 6B 75 6C 61 73 27 73 20 70 65 72 73 6F 6E 61 6C 69 74 79 2E 00 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptName mwBMstoneNikulasScript\n\n\nbegin onactivate\n	if GetStage fbmwBMBrodirGrove >= 90\n		Cast 0stoneUnikulas Player\n		MessageBox \"You have been granted the gift of Nikulas's personality.\"\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "fbmwBMBrodirGrove [QUST:0101AF87]", 
+        "SCRO - Global Reference": "0stoneUnikulas [SPEL:0106040E]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+    ]
+}

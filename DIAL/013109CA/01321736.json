@@ -1,0 +1,112 @@
+{
+    "Topic": "1healingSaltar [DIAL:013109CA]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 870, 
+        "Record Flags": {}, 
+        "FormID": "01321736", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
+    "PNAM - Previous INFO": "01321735", 
+    "Add topics": [
+        "NAME - Topic": "013109B9", 
+        "NAME - Topic": "013109CA", 
+        "NAME - Topic": "01310BAD", 
+        "NAME - Topic": "0131089B", 
+        "NAME - Topic": "01310BAD", 
+        "NAME - Topic": "013109CA", 
+        "NAME - Topic": "01310CD9", 
+        "NAME - Topic": "013108A7", 
+        "NAME - Topic": "01310A24", 
+        "NAME - Topic": "013109D7", 
+        "NAME - Topic": "013109D8", 
+        "NAME - Topic": "01310BD1", 
+        "NAME - Topic": "01310AA5", 
+        "NAME - Topic": "01310BEF", 
+        "NAME - Topic": "01310C02", 
+        "NAME - Topic": "01310B99"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "You may pray at Imperial cult healing altars and receive blessings which cure common and blight diseases, cure poisons, and restore attributes.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Non-members pay 25 drakes. Newer members pay 10 drakes, while higher-ranking members receive blessings free.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Healing altars are found in: Vivec Foreign Quarter; Wolverine Hall in Sadrith Mora; Fort Buckmoth; Fort Moonmoth; Fort Pelagiad; Fort Darius;", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Ald'ruhn Guild of Mages, and Imperial Chapels in Ebonheart.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0RucciaSConician "Ruccia Conician" [NPC_:012602CE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

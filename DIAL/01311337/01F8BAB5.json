@@ -1,0 +1,113 @@
+{
+    "Topic": "1crewShasSfailedSme [DIAL:01311337]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 847, 
+        "Record Flags": {}, 
+        "FormID": "01F8BAB5", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMAirship [QUST:0101AF81]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "69 73 53"
+            }, 
+            "NAM1 - Response Text": "Did they fly off course?  Or maybe...maybe they found the amulet, and...and flew away!  To meet women!  No fair maiden could resist a man with the...", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "69 73 53"
+            }, 
+            "NAM1 - Response Text": "the Amulet of Infectious Charm...in an airship, no less!  Say... I...I don't suppose you're...well...for hire?  I would...pay you...greatly...", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "69 73 53"
+            }, 
+            "NAM1 - Response Text": "to find my airship.  I'd need proof of what happened to it, of course!  Evidence, as it were...just...just to be sure.  And...of course...to bring me the...the amulet!", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "69 73 53"
+            }, 
+            "NAM1 - Response Text": "I NEED that amulet.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMAirship "The Patchwork Airship" [QUST:0101AF81]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "A0", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMAirship "The Patchwork Airship" [QUST:0101AF81]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0louisSbeauchamp "Louis Beauchamp" [NPC_:01260B3C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "fbmwBMCrewFailHelp [DIAL:01F8BC8A]", 
+        "TCLT - Choice": "fbmwBMCrewFailNoHelp [DIAL:01F8BC88]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 14 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwbmAirship 20", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMAirship [QUST:0101AF81]"
+        ]
+    }
+}

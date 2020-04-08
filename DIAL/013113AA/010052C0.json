@@ -1,0 +1,91 @@
+{
+    "Topic": "1UrynSMaren [DIAL:013113AA]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 731, 
+        "Record Flags": {}, 
+        "FormID": "010052C0", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwCO6 [QUST:0101BED4]", 
+    "PNAM - Previous INFO": "010052BF", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6D 77 43"
+            }, 
+            "NAM1 - Response Text": "He was found dead shortly after being locked up. Of course I have no proof that he was murdered, and there are no witnesses.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "63 6F 53"
+            }, 
+            "NAM1 - Response Text": "I'm sure Carnius had something to do with it, but if I can't prove it, I don't dare accuse him of it.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "63 6F 53"
+            }, 
+            "NAM1 - Response Text": "At least the thieving problems should stop, for now. You've done good work, Outlander. Thank you.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0FalcoSGalenus "Falco Galenus" [NPC_:01260B0B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 70.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwCO6 "East Empire Company: To Catch a Thief" [QUST:0101BED4]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 46, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E F4 01 00 00 39 10 0A 00 02 00 72 03 00 6E 50 00 00 00 15 00 0A 00 72 04 00 73 05 00 02 00 20 39", 
+        "SCTX - Result script source": "player.additem 0000000f 500\r\nsetstage fbmwCO6 80\r\nset fbmwcoadvancement.colonystate to 9", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "fbmwCO6 [QUST:0101BED4]", 
+            "SCRO - Global Reference": "fbmwCOAdvancement [QUST:01004AD9]"
+        ]
+    }
+}

@@ -1,0 +1,78 @@
+{
+    "Topic": "fbmwbmMeadhallCollectProfit [DIAL:0100A184]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 445, 
+        "Record Flags": {}, 
+        "FormID": "0100A188", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMMeadHall [QUST:0101B6C8]", 
+    "PNAM - Previous INFO": "0100A187", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6E 6A 61"
+            }, 
+            "NAM1 - Response Text": "We have plenty of mead in stock, &sUActnQuick1;, and you can collect the profits every week. Here is the gold we earned this week.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMMeadHall "The Mead Hall Massacre" [QUST:0101B6C8]", 
+            "Parameter #2": "canprofit", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMMeadHallc "Thirsk Hunters" [QUST:0101B6CB]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0svenjaSsnowTsong "Svenja Snow-Song" [NPC_:01260B34]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 32 00 00 00 15 00 0A 00 72 03 00 73 04 00 02 00 20 30", 
+        "SCTX - Result script source": "player.additem Gold001 50\r\nset fbmwBMMeadHall.canprofit to 0", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "fbmwBMMeadHall [QUST:0101B6C8]"
+        ]
+    }
+}

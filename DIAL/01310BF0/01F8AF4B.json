@@ -1,0 +1,101 @@
+{
+    "Topic": "1ReehTJah [DIAL:01310BF0]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 957, 
+        "Record Flags": {}, 
+        "FormID": "01F8AF4B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVRunawaySlave [QUST:01003410]", 
+    "PNAM - Previous INFO": "01F8AF4A", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "We've heard you returned that poor man to his captors. Do you know what happened to him after you brought him in? No? They had him flogged until the skin was flayed from his back. No, he's not dead.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 4D 56"
+            }, 
+            "NAM1 - Response Text": "That would be too easy, you see, and he wouldn't bring a profit. They healed him, so they could flog him again. That's how the slavers serve notice to their slaves that escape is not an option.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "77 4D 56"
+            }, 
+            "NAM1 - Response Text": "I hope you feel pride in your work. Get out of here. Get out while you can.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "0reehUjah "Reeh-Jah" [NPC_:012606E6]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 105.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVRunawaySlave "The Runaway Slave" [QUST:01003410]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ImUKilaya "Im-Kilaya" [NPC_:01260661]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 58, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "A9 10 0D 00 03 00 72 01 00 72 02 00 6E FB FF FF FF 53 10 0A 00 02 00 72 03 00 6E F6 FF FF FF 10 10 09 00 02 00 21 00 6E 14 00 00 00 39 10 0A 00 02 00 72 04 00 6E 8C 00 00 00", 
+        "SCTX - Result script source": "modfactionreaction 0twinslamps playerfaction -5\r\nmoddisposition player -10\r\nmodav aggression 20\r\nsetstage fbmwmvrunawayslave 140", 
+        "References": [
+            "SCRO - Global Reference": "0TwinSLamps [FACT:01220013]", 
+            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMVRunawaySlave [QUST:01003410]"
+        ]
+    }
+}

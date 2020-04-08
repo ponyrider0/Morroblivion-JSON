@@ -1,0 +1,85 @@
+{
+    "Topic": "1joinStheSImperialSCult1 [DIAL:0132058A]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 640, 
+        "Record Flags": {}, 
+        "FormID": "01322F79", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwICAdvancement [QUST:01010564]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "013109B9", 
+        "NAME - Topic": "01310BAD", 
+        "NAME - Topic": "01310C04", 
+        "NAME - Topic": "01310AC2"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "You are now a member of the Imperial Cult. Welcome, outlander, to our community, and may your rejoice in its blessings.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Can I tell you about our services? Or, if you can donate more time and effort, would you like to become a lay servant?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "Gold001 "Gold" [MISC:0000000F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 4.000000000000000, 
+            "Function": "GetFactionRank:73", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ImperialSCult "Imperial Cult" [FACT:01220003]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 32 00 00 00", 
+        "SCTX - Result script source": ";Message \"Membership and Dues Accepted...\"\r\nSetStage fbmwICAdvancement 1\r\nPlayer.RemoveItem Gold001 50", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwICAdvancement [QUST:01010564]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]"
+        ]
+    }
+}

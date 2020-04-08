@@ -1,0 +1,115 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1061, 
+        "Record Flags": {}, 
+        "FormID": "01F8110F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwICAmaNin [QUST:0100B826]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "43 20 4E"
+            }, 
+            "NAM1 - Response Text": "You have done the deeds of a hero. It is a sign that you were meant to keep the boots for yourself, to keep them safe, and to dedicate them to the service of the Nine.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "75 65 73"
+            }, 
+            "NAM1 - Response Text": "And from what you tell me of this healer Ama Nin, I suspect you may have spoken with the goddess Mara herself, disguised in mortal form to test you.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "20 41 70"
+            }, 
+            "NAM1 - Response Text": "Congratulations. Such chance meetings are a sign of the Nine's favor. Speak to me again when you are ready to undertake another of the Oracle's Quests.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICAmaNin "Imperial Cult: Boots of the Apostle" [QUST:0100B826]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 5.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICAmaNinFree "Imperial Cult: Ama Nin" [QUST:0100B827]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0LalatiaSVarian "Lalatia Varian" [NPC_:012602E1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0bootsUapostleUunique "Boots of the Apostle" [ARMO:01120105]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 6, 
+            "CompiledSize": 74, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 3C 00 00 00 A9 10 0D 00 03 00 72 02 00 72 03 00 6E 0A 00 00 00 36 10 05 00 01 00 72 04 00 36 10 05 00 01 00 72 05 00 F8 10 07 00 01 00 6E 01 00 00 00 53 10 0A 00 02 00 72 06 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwicamanin 60\r\nmodfactionreaction 0imperialscult playerfaction 10\r\nstartquest fbmwicoracle\r\nstartquest fbmwicoraclea\r\nmodpcfame 1\r\nmoddisposition player 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwICAmaNin [QUST:0100B826]", 
+            "SCRO - Global Reference": "0ImperialSCult [FACT:01220003]", 
+            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]", 
+            "SCRO - Global Reference": "fbmwICOracle [QUST:0100B828]", 
+            "SCRO - Global Reference": "fbmwICOracleA [QUST:0100B829]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

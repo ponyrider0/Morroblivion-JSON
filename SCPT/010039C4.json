@@ -1,0 +1,26 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 769, 
+        "Record Flags": {}, 
+        "FormID": "010039C4", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwHuleeyaScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 5, 
+        "CompiledSize": 197, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 12 00 00 00 00 00 39 10 0A 00 02 00 72 02 00 6E 46 00 00 00 11 00 00 00 10 00 0B 00 10 00 28 00 00 00 01 00 72 03 00 39 10 0A 00 02 00 72 04 00 6E 14 00 00 00 15 00 0A 00 72 04 00 73 01 00 02 00 20 30 1C 00 01 00 5E 10 00 00 11 00 00 00 10 00 06 00 00 00 62 00 00 00 16 00 14 00 05 00 10 00 20 58 3A 10 05 00 01 00 72 04 00 20 32 30 20 3C 16 00 16 00 03 00 12 00 20 58 01 10 05 00 01 00 72 05 00 20 32 35 36 20 3C 3D 39 10 0A 00 02 00 72 04 00 6E 14 00 00 00 15 00 0A 00 72 04 00 73 01 00 02 00 20 30 1C 00 01 00 5E 10 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwHuleeyaScript\n\nBegin onDeath\n	SetStage fbmwMVMonsterDisease 70\nEND\n\nBegin OnPackageEnd fbmwMQ04HuleeyaFollow\n	SetStage fbmwMQ04c 20\n	SET fbmwMQ04c.FollowNow TO 0\n	mwHuleeyaREF.EvaluatePackage\nEND\n\n\nBegin GameMode\n	if GetStage fbmwMQ04c < 20\n		IF GetDistance mwJobashaREF <= 256\n			SetStage fbmwMQ04c 20\n			SET fbmwMQ04c.FollowNow TO 0\n			mwHuleeyaREF.EvaluatePackage\n		ENDIF\n	ENDIF\nEND\n;<CSEBlock>\n;<CSECaretPos> 292 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "mwHuleeyaREF [ACHR:01835300]", 
+        "SCRO - Global Reference": "fbmwMVMonsterDisease [QUST:01003409]", 
+        "SCRO - Global Reference": "fbmwMQ04HuleeyaFollow [PACK:01016654]", 
+        "SCRO - Global Reference": "fbmwMQ04c [QUST:01001DBC]", 
+        "SCRO - Global Reference": "mwJobashaREF [ACHR:0183541A]"
+    ]
+}

@@ -1,0 +1,77 @@
+{
+    "Topic": "1jobs [DIAL:01310D0A]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 526, 
+        "Record Flags": {}, 
+        "FormID": "0103415D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTGAdvancement [QUST:01010562]", 
+    "PNAM - Previous INFO": "01322E63", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Actually, this is the final job I'll give you. Take care of the Guild. You've done great things. With you here, I think it's safe for me to take a little vacation.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Maybe go back to Hammerfell, see the old family. Until I get back, I'm leaving the Guild in your capable hands.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTGKillHardHeart "Thieves Guild: Kill Hard-Heart" [QUST:01009331]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0stacey "Gentleman Jim Stacey" [NPC_:0126026C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 5B 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwTGAdvancement 91", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTGAdvancement [QUST:01010562]"
+        ]
+    }
+}

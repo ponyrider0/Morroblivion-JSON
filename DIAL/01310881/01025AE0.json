@@ -1,0 +1,89 @@
+{
+    "Topic": "1HlaaluSHortator [DIAL:01310881]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 618, 
+        "Record Flags": {}, 
+        "FormID": "01025AE0", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ10 [QUST:01001DC9]", 
+    "PNAM - Previous INFO": "01025AE1", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "The Hlaalu are great traders, keen for profit, and subtle with words. It will be hard to find someone you can trust -- perhaps impossible.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "73 73 69"
+            }, 
+            "NAM1 - Response Text": "You may have to fight with words to find the truth. Beware of tricks and lies. Seek behind appearances. Look for hidden power. Be wary.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "73 73 69"
+            }, 
+            "NAM1 - Response Text": "Be suspicious.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ10 "The Path of the Incarnate" [QUST:01001DC9]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0nibaniSmaesa "Nibani Maesa" [NPC_:0126018B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 01 00 00 00 36 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "SetStage fbmwMQHlaaluCurio 1\r\nStartQuest fbmwMQHlaalu", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQHlaaluCurio [QUST:01001DD6]", 
+            "SCRO - Global Reference": "fbmwMQHlaalu [QUST:01001DD8]"
+        ]
+    }
+}

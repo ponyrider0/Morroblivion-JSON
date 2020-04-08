@@ -1,0 +1,67 @@
+{
+    "Topic": "fbmwbmWildHuntCapnGood [DIAL:01F8BC6F]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 513, 
+        "Record Flags": {}, 
+        "FormID": "01F8BC70", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMWildHunt [QUST:0101B6DA]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "I am glad for your companionship. Together we will fight our way through these demon hordes and escape this evil prison. There is a door in the center of this maze, but we will need a key to enter.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "Let us go find this key and leave this place.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0falxScarius2 "Captain Falx Carius" [NPC_:01260BDF]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 28, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 2A 00 00 00 15 00 0A 00 72 01 00 73 01 00 02 00 20 31", 
+        "SCTX - Result script source": "setstage fbmwbmWildHunt 42\r\nset fbmwbmWildHunt.cariusfollow to 1", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMWildHunt [QUST:0101B6DA]"
+        ]
+    }
+}

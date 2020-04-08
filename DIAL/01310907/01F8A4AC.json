@@ -1,0 +1,79 @@
+{
+    "Topic": "1DelvamSAndarys [DIAL:01310907]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 495, 
+        "Record Flags": {}, 
+        "FormID": "01F8A4AC", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTTMawai [QUST:01002C7E]", 
+    "PNAM - Previous INFO": "01F8A4AB", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "You already brought justice to Delvam Andarys? You have done the Temple a great service. I have more urgent duties for you.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "0delvamSandarys "Delvam Andarys" [NPC_:01260150]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTTMawai "Temple: Necromancer in Mawia" [QUST:01002C7E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0tharerSrotheloth "Tharer Rotheloth" [NPC_:0126050C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 45, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 64 00 00 00 A9 10 0D 00 03 00 72 02 00 72 03 00 6E 05 00 00 00 53 10 0A 00 02 00 72 04 00 6E 14 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwttmawai 100\r\nmodfactionreaction 0temple playerfaction 5\r\nmoddisposition player 20", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTTMawai [QUST:01002C7E]", 
+            "SCRO - Global Reference": "0Temple [FACT:01220002]", 
+            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

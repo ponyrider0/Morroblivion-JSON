@@ -1,0 +1,102 @@
+{
+    "Topic": "1DwemerSBattleSShield [DIAL:01310FB3]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 894, 
+        "Record Flags": {}, 
+        "FormID": "01F8AB61", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRBlade [QUST:0101C651]", 
+    "PNAM - Previous INFO": "01F8AB60", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": "Hmmm...an odd construction to be sure. Let me see.... As I thought. These two pieces aren't supposed to be attached.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": "Looks like a regular Dwemer shield with this other piece attached. Hope you didn't pay too much for that shield, friend. It's nothing special as far as I can see.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": "The other piece is interesting, though. Dwemer in origin, but unlike anything I've seen before.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0dwemerUshieldUbattleUunique "Dwemer Battle Shield" [ARMO:01013359]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRBlade "The Blade of Nerevar" [QUST:0101C651]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsClass:68", 
+            "Unused": "00 00", 
+            "Parameter #1": "MerchSmith "Smith" [CLAS:0001C823]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 68, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00 39 10 0A 00 02 00 72 05 00 6E 32 00 00 00", 
+        "SCTX - Result script source": "player.RemoveItem dwemerUshieldUbattleUunique 1\r\nplayer.AddItem 0dwemerUshield 1\r\nplayer.AddItem 0BLADEPIECEU03 1\r\nsetstage fbmwTRBlade 50", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0dwemerUshieldUbattleUunique [ARMO:01013359]", 
+            "SCRO - Global Reference": "0DwemerUShield [ARMO:010041F4]", 
+            "SCRO - Global Reference": "0bladepieceU03 [MISC:01160231]", 
+            "SCRO - Global Reference": "fbmwTRBlade [QUST:0101C651]"
+        ]
+    }
+}

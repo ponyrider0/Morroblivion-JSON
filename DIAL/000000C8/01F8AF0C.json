@@ -1,0 +1,68 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 508, 
+        "Record Flags": {}, 
+        "FormID": "01F8AF0C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSGreetings [QUST:01F2A564]", 
+    "PNAM - Previous INFO": "01F0A369", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "68 72 61"
+            }, 
+            "NAM1 - Response Text": "I'm Turedus Talanian, chief of Master Aryon's mercenary guard. Providing for the prosperity of Tel Vos and the village of Vos is my trade. And, from the looks of you, adventuring is your trade.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "65 64 75"
+            }, 
+            "NAM1 - Response Text": "If you are an adventurer, would you be interested in a little work?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0turedusStalanian "Turedus Talanian" [NPC_:01260592]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 18, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 36 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "addtopic 1work\r\nstartquest fbmwtowntelvos", 
+        "References": [
+            "SCRO - Global Reference": "1work [DIAL:01310D0E]", 
+            "SCRO - Global Reference": "fbmwTownTelVos [QUST:0101C648]"
+        ]
+    }
+}

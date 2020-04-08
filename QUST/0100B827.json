@@ -1,0 +1,58 @@
+{
+    "Record Header": {
+        "Signature": "QUST", 
+        "Data Size": 1499, 
+        "Record Flags": {}, 
+        "FormID": "0100B827", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwICAmaNinFree", 
+    "FULL - Name": "Imperial Cult: Ama Nin", 
+    "ICON - Icon FileName": "darthsouth\\Quests\\imperialcult.dds", 
+    "DATA - General": {
+        "Flags": {}, 
+        "Priority": 85
+    }, 
+    "Stages": [
+        {
+            "INDX - Stage index": 1, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I found a Breton healer in Berandas named Ama Nin. She had been snatched from the Gnisis-Ald'ruhn road by winged twilights, who bore her deep within Berandas and stranded her on a pillar of rock. She had prayed to the Nine for aid, and thought I was the answer to her prayers. She asked me for a Divine Intervention scroll, so she could escape, but I didn't have any. She suggested I should go get one and bring it back so she could be rescued.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 5, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "I found a Breton healer in Berandas named Ama Nin. She had been snatched from the Gnisis-Ald'ruhn road by winged twilights, who bore her deep within Berandas and stranded her on a pillar of rock. She had prayed to the Nine for aid, and thought I was the answer to her prayers. She asked me for a Divine Intervention scroll, so she could escape. I gave her a Divine Intervention scroll and she disappeared, but before she disappeared, she gave me two gifts.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 180, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 60 00 01 00 5C 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 43 6F 6D 70 6C 65 74 65 64 20 49 6D 70 65 72 69 61 6C 20 43 75 6C 74 3A 20 41 6D 61 20 4E 69 6E 20 71 75 65 73 74 22 F9 16 27 00 01 00 23 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 31 30 30 19 00 00 00", 
+                        "SCTX - Result script source": "if ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qCompleted Imperial Cult: Ama Nin quest%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 100\"\r\nendif"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,66 @@
+{
+    "Topic": "fbmwbmWildHuntFangYes [DIAL:01F8BC73]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 327, 
+        "Record Flags": {}, 
+        "FormID": "01F8BC74", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMWildHunt [QUST:0101B6DA]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Then let us go. I will reach the end of this Hunter's game!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMWildHunt "Hircine's Hunt" [QUST:0101B6DA]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0tharstenSheartTfang2 "Tharsten Heart-Fang" [NPC_:01260BE0]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 28, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 3E 00 00 00 15 00 0A 00 72 01 00 73 02 00 02 00 20 31", 
+        "SCTX - Result script source": "setstage fbmwbmWildHunt 62\r\nset fbmwbmWildHunt.HeartFangFollow to 1", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMWildHunt [QUST:0101B6DA]"
+        ]
+    }
+}

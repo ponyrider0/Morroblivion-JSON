@@ -1,0 +1,89 @@
+{
+    "Topic": "1GirithAsSguarShides [DIAL:01310738]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 688, 
+        "Record Flags": {}, 
+        "FormID": "01F8A2AB", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVOutcastAshlanders [QUST:0100340A]", 
+    "PNAM - Previous INFO": "01F8A2AA", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "Good to finally have them back. Don't know how I would have made it without them. Shame you couldn't get rid of those two Ashlanders, but I thank you for your help.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "Remember to talk to my friend Berwen in Tel Mora. I'll send word to her to keep an eye out for you.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "02", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ingredUguarUhideUgirith "Girith's Guar Hide" [INGR:010A0048]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVOutcastAshlanders "Girith's Stolen Hides" [QUST:0100340A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0athandenSgirith "Athanden Girith" [NPC_:012606D8]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 46, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 66 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 0A 00 00 00 02 10 0A 00 02 00 72 03 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmvoutcastashlanders 102\r\nplayer.removeitem 0ingreduguaruhideugirith 10\r\nadditem 0ingreduguaruhideugirith 10", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMVOutcastAshlanders [QUST:0100340A]", 
+            "SCRO - Global Reference": "0ingredUguarUhideUgirith [INGR:010A0048]"
+        ]
+    }
+}

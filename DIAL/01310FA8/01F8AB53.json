@@ -1,0 +1,88 @@
+{
+    "Topic": "1BarilzarAsSMazedSBand [DIAL:01310FA8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 777, 
+        "Record Flags": {}, 
+        "FormID": "01F8AB53", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRMazedBand [QUST:0101C656]", 
+    "PNAM - Previous INFO": "01F8AB52", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "69 74 69"
+            }, 
+            "NAM1 - Response Text": "You should not even speak of that cursed object! I'm sorry, friend...I did not mean to snap at you.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "69 74 69"
+            }, 
+            "NAM1 - Response Text": "I have heard many tales of that ring, and the evil Barilzar who created it. It was to be a means of teleportation for the wizard, but it was much worse than that.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "69 74 69"
+            }, 
+            "NAM1 - Response Text": "That ring was said to open gates to hellish planes, releasing creatures best left in nightmare. I've heard the ring was stripped of its power, and that only a god could use it now and not be destroyed. The thought chills my bones.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0plitiniusSmero "Plitinius Mero" [NPC_:01260AD0]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 70.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRMazedBand "Barilzar's Mazed Band" [QUST:0101C656]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 35 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwtrmazedband 53", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTRMazedBand [QUST:0101C656]"
+        ]
+    }
+}

@@ -1,0 +1,91 @@
+{
+    "Topic": "1Apologies [DIAL:01310BB6]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 762, 
+        "Record Flags": {}, 
+        "FormID": "01AAC703", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSApologies [QUST:0101C611]", 
+    "PNAM - Previous INFO": "01AAC702", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 4D 53"
+            }, 
+            "NAM1 - Response Text": "This book is from Tarer? Well, it's about time he learned some humility. I'm touched by the gesture nonetheless.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "57 4D 53"
+            }, 
+            "NAM1 - Response Text": "Here's something for that rash of his, and a little something for you.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 5.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSApologies "A Rash of Insults" [QUST:0101C611]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0bkUAedraUTarerUUnique "Tarer's Aedra and Daedra" [BOOK:01180205]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0treboniusSartorius "Trebonius Artorius" [NPC_:01260179]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 96, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 0A 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E 01 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage FBMWMSApologies 10\r\nplayer.removeitem 0bkuaedrautareruunique 1\r\nadditem 0bkuaedrautareruunique 1\r\nplayer.additem 0pULevitationUE 1\r\nplayer.additem 0pucureucommonuunique 1\r\nmoddisposition player 10", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMSApologies [QUST:0101C611]", 
+            "SCRO - Global Reference": "0bkUAedraUTarerUUnique [BOOK:01180205]", 
+            "SCRO - Global Reference": "0pULevitationUE [ALCH:0100121D]", 
+            "SCRO - Global Reference": "0pUcureUcommonUunique [ALCH:010800FA]"
+        ]
+    }
+}

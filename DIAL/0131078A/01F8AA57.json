@@ -1,0 +1,101 @@
+{
+    "Topic": "1guarShideSshipment [DIAL:0131078A]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 719, 
+        "Record Flags": {}, 
+        "FormID": "01F8AA57", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVInnocentAshlanders [QUST:01003406]", 
+    "PNAM - Previous INFO": "01F8AA56", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 4D 56"
+            }, 
+            "NAM1 - Response Text": "These are the lands of our people, and the guar hides this trader carried were of our herds. It was our right to take back these hides, and we deny his claim on them.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 4D 56"
+            }, 
+            "NAM1 - Response Text": "Why has he sent you on this errand? Is he not man enough to defend himself? But...since you take this man's part, for friendship, we will return the hides to you.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 45.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ06 "Meet Sul-Matuul" [QUST:01001DBE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVInnocentAshlanders "Marsus Tullius's Missing Hides" [QUST:01003406]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "A0", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 60.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVInnocentAshlanders "Marsus Tullius's Missing Hides" [QUST:01003406]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0hairan "Hairan" [NPC_:012606DD]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1guarShideSshipment1 [DIAL:01320A72]", 
+        "TCLT - Choice": "1guarShideSshipment2 [DIAL:01320A74]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 28, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 3C 00 00 00 39 10 0A 00 02 00 72 01 00 6E 46 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmvinnocentashlanders 60\r\nsetstage fbmwmvinnocentashlanders 70", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMVInnocentAshlanders [QUST:01003406]"
+        ]
+    }
+}

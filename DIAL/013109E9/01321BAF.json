@@ -1,0 +1,75 @@
+{
+    "Topic": "1VerethiSGang [DIAL:013109E9]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 470, 
+        "Record Flags": {}, 
+        "FormID": "01321BAF", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Say Once": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwFGVerethiGang [QUST:010033EE]", 
+    "PNAM - Previous INFO": "01F8A5E1", 
+    "Add topics": [
+        "NAME - Topic": "013109E9", 
+        "NAME - Topic": "013109E9", 
+        "NAME - Topic": "01310BD1", 
+        "NAME - Topic": "013113E0"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Our client wants the leader of the Verethi Gang, Dovres Verethi, killed. The Verethi Gang are smugglers based in Mannammu just southeast of Pelagiad.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Kill Dovres Verethi and report back to me for 1000 septims.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0eydisSfireTeye "Eydis Fire-Eye" [NPC_:0126011B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwfgverethigang 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwFGVerethiGang [QUST:010033EE]"
+        ]
+    }
+}

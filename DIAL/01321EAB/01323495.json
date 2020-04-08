@@ -1,0 +1,80 @@
+{
+    "Topic": "1AshTchancre4 [DIAL:01321EAB]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 570, 
+        "Record Flags": {}, 
+        "FormID": "01323495", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTTCompassion [QUST:01F0A295]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "How do I know this is not a poison? Death would be a release... And if I am slain, my spirit will rend your soul after my brethren cut out your heart.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "<drinks>", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0pUcureUblightUs "Potion of Cure Blight Disease" [ALCH:01004BA5]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0bulfimUgraUshugarz "Bulfim gra-Shugarz" [NPC_:01260508]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 55, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 1D 10 05 00 01 00 72 03 00 39 10 0A 00 02 00 72 04 00 6E 32 00 00 00 53 10 0A 00 02 00 72 01 00 6E 32 00 00 00", 
+        "SCTX - Result script source": "player.removeitem 0pucureublightus 1\r\nremovespell 0ashtchancre\r\nsetstage fbmwttcompassion 50\r\nmoddisposition player 50", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0pUcureUblightUs [ALCH:01004BA5]", 
+            "SCRO - Global Reference": "0ashTchancre [SPEL:010602D9]", 
+            "SCRO - Global Reference": "fbmwTTCompassion [QUST:01F0A295]"
+        ]
+    }
+}

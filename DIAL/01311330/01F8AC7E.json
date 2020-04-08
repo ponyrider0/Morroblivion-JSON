@@ -1,0 +1,151 @@
+{
+    "Topic": "1eternalSwakefulness [DIAL:01311330]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 960, 
+        "Record Flags": {}, 
+        "FormID": "01F8AC7E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMCursedCaptain [QUST:0101AF8B]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "Yes, it's true.  I cursed Thormoor Gray-Wave with eternal wakefulness.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000001", 
+                "Emotion Value": 90, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "He couldn't stay awake and carry out his duties, and now my entire family is dead as a result!", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000002", 
+                "Emotion Value": 90, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "So I made sure Thormoor would never fall asleep again.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "Fitting punishment, don't you think?", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "05", 
+                "Unused": "68 6D 65"
+            }, 
+            "NAM1 - Response Text": "Sorry, but there's nothing you could do to make me reverse my curse.  Nothing, that....  Well, maybe there is one thing.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 20, 
+                "Unused": "00 00 00 00", 
+                "Response number": "06", 
+                "Unused": "68 6D 65"
+            }, 
+            "NAM1 - Response Text": "If you were to return my only friend, I would be most grateful...grateful enough to lift Thormoor's curse....", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0geilirStheSmumbling "Geilir the Mumbling" [NPC_:01260B50]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 40.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMSadSeer "The Sad Seer" [QUST:0101B6D1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMSadSeer "The Sad Seer" [QUST:0101B6D1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMCursedCaptain "The Cursed Captain" [QUST:0101AF8B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 40.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMCursedCaptain "The Cursed Captain" [QUST:0101AF8B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 9, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00", 
+        "SCTX - Result script source": "addtopic 1mySonlySfriend1", 
+        "References": [
+            "SCRO - Global Reference": "1mySonlySfriend1 [DIAL:0132157E]"
+        ]
+    }
+}

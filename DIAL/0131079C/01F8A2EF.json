@@ -1,0 +1,61 @@
+{
+    "Topic": "1tradeSgoodsSwanted [DIAL:0131079C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 252, 
+        "Record Flags": {}, 
+        "FormID": "01F8A2EF", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTownTelVos [QUST:0101C648]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "Yes. Cure common disease and cure blight disease potions are the sort of trade goods the Zainab want.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStageDone:59", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTownTelVos "Trade Mission to the Zainab" [QUST:0101C648]", 
+            "Parameter #2": "030 The Zainab Ashlander wise woman Sonummu Zabamat said that the tribe needs more Cure Common Disease and Cure Blight Disease potions. The tribe's men travel long distances, hunting and herding, and when they catch diseases, they can't return to camp to be cured by the wise woman, but if they carry potions, the can cure themselves. Now I can report back to Turedus Talanian, and tell him that Cure Common Disease and Cure Blight Disease potions would be valuable trade goods.", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0sonummuSzabamat "Sonummu Zabamat" [NPC_:0126018D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

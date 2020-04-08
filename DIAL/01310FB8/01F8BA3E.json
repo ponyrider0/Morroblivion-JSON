@@ -1,0 +1,66 @@
+{
+    "Topic": "1serviceStoSourSLady [DIAL:01310FB8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 401, 
+        "Record Flags": {}, 
+        "FormID": "01F8BA3E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRKillGoblins [QUST:0101C655]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": "Hmmm...I have nothing for you at this time. Speak with Gavas Drin, the Lord Archcanon. He was in consultation with the Lady Almalexia this very morning. Perhaps he has something for you.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRKillGoblins "The Goblin Army" [QUST:0101C655]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0fedrisShler "Fedris Hler" [NPC_:01260ABB]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwtrshrinedead 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTRShrineDead [QUST:0101C65B]"
+        ]
+    }
+}

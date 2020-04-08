@@ -1,0 +1,89 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 764, 
+        "Record Flags": {}, 
+        "FormID": "01F8EA05", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRKillGoblins [QUST:0101C655]", 
+    "PNAM - Previous INFO": "01F8B92D", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": "Ahh...you're the one who has recently arrived in Mournhold from Vvardenfell. I was told of your arrival.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": "I understand you had some problems with the Dark Brotherhood. An interesting group...and usually rather effective.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": "I'm surprised you're still alive. Perhaps you have potential, or they sent incompetents. I believe you might be of service to our Lady.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStageDone:59", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRKillGoblins "The Goblin Army" [QUST:0101C655]", 
+            "Parameter #2": "010 Fedris Hler, Almalexia's Chief Steward, has asked me to perform a service for the goddess. It seems that King Helseth is recruiting a troop of goblins to serve as footsoldiers for his army.", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0fedrisShler "Fedris Hler" [NPC_:01260ABB]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 18, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "addtopic 1DarksBrotherhood\r\naddtopic 1ServiceStoSourSlady\r\n;only shows if player has already killed the Goblins without getting the quest.", 
+        "References": [
+            "SCRO - Global Reference": "1DarkSBrotherhood [DIAL:01310833]", 
+            "SCRO - Global Reference": "1serviceStoSourSLady [DIAL:01310FB8]"
+        ]
+    }
+}

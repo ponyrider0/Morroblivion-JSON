@@ -1,0 +1,145 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 934, 
+        "Record Flags": {}, 
+        "FormID": "01F2A3CF", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "CrimeMorrow [QUST:01F2A3E6]", 
+    "PNAM - Previous INFO": "01F2A3CE", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000006", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "61 6C 65"
+            }, 
+            "NAM1 - Response Text": "You violated the law. Since you turned yourself in voluntarily, I'll take that into consideration.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000001", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "61 6C 65"
+            }, 
+            "NAM1 - Response Text": "Pay your fine to the court and surrender your stolen goods, or surrender your stolen goods and serve your sentence of hard labor.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000001", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "61 6C 65"
+            }, 
+            "NAM1 - Response Text": "Deliver the gold immediately, or come with me.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetPCInFaction:132", 
+            "Unused": "00 00", 
+            "Parameter #1": "0MoragSTong "Morag Tong" [FACT:01220008]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "IsPlayerInJail:171", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "02", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "CanPayCrimeGold:127", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "IsTurnArrest:329", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetCrimeGold:116", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "IsGuard:125", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "mwCrimePayGold [DIAL:01F2A3D9]", 
+        "TCLT - Choice": "mwCrimeServeSentence [DIAL:01F2A3D7]", 
+        "TCLT - Choice": "mwCrimeResistArrest [DIAL:01F2A3DC]", 
+        "TCLT - Choice": "CrimeMorrowBUFFER [DIAL:01F2A4AB]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 75, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "15 00 11 00 72 01 00 73 01 00 09 00 20 72 02 00 58 74 10 00 00 59 10 24 00 01 00 14 00 43 75 72 72 65 6E 74 20 42 6F 75 6E 74 79 3A 20 25 2E 30 66 01 00 72 01 00 73 01 00 0A 00 00 00 15 00 0A 00 72 01 00 73 09 00 02 00 20 31", 
+        "SCTX - Result script source": "Set CrimeMorrow.PCBounty to Player.GetCrimeGold\r\nMessage \"Current Bounty: %.0f\" CrimeMorrow.PCBounty, 10\r\nset CrimeMorrow.RUN_legitKills to 1", 
+        "References": [
+            "SCRO - Global Reference": "CrimeMorrow [QUST:01F2A3E6]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

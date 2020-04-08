@@ -1,0 +1,61 @@
+{
+    "Topic": "1returnSyourSfavor [DIAL:013107EF]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 398, 
+        "Record Flags": {}, 
+        "FormID": "01F8AA76", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwICMuck [QUST:0100B82C]", 
+    "PNAM - Previous INFO": "01F8AA75", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6E 6F 6C"
+            }, 
+            "NAM1 - Response Text": "So Synnolian suggested I might teach you a little trick, eh? Well, I might at that. In fact, I'll give you a choice. Which would you rather learn? A restore strength spell? A restore willpower spell? A restore speed spell? Or a restore luck spell?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICMuck "Imperial Cult: Gathering Muck" [QUST:0100B82C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0chaplainSogrul "Chaplain Ogrul" [NPC_:01260042]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

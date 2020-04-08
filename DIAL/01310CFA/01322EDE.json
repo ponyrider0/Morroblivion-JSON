@@ -1,0 +1,94 @@
+{
+    "Topic": "1Food [DIAL:01310CFA]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 712, 
+        "Record Flags": {}, 
+        "FormID": "01322EDE", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
+    "PNAM - Previous INFO": "01322EDD", 
+    "Add topics": [
+        "NAME - Topic": "01310AD4", 
+        "NAME - Topic": "01310CD6", 
+        "NAME - Topic": "01310CD7", 
+        "NAME - Topic": "01310CD8", 
+        "NAME - Topic": "01310C26", 
+        "NAME - Topic": "013107D6", 
+        "NAME - Topic": "01310CF7", 
+        "NAME - Topic": "01310C8E", 
+        "NAME - Topic": "013107D7"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "We've got local fare. It's filling, and priced to move. We've got the local brews, greef, shein, mazte and sujamma. They're cheap, and full of kick.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I've got the good stuff, too, behind the counter -- Cyrodiilic brandy and flin -- but it ain't cheap.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "We don't carry skooma, and we don't like it used here. And we don't like Telvanni bug musk, either -- it clouds the mind and makes fools more foolish.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsClass:68", 
+            "Unused": "00 00", 
+            "Parameter #1": "MerchPublican "Publican" [CLAS:00023E6A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

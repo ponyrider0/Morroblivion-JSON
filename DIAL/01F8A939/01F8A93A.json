@@ -1,0 +1,84 @@
+{
+    "Topic": "fbmwichauntedyes [DIAL:01F8A939]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 886, 
+        "Record Flags": {}, 
+        "FormID": "01F8A93A", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwICHaunting [QUST:0100B81E]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "So. You've taken care of that haunted house problem for Nedhelas. Very good. I hope the 200 gold I gave you covered your expenses. And here's something else for you.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "When I have a choice, I like to go around trouble, rather than into trouble, and these scrolls come in handy for that. When you're ready for another shrine sergeant mission, speak to me again.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwichauntingghost "Ghost" [CREA:01F2A52B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Kaye "Kaye" [NPC_:012602E6]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 6, 
+            "CompiledSize": 81, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 A9 10 0D 00 03 00 72 03 00 72 04 00 6E 05 00 00 00 36 10 05 00 01 00 72 05 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 06 00 6E 02 00 00 00 36 10 05 00 01 00 72 05 00", 
+        "SCTX - Result script source": "setstage fbmwichaunting 50\r\nmodfactionreaction 0imperialscult playerfaction 5\r\nstartquest fbmwicwitch\r\nmoddisposition player 10\r\nplayer.additem 0scugolnaraseyemaze 2\r\nstartquest fbmwicwitch", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwICHaunting [QUST:0100B81E]", 
+            "SCRO - Global Reference": "0ImperialSCult [FACT:01220003]", 
+            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]", 
+            "SCRO - Global Reference": "fbmwICWitch [QUST:0100B81F]", 
+            "SCRO - Global Reference": "0scUgolnaraseyemaze [BOOK:0118017C]"
+        ]
+    }
+}

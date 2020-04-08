@@ -1,0 +1,79 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 530, 
+        "Record Flags": {}, 
+        "FormID": "01009AAE", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ12 [QUST:01002C51]", 
+    "PNAM - Previous INFO": "01F0A27D", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "65 73 53"
+            }, 
+            "NAM1 - Response Text": "The blight is gone, and we have survived. Now we must dedicate ourselves to rebuilding the Temple.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "65 73 53"
+            }, 
+            "NAM1 - Response Text": " And you must dedicate yourself to your responsibilities as Protector of Morrowind.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwVivec "Vivec" [NPC_:0102626A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestRunning:56", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQCompletedDialogues "MQ Completed Dialogues" [QUST:010033C2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 27, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "addtopic 1weshavessurvived\r\naddtopic 1protectorsofsmorrowind\r\naddtopic 1rebuildingsthestemple", 
+        "References": [
+            "SCRO - Global Reference": "1weShaveSsurvived [DIAL:01310821]", 
+            "SCRO - Global Reference": "1ProtectorSofSMorrowind [DIAL:013106AF]", 
+            "SCRO - Global Reference": "1rebuildingStheSTemple [DIAL:013106DD]"
+        ]
+    }
+}

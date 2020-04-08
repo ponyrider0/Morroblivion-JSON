@@ -1,0 +1,38 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 425, 
+        "Record Flags": {}, 
+        "FormID": "01002E22", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwRingOfAzuraScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 4, 
+        "CompiledSize": 79, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0B 00 03 00 3C 00 00 00 01 00 72 04 00 16 00 0D 00 04 00 09 00 20 73 01 00 20 30 20 3D 3D 1C 00 01 00 22 10 00 00 1C 00 02 00 22 10 00 00 1C 00 03 00 22 10 00 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwRingOfAzuraScript\r\n\r\nSHORT DoOnce\r\n\r\nBEGIN OnAdd Player\r\n	IF DoOnce == 0\r\n	fxAzuraBeam1.Disable\r\n	fxAzuraBeam2.Disable\r\n	fxAzuraCollisionBox.Disable\r\n\r\n		SET DoOnce TO 1\r\n	ENDIF\r\nEND", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "DoOnce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fxAzuraBeam1 [REFR:01001B5A]", 
+        "SCRO - Global Reference": "fxAzuraBeam2 [REFR:01001B59]", 
+        "SCRO - Global Reference": "fxAzuraCollisionBox [REFR:0100241E]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+    ]
+}

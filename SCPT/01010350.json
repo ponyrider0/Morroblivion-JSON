@@ -1,0 +1,46 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 575, 
+        "Record Flags": {}, 
+        "FormID": "01010350", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwbardoor1Script", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 103, 
+        "VariableCount": 2, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 57 00 00 00 00 00 16 00 0D 00 02 00 09 00 20 73 01 00 20 30 20 3D 3D 15 00 07 00 73 01 00 02 00 20 31 15 00 0A 00 72 01 00 73 07 00 02 00 20 31 17 00 02 00 02 00 15 00 07 00 73 01 00 02 00 20 30 15 00 0A 00 72 01 00 73 07 00 02 00 20 30 19 00 00 00 0D 10 02 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwbardoor1Script\r\n\r\n\r\nshort door1open\r\nshort doOnce\r\n\r\n\r\nbegin OnActivate\r\n	if door1open == 0\r\n		set door1open to 1\r\n		set fbmwtrassassins.doorcheck to 1\r\n	else\r\n		set door1open to 0\r\n		set fbmwtrassassins.doorcheck to 0\r\n	endif	\r\n	Activate\r\nend\n;<CSEBlock>\n;<CSECaretPos> 198 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "F2 4C 0F 00 00 00 00"
+            }, 
+            "SCVR - Name": "door1open"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "45 20 30 49 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "55 30 32 55 62 61 72"
+            }, 
+            "SCVR - Name": "doOnce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwTRAssassins [QUST:0101C64F]"
+    ]
+}

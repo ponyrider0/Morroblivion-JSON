@@ -1,0 +1,77 @@
+{
+    "Topic": "1erroneousSdocuments1 [DIAL:013208FF]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 681, 
+        "Record Flags": {}, 
+        "FormID": "0132306C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHHReplaceDocs [QUST:0100346B]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "0131104D", 
+        "NAME - Topic": "01310B0A", 
+        "NAME - Topic": "01310C44", 
+        "NAME - Topic": "01310D13", 
+        "NAME - Topic": "01310A26"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Good. I will bring this matter to the Ordinators. It is time they had reason to investigate Odral and his Caldera operations.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Perhaps this will be enough to make them act. I am a bit short on drakes today, but I believe you will find this ring is a just compensation.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0rovoneSarvel "Rovone Arvel" [NPC_:0126039C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 50, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 37 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHHReplaceDocs 55\r\nPlayer.RemoveItem 0bkUlanddeedfakeUhhrd 1\r\nPlayer.AddItem fbmwMurdrumRing 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwHHReplaceDocs [QUST:0100346B]", 
+            "SCRO - Global Reference": "0bkUlanddeedfakeUhhrd [BOOK:01180210]", 
+            "SCRO - Global Reference": "fbmwMurdrumRing [CLOT:0102BB09]"
+        ]
+    }
+}

@@ -1,0 +1,90 @@
+{
+    "Topic": "fbmwMSpiernetteherethebowl [DIAL:0102EEBB]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 877, 
+        "Record Flags": {}, 
+        "FormID": "0102EEC0", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSPiernette [QUST:0101C62E]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "72 6E 65"
+            }, 
+            "NAM1 - Response Text": "Thank you very much. It means a lot to me and my husband. I'm sorry. I'm just a poor farmer, and have little to offer as a reward.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "72 6E 65"
+            }, 
+            "NAM1 - Response Text": "But I've lived here for years, and my husband and I have many friends. Perhaps I can offer you some valuable advice on how to get best value for your goods. And can I introduce you to a good friend at Fort Pelagiad? Ygfa is a Healer and Imperial cult Adept.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "72 6E 65"
+            }, 
+            "NAM1 - Response Text": "She might try to get you to join the Imperial cult. But that's not a bad thing.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0miscUBeluelleUsilverUbowl "Beluelle's Silver Bowl" [MISC:01160164]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0piernetteSbeluelle "Piernette Beluelle" [NPC_:012604CA]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 45, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 0F 11 09 00 02 00 1D 00 6E 01 00 00 00 39 10 0A 00 02 00 72 03 00 6E 64 00 00 00", 
+        "SCTX - Result script source": "player.removeitem 0miscubeluelleusilverubowl 1\r\nModPCSkill mercantile 1\r\nsetstage fbmwmspiernette 100", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0miscUBeluelleUsilverUbowl [MISC:01160164]", 
+            "SCRO - Global Reference": "fbmwMSPiernette [QUST:0101C62E]"
+        ]
+    }
+}

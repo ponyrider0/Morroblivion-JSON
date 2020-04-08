@@ -1,0 +1,87 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 2091, 
+        "Record Flags": {}, 
+        "FormID": "01F2A3E8", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "R0BILLMTWritOran", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 386, 
+        "VariableCount": 16, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 74 01 00 00 15 00 0B 00 66 0F 00 06 00 20 30 2E 30 30 31 16 00 14 00 04 00 10 00 20 58 20 10 05 00 01 00 72 01 00 20 31 20 3D 3D 16 00 0D 00 02 00 09 00 20 73 0A 00 20 30 20 3D 3D 15 00 0E 00 73 01 00 09 00 20 72 01 00 58 74 10 00 00 15 00 07 00 73 0A 00 02 00 20 31 19 00 00 00 19 00 00 00 16 00 0F 00 15 00 0B 00 20 58 2E 10 00 00 20 31 20 3D 3D 16 00 13 00 13 00 0F 00 20 58 3A 10 05 00 01 00 72 02 00 20 30 20 3E 16 00 15 00 01 00 11 00 20 58 3A 10 05 00 01 00 72 02 00 20 38 30 20 3E 3D 1E 00 00 00 19 00 00 00 16 00 0D 00 01 00 09 00 20 73 0E 00 20 31 20 3D 3D 1E 00 00 00 18 00 0C 00 01 00 08 00 20 66 10 00 20 35 20 3E 15 00 07 00 73 0E 00 02 00 20 31 17 00 02 00 01 00 15 00 11 00 66 10 00 0C 00 20 66 10 00 20 58 0C 10 00 00 20 2B 19 00 00 00 16 00 0D 00 07 00 09 00 20 73 0E 00 20 31 20 3D 3D 15 00 0E 00 73 02 00 09 00 20 72 01 00 58 74 10 00 00 15 00 0E 00 73 02 00 09 00 20 73 02 00 20 34 30 20 2D 16 00 0E 00 01 00 0A 00 20 73 02 00 20 73 01 00 20 3E 39 10 0A 00 02 00 72 02 00 6E 50 00 00 00 17 00 02 00 01 00 39 10 0A 00 02 00 72 02 00 6E 5A 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn R0BILLMTWritOran\r\n; log a journal entry for each successful 'hit' the player performs for the Morag Tong\r\n\r\n; script location: should be placed on each and every target of the Morag Tong, with \r\n;  changes to reflect the person it is running on.\r\n\r\nShort DoOnce\r\nShort TimerOnce\r\nfloat fQuestDelayTime\r\nfloat timer\r\nshort CL1\r\nshort CL2\r\n\r\nbegin gamemode\r\n\r\nset fQuestDelayTime to 0.001\r\n\r\nif ( getinsamecell player == 1 )\r\n	if ( DoOnce == 0 )\r\n		set CL1 to player.getcrimegold\r\n		set DoOnce to 1	\r\n	endif\r\nendif\r\n\r\nif ( getdead == 1 )\r\n	; when we are killed...\r\n	if ( GetStage fbmwMTWritOran > 0 )\r\n		; ... and if the player has a writ for us...\r\n		if (GetStage fbmwMTWritOran >= 80)\r\n			return\r\n		endif\r\n		\r\n;now we take into acount the time it takes bounty to update for a murder...\r\n		If TimerOnce ==1\r\n			return\r\n		elseif (timer > 5)\r\n			set TimerOnce to 1\r\n		else\r\n			set timer to timer + GetSecondsPassed\r\n		endif\r\n;and after this time has passed....\r\n\r\n	if timeronce ==1\r\n		set CL2 to player.getcrimegold\r\n		set CL2 to (CL2 - 40)\r\n		if ( CL2 > CL1 )\r\n			; ... append a journal entry if the execution is seen ...\r\n			setstage fbmwMTWritOran 80\r\n		else\r\n			; ... append a journal entry if the execution is NOT seen ...\r\n			setstage fbmwMTWritOran 90\r\n		endif\r\n	endif\r\n	endif\r\nendif\r\n\r\nEnd\r\n;<CSEBlock>\r\n;<CSECaretPos> 1242 </CSECaretPos>\r\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "CL1"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "CL2"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000A", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "DoOnce"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000E", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "TimerOnce"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000F", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "fQuestDelayTime"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000010", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "timer"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "fbmwMTWritOran [QUST:0100B83F]"
+    ]
+}

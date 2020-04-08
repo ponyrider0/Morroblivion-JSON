@@ -1,0 +1,70 @@
+{
+    "Topic": "1BitterSCup [DIAL:01310B35]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 614, 
+        "Record Flags": {}, 
+        "FormID": "01F8A6CA", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTGBitterBribe [QUST:01009327]", 
+    "PNAM - Previous INFO": "01F8A6C9", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 54 47"
+            }, 
+            "NAM1 - Response Text": "So Eydis took the Bitter Cup. Good. She's likely to betray us, too, but only if she thinks we think she won't. Anyway, I found some good lockpicks the other day and thought you might find a use for them.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0stacey "Gentleman Jim Stacey" [NPC_:0126026C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTGBitterBribe "Thieves Guild: The Bitter Cup" [QUST:01009327]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 63, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 19 00 00 00 A9 10 0D 00 03 00 72 04 00 72 05 00 6E 05 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwtgbitterbribe 100\r\nplayer.additem lockpick 25\r\nmodfactionreaction 0thievessguild playerfaction 5\r\nmoddisposition player 10", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwTGBitterBribe [QUST:01009327]", 
+            "SCRO - Global Reference": "Lockpick [MISC:0000000A]", 
+            "SCRO - Global Reference": "0ThievesSGuild [FACT:01220001]", 
+            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]"
+        ]
+    }
+}

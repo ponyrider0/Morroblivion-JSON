@@ -1,0 +1,84 @@
+{
+    "Topic": "1DuniraiSCaverns [DIAL:0131089D]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 543, 
+        "Record Flags": {}, 
+        "FormID": "01F8A43D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Say Once": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwFGDuniraiSupply [QUST:010033D8]", 
+    "PNAM - Previous INFO": "01F8A43B", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 46 47"
+            }, 
+            "NAM1 - Response Text": "Workers in the Adas Mine have been complaining that they're out of sujamma, and the Fighters Guild is responsible for supplying the Imperial mines in Vvardenfell.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 46 47"
+            }, 
+            "NAM1 - Response Text": "Unfortunately, I've recently learned that my contact there, Nelacar, is dead. We'll have to wait until we get a new contact. There are other orders for you, though.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "0nelacar "Nelacar" [NPC_:01260275]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwFGTenimBounty "Fighters Guild: Tenim's Bounty" [QUST:010033EB]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0hrundi "Hrundi" [NPC_:012601BA]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

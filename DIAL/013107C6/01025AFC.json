@@ -1,0 +1,103 @@
+{
+    "Topic": "1TelvanniSHortator [DIAL:013107C6]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1326, 
+        "Record Flags": {}, 
+        "FormID": "01025AFC", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMQTelvanniGothren [QUST:01002C4E]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "Very well. I have heard your story. And you are one of us, so I suppose I owe you a direct response.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "I have no intention of naming you Hortator of House Telvanni. It is clear you intend to use the office of Hortator as a means of advancing your own interests in the house. I refuse to discuss the subject further. My opinion will not change.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "If you continue to annoy me, I will kill you. This discussion is over.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetPCInFaction:132", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Telvanni "Great House Telvanni" [FACT:01220006]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQTelvanniGothren "Convincing Gothren" [QUST:01002C4E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0gothren "Gothren" [NPC_:01260413]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 174, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 03 00 6E 3C 00 00 00 0F 10 09 00 02 00 21 00 6E 64 00 00 00 53 10 0A 00 02 00 72 04 00 6E 9C FF FF FF 53 10 0A 00 02 00 72 04 00 6E 9C FF FF FF 53 10 0A 00 02 00 72 04 00 6E 9C FF FF FF 16 10 05 00 01 00 72 04 00 1C 00 01 00 0F 10 09 00 02 00 21 00 6E 64 00 00 00 1C 00 01 00 53 10 0A 00 02 00 72 04 00 6E 9C FF FF FF 1C 00 01 00 16 10 05 00 01 00 72 04 00 1C 00 02 00 0F 10 09 00 02 00 21 00 6E 64 00 00 00 1C 00 02 00 53 10 0A 00 02 00 72 04 00 6E 9C FF FF FF 1C 00 02 00 16 10 05 00 01 00 72 04 00", 
+        "SCTX - Result script source": "SetStage fbmwMQTelvanniGothren 60\r\nSetAV Aggression 100\r\nModDisposition Player -100\r\nModDisposition Player -100\r\nModDisposition Player -100\r\nStartCombat Player\r\nmwGothredDremoraGuard1.SetAV Aggression 100\r\nmwGothredDremoraGuard1.ModDisposition Player -100\r\nmwGothredDremoraGuard1.StartCombat Player\r\nmwGothredDremoraGuard2.SetAV Aggression 100\r\nmwGothredDremoraGuard2.ModDisposition Player -100\r\nmwGothredDremoraGuard2.StartCombat Player", 
+        "References": [
+            "SCRO - Global Reference": "mwGothredDremoraGuard1 [ACHR:01875E4D]", 
+            "SCRO - Global Reference": "mwGothredDremoraGuard2 [ACHR:0100724E]", 
+            "SCRO - Global Reference": "fbmwMQTelvanniGothren [QUST:01002C4E]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

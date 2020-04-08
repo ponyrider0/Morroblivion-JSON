@@ -1,0 +1,68 @@
+{
+    "Topic": "1slaveSrebellion [DIAL:0131087E]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 425, 
+        "Record Flags": {}, 
+        "FormID": "0100128C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHTSlaveRebellion [QUST:0100344A]", 
+    "PNAM - Previous INFO": "0100128D", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "The slaves have revolted in the Abebaal Egg Mine.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Go there and put an end to this rebellion before it spreads to Mistress Therana's other holdings.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0felisaSulessen "Felisa Ulessen" [NPC_:0126040E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 55 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "SetStage fbmwHTSlaveRebellion 10\r\nShowMap mwAbebaalEggMineMapMarker", 
+        "References": [
+            "SCRO - Global Reference": "fbmwHTSlaveRebellion [QUST:0100344A]", 
+            "SCRO - Global Reference": "mwAbebaalEggMineMapMarker [REFR:01000F34]"
+        ]
+    }
+}

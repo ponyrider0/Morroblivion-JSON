@@ -1,0 +1,51 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1956, 
+        "Record Flags": {}, 
+        "FormID": "01F8B826", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwbmTotemHunterScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 6, 
+        "CompiledSize": 638, 
+        "VariableCount": 2, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 0A 01 00 00 00 00 16 00 13 00 03 00 0F 00 20 58 2F 10 05 00 01 00 72 02 00 20 30 20 3E 52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 59 10 75 00 01 00 6B 00 57 69 74 68 20 74 68 65 20 64 65 61 74 68 20 6F 66 20 74 68 65 20 53 6B 61 61 6C 20 68 75 6E 74 65 72 2C 20 74 68 65 20 54 6F 74 65 6D 20 6F 66 20 43 6C 61 77 20 61 6E 64 20 46 61 6E 67 20 68 61 73 20 6D 61 67 69 63 61 6C 6C 79 20 72 65 74 75 72 6E 65 64 20 74 6F 20 69 74 73 20 72 65 73 74 69 6E 67 20 70 6C 61 63 65 2E 00 00 00 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 19 00 00 00 16 00 13 00 01 00 0F 00 20 58 54 10 05 00 01 00 72 03 00 20 34 20 3E 39 10 0A 00 02 00 72 04 00 6E 19 00 00 00 19 00 00 00 16 00 13 00 01 00 0F 00 20 58 54 10 05 00 01 00 72 03 00 20 39 20 3E 39 10 0A 00 02 00 72 04 00 6E 32 00 00 00 19 00 00 00 11 00 00 00 10 00 06 00 00 00 5A 01 00 00 16 00 23 00 02 00 1F 00 20 72 05 00 58 43 10 05 00 01 00 72 06 00 20 31 20 3D 3D 20 73 02 00 20 30 20 3D 3D 20 26 26 5E 10 00 00 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 16 00 14 00 03 00 10 00 20 58 43 10 05 00 01 00 72 06 00 20 31 20 21 3D 59 10 5E 00 01 00 54 00 41 20 53 6B 61 61 6C 20 48 75 6E 74 65 72 20 68 61 73 20 65 73 63 61 70 65 64 20 77 69 74 68 20 74 68 65 20 54 6F 74 65 6D 20 6F 66 20 43 6C 61 77 20 61 6E 64 20 46 61 6E 67 2E 20 59 6F 75 72 20 6D 69 73 73 69 6F 6E 20 68 61 73 20 66 61 69 6C 65 64 2E 00 00 00 00 00 00 39 10 0A 00 02 00 72 04 00 6E 69 00 00 00 22 10 00 00 19 00 00 00 16 00 13 00 05 00 0F 00 20 58 2F 10 05 00 01 00 72 02 00 20 30 20 3E 59 10 49 00 01 00 3F 00 41 20 53 6B 61 61 6C 20 48 75 6E 74 65 72 20 68 61 73 20 74 61 6B 65 6E 20 74 68 65 20 54 6F 74 65 6D 20 6F 66 20 43 6C 61 77 20 61 6E 64 20 46 61 6E 67 2E 20 52 65 74 72 69 76 65 20 69 74 00 00 00 00 00 00 16 00 0D 00 02 00 09 00 20 73 01 00 20 30 20 3D 3D 5E 10 00 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwbmTotemHunterScript\nshort DoOnce\nshort playerincellonce\nbegin ondeath\n	if (GetItemCount 0MiscUBMUClawFangUUNIQUE > 0)\n		RemoveItem 0MiscUBMUClawFangUUNIQUE 1\n		Message \"With the death of the Skaal hunter, the Totem of Claw and Fang has magically returned to its resting place.\"\n		fbmwbmChestClawFangREF.AddItem 0MiscUBMUClawFangUUNIQUE 1\n	endif\n	if (GetDeadCount 0skaalUhunter2 > 4)\n		SetStage fbmwBMCeremony2 25\n	endif\n	if (GetDeadCount 0skaalUhunter2 > 9)\n		SetStage fbmwBMCeremony2 50\n	endif\nend\nbegin gamemode\n	if(Player.GetInCell SolstheimVSTombsSofSSkaalara == 1)&&(playerincellonce == 0)\n		evp\n		set playerincellonce to 1\n	endif		\n	if (GetInCell SolstheimVSTombsSofSSkaalara != 1)\n		Message\"A Skaal Hunter has escaped with the Totem of Claw and Fang. Your mission has failed.\"\n		SetStage fbmwBMCeremony2 105\n		Disable\n	endif\n	if (GetItemCount 0MiscUBMUClawFangUUNIQUE > 0)\n		Message\"A Skaal Hunter has taken the Totem of Claw and Fang. Retrive it\"\n		if(DoOnce == 0)\n			EvaluatePackage\n			set DoOnce to 1\n		endif\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "74 68 65 69 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "6F 66 53 53 6B 61 61"
+            }, 
+            "SCVR - Name": "DoOnce"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "61 63 74 65 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "69 64 6C 65 2E 6B 66"
+            }, 
+            "SCVR - Name": "playerincellonce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwbmChestClawFangREF [REFR:01F09F54]", 
+        "SCRO - Global Reference": "0MiscUBMUClawFangUUNIQUE [MISC:0116023C]", 
+        "SCRO - Global Reference": "0skaalUhunter2 [NPC_:01260B74]", 
+        "SCRO - Global Reference": "fbmwBMCeremony2 [QUST:0101AF8A]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "SolstheimVSTombsSofSSkaalara [CELL:01480588]"
+    ]
+}

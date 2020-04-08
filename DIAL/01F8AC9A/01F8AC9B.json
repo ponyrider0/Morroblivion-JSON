@@ -1,0 +1,81 @@
+{
+    "Topic": "fbmwBMSadSeerYes [DIAL:01F8AC9A]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 602, 
+        "Record Flags": {}, 
+        "FormID": "01F8AC9B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true, 
+            "Say Once": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwBMSadSeer [QUST:0101B6D1]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 100, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "Excellent.  Of course, I knew you were going to help me.  I am a seer after all.  Now, Kolbjorn Barrow lies to the southeast of here, near the coast.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 60, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": " I need you to enter the barrow, find Oddfrid, and return her to me.  Do be careful, outlander.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000003", 
+                "Emotion Value": 30, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": " The draugrs are fast, vicious and entirely without remorse.  Go now.  I will eagerly await your return.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0geilirStheSmumbling "Geilir the Mumbling" [NPC_:01260B50]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 1E 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwbmsadseer 30", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMSadSeer [QUST:0101B6D1]"
+        ]
+    }
+}

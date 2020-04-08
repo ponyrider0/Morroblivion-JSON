@@ -1,0 +1,90 @@
+{
+    "Topic": "1RedoranSHortator3 [DIAL:01320E7D]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 745, 
+        "Record Flags": {}, 
+        "FormID": "013231D1", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQRedoranSarethi [QUST:01001DE1]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310C9C", 
+        "NAME - Topic": "01310C9C", 
+        "NAME - Topic": "013106D3", 
+        "NAME - Topic": "01310C02"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I also have a sealed package for you. I do not know what it contains, but I received it from a contact in the highest ranks of the Temple.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "My guess is that it has something to do with the Temple's position on your claim to fulfill the Nerevarine prophecies.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0athynSsarethi "Athyn Sarethi" [NPC_:012600B2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1RedoranSHortator4 [DIAL:01004A77]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 66, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 3C 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 39 10 0A 00 02 00 72 04 00 6E 01 00 00 00 F8 10 07 00 01 00 6E 04 00 00 00 58 10 05 00 01 00 72 05 00", 
+        "SCTX - Result script source": "SetStage fbmwMQRedoran 60\r\nplayer.additem 0bkusaryoniunote 1\r\nSetStage fbmwMQ12 1\r\nmodpcfame 4\r\nAddTopic 1meetStheSarchcanon", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMQRedoran [QUST:01001DDC]", 
+            "SCRO - Global Reference": "0bkUsaryoniUnote [BOOK:01180122]", 
+            "SCRO - Global Reference": "fbmwMQ12 [QUST:01002C51]", 
+            "SCRO - Global Reference": "1meetStheSarchcanon [DIAL:01310770]"
+        ]
+    }
+}

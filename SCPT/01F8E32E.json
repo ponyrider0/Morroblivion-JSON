@@ -1,0 +1,38 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 792, 
+        "Record Flags": {}, 
+        "FormID": "01F8E32E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwBMColonyForceUpdate1Script", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 4, 
+        "CompiledSize": 148, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 86 00 00 00 16 00 17 00 08 00 13 00 20 72 01 00 58 43 10 05 00 01 00 72 02 00 20 31 20 3D 3D 16 00 0D 00 06 00 09 00 20 73 01 00 20 30 20 3D 3D 16 00 10 00 04 00 0C 00 20 72 03 00 73 05 00 20 32 20 3D 3D 16 00 15 00 02 00 11 00 20 58 3A 10 05 00 01 00 72 04 00 20 31 30 20 3D 3D 39 10 0A 00 02 00 72 04 00 6E 14 00 00 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptname mwBMColonyForceUpdate1Script\n\nshort forceupdate\n\nbegin GameMode ;this force-updates your journal if you come to Carnius Magius after three days\n\n	If( Player.GetInCell \"FortSFrostmothVSImperialSCultSShrine\" == 1 )\n		If( forceupdate == 0 )\n			If( fbmwCOAdvancement.ColonyState == 2 )\n				If( GetStage fbmwCOUpdate == 10 )\n					SetStage fbmwCOUpdate 20\n					set forceupdate to 1\n				endif\n			endif\n		endif\n	endif\n\nend\n;<CSEBlock>\n;<CSECaretPos> 33 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "forceupdate"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "FortSFrostmothVSImperialSCultSShrine [CELL:01480533]", 
+        "SCRO - Global Reference": "fbmwCOAdvancement [QUST:01004AD9]", 
+        "SCRO - Global Reference": "fbmwCOUpdate [QUST:01F8E330]"
+    ]
+}

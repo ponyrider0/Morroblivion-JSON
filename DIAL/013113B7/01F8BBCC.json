@@ -1,0 +1,58 @@
+{
+    "Topic": "1hisSsaber [DIAL:013113B7]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 524, 
+        "Record Flags": {}, 
+        "FormID": "01F8BBCC", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwCO5 [QUST:0101BED3]", 
+    "PNAM - Previous INFO": "01F8BBCB", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6D 77 43"
+            }, 
+            "NAM1 - Response Text": "It certainly came in handy. Now that I think of it, though, I don't really have much of a use for it. Here, you take it. Not like it's worth much of anything, but odds are you'd be more likely to use it than I ever will.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0AproniaSAlfena "Apronia Alfena" [NPC_:01260B2B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 46, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 39 10 0A 00 02 00 72 03 00 6E 32 00 00 00", 
+        "SCTX - Result script source": "removeitem 0steelssaberuelberoth 1\r\nplayer.additem 0steelssaberuelberoth 1\r\nsetstage fbmwco5 50", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0steelSsaberUelberoth [WEAP:01100234]", 
+            "SCRO - Global Reference": "fbmwCO5 [QUST:0101BED3]"
+        ]
+    }
+}

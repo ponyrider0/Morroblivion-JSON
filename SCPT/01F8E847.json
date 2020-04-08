@@ -1,0 +1,88 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 2062, 
+        "Record Flags": {}, 
+        "FormID": "01F8E847", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwMSHolyElfScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 10, 
+        "CompiledSize": 480, 
+        "VariableCount": 7, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 D2 01 00 00 16 00 0D 00 21 00 09 00 20 73 03 00 20 31 20 3D 3D 16 00 0D 00 0D 00 09 00 20 73 05 00 20 31 20 3D 3D 16 00 17 00 05 00 13 00 20 72 03 00 58 36 11 05 00 01 00 72 04 00 20 30 20 3D 3D 16 00 16 00 03 00 12 00 20 58 3A 10 05 00 01 00 72 05 00 20 31 32 30 20 21 3D 1C 00 01 00 22 10 00 00 15 00 07 00 73 03 00 02 00 20 32 37 10 05 00 01 00 72 05 00 19 00 00 00 18 00 16 00 05 00 12 00 20 58 3A 10 05 00 01 00 72 05 00 20 31 32 30 20 3D 3D 15 00 07 00 73 03 00 02 00 20 31 16 00 17 00 02 00 13 00 20 72 03 00 58 43 10 05 00 01 00 72 06 00 20 30 20 3D 3D 1C 00 01 00 22 10 00 00 15 00 07 00 73 03 00 02 00 20 32 19 00 00 00 19 00 00 00 19 00 00 00 16 00 0D 00 05 00 09 00 20 73 04 00 20 31 20 3D 3D 16 00 17 00 03 00 13 00 20 72 03 00 58 43 10 05 00 01 00 72 06 00 20 30 20 3D 3D 1C 00 02 00 22 10 00 00 37 10 05 00 01 00 72 05 00 15 00 07 00 73 03 00 02 00 20 32 19 00 00 00 19 00 00 00 16 00 15 00 09 00 11 00 20 58 3A 10 05 00 01 00 72 05 00 20 33 30 20 3D 3D 16 00 17 00 07 00 13 00 20 72 03 00 58 36 11 05 00 01 00 72 04 00 20 30 20 3D 3D 16 00 0D 00 05 00 09 00 20 73 07 00 20 30 20 3D 3D 1C 00 01 00 52 10 0A 00 02 00 72 07 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 08 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 09 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 0A 00 6E 01 00 00 00 15 00 07 00 73 07 00 02 00 20 31 19 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwMSHolyElfScript\n\nshort change\nshort HolmarDisable\nshort HighPocketsDisable\nshort Passedout\nshort doonce\n\nbegin gamemode\n\n	If change == 1\n\n\n		If HighPocketsDisable == 1\n			If Player.GetInWorldspace WChildMournholdVSGodsreach == 0\n				if GetStage fbmwMSHolyElf != 120\n					fbmwHighPocketsREF.Disable\n					set change to 2\n					StopQuest fbmwMSHolyElf\n				endif\n			elseif GetStage fbmwMSHolyElf == 120\n				set change to 1\n				if Player.GetInCell MournholdVSTheSWingedSGuar == 0\n					fbmwHighPocketsREF.Disable\n					set change to 2\n				endif\n			endif\n		endif\n		if HolmarDisable == 1\n			if Player.GetInCell MournholdVSTheSWingedSGuar == 0\n				fbmwHolmarREF.Disable\n				StopQuest fbmwMSHolyElf\n				set change to 2\n			endif\n		endif\n\n\n		if GetStage fbmwMSHolyElf == 30\n			If Player.GetInWorldspace WChildMournholdVSGodsreach == 0\n				if doonce == 0\n					fbmwHighPocketsREF.RemoveItem 0commonUpantsU06 1\n					fbmwHighPocketsREF.RemoveItem 0commonUshoesU06 1\n					fbmwHighPocketsREF.RemoveItem 0commonUshirtU06 1\n					fbmwHighPocketsREF.RemoveItem fbmwRingofIcegrip 1\n					set doonce to 1\n				endif\n			endif\n		endif\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 98 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "6C 64 4D 6F 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "47 6F 64 73 72 65 61"
+            }, 
+            "SCVR - Name": "change"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "HolmarDisable"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "69 6F 6E 3A 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "72 72 6F 77 69 6E 64"
+            }, 
+            "SCVR - Name": "HighPocketsDisable"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "6E 68 6F 6C 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "6E 67 65 64 53 47 75"
+            }, 
+            "SCVR - Name": "Passedout"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000007", 
+                "Unused": "6C 64 4D 6F 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "47 6F 64 73 72 65 61"
+            }, 
+            "SCVR - Name": "doonce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwHighPocketsREF [ACHR:01F04132]", 
+        "SCRO - Global Reference": "fbmwHolmarREF [ACHR:01F04F76]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "WChildMournholdVSGodsreach [WRLD:01380020]", 
+        "SCRO - Global Reference": "fbmwMSHolyElf [QUST:0101C624]", 
+        "SCRO - Global Reference": "MournholdVSTheSWingedSGuar [CELL:014804EC]", 
+        "SCRO - Global Reference": "0commonUpantsU06 [CLOT:01140207]", 
+        "SCRO - Global Reference": "0commonUshoesU06 [CLOT:0114020B]", 
+        "SCRO - Global Reference": "0commonUshirtU06 [CLOT:01140209]", 
+        "SCRO - Global Reference": "fbmwRingofIcegrip [CLOT:0102BB19]"
+    ]
+}

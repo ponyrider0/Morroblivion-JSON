@@ -1,0 +1,78 @@
+{
+    "Topic": "1constructionScontract [DIAL:013106EA]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 472, 
+        "Record Flags": {}, 
+        "FormID": "0132071E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHRStronghold [QUST:0100347A]", 
+    "PNAM - Previous INFO": "0100FCB3", 
+    "Add topics": [
+        "NAME - Topic": "01310A9D", 
+        "NAME - Topic": "013106EA", 
+        "NAME - Topic": "0131095D", 
+        "NAME - Topic": "01310CBF"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Here on Vvardenfell, the Duke must issue a construction contract before we lay the first founding stones for any building.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "This rule is often overlooked by the Hlaalu and Telvanni, but House Redoran is honorable, and I will not break these rules.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "82", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 12.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHRStronghold "House Redoran: Stronghold" [QUST:0100347A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0galsaSgindu "Galsa Gindu" [NPC_:012600CD]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

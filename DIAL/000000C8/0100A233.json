@@ -1,0 +1,64 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 380, 
+        "Record Flags": {}, 
+        "FormID": "0100A233", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Say Once": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMQ10 [QUST:01001DC9]", 
+    "PNAM - Previous INFO": "0100A232", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "73 74 55"
+            }, 
+            "NAM1 - Response Text": "Welcome, Incarnate, Moon-and-Star Reborn, Hortator, Nerevarine, Mourner of the Tribe Unmourned, Redeemer of the False Gods. I am Peakstar.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "73 74 55"
+            }, 
+            "NAM1 - Response Text": "I was not the one. But I wait and hope. Ask, and I shall answer, if wisdom guides me.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ghostUnpcUpeakstar "Peakstar" [NPC_:01260675]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

@@ -1,0 +1,94 @@
+{
+    "Topic": "1mySstory [DIAL:01310BDB]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 803, 
+        "Record Flags": {}, 
+        "FormID": "01AA2DC2", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Say Once": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMQ10 [QUST:01001DC9]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "I was an ashkhan. I led my people against the Akaviri while the Cyrodiil dogs fled before them like kagouti.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "I quested deep into the strongholds and Red Mountain, cleansing the unclean things in their own blood.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "I did not heed the counsel of the women, and, to my shame, I craved glory, but never saw my real enemies.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "My axe and boots are yours, with my blessing.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ghostUnpcUconoonSchodal "Conoon Chodala" [NPC_:01260679]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 50, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 39 10 0A 00 02 00 72 04 00 6E 50 00 00 00", 
+        "SCTX - Result script source": "player.additem 0conoonuchodalauaxeuunique 1\r\nplayer.additem 0conoonuchodalaubootsuunique 1\r\nSetStage fbmwMQ10 80", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0conoonUchodalaUaxeUunique [WEAP:011001A3]", 
+            "SCRO - Global Reference": "0conoonUchodalaUbootsUunique [ARMO:01120109]", 
+            "SCRO - Global Reference": "fbmwMQ10 [QUST:01001DC9]"
+        ]
+    }
+}

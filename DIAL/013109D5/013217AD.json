@@ -1,0 +1,75 @@
+{
+    "Topic": "1SpellSBreaker [DIAL:013109D5]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 594, 
+        "Record Flags": {}, 
+        "FormID": "013217AD", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310C69", 
+        "NAME - Topic": "01310C72", 
+        "NAME - Topic": "01310A33"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "It is a shield of immense power, known for its resistance to even the most arcane magic. I have heard it lies in Bthuand, a Dwemer ruin north of here.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "The former owner now lies there as well, unable to control it's enchantments.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0mastrius "Mastrius" [NPC_:01260A04]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 41, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 39 10 0A 00 02 00 72 04 00 6E 37 00 00 00", 
+        "SCTX - Result script source": "addtopic 1Bthuand\r\naddtopic 1Dwemer\r\naddtopic 1enchantment\r\nsetstage fbmwVAVampCurse 55", 
+        "References": [
+            "SCRO - Global Reference": "1Bthuand [DIAL:01310C69]", 
+            "SCRO - Global Reference": "1Dwemer [DIAL:01310C72]", 
+            "SCRO - Global Reference": "1enchantment [DIAL:01310AA0]", 
+            "SCRO - Global Reference": "fbmwVAVampCurse [QUST:01003BCD]"
+        ]
+    }
+}

@@ -1,0 +1,66 @@
+{
+    "Topic": "1work [DIAL:01310D0E]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 593, 
+        "Record Flags": {}, 
+        "FormID": "01F8ACD5", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTownTelVos [QUST:0101C648]", 
+    "PNAM - Previous INFO": "01F8ACD4", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 66 62"
+            }, 
+            "NAM1 - Response Text": "We've been trying to establish trade links with the Zainab. Master Aryon thinks that shared self-interest will make the Zainab more careful about offending Tel Vos.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "65 64 75"
+            }, 
+            "NAM1 - Response Text": "But dealing with the Zainab is tricky, requiring knowledge of the Ashlanders, a silver tongue, and sharp wits. I'll pay you 100 drakes to visit the Zainab camp and find out what goods the tribe would be interested in trading for. Will you take the job?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0turedusStalanian "Turedus Talanian" [NPC_:01260592]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1work1 [DIAL:01322EA6]", 
+        "TCLT - Choice": "1work2 [DIAL:01322E98]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

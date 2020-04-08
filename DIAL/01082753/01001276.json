@@ -1,0 +1,68 @@
+{
+    "Topic": "fbmwMQ09Yes [DIAL:01082753]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 295, 
+        "Record Flags": {}, 
+        "FormID": "01001276", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMQ09 [QUST:01001DC4]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "72 61 6E"
+            }, 
+            "NAM1 - Response Text": "Then I'm ready to take you to Ebonheart whenever you're ready to travel.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 22.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ09 "Mehra Milo and the Lost Prophecies" [QUST:01001DC4]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0vevranaSaryon "Vevrana Aryon" [NPC_:01260505]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 12, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "15 00 08 00 47 01 00 03 00 20 36 30", 
+        "SCTX - Result script source": "Set MWDestinationCode to 60 ;Ebonheart", 
+        "References": [
+            "SCRO - Global Reference": "MWDestinationCode [GLOB:01F8B224]"
+        ]
+    }
+}

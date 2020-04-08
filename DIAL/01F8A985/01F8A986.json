@@ -1,0 +1,102 @@
+{
+    "Topic": "fbmwicmarshteach [DIAL:01F8A985]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 790, 
+        "Record Flags": {}, 
+        "FormID": "01F8A986", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwICMarshmerrow [QUST:0100B822]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 49 43"
+            }, 
+            "NAM1 - Response Text": "Well, now. With this fine Strength potion you brung me, won't take no time at all to grub out those roots for the new marshmerrow plot. Thank you kinly.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 49 43"
+            }, 
+            "NAM1 - Response Text": "Why don't you take this book? I know it by heart already. Experience and practice is the real stuff, but there's nothing wrong with a little book learning.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "77 49 43"
+            }, 
+            "NAM1 - Response Text": "Well, then. Reckon I better get back to work. Good day. And my regards to Sera Synnolian.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICMarshmerrow "Imperial Cult: Gathering Marshmerrow" [QUST:0100B822]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICMarshmerrow "Imperial Cult: Gathering Marshmerrow" [QUST:0100B822]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0balurSsalvu "Balur Salvu" [NPC_:012604CC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 39 10 0A 00 02 00 72 03 00 6E 0F 00 00 00", 
+        "SCTX - Result script source": "player.additem 0bookskillualchemy2 1\r\nsetstage fbmwicmarshmerrow 15", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0BookSkillUAlchemy2 [BOOK:01180024]", 
+            "SCRO - Global Reference": "fbmwICMarshmerrow [QUST:0100B822]"
+        ]
+    }
+}

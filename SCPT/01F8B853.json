@@ -1,0 +1,23 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 402, 
+        "Record Flags": {}, 
+        "FormID": "01F8B853", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwtrProfaneScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 118, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 2E 00 00 00 00 00 16 00 14 00 01 00 10 00 20 58 54 10 05 00 01 00 72 01 00 20 35 20 3E 3D 39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 19 00 00 00 11 00 00 00 10 00 06 00 00 00 2E 00 00 00 16 00 14 00 01 00 10 00 20 58 3A 10 05 00 01 00 72 02 00 20 32 30 20 3C 22 10 00 00 17 00 02 00 01 00 21 10 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwtrProfaneScript\r\nbegin ondeath\r\nif getdeadcount fbmwtrprofane>=5\r\nsetstage fbmwtrshrinedead 50\r\nendif\r\nend\r\n\r\nbegin gamemode\r\nif getstage fbmwtrshrinedead<20\r\ndisable\r\nelse\r\nenable\r\nendif\r\nend", 
+    "References": [
+        "SCRO - Global Reference": "fbmwTRProfane [CREA:01F8B885]", 
+        "SCRO - Global Reference": "fbmwTRShrineDead [QUST:0101C65B]"
+    ]
+}

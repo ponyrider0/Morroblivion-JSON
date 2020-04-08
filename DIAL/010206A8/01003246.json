@@ -1,0 +1,61 @@
+{
+    "Topic": "mwDAAzuraSpeech [DIAL:010206A8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 369, 
+        "Record Flags": {}, 
+        "FormID": "01003246", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "01", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwDAAzura [QUST:01002C86]", 
+    "PNAM - Previous INFO": "01F8E368", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "To test this, I sent one of my priestesses to live alone on an island north of Dagon Fel. If she can live there for 100 years, continuing her life of prayer, my theory will be proven. If not, Sheogorath wins our wager.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 2.000000000000000, 
+            "Function": "GetScriptVariable:53", 
+            "Unused": "00 00", 
+            "Parameter #1": "mwDAAzureStatueREF [REFR:01850C3D] (places 0activeUdaeUazura "Statue of Azura" [ACTI:010E01A7] in GRUP Cell Persistent Children of ShrineSofSAzura "Shrine of Azura" [CELL:01480363])", 
+            "Parameter #2": "speech", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "mwDaedricSpeaker "Dummy NPC for Daedric Statues" [NPC_:01F8E35C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

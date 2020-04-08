@@ -1,0 +1,58 @@
+{
+    "Topic": "fbmwtr09Kill [DIAL:01F8BCB1]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 404, 
+        "Record Flags": {}, 
+        "FormID": "01F8BCB2", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTR09 [QUST:0101C64E]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "74 65 6D"
+            }, 
+            "NAM1 - Response Text": "Of course you're right. And of course if I kill you first, I preserve the secret of my hidden office. The choice is easy.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0TrelsSVaris "Trels Varis" [NPC_:01260AC5]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 46, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 02 00 6E B8 0B 00 00 02 10 0A 00 02 00 72 02 00 6E B8 0B 00 00 39 10 0A 00 02 00 72 03 00 6E 3C 00 00 00", 
+        "SCTX - Result script source": "player.removeitem gold001 3000\r\nadditem gold001 3000\r\nsetstage fbmwtr09 60", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "fbmwTR09 [QUST:0101C64E]"
+        ]
+    }
+}

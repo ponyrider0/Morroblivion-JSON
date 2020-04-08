@@ -1,0 +1,89 @@
+{
+    "Topic": "1HlaaluSHortator3 [DIAL:01320F09]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 694, 
+        "Record Flags": {}, 
+        "FormID": "0132320D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMQHlaaluDren [QUST:01001DD7]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310BF7", 
+        "NAME - Topic": "01310B5E", 
+        "NAME - Topic": "01310A61", 
+        "NAME - Topic": "01310B44", 
+        "NAME - Topic": "01310BF7", 
+        "NAME - Topic": "01310CF8", 
+        "NAME - Topic": "01310BD9"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "You want peace? Like the peace of the grave we've had since the Tribunal betrayed us and signed the Armistice? Dagoth Ur has made me a better offer.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "The Sixth House will rise again and crush the Empire and those smug hypocrites in the Tribunal. But enough talk.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I know you now as my enemy, and you must die with the rest of the foreign devils.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0OrvasSDrenSDruglord "Orvas Dren" [NPC_:012604A7]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "53 10 0A 00 02 00 72 01 00 6E CE FF FF FF 16 10 05 00 01 00 72 01 00", 
+        "SCTX - Result script source": "moddisposition player -50\r\nstartcombat player", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

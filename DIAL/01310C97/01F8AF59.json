@@ -1,0 +1,68 @@
+{
+    "Topic": "1reward [DIAL:01310C97]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 437, 
+        "Record Flags": {}, 
+        "FormID": "01F8AF59", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwVTraderMissed [QUST:01003417]", 
+    "PNAM - Previous INFO": "01F8AF58", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 56 54"
+            }, 
+            "NAM1 - Response Text": "Certainly! Thank you for helping Paur to get here safely. I hope you'll find this adequate compensation.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 95.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwVTraderMissed "An Escort to Molag Mar" [QUST:01003417]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0vanjirra "Vanjirra" [NPC_:012606CB]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 46, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 39 10 0A 00 02 00 72 03 00 6E 64 00 00 00", 
+        "SCTX - Result script source": "removeitem fbmwlightamulet 1\r\nplayer.additem fbmwlightamulet 1\r\nsetstage fbmwvtradermissed 100", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwLightAmulet [CLOT:0102BAFF]", 
+            "SCRO - Global Reference": "fbmwVTraderMissed [QUST:01003417]"
+        ]
+    }
+}

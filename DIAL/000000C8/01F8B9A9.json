@@ -1,0 +1,78 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 650, 
+        "Record Flags": {}, 
+        "FormID": "01F8B9A9", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRDBAttack [QUST:0101C653]", 
+    "PNAM - Previous INFO": "01F8AF84", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6C 6C 65"
+            }, 
+            "NAM1 - Response Text": "Ahh...you're the one who has recently arrived in Mournhold from Vvardenfell. I was told of your arrival. I understand you had some problems with the Dark Brotherhood.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6C 6C 65"
+            }, 
+            "NAM1 - Response Text": "An interesting group...and usually rather effective. I'm surprised you're still alive. Perhaps you have potential, or they sent incompetents. I believe you might be of service to our Lady.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRKillGoblins "The Goblin Army" [QUST:0101C655]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0fedrisShler "Fedris Hler" [NPC_:01260ABB]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 18, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 36 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "addtopic 1servicestosourslady\r\nstartquest fbmwTRKillGoblins", 
+        "References": [
+            "SCRO - Global Reference": "1serviceStoSourSLady [DIAL:01310FB8]", 
+            "SCRO - Global Reference": "fbmwTRKillGoblins [QUST:0101C655]"
+        ]
+    }
+}

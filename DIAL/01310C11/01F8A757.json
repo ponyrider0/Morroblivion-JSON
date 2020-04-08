@@ -1,0 +1,61 @@
+{
+    "Topic": "1Mossanon [DIAL:01310C11]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 254, 
+        "Record Flags": {}, 
+        "FormID": "01F8A757", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwICMossanon [QUST:0100B81C]", 
+    "PNAM - Previous INFO": "01F8A756", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 49 43"
+            }, 
+            "NAM1 - Response Text": "You're looking for a High Elf and Volmyni Dral? Go talk to her. She has a pod over near Wolverine Hall.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStageDone:59", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICMossanon "Imperial Cult: Pledge from Canctunian Ponius" [QUST:0100B81C]", 
+            "Parameter #2": "006 Someone said a High Elf has been seen in the company of a local woman, Volmyni Dral. She has a pod over near Wolverine Hall.", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInCell:67", 
+            "Unused": "00 00", 
+            "Parameter #1": "SadrithSMora "Sadrith Mora" [CELL:01480001]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

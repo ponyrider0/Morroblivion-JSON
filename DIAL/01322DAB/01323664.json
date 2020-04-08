@@ -1,0 +1,69 @@
+{
+    "Topic": "1Favor5 [DIAL:01322DAB]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 335, 
+        "Record Flags": {}, 
+        "FormID": "01323664", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSNatural [QUST:0101C62A]", 
+    "PNAM - Previous INFO": "01323663", 
+    "Add topics": [
+        "NAME - Topic": "01310CCB", 
+        "NAME - Topic": "01310B1E"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Umm, you don't seem to have that much. Well, I'm not particular. I'll just as easily take an ebony shortsword. Got one of those you can give me?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Gaenor "Gaenor" [NPC_:01260AD2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1Favor14 [DIAL:01322D97]", 
+        "TCLT - Choice": "1Favor15 [DIAL:01322D95]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

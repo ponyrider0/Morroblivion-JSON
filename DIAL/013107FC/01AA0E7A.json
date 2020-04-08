@@ -1,0 +1,92 @@
+{
+    "Topic": "11000TdrakeSpledge [DIAL:013107FC]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 590, 
+        "Record Flags": {}, 
+        "FormID": "01AA0E7A", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwICMossanon [QUST:0100B81C]", 
+    "PNAM - Previous INFO": "01AA0E7B", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "4D 57 49"
+            }, 
+            "NAM1 - Response Text": "You are from the Imperial cult, then? I'll be frank with you, but you must keep this in confidence. I cannot redeem my pledge at this time.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "4D 57 49"
+            }, 
+            "NAM1 - Response Text": "Our clerk embezzled funds, and to avoid scandal, I am covering losses to the East Empire Company out of my own fortune.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICMossanon "Imperial Cult: Pledge from Canctunian Ponius" [QUST:0100B81C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICMossanon "Imperial Cult: Pledge from Canctunian Ponius" [QUST:0100B81C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0CanctunianSPonius "Canctunian Ponius" [NPC_:01260223]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "fbmwICMossanonLeave [DIAL:0100BFBB]", 
+        "TCLT - Choice": "fbmwICMossanonTrackDown [DIAL:0100BFBA]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 18, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "addtopic 1embezzledsfunds\r\naddtopic 1mossanon", 
+        "References": [
+            "SCRO - Global Reference": "1embezzledSfunds [DIAL:013108CA]", 
+            "SCRO - Global Reference": "1Mossanon [DIAL:01310C11]"
+        ]
+    }
+}

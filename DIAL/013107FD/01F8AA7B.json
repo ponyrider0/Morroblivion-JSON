@@ -1,0 +1,78 @@
+{
+    "Topic": "1terribleShaunting [DIAL:013107FD]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 521, 
+        "Record Flags": {}, 
+        "FormID": "01F8AA7B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwEBBone [QUST:0100341D]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6F 6C 73"
+            }, 
+            "NAM1 - Response Text": "You've done it! I can't thank you enough. Here, take this as a token of my gratitude. It is a good weapon; one of my best. Perhaps now my customers will return to me.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 90.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwEBBone "The Dwemer's Bone" [QUST:0100341D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "A0", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwEBBone "The Dwemer's Bone" [QUST:0100341D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0jeanne "Jeanne" [NPC_:012605D1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 46, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 6E 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 53 10 0A 00 02 00 72 01 00 6E 1E 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwebbone 110\r\nplayer.additem 0steelsshardmauler 1\r\nModDisposition player 30", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwEBBone [QUST:0100341D]", 
+            "SCRO - Global Reference": "0steelSshardmauler [WEAP:0110011C]"
+        ]
+    }
+}

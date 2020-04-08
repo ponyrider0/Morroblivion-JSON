@@ -1,0 +1,38 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 513, 
+        "Record Flags": {}, 
+        "FormID": "010068E5", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwHTShishiLadderScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 4, 
+        "CompiledSize": 94, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0B 00 02 00 4B 00 00 00 01 00 72 02 00 16 00 21 00 02 00 1D 00 20 58 3A 10 05 00 01 00 72 03 00 20 35 30 20 3D 3D 20 73 01 00 20 30 20 3D 3D 20 26 26 1C 00 01 00 9E 10 05 00 01 00 72 04 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 0D 10 02 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName mwHTShishiLadderScript\n\nSHORT DoOnce\n\nBegin OnActivate Player\n	\n	IF GetStage fbmwHTShishi == 50 && DoOnce == 0\n		mwFavesAndasREF.MoveTo mwFavesAndasFollowMarker\n		SET DoOnce TO 1\n	ENDIF\n\n	Activate\nEND\n;<CSEBlock>\n;<CSECaretPos> 15 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "DoOnce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "mwFavesAndasREF [ACHR:01814A7A]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "fbmwHTShishi [QUST:01003448]", 
+        "SCRO - Global Reference": "mwFavesAndasFollowMarker [REFR:010068E9]"
+    ]
+}

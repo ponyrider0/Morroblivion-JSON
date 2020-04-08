@@ -1,0 +1,122 @@
+{
+    "Topic": "fbmwMQ08nerevarine [DIAL:0101FAD0]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1053, 
+        "Record Flags": {}, 
+        "FormID": "0101FAD1", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ08 [QUST:01001DC0]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "76 61 79"
+            }, 
+            "NAM1 - Response Text": "That's a fascinating story you tell. So. You might be the Nerevarine. Means nothing, of course. Corprus victims have all sorts of delusions. But... l", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "76 61 79"
+            }, 
+            "NAM1 - Response Text": "let me think...", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "76 61 79"
+            }, 
+            "NAM1 - Response Text": "I've got a potion. In theory, it should cure corprus. Doesn't work, though. Probably kill you. Killed all my test subjects.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "76 61 79"
+            }, 
+            "NAM1 - Response Text": "But you've got nothing to lose. Before I give it to you, I want you to look around below in the Corprusarium.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "05", 
+                "Unused": "76 61 79"
+            }, 
+            "NAM1 - Response Text": "Know what's in store if you don't take the potion.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "06", 
+                "Unused": "76 61 79"
+            }, 
+            "NAM1 - Response Text": "And while you're there, I want you to pick up a pair of boots from a victim, calls himself Yagrum Bagarn. My oldest patient.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "07", 
+                "Unused": "76 61 79"
+            }, 
+            "NAM1 - Response Text": "Handy fellow, fixes things for me. Bring the boots back, and then you can have the potion.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0divaythSfyr "Divayth Fyr" [NPC_:01260184]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 19 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmq08 25", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQ08 [QUST:01001DC0]"
+        ]
+    }
+}

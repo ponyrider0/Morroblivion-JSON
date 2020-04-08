@@ -1,0 +1,76 @@
+{
+    "Topic": "1BrallionAsSRing [DIAL:013108A3]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 412, 
+        "Record Flags": {}, 
+        "FormID": "01F8A446", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTGssGreedySlaver [QUST:0100933E]", 
+    "PNAM - Previous INFO": "01F8A445", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "61 6C 6C"
+            }, 
+            "NAM1 - Response Text": "Brallion is dead? I don't like the sound of this, outlander. It wouldn't be good for us to be associated with this in any way. Let's forget about this completely.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "0brallion "Brallion" [NPC_:01260671]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTGssGreedySlaver "Thieves Guild: Bal Molagmer, Brallion's Ring" [QUST:0100933E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0stacey "Gentleman Jim Stacey" [NPC_:0126026C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 78 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwtgssgreedyslaver 120", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTGssGreedySlaver [QUST:0100933E]"
+        ]
+    }
+}

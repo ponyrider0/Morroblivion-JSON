@@ -1,0 +1,97 @@
+{
+    "Topic": "1getSupstairs [DIAL:01311392]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 606, 
+        "Record Flags": {}, 
+        "FormID": "01F8BB17", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMFrostGiant1 [QUST:0101B6C3]", 
+    "PNAM - Previous INFO": "01F8BB16", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "Right. Well, I couldn't until you took out those grahl. And you couldn't because no one goes up there without Karstaag's mystical blessing...which I have. Now, though...it shouldn't be a problem for either of us.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "I'll follow you up there, and you can talk to little Dulk about whatever you want.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 2.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwbmGrahlKarstaag "Deadly Grahl" [CREA:01F8B881]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 75.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMFrostGiant1 "The Castle Karstaag" [QUST:0101B6C3]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMFrostGiant1 "The Castle Karstaag" [QUST:0101B6C3]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwbmKrish "Krish" [NPC_:01F8B878]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 51 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwbmFrostGiant1 81", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMFrostGiant1 [QUST:0101B6C3]"
+        ]
+    }
+}

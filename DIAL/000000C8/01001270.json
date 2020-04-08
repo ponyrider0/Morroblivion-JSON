@@ -1,0 +1,100 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 854, 
+        "Record Flags": {}, 
+        "FormID": "01001270", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ09 [QUST:01001DC4]", 
+    "PNAM - Previous INFO": "0102095A", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "72 61 6E"
+            }, 
+            "NAM1 - Response Text": "I'm Vevrana Aryon, a monk of Holamayan. The monastery is here, on this island. Take the stone pathway north from the docks and the path uphill.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "72 61 6E"
+            }, 
+            "NAM1 - Response Text": "The entrance is hidden by a magical shield. Wait or rest at the head of the path, and the portal will open at dusk and dawn only.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "72 61 6E"
+            }, 
+            "NAM1 - Response Text": "Dawn and Dusk are the magical twilight hours sacred to Azura. Mehra Milo has told us of your coming.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "72 61 6E"
+            }, 
+            "NAM1 - Response Text": "You can find her in the library with Master Barelo. Later, I can arrange for your return to Vivec whenever you are ready.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 22.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ09 "Mehra Milo and the Lost Prophecies" [QUST:01001DC4]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0vevranaSaryon "Vevrana Aryon" [NPC_:01260505]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 16 00 00 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "SetStage fbmwMQ09 22\r\nAddTopic 1returnStoSVivec", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQ09 [QUST:01001DC4]", 
+            "SCRO - Global Reference": "1returnStoSVivec [DIAL:01310883]"
+        ]
+    }
+}

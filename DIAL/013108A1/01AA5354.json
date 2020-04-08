@@ -1,0 +1,92 @@
+{
+    "Topic": "1wildSnixShounds [DIAL:013108A1]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 619, 
+        "Record Flags": {}, 
+        "FormID": "01AA5354", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVMissingCompanion [QUST:01003408]", 
+    "PNAM - Previous INFO": "01AA5353", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "61 6E 75"
+            }, 
+            "NAM1 - Response Text": "There were at least three of them; they seemed to come out of nowhere.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "61 6E 75"
+            }, 
+            "NAM1 - Response Text": "My husband, Drerel Indaren tried to fight them off, but the were too much for him, and he was forced to flee.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "61 6E 75"
+            }, 
+            "NAM1 - Response Text": "I tried to play dead, in hopes the hounds would find no sport in me. I just hope I can find Drerel before the hounds come back.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 15.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVMissingCompanion "Divided by Nix-Hounds" [QUST:01003408]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0falanuSindaren "Falanu Indaren" [NPC_:012606E4]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1wildSnixShounds1 [DIAL:01320F67]", 
+        "TCLT - Choice": "1wildSnixShounds2 [DIAL:01320F69]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 14 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmvmissingcompanion 20", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMVMissingCompanion [QUST:01003408]"
+        ]
+    }
+}

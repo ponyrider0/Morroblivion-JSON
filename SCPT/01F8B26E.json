@@ -1,0 +1,73 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 2354, 
+        "Record Flags": {}, 
+        "FormID": "01F8B26E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwPublicanSouthWallCornerlubBacolaCloscius", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 6, 
+        "CompiledSize": 315, 
+        "VariableCount": 4, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 2D 01 00 00 16 00 0D 00 18 00 09 00 20 73 01 00 20 31 20 3D 3D 16 00 0D 00 04 00 09 00 20 73 04 00 20 30 20 3D 3D 15 00 09 00 73 02 00 04 00 20 47 03 00 15 00 07 00 73 04 00 02 00 20 31 1C 00 01 00 73 10 02 00 00 00 1C 00 02 00 17 11 02 00 00 00 17 00 02 00 03 00 16 00 0F 00 01 00 0B 00 20 47 03 00 20 73 02 00 20 21 3D 15 00 07 00 73 03 00 02 00 20 31 19 00 00 00 19 00 00 00 16 00 17 00 03 00 13 00 20 72 04 00 58 43 10 05 00 01 00 72 05 00 20 30 20 3D 3D 16 00 0D 00 01 00 09 00 20 73 03 00 20 31 20 3D 3D 15 00 07 00 73 03 00 02 00 20 32 19 00 00 00 19 00 00 00 16 00 0D 00 07 00 09 00 20 73 03 00 20 32 20 3D 3D 15 00 07 00 73 01 00 02 00 20 30 15 00 07 00 73 04 00 02 00 20 30 15 00 07 00 73 02 00 02 00 20 30 15 00 07 00 73 03 00 02 00 20 30 1C 00 01 00 DD 10 07 00 01 00 6E 00 00 00 00 1C 00 01 00 72 10 07 00 01 00 6E 1E 00 00 00 1C 00 02 00 17 11 05 00 01 00 72 06 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scriptname fbmwPublicanSouthWallCornerlubBacolaCloscius\r\n\r\nshort rent         ;if you have rent the room or not\r\nshort rentday      ;make sure it's the same day\r\nshort cleanup      ;For the Reseting\r\nshort setup        ;Check if the first part has been run\r\n\r\nbegin gamemode\r\n\r\n	if ( rent == 1 )                        ;If you have rented the room\r\n\r\n		if ( setup == 0 )                      ;If this hasn't been done before\r\n			set rentday to GameDaysPassed         ;Saves the day of the rental \r\n			set setup to 1                        ;We don't want this to happen again\r\n			SouthwallRentDoor.UnLock                  ;Unlock the door\r\n			SouthwallRentBed.SetOwnership             ;Makes it legal to sleep in the bed\r\n\r\n		else                                   ;If we have already done that\r\n\r\n			if ( GameDaysPassed != rentday )             ;If it is a new day\r\n				set cleanup to 1                     ;Makes the reset ready\r\n			endif\r\n		endif\r\n\r\n		if Player.GetInCell BalmoraVSSouthsWallSCornerclub == 0 ;If the player is outside the inn\r\n			if ( Cleanup == 1 )                   ;If the reset Is ready\r\n				set Cleanup to 2                     ;Start the reset\r\n			endif\r\n		endif\r\n\r\n\r\n\r\n		if ( Cleanup == 2 )                    ;If the reset should start\r\n\r\n\r\n;Resets The Variables\r\n\r\n			set rent to 0                         \r\n			set setup to 0                        \r\n			set rentday to 0\r\n			set cleanup to 0\r\n\r\n\r\n			SouthWallRentDoor.SetOpenState 0         ;Close the door\r\n			SouthWallRentDoor.Lock 30                ;Lock the door\r\n			SouthWallRentbed.SetOwnership 0bacolaScloscius    ;Make it illegal to sleep in the bed\r\n		endif\r\n	endif\r\n\r\nEnd\r\n;<CSEBlock>\r\n;<CSECaretPos> 23 </CSECaretPos>\r\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "rent"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "34 90 1D 08 00 00 00"
+            }, 
+            "SCVR - Name": "rentday"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "34 90 1D 08 00 00 00"
+            }, 
+            "SCVR - Name": "cleanup"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "3D 90 1D 08 00 00 00"
+            }, 
+            "SCVR - Name": "setup"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "SouthwallRentDoor [REFR:01859C80]", 
+        "SCRO - Global Reference": "SouthwallRentBed [REFR:01859CC9]", 
+        "SCRO - Global Reference": "GameDaysPassed [GLOB:00000039]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "BalmoraVSSouthSWallSCornerclub [CELL:0148012A]", 
+        "SCRO - Global Reference": "0bacolaScloscius [NPC_:0126012E]"
+    ]
+}

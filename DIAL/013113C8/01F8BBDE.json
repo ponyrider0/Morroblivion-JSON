@@ -1,0 +1,66 @@
+{
+    "Topic": "1decision [DIAL:013113C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 298, 
+        "Record Flags": {}, 
+        "FormID": "01F8BBDE", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwCO4 [QUST:0101BED2]", 
+    "PNAM - Previous INFO": "01F8BBDD", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6E 69 75"
+            }, 
+            "NAM1 - Response Text": "Let's get this over with, so I can allocate the funds and move on to something more important. What's it going to be?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwCO4 "East Empire Company: Setting up Shop" [QUST:0101BED2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0CarniusSMagius "Carnius Magius" [NPC_:01260B0A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1decision4 [DIAL:013228DB]", 
+        "TCLT - Choice": "1decision5 [DIAL:013228DD]", 
+        "TCLT - Choice": "1decision6 [DIAL:013228DF]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

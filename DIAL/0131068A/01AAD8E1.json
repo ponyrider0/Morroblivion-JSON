@@ -1,0 +1,66 @@
+{
+    "Topic": "1BelanSmakesStheSleaflets [DIAL:0131068A]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 335, 
+        "Record Flags": {}, 
+        "FormID": "01AAD8E1", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwEBFalse [QUST:01003422]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "64 65 6E"
+            }, 
+            "NAM1 - Response Text": "Right. Galuro Belan. She's an apothecary over in the Telvanni section. I don't think her business is doing to well right now.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "A0", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwEBFalse "An Apothecary Slandered" [QUST:01003422]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0domalen "Domalen" [NPC_:01260900]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 1E 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwebfalse 30", 
+        "References": [
+            "SCRO - Global Reference": "fbmwEBFalse [QUST:01003422]"
+        ]
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "Topic": "1SaryoniAsSSermons3 [DIAL:01F8E8E5]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 863, 
+        "Record Flags": {}, 
+        "FormID": "01F8E8E6", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSHolyElf [QUST:0101C624]", 
+    "TPIC - Topic": "000000C8", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 4D 53"
+            }, 
+            "NAM1 - Response Text": "Here is your book back, outlander. I shall forget this incident with the Nord and commit my life to spreading the wisdom of Vivec.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 4D 53"
+            }, 
+            "NAM1 - Response Text": "Here, take my possessions. I no longer need them.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSHolyElf "Wood Elf with a Grievance" [QUST:0101C624]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0highUpockets "High-Pockets" [NPC_:01260AAF]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 8, 
+            "CompiledSize": 136, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 06 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 07 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 08 00 6E FA 00 00 00 53 10 0A 00 02 00 72 01 00 6E 28 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwMSHolyElf 100\r\nplayer.AddItem 0bkuSaryonisSermons 1\r\nplayer.AddItem 0commonupantsu06 1\r\nplayer.AddItem 0commonushoesu06 1\r\nplayer.AddItem 0commonushirtu06 1\r\nplayer.AddItem fbmwRingofIcegrip 1\r\nplayer.AddItem Gold001 250\r\nmoddisposition player 40", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMSHolyElf [QUST:0101C624]", 
+            "SCRO - Global Reference": "0bkUSaryonisSermons [BOOK:01180088]", 
+            "SCRO - Global Reference": "0commonUpantsU06 [CLOT:01140207]", 
+            "SCRO - Global Reference": "0commonUshoesU06 [CLOT:0114020B]", 
+            "SCRO - Global Reference": "0commonUshirtU06 [CLOT:01140209]", 
+            "SCRO - Global Reference": "fbmwRingofIcegrip [CLOT:0102BB19]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]"
+        ]
+    }
+}

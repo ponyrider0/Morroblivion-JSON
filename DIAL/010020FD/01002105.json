@@ -1,0 +1,121 @@
+{
+    "Topic": "mwMQBackPath03WraithguardYes [DIAL:010020FD]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1039, 
+        "Record Flags": {}, 
+        "FormID": "01002105", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQTheBackPath [QUST:01002C54]", 
+    "PNAM - Previous INFO": "01002106", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "54 65 6D"
+            }, 
+            "NAM1 - Response Text": "Very well. [Yagrum Bagarn takes the unique Dwemer artifact, and performs a series of manipulations. He then returns it.] Now, the first time you equip Wraithguard, you will experience a terrible shock.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "If you are in perfect health, and you have fortified your health as much as possible, there is a slight chance you will survive.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "If you survived, Wraithguard would work as designed. If you eat right, exercise, and improve your health, when you are much healthier, then you might risk equipping Wraithguard.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "A2", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 200.000000000000000, 
+            "Function": "GetActorValue:14", 
+            "Unused": "00 00", 
+            "Parameter #1": "Health [ACVA:00000008]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "02", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0miscUwraithguardUnoUequip "Unique Dwemer Artifact" [MISC:011600E3]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 2.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQTheBackPath "Yagrum Bagarn and Wraithguard" [QUST:01002C54]", 
+            "Parameter #2": "State", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 25.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQTheBackPath "Yagrum Bagarn and Wraithguard" [QUST:01002C54]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "FBMWTempDwemer "Yagrum Bagarn" [NPC_:010033C5]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 50, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 39 10 0A 00 02 00 72 04 00 6E 41 00 00 00", 
+        "SCTX - Result script source": "player.removeitem 0miscUwraithguardUnoUequip 1\r\nplayer.additem fbmwWraithguardJuryRig 1\r\nSetStage fbmwMQTheBackPath 65", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0miscUwraithguardUnoUequip [MISC:011600E3]", 
+            "SCRO - Global Reference": "FBMWWraithguardJuryRig [ARMO:0100A1E9]", 
+            "SCRO - Global Reference": "fbmwMQTheBackPath [QUST:01002C54]"
+        ]
+    }
+}

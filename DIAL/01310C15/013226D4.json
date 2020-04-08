@@ -1,0 +1,105 @@
+{
+    "Topic": "1Caryarel [DIAL:01310C15]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 579, 
+        "Record Flags": {}, 
+        "FormID": "013226D4", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwICMissingLimeware [QUST:0100B81D]", 
+    "PNAM - Previous INFO": "013226D3", 
+    "Add topics": [
+        "NAME - Topic": "01310B68", 
+        "NAME - Topic": "01310B68", 
+        "NAME - Topic": "01310A23", 
+        "NAME - Topic": "01310B68", 
+        "NAME - Topic": "01310C43", 
+        "NAME - Topic": "01310B99"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Gnaar Mok. He lives in Gnaar Mok, a village on the Bitter Coast. You can take passage to Gnaar Mok by way of Hla Oad from the Ebonheart docks.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Speak to Nevosi Hlan, shipmaster. His boat is the 'Chun-Ook'.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsRace:69", 
+            "Unused": "00 00", 
+            "Parameter #1": "HighElf "High Elf" [RACE:00019204]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInCell:67", 
+            "Unused": "00 00", 
+            "Parameter #1": "Ebonheart "Ebonheart" [CELL:01480031]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsSex:70", 
+            "Unused": "00 00", 
+            "Parameter #1": "Male", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0F 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwicmissinglimeware 15", 
+        "References": [
+            "SCRO - Global Reference": "fbmwICMissingLimeware [QUST:0100B81D]"
+        ]
+    }
+}

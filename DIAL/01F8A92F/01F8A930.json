@@ -1,0 +1,71 @@
+{
+    "Topic": "fbmwickayeworkyes [DIAL:01F8A92F]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 633, 
+        "Record Flags": {}, 
+        "FormID": "01F8A930", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwICMissingLimeware [QUST:0100B81D]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "0131071A", 
+        "NAME - Topic": "01310C15"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "Good. I could use a little help here. We treated a High Elf named Caryarel for swamp fever, but we later discovered that while he was here, a rare Chapel Limeware Bowl disappeared from our shrine.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "Will you find this Caryarel and retrieve our bowl for us? The High Elves are a small, tight-knit community on Vvardenfell. Try asking other High Elves if they know Caryarel and where he lives.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Kaye "Kaye" [NPC_:012602E6]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwicmissinglimeware 1", 
+        "References": [
+            "SCRO - Global Reference": "fbmwICMissingLimeware [QUST:0100B81D]"
+        ]
+    }
+}

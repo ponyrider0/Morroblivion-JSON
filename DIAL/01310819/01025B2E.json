@@ -1,0 +1,66 @@
+{
+    "Topic": "1RedoranSHortator [DIAL:01310819]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 367, 
+        "Record Flags": {}, 
+        "FormID": "01025B2E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQRedoranArobar [QUST:01001DDD]", 
+    "PNAM - Previous INFO": "01025B2F", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "65 72 53"
+            }, 
+            "NAM1 - Response Text": "You have murdered a Redoran counselor. I don't know why you're walking the streets free. But I promise you. I'll never give you my vote for Hortator.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0minerSarobar "Miner Arobar" [NPC_:0126007A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQRedoran "Redoran Hortator" [QUST:01001DDC]", 
+            "Parameter #2": "deadred", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmqredoranarobar 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQRedoranArobar [QUST:01001DDD]"
+        ]
+    }
+}

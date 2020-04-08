@@ -1,0 +1,89 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1719, 
+        "Record Flags": {}, 
+        "FormID": "0101C68A", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwMSBouncerScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 11, 
+        "CompiledSize": 414, 
+        "VariableCount": 5, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 90 01 00 00 16 00 15 00 17 00 11 00 20 58 3A 10 05 00 01 00 72 02 00 20 31 31 30 20 3C 16 00 0D 00 15 00 09 00 20 73 02 00 20 30 20 3D 3D 16 00 13 00 01 00 0F 00 20 58 54 10 05 00 01 00 72 03 00 20 30 20 3E 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 16 00 13 00 01 00 0F 00 20 58 54 10 05 00 01 00 72 04 00 20 30 20 3E 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 16 00 13 00 01 00 0F 00 20 58 54 10 05 00 01 00 72 05 00 20 30 20 3E 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 16 00 13 00 01 00 0F 00 20 58 54 10 05 00 01 00 72 06 00 20 30 20 3E 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 16 00 13 00 01 00 0F 00 20 58 54 10 05 00 01 00 72 07 00 20 30 20 3E 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 16 00 13 00 01 00 0F 00 20 58 54 10 05 00 01 00 72 08 00 20 30 20 3E 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 16 00 13 00 01 00 0F 00 20 58 54 10 05 00 01 00 72 09 00 20 30 20 3E 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 19 00 00 00 19 00 00 00 16 00 0D 00 05 00 09 00 20 73 04 00 20 31 20 3D 3D 16 00 17 00 03 00 13 00 20 72 0A 00 58 43 10 05 00 01 00 72 0B 00 20 30 20 3D 3D 1C 00 01 00 22 10 00 00 15 00 07 00 73 04 00 02 00 20 30 37 10 05 00 01 00 72 02 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwMSBouncerScript\n\nshort GalmsHonest\nshort KilledPatron\nshort GalmsKnown\nshort DenegorDisable\nshort Bet\n\nbegin gamemode\n	if GetStage FBMWMSBouncer<110\n		if killedpatron==0\n			if GetDeadCount 0therdon>0\n				set KilledPatron to 1\n			endif\n			if GetDeadCount 0soscean>0\n				set KilledPatron to 1\n			endif\n			if GetDeadCount 0raAtesh>0\n				set KilledPatron to 1\n			endif\n			if GetDeadCount 0mitanneSlimax>0\n				set KilledPatron to 1\n			endif\n			if GetDeadCount 0holmar>0\n				set KilledPatron to 1\n			endif\n			if GetDeadCount 0galmsSseles>0\n				set KilledPatron to 1\n			endif\n			if GetDeadCount 0bakhSgroTsham>0\n				set KilledPatron to 1\n			endif\n		endif\n	endif\n\n	if DenegorDisable == 1\n		if Player.GetInCell MournholdVSTheSWingedSGuar == 0\n			fbmwDenegor.Disable\n			set DenegorDisable to 0\n			StopQuest fbmwMSBouncer\n		endif\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 834 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "GalmsHonest"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "7E A2 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "KilledPatron"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "GalmsKnown"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "7E A2 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "DenegorDisable"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "Bet"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwDenegor [ACHR:01F04F75]", 
+        "SCRO - Global Reference": "fbmwMSBouncer [QUST:0101C61B]", 
+        "SCRO - Global Reference": "0therdon [NPC_:01260AB3]", 
+        "SCRO - Global Reference": "0Soscean [NPC_:01260A90]", 
+        "SCRO - Global Reference": "0raAtesh [NPC_:01260AD6]", 
+        "SCRO - Global Reference": "0mitanneSlimax [NPC_:01260AE0]", 
+        "SCRO - Global Reference": "0holmar [NPC_:01260AB0]", 
+        "SCRO - Global Reference": "0galmsSseles [NPC_:01260AAC]", 
+        "SCRO - Global Reference": "0bakhSgroTsham [NPC_:01260AD1]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "MournholdVSTheSWingedSGuar [CELL:014804EC]"
+    ]
+}

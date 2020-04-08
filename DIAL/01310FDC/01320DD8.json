@@ -1,0 +1,106 @@
+{
+    "Topic": "1anonymousSwriter [DIAL:01310FDC]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 717, 
+        "Record Flags": {}, 
+        "FormID": "01320DD8", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTR09 [QUST:0101C64E]", 
+    "PNAM - Previous INFO": "0101C6D8", 
+    "Add topics": [
+        "NAME - Topic": "01310FDC", 
+        "NAME - Topic": "01310FD0", 
+        "NAME - Topic": "01311084", 
+        "NAME - Topic": "01310CF8", 
+        "NAME - Topic": "01310D0B", 
+        "NAME - Topic": "0131108A"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "We'd like you to find the anonymous writer of 'The Common Tongue' and persuade him to stop printing such lies about King Helseth.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "When we make official inquiries, people just look stupid and assure us they have no idea what we are talking about.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "We think you may have better luck -- particularly if you approach less-reputable citizens -- persons who place profit above honor.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTR08Hlaalu "Evidence of Conspiracy" [QUST:0101C64D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0TieniusSDelitian "Tienius Delitian" [NPC_:01260A79]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1anonymousSwriter1 [DIAL:01320DD7]", 
+        "TCLT - Choice": "1anonymousSwriter2 [DIAL:01320DD5]", 
+        "TCLT - Choice": "1anonymousSwriter3 [DIAL:01320DD2]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

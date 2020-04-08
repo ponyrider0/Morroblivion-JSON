@@ -1,0 +1,23 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 890, 
+        "Record Flags": {}, 
+        "FormID": "01F8E9A1", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwMSBattleBotsFightScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 226, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 D2 00 00 00 00 00 16 00 14 00 07 00 10 00 20 58 88 10 05 00 01 00 72 01 00 20 31 20 3D 3D 16 00 10 00 02 00 0C 00 20 72 02 00 73 01 00 20 31 20 3D 3D 15 00 0A 00 72 02 00 73 04 00 02 00 20 32 15 00 0A 00 72 02 00 73 03 00 02 00 20 30 17 00 02 00 02 00 15 00 0A 00 72 02 00 73 04 00 02 00 20 31 15 00 0A 00 72 02 00 73 03 00 02 00 20 30 19 00 00 00 17 00 02 00 07 00 16 00 10 00 02 00 0C 00 20 72 02 00 73 01 00 20 32 20 3D 3D 15 00 0A 00 72 02 00 73 04 00 02 00 20 32 15 00 0A 00 72 02 00 73 03 00 02 00 20 30 17 00 02 00 02 00 15 00 0A 00 72 02 00 73 04 00 02 00 20 31 15 00 0A 00 72 02 00 73 03 00 02 00 20 30 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwMSBattleBotsFightScript\r\n\r\nBegin Ondeath\r\n	if GetIsReference fbmwBattleBot1 == 1\r\n		if fbmwMSBattleBots1.BetOn == 1\r\n			set fbmwMSBattleBots1.Win to 2\r\n			set fbmwMSBattleBots1.battleOn to 0\r\n		else\r\n			set fbmwMSBattleBots1.Win to 1\r\n			set fbmwMSBattleBots1.battleOn to 0\r\n		endif\r\n	else\r\n		if fbmwMSBattleBots1.BetOn == 2\r\n			set fbmwMSBattleBots1.Win to 2\r\n			set fbmwMSBattleBots1.battleOn to 0\r\n		else\r\n			set fbmwMSBattleBots1.Win to 1\r\n			set fbmwMSBattleBots1.battleOn to 0\r\n		endif\r\n	endif\r\n	end\n;<CSEBlock>\n;<CSECaretPos> 450 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "fbmwBattleBot1 [ACRE:01F8B89B]", 
+        "SCRO - Global Reference": "fbmwMSBattleBots1 [QUST:0101C618]"
+    ]
+}

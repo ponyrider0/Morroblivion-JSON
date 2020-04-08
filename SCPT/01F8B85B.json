@@ -1,0 +1,24 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 729, 
+        "Record Flags": {}, 
+        "FormID": "01F8B85B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwIngmarDragrScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 3, 
+        "CompiledSize": 206, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0B 00 08 00 12 00 00 00 01 00 72 01 00 39 10 0A 00 02 00 72 02 00 6E 28 00 00 00 11 00 00 00 10 00 08 00 0A 00 2F 00 00 00 00 00 16 00 15 00 01 00 11 00 20 58 3A 10 05 00 01 00 72 02 00 20 34 30 20 21 3D 39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 19 00 00 00 11 00 00 00 10 00 06 00 00 00 64 00 00 00 16 00 29 00 01 00 25 00 20 58 01 10 05 00 01 00 72 01 00 20 35 31 32 20 3C 20 58 3A 10 05 00 01 00 72 02 00 20 33 30 20 3E 3D 20 26 26 16 10 05 00 01 00 72 01 00 19 00 00 00 16 00 11 00 02 00 0D 00 20 58 E8 10 00 00 20 5A 03 00 20 3D 3D 17 10 00 00 16 10 05 00 01 00 72 01 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwIngmarDragrScript\n\n\nbegin onhit Player\n	SetStage fbmwBMIngmar 40\nend\n\nbegin ondeath\n	if(GetStage fbmwBMIngmar != 40)\n		SetStage fbmwBMIngmar 50\n	endif\nend\nBegin GameMode\n	if(GetDistance Player < 512)&&(GetStage fbmwBMIngmar >= 30)\n		StartCombat Player\n	endif\n	if(GetCombatTarget == fbmwbmingmarRef)\n		StopCombat fbmwbmingmarRef\n		StartCombat Player\n	endif\nEnd	\n;<CSEBlock>\n;<CSECaretPos> 233 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "fbmwBMIngmar [QUST:0101B6C6]", 
+        "SCRO - Global Reference": "fbmwbmingmarRef [ACHR:01F0251E]"
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "Topic": "fbmwicmissingyes [DIAL:01F8A937]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 907, 
+        "Record Flags": {}, 
+        "FormID": "01F8A938", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwICMissingLimeware [QUST:0100B81D]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "So you found Caryarel? And recovered our bowl? Well done! Here. Let me give you something to cover your expenses. And here are a few Divine Intervention scrolls.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "I never go anywhere without them. And when you're ready for another shrine sergeant mission, speak to me again.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0miscUlwUbowlUchapel "Chapel Limeware Bowl" [MISC:011601FF]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Kaye "Kaye" [NPC_:012602E6]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 8, 
+            "CompiledSize": 108, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 A9 10 0D 00 03 00 72 03 00 72 04 00 6E 05 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E C8 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 06 00 6E 03 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 07 00 6E 01 00 00 00 36 10 05 00 01 00 72 08 00", 
+        "SCTX - Result script source": "setstage fbmwicmissinglimeware 50\r\nmodfactionreaction 0imperialscult playerfaction 5\r\nmoddisposition player 10\r\nplayer.additem gold001 200\r\nplayer.additem 0scudivineintervention 3\r\nplayer.removeitem 0misculwubowluchapel 1\r\nstartquest fbmwichaunting", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwICMissingLimeware [QUST:0100B81D]", 
+            "SCRO - Global Reference": "0ImperialSCult [FACT:01220003]", 
+            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "0scUdivineintervention [BOOK:011801D6]", 
+            "SCRO - Global Reference": "0miscUlwUbowlUchapel [MISC:011601FF]", 
+            "SCRO - Global Reference": "fbmwICHaunting [QUST:0100B81E]"
+        ]
+    }
+}

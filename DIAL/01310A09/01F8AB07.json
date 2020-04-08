@@ -1,0 +1,80 @@
+{
+    "Topic": "1SevenSGraces [DIAL:01310A09]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 632, 
+        "Record Flags": {}, 
+        "FormID": "01F8AB07", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTTSevenGraces [QUST:01002C79]", 
+    "TPIC - Topic": "013109ED", 
+    "PNAM - Previous INFO": "01F8AB06", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Take this book, \"The Pilgrim's Path.\" It describes where the pilgrimage sites are. After you have completed these pilgrimages, speak with me again.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 54 54"
+            }, 
+            "NAM1 - Response Text": "I should warn you that while most of these are easy, the pilgrimages of Ghostgate and the Ruddy Man are more difficult. You may wish to do those last.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetPCInFaction:132", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Temple "Temple" [FACT:01220002]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 8.000000000000000, 
+            "Function": "GetFactionRank:73", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Temple "Temple" [FACT:01220002]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 0A 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwttsevengraces 10\r\nplayer.additem 0bkupilgrimspath 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwTTSevenGraces [QUST:01002C79]", 
+            "SCRO - Global Reference": "0bkUPilgrimsPath [BOOK:0118008A]"
+        ]
+    }
+}

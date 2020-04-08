@@ -1,0 +1,68 @@
+{
+    "Topic": "fbmwBMMeadHallHunter [DIAL:0100A17C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 607, 
+        "Record Flags": {}, 
+        "FormID": "0100A17D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMMeadHall [QUST:0101B6C8]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Yes, my chieftain. I will send out the hunters. They will kill as many snow bears and snow wolves as they are able, and bring back their pelts. Brynjolfr the smith can use these pelts to craft some custom armor. ", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "These are elusive creatures, however, and it may be some time before the hunters return. Check back in a few days.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0svenjaSsnowTsong "Svenja Snow-Song" [NPC_:01260B34]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 28, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 15 00 0A 00 72 02 00 73 0C 00 02 00 20 31", 
+        "SCTX - Result script source": "setstage fbmwbmMeadHallc 10\r\nset fbmwBMMeadHall.orderhunter to 1", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMMeadHallc [QUST:0101B6CB]", 
+            "SCRO - Global Reference": "fbmwBMMeadHall [QUST:0101B6C8]"
+        ]
+    }
+}

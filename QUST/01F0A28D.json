@@ -1,0 +1,362 @@
+{
+    "Record Header": {
+        "Signature": "QUST", 
+        "Data Size": 4466, 
+        "Record Flags": {}, 
+        "FormID": "01F0A28D", 
+        "Version Control Info": "18 12 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwMQ01", 
+    "FULL - Name": "Report to Caius Cosades", 
+    "ICON - Icon FileName": "darthsouth\\Quests\\morrowindmainquest.dds", 
+    "DATA - General": {
+        "Flags": {}, 
+        "Priority": 90
+    }, 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsPlayableRace:254", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestRunning:56", 
+            "Unused": "00 00", 
+            "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Stages": [
+        {
+            "INDX - Stage index": 1, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "My orders are to go to the town of Balmora in Vvardenfell District and report to a man named Caius Cosades. To find out where he lives, I should ask in Balmora at the cornerclub called South Wall. When I find Caius Cosades, I must give him a package of documents, and wait for further orders.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 2, 
+                            "CompiledSize": 18, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00", 
+                        "SCTX - Result script source": "addtopic 1travelstogether\r\naddtopic fbmwtaunttopic", 
+                        "References": [
+                            "SCRO - Global Reference": "1travelStogether [DIAL:0131086A]", 
+                            "SCRO - Global Reference": "FBMWTauntTopic [DIAL:01F8ACD7]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 2, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Elone at Arrile's Tradehouse gave me detailed directions to Balmora.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 9, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "55 10 05 00 01 00 72 01 00", 
+                        "SCTX - Result script source": "ShowMap mwBalmoraMapMarker", 
+                        "References": [
+                            "SCRO - Global Reference": "mwBalmoraMapMarker [REFR:0100C56C]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 5, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "A patron of the South Wall cornerclub called Caius Cosades \"an old sugar tooth\", and says to ask the owner, Bacola Closcius, about Caius Cosades.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 10, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Bacola Closcius says Caius Cosades rents a little bed-and-basket up the hill from the South Wall. go right up the stairs from the front door, then left at the top of the stairs and down to the end of the street.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 11, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I reported to Caius Cosades, but I haven't given him the package of documents yet.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 12, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I gave Caius Cosades the package of documents. Caius Cosades says the Emperor wants me inducted into the Blades, the Imperial Intelligence service, with the rank of Novice. Caius Cosades would be my Spymaster, and I would follow his orders. Should I do as the Emperor commands? I'm not sure... I want to think about it.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 14, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I have given Caius Cosades the package of documents. And by the Emperor's command, Caius Cosades has inducted my in to the Blades, the Imperial Intelligence service, with the rank of Novice. Caius Cosades will be my Spymaster, and I'll follow his orders.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 18, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "Spymaster Caius Cosades gave me 200 gold to spend as I please. And he also told me to establish a cover identity as a freelance adventurer. He suggested I join the Fighters Guild, or Mages Guild, or Imperial cult, advance in the ranks, gain skill and experience, or go out on my own, get freelance work. Then, when I'm ready, I come back to Caius for orders.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 180, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 61 00 01 00 5D 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 43 6F 6D 70 6C 65 74 65 64 20 52 65 70 6F 72 74 20 74 6F 20 43 61 69 75 73 20 43 6F 73 61 64 65 73 20 71 75 65 73 74 22 F9 16 26 00 01 00 22 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 35 30 19 00 00 00", 
+                        "SCTX - Result script source": "if ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qCompleted Report to Caius Cosades quest%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 50\"\r\nendif"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 20, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "Spymaster Cauis Cosades told me to establish a cover identity as a freelance adventurer. He suggested I might find some work at the Fighters Guild and the Mages Guild. When I'm ready, I'm to come back to him, and he'll have orders for me.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 180, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 61 00 01 00 5D 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 43 6F 6D 70 6C 65 74 65 64 20 52 65 70 6F 72 74 20 74 6F 20 43 61 69 75 73 20 43 6F 73 61 64 65 73 20 71 75 65 73 74 22 F9 16 26 00 01 00 22 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 35 30 19 00 00 00", 
+                        "SCTX - Result script source": "if ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qCompleted Report to Caius Cosades quest%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 50\"\r\nendif"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 22, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "Spymaster Caius Cosades suggested I maintain a cover identity as a freelance adventurer, just to avoid drawing unwanted attention. And he says he has orders for me, whenever I'm ready.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 180, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 61 00 01 00 5D 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 43 6F 6D 70 6C 65 74 65 64 20 52 65 70 6F 72 74 20 74 6F 20 43 61 69 75 73 20 43 6F 73 61 64 65 73 20 71 75 65 73 74 22 F9 16 26 00 01 00 22 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 35 30 19 00 00 00", 
+                        "SCTX - Result script source": "if ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qCompleted Report to Caius Cosades quest%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 50\"\r\nendif"
+                    }
+                }
+            ]
+        }
+    ], 
+    "Targets": [
+        {
+            "QSTA - Target": {
+                "Target": "01808020", 
+                "Flags": {}, 
+                "Unused": "00 A0 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "20", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetInCell:67", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "BalmoraVSSouthSWallSCornerclub "Balmora, South Wall Cornerclub" [CELL:0148012A]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "01", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwMQ01 "Report to Caius Cosades" [QUST:01F0A28D]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 2.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwMQ01 "Report to Caius Cosades" [QUST:01F0A28D]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "01859C77", 
+                "Flags": {}, 
+                "Unused": "00 A0 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 5.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwMQ01 "Report to Caius Cosades" [QUST:01F0A28D]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "0181083F", 
+                "Flags": {}, 
+                "Unused": "00 A0 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "60", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 10.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwMQ01 "Report to Caius Cosades" [QUST:01F0A28D]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "A0", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 22.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwMQ01 "Report to Caius Cosades" [QUST:01F0A28D]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+{
+    "Topic": "fbmwMQ14iamnerevar [DIAL:010269EB]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 350, 
+        "Record Flags": {}, 
+        "FormID": "010269EC", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ14 [QUST:01002C56]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "4D 57 4D"
+            }, 
+            "NAM1 - Response Text": "That is bitter. The gods and fates are cruel. I served you faithfully once, Lord Nerevar, and you repaid me with death.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "4D 57 4D"
+            }, 
+            "NAM1 - Response Text": "I hope this time it will be you who pays for your faithlessness.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwDagothUr "Dagoth Ur" [NPC_:0100A1E7]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "fbmwMQ14secondquestion [DIAL:010269F3]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

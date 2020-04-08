@@ -1,0 +1,27 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 727, 
+        "Record Flags": {}, 
+        "FormID": "01F0A343", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwTownAldRuhnQuestScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 6, 
+        "CompiledSize": 172, 
+        "VariableCount": 0, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 9E 00 00 00 16 00 14 00 09 00 10 00 20 58 3A 10 05 00 01 00 72 01 00 20 33 20 3E 3D 16 00 14 00 07 00 10 00 20 58 3A 10 05 00 01 00 72 02 00 20 33 20 3E 3D 16 00 14 00 05 00 10 00 20 58 3A 10 05 00 01 00 72 03 00 20 33 20 3E 3D 16 00 14 00 03 00 10 00 20 58 3A 10 05 00 01 00 72 04 00 20 33 20 3E 3D 16 00 14 00 01 00 10 00 20 58 3A 10 05 00 01 00 72 05 00 20 33 20 3E 3D 39 10 0A 00 02 00 72 06 00 6E 63 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "SCN fbmwTownAldRuhnQUESTSCRIPT\r\n\r\n; Applied to Quest fbmwTownAldRuhn.  This quest ends when the 5 related quests all end.\r\n\r\nBegin Gamemode\r\n	If GetStage fbmwTownAldBevene >= 3\r\n		If GetStage fbmwTownAldBivale >= 3\r\n			If GetStage fbmwTownAldDaynes >= 3\r\n				If GetStage fbmwTownAldLlethri >= 3\r\n					If GetStage fbmwTownAldTiras >= 3\r\n						SetStage fbmwTownAldRuhn 99\r\n					EndIf\r\n				EndIf\r\n			EndIf\r\n		EndIf\r\n	EndIf\r\nEnd", 
+    "References": [
+        "SCRO - Global Reference": "fbmwTownAldBevene [QUST:0101C641]", 
+        "SCRO - Global Reference": "fbmwTownAldBivale [QUST:0101C642]", 
+        "SCRO - Global Reference": "fbmwTownAldDaynes [QUST:0101C643]", 
+        "SCRO - Global Reference": "fbmwTownAldLlethri [QUST:0101C644]", 
+        "SCRO - Global Reference": "fbmwTownAldTiras [QUST:0101C645]", 
+        "SCRO - Global Reference": "fbmwTownAldRuhn [QUST:01F0A39C]"
+    ]
+}

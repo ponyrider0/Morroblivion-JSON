@@ -1,0 +1,70 @@
+{
+    "Topic": "1NerevarineSprophecies [DIAL:013106D3]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 544, 
+        "Record Flags": {}, 
+        "FormID": "0101DD5C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMQ11e [QUST:01001DCE]", 
+    "PNAM - Previous INFO": "0101DD5B", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "Very well. This problem has an easy solution.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 2.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ11e "Erabenimsum Nereverine" [QUST:01001DCE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ulathTpal "Ulath-Pal" [NPC_:01260329]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 96, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 53 10 0A 00 02 00 72 03 00 6E 9C FF FF FF 1C 00 01 00 0F 10 09 00 02 00 21 00 6E 64 00 00 00 1C 00 01 00 16 10 05 00 01 00 72 03 00 1C 00 02 00 53 10 0A 00 02 00 72 03 00 6E 9C FF FF FF 1C 00 02 00 0F 10 09 00 02 00 21 00 6E 64 00 00 00 1C 00 02 00 16 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "mwUlathPalREF.ModDisposition Player -100\r\nmwUlathPalREF.SetAV Aggression 100\r\nmwUlathPalREF.StartCombat Player\r\nmwAhazREF.ModDisposition Player -100\r\nmwAhazREF.SetAV Aggression 100\r\nmwAhazREF.StartCombat Player", 
+        "References": [
+            "SCRO - Global Reference": "mwUlathPalREF [ACHR:0181FEDA]", 
+            "SCRO - Global Reference": "mwAhazREF [ACHR:0181FEDC]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

@@ -1,0 +1,79 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 656, 
+        "Record Flags": {}, 
+        "FormID": "01009D85", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwEBQArtifact [QUST:01F8E3E9]", 
+    "PNAM - Previous INFO": "01009D86", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6C 69 6E"
+            }, 
+            "NAM1 - Response Text": "My brother bested me, though it could have gone either way. As he has won the argument, we will follow you into the ruins.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6C 69 6E"
+            }, 
+            "NAM1 - Response Text": "Here, take this key. My brother and I have no interest in treasure, but perhaps you can use it to find what you seek. Let us go.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 40.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwEBQArtifact "Helm of Tohan" [QUST:01F8E3E9]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "mwDarisNorvayne "Daris Norvayne" [NPC_:01F8E3DB]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 60, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 15 00 0A 00 72 03 00 73 01 00 02 00 20 31 39 10 0A 00 02 00 72 03 00 6E 29 00 00 00", 
+        "SCTX - Result script source": "removeitem mwKeyTohan 1\r\nplayer.additem mwKeyTohan 1\r\nset fbmwEBQArtifact.follownow to 1\r\nsetstage fbmwEBQArtifact 41", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "mwKeyTohan [KEYM:010039DD]", 
+            "SCRO - Global Reference": "fbmwEBQArtifact [QUST:01F8E3E9]"
+        ]
+    }
+}

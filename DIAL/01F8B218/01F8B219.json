@@ -1,0 +1,59 @@
+{
+    "Topic": "fbmwbmDraugrKill [DIAL:01F8B218]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 379, 
+        "Record Flags": {}, 
+        "FormID": "01F8B219", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwBMDraugr [QUST:0101AF8D]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6D 77 42"
+            }, 
+            "NAM1 - Response Text": "As you wish. My death will only mean the death of these people, the Skaal. Your death means only that I will live on in this hell. You have made a poor choice.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwbmDraugrAesliip "Aesliip" [NPC_:01F8B1AC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 4B 00 00 00 16 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "setstage fbmwbmDraugr 75\r\nstartcombat player", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMDraugr [QUST:0101AF8D]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

@@ -1,0 +1,91 @@
+{
+    "Topic": "1ratSinfestation [DIAL:013108CE]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 659, 
+        "Record Flags": {}, 
+        "FormID": "01F8A475", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwEBPest [QUST:01003424]", 
+    "PNAM - Previous INFO": "01F8A474", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "It's been awful in the past few weeks, and nothing I do seems to help. I've tried poison, spells, everything! I know you've killed the ones in my back room, and for that I thank you, but they'll just kep coming back unless they're stamped out at the source.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "I'd be grateful if you could take care of this for me, and I would be willing to pay you for your services.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 2.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwRattelvanniUnique2 "Rat" [CREA:01F2A527]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwEBPest "The Enchanter's Rats" [QUST:01003424]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0audenianSvalius "Audenian Valius" [NPC_:01260581]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1ratSinfestation1 [DIAL:0132107D]", 
+        "TCLT - Choice": "1ratSinfestation2 [DIAL:0132107B]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 14 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwEBPest 20", 
+        "References": [
+            "SCRO - Global Reference": "fbmwEBPest [QUST:01003424]"
+        ]
+    }
+}

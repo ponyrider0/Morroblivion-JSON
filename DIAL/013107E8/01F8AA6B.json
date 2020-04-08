@@ -1,0 +1,89 @@
+{
+    "Topic": "1goldSkanetSflower [DIAL:013107E8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 692, 
+        "Record Flags": {}, 
+        "FormID": "01F8AA6B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSGoldKanetFlower [QUST:0101C620]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6D 77 45"
+            }, 
+            "NAM1 - Response Text": "Just what I needed! Thank you so much. Here, take this, and my gratitude. It's nice to see people will still help each other.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSGoldKanetFlower "Roland's Tear" [QUST:0101C620]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 5.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSGoldKanetFlower "Roland's Tear" [QUST:0101C620]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 5.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ingredUgoldUkanetUunique "Roland's Tear" [INGR:010A004C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0auraneSfrernis "Aurane Frernis" [NPC_:0126034D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 92, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 05 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00 02 10 0A 00 02 00 72 03 00 6E 05 00 00 00 52 10 0A 00 02 00 72 04 00 6E 01 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmsgoldkanetflower 100\r\nplayer.removeitem 0ingredugoldukanetuunique 5\r\nplayer.additem 0pufortifyuluckue 1\r\nadditem 0ingredugoldukanetuunique 5\r\nremoveitem 0pufortifyuluckue 1\r\nmoddisposition player 10", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMSGoldKanetFlower [QUST:0101C620]", 
+            "SCRO - Global Reference": "0ingredUgoldUkanetUunique [INGR:010A004C]", 
+            "SCRO - Global Reference": "0pUfortifyUluckUe [ALCH:01080051]"
+        ]
+    }
+}

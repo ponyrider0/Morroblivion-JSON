@@ -1,0 +1,91 @@
+{
+    "Topic": "1SixthSHouse [DIAL:01310A61]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 625, 
+        "Record Flags": {}, 
+        "FormID": "0101FA96", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ07 [QUST:01001DBF]", 
+    "PNAM - Previous INFO": "013220E1", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "The Sixth House was not dead, but only sleeping.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "Now it wakes from its long dream, and with its Lord, Dagoth Ur, it comes forth to free Morrowind of foreign rulers and divine pretenders.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "When the land is swept clean of false friends and greedy thieves, the children of Veloth will build anew a garden of plenty in this blighted wasteland.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 40.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ07 "Sixth House Base" [QUST:01001DBF]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwDagothGares "Dagoth Gares" [NPC_:0101CE61]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1SixthSHouseSservants [DIAL:013106F9]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 2A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmq07 42", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQ07 [QUST:01001DBF]"
+        ]
+    }
+}

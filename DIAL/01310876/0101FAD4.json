@@ -1,0 +1,103 @@
+{
+    "Topic": "1corprusSdisease [DIAL:01310876]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 730, 
+        "Record Flags": {}, 
+        "FormID": "0101FAD4", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ08 [QUST:01001DC0]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "76 61 79"
+            }, 
+            "NAM1 - Response Text": "How interesting. Did you know that corprus makes you immune to disease? Have you ever heard of the prophecies of the Nerevarine?", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "76 61 79"
+            }, 
+            "NAM1 - Response Text": "Ashlanders say the Nerevarine will be immune to disease.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "76 61 79"
+            }, 
+            "NAM1 - Response Text": "I've always thought, \"Maybe I have the Nerevarine down in my Corprusarium, and I don't even know it.\" Hah. Hah.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "76 61 79"
+            }, 
+            "NAM1 - Response Text": "The Nerevarine is a fat, disgusting corprus monster, and mad as a marsh rat. Wouldn't that be funny?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ07 "Sixth House Base" [QUST:01001DBF]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0divaythSfyr "Divayth Fyr" [NPC_:01260184]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "fbmwMQ08knownothing [DIAL:0101FAD2]", 
+        "TCLT - Choice": "fbmwMQ08nerevarine [DIAL:0101FAD0]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 14 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMQ08 20", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQ08 [QUST:01001DC0]"
+        ]
+    }
+}

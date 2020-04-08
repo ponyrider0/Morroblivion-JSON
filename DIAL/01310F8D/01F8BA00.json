@@ -1,0 +1,66 @@
+{
+    "Topic": "1investigateStheSdisturbance [DIAL:01310F8D]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 425, 
+        "Record Flags": {}, 
+        "FormID": "01F8BA00", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRBamz [QUST:0101C650]", 
+    "PNAM - Previous INFO": "01F8B9FF", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": "The Dwemer constructs were fighting these...fabricants? This situation gets more and more disturbing to me. Your effort has been appreciated, though. In fact, I believe the King himself would like to speak with you.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRBamz "Investigate Bamz-Amschend" [QUST:0101C650]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0TieniusSDelitian "Tienius Delitian" [NPC_:01260A79]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 64 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwtrBamz 100", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTRBamz [QUST:0101C650]"
+        ]
+    }
+}

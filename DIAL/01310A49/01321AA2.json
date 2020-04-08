@@ -1,0 +1,85 @@
+{
+    "Topic": "1familyScrest [DIAL:01310A49]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 542, 
+        "Record Flags": {}, 
+        "FormID": "01321AA2", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwVAVampChild [QUST:01003BCA]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310D13", 
+        "NAME - Topic": "013113EE", 
+        "NAME - Topic": "01310BAC", 
+        "NAME - Topic": "01310752"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Yes, that ring bears the seal of my great family. Where did you get it? Never mind. I'm sure it was taken off one of my ancestors killed by your kind.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0sinyaramen "Sinyaramen" [NPC_:012600F1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "02", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetVampire:40", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwVampChildRing "Aundae Signet Ring" [CLOT:0101BEC3]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 36, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 58 10 05 00 01 00 72 04 00", 
+        "SCTX - Result script source": "addtopic 1ancestors\r\naddtopic 1bears\r\naddtopic 1killedSbySyourSkind\r\naddtopic 1ring", 
+        "References": [
+            "SCRO - Global Reference": "1ancestors [DIAL:01310BAC]", 
+            "SCRO - Global Reference": "1bears [DIAL:013113EE]", 
+            "SCRO - Global Reference": "1killedSbySyourSkind [DIAL:01310752]", 
+            "SCRO - Global Reference": "1ring [DIAL:01310D13]"
+        ]
+    }
+}

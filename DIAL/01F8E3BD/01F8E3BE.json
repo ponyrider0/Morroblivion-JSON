@@ -1,0 +1,78 @@
+{
+    "Topic": "mwMQBackPath01Restore [DIAL:01F8E3BD]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 532, 
+        "Record Flags": {}, 
+        "FormID": "01F8E3BE", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQTheBackPath [QUST:01002C54]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "2D 17 3C"
+            }, 
+            "NAM1 - Response Text": "I'm not sure. Let me see. [Examines the artifact.]", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "2D 17 3C"
+            }, 
+            "NAM1 - Response Text": "No. I don't think so. Not without Kagrenac's Planbook and Kagrenac's Journals. But, if the originals still exist, and I could study them, then, yes, perhaps I could restore the artifact.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "2D 17 3C"
+            }, 
+            "NAM1 - Response Text": "Whether I should or would, on the other hand, that is a different matter.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "FBMWTempDwemer "Yagrum Bagarn" [NPC_:010033C5]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "mwMQBackPath02Deeds [DIAL:01F8E3B9]", 
+        "TCLT - Choice": "mwMQBackPath02Pay [DIAL:01F8E3BF]", 
+        "TCLT - Choice": "mwMQBackPath02Plans [DIAL:01F8E3C1]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

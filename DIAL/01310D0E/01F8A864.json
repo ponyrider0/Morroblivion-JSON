@@ -1,0 +1,65 @@
+{
+    "Topic": "1work [DIAL:01310D0E]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 340, 
+        "Record Flags": {}, 
+        "FormID": "01F8A864", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTownSadrith [QUST:0101C647]", 
+    "PNAM - Previous INFO": "01F8A863", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "You say the hauntings will stop. How do you know? Can you prove it? What was causing the hauntings? If you want your reward, you must give me a satisfactory explanation.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0angaredhel "Angaredhel" [NPC_:012600F0]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 35.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTownSadrith "Gateway Ghost" [QUST:0101C647]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "fbmwtownwork1 [DIAL:01F8AF60]", 
+        "TCLT - Choice": "fbmwtownwork2 [DIAL:01F8AF5F]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

@@ -1,0 +1,89 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 536, 
+        "Record Flags": {}, 
+        "FormID": "01009AA2", 
+        "Version Control Info": "1D 16 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "mwGreetingsUnique [QUST:01F8EA1C]", 
+    "PNAM - Previous INFO": "01009AA1", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Have you come to plunder the dungeon? Or have you got corprus disease? Or did you come to see Divayth Fyr? I'm Beyte Fyr.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "I'm the wife of Divayth Fyr. One of them. Sort of.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetTalkedToPC:50", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetPCIsSex:131", 
+            "Unused": "00 00", 
+            "Parameter #1": "Male", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0beyteSfyr "Beyte Fyr" [NPC_:01260306]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 27, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "addtopic 1plunderStheSdungeon\r\naddtopic 1corprusSdisease\r\naddtopic 1DivaythSFyr", 
+        "References": [
+            "SCRO - Global Reference": "1plunderStheSdungeon [DIAL:01310727]", 
+            "SCRO - Global Reference": "1corprusSdisease [DIAL:01310876]", 
+            "SCRO - Global Reference": "1DivaythSFyr [DIAL:01310A74]"
+        ]
+    }
+}

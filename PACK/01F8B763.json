@@ -1,0 +1,47 @@
+{
+    "Record Header": {
+        "Signature": "PACK", 
+        "Data Size": 106, 
+        "Record Flags": {}, 
+        "FormID": "01F8B763", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "VoriGoBalmoraTeleporter", 
+    "PKDT - General": {
+        "General": {
+            "Flags": {
+                "Must reach location": true, 
+                "Must complete": true, 
+                "Once per day": true, 
+                "Skip fallout behavior": true, 
+                "Always run": true
+            }, 
+            "Type": "06", 
+            "Unused": "00 00 00"
+        }
+    }, 
+    "PLDT - Location": {
+        "Type": 0, 
+        "Location": "01F0A314", 
+        "Radius": 0
+    }, 
+    "PSDT - Schedule": {
+        "Month": -1, 
+        "Day of week": -1, 
+        "Date": "00", 
+        "Time": 10, 
+        "Duration": 2
+    }, 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInCell:67", 
+            "Unused": "00 00", 
+            "Parameter #1": "Balmora "Balmora" [CELL:0148003E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ]
+}

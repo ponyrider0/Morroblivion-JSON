@@ -1,0 +1,78 @@
+{
+    "Topic": "1jobs [DIAL:01310D0A]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 479, 
+        "Record Flags": {}, 
+        "FormID": "01034148", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTGAdvancement [QUST:01010562]", 
+    "PNAM - Previous INFO": "01034149", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "I got a job for you. Something that might add some clink to your pockets. I've heard the Ald'ruhn Guild of Mages has been left unguarded.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "I want you to get Anareren's Devil Tanto.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "20", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetPCInFaction:132", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ThievesSGuild "Thieves Guild" [FACT:01220001]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0aengoth "Aengoth the Jeweler" [NPC_:01260023]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 18, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 36 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "addtopic 1anarerenassdevilstanto\r\nstartquest fbmwtglootaldruhnmg", 
+        "References": [
+            "SCRO - Global Reference": "1AnarerenAsSDevilSTanto [DIAL:013106BC]", 
+            "SCRO - Global Reference": "fbmwTGLootAldruhnMG [QUST:01009333]"
+        ]
+    }
+}

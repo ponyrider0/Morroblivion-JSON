@@ -1,0 +1,92 @@
+{
+    "Topic": "fbmwtr09Widows [DIAL:01F8BCB5]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 857, 
+        "Record Flags": {}, 
+        "FormID": "01F8BCB6", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwTR09 [QUST:0101C64E]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "95 69 82"
+            }, 
+            "NAM1 - Response Text": "Hmm. You are a shrewd judge of character. I am a man of principle, and will not hold my common tongue for a payment of gold. But I know what benefits gold can do if it is used in a good cause.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "95 69 82"
+            }, 
+            "NAM1 - Response Text": "Very well. I will not discuss King Helseth in 'The Common Tongue'. You have my word. And I'll take your 3000 gold, and will contribute it to the Widows and Orphans Fund.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "95 69 82"
+            }, 
+            "NAM1 - Response Text": "And now, if you'll excuse me, we'll have to relocate immediately, now that the secret of our office is spoiled.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 3000.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "Gold001 "Gold" [MISC:0000000F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0TrelsSVaris "Trels Varis" [NPC_:01260AC5]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 46, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 02 00 6E B8 0B 00 00 02 10 0A 00 02 00 72 02 00 6E B8 0B 00 00 39 10 0A 00 02 00 72 03 00 6E 3C 00 00 00", 
+        "SCTX - Result script source": "player.removeitem gold001 3000\r\nadditem gold001 3000\r\nsetstage fbmwtr09 60", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "fbmwTR09 [QUST:0101C64E]"
+        ]
+    }
+}

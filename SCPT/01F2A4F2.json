@@ -1,0 +1,23 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 399, 
+        "Record Flags": {}, 
+        "FormID": "01F2A4F2", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwMGSirilonweChestScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 79, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 41 00 00 00 16 00 27 00 01 00 23 00 20 58 2F 10 05 00 01 00 72 01 00 20 30 20 3E 20 58 3A 10 05 00 01 00 72 02 00 20 31 30 20 3D 3D 20 26 26 39 10 0A 00 02 00 72 02 00 6E 28 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName mwMGSirilonweChestScript\n\nBegin Gamemode\n	if GetItemCount 0BookSkillUHeavySArmor3 > 0 && GetStage fbmwMGReturnBook == 10\n		SetStage fbmwMGReturnBook 40\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 11 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "0BookSkillUHeavySArmor3 [BOOK:0118003E]", 
+        "SCRO - Global Reference": "fbmwMGReturnBook [QUST:01006781]"
+    ]
+}

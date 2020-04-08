@@ -1,0 +1,47 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1412, 
+        "Record Flags": {}, 
+        "FormID": "01470015", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwArkntandDoorScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 4, 
+        "CompiledSize": 427, 
+        "VariableCount": 2, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 31 00 00 00 00 00 16 00 0D 00 02 00 09 00 20 73 01 00 20 30 20 3D 3D 15 00 07 00 73 01 00 02 00 20 31 26 10 05 00 01 00 72 03 00 19 00 00 00 1E 00 00 00 11 00 00 00 10 00 06 00 00 00 60 01 00 00 16 00 0D 00 01 00 09 00 20 73 01 00 20 30 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 0C 00 09 00 08 00 20 66 02 00 20 39 20 3C 16 00 0C 00 04 00 08 00 20 66 02 00 20 31 20 3E 16 00 0D 00 02 00 09 00 20 73 01 00 20 31 20 3D 3D 26 10 05 00 01 00 72 04 00 15 00 07 00 73 01 00 02 00 20 32 19 00 00 00 19 00 00 00 04 10 08 00 02 00 58 6E 14 00 00 00 1C 00 01 00 04 10 08 00 02 00 5A 6E F6 FF FF FF 1C 00 02 00 04 10 08 00 02 00 5A 6E 0A 00 00 00 19 00 00 00 16 00 0D 00 06 00 09 00 20 66 02 00 20 31 34 20 3E 16 00 0D 00 02 00 09 00 20 73 01 00 20 32 20 3D 3D 26 10 05 00 01 00 72 04 00 15 00 07 00 73 01 00 02 00 20 33 19 00 00 00 1C 00 01 00 04 10 08 00 02 00 5A 6E 0A 00 00 00 1C 00 02 00 04 10 08 00 02 00 5A 6E F6 FF FF FF 19 00 00 00 16 00 0D 00 04 00 09 00 20 66 02 00 20 32 33 20 3E 15 00 07 00 73 01 00 02 00 20 30 15 00 07 00 66 02 00 02 00 20 30 1C 00 01 00 09 10 0C 00 02 00 5A 7A 00 00 00 00 00 80 56 40 1C 00 02 00 09 10 0C 00 02 00 5A 7A 00 00 00 00 00 80 66 40 19 00 00 00 15 00 11 00 66 02 00 0C 00 20 58 0C 10 00 00 20 66 02 00 20 2B 11 00 00 00", 
+    "SCTX - Script Source": "scriptName mwArkntandDoorScript\n\nshort start\nfloat timer\n\nBegin OnActivate\n	if (start == 0)\n		Set start to 1\n		PlaySound \"0DwemerSDoorSOpen\"\n	endif\n	Return\nEnd\n\nBegin GameMode\n	if (start == 0)\n		Return\n	endif\n	if (timer < 9)\n		if (timer > 1)\n			if (start == 1)\n				PlaySound \"0DoorSStoneSOpen\"\n				Set start to 2\n			endif\n		endif\n		Rotate X 20\n		\"2arknUdoor00\".Rotate Z -10\n		\"2arknUdoor01\".Rotate Z 10\n	endif\n	if (timer > 14)\n		if (start == 2)\n			PlaySound \"0DoorSStoneSOpen\"\n			Set start to 3\n		endif\n		\"2arknUdoor00\".Rotate Z 10\n		\"2arknUdoor01\".Rotate Z -10\n	endif\n	if (timer > 23)\n		Set start to 0\n		Set timer to 0\n		\"2arknUdoor00\".SetAngle Z 90.0\n		\"2arknUdoor01\".SetAngle Z 180.0\n	endif\n	Set timer to (GetSecondsPassed + timer)\nEnd\n;<CSEBlock>\n;<CSECaretPos> 25 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "start"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "timer"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "2arknUdoor00 [REFR:01833817]", 
+        "SCRO - Global Reference": "2arknUdoor01 [REFR:01833818]", 
+        "SCRO - Global Reference": "0DwemerSDoorSOpen [SOUN:0130007F]", 
+        "SCRO - Global Reference": "0DoorSStoneSOpen [SOUN:013000A3]"
+    ]
+}

@@ -1,0 +1,98 @@
+{
+    "Topic": "1SanctusSShrine [DIAL:01310906]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 738, 
+        "Record Flags": {}, 
+        "FormID": "0132118F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTTSanctusShrine [QUST:01002C82]", 
+    "PNAM - Previous INFO": "01F8A4A9", 
+    "Add topics": [
+        "NAME - Topic": "01310B5B", 
+        "NAME - Topic": "01310C39", 
+        "NAME - Topic": "01310906", 
+        "NAME - Topic": "01310B9E"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "To make the Pilgrimage, I must swear you to silence. If you speak with anyone before reaching the shrine, you will have broken your vow.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Before you are sworn to silence, you may wish to purchase some potions of levitation or water walking.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "There is no easy way to get to the Sanctus Shrine in Dagon Fel and the waters can be dangerous. Tell me when you are ready to take the vow of Silence.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0endrynSllethan "Endryn Llethan" [NPC_:01260509]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1SanctusSShrine1 [DIAL:0132118C]", 
+        "TCLT - Choice": "1SanctusSShrine2 [DIAL:0132118E]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwttsanctusshrine 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTTSanctusShrine [QUST:01002C82]"
+        ]
+    }
+}

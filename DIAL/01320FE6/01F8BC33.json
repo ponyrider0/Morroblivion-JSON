@@ -1,0 +1,76 @@
+{
+    "Topic": "1officialSmatter3 [DIAL:01320FE6]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 527, 
+        "Record Flags": {}, 
+        "FormID": "01F8BC33", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRDBHunt [QUST:0101C654]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6E 69 75"
+            }, 
+            "NAM1 - Response Text": "I won't pretend I don't know about this. Of course, I'll deny it publicly. But don't take it personally. You appeared to present a threat to King Helseth.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6E 69 75"
+            }, 
+            "NAM1 - Response Text": "Perhaps mistakes were made. But you can prove they were mistakes, if you can prove your loyalty to King Helseth. So. Are you interested in helping me with my problem?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0bkUdbcontract "A Dark Brotherhood Contract" [BOOK:01180252]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0TieniusSDelitian "Tienius Delitian" [NPC_:01260A79]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1officialSmatter1 [DIAL:01320FEA]", 
+        "TCLT - Choice": "1officialSmatter2 [DIAL:01320FE8]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

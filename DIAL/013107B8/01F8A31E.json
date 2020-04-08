@@ -1,0 +1,77 @@
+{
+    "Topic": "1ItermerelAsSnotes [DIAL:013107B8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 505, 
+        "Record Flags": {}, 
+        "FormID": "01F8A31E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMGEscortScholar2 [QUST:01006775]", 
+    "PNAM - Previous INFO": "01F8A31D", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 4D 47"
+            }, 
+            "NAM1 - Response Text": "Itermerel has just arrived in Balmora and doesn't know his way around. He wants to be escorted to the Halfway Tavern in Pelagiad. I don't care if he makes it or not, outlander.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 4D 47"
+            }, 
+            "NAM1 - Response Text": "I just want a copy of his notes. He should be waiting at the Eight Plates.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMGStopCompetition "Mages Guild: Unsanctioned Training" [QUST:0100678A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ranisSathrys "Ranis Athrys" [NPC_:01260125]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmgescortscholar2 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMGEscortScholar2 [QUST:01006775]"
+        ]
+    }
+}

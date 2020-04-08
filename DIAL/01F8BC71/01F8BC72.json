@@ -1,0 +1,67 @@
+{
+    "Topic": "fbmwbmWildHuntCapnEvil [DIAL:01F8BC71]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 472, 
+        "Record Flags": {}, 
+        "FormID": "01F8BC72", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMWildHunt [QUST:0101B6DA]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "61 6C 65"
+            }, 
+            "NAM1 - Response Text": "I cannot believe this! Your mind has been clouded by these demons! I am sorry to have to fight you, for I thought you a friend. If this is how it must be, I wish you an honorable death.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMWildHunt "Hircine's Hunt" [QUST:0101B6DA]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0falxScarius2 "Captain Falx Carius" [NPC_:01260BDF]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 36, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 2C 00 00 00 10 10 09 00 02 00 21 00 6E 64 00 00 00 16 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "setstage fbmwbmWildHunt 44\r\nmodav aggression 100\r\nstartcombat player", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMWildHunt [QUST:0101B6DA]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

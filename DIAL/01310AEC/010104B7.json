@@ -1,0 +1,89 @@
+{
+    "Topic": "1Nerevarine [DIAL:01310AEC]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 768, 
+        "Record Flags": {}, 
+        "FormID": "010104B7", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ11a [QUST:01001DCC]", 
+    "PNAM - Previous INFO": "01023C77", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6D 77 4D"
+            }, 
+            "NAM1 - Response Text": "Do you come to claim the name of Nerevarine? I hope you come to do the deeds of the Nerevarine. We need the deeds, not the name.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6D 77 4D"
+            }, 
+            "NAM1 - Response Text": "You must speak to the wise woman, Sinnammu Mirpal. We are a poor, sad tribe, without an ashkhan, and led by a wise woman.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "6D 77 4D"
+            }, 
+            "NAM1 - Response Text": "And we are its gulakhans. We say this with shame, for we are as weak and helpless as children", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "6D 77 4D"
+            }, 
+            "NAM1 - Response Text": "Go to her, outlander. Tell her you will do the deeds of a hero, and save the Ahemmusa. Maybe then you will have earned the name 'Nerevarine.'", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0kausi "Kausi" [NPC_:0126033D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 02 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMQ11a 2", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQ11a [QUST:01001DCC]"
+        ]
+    }
+}

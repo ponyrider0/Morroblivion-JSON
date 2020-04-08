@@ -1,0 +1,56 @@
+{
+    "Topic": "fbmwMQ08nogive [DIAL:0101FAC5]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 320, 
+        "Record Flags": {}, 
+        "FormID": "0101FAC6", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ08 [QUST:01001DC0]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "A pity. I can see why you'd want to keep such a lovely relic of Dwemer culture. But now, if you'll excuse me, I have no time for idle chatter.'", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0divaythSfyr "Divayth Fyr" [NPC_:01260184]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmq08 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQ08 [QUST:01001DC0]"
+        ]
+    }
+}

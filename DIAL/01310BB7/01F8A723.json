@@ -1,0 +1,67 @@
+{
+    "Topic": "1landSdeed [DIAL:01310BB7]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 490, 
+        "Record Flags": {}, 
+        "FormID": "01F8A723", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwILWidowLand [QUST:0100602E]", 
+    "PNAM - Previous INFO": "01F8A722", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 49 4C"
+            }, 
+            "NAM1 - Response Text": "My husband was murdered by a legionnaire and now you come asking for his land. You will never get his land. I will fight you and all of Gnisis will fight you until all you foreigner leave us in peace. Now get out of my house.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwILWidowLand "Imperial Legion: Widow Vabdas' Deed" [QUST:0100602E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0widowSvabdas "Widow Vabdas" [NPC_:01260016]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 1E 00 00 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "setstage fbmwilwidowland 30\r\naddtopic 1husbandswassmurdered", 
+        "References": [
+            "SCRO - Global Reference": "fbmwILWidowLand [QUST:0100602E]", 
+            "SCRO - Global Reference": "1husbandSwasSmurdered [DIAL:01310716]"
+        ]
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1786, 
+        "Record Flags": {}, 
+        "FormID": "01021F20", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwMoonAndStarScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 22, 
+        "CompiledSize": 448, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 2D 00 00 00 16 00 15 00 01 00 11 00 20 58 01 10 05 00 01 00 72 01 00 20 32 30 30 20 3E 04 10 08 00 02 00 58 6E 68 01 00 00 19 00 00 00 11 00 00 00 10 00 08 00 02 00 79 01 00 00 00 00 16 00 14 00 02 00 10 00 20 58 3A 10 05 00 01 00 72 09 00 20 31 35 20 3C 00 10 23 00 01 00 1B 00 4E 65 72 65 76 61 72 27 73 20 72 69 6E 67 20 72 65 6A 65 63 74 73 20 79 6F 75 2E 00 00 00 00 1C 00 01 00 8B 10 02 00 00 00 19 00 00 00 16 00 0D 00 18 00 09 00 20 73 01 00 20 31 20 21 3D 1C 00 02 00 22 10 00 00 F8 10 07 00 01 00 6E 05 00 00 00 1C 00 01 00 89 10 0A 00 02 00 72 0A 00 6E 00 00 00 00 39 10 0A 00 02 00 72 09 00 6E 32 00 00 00 39 10 0A 00 02 00 72 0B 00 6E 01 00 00 00 39 10 0A 00 02 00 72 0C 00 6E 01 00 00 00 39 10 0A 00 02 00 72 0D 00 6E 01 00 00 00 39 10 0A 00 02 00 72 0E 00 6E 01 00 00 00 39 10 0A 00 02 00 72 0F 00 6E 01 00 00 00 39 10 0A 00 02 00 72 10 00 6E 01 00 00 00 58 10 05 00 01 00 72 11 00 58 10 05 00 01 00 72 12 00 58 10 05 00 01 00 72 13 00 58 10 05 00 01 00 72 14 00 58 10 05 00 01 00 72 15 00 58 10 05 00 01 00 72 16 00 1C 00 03 00 21 10 00 00 1C 00 04 00 21 10 00 00 1C 00 05 00 21 10 00 00 1C 00 06 00 21 10 00 00 1C 00 07 00 21 10 00 00 1C 00 08 00 21 10 00 00 14 11 11 00 01 00 0D 00 6D 77 5F 63 61 76 65 72 6E 2E 62 69 6B 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 0D 10 02 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwMoonAndStarScript\r\n\r\nshort doonce\r\n\r\nbegin gamemode\r\n	if getdistance player >200\r\n		rotate x 360\r\n	endif\r\n\r\nend\r\n\r\nbegin onactivate\r\n	if getstage fbmwMQ10<15\r\n		messagebox \"Nerevar's ring rejects you.\"\r\n		player.kill\r\n	endif\r\n\r\n	if doonce != 1\r\n		fbmwAzuraRingLightRef.disable\r\n		ModPCfame 5\r\n		Player.SetFactionRank 0nerevarine 0\r\n\r\n		SetStage fbmwMQ10 50\r\n		SetStage fbmwMQ11a 1\r\n		SetStage fbmwMQ11e 1\r\n		SetStage fbmwMQ11z 1\r\n		SetStage fbmwMQHlaaluCurio 1\r\n		SetStage fbmwMQRedoranSarethi 1\r\n		SetStage fbmwMQTelvanniAryon 1\r\n\r\n		AddTopic 1redoranscouncilors\r\n		AddTopic 1telvanniscouncilors\r\n		AddTopic 1hlaaluscouncilors\r\n		AddTopic 1redoranshortator\r\n		AddTopic 1hlaalushortator\r\n		AddTopic 1telvannishortator\r\n\r\n		fbPeakstarRef.enable\r\n		fbIdrenieRef.enable\r\n		fbErurdanRef.enable\r\n		fbConoonRef.enable\r\n		fbAneteriaRef.enable\r\n		fbHortleddRef.enable\r\n		playbink \"mw_cavern.bik\"\r\n		set doonce to 1\r\n	endif\r\n\r\n	ACTIVATE\r\nEND\r\n;<CSEBlock>\r\n;<CSECaretPos> 859 </CSECaretPos>\r\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "doonce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "fbmwazuraringlightref [REFR:0183D52C]", 
+        "SCRO - Global Reference": "fbpeakstarref [ACHR:0183D525]", 
+        "SCRO - Global Reference": "fbidrenieref [ACHR:0183D528]", 
+        "SCRO - Global Reference": "fberurdanref [ACHR:0183D527]", 
+        "SCRO - Global Reference": "fbconoonref [ACHR:0183D52A]", 
+        "SCRO - Global Reference": "fbaneteriaref [ACHR:0183D526]", 
+        "SCRO - Global Reference": "fbhortleddref [ACHR:0183D529]", 
+        "SCRO - Global Reference": "fbmwMQ10 [QUST:01001DC9]", 
+        "SCRO - Global Reference": "0Nerevarine [FACT:01220014]", 
+        "SCRO - Global Reference": "fbmwMQ11a [QUST:01001DCC]", 
+        "SCRO - Global Reference": "fbmwMQ11e [QUST:01001DCE]", 
+        "SCRO - Global Reference": "fbmwMQ11z [QUST:01001DD3]", 
+        "SCRO - Global Reference": "fbmwMQHlaaluCurio [QUST:01001DD6]", 
+        "SCRO - Global Reference": "fbmwMQRedoranSarethi [QUST:01001DE1]", 
+        "SCRO - Global Reference": "fbmwMQTelvanniAryon [QUST:01002C4B]", 
+        "SCRO - Global Reference": "1RedoranScouncilors [DIAL:0131076B]", 
+        "SCRO - Global Reference": "1TelvanniScouncilors [DIAL:01310729]", 
+        "SCRO - Global Reference": "1HlaaluScouncilors [DIAL:013107C4]", 
+        "SCRO - Global Reference": "1RedoranSHortator [DIAL:01310819]", 
+        "SCRO - Global Reference": "1HlaaluSHortator [DIAL:01310881]", 
+        "SCRO - Global Reference": "1TelvanniSHortator [DIAL:013107C6]"
+    ]
+}

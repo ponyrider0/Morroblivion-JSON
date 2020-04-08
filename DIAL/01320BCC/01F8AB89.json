@@ -1,0 +1,79 @@
+{
+    "Topic": "1goldSkanetSflower2 [DIAL:01320BCC]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 700, 
+        "Record Flags": {}, 
+        "FormID": "01F8AB89", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSGoldKanetFlower [QUST:0101C620]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "72 61 6E"
+            }, 
+            "NAM1 - Response Text": "Wonderful! Now, I may be wrong, but I think the ruins are east of here. Or was that west. No, no...east. And a bit to the north.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "72 61 6E"
+            }, 
+            "NAM1 - Response Text": "Well, it's not very far at any rate. Near the water. I'll mark it on your map. Look to the eastern edge of the ruins. Now hurry, please. Oh, and be careful, I hear there are dangers near.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "72 61 6E"
+            }, 
+            "NAM1 - Response Text": "Remember, I don't need regular gold kanet, only the Roland's Tear variety.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0auraneSfrernis "Aurane Frernis" [NPC_:0126034D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 28, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 05 00 00 00 53 10 0A 00 02 00 72 02 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmsgoldkanetflower 5\r\nmoddisposition player 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMSGoldKanetFlower [QUST:0101C620]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

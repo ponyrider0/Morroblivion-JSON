@@ -1,0 +1,65 @@
+{
+    "Topic": "1VampiresSofSVvardenfell [DIAL:0131069D]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 208, 
+        "Record Flags": {}, 
+        "FormID": "01F8A22D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMGVampVol2 [QUST:0100678D]", 
+    "PNAM - Previous INFO": "01F8A22C", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "62 61 73"
+            }, 
+            "NAM1 - Response Text": "Have you found the second volume yet?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMGVampVol2 "Mages Guild: Vampires of Vvardenfell, Vol II" [QUST:0100678D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0skinkintreesshade "Skink-in-Tree's-Shade" [NPC_:0126065B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1VampiresSofSVvardenfell1 [DIAL:013204D1]", 
+        "TCLT - Choice": "1VampiresSofSVvardenfell2 [DIAL:013204D4]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

@@ -1,0 +1,99 @@
+{
+    "Topic": "1FounderAsSHelm [DIAL:013108E0]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 540, 
+        "Record Flags": {}, 
+        "FormID": "0100D9D2", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHRFoundersHelm [QUST:01004A55]", 
+    "PNAM - Previous INFO": "0100D9D1", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6E 20 30"
+            }, 
+            "NAM1 - Response Text": "By murdering Alvis Teri you have shamed House Redoran.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6E 20 30"
+            }, 
+            "NAM1 - Response Text": "You will be expelled for this, and I will not give you any more duties.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHRFoundersHelm "House Redoran: Founder's Helm" [QUST:01004A55]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 200.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHRFoundersHelm "House Redoran: Founder's Helm" [QUST:01004A55]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "0alvisSteri "Alvis Teri" [NPC_:01260160]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0neminda "Neminda" [NPC_:012600C8]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 42, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E C8 00 00 00 C2 10 0A 00 02 00 72 02 00 6E 01 00 00 00 53 10 0A 00 02 00 72 03 00 6E F6 FF FF FF", 
+        "SCTX - Result script source": "SetStage fbmwHRFoundersHelm 200\r\nSetPCExpelled 0Redoran 1\r\nModDisposition Player -10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwHRFoundersHelm [QUST:01004A55]", 
+            "SCRO - Global Reference": "0Redoran [FACT:01220000]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

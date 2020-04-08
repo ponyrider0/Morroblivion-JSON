@@ -1,0 +1,36 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 628, 
+        "Record Flags": {}, 
+        "FormID": "0101968A", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwSecretsOfDwemerAnimunculiBookScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 138, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0B 00 04 00 31 00 00 00 01 00 72 01 00 16 00 0D 00 02 00 09 00 20 73 01 00 20 30 20 3D 3D 1C 00 01 00 1C 10 05 00 01 00 72 02 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 11 00 00 00 10 00 0B 00 02 00 37 00 00 00 01 00 72 01 00 16 00 0D 00 02 00 09 00 20 73 01 00 20 30 20 3D 3D 1C 00 01 00 1C 10 05 00 01 00 72 02 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 0D 10 02 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwSecretsOfDwemerAnimunculiBookScript\n\nshort doonce\n\nbegin onequip Player\n	if doonce == 0\n		Player.AddSpell 0summonUcenturionUunique\n		set doonce to 1\n	endif\nend\n\nbegin onactivate Player\n	if doonce == 0\n		Player.AddSpell 0summonUcenturionUunique\n		set doonce to 1\n	endif\n	Activate\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "doonce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "0summonUcenturionUunique [SPEL:010603B6]"
+    ]
+}

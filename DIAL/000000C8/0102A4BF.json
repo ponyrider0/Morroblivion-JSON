@@ -1,0 +1,78 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 451, 
+        "Record Flags": {}, 
+        "FormID": "0102A4BF", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSGreetings [QUST:01F2A564]", 
+    "PNAM - Previous INFO": "0100BFA7", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "65 72 65"
+            }, 
+            "NAM1 - Response Text": "Pardon me. But there's a very strange man in my house, and he won't leave. Will you go get him out of there, please?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwdreamergindrala "Dreamer" [NPC_:0102A4C2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ07 "Sixth House Base" [QUST:01001DBF]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0gindralaShleran "Gindrala Hleran" [NPC_:01260075]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 26, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 21 10 00 00 58 10 05 00 01 00 72 02 00 36 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "fbmwdreamergindralaref.enable\r\naddtopic 1strangesman\r\nstartquest fbmwasleeperdreamer02", 
+        "References": [
+            "SCRO - Global Reference": "fbmwdreamergindralaref [ACHR:0102A4C3]", 
+            "SCRO - Global Reference": "1strangeSman [DIAL:01310ADE]", 
+            "SCRO - Global Reference": "fbmwASleeperDreamer02 [QUST:01F8AF61]"
+        ]
+    }
+}

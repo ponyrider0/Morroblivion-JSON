@@ -1,0 +1,52 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1172, 
+        "Record Flags": {}, 
+        "FormID": "0101FDF0", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwTRAlmalexiaScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 7, 
+        "CompiledSize": 301, 
+        "VariableCount": 2, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0B 00 08 00 64 00 00 00 01 00 72 06 00 16 10 05 00 01 00 72 06 00 1C 00 01 00 16 10 05 00 01 00 72 06 00 1C 00 02 00 16 10 05 00 01 00 72 06 00 1C 00 03 00 16 10 05 00 01 00 72 06 00 1C 00 04 00 16 10 05 00 01 00 72 06 00 1C 00 05 00 16 10 05 00 01 00 72 06 00 16 10 05 00 01 00 72 06 00 15 00 09 00 73 01 00 04 00 20 31 20 7E 11 00 00 00 10 00 06 00 00 00 AC 00 00 00 16 00 0F 00 01 00 0B 00 20 73 01 00 20 31 20 7E 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 0F 00 01 00 0B 00 20 58 23 10 00 00 20 31 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 16 00 04 00 12 00 20 58 01 10 05 00 01 00 72 06 00 20 32 35 36 20 3C 3D 16 00 0D 00 02 00 09 00 20 73 02 00 20 30 20 3D 3D 33 10 0A 00 02 00 72 07 00 6E 01 00 00 00 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 17 00 02 00 03 00 16 00 0D 00 01 00 09 00 20 73 02 00 20 31 20 3D 3D 15 00 07 00 73 02 00 02 00 20 30 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwTRAlmalexiaScript\n\nshort talking\nshort dontgreet\n\n\n\nbegin OnHit Player\n	\n	StartCombat Player\n	fbmwTRSadasGREF.StartCombat Player\n	fbmwTRSavorGREF.StartCombat Player\n	fbmwTRvonosGREF.StartCombat Player\n	fbmwTRarnasGREF.StartCombat Player\n	fbmwTRDralsGREF.StartCombat Player\n	StartCombat Player\n	set talking to -1\nend\n\nbegin gamemode\nif ( talking == -1 )\n	return\nendif\n\nif ( GetDisabled == 1 )\n	return\nendif\n\nif ( GetDistance Player <= 256 )\n	if ( dontgreet == 0 )\n		Say fbmwAlmGreet 1	\n		set dontgreet to 1\n	endif\nelse\n	if ( dontgreet == 1 )\n		set dontgreet to 0\n	endif\nendif\nEnd\n;<CSEBlock>\n;<CSECaretPos> 319 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "talking"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "dontgreet"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwTRSadasGREF [ACHR:01F03B5E]", 
+        "SCRO - Global Reference": "fbmwTRSavorGREF [ACHR:01F03B5D]", 
+        "SCRO - Global Reference": "fbmwTRvonosGREF [ACHR:01F03B5F]", 
+        "SCRO - Global Reference": "fbmwTRarnasGREF [ACHR:01F03B5C]", 
+        "SCRO - Global Reference": "fbmwTRDralsGREF [ACHR:01F03B5B]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "fbmwAlmGreet [DIAL:0101FDF1]"
+    ]
+}

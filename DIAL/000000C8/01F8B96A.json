@@ -1,0 +1,79 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 440, 
+        "Record Flags": {}, 
+        "FormID": "01F8B96A", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true, 
+            "Say Once": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwCO2 [QUST:0101BE43]", 
+    "PNAM - Previous INFO": "01F8B969", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6E 69 75"
+            }, 
+            "NAM1 - Response Text": "OW! Okay, okay. I'll go away - just stop hitting me! Just give me a minute to collect myself. I promise I'll be gone the next time you come back. Oh, that's going to leave such a bruise...", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 295.000000000000000, 
+            "Function": "GetActorValue:14", 
+            "Unused": "00 00", 
+            "Parameter #1": "Health [ACVA:00000008]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwCO2 "East Empire Company: A Blocked Door" [QUST:0101BE43]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0HroldarStheSStrange "Hroldar the Strange" [NPC_:01260B0F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 18, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 32 00 00 00 17 10 00 00", 
+        "SCTX - Result script source": "setstage fbmwco2 50\r\nstopcombat", 
+        "References": [
+            "SCRO - Global Reference": "fbmwCO2 [QUST:0101BE43]"
+        ]
+    }
+}

@@ -1,0 +1,91 @@
+{
+    "Topic": "1Ahnia [DIAL:01311093]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 683, 
+        "Record Flags": {}, 
+        "FormID": "0101C66E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSScrollSales [QUST:0101C631]", 
+    "PNAM - Previous INFO": "0101C66D", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "54 54 6F"
+            }, 
+            "NAM1 - Response Text": "Okay, okay.... don't hurt me!  She's the one who's been giving me scrolls to sell. ", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "54 54 6F"
+            }, 
+            "NAM1 - Response Text": "She gave me this stolen book too, but no one can read it, so no one would buy it from me.  Just take it, and leave me alone.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "54 54 6F"
+            }, 
+            "NAM1 - Response Text": "I swear it wasn't my idea...", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSScrollSales "Scroll Sales" [QUST:0101C631]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0TenTTonguesUWeerhat "'Ten-Tongues' Weerhat" [NPC_:01260AC8]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 55, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 3C 00 00 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 58 10 05 00 01 00 72 04 00", 
+        "SCTX - Result script source": "setstage FBMWMSScrollSales 60\r\nremoveitem 0bkUnermarcnotes 1\r\nplayer.additem 0bkUnermarcnotes 1\r\naddtopic 1StolenSbook", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMSScrollSales [QUST:0101C631]", 
+            "SCRO - Global Reference": "0bkUnermarcnotes [BOOK:01180247]", 
+            "SCRO - Global Reference": "1stolenSbook [DIAL:01311049]"
+        ]
+    }
+}

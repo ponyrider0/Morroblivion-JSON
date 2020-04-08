@@ -1,0 +1,102 @@
+{
+    "Topic": "1FalseSGods [DIAL:01310B0E]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 714, 
+        "Record Flags": {}, 
+        "FormID": "01AAD5C9", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ11u [QUST:01001DCA]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6C 73 53"
+            }, 
+            "NAM1 - Response Text": "You have learned the lies of the Tribunal and the false hope they offer of protection from Dagoth Ur.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6C 73 53"
+            }, 
+            "NAM1 - Response Text": "We have heard the priest's own words of the Apographa, and we know them to be true.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "6C 73 53"
+            }, 
+            "NAM1 - Response Text": "We have heard the words of the Dissident Priests, and we know them to be true.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "6C 73 53"
+            }, 
+            "NAM1 - Response Text": "The False Gods have broken their promises, and have taken up the tools of the Enemy. This is a great evil, and a great danger.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ11u "Urshilaku Nereverine" [QUST:01001DCA]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0sulTmatuul "Sul-Matuul" [NPC_:01260350]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1MoonTandTStar [DIAL:01310977]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0F 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMQ11u 15", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQ11u [QUST:01001DCA]"
+        ]
+    }
+}

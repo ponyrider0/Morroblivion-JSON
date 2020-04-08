@@ -1,0 +1,206 @@
+{
+    "Record Header": {
+        "Signature": "QUST", 
+        "Data Size": 1946, 
+        "Record Flags": {}, 
+        "FormID": "01003BC8", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwVAVampBlood", 
+    "FULL - Name": "The Blood of the Quarra", 
+    "ICON - Icon FileName": "darthsouth\\Quests\\vampirequest.dds", 
+    "DATA - General": {
+        "Flags": {}, 
+        "Priority": 70
+    }, 
+    "Stages": [
+        {
+            "INDX - Stage index": 1
+        }, 
+        {
+            "INDX - Stage index": 10, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I spoke with Raxle Berne, the head of the Berne vampire clan in Morrowind. While he considers me an abomination, he seems willing to allow me to do some of the more menial tasks for the clan.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 20, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Berne has ordered me to retrieve a potion made with the blood of Volrina Quarra. She is the head of the Quarra vampire clan in Morrowind. If I am successful, Berne will allow me the use of the clan's service providers.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 30, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I have agreed to try and recover the potion for Raxle Berne, though it will mean entering the Quarra lair in Druscashti which is located southwest of Urshilaku Camp.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 40, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "I have decided not to try and retrieve the potion for Raxle Berne.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 50, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "I have returned Quarra Blood Potion to Raxle Berne. He believes it will grant him strength beyond that of any of the other clan lords. In return, he will grant me access to those in the clan who provide services.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 3, 
+                            "CompiledSize": 210, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "58 10 05 00 01 00 72 03 00 1C 00 01 00 73 10 02 00 00 00 1C 00 02 00 73 10 02 00 00 00 16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 61 00 01 00 5D 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 43 6F 6D 70 6C 65 74 65 64 20 54 68 65 20 42 6C 6F 6F 64 20 6F 66 20 74 68 65 20 51 75 61 72 72 61 20 71 75 65 73 74 22 F9 16 27 00 01 00 23 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 31 30 30 19 00 00 00", 
+                        "SCTX - Result script source": "addtopic 1serveSme\r\nGalomSDaeusDoor01.unlock\r\nGalomSDaeusDoor02.unlock\r\n\r\nif ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qCompleted The Blood of the Quarra quest%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 100\"\r\nendif", 
+                        "References": [
+                            "SCRO - Global Reference": "GalomSDaeusDoor01 [REFR:0183D161]", 
+                            "SCRO - Global Reference": "GalomSDaeusDoor02 [REFR:0183D160]", 
+                            "SCRO - Global Reference": "1serveSme [DIAL:01310C0D]"
+                        ]
+                    }
+                }
+            ]
+        }
+    ], 
+    "Targets": [
+        {
+            "QSTA - Target": {
+                "Target": "0183012F", 
+                "Flags": {
+                    "Compass marker ignores locks": true
+                }, 
+                "Unused": "00 50 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 30.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwVAVampBlood "The Blood of the Quarra" [QUST:01003BC8]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "62", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetItemCount:47", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "0pUquarrabloodUUNIQUE "Blood of the Quarra Masters" [ALCH:010800FD]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "0182F8F4", 
+                "Flags": {
+                    "Compass marker ignores locks": true
+                }, 
+                "Unused": "00 50 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 30.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwVAVampBlood "The Blood of the Quarra" [QUST:01003BC8]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "82", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetItemCount:47", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "0pUquarrabloodUUNIQUE "Blood of the Quarra Masters" [ALCH:010800FD]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }
+    ]
+}

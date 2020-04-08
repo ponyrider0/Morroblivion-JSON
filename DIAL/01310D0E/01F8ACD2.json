@@ -1,0 +1,111 @@
+{
+    "Topic": "1work [DIAL:01310D0E]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1038, 
+        "Record Flags": {}, 
+        "FormID": "01F8ACD2", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTownTelVos [QUST:0101C648]", 
+    "PNAM - Previous INFO": "01F8ACD1", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "Thank you for your report. So you think Cure Common Disease and Cure Blight Disease potions would be valuable trade goods. That makes sense. Master Aryon will be pleased. He can produce such potions very easily. Well done.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 54 6F"
+            }, 
+            "NAM1 - Response Text": "Here's your 100 drakes, with my thanks. I'll tell Master Aryon how you've handled this. I think he'll be pleased. If you're interested, and Master Aryon has work for you, you'll have my recommendation.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "20 66 62"
+            }, 
+            "NAM1 - Response Text": "And here. You'll find this amulet handy when visiting Telvanni wizards.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHTBaladasAlly "House Telvanni: Baladas Demnevanni" [QUST:01003434]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0turedusStalanian "Turedus Talanian" [NPC_:01260592]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "01", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStageDone:59", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTownTelVos "Trade Mission to the Zainab" [QUST:0101C648]", 
+            "Parameter #2": "025 When I asked an Ashlander what trade goods the Zainab need, she mentioned one thing. Though the tribe's wise women were good healers, they could not make the bottled magics that cure common disease and blight disease, so the trader and all the Zainab had few of these things. Now I can report back to Turedus Talanian, and tell him that Cure Common Disease and Cure Blight Disease potions would be valuable trade goods.", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStageDone:59", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTownTelVos "Trade Mission to the Zainab" [QUST:0101C648]", 
+            "Parameter #2": "030 The Zainab Ashlander wise woman Sonummu Zabamat said that the tribe needs more Cure Common Disease and Cure Blight Disease potions. The tribe's men travel long distances, hunting and herding, and when they catch diseases, they can't return to camp to be cured by the wise woman, but if they carry potions, the can cure themselves. Now I can report back to Turedus Talanian, and tell him that Cure Common Disease and Cure Blight Disease potions would be valuable trade goods.", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 75, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 64 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 39 10 0A 00 02 00 72 04 00 6E 23 00 00 00 F8 10 07 00 01 00 6E 01 00 00 00 53 10 0A 00 02 00 72 01 00 6E 1E 00 00 00", 
+        "SCTX - Result script source": "player.additem gold001 100\r\nplayer.additem fbmwamuletoflevitating 1\r\nsetstage fbmwtowntelvos 35\r\nmodpcfame 1\r\nmoddisposition player 30", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "fbmwAmuletofLevitating [CLOT:0102B36E]", 
+            "SCRO - Global Reference": "fbmwTownTelVos [QUST:0101C648]"
+        ]
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 811, 
+        "Record Flags": {}, 
+        "FormID": "010B09CA", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwbmettieneenable", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 5, 
+        "CompiledSize": 208, 
+        "VariableCount": 4, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 C2 00 00 00 16 00 2A 00 01 00 26 00 20 58 3A 10 05 00 01 00 72 01 00 20 31 30 20 3E 3D 20 58 01 10 05 00 01 00 72 02 00 20 35 31 32 20 3C 3D 20 26 26 21 10 00 00 19 00 00 00 16 00 21 00 02 00 1D 00 20 58 3A 10 05 00 01 00 72 01 00 20 33 30 20 3D 3D 20 73 04 00 20 30 20 3D 3D 20 26 26 83 18 0C 00 01 05 00 52 03 00 01 05 00 52 04 00 15 00 07 00 73 04 00 02 00 20 31 19 00 00 00 16 00 21 00 02 00 1D 00 20 58 3A 10 05 00 01 00 72 01 00 20 38 30 20 3D 3D 20 73 04 00 20 31 20 3D 3D 20 26 26 83 18 0C 00 01 05 00 52 03 00 01 05 00 52 05 00 15 00 07 00 73 04 00 02 00 20 32 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwbmettieneenable\n\nshort DoOnce\nBegin GameMode\n	if(GetStage fbmwBMWolfGiver >= 10)&&(GetDistance Player <= 512)\n		Enable\n	endif\n	if(GetStage fbmwBMWolfGiver == 30)&&(DoOnce == 0)\n		Call fbmwMoveToFunct fbmwBMEttieneteleportRef\n		set DoOnce to 1\n	endif\n	if(GetStage fbmwBMWolfGiver == 80)&&(DoOnce == 1)\n		Call fbmwMoveToFunct fbmwbmettienneteleportback\n		set DoOnce to 2\n	endif		\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "DoOnce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwBMWolfGiver [QUST:0101B6DC]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "fbmwMoveToFunct [SCPT:010A10D4]", 
+        "SCRO - Global Reference": "fbmwBMEttieneteleportRef [REFR:01F8EABE]", 
+        "SCRO - Global Reference": "fbmwbmettienneteleportback [REFR:010C983E]"
+    ]
+}

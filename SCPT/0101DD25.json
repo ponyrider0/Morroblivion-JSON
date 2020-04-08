@@ -1,0 +1,58 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 559, 
+        "Record Flags": {}, 
+        "FormID": "0101DD25", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwMQ04DayTimer", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 109, 
+        "VariableCount": 5, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 5F 00 00 00 16 00 0D 00 02 00 09 00 20 73 05 00 20 31 20 21 3D 15 00 09 00 73 04 00 04 00 20 47 01 00 15 00 07 00 73 05 00 02 00 20 31 19 00 00 00 16 00 13 00 01 00 0F 00 20 58 3A 10 05 00 01 00 72 02 00 20 31 20 3E 15 00 0F 00 73 03 00 0A 00 20 73 04 00 20 47 01 00 20 2D 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn FBMWMQ04DayTimer\r\n\r\nshort count\r\nshort started\r\nshort doonce\r\n\r\nbegin gamemode\r\n	if doonce!=1\r\n		set started to gamedayspassed\r\n		set doonce to 1\r\n	endif\r\n\r\n	if getstage fbmwMQ04 > 1\r\n		set count to started - gamedayspassed\r\n	endif\r\nend", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "count"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "started"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "doonce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "GameDaysPassed [GLOB:00000039]", 
+        "SCRO - Global Reference": "fbmwMQ04 [QUST:01001DB9]"
+    ]
+}

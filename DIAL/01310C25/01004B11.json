@@ -1,0 +1,68 @@
+{
+    "Topic": "1slander [DIAL:01310C25]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 438, 
+        "Record Flags": {}, 
+        "FormID": "01004B11", 
+        "Version Control Info": "1F 13 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHRHlaanoSlanders [QUST:01004A58]", 
+    "PNAM - Previous INFO": "01004B10", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Meril Hlaano has withdrawn his slanderous statements against our House. Please accept this shield as a reward.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHRHlaanoSlanders "House Redoran: Meril Hlaano's Slanders" [QUST:01004A58]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0faralSretheran "Faral Retheran" [NPC_:01260231]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 46, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0F 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHRHlaanoSlanders 100\r\nPlayer.AddItem 0holyshield 1\r\nmoddisposition player 15", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwHRHlaanoSlanders [QUST:01004A58]", 
+            "SCRO - Global Reference": "0holyshield [ARMO:010414E5]"
+        ]
+    }
+}

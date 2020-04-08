@@ -1,0 +1,74 @@
+{
+    "Topic": "1StalhrimSarmor [DIAL:0131136B]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 645, 
+        "Record Flags": {}, 
+        "FormID": "01F8BAD9", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Say Once": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwCO8a [QUST:0101BED8]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6E 69 75"
+            }, 
+            "NAM1 - Response Text": "Before we go any further, I want to make it clear to you that there's a finite amount of Stalhrim on this island. If you find enough of it, you'll be rewarded enough to certainly cover a full set of armor.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6E 69 75"
+            }, 
+            "NAM1 - Response Text": "I'm not going to keep track of what you've been given and what you haven't - it's your problem if you wind up with ten pairs of boots. Now that we've gotten that out of the way, we can discuss what Stalhrim armor you want as a reward for your hard work.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwCO8a "East Empire Company: Discovery in the Mine" [QUST:0101BED8]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0CarniusSMagius "Carnius Magius" [NPC_:01260B0A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

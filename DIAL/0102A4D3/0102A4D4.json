@@ -1,0 +1,67 @@
+{
+    "Topic": "fbmwMShatandskirtrefuseboth [DIAL:0102A4D3]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 515, 
+        "Record Flags": {}, 
+        "FormID": "0102A4D4", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSHatandSkirt [QUST:0101C622]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "72 71 7F"
+            }, 
+            "NAM1 - Response Text": "Thank you. Thank you again. I wish I had a more suitable reward. But I assure you, I will tell everyone I meet how you helped me, and how you refused any reward. I'm really, really grateful. And I promise -- I'll never get mixed up with smugglers -- ", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "72 71 7F"
+            }, 
+            "NAM1 - Response Text": "or scamps -- again.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Ingwold "Inwold" [NPC_:01260A5C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 25, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 41 00 00 00 F8 10 07 00 01 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmshatandskirt 65\r\nmodpcfame 1", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMSHatandSkirt [QUST:0101C622]"
+        ]
+    }
+}

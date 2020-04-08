@@ -1,0 +1,40 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1379, 
+        "Record Flags": {}, 
+        "FormID": "01F8B6EA", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwCyrodiilQuestDelayersScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 6, 
+        "CompiledSize": 368, 
+        "VariableCount": 3, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 62 01 00 00 16 00 14 00 05 00 10 00 20 58 3A 10 05 00 01 00 72 02 00 20 31 30 20 3C 16 00 1B 00 01 00 17 00 20 47 03 00 20 31 20 3D 3D 20 58 38 10 05 00 01 00 72 02 00 20 26 26 37 10 05 00 01 00 72 02 00 18 00 20 00 01 00 1C 00 20 47 03 00 20 30 20 3D 3D 20 58 38 10 05 00 01 00 72 02 00 20 30 20 3D 3D 20 26 26 36 10 05 00 01 00 72 02 00 19 00 00 00 19 00 00 00 16 00 14 00 0E 00 10 00 20 58 3A 10 05 00 01 00 72 04 00 20 31 30 20 3C 16 00 0D 00 06 00 09 00 20 73 03 00 20 30 20 3D 3D 16 00 0D 00 04 00 09 00 20 47 03 00 20 31 20 3D 3D 15 00 0A 00 72 05 00 73 01 00 02 00 20 31 1C 00 01 00 22 10 00 00 37 10 05 00 01 00 72 04 00 15 00 07 00 73 03 00 02 00 20 31 19 00 00 00 17 00 02 00 05 00 16 00 0D 00 03 00 09 00 20 47 03 00 20 31 20 21 3D 98 15 07 00 01 00 6E 00 00 00 00 15 00 0A 00 72 05 00 73 01 00 02 00 20 30 15 00 07 00 73 03 00 02 00 20 30 19 00 00 00 19 00 00 00 19 00 00 00 16 00 29 00 01 00 25 00 20 58 3A 10 05 00 01 00 72 02 00 20 31 30 20 3E 3D 20 58 3A 10 05 00 01 00 72 04 00 20 31 30 20 3E 3D 20 26 26 37 10 05 00 01 00 72 06 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwCyrodiilQuestDelayersScript\n\nshort LachanceAtCustoms\n\nbegin GameMode\n\n	if GetStage SE01Door < 10\n		if PlayerInMorrowind == 1 && GetQuestRunning SE01Door\n			StopQuest SE01Door\n		elseif PlayerInMorrowind == 0 && GetQuestRunning SE01Door == 0\n			StartQuest SE01Door\n		endif\n	endif\n\n	if GetStage Dark01Knife < 10\n		if LachanceAtCustoms == 0\n			if PlayerInMorrowind == 1\n				set Dark00General.Murderer to 1\n				LucienLachanceMurderRef.Disable\n				StopQuest Dark01Knife\n				set LachanceAtCustoms to 1\n			endif\n		else\n			if PlayerInMorrowind != 1\n				SetPCAMurderer 0\n				set Dark00General.Murderer to 0\n				set LachanceAtCustoms to 0\n			endif\n		endif\n	endif\n\n	if GetStage SE01Door >= 10 && GetStage Dark01Knife >= 10\n		StopQuest mwCyrodiilQuestsDelayers\n	endif\n\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "LachanceAtCustoms"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "LucienLachanceMurderRef [ACHR:000177D2]", 
+        "SCRO - Global Reference": "SE01Door [QUST:000133BF]", 
+        "SCRO - Global Reference": "PlayerInMorrowind [GLOB:01003249]", 
+        "SCRO - Global Reference": "Dark01Knife [QUST:000224EB]", 
+        "SCRO - Global Reference": "Dark00General [QUST:00023DD9]", 
+        "SCRO - Global Reference": "mwCyrodiilQuestsDelayers [QUST:01F8B6EB]"
+    ]
+}

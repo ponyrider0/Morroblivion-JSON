@@ -1,0 +1,112 @@
+{
+    "Topic": "1flowers1 [DIAL:01322A5A]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 864, 
+        "Record Flags": {}, 
+        "FormID": "013235F5", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMGFlowers [QUST:01006777]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Yes, these are the flowers that Ajira needs. Ajira has made more potions for you. Ajira hopes that you will use them well.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ajira "Ajira" [NPC_:01260123]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ingredUgoldUkanetU01 "Gold Kanet" [INGR:010A001F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ingredUstoneflowerUpetalsU01 "Stoneflower Petals" [INGR:010A0038]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ingredUwillowUantherU01 "Willow Anther" [INGR:010A003D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ingredUheatherU01 "Heather" [INGR:010A0024]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 7, 
+            "CompiledSize": 118, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 04 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 05 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 06 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 07 00 6E 06 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwMGFlowers 100\r\nPlayer.removeItem 0ingredugoldukanetu01 1\r\nPlayer.RemoveItem 0ingredustoneflowerupetalsu01 1\r\nPlayer.RemoveItem 0ingreduwillowuantheru01 1\r\nPlayer.RemoveItem 0ingreduheatheru01 1\r\nPlayer.AddItem 0pUrestoreUmagickaUc 6\r\nModDisposition player 10", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMGFlowers [QUST:01006777]", 
+            "SCRO - Global Reference": "0ingredUgoldUkanetU01 [INGR:010A001F]", 
+            "SCRO - Global Reference": "0ingredUstoneflowerUpetalsU01 [INGR:010A0038]", 
+            "SCRO - Global Reference": "0ingredUwillowUantherU01 [INGR:010A003D]", 
+            "SCRO - Global Reference": "0ingredUheatherU01 [INGR:010A0024]", 
+            "SCRO - Global Reference": "0pUrestoreUmagickaUc [ALCH:010800C1]"
+        ]
+    }
+}

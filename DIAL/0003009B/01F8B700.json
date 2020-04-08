@@ -1,0 +1,85 @@
+{
+    "Topic": "bed [DIAL:0003009B]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 288, 
+        "Record Flags": {}, 
+        "FormID": "01F8B700", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "BedRental [QUST:0003AB56]", 
+    "PNAM - Previous INFO": "01F8B6FF", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Yes, we have one available. Do you want it? It's 10 gold.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0fara "Fara" [NPC_:01260157]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetScriptVariable:53", 
+            "Unused": "00 00", 
+            "Parameter #1": "mwFaraREF [ACHR:0181308F] (places 0fara "Fara" [NPC_:01260157] in GRUP Cell Persistent Children of SadrithSMoraVSFaraAsSHoleSinStheSWall "Sadrith Mora, Fara's Hole in the Wall" [CELL:0148030C])", 
+            "Parameter #2": "rent", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "03", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Telvanni "Great House Telvanni" [FACT:01220006]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0bkUhospitalityUpapers "Hospitality Papers" [BOOK:01180157]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "BedNo [DIAL:0003AB45]", 
+        "TCLT - Choice": "BedYes [DIAL:0003AB46]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

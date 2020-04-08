@@ -1,0 +1,109 @@
+{
+    "Topic": "1RedoranSHortator [DIAL:01310819]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 732, 
+        "Record Flags": {}, 
+        "FormID": "01320E8E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQRedoranSarethi [QUST:01001DE1]", 
+    "PNAM - Previous INFO": "01025B0D", 
+    "Add topics": [
+        "NAME - Topic": "0131095D", 
+        "NAME - Topic": "01310D10", 
+        "NAME - Topic": "01310BDA", 
+        "NAME - Topic": "0131095D", 
+        "NAME - Topic": "01310B72", 
+        "NAME - Topic": "01310B5E", 
+        "NAME - Topic": "01310D13", 
+        "NAME - Topic": "01310BDA", 
+        "NAME - Topic": "01310D13", 
+        "NAME - Topic": "01310D10", 
+        "NAME - Topic": "01310BD9"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "As you are already the Archmaster of House Redoran, you shall be the Hortator of House Redoran.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I hope you are as successful in persuading the rest of Morrowind to unite against Dagoth Ur and his blighted hosts.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "On behalf of the house and council, take the Ring of the Hortator, a token of your office. By this ring others shall know you as our chosen champion.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "02", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 9.000000000000000, 
+            "Function": "GetFactionRank:73", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Redoran "Great House Redoran" [FACT:01220000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0athynSsarethi "Athyn Sarethi" [NPC_:012600B2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1RedoranSHortator3 [DIAL:01320E7D]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

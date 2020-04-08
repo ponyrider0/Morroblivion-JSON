@@ -1,0 +1,120 @@
+{
+    "Topic": "1fightSmySchampion [DIAL:01310FD4]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 799, 
+        "Record Flags": {}, 
+        "FormID": "0101035F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwTRChampion [QUST:0101C652]", 
+    "PNAM - Previous INFO": "0101035E", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "61 6C 65"
+            }, 
+            "NAM1 - Response Text": "Ahhh...you have come to meet Karrod in battle. Good for you. Have I mentioned that Karrod has never been defeated? Perhaps I hadn't.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "61 6C 65"
+            }, 
+            "NAM1 - Response Text": "This is to be a fair fight. Use whatever weapons or spells are at your disposal. I wish you both luck. At least one of you will need it.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "61 6C 65"
+            }, 
+            "NAM1 - Response Text": "None are to interfere, and you will begin on my command.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRChampion "Helseth's Champion" [QUST:0101C652]", 
+            "Parameter #2": "Karrodbribe", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 2.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRChampion "Helseth's Champion" [QUST:0101C652]", 
+            "Parameter #2": "KarrodfightStart", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRChampion "Helseth's Champion" [QUST:0101C652]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 70.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRChampion "Helseth's Champion" [QUST:0101C652]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0KingSHlaaluSHelseth "King Hlaalu Helseth" [NPC_:01260A7D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 42, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 02 00 02 00 20 33 39 10 0A 00 02 00 72 01 00 6E 46 00 00 00 15 00 0A 00 72 01 00 73 05 00 02 00 20 31", 
+        "SCTX - Result script source": "set fbmwTRchampion.KarrodfightStart to 3\r\nsetstage fbmwTRchampion 70\r\nset fbmwTRchampion.move to 1", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTRChampion [QUST:0101C652]"
+        ]
+    }
+}

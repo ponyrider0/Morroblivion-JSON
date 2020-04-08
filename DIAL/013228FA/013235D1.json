@@ -1,0 +1,81 @@
+{
+    "Topic": "1fightSme1 [DIAL:013228FA]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 575, 
+        "Record Flags": {}, 
+        "FormID": "013235D1", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwCO7 [QUST:0101BED6]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Good, good. Make it quick, will you? As flashy as I wanted this to be, I wasn't looking for lots of pain.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I'll at least try and put up a fight, to make you look good. You shouldn't be blamed for this.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0SelerSFavelnim "Seler Favelnim" [NPC_:01260B47]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 44, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 0F 10 09 00 02 00 21 00 6E 5A 00 00 00 1C 00 01 00 16 10 05 00 01 00 72 02 00 15 00 0A 00 72 03 00 73 01 00 02 00 20 30", 
+        "SCTX - Result script source": "SelerFavelnimREF.SetAV Aggression 90\r\nSelerFavelnimREF.startcombat player\r\nset fbmwCO7.Selerattack to 0", 
+        "References": [
+            "SCRO - Global Reference": "SelerFavelnimREF [ACHR:01F0796C]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwCO7 [QUST:0101BED6]"
+        ]
+    }
+}

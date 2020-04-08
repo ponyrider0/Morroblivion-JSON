@@ -1,0 +1,94 @@
+{
+    "Topic": "1joinStheSCouncil [DIAL:01310817]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 816, 
+        "Record Flags": {}, 
+        "FormID": "01004BD4", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHTBaladasAlly [QUST:01003434]", 
+    "PNAM - Previous INFO": "01004BD5", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Baladas will be joining the council, and, as we agreed, I will be your patron.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Please accept this Silver Staff of Peace, the traditional patron's gift to his protege.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "You are now my Mouth in House Telvanni with all the duties and privileges of that rank.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHTBaladasAlly "House Telvanni: Baladas Demnevanni" [QUST:01003434]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0aryon "Aryon" [NPC_:0126040A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 7, 
+            "CompiledSize": 77, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 03 00 6E 64 00 00 00 39 10 0A 00 02 00 72 04 00 6E 29 00 00 00 39 10 0A 00 02 00 72 05 00 6E 01 00 00 00 58 10 05 00 01 00 72 06 00 1C 00 01 00 02 10 0A 00 02 00 72 07 00 6E 01 00 00 00 1C 00 02 00 22 10 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHTBaladasAlly 100\r\nSetStage fbmwHTAdvancement 41\r\nSetStage fbmwHTStronghold 1\r\nAddTopic 1Stronghold\r\nPlayer.AddItem 0SilverSStaffSofSPeace 1\r\nmwGalosMathendisREF.Disable", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "mwGalosMathendisREF [ACHR:018688A1]", 
+            "SCRO - Global Reference": "fbmwHTBaladasAlly [QUST:01003434]", 
+            "SCRO - Global Reference": "fbmwHTAdvancement [QUST:0100EB54]", 
+            "SCRO - Global Reference": "fbmwHTStronghold [QUST:0100344D]", 
+            "SCRO - Global Reference": "1stronghold [DIAL:01310B01]", 
+            "SCRO - Global Reference": "0silverSstaffSofSpeace [WEAP:01100153]"
+        ]
+    }
+}

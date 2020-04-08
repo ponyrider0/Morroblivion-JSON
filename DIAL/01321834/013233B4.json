@@ -1,0 +1,73 @@
+{
+    "Topic": "1sealedSorders1 [DIAL:01321834]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 511, 
+        "Record Flags": {}, 
+        "FormID": "013233B4", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHHBankFraud [QUST:01003457]", 
+    "PNAM - Previous INFO": "013233B3", 
+    "Add topics": [
+        "NAME - Topic": "01310C70", 
+        "NAME - Topic": "0131104D"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "These orders are addressed to Ten... Hmm... Yes, this is very interesting, outlander. Here, take these 500 drakes and forget about this matter.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHHBankFraud "House Hlaalu: Sealed Orders" [QUST:01003457]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0barenSalen "Baren Alen" [NPC_:01260391]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 50, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 3C 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E F4 01 00 00 1C 00 01 00 52 10 0A 00 02 00 72 04 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHHBankFraud 60\r\nPlayer.AddItem Gold001 500\r\nPlayer.RemoveItem 0bkUtreasuryorders 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwHHBankFraud [QUST:01003457]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "0bkUtreasuryorders [BOOK:011800D3]"
+        ]
+    }
+}

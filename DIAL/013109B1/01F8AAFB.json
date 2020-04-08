@@ -1,0 +1,110 @@
+{
+    "Topic": "1sevenSvictims [DIAL:013109B1]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1205, 
+        "Record Flags": {}, 
+        "FormID": "01F8AAFB", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTownVivec [QUST:0101C649]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "69 72 69"
+            }, 
+            "NAM1 - Response Text": "None of the five outlander victims had been on Vvardenfell longer than a week. Two were found in Foreign Quarters corridors, one on Foreign Quarter Canalside, one in a Hlaalu Compound corridor, and one in the near the Arena.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "69 72 69"
+            }, 
+            "NAM1 - Response Text": "All were armed. Only one, a mage, appears to have put up a fight. All had their throats slit with a dagger. Until the two Ordinators were killed, we thought it might be an anti-Imperial fanatic. And it still might be.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "69 72 69"
+            }, 
+            "NAM1 - Response Text": "The two Ordinators were found dead near the victim at Hlaalu Compound, and we think they coincidentally interrupted the killer at work.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "69 72 69"
+            }, 
+            "NAM1 - Response Text": "Both had their throats slit with a dagger. That neither Ordinator had drawn a weapon is extremely unsettling. It suggests either extraordinary stealth, or a very powerful sorcery.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "05", 
+                "Unused": "69 72 69"
+            }, 
+            "NAM1 - Response Text": "That's all we know about the victims. And there's not much information from witnesses, either.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTownVivec "Mysterious Killings in Vivec" [QUST:0101C649]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0elamSandas "Elam Andas" [NPC_:012605B8]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0F 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwtownvivec 15", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTownVivec [QUST:0101C649]"
+        ]
+    }
+}

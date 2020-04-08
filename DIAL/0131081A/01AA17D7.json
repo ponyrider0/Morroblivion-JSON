@@ -1,0 +1,121 @@
+{
+    "Topic": "1TheSSevenSCurses [DIAL:0131081A]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1131, 
+        "Record Flags": {}, 
+        "FormID": "01AA17D7", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ09 [QUST:01001DC4]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "'The Seven Curses' reads as follows:through the doors of the unmourned house where scoffers scoff and schemers scheme", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "from the halls of the oath-breaking house rings seven curses of gods blasphemed", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "first curse, Curse-of-Fire second curse, Curse-of-Ash third curse, Curse-of-Flesh fourth curse, Curse-of-Ghosts fifth curse, Curse-of-Seed", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "sixth curse, Curse-of-Despair seventh curse, Curse-of-Dreams", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "05", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "Your copy of 'The Seven Curses' bears our guesses at interpreting the verses. In short form: Seven curses come from House Dagoth, or House Dwemer, or both.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "06", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "Fire and ash come from Red Mountain. Flesh is corprus. Ghosts, Seed, and Despair are unclear, but Curse-of-Dreams seems to refer to recent cases of soul sickness and Sleeper attacks in the towns.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ09 "Mehra Milo and the Lost Prophecies" [QUST:01001DC4]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0gilvasSbarelo "Gilvas Barelo" [NPC_:01260503]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 1E 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmq09 30", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQ09 [QUST:01001DC4]"
+        ]
+    }
+}

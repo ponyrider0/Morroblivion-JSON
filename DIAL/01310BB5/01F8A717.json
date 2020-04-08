@@ -1,0 +1,79 @@
+{
+    "Topic": "1Honthjolf [DIAL:01310BB5]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 505, 
+        "Record Flags": {}, 
+        "FormID": "01F8A717", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwILTraitorWarrior [QUST:0100602D]", 
+    "PNAM - Previous INFO": "01F8A716", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6C 64 53"
+            }, 
+            "NAM1 - Response Text": "So Honthjolf is dead. It is always sad when someone betrays the Legions, but we cannot allow such traitors to live.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "0honthjolf "Honthjolf" [NPC_:0126076F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwILTraitorWarrior "Imperial Legion: Honthjolf is a Traitor" [QUST:0100602D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0FraldStheSWhite "Frald the White" [NPC_:012602D9]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 45, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 64 00 00 00 A9 10 0D 00 03 00 72 02 00 72 03 00 6E 05 00 00 00 53 10 0A 00 02 00 72 04 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwiltraitorwarrior 100\r\nmodfactionreaction 0imperialslegion playerfaction 5\r\nmoddisposition player 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwILTraitorWarrior [QUST:0100602D]", 
+            "SCRO - Global Reference": "0ImperialSLegion [FACT:0122000F]", 
+            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

@@ -1,0 +1,88 @@
+{
+    "Topic": "1itsSownSdrama [DIAL:0131101B]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 693, 
+        "Record Flags": {}, 
+        "FormID": "01F8BA63", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSPerformers [QUST:0101C62D]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "72 79 6E"
+            }, 
+            "NAM1 - Response Text": "Yes, well, wouldn't you know that the very day we're supposed to debut our show, our lead actor, Tarvus Beleth, comes down with collywobbles. We can't find anyone to take over his part.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "72 79 6E"
+            }, 
+            "NAM1 - Response Text": "I would do it, but my expertise is desperately needed backstage. So now I've just got to stand up here and try to drive people away from our heavily promoted production.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "72 79 6E"
+            }, 
+            "NAM1 - Response Text": "I just wish we could find someone who looks like Tarvus...", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSPerformers "A Star is Born" [QUST:0101C62D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0merynSothralas "Meryn Othralas" [NPC_:01260A99]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 9, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00", 
+        "SCTX - Result script source": "addtopic 1looksslikestarvus", 
+        "References": [
+            "SCRO - Global Reference": "1looksSlikeSTarvus [DIAL:01310FCC]"
+        ]
+    }
+}

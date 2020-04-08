@@ -1,0 +1,82 @@
+{
+    "Topic": "1Addhiranirr3 [DIAL:01321D3C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 503, 
+        "Record Flags": {}, 
+        "FormID": "01323447", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ04 [QUST:01001DB9]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310CFC", 
+        "NAME - Topic": "01310C4D", 
+        "NAME - Topic": "01310BCC"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Oh. I see. How curious. *Sigh.* Well. I suppose I need to go change my clothes if I'm going down there. But thank you for your time and courtesy.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "And don't tell her about me. I want it to be a surprise. Good day, and thanks again.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0duvianusSplatorius "Duvianus Platorius" [NPC_:012601DD]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 12.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ04b "Addhiranirr Informant" [QUST:01001DBB]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 35 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMQ04b 53", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQ04b [QUST:01001DBB]"
+        ]
+    }
+}

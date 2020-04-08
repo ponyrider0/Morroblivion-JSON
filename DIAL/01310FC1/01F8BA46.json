@@ -1,0 +1,88 @@
+{
+    "Topic": "1ShrineSofStheSDead [DIAL:01310FC1]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 721, 
+        "Record Flags": {}, 
+        "FormID": "01F8BA46", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRShrineDead [QUST:0101C65B]", 
+    "PNAM - Previous INFO": "01F8BA45", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": "As I said, it holds immense power to speak with the ancestors and harness their power. The Lady Almalexia wishes to use this power for the good of Morrowind. I realize that ancestor worship falls a bit...", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": "outside traditional Temple doctrine, but the Lady knows best, and her will is law. To find the Shrine, enter the sewers through the Temple basement. ", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": "Then head east to the ruined Temple Gardens, and south to the Shrine of the Dead.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRShrineDead "The Shrine of the Dead" [QUST:0101C65B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0gavasSdrin "Gavas Drin" [NPC_:01260ABF]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 1E 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwtrshrinedead 30", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTRShrineDead [QUST:0101C65B]"
+        ]
+    }
+}

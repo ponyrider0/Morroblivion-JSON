@@ -1,0 +1,131 @@
+{
+    "Topic": "1eternalSwakefulness [DIAL:01311330]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 901, 
+        "Record Flags": {}, 
+        "FormID": "01F8AC7F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMCursedCaptain [QUST:0101AF8B]", 
+    "PNAM - Previous INFO": "01F8AC7E", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000006", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "I didn't think I would ever feel the need to relieve Thormoor Gray-Wave's misery, but you did me a great service by returning Oddfrid White-Lip.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 30, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "As a show of thanks, I will now remove Thormoor's curse.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000003", 
+                "Emotion Value": 90, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "[Geilir begins making several odd hand gestures, and mumbles under his breath.]", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000006", 
+                "Emotion Value": 90, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "There!  Thormoor's curse has been lifted!", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000004", 
+                "Emotion Value": 60, 
+                "Unused": "00 00 00 00", 
+                "Response number": "05", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "He will now find the sleep I have denied him for so many months.  I...I hope he finds peace.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000004", 
+                "Emotion Value": 100, 
+                "Unused": "00 00 00 00", 
+                "Response number": "06", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "He'll sleep, but even I can't stop a guilty man's nightmares.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0geilirStheSmumbling "Geilir the Mumbling" [NPC_:01260B50]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMCursedCaptain "The Cursed Captain" [QUST:0101AF8B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 40.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMSadSeer "The Sad Seer" [QUST:0101B6D1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 28 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwBMCursedCaptain 40", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMCursedCaptain [QUST:0101AF8B]"
+        ]
+    }
+}

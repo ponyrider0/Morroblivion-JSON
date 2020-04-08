@@ -1,0 +1,267 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 2702, 
+        "Record Flags": {}, 
+        "FormID": "01F8CC53", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "moXscrXtrapXmemorystorage", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 11, 
+        "CompiledSize": 4, 
+        "VariableCount": 32, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00", 
+    "SCTX - Script Source": "Scn moXscrXtrapXmemorystorage\n\n; CONSTRUCTION NOTE: AutoStart Quest: moXqstXtrapXmeomorystorage\n; DESCRIPTION NOTE: This quest\\script stores Various Permanent and Dynamic Data related to Traps, Probes and Player Abilities . \n; DESCRIPTION NOTE: Permanent Data is written once on the first run, whereas Dynamic Data is regularly updated.\n\n\n\n\n\n;______________________________________________\n; Permanent Memory Registers\n;______________________________________________\n\n\n; Probe IDs have been shifted to Dynamic Data\n\n;Ref XProbeIDA1\n;Ref XProbeIDA2\n;Ref XProbeIDA3\n;Ref XProbeIDA4\n;Ref XProbeIDA5\n\nRef XSpellIDA1\nRef XSpellIDA2 \nRef XSpellIDA3\nRef XSpellIDA4\nRef XSpellIDA5\nRef XSpellIDA6\nRef XSpellIDA7\nRef XSpellIDA8\nRef XSpellIDA9\n\n\nfloat XProbeMULTA1\nfloat XProbeMULTA2\nfloat XProbeMULTA3\nfloat XProbeMULTA4\nfloat XProbeMULTA5\n\n\n\n\n\n;____________________________________\n; Dynamic Memory Registers\n;____________________________________\n\n\nfloat XPCXhighestdetectabletrap\nfloat XPCXhighestdisarmabletrap\nshort XPCXhasPROBE\nfloat XPCXprobebreakchance\n\nref XCURRENTprobeID\nfloat XCURRENTprobeMULTI\nref XcurrentTRAPeffect\n\n\nshort Xcheckcounter\nshort XDie00\nfloat XTimer\n;short XFullDynamicUpdate\n\nshort XProbeAssigned\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 20 80 9B 1D"
+            }, 
+            "SCVR - Name": "XSpellIDA1"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000007", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "XSpellIDA2"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000008", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "XSpellIDA3"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000009", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "XSpellIDA4"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000A", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "XSpellIDA5"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000B", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "XSpellIDA6"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000C", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "XProbeMULTA1"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000D", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "XProbeMULTA2"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000E", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "7E 9B 1D 20 00 00 00"
+            }, 
+            "SCVR - Name": "XProbeMULTA3"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000F", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "7E 9B 1D 18 00 00 00"
+            }, 
+            "SCVR - Name": "XProbeMULTA4"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000010", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "XProbeMULTA5"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000011", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "84 9B 1D 10 00 00 00"
+            }, 
+            "SCVR - Name": "XPCXhighestdetectabletrap"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000012", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 CD CD CD CD"
+            }, 
+            "SCVR - Name": "XPCXhighestdisarmabletrap"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000013", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "XPCXhasPROBE"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000014", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 CD CD CD CD"
+            }, 
+            "SCVR - Name": "XPCXprobebreakchance"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000015", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 54 85 9B 1D"
+            }, 
+            "SCVR - Name": "XCURRENTprobeID"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000016", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 54 85 9B 1D"
+            }, 
+            "SCVR - Name": "XCURRENTprobeMULTI"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000017", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 CD CD CD CD"
+            }, 
+            "SCVR - Name": "XcurrentTRAPeffect"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000018", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "Xcheckcounter"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000019", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "XDie00"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000001A", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "XTimer"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000001C", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "XProbeAssigned"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000001E", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 CD CD CD CD"
+            }, 
+            "SCVR - Name": "XSpellIDA7"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000001F", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "XSpellIDA8"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000020", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 70 82 9B 1D"
+            }, 
+            "SCVR - Name": "XSpellIDA9"
+        }
+    ], 
+    "References": [
+        "SCRV - Local Variable": "00000006", 
+        "SCRV - Local Variable": "00000007", 
+        "SCRV - Local Variable": "00000008", 
+        "SCRV - Local Variable": "00000009", 
+        "SCRV - Local Variable": "0000000A", 
+        "SCRV - Local Variable": "0000000B", 
+        "SCRV - Local Variable": "0000001E", 
+        "SCRV - Local Variable": "0000001F", 
+        "SCRV - Local Variable": "00000020", 
+        "SCRV - Local Variable": "00000015", 
+        "SCRV - Local Variable": "00000017"
+    ]
+}

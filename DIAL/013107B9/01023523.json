@@ -1,0 +1,98 @@
+{
+    "Topic": "1arrangeSaSmeeting [DIAL:013107B9]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 605, 
+        "Record Flags": {}, 
+        "FormID": "01023523", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMGWiseWoman [QUST:0100678F]", 
+    "PNAM - Previous INFO": "01023524", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6E 61 6D"
+            }, 
+            "NAM1 - Response Text": "Yes, I will speak with Skink-in-Tree's-Shade. But you must help me also. Sinnammu sent me here as a punishment.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "57 4D 47"
+            }, 
+            "NAM1 - Response Text": "She asked me to calm an angry ancestor, but my charms will not calm him, and I am not strong enough fight it.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "57 4D 47"
+            }, 
+            "NAM1 - Response Text": "Find the spirit of Kanit Ashurnisammis and send it to its final rest.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMGWiseWoman "Mages Guild: Meeting with a Wise Woman" [QUST:0100678F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMGWiseWoman "Mages Guild: Meeting with a Wise Woman" [QUST:0100678F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0minabibiSassardarainat "Minabibi Assardarainat" [NPC_:01260181]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 28 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmgwisewoman 40", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMGWiseWoman [QUST:0100678F]"
+        ]
+    }
+}

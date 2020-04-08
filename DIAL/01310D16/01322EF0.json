@@ -1,0 +1,91 @@
+{
+    "Topic": "1Vas [DIAL:01310D16]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 667, 
+        "Record Flags": {}, 
+        "FormID": "01322EF0", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Say Once": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwFGVas [QUST:010033ED]", 
+    "PNAM - Previous INFO": "01F8A869", 
+    "Add topics": [
+        "NAME - Topic": "01310D16", 
+        "NAME - Topic": "01310A6B", 
+        "NAME - Topic": "01310A41", 
+        "NAME - Topic": "01310D16", 
+        "NAME - Topic": "01310D16", 
+        "NAME - Topic": "01310BC2", 
+        "NAME - Topic": "01310B9E", 
+        "NAME - Topic": "01310BDD", 
+        "NAME - Topic": "01310D0B"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Go to Vas and meet with the Buoyant Armiger Ulyne Henim. Help her clear the Necromancers out of Vas. Vas is far to the north, in the Sheogorad Region.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Here, I'll mark it on your map. The journey is a long one. Your best bet may be to take a ship to Dagon Fel from Tel Mora. Good luck to you.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0persiusSmercius "Percius Mercius" [NPC_:01260268]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetPCInFaction:132", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwFightersGuild "Fighters Guild" [FACT:0100761A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 55 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "SetStage fbmwFGVas 10\r\nShowMap mwVasMapMarker", 
+        "References": [
+            "SCRO - Global Reference": "fbmwFGVas [QUST:010033ED]", 
+            "SCRO - Global Reference": "mwVasMapMarker [REFR:0100DC91]"
+        ]
+    }
+}

@@ -1,0 +1,66 @@
+{
+    "Topic": "1FarvynSOreyn [DIAL:01310A3C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 441, 
+        "Record Flags": {}, 
+        "FormID": "01F8AB09", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwDAMalacath [QUST:01002C88]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "73 73 6B"
+            }, 
+            "NAM1 - Response Text": "Oh, wondrous is Farvyn Oreyen, the powerful battlemage! He single-handedly slew a Daedroth Lord who wished to enslave us all. Even now, he has traveled with his servants to Gnaar Mok, to rid that poor town of some evil presence.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwDAMalacath "Malacath's Quest" [QUST:01002C88]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInCell:67", 
+            "Unused": "00 00", 
+            "Parameter #1": "Vivec "Vivec" [CELL:01480021]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 1E 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwdamalacath 30", 
+        "References": [
+            "SCRO - Global Reference": "fbmwDAMalacath [QUST:01002C88]"
+        ]
+    }
+}

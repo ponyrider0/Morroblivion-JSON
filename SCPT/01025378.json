@@ -1,0 +1,38 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 565, 
+        "Record Flags": {}, 
+        "FormID": "01025378", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwHRrescueSarethiScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 4, 
+        "CompiledSize": 118, 
+        "VariableCount": 2, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 68 00 00 00 16 00 15 00 01 00 11 00 20 58 3A 10 05 00 01 00 72 01 00 20 35 30 20 21 3D 1E 00 00 00 19 00 00 00 16 00 2D 00 01 00 29 00 20 72 02 00 58 43 10 05 00 01 00 72 03 00 20 31 20 3D 3D 20 72 04 00 58 20 10 05 00 01 00 72 02 00 20 31 20 3D 3D 20 26 26 39 10 0A 00 02 00 72 01 00 6E 46 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwHRrescueSarethiScript\r\n\r\nSHORT FollowNow\r\n\r\nBEGIN GameMode\r\n	IF GetStage fbmwHRRescueSarethi != 50\r\n		RETURN\r\n	ENDIF\r\n\r\n	IF Player.GetInCell AldTruhnVSSarethiSManor == 1 && mwVarvurSarethiREF.GetInSameCell Player == 1\r\n		SetStage fbmwHRRescueSarethi 70\r\n	ENDIF\r\nEND ; GameMode", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "FollowNow"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwHRRescueSarethi [QUST:01005198]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "AldTruhnVSSarethiSManor [CELL:014800B5]", 
+        "SCRO - Global Reference": "mwVarvurSarethiREF [ACHR:0183CFC7]"
+    ]
+}

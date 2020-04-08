@@ -1,0 +1,51 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 264, 
+        "Record Flags": {}, 
+        "FormID": "010033F1", 
+        "Version Control Info": "1D 16 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "mwGreetingsUnique [QUST:01F8EA1C]", 
+    "PNAM - Previous INFO": "010033F0", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000002", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "64 61 61"
+            }, 
+            "NAM1 - Response Text": "You have been warned. Do not harm the inmates of the Corprusarium. If you plan to plunder the dungeon, you must endure their attacks, and mine.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0visthaUkai "Vistha-Kai" [NPC_:0126065D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

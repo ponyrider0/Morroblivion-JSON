@@ -1,0 +1,88 @@
+{
+    "Topic": "1Mossanon [DIAL:01310C11]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 751, 
+        "Record Flags": {}, 
+        "FormID": "01F8A74E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwICMossanon [QUST:0100B81C]", 
+    "PNAM - Previous INFO": "01F8A74D", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "63 74 75"
+            }, 
+            "NAM1 - Response Text": "He was an excellent clerk, a proper High Elf, well-spoken, diligent, orderly, good with figures, reliable -- until recently. I believe we all noticed a change in his behavior, but thought nothing of it. ", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "63 74 75"
+            }, 
+            "NAM1 - Response Text": "In particular, we noticed a marked rise in his absences from the office. We have been reluctant to discuss the subject with the other employees, for obvious reasons.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "6D 77 49"
+            }, 
+            "NAM1 - Response Text": "But perhaps, if you are discreet, and persuasive, you may learn something from speaking with them.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 45.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICMossanon "Imperial Cult: Pledge from Canctunian Ponius" [QUST:0100B81C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0CanctunianSPonius "Canctunian Ponius" [NPC_:01260223]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 14 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwicmossanon 20", 
+        "References": [
+            "SCRO - Global Reference": "fbmwICMossanon [QUST:0100B81C]"
+        ]
+    }
+}

@@ -1,0 +1,143 @@
+{
+    "Topic": "1QuarraSBloodSPotion [DIAL:01310751]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1085, 
+        "Record Flags": {}, 
+        "FormID": "01F8AD4D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
+    "PNAM - Previous INFO": "01F8AD4C", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "75 65 20"
+            }, 
+            "NAM1 - Response Text": "You have the Blood. Well done, vampire. Perhaps your kind can be trained after all.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "75 65 20"
+            }, 
+            "NAM1 - Response Text": "As a reward for your effort, I have something your kind might be able to use.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "75 65 20"
+            }, 
+            "NAM1 - Response Text": "During an enchanting experiment, I created this Jinksword. It is strong and sharp, but the enchantment did not go as planned.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "75 65 20"
+            }, 
+            "NAM1 - Response Text": "I believe one of your ilk might find it valuable, though, as you seem to have a natural resistance to the spell in question.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ravenSomayn "Raven Omayn" [NPC_:0126040D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetGlobalValue:74", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwPCVampire [GLOB:01F8ACE1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwVAVampBlood2 "Blood for Mistress Dratha" [QUST:01003BC9]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "A0", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 15.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwVAVampBlood2 "Blood for Mistress Dratha" [QUST:01003BC9]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwVARimintil "Murder Rimintil" [QUST:01003BC5]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0pUquarrabloodUUNIQUE "Blood of the Quarra Masters" [ALCH:010800FD]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 68, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 03 00 6E 64 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 04 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E 01 00 00 00 1C 00 02 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwVAVampBlood2 100\r\nplayer.removeitem 0pUquarrabloodUUnique 1\r\nplayer.additem 0dweUjinkswordUcurseUUnique 1\r\nmwRavenOmaynREF.additem 0pUquarrabloodUUnique 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "mwRavenOmaynREF [ACHR:018688A3]", 
+            "SCRO - Global Reference": "fbmwVAVampBlood2 [QUST:01003BC9]", 
+            "SCRO - Global Reference": "0pUquarrabloodUUNIQUE [ALCH:010800FD]", 
+            "SCRO - Global Reference": "0dweUjinkswordUcurseUUnique [WEAP:011001E3]"
+        ]
+    }
+}

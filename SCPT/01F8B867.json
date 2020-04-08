@@ -1,0 +1,52 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 922, 
+        "Record Flags": {}, 
+        "FormID": "01F8B867", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwMSJobHuntScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 7, 
+        "CompiledSize": 222, 
+        "VariableCount": 2, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 D0 00 00 00 16 00 15 00 01 00 11 00 20 58 3A 10 05 00 01 00 72 04 00 20 33 30 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 36 00 02 00 32 00 20 58 3A 10 05 00 01 00 72 04 00 20 31 20 3D 3D 20 72 05 00 58 43 10 05 00 01 00 72 06 00 20 31 20 21 3D 20 26 26 20 73 01 00 20 30 20 3D 3D 20 26 26 1C 00 01 00 22 10 00 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 16 00 37 00 03 00 33 00 20 58 3A 10 05 00 01 00 72 04 00 20 32 30 20 3D 3D 20 72 05 00 58 43 10 05 00 01 00 72 07 00 20 31 20 21 3D 20 26 26 20 73 02 00 20 30 20 3D 3D 20 26 26 1C 00 02 00 21 10 00 00 1C 00 03 00 22 10 00 00 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwMSJobHuntScript\n\nshort gone\nshort work\n\nbegin gamemode\n	if GetStage fbmwMSJobHunt == 30\n		return\n	endif\n	if GetStage fbmwmsJobHunt==1&&Player.GetInCell mournholdvscraftsmenasshall!=1 && gone == 0\n		fbmwIlnoriREF.Disable\n		set gone to 1\n	endif\n	if GetStage fbmwmsJobHunt==20 && Player.GetInCell MournholdVSTheSWingedSGuar != 1 && work == 0\n		fbmwTherdon2REF.Enable\n		fbmwMSTherdonREF.Disable\n		set work to 1\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 258 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "6E 68 6F 6C 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "6D 65 6E 61 73 73 68"
+            }, 
+            "SCVR - Name": "gone"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 08 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "BE CE 31 00 00 00 00"
+            }, 
+            "SCVR - Name": "work"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwIlnoriREF [ACHR:01F03F46]", 
+        "SCRO - Global Reference": "fbmwTherdon2REF [ACHR:01F03F45]", 
+        "SCRO - Global Reference": "fbmwMSTherdonREF [ACHR:01F04F74]", 
+        "SCRO - Global Reference": "fbmwMSJobHunt [QUST:0101C626]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "MournholdVSCraftsmenAsSHall [CELL:014804D4]", 
+        "SCRO - Global Reference": "MournholdVSTheSWingedSGuar [CELL:014804EC]"
+    ]
+}

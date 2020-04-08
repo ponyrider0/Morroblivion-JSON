@@ -1,0 +1,102 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1283, 
+        "Record Flags": {}, 
+        "FormID": "0102A44C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRChampion [QUST:0101C652]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "75 6E 54"
+            }, 
+            "NAM1 - Response Text": "Halt!  The King suspected you might try something treacherous with his champion. He cannot allow this to continue.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "20 57 65"
+            }, 
+            "NAM1 - Response Text": "By order of His Royal Highness King Hlaalu Helseth, Duke of Mournhold, you are ordered to accompany me to the prison until His Highness deems you fit to engage in the agreed-upon contest.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "20", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0karrod "Karrod" [NPC_:01260ACE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRChampion "Helseth's Champion" [QUST:0101C652]", 
+            "Parameter #2": "cheapshot", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0RoyalSGuard "Royal Guard" [FACT:01220016]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 16, 
+            "CompiledSize": 162, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 7E 10 00 00 1C 00 02 00 72 10 02 00 00 00 1C 00 03 00 72 10 02 00 00 00 1C 00 04 00 72 10 02 00 00 00 1C 00 05 00 72 10 02 00 00 00 1C 00 06 00 72 10 02 00 00 00 1C 00 07 00 72 10 02 00 00 00 1C 00 08 00 72 10 02 00 00 00 1C 00 09 00 72 10 02 00 00 00 1C 00 0A 00 72 10 02 00 00 00 1C 00 0B 00 72 10 02 00 00 00 1C 00 0C 00 72 10 02 00 00 00 1C 00 0D 00 72 10 02 00 00 00 1C 00 0E 00 72 10 02 00 00 00 1C 00 0F 00 72 10 02 00 00 00 15 00 0A 00 72 10 00 73 01 00 02 00 20 30", 
+        "SCTX - Result script source": "Player.GotoJail\r\nAnvilPCCellDoorRef.Lock\r\nBravilPCCellDoorRef.Lock\r\nBrumaPCCellDoorRef.Lock\r\nCheydinhalPCCellDoorRef.Lock\r\nChorrolPCCellDoorRef.Lock\r\nICPCCellDoorRef.Lock\r\nLeyawiinPCCellDoorRef.Lock\r\nSkingradPCCellDoorRef.Lock\r\nmwBuckmothJailDoorRef.Lock\r\nmwFrostmothJailDoorRef.Lock\r\nmwHawkmothJailDoorRef.Lock\r\nmwMoonmothJailDoorRef.Lock\r\nmwMournholdJailDoorRef.Lock\r\nmwPelagiadJailDoorRef.Lock\r\nset fbmwTRChampion.Cheapshot to 0", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "AnvilPCCellDoorRef [REFR:000937EB]", 
+            "SCRO - Global Reference": "BravilPCCellDoorRef [REFR:0009832B]", 
+            "SCRO - Global Reference": "BrumaPCCellDoorRef [REFR:000937E8]", 
+            "SCRO - Global Reference": "CheydinhalPCCellDoorRef [REFR:00098311]", 
+            "SCRO - Global Reference": "ChorrolPCCellDoorRef [REFR:0009502F]", 
+            "SCRO - Global Reference": "ICPCCellDoorRef [REFR:000937EA]", 
+            "SCRO - Global Reference": "LeyawiinPCCellDoorRef [REFR:00098310]", 
+            "SCRO - Global Reference": "SkingradPCCellDoorRef [REFR:000937E7]", 
+            "SCRO - Global Reference": "mwBuckmothJailDoorRef [REFR:0185636B]", 
+            "SCRO - Global Reference": "mwFrostmothJailDoorRef [REFR:01F0778E]", 
+            "SCRO - Global Reference": "mwHawkmothJailDoorRef [REFR:0182275B]", 
+            "SCRO - Global Reference": "mwMoonmothJailDoorRef [REFR:01872484]", 
+            "SCRO - Global Reference": "mwMournholdJailDoorRef [REFR:01F04BAD]", 
+            "SCRO - Global Reference": "mwPelagiadJailDoorRef [REFR:01802E53]", 
+            "SCRO - Global Reference": "fbmwTRChampion [QUST:0101C652]"
+        ]
+    }
+}

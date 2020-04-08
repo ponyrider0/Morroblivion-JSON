@@ -1,0 +1,98 @@
+{
+    "Topic": "1assignment [DIAL:013113A5]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 686, 
+        "Record Flags": {}, 
+        "FormID": "01F8BB84", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwCOAdvancement [QUST:01004AD9]", 
+    "PNAM - Previous INFO": "01F8BB83", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "72 6E 69"
+            }, 
+            "NAM1 - Response Text": "The miners have stumbled onto something very important. A wall in the mine crumbled and an old burial cavern was uncovered. They've found a large block of ice inside, and nothing anyone does can break it.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6D 77 43"
+            }, 
+            "NAM1 - Response Text": "I've feigned ignorance on the subject, but I need you to do something about it. The ice is called Stalhrim, and you're going to get me some of it.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 12.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwCOAdvancement "East Empire Company" [QUST:01004AD9]", 
+            "Parameter #2": "colonystate", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStageDone:59", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwCOChoice "East Empire Company: Making a Choice" [QUST:0101BEDB]", 
+            "Parameter #2": "050 I have agreed to help Carnius. I should report to him for assignments from now on.", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwCO7 "East Empire Company: Bar Brawl" [QUST:0101BED6]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0CarniusSMagius "Carnius Magius" [NPC_:01260B0A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 18, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "36 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "startquest fbmwCO8a\r\naddtopic 1stalhrim", 
+        "References": [
+            "SCRO - Global Reference": "fbmwCO8a [QUST:0101BED8]", 
+            "SCRO - Global Reference": "1Stalhrim [DIAL:013113CD]"
+        ]
+    }
+}

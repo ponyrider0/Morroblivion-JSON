@@ -1,0 +1,67 @@
+{
+    "Topic": "1oweSmeSmoney2 [DIAL:01321B19]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 292, 
+        "Record Flags": {}, 
+        "FormID": "0132340C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMSBarbarianBookA [QUST:01008558]", 
+    "PNAM - Previous INFO": "0132340B", 
+    "Add topics": [
+        "NAME - Topic": "0131107E", 
+        "NAME - Topic": "01311092"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "You don't have the cash, outlander. Bring it to me when you do. Dilborn doesn't move unless I have the money in my hands.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "82", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 3000.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "Gold001 "Gold" [MISC:0000000F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0drathasSnerus "Drathas Nerus" [NPC_:01260AA3]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

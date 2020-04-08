@@ -1,0 +1,82 @@
+{
+    "Topic": "1stolenSbook1 [DIAL:01321DAA]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 691, 
+        "Record Flags": {}, 
+        "FormID": "0132346A", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSScrollSales [QUST:0101C631]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310D0E"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "A great deal of work went into these formulas; I cannot thank you enough for returning them to me.  You're certainly welcome back here anytime.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": " I'd be happy to offer you a small discount on anything I have here.  It's the least I can do.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ElbertSNermarc "Elbert Nermarc" [NPC_:01260ACA]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 73, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 39 10 0A 00 02 00 72 03 00 6E 64 00 00 00 0F 10 09 00 02 00 1D 00 6E 05 00 00 00 53 10 0A 00 02 00 72 01 00 6E 28 00 00 00", 
+        "SCTX - Result script source": "player.removeitem 0bkunermarcnotes 1\r\nadditem 0bkunermarcnotes 1\r\nsetstage fbmwmsscrollsales 100\r\nsetav mercantile 5\r\nmoddisposition player 40", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0bkUnermarcnotes [BOOK:01180247]", 
+            "SCRO - Global Reference": "fbmwMSScrollSales [QUST:0101C631]"
+        ]
+    }
+}

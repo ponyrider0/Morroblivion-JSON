@@ -1,0 +1,75 @@
+{
+    "Topic": "1Advancement [DIAL:01310A5F]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 389, 
+        "Record Flags": {}, 
+        "FormID": "0132204F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHHAdvancement [QUST:0100EB55]", 
+    "PNAM - Previous INFO": "0132204E", 
+    "Add topics": [
+        "NAME - Topic": "01310BCB"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "You have alot of business experience, but some say that you do not have the skills to use what you know.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "82", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 4.000000000000000, 
+            "Function": "GetFactionRank:73", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Hlaalu "Great House Hlaalu" [FACT:01220005]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 2.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHHAdvancement "Great House Hlaalu" [QUST:0100EB55]", 
+            "Parameter #2": "HlaaluAdvancement", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0nilenoSdorvayn "Nileno Dorvayn" [NPC_:01260109]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCTX - Result script source": "; 1 = Skills Qualify; Reputation Does Not\r\n; 2 = Reputation Qualifies, but Skills do Not"
+    }
+}

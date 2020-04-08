@@ -1,0 +1,82 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 721, 
+        "Record Flags": {}, 
+        "FormID": "01F88759", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMVCultistVictim [QUST:01003403]", 
+    "PNAM - Previous INFO": "01F88758", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 4D 56"
+            }, 
+            "NAM1 - Response Text": "Thank the gods you've found her! I can only imagine what those bastards had planned for my Malexa. Please, take your reward, and I'll make sure to let House Redoran know of the service you've performed for me today. Thank you again!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "0malexa "Malexa" [NPC_:012606D3]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0sason "Sason" [NPC_:012606D2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVCultistVictim "Kidnapped by Cultists" [QUST:01003403]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 77, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "15 00 0A 00 72 02 00 73 01 00 02 00 20 30 39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 A9 10 0D 00 03 00 72 03 00 72 04 00 6E 05 00 00 00 52 10 0A 00 02 00 72 05 00 6E C8 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E C8 00 00 00", 
+        "SCTX - Result script source": "set fbmwmvcultistvictim.follownow to 0\r\nsetstage fbmwmvcultistvictim 100\r\nmodfactionreaction 0redoran playerfaction 5\r\nremoveitem gold001 200\r\nplayer.additem gold001 200", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMVCultistVictim [QUST:01003403]", 
+            "SCRO - Global Reference": "0Redoran [FACT:01220000]", 
+            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]"
+        ]
+    }
+}

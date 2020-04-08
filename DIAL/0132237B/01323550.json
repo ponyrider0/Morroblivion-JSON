@@ -1,0 +1,95 @@
+{
+    "Topic": "1SloadSSoap1 [DIAL:0132237B]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 650, 
+        "Record Flags": {}, 
+        "FormID": "01323550", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHTSloadSoap [QUST:0100344B]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "013109D6", 
+        "NAME - Topic": "01310BEA", 
+        "NAME - Topic": "01310BCA"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Perhaps these will put Master Neloth in a better mood. He is old, you see, and has trouble moving about.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I use the soap along with some roobrush and bonemeal to make an ointment for his joints.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 5.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ingredUsloadUsoapU01 "Sload Soap" [INGR:010A0037]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHTSloadSoap "House Telvanni: Sload Soap" [QUST:0100344B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0araraSuvulas "Arara Uvulas" [NPC_:0126040C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 50, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 03 00 6E 64 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 04 00 6E 05 00 00 00 1C 00 02 00 53 10 0A 00 02 00 72 01 00 6E 14 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHTSloadSoap 100\r\nPlayer.RemoveItem 0ingredUSloadUSoapU01 5\r\nmwNelothREF.ModDisposition Player 20", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "mwNelothREF [ACHR:01842DCB]", 
+            "SCRO - Global Reference": "fbmwHTSloadSoap [QUST:0100344B]", 
+            "SCRO - Global Reference": "0ingredUsloadUsoapU01 [INGR:010A0037]"
+        ]
+    }
+}

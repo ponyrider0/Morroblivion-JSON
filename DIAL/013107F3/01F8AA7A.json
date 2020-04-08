@@ -1,0 +1,74 @@
+{
+    "Topic": "1ThievesSGuildSjob [DIAL:013107F3]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 603, 
+        "Record Flags": {}, 
+        "FormID": "01F8AA7A", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Say Once": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwFGTelvanniAgents [QUST:010033EA]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "69 73 53"
+            }, 
+            "NAM1 - Response Text": "I told you. This Caldera Mine trouble is not a Thieves Guild job. Yes. They are Thieves Guild. And if you belong to the Thieves Guild, and you murder a Thieves Guild member, you get expelled.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "69 73 53"
+            }, 
+            "NAM1 - Response Text": "But it's only murder if the crime is reported. And you're not going to report it, are you? And, after all, I'm your Fighters Guild Steward, and I'm giving you a job to do. Don't make me wonder about where your loyalities lie.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwFGEggPoachers "Fighters Guild: The Egg Poachers" [QUST:010033D9]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0eydisSfireTeye "Eydis Fire-Eye" [NPC_:0126011B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

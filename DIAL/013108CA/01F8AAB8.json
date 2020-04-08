@@ -1,0 +1,98 @@
+{
+    "Topic": "1embezzledSfunds [DIAL:013108CA]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 773, 
+        "Record Flags": {}, 
+        "FormID": "01F8AAB8", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwICMossanon [QUST:0100B81C]", 
+    "PNAM - Previous INFO": "01F8AAB7", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 49 43"
+            }, 
+            "NAM1 - Response Text": "Yes. I took the 3000 gold. It was foolish. And wrong. But I was in love, and thought that Volmyni could only love a rich man. I was wrong. And foolish.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 49 43"
+            }, 
+            "NAM1 - Response Text": "Now I know she loves me -- not my gold. Now I only have 2500 gold left. I spent the rest. I'll give you the 2500 gold, and promise to pay back the rest as soon as I can, if you will promise to keep my whereabouts secret from Canctunian Ponius.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "77 49 43"
+            }, 
+            "NAM1 - Response Text": "If arrested, I'll be sent back to Cyrodiil for trial, and be separated from my precious Volmyni.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 15.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICMossanon "Imperial Cult: Pledge from Canctunian Ponius" [QUST:0100B81C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICMossanon "Imperial Cult: Pledge from Canctunian Ponius" [QUST:0100B81C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Mossanon "Mossanon" [NPC_:01260A2B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "fbmwicpromisesecret [DIAL:01F8A9FC]", 
+        "TCLT - Choice": "fbmwicdemandgold [DIAL:01F8A9F7]", 
+        "TCLT - Choice": "fbmwictakenoaction [DIAL:01F8AA01]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

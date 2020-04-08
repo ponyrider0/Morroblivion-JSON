@@ -1,0 +1,89 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 813, 
+        "Record Flags": {}, 
+        "FormID": "01F8B959", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSJobHunt [QUST:0101C626]", 
+    "PNAM - Previous INFO": "01F8B958", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6D 77 4D"
+            }, 
+            "NAM1 - Response Text": "Hey there! I got the job! Thanks so much for recommending this to me. It's hard work, but I just imagine that every breastplate or shield I turn out is just a thin, hard pillow made of metal, and I get through the day just fine.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 4D 53"
+            }, 
+            "NAM1 - Response Text": "Here, I don't have much money, but I can offer you some tools that might come in handy.  Also talk to my boss, Bols. He's pretty happy at having a new apprentice, and will give you some good deals.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "0bolsSindalen "Bols Indalen" [NPC_:01260AB2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0therdon2 "Therdon" [NPC_:01260AB4]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSJobHunt "The Smith's Apprentice" [QUST:0101C626]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 46, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 1E 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0F 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmsjobhunt 30\r\nmoddisposition player 15\r\nplayer.additem repairhammer 10", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMSJobHunt [QUST:0101C626]", 
+            "SCRO - Global Reference": "RepairHammer [MISC:0000000C]"
+        ]
+    }
+}

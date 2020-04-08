@@ -1,0 +1,77 @@
+{
+    "Topic": "1DragonboneSCuirass [DIAL:01310FBE]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 369, 
+        "Record Flags": {}, 
+        "FormID": "01320A47", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSMuseum [QUST:0101C629]", 
+    "PNAM - Previous INFO": "01320A3E", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Ah, the very definition of an artifact.  They don't make them like this anymore, eh outlander?  So, will you sell it?", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": " I can offer you 30000 gold for it.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0dragonboneUcuirassUunique "Dragonbone Cuirass" [ARMO:01120103]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0TorasaSAram "Torasa Aram" [NPC_:01260A80]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1DragonboneSCuirass1 [DIAL:01320A44]", 
+        "TCLT - Choice": "1DragonboneSCuirass2 [DIAL:01320A40]", 
+        "TCLT - Choice": "1DragonboneSCuirass3 [DIAL:01320A42]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

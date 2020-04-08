@@ -1,0 +1,71 @@
+{
+    "Topic": "1HidesSHisSEyesSisSHajTEi2 [DIAL:01320457]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 410, 
+        "Record Flags": {}, 
+        "FormID": "01322F1C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMVBountyHunter [QUST:01003401]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "You would tell that fool? I will not go back. I will never go back!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0hidesUhisUeyes "Hides His Eyes" [NPC_:01260967]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 40, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 82 00 00 00 A9 10 0D 00 03 00 72 02 00 72 03 00 6E FB FF FF FF 16 10 05 00 01 00 72 04 00", 
+        "SCTX - Result script source": "setstage fbmwmvbountyhunter 130\r\nmodfactionreaction 0twinslamps playerfaction -5\r\nstartcombat player", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMVBountyHunter [QUST:01003401]", 
+            "SCRO - Global Reference": "0TwinSLamps [FACT:01220013]", 
+            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

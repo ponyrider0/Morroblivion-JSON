@@ -1,0 +1,40 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1284, 
+        "Record Flags": {}, 
+        "FormID": "014702B6", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwTRFabCentFightWatchScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 19, 
+        "CompiledSize": 264, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 FA 00 00 00 16 00 2A 00 0F 00 26 00 20 58 3A 10 05 00 01 00 72 0E 00 20 31 30 30 20 3E 3D 20 58 01 10 05 00 01 00 72 0F 00 20 32 30 30 20 3C 20 26 26 1C 00 01 00 16 10 05 00 01 00 72 03 00 1C 00 02 00 16 10 05 00 01 00 72 03 00 1C 00 03 00 16 10 05 00 01 00 72 02 00 1C 00 04 00 16 10 05 00 01 00 72 05 00 1C 00 05 00 16 10 05 00 01 00 72 04 00 1C 00 06 00 16 10 05 00 01 00 72 03 00 1C 00 07 00 16 10 05 00 01 00 72 10 00 1C 00 08 00 16 10 05 00 01 00 72 10 00 1C 00 03 00 16 10 05 00 01 00 72 06 00 1C 00 09 00 16 10 05 00 01 00 72 11 00 1C 00 0A 00 16 10 05 00 01 00 72 12 00 1C 00 0B 00 16 10 05 00 01 00 72 11 00 1C 00 0C 00 16 10 05 00 01 00 72 12 00 1C 00 0D 00 16 10 05 00 01 00 72 0A 00 39 10 0A 00 02 00 72 13 00 6E 32 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptName mwTRFabCentFightWatchScript\n\nbegin gamemode\n	if GetStage fbmwTRMHAttack >= 100 && GetDistance Player < 200\n		fbmwFab9REF.StartCombat fbmwCent6REF\n		fbmwFab10REF.StartCombat fbmwCent6REF\n		fbmwCent6REF.StartCombat fbmwFab10REF\n		fbmwFab4REF.StartCombat fbmwCent2REF\n		fbmwCent2REF.StartCombat fbmwFab4REF\n		fbmwFab3REF.StartCombat fbmwCent6REF\n		fbmwFab7REF.StartCombat fbmwCent5REF\n		fbmwFab8REF.StartCombat fbmwCent5REF\n		fbmwCent6REF.StartCombat fbmwFab3REF\n		fbmwFab1REF.StartCombat fbmwCent3REF\n		fbmwFab2REF.StartCombat fbmwCent4REF\n		fbmwFab5REF.StartCombat fbmwCent3REF\n		fbmwFab6REF.StartCombat fbmwCent4REF\n		fbmwCent1REF.StartCombat fbmwFab2REF\n		SetStage fbmwTRBamz 50\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "fbmwFab9REF [ACRE:010052F5]", 
+        "SCRO - Global Reference": "fbmwFab10REF [ACRE:010052F4]", 
+        "SCRO - Global Reference": "fbmwCent6REF [ACRE:01F8E805]", 
+        "SCRO - Global Reference": "fbmwFab4REF [ACRE:010052F3]", 
+        "SCRO - Global Reference": "fbmwCent2REF [ACRE:01F8E809]", 
+        "SCRO - Global Reference": "fbmwFab3REF [ACRE:010039F9]", 
+        "SCRO - Global Reference": "fbmwFab7REF [ACRE:010052F0]", 
+        "SCRO - Global Reference": "fbmwFab8REF [ACRE:010052EF]", 
+        "SCRO - Global Reference": "fbmwFab1REF [ACRE:010039F6]", 
+        "SCRO - Global Reference": "fbmwFab2REF [ACRE:010039F7]", 
+        "SCRO - Global Reference": "fbmwFab5REF [ACRE:010052F2]", 
+        "SCRO - Global Reference": "fbmwFab6REF [ACRE:010052F1]", 
+        "SCRO - Global Reference": "fbmwCent1REF [ACRE:01F8E806]", 
+        "SCRO - Global Reference": "fbmwTRMHAttack [QUST:0101C657]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "fbmwCent5REF [ACRE:01F8E80A]", 
+        "SCRO - Global Reference": "fbmwCent3REF [ACRE:01F8E808]", 
+        "SCRO - Global Reference": "fbmwCent4REF [ACRE:01F8E807]", 
+        "SCRO - Global Reference": "fbmwTRBamz [QUST:0101C650]"
+    ]
+}

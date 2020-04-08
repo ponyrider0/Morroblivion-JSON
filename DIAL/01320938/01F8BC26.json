@@ -1,0 +1,80 @@
+{
+    "Topic": "1failedSinSourSquest3 [DIAL:01320938]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 706, 
+        "Record Flags": {}, 
+        "FormID": "01F8BC26", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwBMBrodirGrove [QUST:0101AF87]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "You honor me with this decision!  Songs will be written of our glorious battle!  It is true that in my heart I wish to be defeated, so that I may enter Sovngarde.  But know this.  I will fight, and fight valiantly, as I have all my life.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "You will probably die by my hand.  I will grant no quarter, no mercy, and I expect no less from you.  Go now. Prepare for battle.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "When you are ready, speak with me again, and then we shall engage in armed combat!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ulfgarStheSunending "Ulfgar the Unending" [NPC_:01260B4A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 3C 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwbmBrodirGrove 60", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMBrodirGrove [QUST:0101AF87]"
+        ]
+    }
+}

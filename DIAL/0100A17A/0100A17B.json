@@ -1,0 +1,67 @@
+{
+    "Topic": "fbmwbmMeadHallBusinessMead [DIAL:0100A17A]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 374, 
+        "Record Flags": {}, 
+        "FormID": "0100A17B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMMeadHall [QUST:0101B6C8]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6E 6A 61"
+            }, 
+            "NAM1 - Response Text": "Yes, great chieftain. I will put in the order for mead. It should arrive from Skyrim in about a week.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMMeadHall "The Mead Hall Massacre" [QUST:0101B6C8]", 
+            "Parameter #2": "ordermead", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0svenjaSsnowTsong "Svenja Snow-Song" [NPC_:01260B34]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 28, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 15 00 0A 00 72 02 00 73 0D 00 02 00 20 31", 
+        "SCTX - Result script source": "setstage fbmwBMMeadHallb 10\r\nset fbmwBMMeadHall.ordermead to 1", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMMeadHallb [QUST:0101B6CA]", 
+            "SCRO - Global Reference": "fbmwBMMeadHall [QUST:0101B6C8]"
+        ]
+    }
+}

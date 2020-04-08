@@ -1,0 +1,70 @@
+{
+    "Topic": "1friendlySwager5 [DIAL:013213F9]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 509, 
+        "Record Flags": {}, 
+        "FormID": "013232EA", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMSBattleBots1 [QUST:0101C618]", 
+    "PNAM - Previous INFO": "013232E9", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Sorry, outlander. It looks like you don't have enough money to bet. Nonetheless, we can still enjoy the fight.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ignatiusUflaccus "Ignatius Flaccus" [NPC_:01260AA7]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 54, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 03 00 6E 3C 00 00 00 15 00 0A 00 72 03 00 73 03 00 02 00 20 31 1C 00 01 00 16 10 05 00 01 00 72 02 00 1C 00 02 00 16 10 05 00 01 00 72 01 00", 
+        "SCTX - Result script source": "setstage fbmwMSBattleBots1 60\r\nset fbmwMSBattleBots1.battleOn to 1\r\nfbmwBattleBot2.startcombat fbmwBattleBot1\r\nfbmwBattleBot1.startcombat fbmwBattleBot2", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBattleBot2 [ACRE:01F8B89E]", 
+            "SCRO - Global Reference": "fbmwBattleBot1 [ACRE:01F8B89B]", 
+            "SCRO - Global Reference": "fbmwMSBattleBots1 [QUST:0101C618]"
+        ]
+    }
+}

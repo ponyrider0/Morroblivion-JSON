@@ -1,0 +1,231 @@
+{
+    "Record Header": {
+        "Signature": "QUST", 
+        "Data Size": 1719, 
+        "Record Flags": {}, 
+        "FormID": "010033EA", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwFGTelvanniAgents", 
+    "FULL - Name": "Fighters Guild: The Telvanni Agents", 
+    "ICON - Icon FileName": "darthsouth\\Quests\\fightersguild.dds", 
+    "DATA - General": {
+        "Flags": {}, 
+        "Priority": 85
+    }, 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsPlayableRace:254", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestRunning:56", 
+            "Unused": "00 00", 
+            "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Stages": [
+        {
+            "INDX - Stage index": 1
+        }, 
+        {
+            "INDX - Stage index": 10, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I'm to find and kill four Telvanni agents responsible for thefts and disappearances at the Caldera Mine. Their names are Alynu Aralen, Sathasa Nerothren, Fothyna Herothran, and Alveleg. They're hiding in a cave in the hills north of Caldera Mine, and they probably have a lookout posted outside the mine. When the four agents are dead, report back to Eydis Fire-Eye.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 9, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "55 10 05 00 01 00 72 01 00", 
+                        "SCTX - Result script source": "ShowMap mwAshanammuMapMarker", 
+                        "References": [
+                            "SCRO - Global Reference": "mwAshanammuMapMarker [REFR:01451011]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 100, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "I reported killing the Telvanni agents, and Eydis Fire-Eye paid me 400 gold.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 216, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 13 00 72 01 00 73 02 00 0B 00 20 72 01 00 73 02 00 20 35 20 2B 16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 6D 00 01 00 69 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 43 6F 6D 70 6C 65 74 65 64 20 46 69 67 68 74 65 72 73 20 47 75 69 6C 64 3A 20 54 68 65 20 54 65 6C 76 61 6E 6E 69 20 41 67 65 6E 74 73 20 71 75 65 73 74 22 F9 16 27 00 01 00 23 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 31 30 30 19 00 00 00", 
+                        "SCTX - Result script source": "Set fbmwFGAdvancement.FighterReputation TO fbmwFGAdvancement.FighterReputation + 5\r\n\r\nif ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qCompleted Fighters Guild: The Telvanni Agents quest%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 100\"\r\nendif", 
+                        "References": [
+                            "SCRO - Global Reference": "fbmwFGAdvancement [QUST:01010566]"
+                        ]
+                    }
+                }
+            ]
+        }
+    ], 
+    "Targets": [
+        {
+            "QSTA - Target": {
+                "Target": "0181081A", 
+                "Flags": {}, 
+                "Unused": "00 47 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "40", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetDeadCount:84", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "0FothynaSHerothran "Fothyna Herothran" [NPC_:01260980]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "40", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetDeadCount:84", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "0SathasaSNerothren "Sathasa Nerothren" [NPC_:01260981]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "40", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetDeadCount:84", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "0AlynuSAralen "Alynu Aralen" [NPC_:01260982]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "40", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetDeadCount:84", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "0alveleg "Alveleg" [NPC_:012609E8]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 10.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwFGTelvanniAgents "Fighters Guild: The Telvanni Agents" [QUST:010033EA]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "0184969E", 
+                "Flags": {}, 
+                "Unused": "00 47 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetDeadCount:84", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "0FothynaSHerothran "Fothyna Herothran" [NPC_:01260980]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetDeadCount:84", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "0SathasaSNerothren "Sathasa Nerothren" [NPC_:01260981]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetDeadCount:84", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "0AlynuSAralen "Alynu Aralen" [NPC_:01260982]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetInCell:67", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "Ashanammu "Ashanammu" [CELL:014800EE]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 10.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwFGTelvanniAgents "Fighters Guild: The Telvanni Agents" [QUST:010033EA]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }
+    ]
+}

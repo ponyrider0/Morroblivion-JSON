@@ -1,0 +1,85 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1691, 
+        "Record Flags": {}, 
+        "FormID": "0102F322", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwPublicanDagonFelFryfnhildScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 7, 
+        "CompiledSize": 369, 
+        "VariableCount": 5, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 63 01 00 00 16 00 0D 00 1C 00 09 00 20 73 01 00 20 31 20 3D 3D 16 00 0D 00 05 00 09 00 20 73 05 00 20 30 20 3D 3D 15 00 09 00 73 02 00 04 00 20 47 03 00 15 00 09 00 73 03 00 04 00 20 47 04 00 15 00 07 00 73 05 00 02 00 20 31 1C 00 01 00 73 10 02 00 00 00 1C 00 02 00 17 11 02 00 00 00 17 00 02 00 05 00 16 00 0F 00 01 00 0B 00 20 47 03 00 20 73 02 00 20 21 3D 15 00 07 00 73 04 00 02 00 20 31 18 00 0F 00 01 00 0B 00 20 47 04 00 20 73 03 00 20 21 3D 15 00 07 00 73 04 00 02 00 20 31 19 00 00 00 19 00 00 00 16 00 17 00 03 00 13 00 20 72 05 00 58 43 10 05 00 01 00 72 06 00 20 30 20 3D 3D 16 00 0D 00 01 00 09 00 20 73 04 00 20 31 20 3D 3D 15 00 07 00 73 04 00 02 00 20 32 19 00 00 00 19 00 00 00 16 00 0D 00 08 00 09 00 20 73 04 00 20 32 20 3D 3D 15 00 07 00 73 01 00 02 00 20 30 15 00 07 00 73 05 00 02 00 20 30 15 00 07 00 73 02 00 02 00 20 30 15 00 07 00 73 03 00 02 00 20 30 15 00 07 00 73 04 00 02 00 20 30 1C 00 01 00 DD 10 07 00 01 00 6E 00 00 00 00 1C 00 01 00 72 10 07 00 01 00 6E 1E 00 00 00 1C 00 02 00 17 11 05 00 01 00 72 07 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scriptname fbmwPublicanDagonFelFryfnhildScript\r\n\r\n\r\nshort rent\r\nshort rentday\r\nshort rentmonth\r\nshort cleanup\r\nshort setup\r\n\r\n\r\n\r\nbegin gamemode\r\n\r\n	if ( rent == 1 )\r\n\r\n		if ( setup == 0 )\r\n			set rentday to GameDay\r\n			set rentmonth to GameMonth\r\n			set setup to 1\r\n			mwDagonFelRentDoorREF.UnLock	\r\n			mwDagonFelRentBedREF.SetOwnership\r\n\r\n		else\r\n\r\n			if ( GameDay != rentday )\r\n				set cleanup to 1\r\n			elseif ( GameMonth != rentmonth )\r\n				set cleanup to 1\r\n			endif\r\n		endif\r\n\r\n		If ( Player.GetInCell DagonSFelVSEndSofStheSWorldSRenterSRooms == 0 )\r\n			if ( Cleanup == 1 )\r\n				Set Cleanup to 2\r\n			endif\r\n		endif\r\n\r\n		if ( Cleanup == 2 )\r\n\r\n			set rent to 0 \r\n			set setup to 0\r\n			set rentday to 0\r\n			set rentmonth to 0\r\n			set cleanup to 0\r\n			mwDagonFelRentDoorREF.SetOpenState 0\r\n			mwDagonFelRentDoorREF.Lock 30\r\n			mwDagonFelRentBedREF.SetOwnership 0fryfnhild\r\n		endif\r\n	endif\r\nEnd\n;<CSEBlock>\n;<CSECaretPos> 874 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 7B 00 00 00"
+            }, 
+            "SCVR - Name": "rent"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "80 A5 54 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "08 00 00 DB 08 00 00"
+            }, 
+            "SCVR - Name": "rentday"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "rentmonth"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "45 20 30 61 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "55 62 65 64 55 30 32"
+            }, 
+            "SCVR - Name": "cleanup"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "50 11 CF 08 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "A1 6B 4A 00 00 00 00"
+            }, 
+            "SCVR - Name": "setup"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "mwDagonFelRentDoorREF [REFR:0183428F]", 
+        "SCRO - Global Reference": "mwDagonFelRentBedREF [REFR:01834262]", 
+        "SCRO - Global Reference": "GameDay [GLOB:00000037]", 
+        "SCRO - Global Reference": "GameMonth [GLOB:00000036]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "DagonSFelVSEndSofStheSWorldSRenterSRooms [CELL:01480169]", 
+        "SCRO - Global Reference": "0fryfnhild [NPC_:012605A3]"
+    ]
+}

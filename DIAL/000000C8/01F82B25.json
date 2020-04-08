@@ -1,0 +1,104 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 934, 
+        "Record Flags": {}, 
+        "FormID": "01F82B25", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwICRat [QUST:0100B831]", 
+    "PNAM - Previous INFO": "01F82B26", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 49 43"
+            }, 
+            "NAM1 - Response Text": "I see you have brought me five units of rat meat. Here is a Cure Poison potion for you. And since these little errands are becoming a little more dangerous, here are a couple of books you might find useful.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "65 73 55"
+            }, 
+            "NAM1 - Response Text": "Now. Speak to me again when you are ready for another lay healer mission. And don't forget to check for advancement....", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 5.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "Ratmeat "Rat Meat" [INGR:0003368F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICRat "Imperial Cult: Gathering Rat Meat" [QUST:0100B831]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICRat "Imperial Cult: Gathering Rat Meat" [QUST:0100B831]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0SynnolianSTunifus "Synnolian Tunifus" [NPC_:012602E2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 6, 
+            "CompiledSize": 100, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 04 00 6E 05 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 06 00 6E 01 00 00 00 53 10 0A 00 02 00 72 01 00 6E 05 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwicrat 50\r\nplayer.additem 0pucureupoisonus 1\r\nplayer.removeitem ratmeat 5\r\nplayer.additem 0bookskilluunarmored1 1\r\nplayer.additem 0bookskilluunarmored2 1\r\nmoddisposition player 5", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwICRat [QUST:0100B831]", 
+            "SCRO - Global Reference": "0pUcureUpoisonUs [ALCH:010800E7]", 
+            "SCRO - Global Reference": "Ratmeat [INGR:0003368F]", 
+            "SCRO - Global Reference": "0bookskillUunarmored1 [BOOK:01180028]", 
+            "SCRO - Global Reference": "0bookskillUunarmored2 [BOOK:01180029]"
+        ]
+    }
+}

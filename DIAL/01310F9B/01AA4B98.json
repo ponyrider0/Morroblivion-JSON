@@ -1,0 +1,66 @@
+{
+    "Topic": "1backSforSanotherSround [DIAL:01310F9B]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 295, 
+        "Record Flags": {}, 
+        "FormID": "01AA4B98", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSHolyElf [QUST:0101C624]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "Once not enough, you squat, *hiccup* dumpy treefrog of an elf? I'll take on you and your ugly *hiccup* friend too.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSHolyElf "Wood Elf with a Grievance" [QUST:0101C624]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0holmar "Holmar" [NPC_:01260AB0]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1backSforSanotherSround1 [DIAL:01320620]", 
+        "TCLT - Choice": "1backSforSanotherSround2 [DIAL:0132061E]", 
+        "TCLT - Choice": "1backSforSanotherSround3 [DIAL:0132061B]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

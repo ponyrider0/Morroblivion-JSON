@@ -1,0 +1,58 @@
+{
+    "Topic": "AAADestination [DIAL:01000D47]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 287, 
+        "Record Flags": {}, 
+        "FormID": "01004274", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "aaaBoatTransport [QUST:01F0A330]", 
+    "PNAM - Previous INFO": "01004277", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "61 73 53"
+            }, 
+            "NAM1 - Response Text": "The Frost-Ghost may not be as impressive as some other ships, but she sails these waters like a wraith on the night.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0anoSandaram "Ano Andaram" [NPC_:01260A56]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "BBBAnoAndaramEbonheart [DIAL:0100D1F7]", 
+        "TCLT - Choice": "BBBAnoAndaramHlaOad [DIAL:0100D1F5]", 
+        "TCLT - Choice": "BBBAnoAndaramMolagMar [DIAL:0100D1F9]", 
+        "TCLT - Choice": "BBBAnoAndaramTelBranora [DIAL:0100D1FB]", 
+        "TCLT - Choice": "BBBAnoAndaramCancel [DIAL:0100D1F3]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

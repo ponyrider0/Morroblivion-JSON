@@ -1,0 +1,58 @@
+{
+    "Topic": "AAADestination [DIAL:01000D47]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 198, 
+        "Record Flags": {}, 
+        "FormID": "01000D48", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "aaaStriderTransport [QUST:01000D46]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "49 62 3F"
+            }, 
+            "NAM1 - Response Text": "Where would you like to go?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0darvameShleran "Darvame Hleran" [NPC_:0126077D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "AAADarvameHleranBalmora [DIAL:010017E1]", 
+        "TCLT - Choice": "AAADarvameHleranSuran [DIAL:010017E4]", 
+        "TCLT - Choice": "AAADarvameHleranGnisis [DIAL:010017E7]", 
+        "TCLT - Choice": "AAADarvameHleranVivec [DIAL:010017F0]", 
+        "TCLT - Choice": "AAADarvameHleranCancel [DIAL:01000D4A]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

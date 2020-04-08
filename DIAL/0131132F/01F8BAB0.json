@@ -1,0 +1,96 @@
+{
+    "Topic": "1failedSinSourSquest [DIAL:0131132F]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 735, 
+        "Record Flags": {}, 
+        "FormID": "01F8BAB0", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMBrodirGrove [QUST:0101AF87]", 
+    "PNAM - Previous INFO": "01F8BAAF", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "67 61 72"
+            }, 
+            "NAM1 - Response Text": "Don't you understand?  For five hundred years, I have searched for the entrance to Sovngarde!  I have been all across the Empire and back, but I cannot find it!", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "67 61 72"
+            }, 
+            "NAM1 - Response Text": "Once, my friends and I served Ysgramor, and counted ourselves among his \"Five Hundred Companions.\"  We helped drive the Elves out of Skyrim!  We earned our place in Sovngarde!", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "67 61 72"
+            }, 
+            "NAM1 - Response Text": "If, in your travels, you discover the entrance to Sovngarde, let me know, and I will be forever in your debt.  I have tried...and failed.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMBrodirGrove "Betrayal at Brodir Grove" [QUST:0101AF87]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0bkUSovngarde "Sovngarde, a Reexamination" [BOOK:0118025F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ulfgarStheSunending "Ulfgar the Unending" [NPC_:01260B4A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1failedSinSourSquest1 [DIAL:0132093C]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

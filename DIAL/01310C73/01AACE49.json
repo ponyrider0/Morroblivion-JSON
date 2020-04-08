@@ -1,0 +1,90 @@
+{
+    "Topic": "1Errand [DIAL:01310C73]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 659, 
+        "Record Flags": {}, 
+        "FormID": "01AACE49", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ03 [QUST:01F0A28F]", 
+    "PNAM - Previous INFO": "01AACE48", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "4D 57 4D"
+            }, 
+            "NAM1 - Response Text": "The errand, then, is very simple. I need the skull of Llevule Andrano. You'll find it in Andrano Ancestral Tomb.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "4D 57 4D"
+            }, 
+            "NAM1 - Response Text": "But take care not to upset the natives.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "20 6E 6F"
+            }, 
+            "NAM1 - Response Text": "The Dunmer have some peculiar primitive prejudices against necromancy, and take grave objection to unauthorized tomb visits.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ03 "Gra-Muzgob Informant" [QUST:01F0A28F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0sharnSgraTmuzgob "Sharn Gra-Muzgob" [NPC_:01260122]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 39 10 0A 00 02 00 72 02 00 6E 0A 00 00 00 55 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "addtopic 1necromancers\r\nsetstage FBMWMQ03 10\r\nShowMap AndranoSAncestralSTombMapMarker23", 
+        "References": [
+            "SCRO - Global Reference": "1necromancers [DIAL:01310A41]", 
+            "SCRO - Global Reference": "fbmwMQ03 [QUST:01F0A28F]", 
+            "SCRO - Global Reference": "AndranoSAncestralSTombMapMarker23 [REFR:01451017]"
+        ]
+    }
+}

@@ -1,0 +1,101 @@
+{
+    "Topic": "1PyroilSTar [DIAL:01311063]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 687, 
+        "Record Flags": {}, 
+        "FormID": "01014C52", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRBlade [QUST:0101C651]", 
+    "PNAM - Previous INFO": "01014C51", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "Ah...that's the stuff. Here, I'll do this. There. There's your sword. Not a bad looking blade, actually. Good luck to you, youngster.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "Now leave this old dwarf alone. Go!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "dwarvenUghostUradac "Radac Stungnthumz" [NPC_:01F8E55D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0pyroilUtarUunique "Pyroil Tar" [ALCH:01080102]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0nerevarbladeU01 "Trueflame" [WEAP:01100212]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 80.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRBlade "The Blade of Nerevar" [QUST:0101C651]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 68, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00 39 10 0A 00 02 00 72 05 00 6E 50 00 00 00", 
+        "SCTX - Result script source": "Player.RemoveItem 0nerevarbladeU01 1\r\nPlayer.RemoveItem 0pyroilUtarUunique 1\r\nPlayer.AddItem 0nerevarbladeU01Uflame 1\r\nsetstage fbmwTRBlade 80", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0nerevarbladeU01 [WEAP:01100212]", 
+            "SCRO - Global Reference": "0pyroilUtarUunique [ALCH:01080102]", 
+            "SCRO - Global Reference": "0nerevarbladeU01Uflame [WEAP:01011A63]", 
+            "SCRO - Global Reference": "fbmwTRBlade [QUST:0101C651]"
+        ]
+    }
+}

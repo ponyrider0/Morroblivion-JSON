@@ -1,0 +1,91 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 943, 
+        "Record Flags": {}, 
+        "FormID": "01F8B83D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwCO11Script", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 134, 
+        "VariableCount": 6, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 78 00 00 00 16 00 2F 00 02 00 2B 00 20 58 3A 10 05 00 01 00 72 01 00 20 36 30 20 3E 3D 20 73 04 00 20 47 02 00 20 21 3D 20 26 26 20 73 06 00 20 31 20 21 3D 20 26 26 15 00 09 00 73 04 00 04 00 20 47 02 00 15 00 0D 00 73 05 00 08 00 20 73 05 00 20 31 20 2B 19 00 00 00 16 00 0C 00 01 00 08 00 20 73 05 00 20 33 20 3E 15 00 07 00 73 06 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwCO11Script\nshort aferguard\nshort garnasguard\nshort gratianguard\nshort currentday\nshort localdayspassed\nshort guardstrained\n\n\nbegin gamemode\n	if GetStage fbmwCO11 >= 60  && currentday != GameDaysPassed && guardstrained != 1\n		set currentday to GameDaysPassed\n		set localdayspassed to localdayspassed + 1\n	endif\n	if localdayspassed > 3\n		set guardstrained to 1\n	endif\n	end\n\n;<CSEBlock>\n;<CSECaretPos> 339 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "aferguard"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "7E A2 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "garnasguard"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "gratianguard"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 08 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "54 44 37 00 00 00 00"
+            }, 
+            "SCVR - Name": "currentday"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "61 63 74 08 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "FD 5B 47 00 00 00 00"
+            }, 
+            "SCVR - Name": "localdayspassed"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "guardstrained"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwCO11 [QUST:0101BE3E]", 
+        "SCRO - Global Reference": "GameDaysPassed [GLOB:00000039]"
+    ]
+}

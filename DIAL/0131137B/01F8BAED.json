@@ -1,0 +1,89 @@
+{
+    "Topic": "1seenSanything [DIAL:0131137B]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 753, 
+        "Record Flags": {}, 
+        "FormID": "01F8BAED", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwCO3 [QUST:0101BE44]", 
+    "PNAM - Previous INFO": "01F8BAEC", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 43 4F"
+            }, 
+            "NAM1 - Response Text": "Wrecked? Are you sure? Well, then there's little more that can be done. A terrible shame that there wasn't even a single survivor. I told Carnius it was a bad idea to take the lowest bidder, and that this was too important to not take seriously.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6D 77 43"
+            }, 
+            "NAM1 - Response Text": "Well, at least you've solved that mystery. Thank you for looking into it; you just need to make sure word gets to Carnius. If only we had those pick axes...", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwCO3 "East Empire Company: Missing Supply Ship" [QUST:0101BE44]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwCO3b "East Empire Company: Apronia Alfena" [QUST:0101BE46]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0FalcoSGalenus "Falco Galenus" [NPC_:01260B0B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 39 10 0A 00 02 00 72 02 00 6E 3C 00 00 00 36 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "addtopic 1picksaxes\r\nsetstage fbmwco3 60\r\nstartquest fbmwco3a", 
+        "References": [
+            "SCRO - Global Reference": "1pickSaxes [DIAL:013113B6]", 
+            "SCRO - Global Reference": "fbmwCO3 [QUST:0101BE44]", 
+            "SCRO - Global Reference": "fbmwCO3a [QUST:0101BE45]"
+        ]
+    }
+}

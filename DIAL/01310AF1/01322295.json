@@ -1,0 +1,70 @@
+{
+    "Topic": "1GuildSDues [DIAL:01310AF1]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 484, 
+        "Record Flags": {}, 
+        "FormID": "01322295", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMGPayDues [QUST:0100677F]", 
+    "PNAM - Previous INFO": "01F8A681", 
+    "Add topics": [
+        "NAME - Topic": "01310A62"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I left the Mages Guild and dedicated my life to studying the adaptive responses of quaternary variations in Oblivion streams.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "If Ranis Athrys wants the dues that much, why don't you just pay them yourself? I am unconcerned with such petty financial matters.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0manwe "Manwe" [NPC_:01260186]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 28 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmgpaydues 40", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMGPayDues [QUST:0100677F]"
+        ]
+    }
+}

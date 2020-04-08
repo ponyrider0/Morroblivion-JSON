@@ -1,0 +1,2253 @@
+{
+    "Record Header": {
+        "Signature": "QUST", 
+        "Data Size": 25636, 
+        "Record Flags": {}, 
+        "FormID": "0002466E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "Charactergen", 
+    "SCRI - Script": "CharGenQuest [SCPT:0002480B]", 
+    "DATA - General": {
+        "Flags": {}, 
+        "Priority": 90
+    }, 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetPlayerInSEWorld:365", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsPlayableRace:254", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Stages": [
+        {
+            "INDX - Stage index": 0, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 7, 
+                            "CompiledSize": 133, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 0F 10 09 00 02 00 21 00 6E 0A 00 00 00 1C 00 02 00 0F 10 09 00 02 00 21 00 6E 0A 00 00 00 1C 00 03 00 0F 10 09 00 02 00 21 00 6E 0A 00 00 00 A8 10 0D 00 03 00 72 04 00 72 05 00 6E 1E 00 00 00 A8 10 0D 00 03 00 72 06 00 72 04 00 6E 9C FF FF FF A8 10 0D 00 03 00 72 06 00 72 05 00 6E CE FF FF FF A8 10 0D 00 03 00 72 04 00 72 06 00 6E 9C FF FF FF 03 10 0A 00 02 00 72 07 00 6E 00 00 00 00", 
+                        "SCTX - Result script source": "RenoteRef.setav aggression 10\r\nGlenroyRef.setav aggression 10\r\nBaurusRef.setav aggression 10\r\n; make sure they don't attack the player\r\nsetfactionreaction bladesCG playerfaction 30\r\nsetfactionreaction MythicDawnCG BladesCG -100\r\nsetfactionreaction MythicDawnCG playerFaction -50\r\nsetfactionreaction BladesCG MythicDawnCG -100\r\nsetessential Renote 0\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "RenoteRef [ACHR:00032A15]", 
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "BladesCG [FACT:0001EE1E]", 
+                            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]", 
+                            "SCRO - Global Reference": "MythicDawnCG [FACT:00014A20]", 
+                            "SCRO - Global Reference": "Renote [NPC_:0002349F]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 68.000000000000000, 
+                            "Function": "GetStage:58", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "Everyone at their places at Marker J.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 6, 
+                            "CompiledSize": 57, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 8B 10 02 00 00 00 1C 00 02 00 22 10 00 00 1C 00 03 00 9E 10 05 00 01 00 72 06 00 1C 00 04 00 9E 10 05 00 01 00 72 06 00 1C 00 05 00 9E 10 05 00 01 00 72 06 00", 
+                        "SCTX - Result script source": "RenoteRef.kill\r\nCGGenericAssassinsParent.disable ; turn off assassins\r\nGlenroyRef.moveto CGMarkerJEmperor\r\nUrielSeptimRef.moveto CGMarkerJEmperor\r\nBaurusRef.moveto CGMarkerJEmperor\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "RenoteRef [ACHR:00032A15]", 
+                            "SCRO - Global Reference": "CGGenericAssassinsParent [ACHR:0001772E]", 
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "CGMarkerJEmperor [REFR:0000BF0C]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 56.000000000000000, 
+                            "Function": "GetStage:58", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "Everyone in their places at marker G, waiting for player. (stage 56)", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 6, 
+                            "CompiledSize": 57, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 8B 10 02 00 00 00 1C 00 02 00 22 10 00 00 1C 00 03 00 9E 10 05 00 01 00 72 06 00 1C 00 04 00 9E 10 05 00 01 00 72 06 00 1C 00 05 00 9E 10 05 00 01 00 72 06 00", 
+                        "SCTX - Result script source": "RenoteRef.kill\r\nCGGenericAssassinsParent.disable ; turn off assassins\r\nGlenroyRef.moveto CGMarkerGGlenroy\r\nUrielSeptimRef.moveto CGMarkerGGlenroy\r\nBaurusRef.moveto CGMarkerGGlenroy\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "RenoteRef [ACHR:00032A15]", 
+                            "SCRO - Global Reference": "CGGenericAssassinsParent [ACHR:0001772E]", 
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "CGMarkerGGlenroy [REFR:0000BF05]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 52.000000000000000, 
+                            "Function": "GetStage:58", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "Set everyone in their places waiting at Marker F", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 6, 
+                            "CompiledSize": 57, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 8B 10 02 00 00 00 1C 00 02 00 22 10 00 00 1C 00 03 00 9E 10 05 00 01 00 72 06 00 1C 00 04 00 9E 10 05 00 01 00 72 06 00 1C 00 05 00 9E 10 05 00 01 00 72 06 00", 
+                        "SCTX - Result script source": "RenoteRef.kill\r\nCGGenericAssassinsParent.disable ; turn off assassins\r\nGlenroyRef.moveto CGMarkerFEmperor\r\nUrielSeptimRef.moveto CGMarkerFEmperor\r\nBaurusRef.moveto CGMarkerFEmperor\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "RenoteRef [ACHR:00032A15]", 
+                            "SCRO - Global Reference": "CGGenericAssassinsParent [ACHR:0001772E]", 
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "CGMarkerFEmperor [REFR:0001770B]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 50.000000000000000, 
+                            "Function": "GetStage:58", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "Set everyone to their places in Room B, ready to head for Marker F", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 7, 
+                            "CompiledSize": 49, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 8B 10 02 00 00 00 1C 00 02 00 9E 10 05 00 01 00 72 05 00 1C 00 03 00 9E 10 05 00 01 00 72 06 00 1C 00 04 00 9E 10 05 00 01 00 72 07 00", 
+                        "SCTX - Result script source": "RenoteRef.kill\r\nGlenroyRef.moveto CGMarkerEGlenroy\r\nUrielSeptimRef.moveto CGMarkerEEmperor\r\nBaurusRef.moveto CGMarkerEBaurus\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "RenoteRef [ACHR:00032A15]", 
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "CGMarkerEGlenroy [REFR:0001651A]", 
+                            "SCRO - Global Reference": "CGMarkerEEmperor [REFR:00016516]", 
+                            "SCRO - Global Reference": "CGMarkerEBaurus [REFR:00016512]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 30.000000000000000, 
+                            "Function": "GetStage:58", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "Set everyone in their places for player to enter room B", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 7, 
+                            "CompiledSize": 49, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 8B 10 02 00 00 00 1C 00 02 00 9E 10 05 00 01 00 72 05 00 1C 00 03 00 9E 10 05 00 01 00 72 06 00 1C 00 04 00 9E 10 05 00 01 00 72 07 00", 
+                        "SCTX - Result script source": "RenoteRef.kill\r\nBaurusRef.moveto CGMarkerDBaurus\r\nGlenroyRef.moveto CGMarkerDGlenroy\r\nUrielSeptimRef.moveto CGMarkerDEmperor\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "RenoteRef [ACHR:00032A15]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "CGMarkerDBaurus [REFR:000150BF]", 
+                            "SCRO - Global Reference": "CGMarkerDGlenroy [REFR:000150BD]", 
+                            "SCRO - Global Reference": "CGMarkerDEmperor [REFR:000150BE]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 18.000000000000000, 
+                            "Function": "GetStage:58", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "Set everyone to their places for Ambush A", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 8, 
+                            "CompiledSize": 52, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 9E 10 05 00 01 00 72 05 00 1C 00 02 00 9E 10 05 00 01 00 72 06 00 1C 00 03 00 9E 10 05 00 01 00 72 07 00 1C 00 04 00 9E 10 05 00 01 00 72 08 00", 
+                        "SCTX - Result script source": "RenoteRef.moveto CGMarkerCRenote\r\nBaurusRef.moveto CGMarkerCBaurus\r\nGlenroyRef.moveto CGMarkerCGlenroy\r\nUrielSeptimRef.moveto CGMarkerCEmperor\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "RenoteRef [ACHR:00032A15]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "CGMarkerCRenote [REFR:00032AFF]", 
+                            "SCRO - Global Reference": "CGMarkerCBaurus [REFR:000150C4]", 
+                            "SCRO - Global Reference": "CGMarkerCGlenroy [REFR:000150C0]", 
+                            "SCRO - Global Reference": "CGMarkerCEmperor [REFR:000150C5]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 5, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 11, 
+                            "CompiledSize": 224, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "16 00 10 00 0B 00 0C 00 20 72 06 00 73 02 00 20 30 20 3D 3D E7 10 07 00 01 00 6E 01 00 00 00 15 00 0D 00 72 07 00 66 1D 00 05 00 20 2E 30 30 31 15 00 0B 00 72 08 00 66 18 00 03 00 20 2E 31 36 10 05 00 01 00 72 08 00 15 00 0A 00 72 08 00 66 02 00 02 00 20 30 15 00 0A 00 72 08 00 73 03 00 02 00 20 35 1C 00 01 00 51 11 07 00 01 00 6E 01 00 00 00 1C 00 02 00 51 11 07 00 01 00 6E 01 00 00 00 1C 00 03 00 51 11 07 00 01 00 6E 01 00 00 00 1C 00 04 00 51 11 07 00 01 00 6E 01 00 00 00 1C 00 05 00 9E 10 05 00 01 00 72 09 00 18 00 10 00 02 00 0C 00 20 72 06 00 73 02 00 20 31 20 3D 3D 39 10 0A 00 02 00 72 0A 00 6E 01 00 00 00 1C 00 05 00 9E 10 05 00 01 00 72 0B 00 19 00 00 00", 
+                        "SCTX - Result script source": "if mwMainMenu.AltStart == 0\r\n\r\n; in chargen\r\n	SetInChargen 1\r\n; set quest delay\r\n	set Charactergen.fQuestDelayTime to .001\r\n	set MQ01.fQuestDelayTime to .1\r\n	StartQuest MQ01\r\n	set MQ01.Timer to 0\r\n	set MQ01.stage to 5\r\n; Emperor, Blades ignore friend hits in combat\r\n	UrielSeptimRef.SetIgnoreFriendlyHits 1\r\n	RenoteRef.SetIgnoreFriendlyHits 1\r\n	GlenroyRef.SetIgnoreFriendlyHits 1\r\n	BaurusRef.SetIgnoreFriendlyHits 1\r\n	Player.moveto CGPlayerStartMarker\r\n\r\nelseif mwMainMenu.AltStart == 1\r\n\r\n	SetStage fbmwChargen 1\r\n	Player.moveto mwCGPlayerStartMarker\r\n\r\nendif", 
+                        "References": [
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "RenoteRef [ACHR:00032A15]", 
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+                            "SCRO - Global Reference": "mwMainMenu [QUST:01F8E978]", 
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]", 
+                            "SCRO - Global Reference": "MQ01 [QUST:0001E723]", 
+                            "SCRO - Global Reference": "CGPlayerStartMarker [REFR:00032AB5]", 
+                            "SCRO - Global Reference": "fbmwChargen [QUST:01F0A28C]", 
+                            "SCRO - Global Reference": "mwCGPlayerStartMarker [REFR:01F0A278]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 6, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 4, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "5E 11 00 00", 
+                        "SCTX - Result script source": "; trigger Valen Dreth talking\r\nAutosave\r\n"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 9, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 2, 
+                            "CompiledSize": 42, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 02 00 02 00 20 32 15 00 0A 00 72 02 00 73 08 00 02 00 20 32 15 00 0A 00 72 02 00 66 0A 00 02 00 20 32", 
+                        "SCTX - Result script source": "; Valen Dreth finished speaking\r\nset ValenDrethRef.talk to 2\r\nset CharacterGen.speaker to 2\r\n; put a delay on speaking so Valen Dreth has time to finish talking\r\nset CharacterGen.convtimer to 2", 
+                        "References": [
+                            "SCRO - Global Reference": "ValenDrethRef [ACHR:0001FC43]", 
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "debug", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "TEMP: Valen Dreth done talking. Trigger start of Emperor conversation.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 10, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 3, 
+                            "CompiledSize": 24, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 5E 10 00 00 1C 00 02 00 5E 10 00 00 1C 00 03 00 5E 10 00 00", 
+                        "SCTX - Result script source": "UrielSeptimRef.evp\r\nGlenroyRef.evp\r\nRenoteRef.evp\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "RenoteRef [ACHR:00032A15]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 12, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 3, 
+                            "CompiledSize": 55, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0A 00 72 02 00 73 08 00 02 00 20 32 15 00 0A 00 72 02 00 73 09 00 02 00 20 33 15 00 0A 00 72 02 00 73 01 00 02 00 20 38 1C 00 01 00 5C 10 05 00 01 00 72 03 00", 
+                        "SCTX - Result script source": "; start next conversation section\r\nset characterGen.speaker to 2	; Renote\r\nset characterGen.target to 3		; Glenroy\r\nset characterGen.convCount to 8   ; make sure we're at right spot\r\nUrielSeptimRef.look player\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]", 
+                            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "debug", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "DEBUG: Renote reaches marker A. Start conversation with Glenroy.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 13, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": "; finished conv between Renote and Glenroy about player in cell"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 14, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 5, 
+                            "CompiledSize": 90, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "61 10 00 00 1C 00 01 00 5E 10 00 00 1C 00 02 00 5E 10 00 00 1C 00 03 00 5C 10 05 00 01 00 72 04 00 15 00 0A 00 72 05 00 66 0A 00 02 00 20 34 15 00 0A 00 72 05 00 73 08 00 02 00 20 31 15 00 0A 00 72 05 00 73 09 00 02 00 20 32 15 00 0B 00 72 05 00 73 01 00 03 00 20 31 32", 
+                        "SCTX - Result script source": "; player stay put!\r\ndisableplayercontrols\r\n; trigger Glenroy to open cell door\r\nGlenroyRef.evp\r\nBaurusRef.evp\r\nRenoteRef.look player\r\nset characterGen.convTimer to 4; slight delay\r\nset characterGen.speaker to 1; Baurus\r\nset characterGen.target to 2 ; Renote\r\nset characterGen.convCount to 12 ; make sure on right stage", 
+                        "References": [
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "RenoteRef [ACHR:00032A15]", 
+                            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 15, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 6, 
+                            "CompiledSize": 56, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 5E 10 00 00 1C 00 02 00 5E 10 00 00 1C 00 03 00 5E 10 00 00 1C 00 04 00 5E 10 00 00 1C 00 04 00 5D 10 00 00 1C 00 01 00 34 10 08 00 02 00 72 05 00 72 06 00", 
+                        "SCTX - Result script source": "; cell door is open\r\nGlenRoyRef.evp\r\nBaurusRef.evp\r\nUrielSeptimRef.evp\r\nRenoteRef.evp\r\nRenoteRef.stoplook\r\nGlenroyRef.SayTo player CharGenVoice\r\n\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "RenoteRef [ACHR:00032A15]", 
+                            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+                            "SCRO - Global Reference": "CharGenVoice [DIAL:00014A1E]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "debug", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "TEMP: Stage 15. Glenroy opens door and enters cell.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 16, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 5, 
+                            "CompiledSize": 42, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 19 00 72 02 00 66 0A 00 11 00 20 72 03 00 58 34 10 08 00 02 00 72 04 00 72 05 00 1C 00 01 00 5C 10 05 00 01 00 72 04 00", 
+                        "SCTX - Result script source": "; Emperor speaks to player\r\nset characterGen.convTimer to UrielSeptimRef.SayTo player CharGenVoice\r\nRenoteRef.look player", 
+                        "References": [
+                            "SCRO - Global Reference": "RenoteRef [ACHR:00032A15]", 
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+                            "SCRO - Global Reference": "CharGenVoice [DIAL:00014A1E]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "debug", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "TEMP: Stage 16: Emperor notices player", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 17, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 8, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 5E 10 00 00", 
+                        "SCTX - Result script source": "; Emperor approaches player\r\nUrielSeptimRef.evp\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "debug", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "DEBUG: Stage 17: Emperor approaches player", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 18, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 2, 
+                            "CompiledSize": 29, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 5D 10 00 00 1C 00 01 00 5E 10 00 00 1C 00 02 00 5C 10 05 00 01 00 72 01 00", 
+                        "SCTX - Result script source": "RenoteRef.stoplook\r\nRenoteRef.evp\r\nUrielSeptimRef.look RenoteRef\r\n\r\n\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "RenoteRef [ACHR:00032A15]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "debug", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "DEBUG: Stage 18: Renote to secret wall switch", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 19, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 5, 
+                            "CompiledSize": 107, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 5D 10 00 00 1C 00 02 00 5D 10 00 00 1C 00 03 00 5D 10 00 00 1C 00 04 00 5D 10 00 00 15 00 0A 00 72 05 00 73 08 00 02 00 20 32 15 00 0A 00 72 05 00 73 09 00 02 00 20 31 15 00 0B 00 72 05 00 73 01 00 03 00 20 31 36 1C 00 01 00 5E 10 00 00 1C 00 03 00 5E 10 00 00 1C 00 02 00 5E 10 00 00 1C 00 04 00 5E 10 00 00", 
+                        "SCTX - Result script source": "; Secret wall is open -- set by timer\r\nGlenroyRef.stoplook\r\nUrielSeptimRef.stoplook\r\nBaurusRef.stoplook\r\nRenoteRef.stoplook\r\nset characterGen.speaker to 2 ; Renote\r\nset characterGen.target to 1 ; Baurus\r\nset characterGen.convCount to 16 ; make sure we're on the right spot\r\nGlenRoyRef.evp\r\nBaurusRef.evp\r\nUrielSeptimRef.evp\r\nRenoteRef.evp", 
+                        "References": [
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "RenoteRef [ACHR:00032A15]", 
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "debug", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "DEBUG: Stage 19: Secret wall is open", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 20, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 4, 
+                            "CompiledSize": 38, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "03 10 0A 00 02 00 72 04 00 6E 00 00 00 00 1C 00 01 00 5E 10 00 00 1C 00 02 00 5E 10 00 00 1C 00 03 00 5E 10 00 00", 
+                        "SCTX - Result script source": "; Emperor, Renote arrive in ambush room\r\nsetessential Renote 0\r\nGlenroyRef.evp\r\nBaurusRef.evp\r\nUrielSeptimRef.evp", 
+                        "References": [
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "Renote [NPC_:0002349F]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "debug", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "DEBUG: Stage 20: Renote arrives at marker C", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 22, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 11, 
+                            "CompiledSize": 153, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 0F 10 09 00 02 00 21 00 6E 0A 00 00 00 1C 00 02 00 0F 10 09 00 02 00 21 00 6E 0A 00 00 00 1C 00 03 00 0F 10 09 00 02 00 21 00 6E 0A 00 00 00 A8 10 0D 00 03 00 72 0A 00 72 0B 00 6E 1E 00 00 00 1C 00 01 00 5E 10 00 00 1C 00 02 00 5E 10 00 00 1C 00 03 00 5E 10 00 00 1C 00 04 00 5E 10 00 00 1C 00 05 00 13 10 09 00 02 00 04 00 6E 01 00 00 00 1C 00 06 00 5E 10 00 00 1C 00 07 00 5E 10 00 00 1C 00 08 00 5E 10 00 00 1C 00 09 00 5E 10 00 00 5E 11 00 00", 
+                        "SCTX - Result script source": "; start ambush - make Blades aggressive enough to respond\r\nRenoteRef.setav aggression 10\r\nGlenroyRef.setav aggression 10\r\nBaurusRef.setav aggression 10\r\n; make sure they don't attack the player\r\nsetfactionreaction bladesCG playerfaction 30\r\n; get moving\r\nRenoteRef.evp\r\nGlenroyRef.evp\r\nBaurusRef.evp\r\nUrielSeptimRef.evp\r\n; close secret cell door\r\nCGPrisonSecretWallRef.playgroup backward 1\r\nCGAssassin01Ref.evp\r\nCGAssassin02Ref.evp\r\nCGAssassin03Ref.evp\r\nCGAssassin04Ref.evp\r\nautosave", 
+                        "References": [
+                            "SCRO - Global Reference": "RenoteRef [ACHR:00032A15]", 
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "CGPrisonSecretWallRef [REFR:0001FC41]", 
+                            "SCRO - Global Reference": "CGAssassin01Ref [ACHR:00014A30]", 
+                            "SCRO - Global Reference": "CGAssassin02Ref [ACHR:00014A2C]", 
+                            "SCRO - Global Reference": "CGAssassin03Ref [ACHR:000178C3]", 
+                            "SCRO - Global Reference": "CGAssassin04Ref [ACHR:000178C4]", 
+                            "SCRO - Global Reference": "BladesCG [FACT:0001EE1E]", 
+                            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "debug", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "DEBUG: Stage 22: Trigger start of ambush", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 23, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 3, 
+                            "CompiledSize": 51, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "A8 10 0D 00 03 00 72 01 00 72 02 00 6E 9C FF FF FF A8 10 0D 00 03 00 72 01 00 72 03 00 6E EC FF FF FF A8 10 0D 00 03 00 72 02 00 72 01 00 6E 9C FF FF FF", 
+                        "SCTX - Result script source": "; Attackers reach the marker on the floor\r\n; set faction reactions so Blades & MD will fight\r\nsetfactionreaction MythicDawnCG BladesCG -100\r\nsetfactionreaction MythicDawnCG playerFaction -20\r\nsetfactionreaction BladesCG MythicDawnCG -100\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "MythicDawnCG [FACT:00014A20]", 
+                            "SCRO - Global Reference": "BladesCG [FACT:0001EE1E]", 
+                            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 5, 
+                            "CompiledSize": 108, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 34 10 08 00 02 00 72 03 00 72 05 00 1C 00 02 00 5A 10 07 00 01 00 6E 01 00 00 00 1C 00 01 00 5A 10 07 00 01 00 6E 01 00 00 00 1C 00 03 00 5A 10 07 00 01 00 6E 01 00 00 00 1C 00 04 00 5A 10 07 00 01 00 6E 01 00 00 00 1C 00 02 00 5E 10 00 00 1C 00 04 00 5E 10 00 00 1C 00 03 00 5E 10 00 00 1C 00 01 00 5E 10 00 00", 
+                        "SCTX - Result script source": "RenoteRef.SayTo GlenroyRef CharGenVoice\r\nUrielSeptimRef.setalert 1\r\nRenoteRef.setalert 1\r\nGlenroyRef.setalert 1\r\nBaurusRef.setalert 1\r\nUrielSeptimRef.evp\r\nBaurusRef.evp\r\nGlenroyRef.evp\r\nRenoteRef.evp\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "RenoteRef [ACHR:00032A15]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "CharGenVoice [DIAL:00014A1E]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "debug", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "DEBUG: Assassins finish package to reach floor marker.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 24, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 7, 
+                            "CompiledSize": 58, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 04 00 6E 17 00 00 00 1C 00 01 00 33 10 05 00 01 00 72 05 00 1C 00 02 00 16 10 05 00 01 00 72 06 00 1C 00 03 00 02 10 0A 00 02 00 72 07 00 6E 01 00 00 00", 
+                        "SCTX - Result script source": "; Renote is dead\r\nsetstage charactergen 23 ; make sure\r\nGlenroyRef.say CharGenVoice\r\n; assassin switches to baurus\r\nCGAssassin04Ref.startcombat BaurusRef\r\n; give Renote a torch\r\nRenoteRef.additem torch02 1\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "CGAssassin04Ref [ACHR:000178C4]", 
+                            "SCRO - Global Reference": "RenoteRef [ACHR:00032A15]", 
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]", 
+                            "SCRO - Global Reference": "CharGenVoice [DIAL:00014A1E]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "Torch02 [LIGH:0002CF9F]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 26, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "debug", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "DEBUG: All assassins are dead.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 3, 
+                            "CompiledSize": 69, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 5A 10 07 00 01 00 6E 00 00 00 00 1C 00 02 00 5A 10 07 00 01 00 6E 00 00 00 00 1C 00 03 00 5A 10 07 00 01 00 6E 00 00 00 00 1C 00 01 00 5E 10 00 00 1C 00 03 00 5E 10 00 00 1C 00 02 00 5E 10 00 00", 
+                        "SCTX - Result script source": "; Ambush A is over. Trigger Baurus to speak to Emperor\r\nUrielSeptimRef.setalert 0\r\nGlenroyRef.setalert 0\r\nBaurusRef.setalert 0\r\nUrielSeptimRef.evp\r\nBaurusRef.evp\r\nGlenroyRef.evp", 
+                        "References": [
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 27, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 57, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 08 00 02 00 20 33 15 00 0A 00 72 01 00 73 09 00 02 00 20 31 15 00 0B 00 72 01 00 73 01 00 03 00 20 31 38 15 00 0A 00 72 01 00 66 0A 00 02 00 20 33", 
+                        "SCTX - Result script source": "; Emperor/Baurus conv done\r\n; trigger Glenroy/Baurus/Emperor conv\r\n; trigger conversation between Baurus and Glenroy\r\nset charactergen.speaker to 3 ; Glenroy\r\nset charactergen.target to 1 ; Baurus\r\nset charactergen.convCount to 18 ; make sure we're at the right spot\r\nset charactergen.convTimer to 3 ; pause briefly before starting", 
+                        "References": [
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "debug", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "DEBUG: Stage 27: Start Baurus/Glenroy conv", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 28, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 6, 
+                            "CompiledSize": 75, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 5E 10 00 00 1C 00 02 00 5E 10 00 00 1C 00 03 00 5E 10 00 00 A8 10 0D 00 03 00 72 04 00 72 05 00 6E 64 00 00 00 A8 10 0D 00 03 00 72 05 00 72 04 00 6E 64 00 00 00 A8 10 0D 00 03 00 72 06 00 72 04 00 6E 64 00 00 00", 
+                        "SCTX - Result script source": "; Trigger Blades, Emperor to head out of Ambush A room\r\nGlenroyRef.evp\r\nBaurusRef.evp\r\nUrielSeptimRef.evp\r\n; set faction reactions back so they don't hate each other for now\r\nsetfactionreaction MythicDawnCG BladesCG 100\r\nsetfactionreaction BladesCG MythicDawnCG 100\r\nsetfactionreaction EmperorFaction MythicDawnCG 100", 
+                        "References": [
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "MythicDawnCG [FACT:00014A20]", 
+                            "SCRO - Global Reference": "BladesCG [FACT:0001EE1E]", 
+                            "SCRO - Global Reference": "EmperorFaction [FACT:000150BC]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "debug", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "DEBUG: Stage 28: Baurus waiting to warn player not to follow", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 29, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 2, 
+                            "CompiledSize": 16, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 5E 10 00 00 1C 00 02 00 21 10 00 00", 
+                        "SCTX - Result script source": "; Baurus warns player not to follow\r\nBaurusRef.evp\r\n; enable rats\r\nCGRatA1.enable", 
+                        "References": [
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "CGRatA1 [ACRE:00037E42]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "debug", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "DEBUG: Stage 29: Baurus finished warning player, head out.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 30, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 42, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 08 00 02 00 20 30 15 00 0A 00 72 01 00 73 09 00 02 00 20 30 39 10 0A 00 02 00 72 01 00 6E 1D 00 00 00", 
+                        "SCTX - Result script source": "; Glenroy arrives outside Room B\r\nset characterGen.speaker to 0\r\nset characterGen.target to 0\r\n; failsafe in case player waits too long away from Baurus\r\nsetstage charactergen 29", 
+                        "References": [
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "debug", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "TEMP: Glenroy waiting at Marker D", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 32, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 5, 
+                            "CompiledSize": 75, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 5E 10 00 00 1C 00 02 00 5E 10 00 00 1C 00 03 00 5E 10 00 00 15 00 0A 00 72 05 00 73 08 00 02 00 20 33 15 00 0A 00 72 05 00 73 09 00 02 00 20 31 15 00 0B 00 72 05 00 73 01 00 03 00 20 32 35 1C 00 04 00 5E 10 00 00", 
+                        "SCTX - Result script source": "; player gets near Room B\r\n; triggers Emperor et al to walk into Room B\r\nGlenroyRef.evp\r\nUrielSeptimRef.evp\r\nBaurusRef.evp\r\nset charactergen.speaker to 3 ; Glenroy\r\nset charactergen.target to 1 ; Baurus\r\nset charactergen.convCount to 25 ; make sure we're at the right spot\r\nCGAssassin05Ref.evp", 
+                        "References": [
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "CGAssassin05Ref [ACHR:000176FF]", 
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "debug", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "TEMP: Player triggers Emperors group to enter room B", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 34, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 11, 
+                            "CompiledSize": 165, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 5E 10 00 00 1C 00 01 00 16 10 05 00 01 00 72 06 00 1C 00 02 00 16 10 05 00 01 00 72 03 00 A8 10 0D 00 03 00 72 07 00 72 08 00 6E 9C FF FF FF A8 10 0D 00 03 00 72 08 00 72 07 00 6E 9C FF FF FF A8 10 0D 00 03 00 72 09 00 72 07 00 6E 9C FF FF FF A8 10 0D 00 03 00 72 07 00 72 0A 00 6E B0 FF FF FF A8 10 0D 00 03 00 72 07 00 72 09 00 6E B0 FF FF FF 1C 00 03 00 33 10 05 00 01 00 72 0B 00 1C 00 04 00 5E 10 00 00 1C 00 04 00 5A 10 07 00 01 00 6E 01 00 00 00 1C 00 05 00 73 10 02 00 00 00", 
+                        "SCTX - Result script source": "; Glenroy reaches Marker E at door to Room B\r\nCGAssassin05Ref.evp\r\nCGAssassin05Ref.startCombat BaurusRef\r\nCGAssassin06Ref.startCombat GlenroyRef\r\n; make factions hate each other\r\nsetfactionreaction MythicDawnCG BladesCG -100\r\nsetfactionreaction BladesCG MythicDawnCG -100\r\nsetfactionreaction EmperorFaction MythicDawnCG -100\r\nsetfactionreaction MythicDawnCG playerFaction -80\r\nsetfactionreaction MythicDawnCG emperorFaction -80\r\nGlenroyRef.Say CharGenVoice\r\nUrielSeptimRef.evp\r\nUrielSeptimRef.setalert 1\r\n; unlock door\r\nCGAmbushBDoor.unlock", 
+                        "References": [
+                            "SCRO - Global Reference": "CGAssassin05Ref [ACHR:000176FF]", 
+                            "SCRO - Global Reference": "CGAssassin06Ref [ACHR:00017708]", 
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "CGAmbushBDoor [REFR:00017753]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "MythicDawnCG [FACT:00014A20]", 
+                            "SCRO - Global Reference": "BladesCG [FACT:0001EE1E]", 
+                            "SCRO - Global Reference": "EmperorFaction [FACT:000150BC]", 
+                            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]", 
+                            "SCRO - Global Reference": "CharGenVoice [DIAL:00014A1E]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 36, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 4, 
+                            "CompiledSize": 93, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 5A 10 07 00 01 00 6E 00 00 00 00 1C 00 01 00 5C 10 05 00 01 00 72 03 00 1C 00 02 00 5E 10 00 00 15 00 0A 00 72 04 00 73 08 00 02 00 20 31 15 00 0A 00 72 04 00 73 09 00 02 00 20 33 15 00 0B 00 72 04 00 73 01 00 03 00 20 33 30 15 00 0A 00 72 04 00 66 0A 00 02 00 20 33", 
+                        "SCTX - Result script source": "; Ambush B is over\r\nUrielSeptimRef.setalert 0\r\nUrielSeptimRef.look player\r\n; trigger conversation\r\nBaurusRef.evp\r\nset charactergen.speaker to 1 ; Baurus\r\nset charactergen.target to 3 ; Glenroy\r\nset charactergen.convCount to 30 ; make sure we're at the right spot\r\nset charactergen.convTimer to 3; pause before starting\r\n\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 38, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 57, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 08 00 02 00 20 33 15 00 0A 00 72 01 00 73 09 00 02 00 20 34 15 00 0B 00 72 01 00 73 01 00 03 00 20 33 35 15 00 0A 00 72 01 00 66 0A 00 02 00 20 35", 
+                        "SCTX - Result script source": "; Baurus finishes patrol\r\nset charactergen.speaker to 3 ; Glenroy\r\nset charactergen.target to 4 ; Emperor\r\nset charactergen.convCount to 35 ; make sure we're at the right spot\r\nset charactergen.convTimer to 5 ; pause before starting\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 40, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 5, 
+                            "CompiledSize": 112, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 5C 10 05 00 01 00 72 04 00 1C 00 02 00 5C 10 05 00 01 00 72 04 00 1C 00 03 00 5C 10 05 00 01 00 72 04 00 1C 00 03 00 5E 10 00 00 1C 00 01 00 5E 10 00 00 15 00 0A 00 72 05 00 73 08 00 02 00 20 33 15 00 0A 00 72 05 00 73 09 00 02 00 20 35 15 00 0B 00 72 05 00 73 01 00 03 00 20 34 30 15 00 0A 00 72 05 00 66 0A 00 02 00 20 30", 
+                        "SCTX - Result script source": "; player enters room B where Emperor et al are waiting\r\n; triggers Glenroy and Baurus to react to player\r\nBaurusRef.look player\r\nUrielSeptimRef.look player\r\nGlenroyRef.look player\r\nGlenroyRef.evp\r\nBaurusRef.evp\r\nset characterGen.speaker to 3 ; Glenroy\r\nset characterGen.target to 5 ; player\r\nset charactergen.convCount to 40 ; make sure we're at the right spot\r\nset charactergen.convTimer to 0 ; in case we're in the middle of something else\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "debug", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "TEMP: Player triggers Glenroy to react", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 42, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 3, 
+                            "CompiledSize": 73, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 5E 10 00 00 1C 00 02 00 5E 10 00 00 15 00 0A 00 72 03 00 73 08 00 02 00 20 34 15 00 0A 00 72 03 00 73 09 00 02 00 20 35 15 00 0B 00 72 03 00 73 01 00 03 00 20 34 35 15 00 0A 00 72 03 00 66 0A 00 02 00 20 35", 
+                        "SCTX - Result script source": "; cut scene in room B finished\r\n; Glenroy stops approaching player\r\nGlenroyRef.evp\r\nUrielSeptimRef.evp\r\n; trigger Emperor to ask player to come closer\r\nset charactergen.speaker to 4 ; Emperor\r\nset charactergen.target to 5 ; player\r\nset charactergen.convCount to 45 ; make sure we're at the right spot\r\nset charactergen.convTimer to 5 ; pause before starting\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 43, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 14, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 08 00 02 00 20 30", 
+                        "SCTX - Result script source": "; trigger for CharGenScript to pop up birthsign menu after timer runs out\r\nset charactergen.speaker to 0\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 44, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 8, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 5E 10 00 00", 
+                        "SCTX - Result script source": "; Emperor asks for your birthsign\r\nUrielSeptimRef.evp", 
+                        "References": [
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 45, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": "; Emperor finished with birthsign speech\\\r\n; when timer is up, CharGenScript triggers stage 50\r\n"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 50, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 7, 
+                            "CompiledSize": 128, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 5E 10 00 00 1C 00 02 00 5E 10 00 00 1C 00 03 00 5E 10 00 00 1C 00 03 00 5D 10 00 00 1C 00 01 00 5D 10 00 00 1C 00 02 00 5D 10 00 00 1C 00 04 00 F3 10 07 00 01 00 6E 01 00 00 00 1C 00 05 00 F3 10 07 00 01 00 6E 01 00 00 00 1C 00 06 00 F3 10 07 00 01 00 6E 01 00 00 00 1C 00 01 00 0F 10 09 00 02 00 21 00 6E 0A 00 00 00 1C 00 01 00 53 10 0A 00 02 00 72 07 00 6E 14 00 00 00", 
+                        "SCTX - Result script source": "; Emperor done with birthsign speech. Move out!\r\nUrielSeptimRef.evp\r\nGlenroyRef.evp\r\nBaurusRef.evp\r\nBaurusRef.stoplook\r\nUrielSeptimRef.stoplook\r\nGlenroyRef.stoplook\r\n; restrain second wave of assassins\r\nCGGenericAssassin1.setrestrained 1\r\nCGGenericAssassin2.setrestrained 1\r\nCGGenericAssassin3.setrestrained 1\r\n; give Emperor aggression so he'll react in combat\r\nUrielSeptimRef.setav aggression 10\r\nUrielSeptimRef.moddisposition player 20\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "CGGenericAssassin1 [ACHR:0001770C]", 
+                            "SCRO - Global Reference": "CGGenericAssassin2 [ACHR:00017754]", 
+                            "SCRO - Global Reference": "CGGenericAssassin3 [ACHR:00017752]", 
+                            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 52, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": "; Glenroy reaches Marker F"
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "debug", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "TEMP: 52 Glenroy reaches marker F", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 54, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 4, 
+                            "CompiledSize": 34, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 5E 10 00 00 1C 00 02 00 5E 10 00 00 1C 00 03 00 5E 10 00 00 1C 00 04 00 73 10 02 00 00 00", 
+                        "SCTX - Result script source": "; player gets near\r\nGlenroyRef.evp\r\nBaurusRef.evp\r\nUrielSeptimRef.evp\r\nCGDungeon02Exit.unlock", 
+                        "References": [
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "CGDungeon02Exit [REFR:000226A2]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "debug", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "TEMP: 54 Player near Marker F", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 56, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": "; Glenroy reaches marker G\r\n\r\n"
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "debug", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "TEMP: 56 Glenroy reaches marker G", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 58, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 7, 
+                            "CompiledSize": 107, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 72 10 07 00 01 00 6E 64 00 00 00 1C 00 01 00 17 11 05 00 01 00 72 05 00 15 00 16 00 72 06 00 66 0A 00 0E 00 20 72 04 00 58 33 10 05 00 01 00 72 07 00 1C 00 02 00 5E 10 00 00 1C 00 03 00 5E 10 00 00 15 00 0B 00 72 06 00 73 0B 00 03 00 20 32 37 1C 00 04 00 64 10 00 00 15 00 0A 00 72 06 00 73 0B 00 02 00 20 30", 
+                        "SCTX - Result script source": "; player gets near\r\nCGDoor03To02.lock 100\r\nCGDoor03To02.setownership EmperorFaction\r\nset characterGen.convTimer to GlenroyRef.Say CharGenVoice\r\nBaurusRef.evp\r\nUrielSeptimRef.evp\r\n\r\nset characterGen.uniqueIdle to 27\r\nGlenroyRef.pickIdle\r\nset characterGen.uniqueIdle to 0\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "CGDoor03To02 [REFR:00022812]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "EmperorFaction [FACT:000150BC]", 
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]", 
+                            "SCRO - Global Reference": "CharGenVoice [DIAL:00014A1E]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 59, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 2, 
+                            "CompiledSize": 25, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 5E 10 00 00 1C 00 02 00 0F 10 09 00 02 00 21 00 6E 00 00 00 00", 
+                        "SCTX - Result script source": "GlenroyRef.evp\r\n; Emperor back to 0 aggression\r\nUrielSeptimRef.setav aggression 0", 
+                        "References": [
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 60, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 4, 
+                            "CompiledSize": 29, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 33 10 05 00 01 00 72 04 00 1C 00 02 00 5E 10 00 00 1C 00 03 00 5E 10 00 00", 
+                        "SCTX - Result script source": "; Glenroy gets to marker H\r\nGlenroyRef.Say CharGenVoice\r\nBaurusRef.evp\r\nUrielSeptimRef.evp\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "CharGenVoice [DIAL:00014A1E]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 62, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 3, 
+                            "CompiledSize": 24, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 5E 10 00 00 1C 00 02 00 5E 10 00 00 1C 00 03 00 5E 10 00 00", 
+                        "SCTX - Result script source": "; Emperor gets to marker H\r\nGlenroyRef.evp\r\nBaurusRef.evp\r\nUrielSeptimRef.evp", 
+                        "References": [
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "debug", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "TEMP: 62 Emperor reaches marker H", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 64, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 3, 
+                            "CompiledSize": 88, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0A 00 72 03 00 73 08 00 02 00 20 33 15 00 0A 00 72 03 00 73 09 00 02 00 20 31 15 00 0B 00 72 03 00 73 01 00 03 00 20 35 30 15 00 0B 00 72 03 00 73 0B 00 03 00 20 32 36 1C 00 01 00 64 10 00 00 1C 00 02 00 64 10 00 00 15 00 0A 00 72 03 00 73 0B 00 02 00 20 30", 
+                        "SCTX - Result script source": "; Glenroy gets to Marker I\r\nset characterGen.speaker to 3 ; Glenroy\r\nset characterGen.target to 1 ; Baurus\r\nset charactergen.convCount to 50 ; make sure we're at the right spot\r\nset characterGen.uniqueIdle to 26\r\nGlenroyRef.pickIdle\r\nBaurusRef.pickIdle\r\nset characterGen.uniqueIdle to 0", 
+                        "References": [
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 65, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": "; set in results when Marker I conversation is over"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 66, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 3, 
+                            "CompiledSize": 24, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 5E 10 00 00 1C 00 02 00 5E 10 00 00 1C 00 03 00 5E 10 00 00", 
+                        "SCTX - Result script source": "; Finish conversation at Marker I\r\n; set by CharGenScript\r\nGlenroyRef.evp\r\nBaurusRef.evp\r\nUrielSeptimRef.evp", 
+                        "References": [
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 67, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 28, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 08 00 02 00 20 31 15 00 0A 00 72 01 00 73 09 00 02 00 20 33", 
+                        "SCTX - Result script source": "; Baurus gets to Marker J\r\n; start Baurus telling Glenroy about the locked door\r\nset characterGen.speaker to 1; Baurus\r\nset characterGen.target to 3 ; Glenroy\r\n\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 68, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 4, 
+                            "CompiledSize": 65, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 10 00 02 00 20 33 A8 10 0D 00 03 00 72 02 00 72 03 00 6E 64 00 00 00 A8 10 0D 00 03 00 72 02 00 72 04 00 6E 9C FF FF FF A8 10 0D 00 03 00 72 04 00 72 02 00 6E 9C FF FF FF", 
+                        "SCTX - Result script source": "; Emperor gets to Marker J\r\nset charactergen.ambushCount to 3 ; used to trigger new assassins\r\n; don't want the mythic dawn to aggro on player or Emperor\r\nsetfactionreaction mythicDawnCG EmperorFaction 100\r\nsetfactionreaction MythicDawnCG BladesCG -100\r\nsetfactionreaction BladesCG MythicDawnCG -100\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]", 
+                            "SCRO - Global Reference": "MythicDawnCG [FACT:00014A20]", 
+                            "SCRO - Global Reference": "EmperorFaction [FACT:000150BC]", 
+                            "SCRO - Global Reference": "BladesCG [FACT:0001EE1E]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "debug", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "TEMP: 68 Emperor reaches marker J", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 70, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 7, 
+                            "CompiledSize": 119, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 DD 10 07 00 01 00 6E 00 00 00 00 1C 00 02 00 B2 10 05 00 01 00 72 05 00 15 00 0A 00 72 06 00 73 08 00 02 00 20 33 15 00 0A 00 72 06 00 73 09 00 02 00 20 31 15 00 0B 00 72 06 00 73 01 00 03 00 20 36 30 03 10 0A 00 02 00 72 07 00 6E 00 00 00 00 1C 00 03 00 0F 10 09 00 02 00 08 00 6E 64 00 00 00 1C 00 04 00 0F 10 09 00 02 00 08 00 6E E8 03 00 00", 
+                        "SCTX - Result script source": "; player gets near Marker J   \r\nCGAmbushCBackGate.setopenstate 0\r\nCGMarkerKBaurus.playsound3d DRSRustyGateClose\r\nset characterGen.speaker to 3 ; Glenroy\r\nset characterGen.target to 1 ; Baurus\r\nset charactergen.convCount to 60 ; make sure we're at the right spot\r\nsetessential Glenroy 0\r\nGlenroyRef.setav health 100\r\n; put Baurus back to full health just to be safe\r\nBaurusRef.setav health 1000\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "CGAmbushCBackGate [REFR:0001760F]", 
+                            "SCRO - Global Reference": "CGMarkerKBaurus [REFR:0001D11F]", 
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "DRSRustyGateClose [SOUN:00092DAB]", 
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]", 
+                            "SCRO - Global Reference": "Glenroy [NPC_:00023F2B]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 71, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 15, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0B 00 72 01 00 66 11 00 03 00 20 31 35", 
+                        "SCTX - Result script source": "; conversation at J finished \r\n; (set by results, used as trigger by CharGenScript)\r\n; pause before Baurus can start warning player to stay with Emperor\r\nset CharacterGen.baurusTimer to 15\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 72, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 5, 
+                            "CompiledSize": 65, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0B 00 72 04 00 66 0A 00 03 00 20 31 30 1C 00 01 00 33 10 05 00 01 00 72 05 00 1C 00 02 00 33 10 05 00 01 00 72 05 00 1C 00 01 00 5E 10 00 00 1C 00 02 00 5E 10 00 00 1C 00 03 00 5E 10 00 00", 
+                        "SCTX - Result script source": "; conversation at Marker J finished\r\n; pause before Emperor force-greets player\r\nset CharacterGen.convTimer to 10\r\nGlenroyRef.Say CharGenVoice\r\nBaurusRef.Say CharGenVoice\r\nGlenroyRef.evp\r\nBaurusRef.evp\r\nUrielSeptimRef.evp", 
+                        "References": [
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]", 
+                            "SCRO - Global Reference": "CharGenVoice [DIAL:00014A1E]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 73, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 8, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 5E 10 00 00", 
+                        "SCTX - Result script source": "; Emperor ready to speak to player\r\n; (timer in CharGenScript sets this)\r\nUrielSeptimRef.evp", 
+                        "References": [
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 74, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 5, 
+                            "CompiledSize": 93, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00 1C 00 01 00 EF 10 0A 00 02 00 72 04 00 6E 01 00 00 00 1C 00 02 00 52 10 0A 00 02 00 72 04 00 6E 01 00 00 00 1C 00 02 00 F3 10 07 00 01 00 6E 01 00 00 00 03 10 0A 00 02 00 72 05 00 6E 00 00 00 00 1C 00 03 00 8B 10 02 00 00 00", 
+                        "SCTX - Result script source": "; Emperor has given player the amulet\r\nplayer.additem AmuletofKings 1\r\nplayer.unequipitem AmuletofKings 1\r\nUrielSeptimRef.removeItem AmuletofKings 1\r\n; make sure Emperor doesn't try to fight assassin\r\nUrielSeptimRef.setrestrained 1\r\nSetEssential UrielSeptim 0\r\nGlenroyRef.kill\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "AmuletofKings [CLOT:000250A0]", 
+                            "SCRO - Global Reference": "UrielSeptim [NPC_:00023F2E]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 4, 
+                            "CompiledSize": 56, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "61 10 00 00 1C 00 01 00 9E 10 05 00 01 00 72 03 00 1C 00 02 00 0D 10 0A 00 02 00 72 01 00 6E 01 00 00 00 1C 00 01 00 5E 10 00 00 1C 00 01 00 16 10 05 00 01 00 72 04 00", 
+                        "SCTX - Result script source": "disableplayercontrols\r\n; trigger assassin\r\nCGAssassinFinal.moveto CGFinalAssassinMarker\r\nIDSecretWall01REF.activate CGAssassinFinal 1\r\nCGAssassinFinal.evp\r\nCGAssassinFinal.startcombat UrielSeptimRef", 
+                        "References": [
+                            "SCRO - Global Reference": "CGAssassinFinal [ACHR:0001E703]", 
+                            "SCRO - Global Reference": "IDSecretWall01REF [REFR:000531C1]", 
+                            "SCRO - Global Reference": "CGFinalAssassinMarker [REFR:00053714]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 76, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 2, 
+                            "CompiledSize": 69, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "60 10 00 00 1C 00 01 00 5E 10 00 00 15 00 0A 00 72 02 00 73 08 00 02 00 20 36 15 00 0A 00 72 02 00 73 09 00 02 00 20 35 15 00 0B 00 72 02 00 73 01 00 03 00 20 37 30 39 10 0A 00 02 00 72 02 00 6E 50 00 00 00", 
+                        "SCTX - Result script source": "; UrielSeptim is dead\r\nenableplayercontrols\r\nCGAssassinFinal.evp\r\nset characterGen.speaker to 6 ; Assassin\r\nset characterGen.target to 5 ; player\r\nset charactergen.convCount to 70 ; make sure we're at the right spot\r\nsetstage charactergen 80", 
+                        "References": [
+                            "SCRO - Global Reference": "CGAssassinFinal [ACHR:0001E703]", 
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 80, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 9, 
+                            "CompiledSize": 136, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 89 10 0A 00 02 00 72 04 00 6E 01 00 00 00 A8 10 0D 00 03 00 72 04 00 72 05 00 6E 9C FF FF FF 1C 00 01 00 0F 10 09 00 02 00 21 00 6E 32 00 00 00 1C 00 01 00 16 10 05 00 01 00 72 06 00 1C 00 02 00 52 10 0A 00 02 00 72 07 00 6E 01 00 00 00 1C 00 02 00 16 10 05 00 01 00 72 01 00 1C 00 02 00 34 10 08 00 02 00 72 01 00 72 08 00 03 10 0A 00 02 00 72 09 00 6E 00 00 00 00 1C 00 03 00 8B 10 02 00 00 00", 
+                        "SCTX - Result script source": "CGAssassinFinal.setfactionrank MythicDawnCG 1\r\nsetfactionreaction MythicDawnCG playerFaction -100\r\nCGAssassinFinal.setav aggression 50\r\nCGAssassinFinal.startcombat player\r\nBaurusRef.removeItem BladesShield 1\r\nBaurusRef.startcombat CGAssassinFinal\r\nBaurusRef.SayTo CGAssassinFinal CharGenVoice\r\nsetessential Glenroy 0\r\nGlenroyRef.kill ; just make sure\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "CGAssassinFinal [ACHR:0001E703]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "GlenroyRef [ACHR:00032A16]", 
+                            "SCRO - Global Reference": "MythicDawnCG [FACT:00014A20]", 
+                            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]", 
+                            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+                            "SCRO - Global Reference": "BladesShield [ARMO:00023922]", 
+                            "SCRO - Global Reference": "CharGenVoice [DIAL:00014A1E]", 
+                            "SCRO - Global Reference": "Glenroy [NPC_:00023F2B]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 84, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 40, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 5A 10 07 00 01 00 6E 00 00 00 00 1C 00 01 00 5E 10 00 00 1C 00 01 00 0F 10 09 00 02 00 21 00 6E 05 00 00 00", 
+                        "SCTX - Result script source": "; Assassin is dead\r\nBaurusRef.setalert 0\r\nBaurusRef.evp\r\nBaurusRef.setav aggression 5\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 85, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 4, 
+                            "CompiledSize": 38, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 64 10 00 00 1C 00 01 00 34 10 08 00 02 00 72 02 00 72 03 00 15 00 0A 00 72 04 00 66 0A 00 02 00 20 35", 
+                        "SCTX - Result script source": "; when Baurus reaches Emperor, kneel\r\nBaurusRef.pickIdle\r\nBaurusRef.SayTo UrielSeptimRef CharGenVoice\r\nset charactergen.convTimer to 5\r\n\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]", 
+                            "SCRO - Global Reference": "UrielSeptimRef [ACHR:00032A18]", 
+                            "SCRO - Global Reference": "CharGenVoice [DIAL:00014A1E]", 
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "debug", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "TEMP: 85: Baurus is supposed to kneel next to Emperor here.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 86, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 8, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 5E 10 00 00", 
+                        "SCTX - Result script source": "; Baurus finished mourning Emperor\r\nBaurusRef.evp", 
+                        "References": [
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "Charactergen [QUST:0002466E]", 
+                            "Parameter #2": "debug", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "TEMP: 86 Baurus finished mourning Emperor", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 87, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 4, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "D9 10 00 00", 
+                        "SCTX - Result script source": "; Baurus asks you for class\r\nshowclassmenu"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 88, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 7, 
+                            "CompiledSize": 91, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 39 10 0A 00 02 00 72 01 00 6E 14 00 00 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 58 10 05 00 01 00 72 04 00 58 10 05 00 01 00 72 05 00 58 10 05 00 01 00 72 06 00 15 00 0A 00 72 07 00 73 02 00 02 00 20 31 5E 11 00 00", 
+                        "SCTX - Result script source": "; finished with Baurus's speech to player\r\nsetstage MQ02 10\r\nsetstage MQ02 20\r\naddtopic AmuletofKingsTopic\r\naddtopic WeynonPrioryTopic\r\naddtopic OrderofTalosTopic\r\naddtopic JauffreTopic\r\naddtopic UrielSeptimTopic\r\nset BaurusRef.chargenOver to 1\r\nautosave\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "MQ02 [QUST:0001E724]", 
+                            "SCRO - Global Reference": "AmuletofKingsTopic [DIAL:000025A5]", 
+                            "SCRO - Global Reference": "WeynonPrioryTopic [DIAL:000247E4]", 
+                            "SCRO - Global Reference": "OrderOfTalosTopic [DIAL:00033DF0]", 
+                            "SCRO - Global Reference": "JauffreTopic [DIAL:000025E3]", 
+                            "SCRO - Global Reference": "UrielSeptimTopic [DIAL:0002ADAF]", 
+                            "SCRO - Global Reference": "BaurusRef [ACHR:00032A17]"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,94 @@
+{
+    "Topic": "1laySmember [DIAL:01310B4E]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 712, 
+        "Record Flags": {}, 
+        "FormID": "0132220F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
+    "PNAM - Previous INFO": "0132220E", 
+    "Add topics": [
+        "NAME - Topic": "01310CC6", 
+        "NAME - Topic": "01310D0E", 
+        "NAME - Topic": "01310B4E", 
+        "NAME - Topic": "013109B9", 
+        "NAME - Topic": "01310BD1", 
+        "NAME - Topic": "013109D7", 
+        "NAME - Topic": "013109D8", 
+        "NAME - Topic": "01310B99", 
+        "NAME - Topic": "01310C02", 
+        "NAME - Topic": "01310B99"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "We accept all citizens of good character and earnest faith. We ask only a one-time pledge of 50 drakes to aid us in our good works.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "To become a lay member of the Imperial cult, speak with Ygfa at Fort Pelagiad, Syloria Siruliulus at Fort Buckmoth, Somutis Vunnis at Fort Moonmoth, Ruccia Conician in the Grand Council Chambers in Ebonheart, or Lalatia Varian in the Imperial Chapels at Ebonheart.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ImperialSCult "Imperial Cult" [FACT:01220003]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "SameFactionAsPC:133", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

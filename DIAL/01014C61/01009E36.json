@@ -1,0 +1,78 @@
+{
+    "Topic": "1TRAzuraEndTalk [DIAL:01014C61]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 445, 
+        "Record Flags": {}, 
+        "FormID": "01009E36", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "01", 
+        "Next Speaker": "01", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwTRSothaSil [QUST:0101C65C]", 
+    "PNAM - Previous INFO": "01014C63", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 41 6C"
+            }, 
+            "NAM1 - Response Text": "There is much for you still to do. Vivec lives, and he may yet have a part to play in your future. Continue on your chosen path. The skies of Mournho", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRSothaSil "The Mad God" [QUST:0101C65C]", 
+            "Parameter #2": "gamestate", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 14.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRSothaSil "The Mad God" [QUST:0101C65C]", 
+            "Parameter #2": "Azurastate", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0TRAzuraAvatar "Azura" [NPC_:0101335A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 29, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 6E 00 00 00 15 00 0B 00 72 01 00 73 05 00 03 00 20 32 30", 
+        "SCTX - Result script source": "setstage fbmwTRSothaSil 110\r\nset fbmwTRSothaSil.Azurastate to 20", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTRSothaSil [QUST:0101C65C]"
+        ]
+    }
+}

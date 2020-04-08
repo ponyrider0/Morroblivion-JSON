@@ -1,0 +1,78 @@
+{
+    "Topic": "1muchStoSatoneSfor [DIAL:01311341]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 606, 
+        "Record Flags": {}, 
+        "FormID": "01F8B027", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMStones [QUST:0101B6D4]", 
+    "PNAM - Previous INFO": "01F8B026", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "72 73 74"
+            }, 
+            "NAM1 - Response Text": "The Imperials in their fort have brought nothing but harm to these lands. They cut the trees and dig the earth. They are wasteful, lazy, and careless. They have no comprehension of the Oneness of the land.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6D 77 42"
+            }, 
+            "NAM1 - Response Text": "It is this Oneness from which the Skaal derive our strength, and the Imperials have defiled these lands.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMStones "The Skaal Test of Loyalty" [QUST:0101B6D4]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0tharstenSheartTfang "Tharsten Heart-Fang" [NPC_:01260B22]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 14 00 00 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "setstage fbmwbmstones 20\r\naddtopic 1defiledstheseslands", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMStones [QUST:0101B6D4]", 
+            "SCRO - Global Reference": "1defiledStheseSlands [DIAL:0131132B]"
+        ]
+    }
+}

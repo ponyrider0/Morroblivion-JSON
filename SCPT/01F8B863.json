@@ -1,0 +1,24 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 494, 
+        "Record Flags": {}, 
+        "FormID": "01F8B863", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwMSDravilScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 3, 
+        "CompiledSize": 155, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0B 00 19 00 38 00 00 00 01 00 72 01 00 59 10 22 00 01 00 18 00 59 6F 75 20 64 69 65 20 6E 6F 77 2C 20 61 63 74 6F 72 20 73 63 75 6D 21 00 00 00 00 00 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 11 00 00 00 10 00 08 00 0A 00 44 00 00 00 00 00 16 00 2A 00 01 00 26 00 20 58 3A 10 05 00 01 00 72 03 00 20 31 35 30 20 21 3D 20 58 3A 10 05 00 01 00 72 03 00 20 33 30 20 3E 3D 20 26 26 39 10 0A 00 02 00 72 03 00 6E 32 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwMSDravilScript\r\nbegin onstartcombat player\r\nmessage \"You die now, actor scum!\"\r\nadditem 0daedricswakizashi 1\r\nend\r\n\r\nbegin ondeath\r\nif getstage fbmwMSPerformers!=150&&getstage fbmwmsPerformers>=30\r\nsetstage fbmwMSPerformers 50\r\nendif\r\nend", 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "0daedricSwakizashi [WEAP:01100047]", 
+        "SCRO - Global Reference": "fbmwMSPerformers [QUST:0101C62D]"
+    ]
+}

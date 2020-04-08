@@ -1,0 +1,121 @@
+{
+    "Topic": "1TempleSCompound [DIAL:013108D5]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 942, 
+        "Record Flags": {}, 
+        "FormID": "01321083", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "013108D5", 
+        "NAME - Topic": "01310BA4", 
+        "NAME - Topic": "013108AD", 
+        "NAME - Topic": "01310A9D", 
+        "NAME - Topic": "013107DD", 
+        "NAME - Topic": "01310CD9", 
+        "NAME - Topic": "013108D5", 
+        "NAME - Topic": "01310C9C", 
+        "NAME - Topic": "01310B0A", 
+        "NAME - Topic": "01310926", 
+        "NAME - Topic": "013108AA", 
+        "NAME - Topic": "013108AD", 
+        "NAME - Topic": "013108AB", 
+        "NAME - Topic": "01310CD9", 
+        "NAME - Topic": "013108AB", 
+        "NAME - Topic": "01310A2A"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "The Temple Compound includes the High Fane, the largest Tribunal temple on Vvardenfell, and The Ministry of Truth, a moon suspended by Vivec's power above the Temple Compound, where the Temple Ordinators are quartered.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "The Hall of Wisdom and Hall of Justice house the executive, administrative, judicial, and martial operations of the Tribunal Temple.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "The Palace of Vivec is the abode of the god-hero Lord Vivec. Beneath the Palace of Vivec is the Puzzle Canal, a place of testing for questing heroes.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInCell:67", 
+            "Unused": "00 00", 
+            "Parameter #1": "Vivec "Vivec" [CELL:01480021]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "PlayerRef [PLYR:00000014]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "noLore "noLore" [FACT:0122001C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

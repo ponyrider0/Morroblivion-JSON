@@ -1,0 +1,77 @@
+{
+    "Topic": "1BarilzarAsSMazedSBand [DIAL:01310FA8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 558, 
+        "Record Flags": {}, 
+        "FormID": "01F8AB55", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRMazedBand [QUST:0101C656]", 
+    "PNAM - Previous INFO": "01F8AB54", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "72 65 6E"
+            }, 
+            "NAM1 - Response Text": "I have heard of this thing,, but I know very little about it. I've heard whispers about it, but few details. Some say it is cursed...", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "72 65 6E"
+            }, 
+            "NAM1 - Response Text": "Some say it is not. I can't understand why the goddess would want such a thing. If you want to know more, I would suggest speaking with Torasa Aram at the Museum of Artifacts.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0barenziah "Barenziah" [NPC_:01260AC1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 70.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRMazedBand "Barilzar's Mazed Band" [QUST:0101C656]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 32 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwtrmazedband 50", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTRMazedBand [QUST:0101C656]"
+        ]
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "Topic": "1slavery [DIAL:01310C24]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 389, 
+        "Record Flags": {}, 
+        "FormID": "010100DC", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHHTwinLamps1 [QUST:01003470]", 
+    "PNAM - Previous INFO": "01322ACB", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "I heard that you helped the Arvel family. When you have time, speak with me again, for there is still much work to done.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 70.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHHTwinLamps1 "House Hlaalu: The Twin Lamps" [QUST:01003470]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ilmeniSdren "Ilmeni Dren" [NPC_:0126038F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 28, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 64 00 00 00 39 10 0A 00 02 00 72 02 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHHTwinLamps1 100\r\nSetStage fbmwHHTwinLamps3 1", 
+        "References": [
+            "SCRO - Global Reference": "fbmwHHTwinLamps1 [QUST:01003470]", 
+            "SCRO - Global Reference": "fbmwHHTwinLamps3 [QUST:01003471]"
+        ]
+    }
+}

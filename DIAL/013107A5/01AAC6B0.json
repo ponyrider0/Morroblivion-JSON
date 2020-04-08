@@ -1,0 +1,111 @@
+{
+    "Topic": "1AmuletSofSAshamanu [DIAL:013107A5]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 830, 
+        "Record Flags": {}, 
+        "FormID": "01AAC6B0", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSWhiteGuar [QUST:0101C63A]", 
+    "PNAM - Previous INFO": "01AAC6AF", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "68 61 6D"
+            }, 
+            "NAM1 - Response Text": "Thank you, child. This amulet will be the salvation of my people. Take this in return.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "68 61 6D"
+            }, 
+            "NAM1 - Response Text": "It is a shield of legend among my people, the Shield of the Undaunted. Use it, and you will feel the strength return to weary limbs.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "68 61 6D"
+            }, 
+            "NAM1 - Response Text": "Travel well, friend.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSWhiteGuarAmulet "Amulet of Ashamanu" [CLOT:0101C6B1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 80.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSWhiteGuar "Dreams of a White Guar" [QUST:0101C63A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 60.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSWhiteGuar "Dreams of a White Guar" [QUST:0101C63A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0urshamusaSrapli "Urshamusa Rapli" [NPC_:01260929]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 78, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 50 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 52 10 0A 00 02 00 72 04 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "setstage FBMWMSWhiteGuar 80\r\nplayer.removeitem FBMWMSWhiteGuarAmulet 1\r\nadditem FBMWMSWhiteGuarAmulet 1\r\nremoveitem FBMWMSWhiteGuarShield 1\r\nplayer.additem FBMWMSWhiteGuarShield 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMSWhiteGuar [QUST:0101C63A]", 
+            "SCRO - Global Reference": "fbmwMSWhiteGuarAmulet [CLOT:0101C6B1]", 
+            "SCRO - Global Reference": "FBMWMSWhiteGuarShield [ARMO:0101C6B2]"
+        ]
+    }
+}

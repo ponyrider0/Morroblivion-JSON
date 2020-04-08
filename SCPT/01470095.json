@@ -1,0 +1,49 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1388, 
+        "Record Flags": {}, 
+        "FormID": "01470095", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwDAMephalaAltarScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 6, 
+        "CompiledSize": 367, 
+        "VariableCount": 3, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 2C 00 00 00 00 00 16 00 15 00 01 00 11 00 20 58 3A 10 05 00 01 00 72 02 00 20 35 30 20 3D 3D 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 11 00 00 00 10 00 06 00 00 00 29 01 00 00 16 00 15 00 01 00 11 00 20 58 3A 10 05 00 01 00 72 02 00 20 36 30 20 3E 3D 1E 00 00 00 19 00 00 00 15 00 11 00 66 03 00 0C 00 20 66 03 00 20 58 0C 10 00 00 20 2D 16 00 0D 00 0E 00 09 00 20 66 03 00 20 30 20 3C 3D 16 00 15 00 0C 00 11 00 20 58 3A 10 05 00 01 00 72 02 00 20 35 30 20 3D 3D 16 00 0D 00 03 00 09 00 20 73 02 00 20 31 20 3D 3D 61 10 00 00 15 00 20 00 66 03 00 1B 00 20 72 03 00 58 33 10 12 00 04 00 72 04 00 6E 01 00 00 00 72 05 00 6E 01 00 00 00 15 00 07 00 73 02 00 02 00 20 32 18 00 0D 00 02 00 09 00 20 73 02 00 20 32 20 3D 3D 15 00 20 00 66 03 00 1B 00 20 72 03 00 58 33 10 12 00 04 00 72 04 00 6E 01 00 00 00 72 05 00 6E 01 00 00 00 15 00 07 00 73 02 00 02 00 20 33 18 00 0D 00 03 00 09 00 20 73 02 00 20 33 20 3D 3D 60 10 00 00 39 10 0A 00 02 00 72 02 00 6E 3C 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 06 00 6E 01 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptName mwDAMephalaAltarScript\r\n\r\nshort speech\r\nfloat timer\r\n\r\nbegin onactivate\r\n	if GetStage fbmwDAMephala == 50\r\n		set speech to 1\r\n	endif\r\nend\r\n\r\nbegin gamemode\r\n\r\n	if GetStage fbmwDAMephala >= 60\r\n		return\r\n	endif\r\n\r\n	set timer to ( timer - GetSecondsPassed )\r\n\r\n	if timer <= 0\r\n		if GetStage fbmwDAMephala == 50\r\n			if speech == 1\r\n				DisablePlayerControls\r\n				set timer to mwDAAltarToMephalaREF.Say mwDAMephalaSpeech 1 mwDaedricSpeaker 1\r\n				set speech to 2\r\n			elseif speech == 2\r\n				set timer to mwDAAltarToMephalaREF.Say mwDAMephalaSpeech 1 mwDaedricSpeaker 1\r\n				set speech to 3\r\n			elseif speech == 3\r\n				EnablePlayerControls\r\n				SetStage fbmwDAMephala 60\r\n				player.AddItem fbmwRingofKhajiit 1\r\n			endif\r\n		endif\r\n	endif\r\nend\r\n;<CSEBlock>\r\n;<CSECaretPos> 98 </CSECaretPos>\r\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "7F 7F 7F 7F 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "7F 7F 7F 7F 7F 7F 7F"
+            }, 
+            "SCVR - Name": "speech"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "7F 7F 7F 7F 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "7F 7F 7F 7F 7F 7F 7F"
+            }, 
+            "SCVR - Name": "timer"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "fbmwDAMephala [QUST:01002C8A]", 
+        "SCRO - Global Reference": "mwDAAltarToMephalaREF [REFR:01851D66]", 
+        "SCRO - Global Reference": "mwDAMephalaSpeech [DIAL:01003ABE]", 
+        "SCRO - Global Reference": "mwDaedricSpeaker [NPC_:01F8E35C]", 
+        "SCRO - Global Reference": "fbmwRingofKhajiit [CLOT:0102BB36]"
+    ]
+}

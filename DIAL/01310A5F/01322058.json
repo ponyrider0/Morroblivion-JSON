@@ -1,0 +1,83 @@
+{
+    "Topic": "1Advancement [DIAL:01310A5F]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 675, 
+        "Record Flags": {}, 
+        "FormID": "01322058", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHRAdvancement [QUST:010037E7]", 
+    "PNAM - Previous INFO": "01004A7D", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "To become a House Father, you must earn the support of more Councilors.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 6.000000000000000, 
+            "Function": "GetFactionRank:73", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Redoran "Great House Redoran" [FACT:01220000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 3.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHRAdvancement "Great House Redoran" [QUST:010037E7]", 
+            "Parameter #2": "RedoranAdvancement", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0athynSsarethi "Athyn Sarethi" [NPC_:012600B2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 8, 
+            "CompiledSize": 92, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 01 00 00 00 58 10 05 00 01 00 72 02 00 39 10 0A 00 02 00 72 03 00 6E 01 00 00 00 58 10 05 00 01 00 72 04 00 39 10 0A 00 02 00 72 05 00 6E 01 00 00 00 58 10 05 00 01 00 72 06 00 39 10 0A 00 02 00 72 07 00 6E 01 00 00 00 58 10 05 00 01 00 72 08 00", 
+        "SCTX - Result script source": "SetStage fbmwHRMorvaynManor 1\r\nAddTopic 1MorvaynSManor\r\n\r\nSetStage fbmwHRTaxCollector 1\r\nAddTopic 1taxesSfromSGnisis\r\n\r\nSetStage fbmwHRCalderaCorrupt 1\r\nAddTopic 1CalderaSebonySmines\r\n\r\nSetStage fbmwHRArobarKidnap 1\r\nAddTopic 1MinerSArobar", 
+        "References": [
+            "SCRO - Global Reference": "fbmwHRMorvaynManor [QUST:01004A5E]", 
+            "SCRO - Global Reference": "1MorvaynSManor [DIAL:0131096C]", 
+            "SCRO - Global Reference": "fbmwHRTaxCollector [QUST:0100519C]", 
+            "SCRO - Global Reference": "1taxesSfromSGnisis [DIAL:013107BD]", 
+            "SCRO - Global Reference": "fbmwHRCalderaCorrupt [QUST:01004318]", 
+            "SCRO - Global Reference": "1CalderaSebonySmines [DIAL:01310724]", 
+            "SCRO - Global Reference": "fbmwHRArobarKidnap [QUST:01003475]", 
+            "SCRO - Global Reference": "1MinerSArobar [DIAL:013109EA]"
+        ]
+    }
+}

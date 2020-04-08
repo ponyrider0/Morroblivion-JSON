@@ -1,0 +1,72 @@
+{
+    "Topic": "1FargothAsShidingSplace [DIAL:013106CE]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 526, 
+        "Record Flags": {}, 
+        "FormID": "01AAA428", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
+    "PNAM - Previous INFO": "01AAA427", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "73 73 6B"
+            }, 
+            "NAM1 - Response Text": "Good that you found that for me, friend. I'll make that little fetcher pay for lying to me. Although, I've got to be honest, it is kind of fun messing with the little guy. ", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "73 73 6B"
+            }, 
+            "NAM1 - Response Text": "I like to take something from his place and stick it in that old barrel in the Census and Excise courtyard. Hehe...gives the new arrivals something to look forward to.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSLookout "Fargoth's Hiding Place" [QUST:0101C627]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0hrisskarSflatTfoot "Hrisskar Flat-Foot" [NPC_:0126023C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

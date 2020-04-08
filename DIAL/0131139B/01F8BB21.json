@@ -1,0 +1,87 @@
+{
+    "Topic": "1goSwithSyou [DIAL:0131139B]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 590, 
+        "Record Flags": {}, 
+        "FormID": "01F8BB21", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwCO3 [QUST:0101BE44]", 
+    "PNAM - Previous INFO": "01F8BB20", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6F 6E 69"
+            }, 
+            "NAM1 - Response Text": "Is something wrong? Do I need to wait here or something?", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6F 6E 69"
+            }, 
+            "NAM1 - Response Text": "I really hope you don't leave me alone, because it's so cold, and I'm just sure there are even worse things than those horrible monsters back athe ship, and I just don't know what I'd do all by myself, and I just really, ", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "6F 6E 69"
+            }, 
+            "NAM1 - Response Text": " really need someone to keep me company and talk to me. So what is it?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0AproniaSAlfena "Apronia Alfena" [NPC_:01260B2B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwCO3b "East Empire Company: Apronia Alfena" [QUST:0101BE46]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1goSwithSyou3 [DIAL:013220F0]", 
+        "TCLT - Choice": "1goSwithSyou4 [DIAL:013220F2]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

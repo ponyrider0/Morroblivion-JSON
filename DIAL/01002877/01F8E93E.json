@@ -1,0 +1,125 @@
+{
+    "Topic": "1entertainStheSpatrons2 [DIAL:01002877]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 684, 
+        "Record Flags": {}, 
+        "FormID": "01F8E93E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMSEntertainers [QUST:01002199]", 
+    "PNAM - Previous INFO": "01F8E93D", 
+    "Add topics": [
+        "NAME - Topic": "01310CC4", 
+        "NAME - Topic": "01310CC4"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "[You dance around on your bonemold shield and kick your feet. They frown sourly, then lose interest.] That was terrible. The high-kicks should be HIGH.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "And GRACEFUL. Who taught you how to dance the handy high-kick?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0holyshield "Holy Shield" [ARMO:010414E5]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetActorValue:14", 
+            "Unused": "00 00", 
+            "Parameter #1": "Acrobatics [ACVA:0000001A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetActorValue:14", 
+            "Unused": "00 00", 
+            "Parameter #1": "Athletics [ACVA:0000000D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0dulneaSralaal "Dulnea Ralaal" [NPC_:01260118]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "PlayerRef [PLYR:00000014]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 25, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "15 00 0C 00 72 01 00 73 02 00 04 00 20 47 02 00 26 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "set fbmwMSEntertainers.currentday to GameDay\r\nplaysound 0entertainersUreact02", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMSEntertainers [QUST:01002199]", 
+            "SCRO - Global Reference": "GameDay [GLOB:00000037]", 
+            "SCRO - Global Reference": "0entertainersUreact02 [SOUN:01F8E8F4]"
+        ]
+    }
+}

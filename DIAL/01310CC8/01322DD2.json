@@ -1,0 +1,86 @@
+{
+    "Topic": "1Lette [DIAL:01310CC8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 483, 
+        "Record Flags": {}, 
+        "FormID": "01322DD2", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTTCuringTouch [QUST:01F0A296]", 
+    "PNAM - Previous INFO": "01F8A84C", 
+    "Add topics": [
+        "NAME - Topic": "01310C9C", 
+        "NAME - Topic": "01310D0E", 
+        "NAME - Topic": "01310CC8", 
+        "NAME - Topic": "01310C01", 
+        "NAME - Topic": "01310BDD", 
+        "NAME - Topic": "01310A98", 
+        "NAME - Topic": "01310A98"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "The Temple does not proselytize, but we do good works for non-believers. Lette, a Redguard in Tel Mora, has swamp fever.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Cure her of swamp fever and return to me.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0tharerSrotheloth "Tharer Rotheloth" [NPC_:0126050C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwttcuringtouch 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTTCuringTouch [QUST:01F0A296]"
+        ]
+    }
+}

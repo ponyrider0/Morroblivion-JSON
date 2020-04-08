@@ -1,0 +1,78 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 711, 
+        "Record Flags": {}, 
+        "FormID": "01F8B8D1", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMWildHunt [QUST:0101B6DA]", 
+    "PNAM - Previous INFO": "01F8AFDA", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "So...you are the one. You have escaped my hounds and beaten back the other challengers. I had rather expected the giant to prevail, but no matter. ", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "You have proven yourself a worthy hunter, and you have earned the greatest honor that can be bestowed upon a mortal: you are to be my prey.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "I ask you, though: what is it that makes a hunter great. Is it his strength? The speed with which he strikes? Or is it his guile, the ability to outwit his prey? Answer me, mortal, and decide your fate.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0BMUhircineU2 "Hircine" [NPC_:01F8B0A0]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "fbmwbmWildHuntGuile [DIAL:01F8BC77]", 
+        "TCLT - Choice": "fbmwbmWildHuntSpeed [DIAL:01F8BC7B]", 
+        "TCLT - Choice": "fbmwbmWildHuntStrength [DIAL:01F8BC79]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

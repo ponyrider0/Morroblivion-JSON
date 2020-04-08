@@ -1,0 +1,100 @@
+{
+    "Topic": "1yourSbusinessShere [DIAL:01311334]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 728, 
+        "Record Flags": {}, 
+        "FormID": "01F8B01D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMCariusGone [QUST:0101AF88]", 
+    "PNAM - Previous INFO": "01F8B01C", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "72 73 74"
+            }, 
+            "NAM1 - Response Text": "You say you've brought the bones of one of our ancestors? Stupid Imperials. They need to learn to leave things as they are. Still, it is good that you have returned this to the Skaal. Perhaps there is hope for you and your kind.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "72 73 74"
+            }, 
+            "NAM1 - Response Text": "You are welcome here for the moment, but there is much to atone for.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0miscUskullUSkaal "Skull of a Skaal Warrior" [MISC:01160242]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 25.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMCariusGone "The Disappearance of Captain Carius" [QUST:0101AF88]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMStones "The Skaal Test of Loyalty" [QUST:0101B6D4]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0tharstenSheartTfang "Tharsten Heart-Fang" [NPC_:01260B22]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 41, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 0A 00 00 00 58 10 05 00 01 00 72 03 00 1C 00 01 00 52 10 0A 00 02 00 72 04 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwbmstones 10\r\naddtopic 1muchstosatonesfor\r\nplayer.removeitem 0miscuskulluskaal 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwBMStones [QUST:0101B6D4]", 
+            "SCRO - Global Reference": "1muchStoSatoneSfor [DIAL:01311341]", 
+            "SCRO - Global Reference": "0miscUskullUSkaal [MISC:01160242]"
+        ]
+    }
+}

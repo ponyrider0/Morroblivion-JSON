@@ -1,0 +1,48 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1036, 
+        "Record Flags": {}, 
+        "FormID": "0100723D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwHTEddieAmuletQuestScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 3, 
+        "CompiledSize": 225, 
+        "VariableCount": 2, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 D3 00 00 00 16 00 21 00 02 00 1D 00 20 58 3A 10 05 00 01 00 72 02 00 20 35 30 20 3D 3D 20 73 01 00 20 30 20 3D 3D 20 26 26 15 00 09 00 73 02 00 04 00 20 47 03 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 16 00 0D 00 04 00 09 00 20 73 01 00 20 31 20 3D 3D 16 00 0E 00 02 00 0A 00 20 47 03 00 20 73 02 00 20 3E 1C 00 01 00 22 10 00 00 15 00 07 00 73 01 00 02 00 20 32 19 00 00 00 19 00 00 00 16 00 0D 00 05 00 09 00 20 73 01 00 20 32 20 3D 3D 16 00 12 00 03 00 0E 00 20 47 03 00 20 73 02 00 20 2D 20 35 20 3E 1C 00 01 00 21 10 00 00 39 10 0A 00 02 00 72 02 00 6E 46 00 00 00 15 00 07 00 73 01 00 02 00 20 33 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwHTEddieAmuletQuestScript\r\n\r\nSHORT EddieAmuletProgress\r\nSHORT EddieAmuletTimer\r\n\r\nBegin GameMode\r\n	IF GetStage fbmwHTEddieAmulet == 50  && EddieAmuletProgress == 0\r\n		SET EddieAmuletTimer TO GameDaysPassed\r\n		SET EddieAmuletProgress TO 1\r\n	ENDIF\r\n\r\n	IF EddieAmuletProgress == 1\r\n		IF GameDaysPassed > EddieAmuletTimer\r\n			mwFastEddieREF.Disable\r\n			SET EddieAmuletProgress TO 2\r\n		ENDIF\r\n	ENDIF\r\n\r\n	IF EddieAmuletProgress == 2\r\n		IF GameDaysPassed - EddieAmuletTimer > 5\r\n			mwFastEddieREF.Enable\r\n			SetStage fbmwHTEddieAmulet 70\r\n			SET EddieAmuletProgress TO 3\r\n		ENDIF\r\n	ENDIF\r\nEND", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "EddieAmuletProgress"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "EddieAmuletTimer"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "mwFastEddieREF [ACHR:018108C7]", 
+        "SCRO - Global Reference": "fbmwHTEddieAmulet [QUST:0100343C]", 
+        "SCRO - Global Reference": "GameDaysPassed [GLOB:00000039]"
+    ]
+}

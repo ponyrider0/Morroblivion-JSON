@@ -1,0 +1,67 @@
+{
+    "Topic": "1unsanctionedStraining1 [DIAL:01320666]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 331, 
+        "Record Flags": {}, 
+        "FormID": "01F8A8EB", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMGStopCompetition [QUST:0100678A]", 
+    "PNAM - Previous INFO": "01322FC1", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "Good. We can't allow just anyone to offer training in magic.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 70.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMGStopCompetition "Mages Guild: Unsanctioned Training" [QUST:0100678A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ranisSathrys "Ranis Athrys" [NPC_:01260125]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 28, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 6E 00 00 00 53 10 0A 00 02 00 72 02 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmgstopcompetition 110\r\nmoddisposition player 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMGStopCompetition [QUST:0100678A]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

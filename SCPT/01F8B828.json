@@ -1,0 +1,37 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 704, 
+        "Record Flags": {}, 
+        "FormID": "01F8B828", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwbmSpiritBearScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 3, 
+        "CompiledSize": 177, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 56 00 00 00 00 00 16 00 15 00 01 00 11 00 20 58 3A 10 05 00 01 00 72 01 00 20 36 30 20 3E 3D 39 10 0A 00 02 00 72 01 00 6E 4B 00 00 00 18 00 15 00 01 00 11 00 20 58 3A 10 05 00 01 00 72 02 00 20 33 30 20 3E 3D 39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 19 00 00 00 11 00 00 00 10 00 06 00 00 00 41 00 00 00 16 00 21 00 02 00 1D 00 20 58 3A 10 05 00 01 00 72 01 00 20 36 30 20 3D 3D 20 73 01 00 20 30 20 3D 3D 20 26 26 15 00 07 00 73 01 00 02 00 20 31 9E 10 05 00 01 00 72 03 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwbmSpiritBearScript\nshort DoOnce\nbegin ondeath\n	if(GetStage fbmwBMBearHunt1 >= 60)\n		SetStage fbmwBMBearHunt1 75\n	elseif(GetStage fbmwBMBearHunt2 >= 30)\n		SetStage fbmwBMBearHunt2 50\n	endif\nend\nbegin gamemode\n	if(GetStage fbmwBMBearHunt1 == 60)&&(DoOnce == 0)\n		set DoOnce to 1\n		MoveToMarker fbmwbmmovespiritref\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "DoOnce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwBMBearHunt1 [QUST:0101AF84]", 
+        "SCRO - Global Reference": "fbmwBMBearHunt2 [QUST:0101AF85]", 
+        "SCRO - Global Reference": "fbmwbmmovespiritref [REFR:0112B8A9]"
+    ]
+}

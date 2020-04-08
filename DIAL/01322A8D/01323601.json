@@ -1,0 +1,76 @@
+{
+    "Topic": "1SABakha1 [DIAL:01322A8D]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 563, 
+        "Record Flags": {}, 
+        "FormID": "01323601", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "mwBuySlavesQuest [QUST:01F8E376]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310C6A", 
+        "NAME - Topic": "01310C70", 
+        "NAME - Topic": "01310CC5"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Very well. S'Bakha is now yours. Find him in his cage outside.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0savileSimayn "Savile Imayn" [NPC_:01260480]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1000.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "Gold001 "Gold" [MISC:0000000F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 6, 
+            "CompiledSize": 74, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 04 00 6E E8 03 00 00 02 10 0A 00 02 00 72 04 00 6E E8 03 00 00 15 00 0A 00 72 05 00 73 04 00 02 00 20 31 1C 00 02 00 73 10 02 00 00 00 1C 00 03 00 89 10 0A 00 02 00 72 06 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "player.removeitem Gold001 1000\r\nadditem Gold001 1000\r\nset mwBuySlavesQuest.SBakhaBought to 1\r\nmwSBakhaCageDoorRef.unlock\r\nmwSBakhaRef.SetFactionRank mwPlayerSlavesFaction, 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "mwSBakhaCageDoorRef [REFR:01863C0A]", 
+            "SCRO - Global Reference": "mwSBakhaRef [ACHR:0182AE1D]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "mwBuySlavesQuest [QUST:01F8E376]", 
+            "SCRO - Global Reference": "mwPlayerSlavesFaction [FACT:01009D9C]"
+        ]
+    }
+}

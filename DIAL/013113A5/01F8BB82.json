@@ -1,0 +1,88 @@
+{
+    "Topic": "1assignment [DIAL:013113A5]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 746, 
+        "Record Flags": {}, 
+        "FormID": "01F8BB82", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwCOAdvancement [QUST:01004AD9]", 
+    "PNAM - Previous INFO": "01F8BB81", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "72 6E 69"
+            }, 
+            "NAM1 - Response Text": "I trust you remember Hroldar the Strange? Well, he's one of my men. Picked him up outside Cyrodiil some years back, and have used him for a few jobs since then. I correctly figured he'd serve well in this situation, and so far he has.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6E 69 75"
+            }, 
+            "NAM1 - Response Text": "Oh, you don't need to know everything he's done for me; suffice it to say he's made some very good progress. But now, I have need of his skills, and yours as well. You're going to intercept a report for me.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwCO8a "East Empire Company: Discovery in the Mine" [QUST:0101BED8]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStageDone:59", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwCOChoice "East Empire Company: Making a Choice" [QUST:0101BEDB]", 
+            "Parameter #2": "050 I have agreed to help Carnius. I should report to him for assignments from now on.", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0CarniusSMagius "Carnius Magius" [NPC_:01260B0A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 18, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 36 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "addtopic 1report\r\nstartquest fbmwco9a\r\n", 
+        "References": [
+            "SCRO - Global Reference": "1report [DIAL:013113E0]", 
+            "SCRO - Global Reference": "fbmwCO9a [QUST:0101BEDA]"
+        ]
+    }
+}

@@ -1,0 +1,80 @@
+{
+    "Topic": "1TongueTToad [DIAL:01310A6C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 527, 
+        "Record Flags": {}, 
+        "FormID": "01F8A626", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwFGTongueToad [QUST:010033EC]", 
+    "PNAM - Previous INFO": "01321D56", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "You already killed Tongue-Toad? I need more guildmates like you. Here's 500 septims.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "0tongueUtoad "Tongue-Toad" [NPC_:01260652]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwFGTongueToad "Fighters Guild: Silence Tongue-Toad" [QUST:010033EC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0lorbumolSgroTaglakh "Lorbumol gro-Aglakh" [NPC_:01260269]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 63, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 A9 10 0D 00 03 00 72 03 00 72 04 00 6E 05 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0F 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E F4 01 00 00", 
+        "SCTX - Result script source": "setstage fbmwfgtonguetoad 100\r\nmodfactionreaction fbmwfightersguild playerfaction 5\r\nmoddisposition player 15\r\nplayer.additem gold001 500", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwFGTongueToad [QUST:010033EC]", 
+            "SCRO - Global Reference": "fbmwFightersGuild [FACT:0100761A]", 
+            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]"
+        ]
+    }
+}

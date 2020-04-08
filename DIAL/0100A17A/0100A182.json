@@ -1,0 +1,76 @@
+{
+    "Topic": "fbmwbmMeadHallBusinessMead [DIAL:0100A17A]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 442, 
+        "Record Flags": {}, 
+        "FormID": "0100A182", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMMeadHall [QUST:0101B6C8]", 
+    "PNAM - Previous INFO": "0100A181", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6E 6A 61"
+            }, 
+            "NAM1 - Response Text": "The mead has arrived! We now have plenty to sell. Oh, and I've seen to it that three cases of Skyrim's finest honey wine have been placed upstairs in your quarters, my chieftain. Drink and be merry!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMMeadHall "The Mead Hall Massacre" [QUST:0101B6C8]", 
+            "Parameter #2": "meadarrived", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMMeadHallb "A Shipment of Mead" [QUST:0101B6CA]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0svenjaSsnowTsong "Svenja Snow-Song" [NPC_:01260B34]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 14 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwbmMeadHallb 20", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMMeadHallb [QUST:0101B6CA]"
+        ]
+    }
+}

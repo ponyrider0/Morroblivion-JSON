@@ -1,0 +1,49 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1353, 
+        "Record Flags": {}, 
+        "FormID": "01470340", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwTRSothaOilLeverScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 4, 
+        "CompiledSize": 318, 
+        "VariableCount": 2, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 89 00 00 00 00 00 16 00 17 00 02 00 13 00 20 72 02 00 58 0E 10 04 00 01 00 00 00 20 31 30 30 20 3C 00 10 4D 00 01 00 45 00 54 68 65 20 6C 65 76 65 72 20 69 73 20 72 75 73 74 65 64 20 73 68 75 74 2E 20 59 6F 75 20 64 6F 20 6E 6F 74 20 70 6F 73 73 65 73 73 20 74 68 65 20 73 74 72 65 6E 67 74 68 20 74 6F 20 74 75 72 6E 20 69 74 2E 00 00 00 00 1E 00 00 00 17 00 02 00 01 00 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 11 00 00 00 10 00 06 00 00 00 9B 00 00 00 16 00 0D 00 0C 00 09 00 20 73 02 00 20 31 20 3D 3D 16 00 0D 00 02 00 09 00 20 73 01 00 20 30 20 3D 3D 13 10 09 00 02 00 03 00 6E 01 00 00 00 15 00 07 00 73 01 00 02 00 20 31 17 00 02 00 03 00 26 10 05 00 01 00 72 03 00 15 00 07 00 73 02 00 02 00 20 30 1E 00 00 00 19 00 00 00 16 00 10 00 02 00 0C 00 20 72 04 00 73 15 00 20 30 20 3D 3D 1C 00 01 00 13 10 09 00 02 00 03 00 6E 01 00 00 00 15 00 0A 00 72 04 00 73 15 00 02 00 20 31 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptName mwTRSothaOilLeverScript\n\n;moves oil bridge, checks state of bridge local state \n;sounds should be tagged in animations\n\nshort state		;the state of the lever, 0 down, 1 up\nshort move		;tells the lever and door to move\n\n\nbegin OnActivate\n\n	if ( Player.getAV strength < 100 )\n		MessageBox \"The lever is rusted shut. You do not possess the strength to turn it.\"\n		return\n	else\n		set move to 1\n	endif\nend\n\nbegin gamemode\n	if  ( move == 1 )\n\n;animate the lever\n		if ( state == 0 )\n			PlayGroup forward 1\n			set state to 1\n		else\n			PlaySound 0LockedDoor\n			set move to 0\n			return\n		endif\n\n;animate the bride\n		if (  fbmwTRSothaSil.actsothaoilbridgeState == 0 )\n			fbmwSothaOilBridgeREF.PlayGroup forward 1\n			set  fbmwTRSothaSil.actsothaoilbridgeState to 1\n		endif\n\n	endif\n\nend\n\n\n\n;<CSEBlock>\n;<CSECaretPos> 34 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "state"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 B4 D3 BE 1D"
+            }, 
+            "SCVR - Name": "move"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwSothaOilBridgeREF [REFR:01F06BEC]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "0LockedDoor [SOUN:01300089]", 
+        "SCRO - Global Reference": "fbmwTRSothaSil [QUST:0101C65C]"
+    ]
+}

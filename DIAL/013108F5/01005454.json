@@ -1,0 +1,80 @@
+{
+    "Topic": "1BivaleSTeneran [DIAL:013108F5]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 565, 
+        "Record Flags": {}, 
+        "FormID": "01005454", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHHIndEsp3 [QUST:01003465]", 
+    "PNAM - Previous INFO": "01005453", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Bivale Teneran is a wealthy clothing merchant in Ald'ruhn. She keeps an eye out for us in Ald'ruhn.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Her shop is under Skar, the crabshell in Ald'ruhn. Take this scroll to her.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHHIndEsp3 "House Hlaalu: Delivery for Bivale Teneran" [QUST:01003465]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0nilenoSdorvayn "Nileno Dorvayn" [NPC_:01260109]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 41, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 0A 00 00 00 55 10 05 00 01 00 72 03 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHHIndEsp3 10\r\nShowMap mwAldRuhnManorDistrictMapMarker\r\nPlayer.AddItem 0bkUOrdersForBivaleTeneran 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwHHIndEsp3 [QUST:01003465]", 
+            "SCRO - Global Reference": "mwAldRuhnManorDistrictMapMarker [REFR:0100545B]", 
+            "SCRO - Global Reference": "0bkUordersforbivaleteneran [BOOK:011800D1]"
+        ]
+    }
+}

@@ -1,0 +1,104 @@
+{
+    "Topic": "1MaurrieSAurmine [DIAL:013108BB]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 670, 
+        "Record Flags": {}, 
+        "FormID": "01F0A36E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwVVictimRomance [QUST:01003418]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "013107DA"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 20, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 4D 56"
+            }, 
+            "NAM1 - Response Text": "Ah...so you're the one who brought Maurrie and Nelos together.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 30, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "73 71 7F"
+            }, 
+            "NAM1 - Response Text": "Nothing has been seen or heard of them since then, but the bards are singing songs of their love.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "73 70 7F"
+            }, 
+            "NAM1 - Response Text": "Well, done! Please, take these as a token of my gratitude.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetPCIsSex:131", 
+            "Unused": "00 00", 
+            "Parameter #1": "Female", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwVVictimRomance "The Beauty and the Bandit" [QUST:01003418]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0barnandSerelie "Barnand Erelie" [NPC_:012604D9]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 40, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 03 00 6E 6E 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 03 00 00 00 1C 00 02 00 22 10 00 00", 
+        "SCTX - Result script source": "SetStage fbmwVVictimRomance 110\r\nPlayer.AddItem 0pUrestoreUhealthUe 3\r\nmwMaurrieAurmineREF.disable", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "mwMaurrieAurmineREF [ACHR:0183FE43]", 
+            "SCRO - Global Reference": "fbmwVVictimRomance [QUST:01003418]", 
+            "SCRO - Global Reference": "0pUrestoreUhealthUe [ALCH:010800E0]"
+        ]
+    }
+}

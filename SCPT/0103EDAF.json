@@ -1,0 +1,86 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1785, 
+        "Record Flags": {}, 
+        "FormID": "0103EDAF", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwCo13aQScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 8, 
+        "CompiledSize": 443, 
+        "VariableCount": 5, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 AD 01 00 00 16 00 0D 00 09 00 09 00 20 73 01 00 20 31 20 3D 3D 16 00 0D 00 07 00 09 00 20 73 02 00 20 31 20 3D 3D 16 00 0D 00 05 00 09 00 20 73 03 00 20 31 20 3D 3D 16 00 0D 00 03 00 09 00 20 73 04 00 20 31 20 3D 3D 16 00 0D 00 01 00 09 00 20 73 05 00 20 31 20 3D 3D 39 10 0A 00 02 00 72 07 00 6E 19 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 16 00 15 00 06 00 11 00 20 58 3A 10 05 00 01 00 72 07 00 20 33 30 20 3D 3D 1C 00 01 00 16 10 05 00 01 00 72 08 00 1C 00 02 00 16 10 05 00 01 00 72 08 00 1C 00 03 00 16 10 05 00 01 00 72 08 00 1C 00 04 00 16 10 05 00 01 00 72 08 00 1C 00 05 00 16 10 05 00 01 00 72 08 00 1C 00 06 00 16 10 05 00 01 00 72 08 00 19 00 00 00 16 00 15 00 0D 00 11 00 20 58 3A 10 05 00 01 00 72 07 00 20 33 30 20 3D 3D 16 00 12 00 0B 00 0E 00 20 72 01 00 58 2E 10 00 00 20 31 20 3D 3D 16 00 12 00 09 00 0E 00 20 72 02 00 58 2E 10 00 00 20 31 20 3D 3D 16 00 12 00 07 00 0E 00 20 72 03 00 58 2E 10 00 00 20 31 20 3D 3D 16 00 12 00 05 00 0E 00 20 72 04 00 58 2E 10 00 00 20 31 20 3D 3D 16 00 12 00 03 00 0E 00 20 72 05 00 58 2E 10 00 00 20 31 20 3D 3D 16 00 12 00 01 00 0E 00 20 72 06 00 58 2E 10 00 00 20 31 20 3D 3D 39 10 0A 00 02 00 72 07 00 6E 28 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwCo13aQScript\n\nshort ormvardequip\nshort bryngrimequip\nshort audmundequip\nshort alfbrandequip\nshort valgeirequip\n\nbegin gamemode\n	if ormvardequip == 1\n		if bryngrimequip == 1\n			if audmundequip == 1\n				if alfbrandequip == 1\n					if valgeirequip == 1\n						SetStage fbmwCO13a 25\n					endif\n				endif\n			endif\n		endif\n	endif\n\n	if GetStage fbmwCO13a == 30\n		AlfbrandCREF.StartCombat Player\n		AudmundCREF.StartCombat Player\n		BryngrimCREF.StartCombat Player\n		OrmvardCREF.StartCombat Player\n		ValgeirCREF.StartCombat Player\n		ToralfCREF.StartCombat Player\n	endif\n\n	if GetStage fbmwCO13a == 30\n		if AlfbrandCREF.GetDead == 1\n			if AudmundCREF.GetDead == 1\n				if BryngrimCREF.GetDead == 1\n					if OrmvardCREF.GetDead == 1\n						if ValgeirCREF.GetDead == 1\n							if ToralfCREF.GetDead == 1\n								SetStage fbmwCO13a 40\n							endif\n						endif\n					endif\n				endif\n			endif\n		endif\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 892 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "6D E5 96 4E 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "6F 64 0D 48 B4 EB 9C"
+            }, 
+            "SCVR - Name": "ormvardequip"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "bryngrimequip"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "6E 6B 65 7F 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "6A 63 7F 74 6B 65 7F"
+            }, 
+            "SCVR - Name": "audmundequip"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "83 76 6C 7F 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "6B 65 7F 74 6B 64 7F"
+            }, 
+            "SCVR - Name": "alfbrandequip"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "7D 6B 61 7F 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "6D 63 7F 80 6C 63 7F"
+            }, 
+            "SCVR - Name": "valgeirequip"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "AlfbrandCREF [ACHR:01F02380]", 
+        "SCRO - Global Reference": "AudmundCREF [ACHR:01F0237F]", 
+        "SCRO - Global Reference": "BryngrimCREF [ACHR:01F02382]", 
+        "SCRO - Global Reference": "OrmvardCREF [ACHR:01F02381]", 
+        "SCRO - Global Reference": "ValgeirCREF [ACHR:01F0237D]", 
+        "SCRO - Global Reference": "ToralfCREF [ACHR:01F0237E]", 
+        "SCRO - Global Reference": "fbmwCO13a [QUST:0101BE42]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+    ]
+}

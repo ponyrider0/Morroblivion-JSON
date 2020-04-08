@@ -1,0 +1,58 @@
+{
+    "Topic": "1work6 [DIAL:01322E90]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 364, 
+        "Record Flags": {}, 
+        "FormID": "01323697", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTownSadrith [QUST:0101C647]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Then here's your Thief Ring. Good day to you.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0angaredhel "Angaredhel" [NPC_:012600F0]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 57, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 39 10 0A 00 02 00 72 03 00 6E 3C 00 00 00 53 10 0A 00 02 00 72 01 00 6E EC FF FF FF F8 10 07 00 01 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "player.additem fbmwthiefring 1\r\nsetstage fbmwtownsadrith 60\r\nmoddisposition player -20\r\nmodpcfame 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwThiefRing [CLOT:0102BB5A]", 
+            "SCRO - Global Reference": "fbmwTownSadrith [QUST:0101C647]"
+        ]
+    }
+}

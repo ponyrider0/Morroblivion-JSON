@@ -1,0 +1,110 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 732, 
+        "Record Flags": {}, 
+        "FormID": "0115BCA9", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMCeremony2 [QUST:0101AF8A]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "73 74 53"
+            }, 
+            "NAM1 - Response Text": "It is good to speak with you again, now that the curse of the beast has been lifted from your soul. Though our first attempts to claim the Totem of Claw and Fang failed, we were finally successful.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "73 74 53"
+            }, 
+            "NAM1 - Response Text": "We must now prepare for the ceremony to please the All-Maker.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "61", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMWolfGiver "Rite of the Wolf Giver" [QUST:0101B6DC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 105.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMSkaalAttack "The Siege of the Skaal Village" [QUST:0101B6D2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMLycanthropycure "The Scroll of Cure Lycanthropy" [QUST:0101B6C7]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMCeremony2 "Dream of Hircine" [QUST:0101AF8A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0korstSwindTeye "Korst Wind-Eye" [NPC_:01260B23]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 36, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 36 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 58 10 05 00 01 00 72 04 00", 
+        "SCTX - Result script source": "addtopic 1TotemSofSClawSandSFang\r\nstartquest fbmwbmBearHunt1\r\naddtopic 1Ristaag\r\naddtopic 1BloodMoonSProphecy", 
+        "References": [
+            "SCRO - Global Reference": "1TotemSofSClawSandSFang [DIAL:0131131B]", 
+            "SCRO - Global Reference": "fbmwBMBearHunt1 [QUST:0101AF84]", 
+            "SCRO - Global Reference": "1Ristaag [DIAL:013113D4]", 
+            "SCRO - Global Reference": "1BloodmoonSProphecy [DIAL:0131133C]"
+        ]
+    }
+}

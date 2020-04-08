@@ -1,0 +1,98 @@
+{
+    "Topic": "1moraleShasSbeenSlow [DIAL:0131132A]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 762, 
+        "Record Flags": {}, 
+        "FormID": "01F8B017", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMMorale [QUST:0101B6CE]", 
+    "PNAM - Previous INFO": "01F8B016", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6F 6E 69"
+            }, 
+            "NAM1 - Response Text": "Hmmm...I imagined that the lack of alcohol might have some effects on the morale, but I didn't ever actually ban it. Personally, I didn't even care about the alcohol;", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6D 77 42"
+            }, 
+            "NAM1 - Response Text": "It was the priest, Antonius Nuncius, who was worried about the effect it was having on the men. I disagreed, but the question became moot: our shipments stopped coming in months ago.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "6D 77 42"
+            }, 
+            "NAM1 - Response Text": "Speak with the soldiers a bit more, and see if you can find out who the source of this discontent is.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 40.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMMorale "Rebellion at Frostmoth" [QUST:0101B6CE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMMorale "Rebellion at Frostmoth" [QUST:0101B6CE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0falxScarius "Captain Falx Carius" [NPC_:01260B17]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 32 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwbmmorale 50", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMMorale [QUST:0101B6CE]"
+        ]
+    }
+}

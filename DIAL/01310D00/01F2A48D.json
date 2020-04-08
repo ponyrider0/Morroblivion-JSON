@@ -1,0 +1,124 @@
+{
+    "Topic": "1Writ [DIAL:01310D00]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 977, 
+        "Record Flags": {}, 
+        "FormID": "01F2A48D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMTAdvancement [QUST:01010565]", 
+    "PNAM - Previous INFO": "01F2A48C", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "AA A0 55"
+            }, 
+            "NAM1 - Response Text": "Due to the troubles in Vvardenfell recently, the Houses have negotiated several Writs.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "AA A0 55"
+            }, 
+            "NAM1 - Response Text": "I have Writs for General Larrius Varro, Baladas Demnevanni, Dram Bero, and Mistress Therana if you want to take any of these yourself, Grandmaster.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMTWritNavil "Morag Tong: Writ for Navil and Ranes Ienith" [QUST:0100B83D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMTWritBermis "Morag Tong: Writ for Mathyn Bemis" [QUST:0100B837]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMTWritBrilnosu "Morag Tong: Writ for Brilnosu Llarys" [QUST:0100B839]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 7.000000000000000, 
+            "Function": "GetFactionRank:73", 
+            "Unused": "00 00", 
+            "Parameter #1": "0MoragSTong "Morag Tong" [FACT:01220008]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "02", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 9.000000000000000, 
+            "Function": "GetFactionRank:73", 
+            "Unused": "00 00", 
+            "Parameter #1": "0MoragSTong "Morag Tong" [FACT:01220008]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ14 "Destroy Dagoth Ur" [QUST:01002C56]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 8, 
+            "CompiledSize": 72, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 36 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 36 10 05 00 01 00 72 04 00 58 10 05 00 01 00 72 05 00 36 10 05 00 01 00 72 06 00 58 10 05 00 01 00 72 07 00 36 10 05 00 01 00 72 08 00", 
+        "SCTX - Result script source": "; these are the grandmaster writs- must be GM and MQ must be done\r\naddtopic 1LarriusSVarro\r\nstartquest fbmwMTWritVarro\r\naddtopic 1Baladas\r\nstartquest fbmwMTWritBaladas\r\naddtopic 1DramSBero\r\nstartquest fbmwMTWritBero\r\naddtopic 1MistressSTherana\r\nstartquest fbmwMTWritTherana", 
+        "References": [
+            "SCRO - Global Reference": "1LarriusSVarro [DIAL:01310985]", 
+            "SCRO - Global Reference": "fbmwMTWritVarro [QUST:0100B843]", 
+            "SCRO - Global Reference": "1Baladas [DIAL:01310C64]", 
+            "SCRO - Global Reference": "fbmwMTWritBaladas [QUST:0100B835]", 
+            "SCRO - Global Reference": "1DramSBero [DIAL:01310B6D]", 
+            "SCRO - Global Reference": "fbmwMTWritBero [QUST:0100B838]", 
+            "SCRO - Global Reference": "1MistressSTherana [DIAL:01310823]", 
+            "SCRO - Global Reference": "fbmwMTWritTherana [QUST:0100B842]"
+        ]
+    }
+}

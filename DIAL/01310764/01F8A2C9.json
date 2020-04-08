@@ -1,0 +1,77 @@
+{
+    "Topic": "1SjoringSHardTHeart [DIAL:01310764]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 609, 
+        "Record Flags": {}, 
+        "FormID": "01F8A2C9", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTGKillIenith [QUST:01009332]", 
+    "PNAM - Previous INFO": "01F8A2C8", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "He's the head of the Fighters Guild here in Vvardenfell. We've tried bribes, blackmail, and even diplomacy. Sjoring has some personal stake in this. ", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "I don't know what, but even without the Camonna Tong's backing, he's already planning an attack on all our Guild halls. Go to the Fighters Guild here in Vivec. Kill Sjoring Hard-Heart and report back to me.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTGKillIenith "Thieves Guild: The Brothers Ienith" [QUST:01009332]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0stacey "Gentleman Jim Stacey" [NPC_:0126026C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwtgkillhardheart 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTGKillHardHeart [QUST:01009331]"
+        ]
+    }
+}

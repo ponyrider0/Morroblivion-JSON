@@ -1,0 +1,80 @@
+{
+    "Topic": "1women5 [DIAL:01322DF7]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 535, 
+        "Record Flags": {}, 
+        "FormID": "01323679", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSMatchMaker [QUST:0101C628]", 
+    "PNAM - Previous INFO": "01323678", 
+    "Add topics": [
+        "NAME - Topic": "01311002"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Marena Gilnith, eh? I'll bet she's a real treat. Well, you tell her all about me. Assuming she hasn't heard of me already, which she most likely has.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Ah, well. Either way, she'll be thrilled to meet me, wouldn't you say?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "SameSex:44", 
+            "Unused": "00 00", 
+            "Parameter #1": "TARGET - Target Reference [00000000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0FonsSBeren "Fons Beren" [NPC_:01260A97]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 28, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 01 00 02 00 20 32 39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "set FbmwMSMatchMaker.matchmakeFons to 2\r\nsetstage fbmwMSMatchmaker 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMSMatchMaker [QUST:0101C628]"
+        ]
+    }
+}

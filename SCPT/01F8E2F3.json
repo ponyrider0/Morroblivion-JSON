@@ -1,0 +1,36 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 460, 
+        "Record Flags": {}, 
+        "FormID": "01F8E2F3", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwHHRetaliationDeadBodyScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 81, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0B 00 02 00 3E 00 00 00 01 00 72 01 00 16 00 0D 00 01 00 09 00 20 73 01 00 20 31 20 3D 3D 0D 10 02 00 00 00 17 00 02 00 02 00 39 10 0A 00 02 00 72 02 00 6E 05 00 00 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwHHRetaliationDeadBodyScript\r\n\r\nshort doOnce\r\n\r\nbegin onactivate player\r\n	if doOnce == 1\r\n		activate\r\n	else\r\n		setstage fbmwHHRetaliation 5\r\n		set doOnce to 1\r\n	endif\r\nend\r\n;<CSEBlock>\r\n;<CSECaretPos> 107 </CSECaretPos>\r\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "7E A2 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "doOnce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "fbmwHHRetaliation [QUST:0100346C]"
+    ]
+}

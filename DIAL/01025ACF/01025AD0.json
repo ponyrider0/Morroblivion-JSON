@@ -1,0 +1,132 @@
+{
+    "Topic": "fbmwMQhlaalubigbribecrassius [DIAL:01025ACF]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 986, 
+        "Record Flags": {}, 
+        "FormID": "01025AD0", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQHlaaluCurio [QUST:01001DD6]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "61 73 73"
+            }, 
+            "NAM1 - Response Text": "What a thoughtful gift! How did you know? Gold! It's just what I wanted. And now it's time for YOUR gift... And I have just what you want.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "61 73 73"
+            }, 
+            "NAM1 - Response Text": "In my formal capacity as Councilor of House Hlaalu, I give you my vote for the title of Hortator.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "61 73 73"
+            }, 
+            "NAM1 - Response Text": "Just snug it around that supple little waist, and don't forget Uncle Crassius, your lonely admirer.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQHlaaluOmani "Covincing Omani" [QUST:01001DD9]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1000.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "Gold001 "Gold" [MISC:0000000F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQHlaaluDram "Convincing Dram Bero" [QUST:01001DD5]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQHlaaluUles "Convincing Ules" [QUST:01001DDA]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQHlaaluYngling "Convincing Yngling" [QUST:01001DDB]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0crassiusScurio "Crassius Curio" [NPC_:0126038C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 89, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E E8 03 00 00 F8 10 07 00 01 00 6E 04 00 00 00 39 10 0A 00 02 00 72 04 00 6E 41 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMQHlaalu 50\r\nmoddisposition player 10\r\nplayer.removeitem gold001 1000\r\nmodpcfame 4\r\nSetStage fbmwMQHlaaluCurio 65\r\nPlayer.AddItem 0hortatorbelt 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMQHlaalu [QUST:01001DD8]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "fbmwMQHlaaluCurio [QUST:01001DD6]", 
+            "SCRO - Global Reference": "0hortatorbelt [CLOT:01001B30]"
+        ]
+    }
+}

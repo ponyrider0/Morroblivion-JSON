@@ -1,0 +1,22 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 450, 
+        "Record Flags": {}, 
+        "FormID": "01F8CCBF", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "moXtrapXforcedupdate", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 64, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 03 00 12 00 00 00 00 00 15 00 0A 00 72 01 00 73 13 00 02 00 20 31 11 00 00 00 10 00 08 00 06 00 12 00 00 00 00 00 15 00 0A 00 72 01 00 73 13 00 02 00 20 31 11 00 00 00", 
+    "SCTX - Script Source": "scn moXtrapXforcedupdate\n\n; Forces Immediate Update of Dynamic Data when adding or removing probes.\n\nBegin OnAdd\n\n	Set moXqstXtrapXwritedynamicdata.XFullDynamicUpdate to 1\n\nEnd\n\nBegin OnDrop\n\n	Set moXqstXtrapXwritedynamicdata.XFullDynamicUpdate to 1	\nEnd\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "moXqstXtrapXwritedynamicdata [QUST:01F8CCAF]"
+    ]
+}

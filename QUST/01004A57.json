@@ -1,0 +1,146 @@
+{
+    "Record Header": {
+        "Signature": "QUST", 
+        "Data Size": 2031, 
+        "Record Flags": {}, 
+        "FormID": "01004A57", 
+        "Version Control Info": "1F 13 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwHRGuardSarethi", 
+    "FULL - Name": "House Redoran: Guard Sarethi Manor", 
+    "ICON - Icon FileName": "darthsouth\\Quests\\houseredoran.dds", 
+    "DATA - General": {
+        "Flags": {}, 
+        "Priority": 91
+    }, 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsPlayableRace:254", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestRunning:56", 
+            "Unused": "00 00", 
+            "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Stages": [
+        {
+            "INDX - Stage index": 1
+        }, 
+        {
+            "INDX - Stage index": 10, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Neminda asked me to guard Sarethi Manor.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 6, 
+                            "CompiledSize": 48, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 22 10 00 00 1C 00 02 00 22 10 00 00 1C 00 03 00 22 10 00 00 1C 00 04 00 22 10 00 00 1C 00 05 00 21 10 00 00 1C 00 06 00 21 10 00 00", 
+                        "SCTX - Result script source": "fbmwSarethiGuardLive1.Disable\r\nfbmwSarethiGuardLive2.Disable\r\nfbmwSarethiGuardLive3.Disable\r\nfbmwSarethiGuardLive4.Disable\r\n\r\n\r\nfbmwSarethiGuardDead1.Enable\r\nfbmwSarethiGuardDead2.Enable", 
+                        "References": [
+                            "SCRO - Global Reference": "fbmwSarethiGuardLive1 [ACHR:0181A9A6]", 
+                            "SCRO - Global Reference": "fbmwSarethiGuardLive2 [ACHR:0181A9A7]", 
+                            "SCRO - Global Reference": "fbmwSarethiGuardLive3 [ACHR:01F8B5FC]", 
+                            "SCRO - Global Reference": "fbmwSarethiGuardLive4 [ACHR:01F8B5FB]", 
+                            "SCRO - Global Reference": "fbmwSarethiGuardDead1 [ACHR:0181A9A9]", 
+                            "SCRO - Global Reference": "fbmwSarethiGuardDead2 [ACHR:0181A9AA]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 30, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Serjo Athyn Sarethi said his guards have already been killed and that he expects more assassins to arrive at any moment.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 2, 
+                            "CompiledSize": 16, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 21 10 00 00 1C 00 02 00 21 10 00 00", 
+                        "SCTX - Result script source": "fbmwSarethiAssassin1.Enable\r\nfbmwSarethiAssassin2.Enable", 
+                        "References": [
+                            "SCRO - Global Reference": "fbmwSarethiAssassin1 [ACHR:01844C2E]", 
+                            "SCRO - Global Reference": "fbmwSarethiAssassin2 [ACHR:01844C2D]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 50, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Serjo Athyn Sarethi thanked me for defending him from the assassins. I should report back to Neminda.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 100, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "Neminda thanked me for guarding Serjo Athyn Sarethi.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 9, 
+                            "CompiledSize": 279, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 13 00 72 09 00 73 01 00 0B 00 20 72 09 00 73 01 00 20 35 20 2B 1C 00 01 00 21 10 00 00 1C 00 02 00 21 10 00 00 1C 00 03 00 21 10 00 00 1C 00 04 00 21 10 00 00 1C 00 05 00 22 10 00 00 1C 00 06 00 22 10 00 00 1C 00 07 00 22 10 00 00 1C 00 08 00 22 10 00 00 16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 6C 00 01 00 68 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 43 6F 6D 70 6C 65 74 65 64 20 48 6F 75 73 65 20 52 65 64 6F 72 61 6E 3A 20 47 75 61 72 64 20 53 61 72 65 74 68 69 20 4D 61 6E 6F 72 20 71 75 65 73 74 22 F9 16 27 00 01 00 23 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 31 30 30 19 00 00 00", 
+                        "SCTX - Result script source": "Set fbmwHRAdvancement.RedoranReputation TO fbmwHRAdvancement.RedoranReputation + 5\r\n\r\nfbmwSarethiGuardLive1.Enable\r\nfbmwSarethiGuardLive2.Enable\r\nfbmwSarethiGuardLive3.Enable\r\nfbmwSarethiGuardLive4.Enable\r\nfbmwSarethiGuardDead1.Disable\r\nfbmwSarethiGuardDead2.Disable\r\nfbmwSarethiAssassin1.Disable\r\nfbmwSarethiAssassin2.Disable\r\n\r\nif ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qCompleted House Redoran: Guard Sarethi Manor quest%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 100\"\r\nendif", 
+                        "References": [
+                            "SCRO - Global Reference": "fbmwSarethiGuardLive1 [ACHR:0181A9A6]", 
+                            "SCRO - Global Reference": "fbmwSarethiGuardLive2 [ACHR:0181A9A7]", 
+                            "SCRO - Global Reference": "fbmwSarethiGuardLive3 [ACHR:01F8B5FC]", 
+                            "SCRO - Global Reference": "fbmwSarethiGuardLive4 [ACHR:01F8B5FB]", 
+                            "SCRO - Global Reference": "fbmwSarethiGuardDead1 [ACHR:0181A9A9]", 
+                            "SCRO - Global Reference": "fbmwSarethiGuardDead2 [ACHR:0181A9AA]", 
+                            "SCRO - Global Reference": "fbmwSarethiAssassin1 [ACHR:01844C2E]", 
+                            "SCRO - Global Reference": "fbmwSarethiAssassin2 [ACHR:01844C2D]", 
+                            "SCRO - Global Reference": "fbmwHRAdvancement [QUST:010037E7]"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

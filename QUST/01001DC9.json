@@ -1,0 +1,808 @@
+{
+    "Record Header": {
+        "Signature": "QUST", 
+        "Data Size": 12321, 
+        "Record Flags": {}, 
+        "FormID": "01001DC9", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwMQ10", 
+    "SCRI - Script": "fbmwMQ10QuestScript [SCPT:01002DED]", 
+    "FULL - Name": "The Path of the Incarnate", 
+    "ICON - Icon FileName": "darthsouth\\Quests\\morrowindmainquest.dds", 
+    "DATA - General": {
+        "Flags": {}, 
+        "Priority": 90
+    }, 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsPlayableRace:254", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestRunning:56", 
+            "Unused": "00 00", 
+            "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Stages": [
+        {
+            "INDX - Stage index": 1, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I told Nibani Maesa of the lost prophecies, and what Gilvas Barelo said about them. She has told me to leave her while she consults the ancestors in her dreams. I'm to come back when the moons have come and gone to hear her judgement.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 3, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "The moons have come and gone, and it is time to return to Nibani Maesa and hear her judgement.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 9, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00", 
+                        "SCTX - Result script source": "AddTopic fbmwMQ10corprus", 
+                        "References": [
+                            "SCRO - Global Reference": "fbmwMQ10corprus [DIAL:01022DCD]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 5, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Nibani Maesa says she has been chosen as my guide on the path of the Nerevarine. She says I must pass the Seven Trials of the Seven Visions. The first two trials, my particular birth and my cured corprus disease, are already passed. For the third trial, I must go to Sul-Matuul, the guardian of the Nerevarine cult, and he will tell me what to do. When I have fulfilled the third trial, I must return to Nibani Maesa for guidance with further trials.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 10, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Sul-Matuul has given me the following quest. Go to Kogoruhn, the ancient halls of House Dagoth. Get three tokens: 1. corprus weepings from a corprus beast, 2. a cup with the mark of House Dagoth, and 3. the Shadow Shield, which lies on the Tomb of Dagoth Morin, in the lava tunnels deep beneath ruined Kogoruhn. If I bring him these three tokens, he will reveal to me the secret of the Third Trial of the Nerevarine.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 3, 
+                            "CompiledSize": 24, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 21 10 00 00 1C 00 02 00 21 10 00 00 1C 00 03 00 21 10 00 00", 
+                        "SCTX - Result script source": "mwMQ10CorprusWeepingsREF.Enable\r\nmwMQ10DagothGoblet.Enable\r\nmwShadowShieldREF.Enable", 
+                        "References": [
+                            "SCRO - Global Reference": "mwMQ10CorprusWeepingsREF [REFR:0185D2F1]", 
+                            "SCRO - Global Reference": "mwMQ10DagothGoblet [REFR:0185D2F2]", 
+                            "SCRO - Global Reference": "mwShadowShieldREF [REFR:01022DE3]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 15, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I have passed Sul-Matuul's Warrior's Test. Now I must find the Cavern of the Incarnate, a secret place sacred to Azura, and look for the moon and star of the prophecies. To find the Cavern of the Incarnate, I must solve a riddle: the eye of the needle lies in the teeth of the wind -- the mouth of the cave lies in the skin of the pearl -- the dream is the door and the star is the key. Sul-Matuul called this riddle 'Wisdom's Test', and says take counsel of the wisdom of the tribes to find the way.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 14, 
+                            "CompiledSize": 126, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 58 10 05 00 01 00 72 04 00 58 10 05 00 01 00 72 05 00 58 10 05 00 01 00 72 06 00 58 10 05 00 01 00 72 07 00 58 10 05 00 01 00 72 08 00 58 10 05 00 01 00 72 09 00 58 10 05 00 01 00 72 0A 00 58 10 05 00 01 00 72 0B 00 58 10 05 00 01 00 72 0C 00 58 10 05 00 01 00 72 0D 00 58 10 05 00 01 00 72 0E 00", 
+                        "SCTX - Result script source": "addtopic 1eyesofsthesneedle\r\naddtopic 1teethsofstheswind\r\naddtopic 1skinsofsthespearl\r\naddtopic 1mouthSofStheScave\r\naddtopic 1mysstory\r\naddtopic 1notsthesone\r\naddtopic 1falsesgods\r\naddtopic 1hortator\r\naddtopic 1hortatorsandsnerevarine\r\naddtopic 1moontandtstar\r\naddtopic 1profanestools\r\naddtopic 1tribesunmourned\r\naddtopic 1warsleader\r\naddtopic 1wisdomsguidessme", 
+                        "References": [
+                            "SCRO - Global Reference": "1eyeSofStheSneedle [DIAL:013107C9]", 
+                            "SCRO - Global Reference": "1teethSofStheSwind [DIAL:013107CA]", 
+                            "SCRO - Global Reference": "1skinSofStheSpearl [DIAL:013107CB]", 
+                            "SCRO - Global Reference": "1mouthSofStheScave [DIAL:013107CC]", 
+                            "SCRO - Global Reference": "1mySstory [DIAL:01310BDB]", 
+                            "SCRO - Global Reference": "1notStheSone [DIAL:01310A79]", 
+                            "SCRO - Global Reference": "1FalseSGods [DIAL:01310B0E]", 
+                            "SCRO - Global Reference": "1Hortator [DIAL:01310BDA]", 
+                            "SCRO - Global Reference": "1HortatorSandSNerevarine [DIAL:01310692]", 
+                            "SCRO - Global Reference": "1MoonTandTStar [DIAL:01310977]", 
+                            "SCRO - Global Reference": "1profaneStools [DIAL:01310978]", 
+                            "SCRO - Global Reference": "1TribeSUnmourned [DIAL:01310885]", 
+                            "SCRO - Global Reference": "1WarSLeader [DIAL:01310B0D]", 
+                            "SCRO - Global Reference": "1wisdomSguidesSme [DIAL:0131081B]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 20, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "An Ashlander says the 'eye of the needle' in the riddle may be a tall rock column in the Valley of the Wind. The Valley of the Wind is a valley on the northeast slopes of Red Mountain. The entrance to the valley is marked by Airan's Teeth, two tall rock spires.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 22, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "An Ashlander says there is a place called 'Airan's Teeth' in the Valley of the Wind. Two rocks spires mark the entrance to the Valley of the Wind, and they bear the name of the seer, Airan, who is blessed by Azura. These might be the 'teeth of the wind'. The Valley of the Wind is a valley on the northeast slopes of Red Mountain.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 24, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I was asking about the skin of the pearl when I mentioned the Needle, in the Valley of the Wind. The Ashlander said there was whitish rock at the top of the Needle. That might be the 'skin of the pearl' I'm looking for.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 26, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Nibani Maesa thinks that 'the star is the key' refers to Azura's Star that appears in the sky only in the magical hour between day and night, at dawn and twilight.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 28, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Nibani Maesa says that, if the star is the key -- Azura's Star -- then the door may be seen only at dawn and dusk, when Azura's Star is in the sky. Then the star would be the 'key' that opens the door.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 29, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Nibani Maesa says, if the door is only seen at dawn and dusk, then it may be that the mouth of the cave is hidden or magical, and cannot be seen except when it is 'opened' by the 'key' -- Azura's Star.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 50, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I saw Azura in the Cavern of the Incarnate. I received the Moon-and-Star, an enchanted ring, and I am the Nerevarine. I have passed the first three trials. Now I must show Moon-and-Star to the ashkhans of the tribes and the councilors of the houses. Each tribe must call me Nerevarine. Each House must call me Hortator. These are the next two trials. Nibani Maesa shall be my guide. I must return to her and seek her counsel.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 11, 
+                            "CompiledSize": 99, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 58 10 05 00 01 00 72 04 00 58 10 05 00 01 00 72 05 00 58 10 05 00 01 00 72 06 00 58 10 05 00 01 00 72 07 00 58 10 05 00 01 00 72 08 00 58 10 05 00 01 00 72 09 00 58 10 05 00 01 00 72 0A 00 58 10 05 00 01 00 72 0B 00", 
+                        "SCTX - Result script source": "addtopic 1counselsofssultmatuul\r\naddtopic 1cursesofsdagothsur\r\naddtopic 1duty\r\naddtopic 1falsesgods\r\naddtopic 1moontandtstar\r\naddtopic 1namingsthesnerevarine\r\naddtopic 1need\r\naddtopic 1urshilakusnerevarine\r\naddtopic 1namesyousnerevarine\r\naddtopic 1whatsmaniraissays\r\naddtopic 1wantstosbesashkhan", 
+                        "References": [
+                            "SCRO - Global Reference": "1counselSofSSulTMatuul [DIAL:013106D7]", 
+                            "SCRO - Global Reference": "1curseSofSDagothSUr [DIAL:0131076D]", 
+                            "SCRO - Global Reference": "1duty [DIAL:01310CFD]", 
+                            "SCRO - Global Reference": "1FalseSGods [DIAL:01310B0E]", 
+                            "SCRO - Global Reference": "1MoonTandTStar [DIAL:01310977]", 
+                            "SCRO - Global Reference": "1namingStheSNerevarine [DIAL:013106D8]", 
+                            "SCRO - Global Reference": "1need [DIAL:01310CFC]", 
+                            "SCRO - Global Reference": "1UrshilakuSNerevarine [DIAL:01310700]", 
+                            "SCRO - Global Reference": "1nameSyouSNerevarine [DIAL:0131072E]", 
+                            "SCRO - Global Reference": "1whatSManiraiSsays [DIAL:013107CF]", 
+                            "SCRO - Global Reference": "1wantStoSbeSashkhan [DIAL:0131076F]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 52, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "The spirit of Peakstar warned that now that I bear the Moon-and-Star, and will be recognized as the Nerevarine, I must be ready for hatred and fear from the Temple, from Ordinators, and from Tribunal Faithful of the Great Houses.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 54, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Peakstar says I must be chosen as 'Nerevarine' by the Ashlanders and 'Hortator' by the Great Houses. These are titles of war leaders chosen to unite the Dunmer in times of need. I must prove a war leader is needed, and be chosen as that war leader. I must tell how the Tribunal used profane tools of the Dwarves, and betrayed and misled the people. I must tell about the threat of Dagoth Ur and the Sixth House, and how the Tribunal can no longer contain them.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 60, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Nibani Maesa reminded me of the Fourth Trial of the Seven Visions: 'A stranger's voice unites the Houses./Three Halls call him Hortator.' When I have been named 'Hortator' by each of the three Great Houses of Vvardenfell, I will have passed the Fourth Trial, and should return to Nibani Maesa for further guidance.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 6, 
+                            "CompiledSize": 69, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 01 00 00 00 39 10 0A 00 02 00 72 02 00 6E 01 00 00 00 39 10 0A 00 02 00 72 03 00 6E 01 00 00 00 58 10 05 00 01 00 72 04 00 58 10 05 00 01 00 72 05 00 58 10 05 00 01 00 72 06 00", 
+                        "SCTX - Result script source": "SetStage fbmwMQHlaaluCurio 1\r\nSetStage fbmwMQRedoranSarethi 1\r\nSetStage fbmwMQTelvanniAryon 1\r\n\r\nAddTopic 1HlaaluSHortator\r\nAddTopic 1RedoranSHortator\r\nAddTopic 1TelvanniSHortator", 
+                        "References": [
+                            "SCRO - Global Reference": "fbmwMQHlaaluCurio [QUST:01001DD6]", 
+                            "SCRO - Global Reference": "fbmwMQRedoranSarethi [QUST:01001DE1]", 
+                            "SCRO - Global Reference": "fbmwMQTelvanniAryon [QUST:01002C4B]", 
+                            "SCRO - Global Reference": "1HlaaluSHortator [DIAL:01310881]", 
+                            "SCRO - Global Reference": "1RedoranSHortator [DIAL:01310819]", 
+                            "SCRO - Global Reference": "1TelvanniSHortator [DIAL:013107C6]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 62, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "When a greater enemy threatens, the Great Houses put aside their quarrels and choose a Hortator, a single war leader to lead all the Houses. Only a Great House council can name a Hortator, and all councils must agree. Nibani Maesa says I must go to Redoran Council, Hlaalu Council, and Telvanni Council, prove to each that the threat of Dagoth Ur warrants uniting under a Hortator, and persuade each to name me 'Hortator'. This is how I must pass the Fourth Trial.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 64, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Nibani Maesa reminded me of the Fifth Trial of the Seven Visions: 'A stranger's hand unites the Velothi/Four Tribes call him Nerevarine'. The Four Tribes are the four tribes of Vvardenfell, the Urshilaku, the Ahemmusa, the Zainab, and the Erabenimsun. When I have been named 'Nerevarine' by each of the four Ashlander tribes of Vvardenfell, I will have passed the Fifth Trial, and should return to Nibani Maesa for further guidance.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 66, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "In times of great danger, the Ashlander tribes unite under a single war leader. If I can prove to the Urshilaku, Ahemmusa, Zainab, and Erabenimsun tribes that I am the Nerevarine, and that the tribes must unite against the threat of the Sixth House, then each ashkhan will declare me 'Nerevarine' and war leader of all tribes. This is how I must pass the Fifth Trial. I must go to all the tribal ashkhans, but my friend Sul-Matuul should be the first and easiest to persuade.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 70, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "The ghost of Peakstar gave me a belt and pants.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 183, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 63 00 01 00 5F 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 43 6F 6D 70 6C 65 74 65 64 20 54 68 65 20 50 61 74 68 20 6F 66 20 74 68 65 20 49 6E 63 61 72 6E 61 74 65 20 71 75 65 73 74 22 F9 16 27 00 01 00 23 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 31 35 30 19 00 00 00", 
+                        "SCTX - Result script source": "if ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qCompleted The Path of the Incarnate quest%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 150\"\r\nendif"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 72, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "The ghost of Hort-Ledd gave me a book and a robe.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 183, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 63 00 01 00 5F 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 43 6F 6D 70 6C 65 74 65 64 20 54 68 65 20 50 61 74 68 20 6F 66 20 74 68 65 20 49 6E 63 61 72 6E 61 74 65 20 71 75 65 73 74 22 F9 16 27 00 01 00 23 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 31 35 30 19 00 00 00", 
+                        "SCTX - Result script source": "if ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qCompleted The Path of the Incarnate quest%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 150\"\r\nendif"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 74, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "The ghost of Erur-Dan gave me a spear and cuirass.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 183, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 63 00 01 00 5F 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 43 6F 6D 70 6C 65 74 65 64 20 54 68 65 20 50 61 74 68 20 6F 66 20 74 68 65 20 49 6E 63 61 72 6E 61 74 65 20 71 75 65 73 74 22 F9 16 27 00 01 00 23 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 31 35 30 19 00 00 00", 
+                        "SCTX - Result script source": "if ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qCompleted The Path of the Incarnate quest%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 150\"\r\nendif"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 76, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "The ghost of Idrenie Nerothan gave me a probe and lockpick.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 183, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 63 00 01 00 5F 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 43 6F 6D 70 6C 65 74 65 64 20 54 68 65 20 50 61 74 68 20 6F 66 20 74 68 65 20 49 6E 63 61 72 6E 61 74 65 20 71 75 65 73 74 22 F9 16 27 00 01 00 23 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 31 35 30 19 00 00 00", 
+                        "SCTX - Result script source": "if ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qCompleted The Path of the Incarnate quest%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 150\"\r\nendif"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 78, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "The ghost of Ane Teria gave me a book and a mace.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 183, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 63 00 01 00 5F 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 43 6F 6D 70 6C 65 74 65 64 20 54 68 65 20 50 61 74 68 20 6F 66 20 74 68 65 20 49 6E 63 61 72 6E 61 74 65 20 71 75 65 73 74 22 F9 16 27 00 01 00 23 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 31 35 30 19 00 00 00", 
+                        "SCTX - Result script source": "if ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qCompleted The Path of the Incarnate quest%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 150\"\r\nendif"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 80, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "The ghost of Conoon Chodala gave me an axe and a pair of boots.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 183, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 63 00 01 00 5F 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 43 6F 6D 70 6C 65 74 65 64 20 54 68 65 20 50 61 74 68 20 6F 66 20 74 68 65 20 49 6E 63 61 72 6E 61 74 65 20 71 75 65 73 74 22 F9 16 27 00 01 00 23 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 31 35 30 19 00 00 00", 
+                        "SCTX - Result script source": "if ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qCompleted The Path of the Incarnate quest%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 150\"\r\nendif"
+                    }
+                }
+            ]
+        }
+    ], 
+    "Targets": [
+        {
+            "QSTA - Target": {
+                "Target": "01823CAF", 
+                "Flags": {}, 
+                "Unused": "00 46 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "40", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetItemCount:47", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "0ingredUcorprusUweepingsU01 "Corprus weepings" [INGR:010A000C]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "40", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetItemCount:47", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "0miscUgobletUdagoth "House Dagoth cup" [MISC:01160212]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "40", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetItemCount:47", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwshadowshield "Shadow Shield" [ARMO:0101D5E1]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 10.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwMQ10 "The Path of the Incarnate" [QUST:01001DC9]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "01022DE3", 
+                "Flags": {}, 
+                "Unused": "00 46 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetItemCount:47", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwshadowshield "Shadow Shield" [ARMO:0101D5E1]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 10.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwMQ10 "The Path of the Incarnate" [QUST:01001DC9]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "0185D2F2", 
+                "Flags": {}, 
+                "Unused": "00 46 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetItemCount:47", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "0miscUgobletUdagoth "House Dagoth cup" [MISC:01160212]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 10.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwMQ10 "The Path of the Incarnate" [QUST:01001DC9]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "0185D2F1", 
+                "Flags": {}, 
+                "Unused": "00 46 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetItemCount:47", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "0ingredUcorprusUweepingsU01 "Corprus weepings" [INGR:010A000C]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 10.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwMQ10 "The Path of the Incarnate" [QUST:01001DC9]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "01838CA2", 
+                "Flags": {}, 
+                "Unused": "00 46 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "60", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 28.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwMQ10 "The Path of the Incarnate" [QUST:01001DC9]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "80", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 50.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwMQ10 "The Path of the Incarnate" [QUST:01001DC9]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "20", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetInCell:67", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "CavernSofStheSIncarnate "Cavern of the Incarnate" [CELL:0148015F]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "01823CAF", 
+                "Flags": {}, 
+                "Unused": "00 46 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 5.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwMQ10 "The Path of the Incarnate" [QUST:01001DC9]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }
+    ]
+}

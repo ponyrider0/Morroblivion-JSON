@@ -1,0 +1,72 @@
+{
+    "Topic": "1findStheSCaptain [DIAL:0131134B]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 521, 
+        "Record Flags": {}, 
+        "FormID": "01F8B035", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMSmugglers [QUST:0101B6D3]", 
+    "PNAM - Previous INFO": "01F8B034", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "65 61 53"
+            }, 
+            "NAM1 - Response Text": "Those Nords may say they don't know nothing, but I don't believe that they don't know nothing! Stick with them for a while. See if you can figure anything out. Even if they didn't take him, I'll bet they know who did! You stick with them.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "I'll take care of anything here at the fort. Counting on you. We have to find the Cap'n. Now go!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0gaeaSartoria "Gaea Artoria" [NPC_:01260B1B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 105.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMCariusGone "The Disappearance of Captain Carius" [QUST:0101AF88]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

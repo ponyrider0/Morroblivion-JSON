@@ -1,0 +1,69 @@
+{
+    "Topic": "1proposition1 [DIAL:01321E49]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 596, 
+        "Record Flags": {}, 
+        "FormID": "01001BF4", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVCharming [QUST:010033FC]", 
+    "PNAM - Previous INFO": "01F8E5C9", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "An excellent choice, my friend. As I said, Nels Llendo can be a very good friend to have. If you are ever in Pelagiad, I can usually be found at the Halfway Tavern.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Do stop by and visit -- I'm certain I can be of some service to you. Now, I must be off. Good day to you, sir!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0nelsSllendo "Nels Llendo" [NPC_:0126058E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 46, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 32 00 00 00 02 10 0A 00 02 00 72 03 00 6E 32 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwMVCharming 100\r\nplayer.removeitem Gold001 50\r\nadditem Gold001 50", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMVCharming [QUST:010033FC]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]"
+        ]
+    }
+}

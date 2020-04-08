@@ -1,0 +1,55 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 632, 
+        "Record Flags": {}, 
+        "FormID": "0101E1CB", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwCO9QScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 131, 
+        "VariableCount": 3, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 75 00 00 00 16 00 1F 00 01 00 1B 00 20 66 02 00 20 30 20 3E 20 58 3A 10 05 00 01 00 72 01 00 20 35 30 20 3C 20 26 26 15 00 11 00 66 02 00 0C 00 20 66 02 00 20 58 0C 10 00 00 20 2D 17 00 02 00 03 00 16 00 19 00 01 00 15 00 20 58 3B 10 0A 00 02 00 72 01 00 6E 32 00 00 00 20 31 20 21 3D 39 10 0A 00 02 00 72 01 00 6E 64 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwCO9QScript\nshort Carniusloc\nshort rugtrap\nfloat timer\n\n\nbegin gamemode\n	if timer > 0 && GetStage fbmwCO9 < 50\n		set timer to timer - GetSecondsPassed\n	else\n		if GetStageDone fbmwCO9 50 != 1\n			SetStage fbmwCO9 100\n		endif\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 236 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "Carniusloc"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "timer"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "rugtrap"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwCO9 [QUST:0101BED9]"
+    ]
+}

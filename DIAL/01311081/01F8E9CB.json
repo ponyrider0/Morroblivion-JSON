@@ -1,0 +1,89 @@
+{
+    "Topic": "1message [DIAL:01311081]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 687, 
+        "Record Flags": {}, 
+        "FormID": "01F8E9CB", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSBlackDart [QUST:0101C61A]", 
+    "PNAM - Previous INFO": "01F8E9CA", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "56 61 72"
+            }, 
+            "NAM1 - Response Text": "My name is Variner. I was killed by the Black Dart Gang. I beg you -- avenge my death. Their hideout is in Old Mournhold, Temple Sewers West.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "56 61 72"
+            }, 
+            "NAM1 - Response Text": "Many have died fighting them. But there is a mechanism that can flood the room, drowning the gang.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "56 61 72"
+            }, 
+            "NAM1 - Response Text": "Find a lever that looks like a torch holder, near the east end of the chamber.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "56 61 72"
+            }, 
+            "NAM1 - Response Text": "But whatever you do, don't get too close or you will join me in the afterlife.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwVarinerGhost "Variner's Ghost" [NPC_:01F8E9A5]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 19 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwMSBlackDart 25", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMSBlackDart [QUST:0101C61A]"
+        ]
+    }
+}

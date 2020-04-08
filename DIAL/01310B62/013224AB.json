@@ -1,0 +1,70 @@
+{
+    "Topic": "1ashSstorm [DIAL:01310B62]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 485, 
+        "Record Flags": {}, 
+        "FormID": "013224AB", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHRFindDalobar [QUST:0100431F]", 
+    "PNAM - Previous INFO": "01023CBF", 
+    "Add topics": [
+        "NAME - Topic": "01310BCF"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I was too far from town when the storm hit. I took shelter in here until the storm passed, but then I couldn't get out because the door was stuck.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I've been in here for days. The sooner we travel together back to Maar Gan, the sooner I can get back into business.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0mathisSdalobar "Mathis Dalobar" [NPC_:01260215]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 9, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00", 
+        "SCTX - Result script source": "AddTopic 1TravelSTogether", 
+        "References": [
+            "SCRO - Global Reference": "1travelStogether [DIAL:0131086A]"
+        ]
+    }
+}

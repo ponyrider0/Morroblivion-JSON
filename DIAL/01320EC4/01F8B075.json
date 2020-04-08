@@ -1,0 +1,69 @@
+{
+    "Topic": "1UncleSSweetshare1 [DIAL:01320EC4]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 487, 
+        "Record Flags": {}, 
+        "FormID": "01F8B075", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwBMMoonSugar [QUST:0101B6CD]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "He he he he he!  Mad?  Mad, you call me?  Oh no...it is you who are mad!  For how can anyone who doesn't recognize true happiness ever be considered sane?", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "Oh why oh why can't you people just be happy?  Well, let's get to it then!  He he he, ha ha!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0uncleSsweetshare "Uncle Sweetshare" [NPC_:01260B4D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 22, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "10 10 09 00 02 00 21 00 6E 64 00 00 00 16 10 05 00 01 00 72 01 00", 
+        "SCTX - Result script source": "modav aggression 100\r\nstartcombat player", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

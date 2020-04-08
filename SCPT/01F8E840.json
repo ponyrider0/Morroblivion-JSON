@@ -1,0 +1,40 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1189, 
+        "Record Flags": {}, 
+        "FormID": "01F8E840", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwMSNaturalScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 6, 
+        "CompiledSize": 301, 
+        "VariableCount": 1, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 1F 01 00 00 16 00 15 00 01 00 11 00 20 58 3A 10 05 00 01 00 72 03 00 20 34 30 20 3E 3D 1E 00 00 00 19 00 00 00 16 00 2B 00 03 00 27 00 20 58 3A 10 05 00 01 00 72 03 00 20 31 30 20 3E 3D 20 72 04 00 58 36 11 05 00 01 00 72 05 00 20 30 20 3D 3D 20 26 26 16 00 12 00 01 00 0E 00 20 72 01 00 58 23 10 00 00 20 30 20 3D 3D 1C 00 01 00 22 10 00 00 19 00 00 00 19 00 00 00 16 00 21 00 01 00 1D 00 20 58 3A 10 05 00 01 00 72 03 00 20 31 30 20 3D 3D 20 73 01 00 20 30 20 3D 3D 20 26 26 15 00 09 00 73 01 00 04 00 20 47 06 00 19 00 00 00 16 00 0C 00 07 00 08 00 20 73 01 00 20 30 20 3E 16 00 12 00 05 00 0E 00 20 47 06 00 20 73 01 00 20 2D 20 32 20 3E 16 00 17 00 03 00 13 00 20 72 04 00 58 36 11 05 00 01 00 72 05 00 20 30 20 3D 3D 16 00 12 00 01 00 0E 00 20 72 02 00 58 23 10 00 00 20 31 20 3D 3D 1C 00 02 00 21 10 00 00 19 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwMSNaturalScript\n\nshort daystart\n\nbegin gamemode\n\n	if GetStage fbmwMSNatural >= 40\n		return\n	endif\n\n	if GetStage fbmwMSNatural >= 10 && Player.GetInWorldspace WChildMournholdVSTempleSCourtyard == 0\n		if fbmwGaenorREF.GetDisabled == 0\n			fbmwGaenorREF.Disable\n		endif\n	endif\n\n	if GetStage fbmwMSNatural == 10 && daystart == 0\n		set daystart to GameDaysPassed\n	endif\n\n	if daystart > 0\n		if GameDaysPassed - daystart > 2\n			if Player.GetInWorldspace WChildMournholdVSTempleSCourtyard == 0;GetInCell check so Gaenor doesn't pop up in front of the player\n				if fbmwGaenorBREF.GetDisabled == 1\n					fbmwGaenorBREF.Enable\n				endif\n			endif\n		endif\n	endif\nend	\n;<CSEBlock>\n;<CSECaretPos> 56 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "74 3A 20 27 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "75 6C 74 51 75 65 73"
+            }, 
+            "SCVR - Name": "daystart"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwGaenorREF [ACHR:01F04E49]", 
+        "SCRO - Global Reference": "fbmwGaenorBREF [ACHR:01F04E4D]", 
+        "SCRO - Global Reference": "fbmwMSNatural [QUST:0101C62A]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "WChildMournholdVSTempleSCourtyard [WRLD:01380060]", 
+        "SCRO - Global Reference": "GameDaysPassed [GLOB:00000039]"
+    ]
+}

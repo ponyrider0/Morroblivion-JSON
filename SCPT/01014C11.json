@@ -1,0 +1,203 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1777, 
+        "Record Flags": {}, 
+        "FormID": "01014C11", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwCO8QuScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 4, 
+        "CompiledSize": 213, 
+        "VariableCount": 17, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 C7 00 00 00 16 00 2B 00 01 00 27 00 20 58 3A 10 05 00 01 00 72 01 00 20 33 30 20 3D 3D 20 72 02 00 58 2F 10 05 00 01 00 72 03 00 20 31 20 3E 3D 20 26 26 39 10 0A 00 02 00 72 01 00 6E 28 00 00 00 19 00 00 00 16 00 1B 00 02 00 17 00 20 73 07 00 20 31 20 3D 3D 20 73 08 00 20 47 04 00 20 21 3D 20 26 26 15 00 09 00 73 08 00 04 00 20 47 04 00 15 00 0D 00 73 09 00 08 00 20 73 09 00 20 31 20 2B 19 00 00 00 16 00 1B 00 02 00 17 00 20 73 0F 00 20 31 20 3D 3D 20 73 10 00 20 47 04 00 20 21 3D 20 26 26 15 00 09 00 73 10 00 04 00 20 47 04 00 15 00 0D 00 73 11 00 08 00 20 73 11 00 20 31 20 2B 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwCO8QuScript\n\nshort fbmwgraringconvinced\nshort scuirass\nshort sgreaves\nshort sbracer\nshort sboots\nshort shelm\nshort busy\nshort currentday\nshort localdayspassed\nshort swaraxe\nshort sdagger\nshort ssword\nshort smace\nshort wbusy\nshort wcurrentday\nshort wlocaldayspassed\n\nbegin gamemode\n	if getstage fbmwCO8 == 30 && player.getitemcount 0ingredUrawUStalhrimU01 >= 1\nsetstage fbmwCO8 40\n	endif\n\n	if busy == 1 && currentday != gamedayspassed\n		set currentday to gamedayspassed\n		set localdayspassed to localdayspassed + 1\n	endif\n\n	if wbusy == 1 && wcurrentday != gamedayspassed\n		set wcurrentday to gamedayspassed\n		set wlocaldayspassed to wlocaldayspassed + 1\n	endif\nend\n\n\n;<CSEBlock>\n;<CSECaretPos> 641 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "0B 15 10 08 00 00 00"
+            }, 
+            "SCVR - Name": "fbmwgraringconvinced"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "scuirass"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "sgreaves"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "sbracer"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "sboots"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 CD CD CD CD"
+            }, 
+            "SCVR - Name": "shelm"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000007", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 CD CD CD CD"
+            }, 
+            "SCVR - Name": "busy"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000008", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 CD CD CD CD"
+            }, 
+            "SCVR - Name": "currentday"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000009", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "localdayspassed"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000B", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "swaraxe"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000C", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "sdagger"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000D", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 CD CD CD CD"
+            }, 
+            "SCVR - Name": "ssword"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000E", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "smace"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000F", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "wbusy"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000010", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "wcurrentday"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000011", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "wlocaldayspassed"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwCO8 [QUST:0101BED7]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "0ingredUrawUStalhrimU01 [INGR:010A006B]", 
+        "SCRO - Global Reference": "GameDaysPassed [GLOB:00000039]"
+    ]
+}

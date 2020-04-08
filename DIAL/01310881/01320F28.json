@@ -1,0 +1,85 @@
+{
+    "Topic": "1HlaaluSHortator [DIAL:01310881]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 463, 
+        "Record Flags": {}, 
+        "FormID": "01320F28", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQHlaaluDren [QUST:01001DD7]", 
+    "PNAM - Previous INFO": "01320F27", 
+    "Add topics": [
+        "NAME - Topic": "01310BDA", 
+        "NAME - Topic": "013109F6", 
+        "NAME - Topic": "01310B78", 
+        "NAME - Topic": "01310BDA", 
+        "NAME - Topic": "01310BDA"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "So you want to be Hortator of House Hlaalu. And you've come to me. You show unusual wisdom for an outlander.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "But what's the title of Hortator worth to you? Why do you want to be Hortator?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 70.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "PlayerRef [PLYR:00000014]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0OrvasSDrenSDruglord "Orvas Dren" [NPC_:012604A7]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1HlaaluSHortator1 [DIAL:01320EFD]", 
+        "TCLT - Choice": "1HlaaluSHortator3 [DIAL:01320F09]", 
+        "TCLT - Choice": "1HlaaluSHortator2 [DIAL:01320F00]", 
+        "TCLT - Choice": "1HlaaluSHortator5 [DIAL:01320F0C]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

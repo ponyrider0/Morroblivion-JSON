@@ -1,0 +1,36 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 675, 
+        "Record Flags": {}, 
+        "FormID": "0105AE1B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwbmrieklingatt", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 160, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 41 00 00 00 00 00 15 00 13 00 72 01 00 73 02 00 0B 00 20 72 01 00 73 02 00 20 31 20 2B 16 00 10 00 01 00 0C 00 20 72 01 00 73 02 00 20 35 20 3E 3D 39 10 0A 00 02 00 72 01 00 6E 1E 00 00 00 19 00 00 00 11 00 00 00 10 00 06 00 00 00 45 00 00 00 16 00 21 00 03 00 1D 00 20 58 3A 10 05 00 01 00 72 01 00 20 32 30 20 3D 3D 20 73 01 00 20 30 20 3D 3D 20 26 26 21 10 00 00 16 10 05 00 01 00 72 02 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwbmrieklingatt\nshort DoOnce\nBegin OnDeath\n	set fbmwBMBeasts.rieklingkilled to (fbmwBMBeasts.rieklingkilled + 1)\n	if ( fbmwBMBeasts.rieklingkilled >= 5)\n		SetStage fbmwBMBeasts 30\n	endif\nEnd\nBegin GameMode\n	if (GetStage fbmwBMBeasts == 20) && (DoOnce == 0)\n		enable\n		startcombat fbmwGoodBeastRef\n		set DoOnce to 1\n	endif\nEnd\n;<CSEBlock>\n;<CSECaretPos> 261 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "DoOnce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwBMBeasts [QUST:0101AF86]", 
+        "SCRO - Global Reference": "fbmwGoodBeastRef [ACRE:01F8B1C3]"
+    ]
+}

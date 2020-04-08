@@ -1,0 +1,91 @@
+{
+    "Topic": "1addSfire [DIAL:0131107C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 828, 
+        "Record Flags": {}, 
+        "FormID": "01014C4F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRBlade [QUST:0101C651]", 
+    "PNAM - Previous INFO": "01014C4E", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Well, if that's all you want to do...! You don't need a mystic, whelp. I can take care of that for you. We'll need some Pyroil Tar, though.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "Used to have some around here...but that was a long time ago. You can find it in the lower caves of Norenen-dur, in the Citadel of Myn Dhrur.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "It's an old ruin far beneath Bamz-Amschend. I swear, no one is happy with a simple blade that cleaves bone...always need the special effects.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "dwarvenUghostUradac "Radac Stungnthumz" [NPC_:01F8E55D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 75.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRBlade "The Blade of Nerevar" [QUST:0101C651]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 40, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 4B 00 00 00 58 10 05 00 01 00 72 03 00 58 10 05 00 01 00 72 04 00 1C 00 01 00 21 10 00 00", 
+        "SCTX - Result script source": "setstage fbmwTRBlade 75\r\naddtopic 1PyroilSTar\r\naddtopic 1MynSdhrur\r\nfbmwtrkhashuniREF.enable", 
+        "References": [
+            "SCRO - Global Reference": "fbmwtrkhashuniREF [ACHR:0100B724]", 
+            "SCRO - Global Reference": "fbmwTRBlade [QUST:0101C651]", 
+            "SCRO - Global Reference": "1PyroilSTar [DIAL:01311063]", 
+            "SCRO - Global Reference": "1MynSDhrur [DIAL:0131106F]"
+        ]
+    }
+}

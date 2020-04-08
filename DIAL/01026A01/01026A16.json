@@ -1,0 +1,77 @@
+{
+    "Topic": "fbmwMQ14yeswithguarantees [DIAL:01026A01]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 523, 
+        "Record Flags": {}, 
+        "FormID": "01026A16", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ14 [QUST:01002C56]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "FF FF FF"
+            }, 
+            "NAM1 - Response Text": "Since it hardly matters, let me assure you... there are no guarantees that would help you once I had my hands on those tools.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "FF FF FF"
+            }, 
+            "NAM1 - Response Text": "Pity I didn't try to bargain with you. It might have made things so much easier. But now, if you have any questions, ask them.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "FF FF FF"
+            }, 
+            "NAM1 - Response Text": "Otherwise, you are the challenger. I await your first blow.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwDagothUr "Dagoth Ur" [NPC_:0100A1E7]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "fbmwMQ14askyourquestions [DIAL:01026A03]", 
+        "TCLT - Choice": "fbmwMQ14defendyourself [DIAL:01026A08]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

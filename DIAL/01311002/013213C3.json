@@ -1,0 +1,79 @@
+{
+    "Topic": "1MarenaSGilnith [DIAL:01311002]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 397, 
+        "Record Flags": {}, 
+        "FormID": "013213C3", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSMatchMaker [QUST:0101C628]", 
+    "PNAM - Previous INFO": "013213C4", 
+    "Add topics": [
+        "NAME - Topic": "01310D10"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "She wants to meet someone else, not me? Well, that's just fine. Couldn't care less. Let's just forget the whole thing, shall we?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStageDone:59", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSMatchMaker "The MatchMaker" [QUST:0101C628]", 
+            "Parameter #2": "090 I have arranged a meeting between Marena Gilnith and Fons Beren.", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0SunelSHlas "Sunel Hlas" [NPC_:01260A96]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 15, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "15 00 0B 00 72 01 00 73 03 00 03 00 20 32 30", 
+        "SCTX - Result script source": "set fbmwMSMatchmaker.MatchMakeSunel to 20", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMSMatchMaker [QUST:0101C628]"
+        ]
+    }
+}

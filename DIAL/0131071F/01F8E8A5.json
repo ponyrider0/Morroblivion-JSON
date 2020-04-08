@@ -1,0 +1,72 @@
+{
+    "Topic": "1CureSDiseaseSpotion [DIAL:0131071F]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 398, 
+        "Record Flags": {}, 
+        "FormID": "01F8E8A5", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSCrimsonPlague [QUST:0101C61D]", 
+    "PNAM - Previous INFO": "01F8E8A4", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6F 6E 53"
+            }, 
+            "NAM1 - Response Text": "You delivered the potion? Wonderful, outlander. I know it was a simple task, perhaps even an annoying one, but it was important nonetheless.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6F 6E 53"
+            }, 
+            "NAM1 - Response Text": "I imagine Geon Auline will be feeling much better in the next few days.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0NerileSAndaren "Nerile Andaren" [NPC_:01260A77]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSCrimsonPlague "Crimson Plague" [QUST:0101C61D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "Topic": "1CorprusSStalker [DIAL:01310871]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 575, 
+        "Record Flags": {}, 
+        "FormID": "01321124", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwFGCorprusStalker [QUST:010033D3]", 
+    "PNAM - Previous INFO": "01F8A436", 
+    "Add topics": [
+        "NAME - Topic": "01310871", 
+        "NAME - Topic": "01310BDD", 
+        "NAME - Topic": "01310D0E"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I heard you killed the Corprus Stalker in Tel Mora. Good work, outlander. Here's your 500 septims.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwcorprusberwen "Corprus Stalker" [CREA:01F2A528]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 90.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwFGCorprusStalker "Fighters Guild: Berwen's Stalker" [QUST:010033D3]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0hrundi "Hrundi" [NPC_:012601BA]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 63, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 A9 10 0D 00 03 00 72 03 00 72 04 00 6E 05 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E F4 01 00 00", 
+        "SCTX - Result script source": "setstage fbmwfgcorprusstalker 100\r\nmodfactionreaction fbmwfightersguild playerfaction 5\r\nmoddisposition player 10\r\nplayer.additem gold001 500", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwFGCorprusStalker [QUST:010033D3]", 
+            "SCRO - Global Reference": "fbmwFightersGuild [FACT:0100761A]", 
+            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]"
+        ]
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "Record Header": {
+        "Signature": "PACK", 
+        "Data Size": 130, 
+        "Record Flags": {}, 
+        "FormID": "01F8BCC9", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwTRDulniFollow", 
+    "PKDT - General": {
+        "General": {
+            "Flags": {
+                "Defensive combat": true
+            }, 
+            "Type": "01", 
+            "Unused": "00 00 00"
+        }
+    }, 
+    "PSDT - Schedule": {
+        "Month": -1, 
+        "Day of week": -1, 
+        "Date": "00", 
+        "Time": -1, 
+        "Duration": 0
+    }, 
+    "PTDT - Target": {
+        "Type": 1, 
+        "Target": "00000007", 
+        "Count": 0
+    }, 
+    "Conditions": [
+        {
+            "Type": "20", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 2.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRShrineDead "The Shrine of the Dead" [QUST:0101C65B]", 
+            "Parameter #2": "approach", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRShrineDead "The Shrine of the Dead" [QUST:0101C65B]", 
+            "Parameter #2": "follownow", 
+            "Unused": "00000000"
+        }
+    ]
+}

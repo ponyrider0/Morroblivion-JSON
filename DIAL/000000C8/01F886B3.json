@@ -1,0 +1,100 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 792, 
+        "Record Flags": {}, 
+        "FormID": "01F886B3", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwICMuck [QUST:0100B82C]", 
+    "PNAM - Previous INFO": "01F886B2", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "70 6C 61"
+            }, 
+            "NAM1 - Response Text": "Welcome. Welcome to the Fort Darius shrine. And many thanks to you and Synnolian for the Restore Health potions. Our stock was very low. While you're up here, take a look around Fort Darius.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "70 6C 61"
+            }, 
+            "NAM1 - Response Text": "The Legion is always looking for loyal, able citizens of good character. Speak to General Darius over at Madach's Tradehouse. Now, before you go, can I return your favor?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 4.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0pUrestoreUhealthUb "Bargain Restore Health" [ALCH:010800DE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0chaplainSogrul "Chaplain Ogrul" [NPC_:01260042]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICMuck "Imperial Cult: Gathering Muck" [QUST:0100B82C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICMuck "Imperial Cult: Gathering Muck" [QUST:0100B82C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 41, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 02 00 6E 04 00 00 00 39 10 0A 00 02 00 72 03 00 6E 0A 00 00 00 58 10 05 00 01 00 72 04 00", 
+        "SCTX - Result script source": "player.removeitem 0purestoreuhealthub 4\r\nsetstage fbmwicmuck 10\r\naddtopic 1returnsyoursfavor", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0pUrestoreUhealthUb [ALCH:010800DE]", 
+            "SCRO - Global Reference": "fbmwICMuck [QUST:0100B82C]", 
+            "SCRO - Global Reference": "1returnSyourSfavor [DIAL:013107EF]"
+        ]
+    }
+}

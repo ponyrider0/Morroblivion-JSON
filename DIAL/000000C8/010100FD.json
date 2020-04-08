@@ -1,0 +1,67 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 372, 
+        "Record Flags": {}, 
+        "FormID": "010100FD", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwEBBone [QUST:0100341D]", 
+    "PNAM - Previous INFO": "0100342B", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "4D 57 45"
+            }, 
+            "NAM1 - Response Text": "What can this poor merchant do for you? I've had very little business recently, with the terrible haunting in my shop.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 60.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwEBBone "The Dwemer's Bone" [QUST:0100341D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0jeanne "Jeanne" [NPC_:012605D1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 17, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 21 10 00 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "fbmwebboneghostref.enable\r\naddtopic 1terribleshaunting", 
+        "References": [
+            "SCRO - Global Reference": "fbmwebboneghostref [ACRE:01F2A55A]", 
+            "SCRO - Global Reference": "1terribleShaunting [DIAL:013107FD]"
+        ]
+    }
+}

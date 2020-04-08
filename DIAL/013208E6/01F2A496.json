@@ -1,0 +1,81 @@
+{
+    "Topic": "1joinStheSMoragSTong1 [DIAL:013208E6]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 684, 
+        "Record Flags": {}, 
+        "FormID": "01F2A496", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMTWritOran [QUST:0100B83F]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "I will let you join as a probationer. To gain full membership, you must pass a test. Here is a writ for the honorable execution of Feruren Oran.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "You can find him in the Elven Nations Cornerclub, which is in the Hlaalu Plaza. Slay him honorably and report to me.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0enoShlaalu "Eno Hlaalu" [NPC_:0126058D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 59, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 0A 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 58 10 05 00 01 00 72 04 00 1C 00 01 00 89 10 0A 00 02 00 72 05 00 6E 00 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMTWritOran 10\r\nplayer.additem 0writUoran 1\r\naddtopic 1Ferurensoran\r\nPlayer.SetFactionRank 0MoragSTong 0", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMTWritOran [QUST:0100B83F]", 
+            "SCRO - Global Reference": "0writUoran [BOOK:011801EC]", 
+            "SCRO - Global Reference": "1FerurenSOran [DIAL:01310A51]", 
+            "SCRO - Global Reference": "0MoragSTong [FACT:01220008]"
+        ]
+    }
+}

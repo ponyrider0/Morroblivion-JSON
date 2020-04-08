@@ -1,0 +1,68 @@
+{
+    "Topic": "fbmwMSpiernettefoundit [DIAL:0102EEB9]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 550, 
+        "Record Flags": {}, 
+        "FormID": "0102EEBF", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSPiernette [QUST:0101C62E]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "That bowl disappeared from my house while I was visiting friends at Fort Pelagiad. My husband -- he's an officer in the Legions serving in Argonia --", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "received the bowl as a gift from grateful East Empire Company merchants. His file was escorting a Company courier when they were overwhelmed by bandits away. Were you... planning to return the bowl to me?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0piernetteSbeluelle "Piernette Beluelle" [NPC_:012604CA]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "fbmwMSpiernetteherethebowl [DIAL:0102EEBB]", 
+        "TCLT - Choice": "fbmwMSpiernettekeepingit [DIAL:0102EEBE]", 
+        "TCLT - Choice": "fbmwMSpiernettelostit [DIAL:0102EEBD]", 
+        "TCLT - Choice": "fbmwMSpiernettewas [DIAL:0102EEBC]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

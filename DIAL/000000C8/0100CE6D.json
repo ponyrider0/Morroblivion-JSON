@@ -1,0 +1,78 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 607, 
+        "Record Flags": {}, 
+        "FormID": "0100CE6D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSGreetings [QUST:01F2A564]", 
+    "PNAM - Previous INFO": "0100CE76", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6C 69 6D"
+            }, 
+            "NAM1 - Response Text": "Outlander. Would you like to earn some gold? Take care of Trerayna Dalen for me.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6C 69 6D"
+            }, 
+            "NAM1 - Response Text": "She's a petty annoyance, but Mistress Therana won't let me leave the tower to take care of her. Don't be fooled by her thugs.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "6C 69 6D"
+            }, 
+            "NAM1 - Response Text": "The armor is impressive, but there's not much inside it. Kill Trerayna Dalen, and I'll pay you 1000 gold.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0mollimoSofScloudrest "Mollimo of Cloudrest" [NPC_:012604ED]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 27, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 01 00 00 00 0F 10 09 00 02 00 24 00 6E 00 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmstreraynabounty 1\r\nsetav responsibility 0", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMSTreraynaBounty [QUST:0101C634]"
+        ]
+    }
+}

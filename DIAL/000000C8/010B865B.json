@@ -1,0 +1,102 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 892, 
+        "Record Flags": {}, 
+        "FormID": "010B865B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwBMWolfGiver [QUST:0101B6DC]", 
+    "PNAM - Previous INFO": "010B6D71", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6E 6D 6F"
+            }, 
+            "NAM1 - Response Text": "In order for the Rite of the Wolf Giver to proceed, my sisters and I need the petals of a wolfsbane flower. Wolfsbane is rare, and grows on Solstheim in only one place.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6E 6D 6F"
+            }, 
+            "NAM1 - Response Text": "You must go to the southern end of the Moesring Mountains, to the top of Hvitkald Peak. There you will find a single wolfsbane flower in bloom. Retrieve the petals of this wolfsbane flower and return them to me.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "6E 6D 6F"
+            }, 
+            "NAM1 - Response Text": "Take this Rising Force Potion. You may need it to reach the peak.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 40.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMWolfGiver "Rite of the Wolf Giver" [QUST:0101B6DC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMWolfGiver "Rite of the Wolf Giver" [QUST:0101B6DC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0glenmorilUwitchUcaveU2 "Fallaise of Glenmoril Wyrd" [NPC_:01260B6D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 46, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 15 00 0A 00 72 02 00 73 03 00 02 00 20 31", 
+        "SCTX - Result script source": "setstage  fbmwbmWolfgiver 50\r\nplayer.additem 0pULevitationUE 1\r\nset fbmwbmWolfGiver.SpokenwithFallaise to 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwBMWolfGiver [QUST:0101B6DC]", 
+            "SCRO - Global Reference": "0pULevitationUE [ALCH:0100121D]"
+        ]
+    }
+}

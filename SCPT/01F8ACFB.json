@@ -1,0 +1,80 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 947, 
+        "Record Flags": {}, 
+        "FormID": "01F8ACFB", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwVAVampContessScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 128, 
+        "VariableCount": 5, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 72 00 00 00 15 00 0F 00 73 05 00 0A 00 20 73 02 00 20 73 03 00 20 2B 16 00 29 00 03 00 25 00 20 58 3A 10 05 00 01 00 72 01 00 20 32 30 20 3D 3D 20 58 3A 10 05 00 01 00 72 01 00 20 33 30 20 3D 3D 20 7C 7C 16 00 14 00 01 00 10 00 20 58 54 10 05 00 01 00 72 02 00 20 31 20 3E 3D 39 10 0A 00 02 00 72 01 00 6E 28 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwVAVampContessScript\r\n\r\nshort BerneCount\r\nshort AundaeCount\r\nshort QuarraCount\r\nshort Vampkills\r\nshort fbmwCattleUse ;0 = PC can use later  1 = PC can use after talking with Ancient   2 = PC can use cattle  -1 = PC cannot use. PC has killed cattle\r\n\r\nbegin GameMode\r\n	\r\n	set Vampkills to (AundaeCount + QuarraCount)\r\n	\r\n	if (GetStage fbmwVAVampContess == 20) || (GetStage fbmwVAVampContess == 30)\r\n		if (GetDeadCount 0merta >= 1)\r\n			Setstage fbmwVAVampContess 40\r\n		endif\r\n	endif\r\nend", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "BerneCount"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "AundaeCount"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "EB F5 3A 08 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "9F A5 31 00 00 00 00"
+            }, 
+            "SCVR - Name": "QuarraCount"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "fbmwCattleUse"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "Vampkills"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwVAVampContess [QUST:01003BCB]", 
+        "SCRO - Global Reference": "0merta [NPC_:01260A07]"
+    ]
+}

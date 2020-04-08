@@ -1,0 +1,74 @@
+{
+    "Topic": "1travelStogether1 [DIAL:013210A8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 786, 
+        "Record Flags": {}, 
+        "FormID": "0101497D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMQ04 [QUST:01001DB9]", 
+    "PNAM - Previous INFO": "01323284", 
+    "Add topics": [
+        "NAME - Topic": "013106F6"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Thank you. I will follow you to Jobasha's Rare Books, and we will speak further there.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0huleeya "Huleeya" [NPC_:012601E2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 144, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 0F 10 09 00 02 00 21 00 6E 64 00 00 00 1C 00 02 00 0F 10 09 00 02 00 21 00 6E 64 00 00 00 1C 00 03 00 0F 10 09 00 02 00 21 00 6E 64 00 00 00 1C 00 01 00 53 10 0A 00 02 00 72 04 00 6E 9C FF FF FF 1C 00 02 00 53 10 0A 00 02 00 72 04 00 6E 9C FF FF FF 1C 00 03 00 53 10 0A 00 02 00 72 04 00 6E 9C FF FF FF 1C 00 01 00 16 10 05 00 01 00 72 04 00 1C 00 02 00 16 10 05 00 01 00 72 04 00 1C 00 03 00 16 10 05 00 01 00 72 04 00", 
+        "SCTX - Result script source": "mwHuleeyaThug1.SetAV Aggression 100\r\nmwHuleeyaThug2.SetAV Aggression 100\r\nmwHuleeyaThug3.SetAV Aggression 100\r\nmwHuleeyaThug1.ModDisposition Player -100\r\nmwHuleeyaThug2.ModDisposition Player -100\r\nmwHuleeyaThug3.ModDisposition Player -100\r\nmwHuleeyaThug1.StartCombat Player\r\nmwHuleeyaThug2.StartCombat Player\r\nmwHuleeyaThug3.StartCombat Player", 
+        "References": [
+            "SCRO - Global Reference": "mwHuleeyaThug1 [ACHR:018352FD]", 
+            "SCRO - Global Reference": "mwHuleeyaThug2 [ACHR:018352FE]", 
+            "SCRO - Global Reference": "mwHuleeyaThug3 [ACHR:018352FC]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

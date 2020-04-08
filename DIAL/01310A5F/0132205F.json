@@ -1,0 +1,65 @@
+{
+    "Topic": "1Advancement [DIAL:01310A5F]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 320, 
+        "Record Flags": {}, 
+        "FormID": "0132205F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHRAdvancement [QUST:010037E7]", 
+    "PNAM - Previous INFO": "0132205E", 
+    "Add topics": [
+        "NAME - Topic": "013109DB"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "You have a good reputation, but you do not meet our requirements.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 2.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHRAdvancement "Great House Redoran" [QUST:010037E7]", 
+            "Parameter #2": "RedoranAdvancement", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0neminda "Neminda" [NPC_:012600C8]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCTX - Result script source": "; 1 = Skills Qualify; Reputation Does Not\r\n; 2 = Reputation Qualifies, but Skills do Not"
+    }
+}

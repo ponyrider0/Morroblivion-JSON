@@ -1,0 +1,92 @@
+{
+    "Topic": "1assignment [DIAL:013113A5]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 925, 
+        "Record Flags": {}, 
+        "FormID": "01F8BBA1", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwCOAdvancement [QUST:01004AD9]", 
+    "PNAM - Previous INFO": "01322413", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Ah, so you have the ore I asked Falco for? He couldn't even accomplish that by himself, could he? No matter. The investors are waiting for this, so hand it over. Here's payment for the job.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6E 69 75"
+            }, 
+            "NAM1 - Response Text": "I don't have any other work for you right now; come back and see me in about three days. By then construction should be well under way, and there will likely be more for you to do. Oh, and take this stock certificate.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 5.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ingredUrawUebonyU01 "Raw Ebony" [INGR:010A0009]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0CarniusSMagius "Carnius Magius" [NPC_:01260B0A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 40.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwCO1 "East Empire Company: Establish the Mine" [QUST:0101BE3C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 6, 
+            "CompiledSize": 77, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 02 00 6E 05 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 64 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00 39 10 0A 00 02 00 72 05 00 6E 32 00 00 00 58 10 05 00 01 00 72 06 00", 
+        "SCTX - Result script source": "player.removeitem 0ingredurawuebonyu01 5\r\nplayer.additem gold001 100\r\nplayer.additem 0bkubmustockcert 1\r\nsetstage fbmwco1 50\r\nAddTopic 1stockScertificate", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0ingredUrawUebonyU01 [INGR:010A0009]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "0bkUBMUStockcert [BOOK:01180268]", 
+            "SCRO - Global Reference": "fbmwCO1 [QUST:0101BE3C]", 
+            "SCRO - Global Reference": "1stockScertificate [DIAL:01311346]"
+        ]
+    }
+}

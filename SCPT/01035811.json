@@ -1,0 +1,24 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 430, 
+        "Record Flags": {}, 
+        "FormID": "01035811", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwCO9aTirvelscript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 3, 
+        "CompiledSize": 106, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0B 00 08 00 1C 00 00 00 01 00 72 02 00 1C 00 01 00 8B 10 02 00 00 00 39 10 0A 00 02 00 72 03 00 6E 3C 00 00 00 11 00 00 00 10 00 08 00 0A 00 2F 00 00 00 00 00 16 00 15 00 01 00 11 00 20 58 3A 10 05 00 01 00 72 03 00 20 34 30 20 3D 3D 39 10 0A 00 02 00 72 03 00 6E 32 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwCO9aTirvelscript\n\nBegin OnHit Player\n	fbmwCo9aTirvelREF.kill\n	SetStage fbmwCO9a 60\nend\n\nbegin ondeath\n	if GetStage fbmwCO9a == 40\n		SetStage fbmwCO9a 50\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 96 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "fbmwCo9aTirvelREF [ACHR:01F00DDB]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "fbmwCO9a [QUST:0101BEDA]"
+    ]
+}

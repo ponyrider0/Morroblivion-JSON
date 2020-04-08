@@ -1,0 +1,79 @@
+{
+    "Topic": "1customSfurSarmor [DIAL:01311352]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 772, 
+        "Record Flags": {}, 
+        "FormID": "01F8BAC1", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMFurArmor [QUST:0101B6C5]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "Roaming the wilds of Solsteim are seldom seen, elusive species of wolf and bear.  They're called snow wolves and snow bears, because of their white fur.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "It is said that the pelts of these animals have innate magical qualities that help guard against Solstheim's brutal frost and snow.  Just think of the armor I could create with such materials!", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "If you were to provide me with the pelts and enough gold, I would gladly make you a set of custom snow wolf armor or snow bear armor.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0brynjolfr "Brynjolfr" [NPC_:01260B31]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 18, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "addtopic 1snowsbearsarmor\r\naddtopic 1snowswolfsarmor", 
+        "References": [
+            "SCRO - Global Reference": "1snowSbearSarmor [DIAL:0131135C]", 
+            "SCRO - Global Reference": "1snowSwolfSarmor [DIAL:0131135B]"
+        ]
+    }
+}

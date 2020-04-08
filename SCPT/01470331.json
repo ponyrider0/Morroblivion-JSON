@@ -1,0 +1,48 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1096, 
+        "Record Flags": {}, 
+        "FormID": "01470331", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwTRSothaSilScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 3, 
+        "CompiledSize": 337, 
+        "VariableCount": 2, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 D0 00 00 00 00 00 16 00 0D 00 03 00 09 00 20 73 01 00 20 30 20 3D 3D 00 10 9A 00 01 00 92 00 59 6F 75 20 68 61 76 65 20 66 6F 75 6E 64 20 74 68 65 20 62 6F 64 79 20 6F 66 20 53 6F 74 68 61 20 53 69 6C 2C 20 68 69 73 20 6C 69 66 65 6C 65 73 73 20 68 75 6C 6B 20 64 61 6E 67 6C 69 6E 67 20 66 72 6F 6D 20 61 20 63 6F 6E 74 72 61 70 74 69 6F 6E 20 6F 66 20 68 69 73 20 6F 77 6E 20 6D 61 6B 69 6E 67 2E 20 53 6F 6D 65 6F 6E 65 20 68 61 73 20 6F 62 76 69 6F 75 73 6C 79 20 62 65 65 6E 20 68 65 72 65 20 62 65 66 6F 72 65 20 79 6F 75 2E 00 00 00 00 39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 11 00 00 00 10 00 06 00 00 00 67 00 00 00 16 00 35 00 04 00 31 00 20 58 01 10 05 00 01 00 72 03 00 20 33 30 30 20 3E 3D 20 73 02 00 20 31 20 3C 20 26 26 20 58 3A 10 05 00 01 00 72 02 00 20 35 30 20 3D 3D 20 26 26 61 10 00 00 1C 00 01 00 21 10 00 00 15 00 0B 00 72 02 00 73 02 00 03 00 20 31 30 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptName mwTRSothaSilScript\n\nshort state\nshort doOnce\n\nbegin onactivate\n	if state == 0\n		MessageBox \"You have found the body of Sotha Sil, his lifeless hulk dangling from a contraption of his own making. Someone has obviously been here before you.\"\n		SetStage fbmwTRSothaSil 50\n		set state to 1	\n	endif\nend\n\nbegin gamemode\n	if GetDistance Player >= 300 && doOnce < 1 && GetStage fbmwTRSothaSil == 50\n		DisablePlayerControls\n		fbmwTRSothaSilAlmalexiaREF.Enable\n		set fbmwTRSothaSil.state to 10\n		set doOnce to 1\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 73 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "state"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "doOnce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwTRSothaSilAlmalexiaREF [ACHR:010084C5]", 
+        "SCRO - Global Reference": "fbmwTRSothaSil [QUST:0101C65C]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+    ]
+}

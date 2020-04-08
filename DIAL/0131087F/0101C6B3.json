@@ -1,0 +1,65 @@
+{
+    "Topic": "1AmuletSofSUnity [DIAL:0131087F]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 221, 
+        "Record Flags": {}, 
+        "FormID": "0101C6B3", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHTEddieAmulet [QUST:0100343C]", 
+    "PNAM - Previous INFO": "0101C6B4", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "64 53 74"
+            }, 
+            "NAM1 - Response Text": "Do you have five Standard Potions of Invisibility?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHTEddieAmulet "House Telvanni: Amulet of Unity" [QUST:0100343C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0eddStheman "Edd ""Fast Eddie"" Theman" [NPC_:01260408]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1AmuletSofSUnity1 [DIAL:01320EF8]", 
+        "TCLT - Choice": "1AmuletSofSUnity2 [DIAL:01320EFA]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

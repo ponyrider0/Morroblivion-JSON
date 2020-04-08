@@ -1,0 +1,90 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1115, 
+        "Record Flags": {}, 
+        "FormID": "01011A6F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwTRBladeQuestScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 173, 
+        "VariableCount": 6, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 9F 00 00 00 16 00 0D 00 01 00 09 00 20 73 02 00 20 30 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 0D 00 01 00 09 00 20 73 02 00 20 32 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 0D 00 07 00 09 00 20 73 02 00 20 31 20 3D 3D 16 00 0F 00 05 00 0B 00 20 73 03 00 20 47 01 00 20 21 3D 15 00 09 00 73 03 00 04 00 20 47 01 00 15 00 0D 00 73 04 00 08 00 20 73 04 00 20 31 20 2B 16 00 0C 00 01 00 08 00 20 73 04 00 20 32 20 3E 15 00 07 00 73 02 00 02 00 20 32 19 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwTRBladeQuestScript\n\nShort KGaveBlade\nshort bladefix\nshort todayday\nshort daysPassed\nshort MuseumDonations ;temporary for dialogue conditions, until the museum questline is finished\nshort Compensationtopicfix\n\nbegin gamemode\n\n	if ( bladefix == 0 )\n		return\n	endif\n\n	if ( bladefix == 2 )\n		return\n	endif\n\n	if bladefix == 1\n		if ( todayday != GameDaysPassed )\n			set todayday to GameDaysPassed\n			set daysPassed to ( daysPassed + 1 )\n			if ( daysPassed > 2 )\n				set bladefix to 2\n			endif\n		endif\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 509 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "KGaveBlade"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "02 00 72 02 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 02 10 0A 00 02 00"
+            }, 
+            "SCVR - Name": "bladefix"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "49 6E 46 61 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "63 74 4D 6F 72 72 6F"
+            }, 
+            "SCVR - Name": "todayday"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "31 20 57 69 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "72 70 69 6F 6E 20 30"
+            }, 
+            "SCVR - Name": "daysPassed"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "31 20 57 69 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "72 70 69 6F 6E 20 30"
+            }, 
+            "SCVR - Name": "MuseumDonations"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "49 73 49 44 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "41 72 61 6D 20 3D 3D"
+            }, 
+            "SCVR - Name": "Compensationtopicfix"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "GameDaysPassed [GLOB:00000039]"
+    ]
+}

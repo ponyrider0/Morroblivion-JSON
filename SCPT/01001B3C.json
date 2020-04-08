@@ -1,0 +1,38 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 537, 
+        "Record Flags": {}, 
+        "FormID": "01001B3C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwMQAzuraEnablerScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 4, 
+        "CompiledSize": 99, 
+        "VariableCount": 3, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0B 00 1A 00 50 00 00 00 01 00 72 02 00 16 00 21 00 03 00 1D 00 20 73 01 00 20 30 20 3D 3D 20 58 3A 10 05 00 01 00 72 03 00 20 32 30 20 3E 3D 20 26 26 1C 00 01 00 21 10 00 00 1C 00 01 00 56 10 08 00 02 00 72 02 00 72 04 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName mwMQAzuraEnablerScript\n\n\nSHORT Triggered\n\nBEGIN onTriggerActor Player\n	IF Triggered == 0  && GetStage fbmwMQ14 >= 20\n		mwAzuraREF.Enable\n		mwAzuraREF.StartConversation Player GREETING\n\n		SET Triggered TO 1\n	ENDIF\nEND\n;<CSEBlock>\n;<CSECaretPos> 15 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "65 74 4E 65 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "65 69 64 43 72 6F 77"
+            }, 
+            "SCVR - Name": "Triggered"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "mwAzuraREF [ACHR:01001B36]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "fbmwMQ14 [QUST:01002C56]", 
+        "SCRO - Global Reference": "GREETING [DIAL:000000C8]"
+    ]
+}

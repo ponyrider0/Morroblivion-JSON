@@ -1,0 +1,36 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 734, 
+        "Record Flags": {}, 
+        "FormID": "01F8AF91", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwbmsmugScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 200, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 93 00 00 00 16 00 35 00 02 00 31 00 20 73 01 00 20 31 20 21 3D 20 58 3A 10 05 00 01 00 72 01 00 20 39 30 20 3D 3D 20 58 3A 10 05 00 01 00 72 01 00 20 39 33 20 3D 3D 20 7C 7C 20 26 26 0F 10 09 00 02 00 21 00 6E 05 00 00 00 15 00 07 00 73 01 00 02 00 20 31 18 00 15 00 03 00 11 00 20 58 3A 10 05 00 01 00 72 01 00 20 39 35 20 3D 3D 0F 10 09 00 02 00 21 00 6E 64 00 00 00 16 10 05 00 01 00 72 02 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 11 00 00 00 10 00 08 00 0A 00 1B 00 00 00 00 00 15 00 13 00 72 01 00 73 05 00 0B 00 20 72 01 00 73 05 00 20 31 20 2B 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwbmsmugScript\n\nshort doonce\n\nbegin gamemode\n	if doonce!=1&&getstage fbmwbmsmugglers==90||getstage fbmwbmsmugglers==93\n		setav aggression 5\n		set doonce to 1\n	elseif GetStage fbmwbmsmugglers==95\n		setav aggression 100\n		StartCombat Player\n		set doonce to 1\n	endif\nend\nbegin ondeath\n	set fbmwBMSmugglers.smugdead to fbmwBMSmugglers.smugdead + 1\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "08 4D 53 6D 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "07 8A 02 27 0C 00 00"
+            }, 
+            "SCVR - Name": "doonce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwBMSmugglers [QUST:0101B6D3]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+    ]
+}

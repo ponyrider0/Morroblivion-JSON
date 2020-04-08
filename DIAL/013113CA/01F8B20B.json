@@ -1,0 +1,88 @@
+{
+    "Topic": "1mustSact [DIAL:013113CA]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 668, 
+        "Record Flags": {}, 
+        "FormID": "01F8B20B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMDraugr [QUST:0101AF8D]", 
+    "PNAM - Previous INFO": "01F8B20A", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "62 6D 44"
+            }, 
+            "NAM1 - Response Text": "I tried to warn my people, but I was an empty voice to them, as though I were dead. So I used my magic to erect a barrier deep in this ice, strong enough to contain these Daedra and keep them from overrunning the island.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "62 6D 44"
+            }, 
+            "NAM1 - Response Text": "The barrier held; for years I maintained it. But I grew old, and I knew that my death would mean the death of all life on Solstheim.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 65.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMDraugr "The Skaal Test of Strength" [QUST:0101AF8D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 60.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMDraugr "The Skaal Test of Strength" [QUST:0101AF8D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwbmDraugrAesliip "Aesliip" [NPC_:01F8B1AC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 39 10 0A 00 02 00 72 02 00 6E 3E 00 00 00", 
+        "SCTX - Result script source": "addtopic 1grewsold\r\nsetstage fbmwbmdraugr 62", 
+        "References": [
+            "SCRO - Global Reference": "1grewSold [DIAL:013113CB]", 
+            "SCRO - Global Reference": "fbmwBMDraugr [QUST:0101AF8D]"
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1563, 
+        "Record Flags": {}, 
+        "FormID": "014701D3", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwShrinePuzzleCanalScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 3, 
+        "CompiledSize": 614, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 56 02 00 00 00 00 16 00 10 00 02 00 0C 00 20 72 01 00 73 03 00 20 31 20 3D 3D 1E 10 08 00 02 00 72 02 00 72 03 00 00 10 8B 00 01 00 83 00 48 65 72 65 20 56 69 76 65 63 20 67 61 76 65 20 61 20 70 6C 61 69 6E 20 73 69 6C 76 65 72 20 6C 6F 6E 67 73 77 6F 72 64 20 74 6F 20 74 68 65 20 44 61 65 64 72 61 20 4C 6F 72 64 20 4D 65 68 72 75 6E 65 73 20 44 61 67 6F 6E 20 72 61 74 68 65 72 20 74 68 61 6E 20 64 69 73 68 6F 6E 6F 72 20 68 69 6D 73 65 6C 66 20 62 79 20 66 69 67 68 74 69 6E 67 20 61 6E 20 75 6E 61 72 6D 65 64 20 66 6F 65 2E 00 00 00 00 18 00 19 00 04 00 15 00 20 58 3B 10 0A 00 02 00 72 01 00 6E 10 00 00 00 20 31 20 3D 3D 1E 10 08 00 02 00 72 02 00 72 03 00 00 10 D1 00 01 00 C9 00 54 68 65 20 47 72 61 63 65 20 6F 66 20 43 6F 75 72 74 65 73 79 3A 20 54 68 61 6E 6B 20 79 6F 75 20 66 6F 72 20 79 6F 75 72 20 63 6F 75 72 74 65 73 79 2C 20 4C 6F 72 64 20 56 69 76 65 63 2E 20 49 20 73 68 61 6C 6C 20 73 70 65 61 6B 20 6E 65 69 74 68 65 72 20 68 75 72 74 66 75 6C 20 6E 6F 72 20 68 61 72 73 68 20 77 6F 72 64 2C 20 62 75 74 20 73 68 61 6C 6C 20 73 70 65 61 6B 20 72 65 73 70 65 63 74 66 75 6C 6C 79 2C 20 65 76 65 6E 20 6F 66 20 6D 79 20 65 6E 65 6D 69 65 73 2C 20 66 6F 72 20 74 65 6D 70 65 72 61 74 65 20 77 6F 72 64 73 20 6D 61 79 20 74 75 72 6E 20 61 73 69 64 65 20 61 6E 67 65 72 2E 00 00 00 00 39 10 0A 00 02 00 72 01 00 6E 11 00 00 00 1E 00 00 00 19 00 00 00 00 10 8B 00 01 00 83 00 48 65 72 65 20 56 69 76 65 63 20 67 61 76 65 20 61 20 70 6C 61 69 6E 20 73 69 6C 76 65 72 20 6C 6F 6E 67 73 77 6F 72 64 20 74 6F 20 74 68 65 20 44 61 65 64 72 61 20 4C 6F 72 64 20 4D 65 68 72 75 6E 65 73 20 44 61 67 6F 6E 20 72 61 74 68 65 72 20 74 68 61 6E 20 64 69 73 68 6F 6E 6F 72 20 68 69 6D 73 65 6C 66 20 62 79 20 66 69 67 68 74 69 6E 67 20 61 6E 20 75 6E 61 72 6D 65 64 20 66 6F 65 2E 00 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptName mwShrinePuzzleCanalScript\r\n\r\nbegin onactivate\r\n\r\n	if ( fbmwttsevengraces.puzzle ==1 )\r\n		Cast 0ShrineuPuzzleuSP Player\r\n		MessageBox \"Here Vivec gave a plain silver longsword to the Daedra Lord Mehrunes Dagon rather than dishonor himself by fighting an unarmed foe.\"\r\n\r\n	elseif ( GetStageDone fbmwTTsevengraces 16 ==1 )\r\n		Cast 0ShrineuPuzzleuSP Player\r\n		MessageBox \"The Grace of Courtesy: Thank you for your courtesy, Lord Vivec. I shall speak neither hurtful nor harsh word, but shall speak respectfully, even of my enemies, for temperate words may turn aside anger.\"\r\n		SetStage fbmwTTsevengraces 17\r\n		Return\r\n	endif\r\n\r\n	MessageBox \"Here Vivec gave a plain silver longsword to the Daedra Lord Mehrunes Dagon rather than dishonor himself by fighting an unarmed foe.\"\r\n\r\nEnd\r\n;<CSEBlock>\r\n;<CSECaretPos> 36 </CSECaretPos>\r\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "fbmwTTSevenGraces [QUST:01002C79]", 
+        "SCRO - Global Reference": "0shrineUpuzzleUsp [SPEL:01060344]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+    ]
+}

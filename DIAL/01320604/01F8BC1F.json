@@ -1,0 +1,69 @@
+{
+    "Topic": "1evidenceSofSconspiracy5 [DIAL:01320604]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 532, 
+        "Record Flags": {}, 
+        "FormID": "01F8BC1F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwTR08Hlaalu [QUST:0101C64D]", 
+    "PNAM - Previous INFO": "01F8BC1E", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "You have shown yourself an honorable person. I thank you. I will absent myself from Mournhold immediately. And I would die before I'd betray your generosity to me.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "76 65 6E"
+            }, 
+            "NAM1 - Response Text": "And now, if you'll excuse me, I believe an Almsivi Intervention will swiftly deliver me out of peril.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0BedalSAlen "Bedal Alen" [NPC_:01260A8B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 28, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 03 00 02 00 20 31 39 10 0A 00 02 00 72 01 00 6E 48 00 00 00", 
+        "SCTX - Result script source": "set fbmwtr08hlaalu.bedalfree to 1\r\nsetstage fbmwTR08Hlaalu 72", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTR08Hlaalu [QUST:0101C64D]"
+        ]
+    }
+}

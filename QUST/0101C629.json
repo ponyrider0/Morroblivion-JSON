@@ -1,0 +1,61 @@
+{
+    "Record Header": {
+        "Signature": "QUST", 
+        "Data Size": 348, 
+        "Record Flags": {}, 
+        "FormID": "0101C629", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwMSMuseum", 
+    "SCRI - Script": "mwMSMuseumQuestScript [SCPT:01F8E5C4]", 
+    "FULL - Name": "The Museum", 
+    "ICON - Icon FileName": "darthsouth\\Quests\\miscquest-town.dds", 
+    "DATA - General": {
+        "Flags": {}, 
+        "Priority": 70
+    }, 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsPlayableRace:254", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestRunning:56", 
+            "Unused": "00 00", 
+            "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Stages": [
+        {
+            "INDX - Stage index": 10, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "I have spoken with Torasa Aram, Curator of the Museum of Artifacts. I can bring her artifacts I wish to sell, and the museum will pay for them.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

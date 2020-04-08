@@ -1,0 +1,48 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 629, 
+        "Record Flags": {}, 
+        "FormID": "0101D5AB", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwMQ04cScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 3, 
+        "CompiledSize": 89, 
+        "VariableCount": 2, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 4B 00 00 00 16 00 34 00 01 00 30 00 20 72 01 00 58 2E 10 00 00 20 31 20 3D 3D 20 72 02 00 58 2E 10 00 00 20 31 20 3D 3D 20 26 26 20 72 03 00 58 2E 10 00 00 20 31 20 3D 3D 20 26 26 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwMQ04Cscript\r\n\r\n; Quest Script containing the variables to control thugs attacking the Filthy Lizard,\r\n; and controlling the Filthy Lizard following you.\r\n\r\nshort FollowNow\r\nshort RacistSafe\r\n\r\nBEGIN GameMode\r\n	IF mwHuleeyaThug1.GetDead == 1 && mwHuleeyaThug2.GetDead == 1 && mwHuleeyaThug3.GetDead == 1\r\n		SET RacistSafe TO 1\r\n	ENDIF\r\nEND\r\n\r\n", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "FollowNow"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 B0 D0 00 00"
+            }, 
+            "SCVR - Name": "RacistSafe"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "mwHuleeyaThug1 [ACHR:018352FD]", 
+        "SCRO - Global Reference": "mwHuleeyaThug2 [ACHR:018352FE]", 
+        "SCRO - Global Reference": "mwHuleeyaThug3 [ACHR:018352FC]"
+    ]
+}

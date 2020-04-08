@@ -1,0 +1,88 @@
+{
+    "Topic": "1DissidentSPriests [DIAL:013107B5]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 775, 
+        "Record Flags": {}, 
+        "FormID": "010217CF", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ09 [QUST:01001DC4]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "A significant part of the Temple hierarchy might be more inclined to accept and tolerate differences of opinion in dogma.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "But other parts of the Temple, in particular, the Ordinators under Berel Sala, claim that the threat from Red Mountain and Dagoth Ur can only be resisted with a unified, resolute faith.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "The people are afraid, so they support the hard line. But if we can show ourselves able to confront Dagoth Ur more effectively than the Ordinators, the Temple and the people will support us.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ09 "Mehra Milo and the Lost Prophecies" [QUST:01001DC4]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0gilvasSbarelo "Gilvas Barelo" [NPC_:01260503]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 2A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmq09 42", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQ09 [QUST:01001DC4]"
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 530, 
+        "Record Flags": {}, 
+        "FormID": "01F8AC47", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwBMRetributionStealScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 3, 
+        "CompiledSize": 121, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0B 00 03 00 66 00 00 00 01 00 72 01 00 16 00 13 00 05 00 0F 00 20 58 54 10 05 00 01 00 72 02 00 20 31 20 3C 16 00 15 00 03 00 11 00 20 58 3A 10 05 00 01 00 72 03 00 20 33 30 20 3E 3D 16 00 14 00 01 00 10 00 20 58 3A 10 05 00 01 00 72 03 00 20 35 30 20 3C 39 10 0A 00 02 00 72 03 00 6E 46 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName mwBMRetributionStealScript\n\nBegin OnAdd Player\n\n	if ( GetDeadCount 0sigvatrStheSstrong < 1 )\n		if ( GetStage fbmwBMRetribution >= 30 )\n			if ( GetStage fbmwBMRetribution < 50 )\n				SetStage fbmwBMRetribution 70\n			endif\n		endif\n	endif\n\nend\n;<CSEBlock>\n;<CSECaretPos> 11 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "0sigvatrStheSstrong [NPC_:01260B11]", 
+        "SCRO - Global Reference": "fbmwBMRetribution [QUST:0101B6CF]"
+    ]
+}

@@ -1,0 +1,101 @@
+{
+    "Topic": "1wergild [DIAL:013113CE]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 667, 
+        "Record Flags": {}, 
+        "FormID": "01AA5361", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwBMRetribution [QUST:0101B6CF]", 
+    "PNAM - Previous INFO": "01AA5366", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000002", 
+                "Emotion Value": 100, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 42 4D"
+            }, 
+            "NAM1 - Response Text": "Yes! Yes, I killed him!  He would have slit my throat!  Or so I thought.  But what if I was wrong?  What if I murdered Gustav in cold blood?", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000004", 
+                "Emotion Value": 100, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "57 42 4D"
+            }, 
+            "NAM1 - Response Text": "My friend...oh my friend!  Here, take the gem! Give it to Kolfinna, and may it ease her pain.  My suffering, my guilt, will never end!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMRetribution "A Wife's Retribution" [QUST:0101B6CF]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "02", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ingredUemeraldUpinetear "Pinetear" [INGR:010A006A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 90.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "TARGET - Target Reference [00000000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0sigvatrStheSstrong "Sigvatr the Strong" [NPC_:01260B11]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwbmretribution 50\r\nplayer.additem 0ingreduemeraldupinetear 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwBMRetribution [QUST:0101B6CF]", 
+            "SCRO - Global Reference": "0ingredUemeraldUpinetear [INGR:010A006A]"
+        ]
+    }
+}

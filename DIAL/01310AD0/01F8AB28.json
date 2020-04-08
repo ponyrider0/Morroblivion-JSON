@@ -1,0 +1,81 @@
+{
+    "Topic": "1loveSletter [DIAL:01310AD0]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 538, 
+        "Record Flags": {}, 
+        "FormID": "01F8AB28", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwEBUnrequited [QUST:01003427]", 
+    "PNAM - Previous INFO": "01F8AB27", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "61 79 6E"
+            }, 
+            "NAM1 - Response Text": "You found that? Oh, dear. I really meant to throw that away. It's all true, though. I have loved her since the moment I first set eyes on her.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "61 79 6E"
+            }, 
+            "NAM1 - Response Text": " I just haven't had the courage to speak to her yet. Perhaps you'll speak to her for me? Plead my case? I'd be very grateful.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwEBUnrequited "For the Love of a Bosmer" [QUST:01003427]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0gadaynSandarys "Gadayn Andarys" [NPC_:01260568]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1loveSletter1 [DIAL:01321FDC]", 
+        "TCLT - Choice": "1loveSletter2 [DIAL:01321FDA]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwebunrequited 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwEBUnrequited [QUST:01003427]"
+        ]
+    }
+}

@@ -1,0 +1,82 @@
+{
+    "Topic": "1guarShideSshipment [DIAL:0131078A]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 527, 
+        "Record Flags": {}, 
+        "FormID": "01F8AA5D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVInnocentAshlanders [QUST:01003406]", 
+    "PNAM - Previous INFO": "01F8AA5C", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 4D 56"
+            }, 
+            "NAM1 - Response Text": "We know of the incident of which you speak. Tinti and Hairan are honorable warriors, and would never steal. Perhaps this trader offended them in some way, or tried to steal from our herds.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 4D 56"
+            }, 
+            "NAM1 - Response Text": "Speak with them and make your charges, if you have the courage. They are here in camp, should you wish to speak with them.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVInnocentAshlanders "Marsus Tullius's Missing Hides" [QUST:01003406]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 80.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVInnocentAshlanders "Marsus Tullius's Missing Hides" [QUST:01003406]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInCell:67", 
+            "Unused": "00 00", 
+            "Parameter #1": "ErabenimsunSCamp "Erabenimsun Camp" [CELL:01480009]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

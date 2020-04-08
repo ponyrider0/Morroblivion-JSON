@@ -1,0 +1,86 @@
+{
+    "Topic": "1investigateSaScrime [DIAL:0131132D]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 510, 
+        "Record Flags": {}, 
+        "FormID": "01F8B1EC", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMTrial [QUST:0101B6D7]", 
+    "PNAM - Previous INFO": "01F8B1EB", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6D 77 42"
+            }, 
+            "NAM1 - Response Text": "Engar would never do a thing such as this. He is a man of honor, and we want for nothing. I cannot imagine what would drive Rigmor to make such an accusation. Perhaps he is jealous of my husband, and these charges are meant to disgrace him.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "02", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0bkUBMtrialUunique "Letter from Rigmor to Risi" [BOOK:01180259]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0risiSiceTmane "Risi Ice-Mane" [NPC_:01260B38]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 70.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMTrial "The Skaal Test of Wisdom" [QUST:0101B6D7]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMTrial "The Skaal Test of Wisdom" [QUST:0101B6D7]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 2D 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwbmtrial 45", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMTrial [QUST:0101B6D7]"
+        ]
+    }
+}

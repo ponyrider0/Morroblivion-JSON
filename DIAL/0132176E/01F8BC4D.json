@@ -1,0 +1,113 @@
+{
+    "Topic": "1myScollection7 [DIAL:0132176E]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 941, 
+        "Record Flags": {}, 
+        "FormID": "01F8BC4D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSClutterCollector [QUST:0101C61C]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "72 69 74"
+            }, 
+            "NAM1 - Response Text": "Excellent! Thank you so much. You are truly the Champion of Clutter. Accept this as my reward. Come back again and I may have more work for you.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0detritusScaria "Detritus Caria" [NPC_:01260AAE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "UpperSilverFork01 "Silver Fork" [MISC:0001924A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "UpperSilverKnife01 "Silver Knife" [MISC:00023C13]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "UpperSilverSpoon01 "Silver Spoon" [MISC:00023C1B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0miscUcomUmetalUplateU03 "Plate" [MISC:01160024]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0miscUdeUpotUredwareU04 "Redware Pot" [MISC:01160068]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 8, 
+            "CompiledSize": 136, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 1E 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 04 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 05 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 06 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 07 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 08 00 6E F4 01 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmscluttercollector 30\r\nplayer.removeitem uppersilverfork01 1\r\nplayer.removeitem uppersilverknife01 1\r\nplayer.removeitem uppersilverspoon01 1\r\nplayer.removeitem 0miscucomumetaluplateu03 1\r\nplayer.removeitem 0miscudeupoturedwareu04 1\r\nplayer.additem gold001 500\r\nmoddisposition player 10", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMSClutterCollector [QUST:0101C61C]", 
+            "SCRO - Global Reference": "UpperSilverFork01 [MISC:0001924A]", 
+            "SCRO - Global Reference": "UpperSilverKnife01 [MISC:00023C13]", 
+            "SCRO - Global Reference": "UpperSilverSpoon01 [MISC:00023C1B]", 
+            "SCRO - Global Reference": "0miscUcomUmetalUplateU03 [MISC:01160024]", 
+            "SCRO - Global Reference": "0miscUdeUpotUredwareU04 [MISC:01160068]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]"
+        ]
+    }
+}

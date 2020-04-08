@@ -1,0 +1,93 @@
+{
+    "Topic": "fbmwMQ11zsavilehaggle800 [DIAL:01025319]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 906, 
+        "Record Flags": {}, 
+        "FormID": "0102531D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ11z [QUST:01001DD3]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "74 65 6D"
+            }, 
+            "NAM1 - Response Text": "You drive a hard bargain. But I like to see a happy customer. I'll accept your offer, and thank you for your custom. Now, here's the key to her cage.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "74 65 6D"
+            }, 
+            "NAM1 - Response Text": "I've removed her slave bracers. When you're ready, you should speak to Falura Llervu and explain to her that she is to follow you back to Zainab camp to meet her future husband, Ashkhan Kaushad.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 60.000000000000000, 
+            "Function": "GetActorValue:14", 
+            "Unused": "00 00", 
+            "Parameter #1": "Mercantile [ACVA:0000001D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 800.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "Gold001 "Gold" [MISC:0000000F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0savileSimayn "Savile Imayn" [NPC_:01260480]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 7, 
+            "CompiledSize": 86, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 58 10 05 00 01 00 72 04 00 1C 00 01 00 52 10 0A 00 02 00 72 05 00 6E 20 03 00 00 02 10 0A 00 02 00 72 05 00 6E 20 03 00 00 1C 00 02 00 9E 10 05 00 01 00 72 06 00 39 10 0A 00 02 00 72 07 00 6E 28 00 00 00", 
+        "SCTX - Result script source": "Player.AddItem 0keyusavilecagekey 1\r\nAddTopic 1falurasllervu\r\nPlayer.RemoveItem gold001 800\r\nAddItem gold001 800\r\nfbFaluraREF.MoveTo mwFaluraPurchaseMarker\r\nSetStage fbmwMQ11z 40", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbfaluraref [ACHR:0182F171]", 
+            "SCRO - Global Reference": "0keyUsavilecagekey [KEYM:014000D0]", 
+            "SCRO - Global Reference": "1FaluraSLlervu [DIAL:0131097C]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "mwFaluraPurchaseMarker [REFR:0101404A]", 
+            "SCRO - Global Reference": "fbmwMQ11z [QUST:01001DD3]"
+        ]
+    }
+}

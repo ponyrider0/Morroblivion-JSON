@@ -1,0 +1,59 @@
+{
+    "Topic": "fbmwMQ09gofishing [DIAL:01020961]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 367, 
+        "Record Flags": {}, 
+        "FormID": "01020962", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMQ09 [QUST:01001DC4]", 
+    "PNAM - Previous INFO": "01020963", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "61 74 74"
+            }, 
+            "NAM1 - Response Text": "Good. I'm ready to take you to Holamayan any time you're ready to travel. And I'll be here to offer that service any time you need it.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0BlattaSHateria "Blatta Hateria" [NPC_:01260502]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 26, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 01 00 00 00 15 00 08 00 47 02 00 03 00 20 36 31", 
+        "SCTX - Result script source": "setstage fbmwmiloholago 1\r\nset MWDestinationCode to 61", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMiloHolago [QUST:01001DC5]", 
+            "SCRO - Global Reference": "MWDestinationCode [GLOB:01F8B224]"
+        ]
+    }
+}

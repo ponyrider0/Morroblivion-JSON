@@ -1,0 +1,96 @@
+{
+    "Topic": "1CalderaSebonySmines [DIAL:01310724]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 712, 
+        "Record Flags": {}, 
+        "FormID": "0132083E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHRCalderaDisrupt [QUST:01004319]", 
+    "PNAM - Previous INFO": "0132083D", 
+    "Add topics": [
+        "NAME - Topic": "01310CC5", 
+        "NAME - Topic": "01310CAF", 
+        "NAME - Topic": "013106A9", 
+        "NAME - Topic": "013109E5"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Yes, killing the head slave Dahleena will make the Hlaalu's mining more difficult. Good slaves are so hard to find these days...", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I expect the Hlaalu will not resume mining for at least a month.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "You have earned my support on the Council, and I want you to have these fine boots made from the blood of Red Mountain.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "0dahleena "Dahleena" [NPC_:01260349]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0garisaSllethri "Garisa Llethri" [NPC_:012600AA]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 6E 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHRCalderaDisrupt 110\r\nPlayer.Additem 0ebonyUboots 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwHRCalderaDisrupt [QUST:01004319]", 
+            "SCRO - Global Reference": "0ebonyUboots [ARMO:01120092]"
+        ]
+    }
+}

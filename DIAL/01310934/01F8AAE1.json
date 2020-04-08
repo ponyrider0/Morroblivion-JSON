@@ -1,0 +1,87 @@
+{
+    "Topic": "1OreynSBearclaw [DIAL:01310934]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 499, 
+        "Record Flags": {}, 
+        "FormID": "01F8AAE1", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwDAMalacath [QUST:01002C88]", 
+    "PNAM - Previous INFO": "01F8AAE0", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 44 41"
+            }, 
+            "NAM1 - Response Text": "Great are the tales of Oreyn Bearclaw! And his legacy continues! Farvyn Oreyn, the great battlemage lives the life of his ancestors, protecting all the people of the land from danger.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInCell:67", 
+            "Unused": "00 00", 
+            "Parameter #1": "Vivec "Vivec" [CELL:01480021]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "20", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "noLore "noLore" [FACT:0122001C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwDAMalacath "Malacath's Quest" [QUST:01002C88]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwDAMalacath "Malacath's Quest" [QUST:01002C88]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 14 00 00 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "setstage fbmwdamalacath 20\r\naddtopic 1farvynsoreyn", 
+        "References": [
+            "SCRO - Global Reference": "fbmwDAMalacath [QUST:01002C88]", 
+            "SCRO - Global Reference": "1FarvynSOreyn [DIAL:01310A3C]"
+        ]
+    }
+}

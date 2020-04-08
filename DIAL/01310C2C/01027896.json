@@ -1,0 +1,88 @@
+{
+    "Topic": "1Counsel [DIAL:01310C2C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 645, 
+        "Record Flags": {}, 
+        "FormID": "01027896", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ11z [QUST:01001DD3]", 
+    "PNAM - Previous INFO": "01027897", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "4D 57 4D"
+            }, 
+            "NAM1 - Response Text": "Hmm. I see. Ashkhan Kaushad will not take seriously your request to be named as Zainab Nerevarine. Let me tell you a little secret about our chief.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "4D 57 4D"
+            }, 
+            "NAM1 - Response Text": "Kaushad would not have it be known, but he has a weakness for expensive outlander clothing. If you bring him a pair of exquisite shoes, he might be be better disposed towards you.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 2.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ11z "Zainab Nereverine" [QUST:01001DD3]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 4.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ11z "Zainab Nereverine" [QUST:01001DD3]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0sonummuSzabamat "Sonummu Zabamat" [NPC_:0126018D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 03 00 00 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "SetStage fbmwMQ11z 3\r\naddtopic 1exquisitesshoes", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQ11z [QUST:01001DD3]", 
+            "SCRO - Global Reference": "1exquisiteSshoes [DIAL:0131088B]"
+        ]
+    }
+}

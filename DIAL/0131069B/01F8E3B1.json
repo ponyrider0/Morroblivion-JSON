@@ -1,0 +1,99 @@
+{
+    "Topic": "1mythopoeicSenchantments [DIAL:0131069B]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 782, 
+        "Record Flags": {}, 
+        "FormID": "01F8E3B1", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQTheBackPath [QUST:01002C54]", 
+    "PNAM - Previous INFO": "01F8E3B0", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 4D 51"
+            }, 
+            "NAM1 - Response Text": "You've found Kagrenac's Journals and Kagrenac's Planbook! Good. I'll take them and study them. It shouldn't take long. Give me a day, then come back, and I think I can restore Wraithguard's mythopoeic enchantments.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "02", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0miscUwraithguardUnoUequip "Unique Dwemer Artifact" [MISC:011600E3]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "02", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0bkUkagrenacAsplansUexcl "Kagrenac's Planbook" [BOOK:01180136]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "02", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0bkUkagrenacAsjournalUexcl "Kagrenac's Journal" [BOOK:01180146]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 3.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQTheBackPath "Yagrum Bagarn and Wraithguard" [QUST:01002C54]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "FBMWTempDwemer "Yagrum Bagarn" [NPC_:010033C5]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 78, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 39 10 0A 00 02 00 72 04 00 6E 19 00 00 00", 
+        "SCTX - Result script source": "player.removeitem 0bkUkagrenacAsjournalUexcl 1\r\nplayer.removeitem 0bkUkagrenacAsplansUexcl 1\r\nadditem 0bkUkagrenacAsjournalUexcl 1\r\nadditem 0bkUkagrenacAsplansUexcl 1\r\nSetStage fbmwMQTheBackPath 25", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0bkUkagrenacAsjournalUexcl [BOOK:01180146]", 
+            "SCRO - Global Reference": "0bkUkagrenacAsplansUexcl [BOOK:01180136]", 
+            "SCRO - Global Reference": "fbmwMQTheBackPath [QUST:01002C54]"
+        ]
+    }
+}

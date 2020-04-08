@@ -1,0 +1,35 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 888, 
+        "Record Flags": {}, 
+        "FormID": "01F8E844", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "FbmwPlagueOrdBasement", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 272, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 A9 00 00 00 16 00 0F 00 01 00 0B 00 20 58 2E 10 00 00 20 31 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 15 00 04 00 11 00 20 58 3A 10 05 00 01 00 72 01 00 20 38 30 20 3E 3D 16 00 0D 00 02 00 09 00 20 73 01 00 20 30 20 3D 3D 10 10 09 00 02 00 0A 00 6E F0 D8 FF FF 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 19 00 00 00 16 00 16 00 03 00 12 00 20 58 3A 10 05 00 01 00 72 01 00 20 31 30 35 20 3E 3D 16 00 0D 00 01 00 09 00 20 73 01 00 20 31 20 3D 3D 0F 10 09 00 02 00 0A 00 6E 41 01 00 00 19 00 00 00 19 00 00 00 11 00 00 00 10 00 08 00 02 00 4D 00 00 00 00 00 16 00 15 00 01 00 11 00 20 58 3A 10 05 00 01 00 72 01 00 20 31 30 35 20 3C 00 10 28 00 01 00 20 00 20 54 68 69 73 20 67 75 61 72 64 20 68 61 73 20 62 65 65 6E 20 6B 6E 6F 63 6B 65 64 20 6F 75 74 00 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn FbmwPlagueOrdBasement\n\nshort Knockedout\n\nbegin gamemode\n	if GetDead == 1\n		return\n	endif\n\n	if GetStage fbmwMSCrimsonPlague >= 80\n		if Knockedout == 0\n			modAV fatigue -10000\n			set Knockedout to 1\n		endif\n	endif\n\n	if  GetStage fbmwMSCrimsonPlague >= 105 \n		if  Knockedout == 1\n			setAV fatigue 321\n		endif\n	endif\nend\n\nbegin onActivate\n	if GetStage fbmwMSCrimsonPlague < 105\n		MessageBox \" This guard has been knocked out\"\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "Knockedout"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwMSCrimsonPlague [QUST:0101C61D]"
+    ]
+}

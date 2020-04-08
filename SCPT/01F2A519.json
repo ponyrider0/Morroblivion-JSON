@@ -1,0 +1,25 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 954, 
+        "Record Flags": {}, 
+        "FormID": "01F2A519", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwreehjahscript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 4, 
+        "CompiledSize": 251, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 12 00 00 00 00 00 39 10 0A 00 02 00 72 02 00 6E 5A 00 00 00 11 00 00 00 10 00 06 00 00 00 CF 00 00 00 16 00 14 00 01 00 10 00 20 58 38 10 05 00 01 00 72 02 00 20 30 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 29 00 03 00 25 00 20 58 01 10 05 00 01 00 72 03 00 20 32 35 36 20 3C 3D 20 58 3A 10 05 00 01 00 72 02 00 20 39 37 20 3C 20 26 26 39 10 0A 00 02 00 72 02 00 6E 61 00 00 00 15 00 0A 00 72 02 00 73 01 00 02 00 20 30 1C 00 01 00 5E 10 00 00 19 00 00 00 16 00 2A 00 03 00 26 00 20 58 01 10 05 00 01 00 72 04 00 20 35 31 32 20 3C 3D 20 58 3A 10 05 00 01 00 72 02 00 20 31 30 33 20 3C 20 26 26 39 10 0A 00 02 00 72 02 00 6E 67 00 00 00 15 00 0A 00 72 02 00 73 01 00 02 00 20 30 1C 00 01 00 5E 10 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwreehjahscript\n\nBegin onDeath\n	SetStage fbmwMVRunawaySlave 90\nEND\n\nBegin GameMode\n	if GetQuestRunning fbmwMVRunawaySlave == 0\n		return\n	endif\n\n	if GetDistance mwReehJahFreedomMarker <= 256 && GetStage fbmwMVRunawaySlave < 97\n		SetStage fbmwMVRunawaySlave 97\n		SET fbmwMVRunawaySlave.FollowNow TO 0\n		mwReehJahREF.EvaluatePackage\n	ENDIF\n\n	IF GetDistance mwSavileImaynREF <= 512 && GetStage fbmwMVRunawaySlave < 103\n		SetStage fbmwMVRunawaySlave 103\n		SET fbmwMVRunawaySlave.FollowNow TO 0\n		mwReehJahREF.EvaluatePackage\n	ENDIF	\nEND\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "mwReehJahREF [ACHR:0183FEC4]", 
+        "SCRO - Global Reference": "fbmwMVRunawaySlave [QUST:01003410]", 
+        "SCRO - Global Reference": "mwReehJahFreedomMarker [REFR:0100F94D]", 
+        "SCRO - Global Reference": "mwSavileImaynREF [ACHR:0182AE1F]"
+    ]
+}

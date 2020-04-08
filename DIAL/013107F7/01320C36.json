@@ -1,0 +1,89 @@
+{
+    "Topic": "1oneSthingSfurther [DIAL:013107F7]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 705, 
+        "Record Flags": {}, 
+        "FormID": "01320C36", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwVAVampCurse [QUST:01003BCD]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310BF3", 
+        "NAME - Topic": "01310BF3", 
+        "NAME - Topic": "01310BA7"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "This spell will take a great deal of strength to dispel. Azura has left me weakened, and I will not be strong enough to do it myself.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "You must lend me your strength, your endurance, your very life essence in order for me to succeed.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Do this, and I will be free of this place, and will begin my conquest of the world above!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0mastrius "Mastrius" [NPC_:01260A04]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1oneSthingSfurther1 [DIAL:01320C35]", 
+        "TCLT - Choice": "1oneSthingSfurther2 [DIAL:01320C33]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 3C 00 00 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "setstage fbmwVAVampcurse 60\r\naddtopic 1endurance\r\naddtopic 1strength", 
+        "References": [
+            "SCRO - Global Reference": "fbmwVAVampCurse [QUST:01003BCD]", 
+            "SCRO - Global Reference": "1endurance [DIAL:01310BA7]", 
+            "SCRO - Global Reference": "1strength [DIAL:01310BF3]"
+        ]
+    }
+}

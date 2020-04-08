@@ -1,0 +1,72 @@
+{
+    "Topic": "1Odirniran1 [DIAL:013224C7]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 458, 
+        "Record Flags": {}, 
+        "FormID": "01323577", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHTOdirniran [QUST:01003446]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310C77", 
+        "NAME - Topic": "01310D0E"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Yes, quite. Why not take a sample of these new scrolls and examine them yourself? Now, if you will excuse me, I really must get back to work now.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "02", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Telvanni "Great House Telvanni" [FACT:01220006]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0milynSfaram "Milyn Faram" [NPC_:01260171]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 5A 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 07 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHTOdirniran 90\r\nPlayer.AddItem 0scUsummondaedrothUhto 7", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwHTOdirniran [QUST:01003446]", 
+            "SCRO - Global Reference": "0scUsummondaedrothUhto [BOOK:011801D9]"
+        ]
+    }
+}

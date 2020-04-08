@@ -1,0 +1,87 @@
+{
+    "Topic": "1NewTShoesSBragor [DIAL:01310839]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 521, 
+        "Record Flags": {}, 
+        "FormID": "01F8A3E3", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTGBrotherBragor [QUST:01009328]", 
+    "PNAM - Previous INFO": "01F8A3E2", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 54 47"
+            }, 
+            "NAM1 - Response Text": "Habasi wanted to help our brother escape from prison, but it seems the person who would be able to help us is dead. This is bad.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 54 47"
+            }, 
+            "NAM1 - Response Text": "If he tries to leave without help from the inside, they will kill him. We will have to move on to other jobs.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "0shadbakSgraTburbug "Shadbak gra-Burbug" [NPC_:01260072]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 110.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTGBrotherBragor "Thieves Guild: Free New-Shoes Bragor" [QUST:01009328]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0habasi "Sugar-Lips Habasi" [NPC_:01260133]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0B 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwtgbrotherbragor 11", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTGBrotherBragor [QUST:01009328]"
+        ]
+    }
+}

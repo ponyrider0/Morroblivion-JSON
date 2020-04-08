@@ -1,0 +1,82 @@
+{
+    "Topic": "1DuniraiSCaverns [DIAL:0131089D]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 672, 
+        "Record Flags": {}, 
+        "FormID": "01F8A43E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Say Once": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwFGDuniraiSupply [QUST:010033D8]", 
+    "PNAM - Previous INFO": "01F8A43D", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 46 47"
+            }, 
+            "NAM1 - Response Text": "Workers in the Adas Mine have been complaining that they're out of sujamma, and the Fighters Guild is responsible for supplying the Imperial mines in Vvardenfell.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 46 47"
+            }, 
+            "NAM1 - Response Text": "Take this load of sujamma to Nelacar in the Dunirai Caverns southeast of Ghostgate between the Foyada Esannudan and the Foyada Ashur-Dan.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwFGTenimBounty "Fighters Guild: Tenim's Bounty" [QUST:010033EB]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0hrundi "Hrundi" [NPC_:012601BA]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 41, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 0A 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 14 00 00 00 58 10 05 00 01 00 72 04 00", 
+        "SCTX - Result script source": "setstage fbmwfgduniraisupply 10\r\nplayer.additem 0potionulocaluliquoru01 20\r\naddtopic 1sujamma", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwFGDuniraiSupply [QUST:010033D8]", 
+            "SCRO - Global Reference": "0potionUlocalUliquorU01 [ALCH:01080006]", 
+            "SCRO - Global Reference": "1sujamma [DIAL:01310C26]"
+        ]
+    }
+}

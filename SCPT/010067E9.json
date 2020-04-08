@@ -1,0 +1,62 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 3008, 
+        "Record Flags": {}, 
+        "FormID": "010067E9", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwHTStrongholdQuestScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 17, 
+        "CompiledSize": 656, 
+        "VariableCount": 2, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 82 02 00 00 16 00 15 00 0A 00 11 00 20 58 3A 10 05 00 01 00 72 10 00 20 35 30 20 3D 3D 16 00 0D 00 05 00 09 00 20 73 01 00 20 30 20 3D 3D 15 00 09 00 73 02 00 04 00 20 47 11 00 1C 00 01 00 21 10 00 00 1C 00 02 00 21 10 00 00 1C 00 03 00 21 10 00 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 16 00 12 00 01 00 0E 00 20 47 11 00 20 73 02 00 20 2D 20 35 20 3E 39 10 0A 00 02 00 72 10 00 6E 37 00 00 00 19 00 00 00 18 00 15 00 0D 00 11 00 20 58 3A 10 05 00 01 00 72 10 00 20 39 30 20 3D 3D 16 00 0D 00 02 00 09 00 20 73 01 00 20 31 20 3D 3D 15 00 09 00 73 02 00 04 00 20 47 11 00 15 00 07 00 73 01 00 02 00 20 32 19 00 00 00 16 00 12 00 07 00 0E 00 20 47 11 00 20 73 02 00 20 2D 20 35 20 3E 1C 00 01 00 22 10 00 00 1C 00 02 00 22 10 00 00 1C 00 03 00 22 10 00 00 1C 00 04 00 21 10 00 00 1C 00 05 00 21 10 00 00 1C 00 06 00 21 10 00 00 39 10 0A 00 02 00 72 10 00 6E 64 00 00 00 19 00 00 00 18 00 16 00 12 00 12 00 20 58 3A 10 05 00 01 00 72 10 00 20 31 37 30 20 3D 3D 16 00 0D 00 05 00 09 00 20 73 01 00 20 32 20 3D 3D 15 00 09 00 73 02 00 04 00 20 47 11 00 1C 00 07 00 21 10 00 00 1C 00 08 00 21 10 00 00 1C 00 09 00 21 10 00 00 15 00 07 00 73 01 00 02 00 20 33 19 00 00 00 16 00 12 00 09 00 0E 00 20 47 11 00 20 73 02 00 20 2D 20 35 20 3E 1C 00 07 00 22 10 00 00 1C 00 08 00 22 10 00 00 1C 00 09 00 22 10 00 00 1C 00 04 00 22 10 00 00 1C 00 0A 00 21 10 00 00 1C 00 0B 00 21 10 00 00 1C 00 0C 00 21 10 00 00 1C 00 0D 00 21 10 00 00 39 10 0A 00 02 00 72 10 00 6E C8 00 00 00 19 00 00 00 18 00 16 00 0B 00 12 00 20 58 3A 10 05 00 01 00 72 10 00 20 32 35 30 20 3D 3D 16 00 0D 00 03 00 09 00 20 73 01 00 20 33 20 3D 3D 15 00 09 00 73 02 00 04 00 20 47 11 00 1C 00 0E 00 21 10 00 00 15 00 07 00 73 01 00 02 00 20 34 19 00 00 00 16 00 12 00 04 00 0E 00 20 47 11 00 20 73 02 00 20 2D 20 35 20 3E 1C 00 0E 00 22 10 00 00 1C 00 0B 00 22 10 00 00 1C 00 0F 00 21 10 00 00 39 10 0A 00 02 00 72 10 00 6E FF 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwHTStrongholdQuestScript\n\nSHORT BuildProgress\nSHORT BuildTime\n\n\nBEGIN GameMode\n	IF GetStage fbmwHTStronghold == 50\n		IF BuildProgress == 0\n			SET BuildTime TO GameDaysPassed\n\n			fbmwHTStrongholdConstruction1.Enable	;player stronghold\n\n			fbmwHHStrongholdConstruction1.Enable	;non-player stronghold\n			fbmwHRStrongholdConstruction1.Enable	;\n\n			SET BuildProgress TO 1\n		ENDIF\n\n		IF GameDaysPassed - BuildTime > 5\n			SetStage fbmwHTStronghold 55\n		ENDIF\n\n	ELSEIF GetStage fbmwHTStronghold == 90\n		IF BuildProgress == 1\n			SET BuildTime TO GameDaysPassed\n			SET BuildProgress TO 2\n		ENDIF\n\n		IF GameDaysPassed - BuildTime > 5\n			fbmwHTStrongholdConstruction1.Disable\n\n			fbmwHHStrongholdConstruction1.Disable\n			fbmwHRStrongholdConstruction1.Disable\n\n			fbmwHTStrongholdStage1.Enable\n\n			fbmwHHStrongholdStage1.Enable\n			fbmwHRStrongholdStage1.Enable\n\n			SetStage fbmwHTStronghold 100\n		ENDIF\n\n	ELSEIF GetStage fbmwHTStronghold == 170\n		IF BuildProgress == 2\n			SET BuildTime TO GameDaysPassed\n\n			fbmwHTStrongholdConstruction2.Enable\n\n			fbmwHHStrongholdConstruction2.Enable\n			fbmwHRStrongholdConstruction2.Enable\n\n			SET BuildProgress TO 3\n		ENDIF\n\n		IF GameDaysPassed - BuildTime > 5\n			fbmwHTStrongholdConstruction2.Disable\n\n			fbmwHHStrongholdConstruction2.Disable\n			fbmwHRStrongholdConstruction2.Disable\n\n			fbmwHTStrongholdStage1.Disable\n			fbmwHTStrongholdStage2.Enable\n			fbmwHTStrongholdStage2Only.Enable\n\n			fbmwHHStrongholdStage2.Enable\n			fbmwHRStrongholdStage2.Enable\n\n			SetStage fbmwHTStronghold 200\n		ENDIF\n\n	ELSEIF GetStage fbmwHTStronghold == 250\n		IF BuildProgress == 3\n			SET BuildTime TO GameDaysPassed\n			fbmwHTStrongholdConstruction3.Enable\n			SET BuildProgress TO 4\n		ENDIF\n\n		IF GameDaysPassed - BuildTime > 5\n			fbmwHTStrongholdConstruction3.Disable\n			fbmwHTStrongholdStage2Only.Disable\n			fbmwHTStrongholdStage3.Enable\n\n			SetStage fbmwHTStronghold 255\n		ENDIF\n\n	ENDIF ; GetStage fbmwHTStronghold\n\nEND ; GameMode\n;<CSEBlock>\n;<CSECaretPos> 1827 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "BuildProgress"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "48 54 53 74 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "6F 6E 73 74 72 75 63"
+            }, 
+            "SCVR - Name": "BuildTime"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwHTStrongholdConstruction1 [REFR:0100A610]", 
+        "SCRO - Global Reference": "fbmwHHStrongholdConstruction1 [REFR:0100A606]", 
+        "SCRO - Global Reference": "fbmwHRStrongholdConstruction1 [REFR:01015A90]", 
+        "SCRO - Global Reference": "fbmwHTStrongholdStage1 [REFR:0100A613]", 
+        "SCRO - Global Reference": "fbmwHHStrongholdStage1 [REFR:0100A60A]", 
+        "SCRO - Global Reference": "fbmwHRStrongholdStage1 [REFR:01015A8C]", 
+        "SCRO - Global Reference": "fbmwHTStrongholdConstruction2 [REFR:0100A60F]", 
+        "SCRO - Global Reference": "fbmwHHStrongholdConstruction2 [REFR:0100A602]", 
+        "SCRO - Global Reference": "fbmwHRStrongholdConstruction2 [REFR:01015A92]", 
+        "SCRO - Global Reference": "fbmwHTStrongholdStage2 [REFR:0100A612]", 
+        "SCRO - Global Reference": "fbmwHTStrongholdStage2Only [REFR:01003A17]", 
+        "SCRO - Global Reference": "fbmwHHStrongholdStage2 [REFR:0100A60B]", 
+        "SCRO - Global Reference": "fbmwHRStrongholdStage2 [REFR:01015A8D]", 
+        "SCRO - Global Reference": "fbmwHTStrongholdConstruction3 [REFR:0100A60D]", 
+        "SCRO - Global Reference": "fbmwHTStrongholdStage3 [REFR:0100A611]", 
+        "SCRO - Global Reference": "fbmwHTStronghold [QUST:0100344D]", 
+        "SCRO - Global Reference": "GameDaysPassed [GLOB:00000039]"
+    ]
+}

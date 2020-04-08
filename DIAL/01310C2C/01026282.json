@@ -1,0 +1,151 @@
+{
+    "Topic": "1Counsel [DIAL:01310C2C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1039, 
+        "Record Flags": {}, 
+        "FormID": "01026282", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ12 [QUST:01002C51]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "You need to know...", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "Where is Dagoth Ur?", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "7D 95 BB"
+            }, 
+            "NAM1 - Response Text": "What are Dagoth Ur's plans?", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "7D 95 BB"
+            }, 
+            "NAM1 - Response Text": "Who are Dagoth Ur's servants?", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "05", 
+                "Unused": "7D 95 BB"
+            }, 
+            "NAM1 - Response Text": "Who is Dagoth Ur?", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "06", 
+                "Unused": "7D 95 BB"
+            }, 
+            "NAM1 - Response Text": "What are Dagoth Ur's powers?", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "07", 
+                "Unused": "7D 95 BB"
+            }, 
+            "NAM1 - Response Text": "What is known about Dagoth Ur's defenses?", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "08", 
+                "Unused": "7D 95 BB"
+            }, 
+            "NAM1 - Response Text": "How can I prepare for battle against Dagoth Ur?", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "09", 
+                "Unused": "7D 95 BB"
+            }, 
+            "NAM1 - Response Text": "Who can help?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwVivec "Vivec" [NPC_:0102626A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 8, 
+            "CompiledSize": 72, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 58 10 05 00 01 00 72 04 00 58 10 05 00 01 00 72 05 00 58 10 05 00 01 00 72 06 00 58 10 05 00 01 00 72 07 00 58 10 05 00 01 00 72 08 00", 
+        "SCTX - Result script source": "addtopic 1wheresissdagothsur\r\naddtopic 1dagothsurassplans\r\naddtopic 1dagothsurassservants\r\naddtopic 1dagothsur\r\naddtopic 1dagothsurasspowers\r\naddtopic 1dagothsurassdefenses\r\naddtopic 1preparesforsbattle\r\naddtopic 1whoscanshelp", 
+        "References": [
+            "SCRO - Global Reference": "1whereSisSDagothSUr [DIAL:01310771]", 
+            "SCRO - Global Reference": "1DagothSUrAsSplans [DIAL:013107D2]", 
+            "SCRO - Global Reference": "1DagothSUrAsSservants [DIAL:01310703]", 
+            "SCRO - Global Reference": "1DagothSUr [DIAL:01310B5E]", 
+            "SCRO - Global Reference": "1DagothSUrAsSpowers [DIAL:01310772]", 
+            "SCRO - Global Reference": "1DagothSUrAsSdefenses [DIAL:01310704]", 
+            "SCRO - Global Reference": "1prepareSforSbattle [DIAL:01310773]", 
+            "SCRO - Global Reference": "1whoScanShelp [DIAL:01310A06]"
+        ]
+    }
+}

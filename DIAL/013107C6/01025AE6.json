@@ -1,0 +1,98 @@
+{
+    "Topic": "1TelvanniSHortator [DIAL:013107C6]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 822, 
+        "Record Flags": {}, 
+        "FormID": "01025AE6", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQTelvanniAryon [QUST:01002C4B]", 
+    "PNAM - Previous INFO": "01320B5D", 
+    "Add topics": [
+        "NAME - Topic": "01310729", 
+        "NAME - Topic": "01310BDA", 
+        "NAME - Topic": "0131092C", 
+        "NAME - Topic": "01310BDA", 
+        "NAME - Topic": "01310D0B", 
+        "NAME - Topic": "01310BDA"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I see you've gathered the votes of all the surviving Telvanni councilors. That means you are now the Hortator of House Telvanni.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "And I have something for you. It's called the \"Robe of the Hortator.\" It is an ancient artifact, and hasn't been used in centuries.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "But I think you'll be pleased. I wish you luck, Hortator. I may even pray for you.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 5.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQTelvanni "Telvanni Hortator" [QUST:01002C4A]", 
+            "Parameter #2": "hortvotes", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0aryon "Aryon" [NPC_:0126040A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 57, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 39 10 0A 00 02 00 72 02 00 6E 46 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 F8 10 07 00 01 00 6E 04 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMQTelvanni 50\r\nSetStage fbmwMQTelvanni 70\r\nplayer.additem 0hortatorrobe 1\r\nmodpcfame 4", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMQTelvanni [QUST:01002C4A]", 
+            "SCRO - Global Reference": "0hortatorrobe [CLOT:01140151]"
+        ]
+    }
+}

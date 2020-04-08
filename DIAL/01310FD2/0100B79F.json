@@ -1,0 +1,100 @@
+{
+    "Topic": "1protectSBarenziah [DIAL:01310FD2]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 904, 
+        "Record Flags": {}, 
+        "FormID": "0100B79F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRAssassins [QUST:0101C64F]", 
+    "PNAM - Previous INFO": "0100B79E", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "It would be unwise to station more guards outside her doors, as that would alert the killers to our knowledge. Better to catch them in the act.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "One of our royal guards could be involved in this attempt, so they will be kept occupied elsewhere.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "You will stay in the antechamber outside our mother's chambers tomorrow evening, and deal with these assassins when they arrive.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "Close the door behind you and hide behind the screens, so as not to alert them to your presence. Meantime, find out whatever else you can.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 80.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRAssassins "An Assassination Attempt" [QUST:0101C64F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0KingSHlaaluSHelseth "King Hlaalu Helseth" [NPC_:01260A7D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 30, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 50 00 00 00 15 00 0C 00 72 01 00 73 03 00 04 00 20 47 02 00", 
+        "SCTX - Result script source": "setstage fbmwtrassassins 80\r\nset fbmwtrassassins.FightDay to gamedayspassed", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTRAssassins [QUST:0101C64F]", 
+            "SCRO - Global Reference": "GameDaysPassed [GLOB:00000039]"
+        ]
+    }
+}

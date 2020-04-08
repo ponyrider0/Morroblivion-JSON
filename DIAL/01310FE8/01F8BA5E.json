@@ -1,0 +1,86 @@
+{
+    "Topic": "1particularSitem [DIAL:01310FE8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 574, 
+        "Record Flags": {}, 
+        "FormID": "01F8BA5E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSEstateSale [QUST:0101C61E]", 
+    "PNAM - Previous INFO": "01F8BA5D", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6E 73 61"
+            }, 
+            "NAM1 - Response Text": "A Droth Dagger?  Well, that's quite a coincidence.  My husband did, in fact, own one.  A rare item, I've learned.  I honestly have no idea where he got it, and I frankly don't like the look of the thing.  You seem like a good sort, so I'll make you a deal. ", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6E 73 61"
+            }, 
+            "NAM1 - Response Text": "I'd like to get rid of it, so I'll part with it for, say, 600 gold.  Interested?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 70.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "TARGET - Target Reference [00000000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ArnsaSThendas "Arnsa Thendas" [NPC_:01260A7E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSEstateSale "Estate Sale" [QUST:0101C61E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1particularSitem1 [DIAL:01320FF5]", 
+        "TCLT - Choice": "1particularSitem2 [DIAL:01320FF8]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

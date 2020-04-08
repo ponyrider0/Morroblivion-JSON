@@ -1,0 +1,106 @@
+{
+    "Topic": "1availableSforShire [DIAL:01310FBF]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 754, 
+        "Record Flags": {}, 
+        "FormID": "01320A52", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMercCalvusQuest [QUST:01024454]", 
+    "PNAM - Previous INFO": "01320A51", 
+    "Add topics": [
+        "NAME - Topic": "01311041", 
+        "NAME - Topic": "01310C9B", 
+        "NAME - Topic": "01310FEB", 
+        "NAME - Topic": "01310D0E", 
+        "NAME - Topic": "0131108A", 
+        "NAME - Topic": "0131108A", 
+        "NAME - Topic": "01310D0E"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "For 250 gold I'll serve as bodyguard and companion for 30 days. I'm strong, and I don't mind heavy loads. I'm healthy, and quick to heal.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Heal me if you can --keep me healthy, and you'll get your money's worth. But I won't stand for any abuse. I work for profit.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I've got my own gear and gold. If you ever leave me with less Profit than my own gear and gold, then I quit immediately, and never work for you again.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0CalvusSHoratius "Calvus Horatius" [NPC_:01260A98]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "82", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 250.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "Gold001 "Gold" [MISC:0000000F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1availableSforShire1 [DIAL:01320A50]", 
+        "TCLT - Choice": "1availableSforShire2 [DIAL:01320A4E]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

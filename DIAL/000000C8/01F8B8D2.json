@@ -1,0 +1,102 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1024, 
+        "Record Flags": {}, 
+        "FormID": "01F8B8D2", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwBMWildHunt [QUST:0101B6DA]", 
+    "PNAM - Previous INFO": "01F8AFD7", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "72 73 74"
+            }, 
+            "NAM1 - Response Text": "Ahhh...you have arrived.The others have been here for days now, and you are the last.It is time for my Hunt, and you are to take part.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "72 73 74"
+            }, 
+            "NAM1 - Response Text": "I have chosen only the most worthy to take part the Hunt--Carius of the Imperials, Heart-Fang of the Skaal, the frost giant Karstaag....and you.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "72 73 74"
+            }, 
+            "NAM1 - Response Text": "You have proven yourself a worthy hunter, and so you have been given this honor.You and the others are to find your way to my Hunting Grounds.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "72 73 74"
+            }, 
+            "NAM1 - Response Text": "Take great care, as only one of you will earn the glory of facing the Hunter himself in battle while the Bloodmoon lights the sky.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "05", 
+                "Unused": "72 73 74"
+            }, 
+            "NAM1 - Response Text": "The others have gone ahead, so only you remain to begin.Beware, mortal--my Hounds are about, and they hunger for blood.Perhaps I will see you soon.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0BMUhircine "Hircine" [NPC_:01F8B09F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 14 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwbmWildHunt 20", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMWildHunt [QUST:0101B6DA]"
+        ]
+    }
+}

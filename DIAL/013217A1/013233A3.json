@@ -1,0 +1,70 @@
+{
+    "Topic": "1SkullTCrusher5 [DIAL:013217A1]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 475, 
+        "Record Flags": {}, 
+        "FormID": "013233A3", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSMuseum [QUST:0101C629]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Excellent.  This will make a wonderful addition to our collection.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0TorasaSAram "Torasa Aram" [NPC_:01260A80]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0warhammerUcrusherUunique "Skull Crusher" [WEAP:01100196]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 58, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 15 00 0A 00 72 04 00 73 17 00 02 00 20 31 1C 00 02 00 21 10 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E C0 5D 00 00", 
+        "SCTX - Result script source": "player.removeitem 0warhammerUcrusherUunique 1\r\nset fbmwMSMuseum.skullcrusher to 1\r\nmwCrusherMuseumREF.enable\r\nplayer.additem Gold001 24000", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "mwCrusherMuseumREF [REFR:01F04650]", 
+            "SCRO - Global Reference": "0warhammerUcrusherUunique [WEAP:01100196]", 
+            "SCRO - Global Reference": "fbmwMSMuseum [QUST:0101C629]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]"
+        ]
+    }
+}

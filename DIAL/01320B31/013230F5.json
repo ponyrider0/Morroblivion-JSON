@@ -1,0 +1,70 @@
+{
+    "Topic": "1TelvanniSHortator2 [DIAL:01320B31]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 364, 
+        "Record Flags": {}, 
+        "FormID": "013230F5", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQTelvanniTherana [QUST:01002C50]", 
+    "PNAM - Previous INFO": "013230E7", 
+    "Add topics": [
+        "NAME - Topic": "01310BDA", 
+        "NAME - Topic": "01310CF8"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "What? Oh. You want to be a Hortator? Certainly. Go right ahead. Whatever you like. I don't mind. What were we talking about?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0therana "Therana" [NPC_:01260412]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 80.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "PlayerRef [PLYR:00000014]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 32 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMQTelvanniTherana 50", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQTelvanniTherana [QUST:01002C50]"
+        ]
+    }
+}

@@ -1,0 +1,68 @@
+{
+    "Topic": "1DroASakhar [DIAL:01310AFE]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 316, 
+        "Record Flags": {}, 
+        "FormID": "01322328", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Say Once": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwFGKhajiitBounty [QUST:010033DE]", 
+    "PNAM - Previous INFO": "01322327", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I got a bounty on this Khajiit outlaw Dro'Sakhar. He's hiding here in Vivec. In St. Olms, I think.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0lorbumolSgroTaglakh "Lorbumol gro-Aglakh" [NPC_:01260269]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwFGTongueToad "Fighters Guild: Silence Tongue-Toad" [QUST:010033EC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwfgkhajiitbounty 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwFGKhajiitBounty [QUST:010033DE]"
+        ]
+    }
+}

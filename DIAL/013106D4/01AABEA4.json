@@ -1,0 +1,99 @@
+{
+    "Topic": "1watchedSbySOrdinators [DIAL:013106D4]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 801, 
+        "Record Flags": {}, 
+        "FormID": "01AABEA4", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ04 [QUST:01001DB9]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "68 72 61"
+            }, 
+            "NAM1 - Response Text": "I do not care for Temple politics. But I have read 'Progress of Truth,' and it troubles me.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "68 72 61"
+            }, 
+            "NAM1 - Response Text": "I have friends, former priests, who have gone into hiding, so I am bound to come to the attention of the Ordinators. I am careful, but I'm afraid.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "68 72 61"
+            }, 
+            "NAM1 - Response Text": "I'm no secret agent, like you or Caius. Sooner or later I, too, must go into hiding. If it is not too late.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "68 72 61"
+            }, 
+            "NAM1 - Response Text": "When you return to Caius, tell him I am worried, and that if something goes wrong, I will leave a message under the agreed code word 'amaya'.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ04a "Milo Informant" [QUST:01F0A290]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0mehraSmilo "Mehra Milo" [NPC_:012601E1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 28 00 00 00", 
+        "SCTX - Result script source": "setstage FBMWMQ04a 40", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQ04a [QUST:01F0A290]"
+        ]
+    }
+}

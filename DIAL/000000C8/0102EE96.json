@@ -1,0 +1,112 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 975, 
+        "Record Flags": {}, 
+        "FormID": "0102EE96", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMMeadHall [QUST:0101B6C8]", 
+    "PNAM - Previous INFO": "0102EE93", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6E 6A 61"
+            }, 
+            "NAM1 - Response Text": "I'm sorry, but none may enter the mead hall while.... You...you hold the Heart of the Udyrfrykte!  Can this be?", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "64 61 61"
+            }, 
+            "NAM1 - Response Text": "You have slain the fell beast?  By the gods, you truly are a warrior worthy of song!  Give the heart to me, then.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "64 61 61"
+            }, 
+            "NAM1 - Response Text": "I will make ready the mead hall, and when the debris of battle has been cleared the Heart of the Udyrfryte will be placed on the pedestal of Thirsk.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "64 61 61"
+            }, 
+            "NAM1 - Response Text": "There is but one more task you must complete before being named chieftain.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ingredUudyrfrykteUheart "Heart of the Udyrfrykte" [INGR:010A006F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 40.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMMeadHall "The Mead Hall Massacre" [QUST:0101B6C8]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0svenjaUoutside "Svenja Snow-Song" [NPC_:01260B5D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 55, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 58 10 05 00 01 00 72 03 00 39 10 0A 00 02 00 72 04 00 6E 32 00 00 00", 
+        "SCTX - Result script source": "player.removeitem 0ingreduudyrfrykteuheart 1\r\nadditem 0ingreduudyrfrykteuheart 1\r\naddtopic 1onesmorestask\r\nsetstage fbmwbmmeadhall 50", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0ingredUudyrfrykteUheart [INGR:010A006F]", 
+            "SCRO - Global Reference": "1oneSmoreStask [DIAL:01311381]", 
+            "SCRO - Global Reference": "fbmwBMMeadHall [QUST:0101B6C8]"
+        ]
+    }
+}

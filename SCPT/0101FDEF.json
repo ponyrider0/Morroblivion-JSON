@@ -1,0 +1,27 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 686, 
+        "Record Flags": {}, 
+        "FormID": "0101FDEF", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwTRShrineDeadShrineScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 6, 
+        "CompiledSize": 122, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0B 00 02 00 67 00 00 00 01 00 72 02 00 16 00 15 00 05 00 11 00 20 58 3A 10 05 00 01 00 72 03 00 20 35 30 20 3D 3D 1C 00 01 00 1E 10 08 00 02 00 72 04 00 72 02 00 1C 00 01 00 B2 10 05 00 01 00 72 05 00 1C 00 01 00 26 10 05 00 01 00 72 06 00 15 00 0A 00 72 03 00 73 02 00 02 00 20 34 15 00 0A 00 72 03 00 73 01 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwTRShrineDeadShrineScript\n\nbegin onactivate AAMWUrvelDulniREF\n	if GetStage fbmwTRShrineDead == 50\n		fbmwTRShrineDeadAREF.Cast 0cureScommonSdiseaseSvictim AAMWUrvelDulniREF\n		fbmwTRShrineDeadAREF.PlaySound3D 0SpiritSAmbientSVoices\n		fbmwTRShrineDeadAREF.PlaySound 0restorationShit\n		set fbmwTRShrineDead.approach to 4\n		set fbmwTRShrineDead.follownow to 1\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 323 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "fbmwTRShrineDeadAREF [REFR:0101FDEE]", 
+        "SCRO - Global Reference": "AAMWUrvelDulniREF [ACHR:01F03C34]", 
+        "SCRO - Global Reference": "fbmwTRShrineDead [QUST:0101C65B]", 
+        "SCRO - Global Reference": "0cureScommonSdiseaseSvictim [SPEL:01060382]", 
+        "SCRO - Global Reference": "0SpiritSAmbientSVoices [SOUN:0130007E]", 
+        "SCRO - Global Reference": "0restorationShit [SOUN:01300054]"
+    ]
+}

@@ -1,0 +1,79 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 907, 
+        "Record Flags": {}, 
+        "FormID": "0147028F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwTRSothaSilSpikesTrapScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 0, 
+        "CompiledSize": 107, 
+        "VariableCount": 6, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 5D 00 00 00 16 00 0D 00 06 00 09 00 20 73 01 00 20 30 20 3D 3D 15 00 09 00 66 02 00 04 00 20 31 30 30 15 00 07 00 66 03 00 02 00 20 30 15 00 07 00 66 04 00 02 00 20 30 15 00 07 00 66 05 00 02 00 20 30 15 00 07 00 73 06 00 02 00 20 30 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwTRSothaSilSpikesTrapScript\n\nshort  init\n\nfloat fTrapDamage\nfloat fLevelledDamage\nfloat fTrapPushBack\nfloat fTrapMinVelocity\nshort bTrapContinuous\n\nbegin gameMode\n\n	if init == 0\n\n		; set up the damage values\n		set fTrapDamage to 100\n		set fLevelledDamage to 0\n		set fTrapPushBack to 0\n		set fTrapMinVelocity to 0\n		set bTrapContinuous to 0\n\n		set init to 1\n\n	endif\n\nend\n;<CSEBlock>\n;<CSECaretPos> 8 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "init"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "fTrapDamage"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "fLevelledDamage"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "fTrapPushBack"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "fTrapMinVelocity"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD 28 22 BD 1D"
+            }, 
+            "SCVR - Name": "bTrapContinuous"
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "Topic": "1ashSstatue [DIAL:01310AFA]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 623, 
+        "Record Flags": {}, 
+        "FormID": "0100CBB8", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwHHNordSmugglers [QUST:01003468]", 
+    "PNAM - Previous INFO": "01322305", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "You weren't supposed to see 'em, outlander. I can't let you out of here if you've seen 'em.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0miscU6thUashUstatueU01 "Ash Statue" [MISC:011600B3]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0velfred "Velfred the Outlaw" [NPC_:012602A1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 96, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 0F 10 09 00 02 00 21 00 6E 64 00 00 00 1C 00 01 00 53 10 0A 00 02 00 72 03 00 6E 9C FF FF FF 1C 00 01 00 16 10 05 00 01 00 72 03 00 1C 00 02 00 0F 10 09 00 02 00 21 00 6E 64 00 00 00 1C 00 02 00 53 10 0A 00 02 00 72 03 00 6E 9C FF FF FF 1C 00 02 00 16 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "mwVelfredtheOutlawREF.SetAV Aggression 100\r\nmwVelfredtheOutlawREF.ModDisposition Player -100\r\nmwVelfredtheOutlawREF.StartCombat Player\r\nmwIlfhildREF.SetAV Aggression 100\r\nmwIlfhildREF.ModDisposition Player -100\r\nmwIlfhildREF.StartCombat Player", 
+        "References": [
+            "SCRO - Global Reference": "mwVelfredtheOutlawREF [ACHR:01849077]", 
+            "SCRO - Global Reference": "mwIlfhildREF [ACHR:01849076]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

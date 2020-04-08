@@ -1,0 +1,84 @@
+{
+    "Topic": "1mySimprisonment [DIAL:013108C3]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 653, 
+        "Record Flags": {}, 
+        "FormID": "01321060", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwVAVampCurse [QUST:01003BCD]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310D1D", 
+        "NAME - Topic": "013109C2"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I have been trapped in this place for centuries, kept here by Azura, damn her meddlesome ways.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I had lived for years, feeding off the human cattle until she imprisoned me here, leaving me weak, powerless, and helpless.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I tire of feeding off rats to keep me alive. But I may have found a way to escape.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0mastrius "Mastrius" [NPC_:01260A04]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 14 00 00 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "setstage fbmwVAVampCurse 20\r\naddtopic 1rat\r\naddtopic 1wayStoSescape", 
+        "References": [
+            "SCRO - Global Reference": "fbmwVAVampCurse [QUST:01003BCD]", 
+            "SCRO - Global Reference": "1rat [DIAL:01310D1D]", 
+            "SCRO - Global Reference": "1wayStoSescape [DIAL:013109C2]"
+        ]
+    }
+}

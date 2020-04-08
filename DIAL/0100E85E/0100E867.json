@@ -1,0 +1,60 @@
+{
+    "Topic": "1MissingSHand2 [DIAL:0100E85E]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 425, 
+        "Record Flags": {}, 
+        "FormID": "0100E867", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwTRMissingHand02 [QUST:0101C659]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "7F 7F 7F"
+            }, 
+            "NAM1 - Response Text": "I bless you with my gift, and mark you as my own. Be ever faithful in your service, and you may expect more generous rewards.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwAlmalexia "Almalexia" [NPC_:01F8B879]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 41, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 1C 10 05 00 01 00 72 02 00 39 10 0A 00 02 00 72 03 00 6E 64 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "player.addspell 0HerUreflectedUglory\r\nsetstage fbmwTRMissingHand02 100\r\nmoddisposition player 10", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0HerUreflectedUglory [SPEL:010603E7]", 
+            "SCRO - Global Reference": "fbmwTRMissingHand02 [QUST:0101C659]"
+        ]
+    }
+}

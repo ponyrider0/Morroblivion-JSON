@@ -1,0 +1,97 @@
+{
+    "Topic": "1brotherSinSneed [DIAL:0131089F]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 606, 
+        "Record Flags": {}, 
+        "FormID": "01320F65", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVThiefTrader [QUST:01003414]", 
+    "PNAM - Previous INFO": "01F8A441", 
+    "Add topics": [
+        "NAME - Topic": "01310CFC", 
+        "NAME - Topic": "01310BEF", 
+        "NAME - Topic": "01310D1D"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Look, I've got a bunch of weapons I need to get to Yak gro-Skandar in Ald'ruhn.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "He's usually drinking himself under one of the tables at the Rat in the Pot. It'd be a big help to me if you could deliver them to him.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Plus, I'd throw some coin your way...say, 100 septims?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0lucanSostorius "Lucan Ostorius" [NPC_:012606CD]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1brotherSinSneed1 [DIAL:01320F62]", 
+        "TCLT - Choice": "1brotherSinSneed2 [DIAL:01320F64]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0F 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmvthieftrader 15", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMVThiefTrader [QUST:01003414]"
+        ]
+    }
+}

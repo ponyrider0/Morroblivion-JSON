@@ -1,0 +1,73 @@
+{
+    "Topic": "1goSfree1 [DIAL:01322A1C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 805, 
+        "Record Flags": {}, 
+        "FormID": "010052DA", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
+    "PNAM - Previous INFO": "010052D4", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 100, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Yes, now I am free. Thank you,&sUActnQuick1;.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0davina "Davina" [NPC_:01260487]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "mwBuySlavesQuest [QUST:01F8E376]", 
+            "Parameter #2": "DavinaBought", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 6, 
+            "CompiledSize": 174, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "15 00 0C 00 72 01 00 73 07 00 04 00 20 31 20 7E 15 00 0A 00 72 01 00 73 08 00 02 00 20 30 15 00 0D 00 47 02 00 08 00 20 47 02 00 20 31 20 2B 59 10 1F 00 01 00 12 00 53 6C 61 76 65 73 20 46 72 65 65 64 3A 20 25 2E 30 66 01 00 47 02 00 05 00 00 00 26 10 05 00 01 00 72 03 00 52 10 0A 00 02 00 72 04 00 6E 01 00 00 00 25 10 14 00 04 00 72 04 00 6E 01 00 00 00 6E 01 00 00 00 6E 00 00 00 00 16 00 0D 00 01 00 09 00 20 47 02 00 20 35 30 20 3C 9E 10 05 00 01 00 72 05 00 17 00 02 00 01 00 9E 10 05 00 01 00 72 06 00 19 00 00 00", 
+        "SCTX - Result script source": "set mwBuySlavesQuest.DavinaBought to -1\r\nset mwBuySlavesQuest.DavinaFollow to 0\r\nSET FreedSlavesCounter TO FreedSlavesCounter + 1\r\nMESSAGE \"Slaves Freed: %.0f\", FreedSlavesCounter, 5\r\nPlaysound CMetalSmall\r\nRemoveItem WristIrons 1\r\nPlaceAtMe WristIrons, 1, 1, 0\r\nIF FreedSlavesCounter < 50\r\n   MoveTo mwFreedSlaveMarker\r\nELSE\r\n   MoveTo mwFreedSlaveMarker2\r\nENDIF", 
+        "References": [
+            "SCRO - Global Reference": "mwBuySlavesQuest [QUST:01F8E376]", 
+            "SCRO - Global Reference": "FreedSlavesCounter [GLOB:01001289]", 
+            "SCRO - Global Reference": "CMetalSmall [SOUN:00025E5F]", 
+            "SCRO - Global Reference": "WristIrons [CLOT:000BE335]", 
+            "SCRO - Global Reference": "mwFreedSlaveMarker [REFR:0101018D]", 
+            "SCRO - Global Reference": "mwFreedSlaveMarker2 [REFR:01007C60]"
+        ]
+    }
+}

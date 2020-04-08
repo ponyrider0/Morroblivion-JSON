@@ -1,0 +1,86 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1569, 
+        "Record Flags": {}, 
+        "FormID": "0102FE25", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwMVpoorPilgrimScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 345, 
+        "VariableCount": 11, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 4B 01 00 00 16 00 0D 00 01 00 09 00 20 73 07 00 20 31 20 21 3D 1E 00 00 00 18 00 0D 00 0F 00 09 00 20 73 07 00 20 31 20 3D 3D 16 00 0D 00 03 00 09 00 20 73 0B 00 20 30 20 3D 3D 15 00 09 00 66 09 00 04 00 20 47 01 00 15 00 0D 00 66 0A 00 08 00 20 47 01 00 20 32 20 2B 15 00 07 00 73 0B 00 02 00 20 31 18 00 1A 00 07 00 16 00 20 73 0B 00 20 31 20 3D 3D 20 47 01 00 20 66 0A 00 20 3C 20 26 26 16 00 26 00 01 00 22 00 20 47 01 00 20 66 09 00 20 30 2E 35 20 2B 20 3E 3D 20 47 01 00 20 66 09 00 20 31 20 2B 20 3C 20 26 26 15 00 08 00 73 08 00 03 00 20 32 35 18 00 26 00 01 00 22 00 20 47 01 00 20 66 09 00 20 31 20 2B 20 3E 3D 20 47 01 00 20 66 09 00 20 31 2E 35 20 2B 20 3C 20 26 26 15 00 08 00 73 08 00 03 00 20 33 30 18 00 15 00 01 00 11 00 20 47 01 00 20 66 09 00 20 31 2E 35 20 2B 20 3E 3D 15 00 08 00 73 08 00 03 00 20 33 35 19 00 00 00 18 00 1B 00 01 00 17 00 20 73 0B 00 20 31 20 3D 3D 20 47 01 00 20 66 0A 00 20 3E 3D 20 26 26 15 00 09 00 73 08 00 04 00 20 31 31 30 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwmvpoorpilgrimscript\r\n\r\nshort follownow\r\n\r\nfloat TimeStarted\r\nfloat TimeToEnd\r\n\r\nshort DoOnce\r\nshort StartTimer\r\n\r\nshort QuestIndex\r\n\r\nbegin gamemode\r\n\r\nif StartTimer != 1\r\n	RETURN\r\n		\r\nelseif StartTimer == 1\r\n	\r\n	if DoOnce == 0\r\n		set TimeStarted to GameDaysPassed\r\n		set TimeToEnd to GameDaysPassed + 2\r\n         	set DoOnce to 1    \r\n			\r\n	elseif DoOnce == 1 && GameDaysPassed < TimeToEnd\r\n		if GameDaysPassed >= TimeStarted + 0.5 && GameDaysPassed < TimeStarted + 1\r\n			Set QuestIndex to 25\r\n		elseif GameDaysPassed >= TimeStarted + 1 && GameDaysPassed < TimeStarted + 1.5\r\n			Set QuestIndex to 30\r\n		elseif GameDaysPassed >= TimeStarted + 1.5\r\n			Set QuestIndex to 35\r\n		endif\r\n			\r\n	elseif DoOnce == 1 && GameDaysPassed >= TimeToEnd\r\n		set QuestIndex to 110\r\n				\r\n     	endif  \r\n\r\nendif\r\n\r\nend\r\n;<CSEBlock>\r\n;<CSECaretPos> 702 </CSECaretPos>\r\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "4D 56 4D 6F 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "61 73 65 53 74 61 67"
+            }, 
+            "SCVR - Name": "follownow"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000007", 
+                "Unused": "49 73 49 44 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "61 74 68 72 79 6F 6E"
+            }, 
+            "SCVR - Name": "StartTimer"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000008", 
+                "Unused": "4D 56 4D 6F 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "61 73 65 53 74 61 67"
+            }, 
+            "SCVR - Name": "QuestIndex"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000009", 
+                "Unused": "4D 56 4D 6F 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "61 73 65 53 74 61 67"
+            }, 
+            "SCVR - Name": "TimeStarted"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000A", 
+                "Unused": "49 6E 46 61 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "63 74 4D 6F 72 72 6F"
+            }, 
+            "SCVR - Name": "TimeToEnd"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000B", 
+                "Unused": "49 6E 46 61 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "63 74 4D 6F 72 72 6F"
+            }, 
+            "SCVR - Name": "DoOnce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "GameDaysPassed [GLOB:00000039]"
+    ]
+}

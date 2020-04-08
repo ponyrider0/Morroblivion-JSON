@@ -1,0 +1,107 @@
+{
+    "Topic": "fbmwMQ08okay [DIAL:0101FACE]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1144, 
+        "Record Flags": {}, 
+        "FormID": "0101FACF", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ08 [QUST:01001DC0]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6F D7 0D"
+            }, 
+            "NAM1 - Response Text": "Good. Open your mouth, and close your eyes...", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6F D7 0D"
+            }, 
+            "NAM1 - Response Text": "Good. Now swallow... Goodness... Good grief! Look! Look! It's...  WORKING!", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "6F D7 0D"
+            }, 
+            "NAM1 - Response Text": "Remarkable. Let me check your skin... your eyes... your tongue.... Amazing. I think it worked. No sign of the disease at all.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "6F D7 0D"
+            }, 
+            "NAM1 - Response Text": "Of course, you still have corprus disease, just like I planned. But all your symptoms are gone. Marvelous.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "05", 
+                "Unused": "6F D7 0D"
+            }, 
+            "NAM1 - Response Text": "I'll go try it out on some of the more desperate inmates. But I'll answer any questions you have before you go.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0divaythSfyr "Divayth Fyr" [NPC_:01260184]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 8, 
+            "CompiledSize": 90, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 1D 10 05 00 01 00 72 02 00 1C 00 01 00 1C 10 05 00 01 00 72 03 00 39 10 0A 00 02 00 72 04 00 6E 32 00 00 00 1C 00 01 00 1C 10 05 00 01 00 72 05 00 1C 00 01 00 1C 10 05 00 01 00 72 06 00 1E 10 08 00 02 00 72 07 00 72 01 00 1E 10 08 00 02 00 72 08 00 72 01 00", 
+        "SCTX - Result script source": "player.removespell 0corprus\r\nplayer.addspell 0commonsdiseasesimmunity\r\nsetstage fbmwmq08 50\r\nplayer.addspell 0blightsdiseasesimmunity\r\nplayer.addspell 0corprussimmunity\r\ncast 0curescommonsdisease player\r\ncast 0curesblightsdisease player", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0corprus [SPEL:010602FD]", 
+            "SCRO - Global Reference": "0commonSdiseaseSimmunity [SPEL:0106039C]", 
+            "SCRO - Global Reference": "fbmwMQ08 [QUST:01001DC0]", 
+            "SCRO - Global Reference": "0blightSdiseaseSimmunity [SPEL:0106039B]", 
+            "SCRO - Global Reference": "0corprusSimmunity [SPEL:0106039A]", 
+            "SCRO - Global Reference": "0cureScommonSdisease [SPEL:010601AB]", 
+            "SCRO - Global Reference": "0CureSBlightSDisease [SPEL:01060381]"
+        ]
+    }
+}

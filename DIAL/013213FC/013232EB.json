@@ -1,0 +1,75 @@
+{
+    "Topic": "1friendlySwager4 [DIAL:013213FC]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 358, 
+        "Record Flags": {}, 
+        "FormID": "013232EB", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSBattleBots1 [QUST:0101C618]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310BF3", 
+        "NAME - Topic": "01310CDD"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Strength over speed, huh? Well, I'll take that bet. Now how much would you like to wager?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ignatiusUflaccus "Ignatius Flaccus" [NPC_:01260AA7]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1friendlySwager5 [DIAL:013213F9]", 
+        "TCLT - Choice": "1friendlySwager6 [DIAL:013213F6]", 
+        "TCLT - Choice": "1friendlySwager7 [DIAL:013213F3]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 01 00 02 00 20 32", 
+        "SCTX - Result script source": "set fbmwMSBattlebots1.BetOn to 2", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMSBattleBots1 [QUST:0101C618]"
+        ]
+    }
+}

@@ -1,0 +1,123 @@
+{
+    "Topic": "1ElvenSancestry [DIAL:01311367]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1012, 
+        "Record Flags": {}, 
+        "FormID": "01F8AC8C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMFalmer [QUST:0101B6C2]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 100, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "65 6C 6C"
+            }, 
+            "NAM1 - Response Text": "I have long believed that I, Athellor, have the blood of the Falmer flowing through my veins!  I'm on a journey of self-discovery.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "65 6C 6C"
+            }, 
+            "NAM1 - Response Text": "I wish to know who I am, and where I came from.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "65 6C 6C"
+            }, 
+            "NAM1 - Response Text": "I'm hoping that if I find some evidence of the Falmer's existence, I will better understand myself, and my past.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000004", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "65 6C 6C"
+            }, 
+            "NAM1 - Response Text": "But alas, I'm a noble, not an adventurer.  That's why I've come to this establishment.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "05", 
+                "Unused": "65 6C 6C"
+            }, 
+            "NAM1 - Response Text": "I'm hoping to hire an explorer to do some of the more... physical work. Another drink?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0athellor "Athellor" [NPC_:01260B2A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMFalmer "In Search of the Falmer" [QUST:0101B6C2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMFalmer "In Search of the Falmer" [QUST:0101B6C2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 55, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 39 10 0A 00 02 00 72 02 00 6E 1E 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 58 10 05 00 01 00 72 04 00", 
+        "SCTX - Result script source": "moddisposition player 10\r\nsetstage fbmwBMFalmer 30\r\nplayer.additem potioncyrodiilicbrandy 1\r\naddtopic 1hireSanSexplorer", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwBMFalmer [QUST:0101B6C2]", 
+            "SCRO - Global Reference": "PotionCyrodiilicBrandy [ALCH:00033569]", 
+            "SCRO - Global Reference": "1hireSanSexplorer [DIAL:0131134D]"
+        ]
+    }
+}

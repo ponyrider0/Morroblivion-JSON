@@ -1,0 +1,82 @@
+{
+    "Topic": "1OrphanSofSArnesia [DIAL:013107F5]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 453, 
+        "Record Flags": {}, 
+        "FormID": "01320C15", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHHDisguisedArmor [QUST:0100345E]", 
+    "PNAM - Previous INFO": "01320C14", 
+    "Add topics": [
+        "NAME - Topic": "01310C70", 
+        "NAME - Topic": "01310BCF"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Oh, certainly Relmerea, here are your orders. They are in code, of course. Deliver them to Maar Gan as usual.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "02", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetEquipped:182", 
+            "Unused": "00 00", 
+            "Parameter #1": "0bonemoldUgahTjulanUhhda "Native Gah-Julan Bonemold Helm" [ARMO:011200E0]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 11.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHHDisguisedArmor "House Hlaalu: Disguise" [QUST:0100345E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0neminda "Neminda" [NPC_:012600C8]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHHDisguisedArmor 50\r\nPlayer.AddItem 0bkUNemindasOrders 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwHHDisguisedArmor [QUST:0100345E]", 
+            "SCRO - Global Reference": "0bkUnemindasorders [BOOK:011800D0]"
+        ]
+    }
+}

@@ -1,0 +1,90 @@
+{
+    "Topic": "1UrshilakuSNerevarine [DIAL:01310700]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 845, 
+        "Record Flags": {}, 
+        "FormID": "01AAD5E8", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ11u [QUST:01001DCA]", 
+    "PNAM - Previous INFO": "01AAD5E7", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "Before my hearth and kin, and before the People of the Wastes, I name you Urshilaku Nerevarine, War Leader of the Urshilaku, and Protector of the People.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "In token of this, I give you the Teeth, which shall be a sign to all Dunmer, that you are the Nerevarine, and that the Urshilaku shall follow you, in all things,", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "even unto death, until the Enemy is defeated, or until you are dead, or until you give this back into my hand.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 25.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ11u "Urshilaku Nereverine" [QUST:01001DCA]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0sulTmatuul "Sul-Matuul" [NPC_:01260350]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 57, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 F8 10 07 00 01 00 6E 02 00 00 00", 
+        "SCTX - Result script source": "setstage FBMWMQ11u 50\r\nplayer.additem fbmwteethofurshilaku 1\r\nmoddisposition player 10\r\nmodpcfame 2", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMQ11u [QUST:01001DCA]", 
+            "SCRO - Global Reference": "fbmwTeethOfUrshilaku [CLOT:0101D5E9]"
+        ]
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "Topic": "1missingSHand [DIAL:01311032]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 756, 
+        "Record Flags": {}, 
+        "FormID": "0100E864", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRMissingHand02 [QUST:0101C659]", 
+    "PNAM - Previous INFO": "0100E861", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "7F 7F 7F"
+            }, 
+            "NAM1 - Response Text": "One of my most faithful guards, one of my very own Hands of Almalexia, pledged to honor and protect and serve me in all ways, has lost his mind.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "7F 7F 7F"
+            }, 
+            "NAM1 - Response Text": "Salas Valor has abandoned me, and now spews vile and slanderous untruths about me to any who would listen.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "7F 7F 7F"
+            }, 
+            "NAM1 - Response Text": "I pity him, and know he is not responsible for his actions. To view the splendor of a god may drive even the strongest mortal mad.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "7F 7F 7F"
+            }, 
+            "NAM1 - Response Text": "But now he presents a threat to us, and he is very dangerous. I fear you may not be able to spare his life.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestRunning:56", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRMissingHand02 "The Missing Hand" [QUST:0101C659]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwAlmalexia "Almalexia" [NPC_:01F8B879]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1MissingSHand6 [DIAL:0100E86B]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

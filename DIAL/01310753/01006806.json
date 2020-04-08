@@ -1,0 +1,92 @@
+{
+    "Topic": "1recruitSsomeSminers [DIAL:01310753]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 608, 
+        "Record Flags": {}, 
+        "FormID": "01006806", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwHHStronghold [QUST:0100346D]", 
+    "PNAM - Previous INFO": "01006802", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "You want me to work in an egg mine? That's the best thing I've heard in months.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "I know where Shurdan-Raplay is. I'll meet you there.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "You didn't waste your money, and I'll prove it to you.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHHStronghold "House Hlaalu: Stronghold" [QUST:0100346D]", 
+            "Parameter #2": "BuyMiner", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0llaalsSores "Llaals Ores" [NPC_:0126048C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 41, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 96 00 00 00 15 00 0A 00 72 02 00 73 03 00 02 00 20 32 1C 00 01 00 9E 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "SetStage fbmwHHStronghold 150\r\nSET fbmwHHStronghold.BuyMiner TO 2\r\nmwLlaalsOresREF.MoveTo mwShurdanRaplayMinersMarker", 
+        "References": [
+            "SCRO - Global Reference": "mwLlaalsOresREF [ACHR:0182B36B]", 
+            "SCRO - Global Reference": "fbmwHHStronghold [QUST:0100346D]", 
+            "SCRO - Global Reference": "mwShurdanRaplayMinersMarker [REFR:0100DE0D]"
+        ]
+    }
+}

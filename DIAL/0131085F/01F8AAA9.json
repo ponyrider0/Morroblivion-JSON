@@ -1,0 +1,75 @@
+{
+    "Topic": "1silverSlongsword [DIAL:0131085F]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 345, 
+        "Record Flags": {}, 
+        "FormID": "01F8AAA9", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTTSevenGraces [QUST:01002C79]", 
+    "PNAM - Previous INFO": "01F8AAA8", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 72 65"
+            }, 
+            "NAM1 - Response Text": "As you see. I am unarmed. But you are brave and gallant. <sigh> Will you give me your longsword so that I may stand a chance against your might?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "mwKratz "Kratz" [NPC_:010033C9]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "43", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "WeapSilverLongsword "Silver Longsword" [WEAP:0002521F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0silverSlongsword "Silver Longsword" [WEAP:01F8E983]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "fbmwttpuzzlegive [DIAL:01F8A9BC]", 
+        "TCLT - Choice": "fbmwttpuzzlekeep [DIAL:01F8A9BE]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

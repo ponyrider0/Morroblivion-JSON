@@ -1,0 +1,78 @@
+{
+    "Topic": "1goSwithSyou3 [DIAL:013220F0]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 681, 
+        "Record Flags": {}, 
+        "FormID": "01F8BC5D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwCO3 [QUST:0101BE44]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "53 54 65"
+            }, 
+            "NAM1 - Response Text": "Okay, let's go then. I really do want to get warm and dry, and I'm hoping you're taking me someplace where I can do that. I figure you must from either the colony or the fort, and either one of those options is fine.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "53 54 65"
+            }, 
+            "NAM1 - Response Text": "I mean, where else could you have come from? Some strange little hut in the woods? Ha ha - that sure would be odd, wouldn't it! What kind of person just lives in the woods all alone?", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "53 54 65"
+            }, 
+            "NAM1 - Response Text": "Oh, sorry. Are we going now?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0AproniaSAlfena "Apronia Alfena" [NPC_:01260B2B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 01 00 02 00 20 31", 
+        "SCTX - Result script source": "set fbmwco3.follownow to 1", 
+        "References": [
+            "SCRO - Global Reference": "fbmwCO3 [QUST:0101BE44]"
+        ]
+    }
+}

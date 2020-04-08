@@ -1,0 +1,77 @@
+{
+    "Topic": "1IlnoriSFaustus [DIAL:01311008]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 562, 
+        "Record Flags": {}, 
+        "FormID": "01F8A8AF", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSJobHunt [QUST:0101C626]", 
+    "PNAM - Previous INFO": "01F8A8AE", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "Damn that cockered, scrib-sucking son-of-a-Hammerfell-whore. He left me just a few hours ago without so much as a wave goodbye. Just walked out the door.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "Well, good riddance, I suppose, but I still need an apprentice. If you find any able-bodied young person looking for work, let them know I need a new apprentice.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSJobHunt "The Smith's Apprentice" [QUST:0101C626]", 
+            "Parameter #2": "gone", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0bolsSindalen "Bols Indalen" [NPC_:01260AB2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmsjobhunt 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMSJobHunt [QUST:0101C626]"
+        ]
+    }
+}

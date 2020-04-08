@@ -1,0 +1,75 @@
+{
+    "Topic": "mwCrimeServeSentence [DIAL:01F2A3D7]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 598, 
+        "Record Flags": {}, 
+        "FormID": "01F2A3D8", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "CrimeMorrow [QUST:01F2A3E6]", 
+    "TPIC - Topic": "000000C8", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000002", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "72 69 6D"
+            }, 
+            "NAM1 - Response Text": "Then you must serve a sentence of hard labor. Serve your time peaceably, and pay your debt to society.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "IsGuard:125", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 7, 
+            "CompiledSize": 68, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 7E 10 00 00 1C 00 02 00 72 10 02 00 00 00 1C 00 03 00 72 10 02 00 00 00 1C 00 04 00 72 10 02 00 00 00 1C 00 05 00 72 10 02 00 00 00 1C 00 06 00 72 10 02 00 00 00 1C 00 07 00 72 10 02 00 00 00", 
+        "SCTX - Result script source": "Player.GotoJail\r\nmwBuckmothJailDoorRef.Lock\r\nmwFrostmothJailDoorRef.Lock\r\nmwHawkmothJailDoorRef.Lock\r\nmwMoonmothJailDoorRef.Lock\r\nmwMournholdJailDoorRef.Lock\r\nmwPelagiadJailDoorRef.Lock", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "mwBuckmothJailDoorRef [REFR:0185636B]", 
+            "SCRO - Global Reference": "mwFrostmothJailDoorRef [REFR:01F0778E]", 
+            "SCRO - Global Reference": "mwHawkmothJailDoorRef [REFR:0182275B]", 
+            "SCRO - Global Reference": "mwMoonmothJailDoorRef [REFR:01872484]", 
+            "SCRO - Global Reference": "mwMournholdJailDoorRef [REFR:01F04BAD]", 
+            "SCRO - Global Reference": "mwPelagiadJailDoorRef [REFR:01802E53]"
+        ]
+    }
+}

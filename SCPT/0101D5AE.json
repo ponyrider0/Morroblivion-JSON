@@ -1,0 +1,40 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 862, 
+        "Record Flags": {}, 
+        "FormID": "0101D5AE", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwMQ11zScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 6, 
+        "CompiledSize": 216, 
+        "VariableCount": 1, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 CA 00 00 00 16 00 3B 00 01 00 37 00 20 72 01 00 58 23 10 00 00 20 30 20 3D 3D 20 58 3A 10 05 00 01 00 72 02 00 20 34 30 20 3C 20 26 26 20 72 03 00 58 01 10 05 00 01 00 72 01 00 20 31 30 20 3E 20 26 26 1C 00 01 00 9E 10 05 00 01 00 72 03 00 19 00 00 00 16 00 41 00 04 00 3D 00 20 58 3A 10 05 00 01 00 72 02 00 20 34 35 20 3D 3D 20 72 04 00 58 43 10 05 00 01 00 72 05 00 20 31 20 3D 3D 20 26 26 20 72 01 00 58 20 10 05 00 01 00 72 04 00 20 31 20 3D 3D 20 26 26 39 10 0A 00 02 00 72 02 00 6E 2F 00 00 00 15 00 0A 00 72 02 00 73 01 00 02 00 20 30 1C 00 01 00 5E 10 00 00 58 10 05 00 01 00 72 06 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwMQ11zScript\r\n\r\nSHORT FollowNow\r\n\r\nBEGIN GameMode\r\n	IF fbFaluraREF.GetDisabled == 0 && GetStage fbmwMQ11z < 40 && mwFaluraCageMarker.GetDistance fbFaluraREF > 10\r\n		fbFaluraREF.MoveTo mwFaluraCageMarker\r\n	ENDIF\r\n\r\n	IF GetStage fbmwMQ11z == 45 && Player.GetInCell ZainabSCampVSAshkhanAsSYurt == 1 &&  fbFaluraREF.GetInSameCell Player == 1\r\n		SetStage fbmwMQ11z 47\r\n		SET fbmwMQ11z.FollowNow TO 0\r\n		fbFaluraREF.EvaluatePackage\r\n		AddTopic 1TelvanniSBride\r\n	ENDIF\r\nEND", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "61 62 53 43 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "68 61 6E 41 73 53 59"
+            }, 
+            "SCVR - Name": "FollowNow"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbfaluraref [ACHR:0182F171]", 
+        "SCRO - Global Reference": "fbmwMQ11z [QUST:01001DD3]", 
+        "SCRO - Global Reference": "mwFaluraCageMarker [REFR:01014048]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "ZainabSCampVSAshkhanAsSYurt [CELL:014804AF]", 
+        "SCRO - Global Reference": "1TelvanniSbride [DIAL:01310902]"
+    ]
+}

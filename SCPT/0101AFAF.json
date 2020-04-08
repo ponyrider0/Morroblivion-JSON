@@ -1,0 +1,107 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 2395, 
+        "Record Flags": {}, 
+        "FormID": "0101AFAF", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwDagothUrScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 9, 
+        "CompiledSize": 618, 
+        "VariableCount": 12, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 15 00 04 00 00 00 11 00 00 00 10 00 06 00 00 00 4E 02 00 00 16 00 21 00 02 00 1D 00 20 58 01 10 05 00 01 00 72 03 00 20 34 30 30 20 3C 20 73 09 00 20 30 20 3D 3D 20 26 26 56 10 08 00 02 00 72 03 00 72 04 00 15 00 07 00 73 09 00 02 00 20 31 18 00 20 00 01 00 1C 00 20 58 0E 10 04 00 01 00 08 00 20 35 30 30 20 3C 20 73 0A 00 20 30 20 3D 3D 20 26 26 15 00 07 00 73 0A 00 02 00 20 31 18 00 27 00 02 00 23 00 20 58 0E 10 04 00 01 00 08 00 20 35 30 30 20 30 2E 37 35 20 2A 20 3C 20 73 0A 00 20 31 20 3D 3D 20 26 26 26 10 05 00 01 00 72 05 00 15 00 07 00 73 0A 00 02 00 20 32 18 00 26 00 02 00 22 00 20 58 0E 10 04 00 01 00 08 00 20 35 30 30 20 30 2E 35 20 2A 20 3C 20 73 0A 00 20 32 20 3D 3D 20 26 26 26 10 05 00 01 00 72 06 00 15 00 07 00 73 0A 00 02 00 20 33 18 00 27 00 02 00 23 00 20 58 0E 10 04 00 01 00 08 00 20 35 30 30 20 30 2E 32 35 20 2A 20 3C 20 73 0A 00 20 33 20 3D 3D 20 26 26 26 10 05 00 01 00 72 07 00 15 00 07 00 73 0A 00 02 00 20 34 18 00 2D 00 03 00 29 00 20 58 2E 10 00 00 20 31 20 3D 3D 20 58 0E 10 04 00 01 00 08 00 20 35 30 20 3C 20 7C 7C 20 73 0A 00 20 34 20 3D 3D 20 26 26 15 00 07 00 73 0A 00 02 00 20 35 15 00 07 00 73 08 00 02 00 20 31 29 11 0B 00 01 00 7A 00 00 00 00 00 00 E0 3F 19 00 00 00 16 00 0D 00 10 00 09 00 20 73 08 00 20 31 20 3D 3D 15 00 11 00 66 02 00 0C 00 20 66 02 00 20 58 0C 10 00 00 20 2B 16 00 0F 00 03 00 0B 00 20 58 23 10 00 00 20 30 20 3D 3D 16 00 0E 00 01 00 0A 00 20 66 02 00 20 30 2E 35 20 3E 22 10 00 00 19 00 00 00 19 00 00 00 16 00 0F 00 03 00 0B 00 20 66 02 00 20 34 2E 35 20 3C 3D 1C 00 01 00 04 10 08 00 02 00 5A 6E F6 FF FF FF 1C 00 02 00 04 10 08 00 02 00 5A 6E 0A 00 00 00 26 10 05 00 01 00 72 08 00 17 00 02 00 04 00 15 00 07 00 66 02 00 02 00 20 30 15 00 07 00 73 08 00 02 00 20 30 22 10 00 00 39 10 0A 00 02 00 72 09 00 6E 0A 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwDagothUrScript\r\n\r\nshort state	\r\nshort HaveStuff\r\nfloat timer\r\nshort OpenDoors\r\nSHORT GreetOnce\r\nSHORT DoOnce\r\nSHORT SayOnce\r\n\r\n\r\nBegin OnLoad\r\n	 ;StartQuest XhashXquestXTaunts\r\nEND\r\n\r\n\r\nBegin GameMode\r\n	If GetDistance Player < 400 && GreetOnce == 0\r\n		StartConversation Player GREETING\r\n		Set GreetOnce to 1\r\n\r\n	elseif GetAV Health < (500) && DoOnce == 0\r\n		Set DoOnce to 1\r\n\r\n	elseif GetAV Health < (500*0.75) && DoOnce == 1\r\n		PlaySound xhahsxbattleTaunt1\r\n		Set DoOnce to 2\r\n\r\n	elseif GetAV Health < (500*0.5) && DoOnce == 2\r\n		PlaySound xhashxbattletaunt2\r\n		Set DoOnce to 3\r\n\r\n	elseif GetAV Health < (500*0.25) && DoOnce == 3\r\n		PlaySound xhashxbattletaunt3\r\n		Set DoOnce to 4\r\n\r\n	elseif GetDead == 1 || GetAV Health < 50 && DoOnce == 4\r\n		Set DoOnce to 5\r\n		Set OpenDoors to 1\r\n		SAA 0.5\r\n	endif\r\n\r\n	;check for death and play effect by doors and swivel them open\r\n\r\n	;doors rotate 45 degrees\r\n	if OpenDoors == 1\r\n		set timer to timer + GetSecondsPassed\r\n\r\n		if GetDisabled == 0\r\n			if timer > 0.5\r\n				Disable\r\n			endif\r\n		endif\r\n\r\n		if timer <= 4.5\r\n			\"2akulaSdoorSb\".Rotate Z -10\r\n			\"2akulaSdoorSa\".Rotate Z 10\r\n			PlaySound 0DoorSStoneSOpen\r\n		else\r\n			set timer to 0\r\n			set opendoors to 0\r\n			disable		;so dagoth body goes away\r\n			SetStage fbmwMQ14 10\r\n		endif\r\n	endif\r\n\r\nend ; GameMode", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 B0 F2 3E 1D"
+            }, 
+            "SCVR - Name": "timer"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 AC F1 3E 1D"
+            }, 
+            "SCVR - Name": "state"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000007", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 64 F2 3E 1D"
+            }, 
+            "SCVR - Name": "HaveStuff"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000008", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "F2 3E 1D 18 00 00 00"
+            }, 
+            "SCVR - Name": "OpenDoors"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000009", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "GreetOnce"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000A", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 CD CD CD CD"
+            }, 
+            "SCVR - Name": "DoOnce"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000B", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "F1 3E 1D 14 00 00 00"
+            }, 
+            "SCVR - Name": "SayOnce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "2akulaSdoorSb [REFR:0184219A]", 
+        "SCRO - Global Reference": "2akulaSdoorSa [REFR:01842199]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "GREETING [DIAL:000000C8]", 
+        "SCRO - Global Reference": "xhahsxbattleTaunt1 [SOUN:01F8B54B]", 
+        "SCRO - Global Reference": "xhashxbattletaunt2 [SOUN:01F8B54C]", 
+        "SCRO - Global Reference": "xhashxbattletaunt3 [SOUN:01F8B54D]", 
+        "SCRO - Global Reference": "0DoorSStoneSOpen [SOUN:013000A3]", 
+        "SCRO - Global Reference": "fbmwMQ14 [QUST:01002C56]"
+    ]
+}

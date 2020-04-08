@@ -1,0 +1,146 @@
+{
+    "Topic": "1Nerevarine [DIAL:01310AEC]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1445, 
+        "Record Flags": {}, 
+        "FormID": "010252F8", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ11z [QUST:01001DD3]", 
+    "PNAM - Previous INFO": "010252F9", 
+    "Add topics": [
+        "NAME - Topic": "01310C2C"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "Well. So you killed the vampire Calvario? Ahem. Well. I will be happy to acknowledge you as Zainab Nerevarine. But...", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "4D 57 4D"
+            }, 
+            "NAM1 - Response Text": "It is customary for one seeking an honor from the Ashkhan to offer the Ashkhan a generous gift as a mark of respect.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "4D 57 4D"
+            }, 
+            "NAM1 - Response Text": "Because you are an outlander, and do not know our customs, I will do you the great favor of naming the gift I wish to receive --", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "4D 57 4D"
+            }, 
+            "NAM1 - Response Text": "a high-born Telvanni bride -- a pretty one, plump, with big hips to bring me many sons.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "05", 
+                "Unused": "4D 57 4D"
+            }, 
+            "NAM1 - Response Text": "Where will you find a high-born Telvanni bride? That is simple.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "06", 
+                "Unused": "74 20 30"
+            }, 
+            "NAM1 - Response Text": "You should visit high-born Telvanni lords and inform them that Ashkhan Kaushad of the Lordly Zainab would do them the honor of making their daughter  his bride. Surely many Telvanni lords would be honored to receive such an offer.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "07", 
+                "Unused": "6E 61 6D"
+            }, 
+            "NAM1 - Response Text": "Consider carefully the many daughters offered and choose for me the finest. Take counsel with my wise woman, Sonummu Zabamat. She knows my mind well in such matters.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "0calvario "Calvario" [NPC_:01260A0C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 5.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ11z "Zainab Nereverine" [QUST:01001DD3]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0kaushad "Kaushad" [NPC_:0126018E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 36, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 14 00 00 00 39 10 0A 00 02 00 72 02 00 6E 16 00 00 00 1C 00 01 00 21 10 00 00", 
+        "SCTX - Result script source": "setstage fbmwmq11z 20\r\nsetstage fbmwmq11z 22\r\nfbfaluraref.enable", 
+        "References": [
+            "SCRO - Global Reference": "fbfaluraref [ACHR:0182F171]", 
+            "SCRO - Global Reference": "fbmwMQ11z [QUST:01001DD3]"
+        ]
+    }
+}

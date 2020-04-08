@@ -1,0 +1,107 @@
+{
+    "Topic": "1codedSmessage [DIAL:01310972]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1068, 
+        "Record Flags": {}, 
+        "FormID": "01321853", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHTFyrMessage [QUST:01003440]", 
+    "PNAM - Previous INFO": "01004BA0", 
+    "Add topics": [
+        "NAME - Topic": "01310CB8", 
+        "NAME - Topic": "01310A5C", 
+        "NAME - Topic": "01310972", 
+        "NAME - Topic": "01310A74", 
+        "NAME - Topic": "01310C29", 
+        "NAME - Topic": "01310CFC", 
+        "NAME - Topic": "01310C39", 
+        "NAME - Topic": "01310C39", 
+        "NAME - Topic": "01310C39", 
+        "NAME - Topic": "01310A74", 
+        "NAME - Topic": "01311081"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "My patron, Master Aryon, wants this coded message delivered to Divayth Fyr. He lives in Tel Fyr. You might need some help getting there.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Why not take these potions of water walking? And these potions of healing. And perhaps a few potions of water breathing as well.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "If Divayth Fyr responds to this message, please deliver his response back to me.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "02", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Telvanni "Great House Telvanni" [FACT:01220006]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0galosSmathendis "Galos Mathendis" [NPC_:0126040B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 7, 
+            "CompiledSize": 95, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 0A 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 04 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E 04 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 06 00 6E 07 00 00 00 55 10 05 00 01 00 72 07 00", 
+        "SCTX - Result script source": "SetStage fbmwHTFyrmessage 10\r\nPlayer.AddItem 0bkUMessageFromMasterAryon 1\r\nPlayer.AddItem 0pUwaterUwalkingUs 4\r\nPlayer.AddItem 0pUwaterUbreathingUs 4\r\nPlayer.AddItem 0pUrestoreUhealthUq 7\r\nShowMap mwTelFyrMapMarker", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwHTFyrMessage [QUST:01003440]", 
+            "SCRO - Global Reference": "0bkUmessagefrommasteraryon [BOOK:01180110]", 
+            "SCRO - Global Reference": "0pUwaterUwalkingUs [ALCH:010800F5]", 
+            "SCRO - Global Reference": "0pUwaterUbreathingUs [ALCH:010800F4]", 
+            "SCRO - Global Reference": "0pUrestoreUhealthUq [ALCH:010800DF]", 
+            "SCRO - Global Reference": "mwTelFyrMapMarker [REFR:0100DC7F]"
+        ]
+    }
+}

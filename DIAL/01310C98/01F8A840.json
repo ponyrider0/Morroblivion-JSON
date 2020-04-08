@@ -1,0 +1,72 @@
+{
+    "Topic": "1Enamor [DIAL:01310C98]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 442, 
+        "Record Flags": {}, 
+        "FormID": "01F8A840", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTGssEnamor [QUST:0100933B]", 
+    "PNAM - Previous INFO": "01F8A83F", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6C 79 6E"
+            }, 
+            "NAM1 - Response Text": "I found the blade with a note from the Bal Molagmer which said the sword was stolen by mistake.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6C 79 6E"
+            }, 
+            "NAM1 - Response Text": "I have no love for thieves, but perhaps these new Bal Molagmer are like the Bal Molagmer of the old poems. Honorable thieves, worthy of respect. Only will tell.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTGssEnamor "Thieves Guild: Bal Molagmer, Enamor" [QUST:0100933B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0salynSsarethi "Salyn Sarethi" [NPC_:01260779]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

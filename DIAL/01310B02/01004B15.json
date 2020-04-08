@@ -1,0 +1,93 @@
+{
+    "Topic": "1RedasSTomb [DIAL:01310B02]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 796, 
+        "Record Flags": {}, 
+        "FormID": "01004B15", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHRRedasTomb [QUST:01005197]", 
+    "PNAM - Previous INFO": "0132235E", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Go to the Redas Ancestral Tomb and  bring me the Redas War Axe, the Redas Chalice, and the Redas Robe of Deeds. ", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "The tomb is just south of Molag Mar, but you'll have to go around the mountains.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "I'd suggest following the mountains west and then following them back east.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "The tomb is in the side of the mountain, near an Ashlander camp.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0faralSretheran "Faral Retheran" [NPC_:01260231]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 47, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 04 00 6E 0A 00 00 00 55 10 05 00 01 00 72 05 00 1C 00 01 00 21 10 00 00 1C 00 02 00 21 10 00 00 1C 00 03 00 21 10 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHRRedasTomb 10\r\nShowMap mwRedasAncestralTombMapMarker\r\nmwRedasAxe.Enable\r\nmwRedasGoblet.Enable\r\nmwRedasRobe.Enable", 
+        "References": [
+            "SCRO - Global Reference": "mwRedasAxe [REFR:01873A4C]", 
+            "SCRO - Global Reference": "mwRedasGoblet [REFR:01873A4D]", 
+            "SCRO - Global Reference": "mwRedasRobe [REFR:01873A4E]", 
+            "SCRO - Global Reference": "fbmwHRRedasTomb [QUST:01005197]", 
+            "SCRO - Global Reference": "mwRedasAncestralTombMapMarker [REFR:01007546]"
+        ]
+    }
+}

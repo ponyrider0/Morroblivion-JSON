@@ -1,0 +1,25 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 437, 
+        "Record Flags": {}, 
+        "FormID": "01F8B845", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwBMColonyAproniaScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 4, 
+        "CompiledSize": 95, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 51 00 00 00 16 00 2B 00 02 00 27 00 20 58 01 10 05 00 01 00 72 01 00 20 31 30 32 34 20 3C 3D 20 58 3A 10 05 00 01 00 72 02 00 20 31 30 20 3D 3D 20 26 26 39 10 0A 00 02 00 72 02 00 6E 14 00 00 00 56 10 08 00 02 00 72 03 00 72 04 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwBMColonyAproniaScript\n\nbegin gamemode\n	if GetDistance fbmwFalcoREF <= 1024 && GetStage fbmwCO3b == 10\n		SetStage fbmwCO3b 20\n		StartConversation Player GREETING\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "fbmwFalcoREF [ACHR:01F00742]", 
+        "SCRO - Global Reference": "fbmwCO3b [QUST:0101BE46]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "GREETING [DIAL:000000C8]"
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "Topic": "1finalSquestions [DIAL:0131088D]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 213, 
+        "Record Flags": {}, 
+        "FormID": "01AA69EA", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ14 [QUST:01002C56]", 
+    "PNAM - Previous INFO": "01AA69E9", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "4D 57 4D"
+            }, 
+            "NAM1 - Response Text": "My first question is: Are you really Nerevar reborn?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwDagothUr "Dagoth Ur" [NPC_:0100A1E7]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "fbmwMQ14iamnerevar [DIAL:010269EB]", 
+        "TCLT - Choice": "fbmwMQ14idontknow [DIAL:010269F1]", 
+        "TCLT - Choice": "fbmwMQ14loyalservantofempire [DIAL:010269ED]", 
+        "TCLT - Choice": "fbmwMQ14makemyownfate [DIAL:010269EF]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

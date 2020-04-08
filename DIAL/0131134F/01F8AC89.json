@@ -1,0 +1,109 @@
+{
+    "Topic": "1tellSyourSfuture [DIAL:0131134F]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 711, 
+        "Record Flags": {}, 
+        "FormID": "01F8AC89", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMSadSeer [QUST:0101B6D1]", 
+    "PNAM - Previous INFO": "01F8AC88", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000006", 
+                "Emotion Value": 100, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6D 77 42"
+            }, 
+            "NAM1 - Response Text": "Friend, the skull of Oddfrid White-Lip is speaking to me, telling me your future.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000003", 
+                "Emotion Value": 70, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6D 77 42"
+            }, 
+            "NAM1 - Response Text": "She says...she says the time for the hunt is near. You are both hunter and hunted. She sees you surrounded by ice. Beware betrayal!", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000006", 
+                "Emotion Value": 100, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "6D 77 42"
+            }, 
+            "NAM1 - Response Text": "Oddfrid sees...she sees a giant.  And.... Yes! The horned huntsman! That is all.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "6D 77 42"
+            }, 
+            "NAM1 - Response Text": "I'm not sure what it all means, but Oddfrid has nothing more to say.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0geilirStheSmumbling "Geilir the Mumbling" [NPC_:01260B50]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 40.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMSadSeer "The Sad Seer" [QUST:0101B6D1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMWildHunt "Hircine's Hunt" [QUST:0101B6DA]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 64 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwbmsadseer 100", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMSadSeer [QUST:0101B6D1]"
+        ]
+    }
+}

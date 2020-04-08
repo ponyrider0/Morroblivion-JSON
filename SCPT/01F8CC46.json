@@ -1,0 +1,36 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 532, 
+        "Record Flags": {}, 
+        "FormID": "01F8CC46", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwTrapDaedraSummonScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 108, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 5C 00 00 00 00 00 16 00 1B 00 03 00 17 00 20 73 01 00 20 30 20 3D 3D 20 58 69 10 05 00 01 00 72 01 00 20 26 26 25 10 14 00 04 00 72 02 00 6E 01 00 00 00 6E 80 00 00 00 6E 01 00 00 00 0D 10 02 00 00 00 15 00 07 00 73 01 00 02 00 20 31 17 00 02 00 01 00 0D 10 02 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "SCN mwTrapDaedraSummonScript\n\nshort ACount\n; Applied to things like chests and doors\n\nBegin OnActivate\n\n	If ACount == 0 && IsActionRef Player\n		PlaceAtMe \"mwDremoraLord\" 1 128 1\n		Activate\n		Set ACount to 1\n	Else\n		Activate\n	EndIf\nEnd\n;<CSEBlock>\n;<CSECaretPos> 16 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "24 B6 1D 10 00 00 00"
+            }, 
+            "SCVR - Name": "ACount"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "mwDremoraLord [NPC_:01F8B534]"
+    ]
+}

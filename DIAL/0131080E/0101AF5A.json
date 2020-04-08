@@ -1,0 +1,109 @@
+{
+    "Topic": "1SixthSHouseScult [DIAL:0131080E]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 764, 
+        "Record Flags": {}, 
+        "FormID": "0101AF5A", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ04 [QUST:01001DB9]", 
+    "PNAM - Previous INFO": "01014978", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "64 68 69"
+            }, 
+            "NAM1 - Response Text": "This Addhiranirr knows about, because it is about smuggling.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "64 68 69"
+            }, 
+            "NAM1 - Response Text": "Some smart smugglers are suddenly too busy for their old clients, because they have a new employer, the Sixth House, who pays VERY well.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "64 68 69"
+            }, 
+            "NAM1 - Response Text": "But what do they smuggle now? Addhiranirr doesn't know, because they are very secret.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "64 68 69"
+            }, 
+            "NAM1 - Response Text": "And this is odd, because these smugglers are always loud and bragging, and now they hush up like fat-bellied kitties full of sweet-meats.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ04b "Addhiranirr Informant" [QUST:01001DBB]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "A0", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 45.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ04b "Addhiranirr Informant" [QUST:01001DBB]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0addhiranirr "Addhiranirr" [NPC_:012601DC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 2D 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMQ04b 45", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQ04b [QUST:01001DBB]"
+        ]
+    }
+}

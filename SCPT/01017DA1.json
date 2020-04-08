@@ -1,0 +1,33 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 536, 
+        "Record Flags": {}, 
+        "FormID": "01017DA1", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwSiltStriderScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 127, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 71 00 00 00 16 00 0D 00 04 00 09 00 20 66 01 00 20 30 20 3C 3D 15 00 1F 00 66 01 00 1A 00 20 58 17 14 14 00 02 00 7A 00 00 00 00 00 00 20 40 7A 00 00 00 00 00 00 39 40 16 00 0F 00 01 00 0B 00 20 58 4D 10 00 00 20 33 30 20 3C B2 10 05 00 01 00 72 01 00 19 00 00 00 19 00 00 00 15 00 11 00 66 01 00 0C 00 20 66 01 00 20 58 0C 10 00 00 20 2D 11 00 00 00", 
+    "SCTX - Script Source": "scn mwSiltStriderScript\r\n\r\nfloat timer\r\n\r\nbegin gamemode\r\n\r\n	if Timer <= 0 \r\n\r\n		set Timer to Rand 8 25\r\n\r\n		if GetRandomPercent < 30\r\n			PlaySound3D mwSiltStriderSound\r\n		endif\r\n	endif\r\n\r\n	set Timer to Timer - GetSecondsPassed\r\n\r\nend\n;<CSEBlock>\n;<CSECaretPos> 168 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "timer"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "mwSiltStriderSound [SOUN:013000CB]"
+    ]
+}

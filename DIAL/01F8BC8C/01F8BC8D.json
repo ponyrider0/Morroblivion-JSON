@@ -1,0 +1,56 @@
+{
+    "Topic": "fbmwtr07hlaalu [DIAL:01F8BC8C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 363, 
+        "Record Flags": {}, 
+        "FormID": "01F8BC8D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTR07Guard [QUST:0101C64C]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "65 6E 69"
+            }, 
+            "NAM1 - Response Text": "Oh? Really? Does Tienius Delitian know that? Did you talk to Aleri Aren? You should tell her that you're House Hlaalu. Really. But don't tell Tienius Delitian. Just tell Aleri Aren.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0IvulenSIrano "Ivulen Irano" [NPC_:01260A83]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwtr07guard 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTR07Guard [QUST:0101C64C]"
+        ]
+    }
+}

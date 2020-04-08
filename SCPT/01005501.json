@@ -1,0 +1,38 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1065, 
+        "Record Flags": {}, 
+        "FormID": "01005501", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwVedeleaOthrilScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 6, 
+        "CompiledSize": 254, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0B 00 10 00 1B 00 00 00 01 00 72 03 00 15 00 0B 00 66 01 00 06 00 20 58 CE 10 00 00 1C 00 01 00 22 10 00 00 11 00 00 00 10 00 06 00 00 00 C6 00 00 00 16 00 15 00 05 00 11 00 20 58 3A 10 05 00 01 00 72 04 00 20 35 30 20 3D 3D 16 00 18 00 03 00 14 00 20 72 02 00 58 01 10 05 00 01 00 72 05 00 20 33 30 30 20 3C 39 10 0A 00 02 00 72 04 00 6E 46 00 00 00 15 00 0A 00 72 04 00 73 01 00 02 00 20 30 1C 00 02 00 5E 10 00 00 19 00 00 00 19 00 00 00 16 00 15 00 05 00 11 00 20 58 3A 10 05 00 01 00 72 06 00 20 35 30 20 3D 3D 16 00 18 00 03 00 14 00 20 72 02 00 58 01 10 05 00 01 00 72 05 00 20 33 30 30 20 3C 39 10 0A 00 02 00 72 06 00 6E 3C 00 00 00 15 00 0A 00 72 04 00 73 01 00 02 00 20 30 1C 00 02 00 5E 10 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwVedeleaOthrilScript\n\nREF SelfRef\n\nBegin OnPackageEnd fbmwHHOdirniranLeave\n	Set SelfRef TO GetSelf\n	SelfRef.Disable\nEnd\n\n\nBegin GameMode\n	IF GetStage fbmwHHOdirniran == 50\n		if mwVedeleaOthrilREF.GetDistance mwRemasaOthrilREF < 300\n			SetStage fbmwHHOdirniran 70\n			SET fbmwHHOdirniran.FollowNow TO 0\n			mwVedeleaOthrilREF.EvaluatePackage\n		endif\n	ENDIF\n\n	IF GetStage fbmwHTOdirniran == 50\n		if mwVedeleaOthrilREF.GetDistance mwRemasaOthrilREF < 300\n			SetStage fbmwHTOdirniran 60\n			SET fbmwHHOdirniran.FollowNow TO 0\n			mwVedeleaOthrilREF.EvaluatePackage\n		endif\n	ENDIF\nEnd\n;<CSEBlock>\n;<CSECaretPos> 6 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "BA 8A 1D 28 00 00 00"
+            }, 
+            "SCVR - Name": "SelfRef"
+        }
+    ], 
+    "References": [
+        "SCRV - Local Variable": "00000001", 
+        "SCRO - Global Reference": "mwVedeleaOthrilREF [ACHR:0181B890]", 
+        "SCRO - Global Reference": "fbmwHHOdirniranLeave [PACK:010054FA]", 
+        "SCRO - Global Reference": "fbmwHHOdirniran [QUST:01003469]", 
+        "SCRO - Global Reference": "mwRemasaOthrilREF [ACHR:01813E5A]", 
+        "SCRO - Global Reference": "fbmwHTOdirniran [QUST:01003446]"
+    ]
+}

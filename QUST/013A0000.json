@@ -1,0 +1,42 @@
+{
+    "Record Header": {
+        "Signature": "QUST", 
+        "Data Size": 167, 
+        "Record Flags": {}, 
+        "FormID": "013A0000", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "MorroDefaultQuest", 
+    "SCRI - Script": "mwMorroDefaultQuestScript [SCPT:010020E7]", 
+    "FULL - Name": "Morrowind Default Quest", 
+    "ICON - Icon FileName": "Quest\\icon_miscellaneous.dds", 
+    "DATA - General": {
+        "Flags": {
+            "Start game enabled": true, 
+            "Allow repeated conversation topics": true
+        }, 
+        "Priority": 65
+    }, 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetGlobalValue:74", 
+            "Unused": "00 00", 
+            "Parameter #1": "PlayerInMorrowind [GLOB:01003249]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsPlayableRace:254", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ]
+}

@@ -1,0 +1,88 @@
+{
+    "Topic": "1CensusSandSExciseSagent [DIAL:0131069C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 589, 
+        "Record Flags": {}, 
+        "FormID": "0101AF70", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ04 [QUST:01001DB9]", 
+    "PNAM - Previous INFO": "0101AF71", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "68 69 72"
+            }, 
+            "NAM1 - Response Text": "Really? You have made the agent go away? This is a good trick.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "68 69 72"
+            }, 
+            "NAM1 - Response Text": "And Addhiranirr  does not ask you how you do this trick, because Addhiranirr does not want to know.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "68 69 72"
+            }, 
+            "NAM1 - Response Text": "But now Addhiranirr is feeling quite good, and happy to talk to you about the Nerevarine cult or the Sixth House cult. Go ahead. Ask your questions.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0addhiranirr "Addhiranirr" [NPC_:012601DC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 15.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ04b "Addhiranirr Informant" [QUST:01001DBB]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 1E 00 00 00", 
+        "SCTX - Result script source": "setstage FBMWMQ04b 30", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQ04b [QUST:01001DBB]"
+        ]
+    }
+}

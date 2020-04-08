@@ -1,0 +1,24 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 400, 
+        "Record Flags": {}, 
+        "FormID": "01009490", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwShrineGnisisRealMaskScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 3, 
+        "CompiledSize": 45, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 1D 00 00 00 00 00 1E 10 08 00 02 00 72 02 00 72 01 00 1C 00 01 00 1C 10 05 00 01 00 72 03 00 11 00 00 00", 
+    "SCTX - Script Source": "SCN mwShrineGnisisRealMaskScript\n\n; Applied to the real Vivec Ash Mask hidden inside the triolith.\n\nBegin OnActivate\n\n	Cast 0shrineUgnisisUsp Player	\n	Player.AddSpell 0HealingTouchuSPUuniq\n	\nEnd\n;<CSEBlock>\n;<CSECaretPos> 32 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "0shrineUgnisisUsp [SPEL:0106033F]", 
+        "SCRO - Global Reference": "0HealingTouchUSPUuniq [SPEL:01060363]"
+    ]
+}

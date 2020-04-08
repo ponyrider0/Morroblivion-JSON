@@ -1,0 +1,40 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1022, 
+        "Record Flags": {}, 
+        "FormID": "01025375", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwHRkoalCaveScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 6, 
+        "CompiledSize": 253, 
+        "VariableCount": 1, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 EF 00 00 00 16 00 15 00 01 00 11 00 20 58 3A 10 05 00 01 00 72 02 00 20 35 30 20 21 3D 1E 00 00 00 19 00 00 00 16 00 41 00 01 00 3D 00 20 58 3A 10 05 00 01 00 72 02 00 20 35 30 20 3D 3D 20 72 03 00 58 36 11 05 00 01 00 72 04 00 20 31 20 3D 3D 20 26 26 20 72 01 00 58 36 11 05 00 01 00 72 04 00 20 30 20 3D 3D 20 26 26 1C 00 01 00 9E 10 20 00 04 00 72 03 00 7A 00 00 00 00 00 00 14 C0 7A 00 00 00 00 00 00 14 C0 7A 00 00 00 00 00 00 00 00 19 00 00 00 16 00 18 00 05 00 14 00 20 72 01 00 58 01 10 05 00 01 00 72 05 00 20 33 30 30 20 3C 15 00 07 00 73 01 00 02 00 20 30 1C 00 01 00 98 10 00 00 1C 00 01 00 5E 10 00 00 39 10 0A 00 02 00 72 02 00 6E 46 00 00 00 1C 00 01 00 56 10 08 00 02 00 72 03 00 72 06 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwHRKoalCaveScript\r\n\r\nSHORT FollowNow\r\n\r\nBEGIN GameMode\r\n	IF GetStage fbmwHRKoalCave!= 50\r\n		RETURN\r\n	ENDIF\r\n\r\n	IF GetStage fbmwHRKoalCave== 50 && Player.GetInWorldspace wrldMorrowind == 1 && mwDevalBelethREF.GetInWorldSpace wrldMorrowind == 0\r\n		mwDevalBelethREF.MoveTo Player -5, -5, 0\r\n	ENDIF\r\n\r\n	IF mwDevalBelethREF.GetDistance mwKoalCaveShrine < 300\r\n		SET FollowNow TO 0\r\n		mwDevalBelethREF.RemoveScriptPackage fbmwHRKoalCaveFollow\r\n		mwDevalBelethREF.EvaluatePackage\r\n\r\n		SetStage fbmwHRKoalCave 70\r\n		mwDevalBelethREF.StartConversation Player 1KoalSCave\r\n	ENDIF\r\nEND ; GameMode", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "FollowNow"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "mwDevalBelethREF [ACHR:018204FE]", 
+        "SCRO - Global Reference": "fbmwHRKoalCave [QUST:01004A5B]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "WrldMorrowind [WRLD:01380000]", 
+        "SCRO - Global Reference": "mwKoalCaveShrine [REFR:01873188]", 
+        "SCRO - Global Reference": "1KoalSCave [DIAL:01310B63]"
+    ]
+}

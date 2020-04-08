@@ -1,0 +1,67 @@
+{
+    "Topic": "1attractSmoreSsettlers [DIAL:013106F0]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 392, 
+        "Record Flags": {}, 
+        "FormID": "0100FC80", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHRStronghold [QUST:0100347A]", 
+    "PNAM - Previous INFO": "01AA444E", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 48 52"
+            }, 
+            "NAM1 - Response Text": "So, Hetman Guls is satisfied. I will give the orders to begin the last stage of your stronghold.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 250.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHRStronghold "House Redoran: Stronghold" [QUST:0100347A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0galsaSgindu "Galsa Gindu" [NPC_:012600CD]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 28, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 01 00 02 00 20 33 39 10 0A 00 02 00 72 02 00 6E FC 00 00 00", 
+        "SCTX - Result script source": "SET fbmwHHStronghold.BuildProgress TO 3 ; Just in Case\r\nSetStage fbmwHRStronghold 252", 
+        "References": [
+            "SCRO - Global Reference": "fbmwHHStronghold [QUST:0100346D]", 
+            "SCRO - Global Reference": "fbmwHRStronghold [QUST:0100347A]"
+        ]
+    }
+}

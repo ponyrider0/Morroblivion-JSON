@@ -1,0 +1,61 @@
+{
+    "Topic": "mwDAMehrunesDagonSpeech [DIAL:01005C9D]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 228, 
+        "Record Flags": {}, 
+        "FormID": "01005CA1", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "01", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwDAMehrunes [QUST:01002C89]", 
+    "PNAM - Previous INFO": "01005CA0", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "65 64 72"
+            }, 
+            "NAM1 - Response Text": "I expected little else. Take your leave of this place or die where you stand.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 6.000000000000000, 
+            "Function": "GetScriptVariable:53", 
+            "Unused": "00 00", 
+            "Parameter #1": "mwDAMehrunesDagonStatueREF [REFR:01850C05] (places 0activeUdaeUmehrunes "Statue of Mehrunes Dagon" [ACTI:010E01AC] in GRUP Cell Persistent Children of YasammidanVSShrine "Yasammidan, Shrine" [CELL:014804A9])", 
+            "Parameter #2": "speech", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "mwDaedricSpeaker "Dummy NPC for Daedric Statues" [NPC_:01F8E35C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

@@ -1,0 +1,82 @@
+{
+    "Topic": "1pressingSbusiness [DIAL:013107D8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 779, 
+        "Record Flags": {}, 
+        "FormID": "01F8AF2B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwVTraderLate [QUST:01003416]", 
+    "PNAM - Previous INFO": "01F8AF2A", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "Yes. Most pressing. I have, you see, a shipment of clothing...fine clothing, it is...to get to Ald-ruhn. But, I fear other business draws me away. Perhaps, I think, you and I might come to an arrangement, yes? If you will deliver Rasha's shirts...", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 56 54"
+            }, 
+            "NAM1 - Response Text": "These fine, fine shirts...to Bivale Teneran the clothier in Ald-ruhn, she will pay you for your services. And a generous woman she is.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "77 56 54"
+            }, 
+            "NAM1 - Response Text": "I would ask that you swear an oath to Zenithar to seal our arrangement, though. Yes. What do you think of my offer, hmmmm?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0rasha "Rasha" [NPC_:012606CC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1pressingSbusiness1 [DIAL:01320B7A]", 
+        "TCLT - Choice": "1pressingSbusiness2 [DIAL:01320B78]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 14 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwvtraderlate 20", 
+        "References": [
+            "SCRO - Global Reference": "fbmwVTraderLate [QUST:01003416]"
+        ]
+    }
+}

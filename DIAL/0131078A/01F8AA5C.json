@@ -1,0 +1,66 @@
+{
+    "Topic": "1guarShideSshipment [DIAL:0131078A]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 335, 
+        "Record Flags": {}, 
+        "FormID": "01F8AA5C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVInnocentAshlanders [QUST:01003406]", 
+    "PNAM - Previous INFO": "01F8AA5B", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 4D 56"
+            }, 
+            "NAM1 - Response Text": "None of our tribe would have done this thing. We are an honorable people, and have no needs beyond what we have.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInCell:67", 
+            "Unused": "00 00", 
+            "Parameter #1": "UrshilakuSCamp "Urshilaku Camp" [CELL:01480042]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 60.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVInnocentAshlanders "Marsus Tullius's Missing Hides" [QUST:01003406]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 2E 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmvinnocentashlanders 46", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMVInnocentAshlanders [QUST:01003406]"
+        ]
+    }
+}

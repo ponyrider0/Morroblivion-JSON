@@ -1,0 +1,63 @@
+{
+    "Record Header": {
+        "Signature": "PACK", 
+        "Data Size": 172, 
+        "Record Flags": {}, 
+        "FormID": "01009EED", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwMSBadPetsRatFollowPackage", 
+    "PKDT - General": {
+        "General": {
+            "Flags": {
+                "Defensive combat": true
+            }, 
+            "Type": "01", 
+            "Unused": "00 00 00"
+        }
+    }, 
+    "PSDT - Schedule": {
+        "Month": -1, 
+        "Day of week": -1, 
+        "Date": "00", 
+        "Time": -1, 
+        "Duration": 0
+    }, 
+    "PTDT - Target": {
+        "Type": 0, 
+        "Target": "00000014", 
+        "Count": 256
+    }, 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSBadPetsToken "Rat Token" [CLOT:0101AFFA]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetDisabled:35", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSBadPets "Rerlas Mon's Trained Scribs and Packrats" [QUST:0101C614]", 
+            "Parameter #2": "ratcompanion", 
+            "Unused": "00000000"
+        }
+    ]
+}

@@ -1,0 +1,106 @@
+{
+    "Topic": "1littleSsuggestion [DIAL:0131080B]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 912, 
+        "Record Flags": {}, 
+        "FormID": "01320C6E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQHlaaluCurio [QUST:01001DD6]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "013107C4", 
+        "NAME - Topic": "01310B6D", 
+        "NAME - Topic": "01310BDA", 
+        "NAME - Topic": "01310B05", 
+        "NAME - Topic": "01310AD9", 
+        "NAME - Topic": "013109D1", 
+        "NAME - Topic": "013108A4", 
+        "NAME - Topic": "01310CF8", 
+        "NAME - Topic": "013107AB"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I am sure you can persuade Dram Bero to support you as Hortator... if you can find him. Orvas Dren has Nevena Ules and Velanda Omani in his pocket.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "You might want to make a little trip to the Dren Plantation before talking to them. And then there's Yngling Half-Troll.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQHlaaluCurio "Convincing ""Uncle"" Crassius" [QUST:01001DD6]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "0OrvasSDrenSDruglord "Orvas Dren" [NPC_:012604A7]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0crassiusScurio "Crassius Curio" [NPC_:0126038C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1HlaaluScouncilors [DIAL:013107C4]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 6, 
+            "CompiledSize": 84, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 01 00 00 00 39 10 0A 00 02 00 72 02 00 6E 01 00 00 00 39 10 0A 00 02 00 72 03 00 6E 01 00 00 00 39 10 0A 00 02 00 72 04 00 6E 01 00 00 00 39 10 0A 00 02 00 72 05 00 6E 01 00 00 00 39 10 0A 00 02 00 72 06 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMQHlaaluDram 1\r\nSetStage fbmwMQHlaaluDren 1\r\nSetStage fbmwMQHlaaluOmani 1\r\nSetStage fbmwMQHlaaluUles 1\r\nSetStage fbmwMQHlaaluYngling 1\r\nSetStage fbmwMQHlaalu 1", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQHlaaluDram [QUST:01001DD5]", 
+            "SCRO - Global Reference": "fbmwMQHlaaluDren [QUST:01001DD7]", 
+            "SCRO - Global Reference": "fbmwMQHlaaluOmani [QUST:01001DD9]", 
+            "SCRO - Global Reference": "fbmwMQHlaaluUles [QUST:01001DDA]", 
+            "SCRO - Global Reference": "fbmwMQHlaaluYngling [QUST:01001DDB]", 
+            "SCRO - Global Reference": "fbmwMQHlaalu [QUST:01001DD8]"
+        ]
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "Topic": "fbmwMQ14thirdquestion [DIAL:010269FD]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 304, 
+        "Record Flags": {}, 
+        "FormID": "010269FE", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ14 [QUST:01002C56]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "My final question is: if I had offered to let you join me, would you have surrendered Wraithguard, Sunder, and Keening to me to seal your oath?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwDagothUr "Dagoth Ur" [NPC_:0100A1E7]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "fbmwMQ14wouldneverjoinyou [DIAL:010269FF]", 
+        "TCLT - Choice": "fbmwMQ14wouldneversurrendertools [DIAL:01026A00]", 
+        "TCLT - Choice": "fbmwMQ14yeswithcunningplan [DIAL:01026A02]", 
+        "TCLT - Choice": "fbmwMQ14yeswithguarantees [DIAL:01026A01]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

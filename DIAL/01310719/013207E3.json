@@ -1,0 +1,86 @@
+{
+    "Topic": "1BroodSofSLordSIrarak [DIAL:01310719]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 656, 
+        "Record Flags": {}, 
+        "FormID": "013207E3", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwVAVampCult [QUST:01003BCC]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310ACB", 
+        "NAME - Topic": "01310C0D", 
+        "NAME - Topic": "01310BE1", 
+        "NAME - Topic": "013108C4"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Yes, I am the Dark Lord Irarak, and these are my minions. They serve me as their Dark Master.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Perhaps one day I will bestow upon them the gift of Life Eternal, but until then, they will be content to serve me obediently.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "They provide comfort for me, while I provide them with my presence.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Irarak "Irarak" [NPC_:01260A08]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 27, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "addtopic 1LordSIrarak\r\naddtopic 1provideScomfort\r\naddtopic 1toSserve", 
+        "References": [
+            "SCRO - Global Reference": "1LordSIrarak [DIAL:01310ACB]", 
+            "SCRO - Global Reference": "1provideScomfort [DIAL:013108C4]", 
+            "SCRO - Global Reference": "1toSserve [DIAL:01310BE1]"
+        ]
+    }
+}

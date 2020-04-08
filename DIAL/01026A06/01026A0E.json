@@ -1,0 +1,70 @@
+{
+    "Topic": "fbmwMQ14dunmerplan [DIAL:01026A06]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 574, 
+        "Record Flags": {}, 
+        "FormID": "01026A0E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ14 [QUST:01002C56]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "54 65 6D"
+            }, 
+            "NAM1 - Response Text": "I will free the Dunmer from the Imperial yoke, and cast down the false gods of the Temple. I will lead them out of their ancient superstitions, and gift them with intimate knowledge of the divine.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "FF FF FF"
+            }, 
+            "NAM1 - Response Text": "Then, perhaps, when Morrowind is once again restored to its ancient glories, it will be time to consider whether the Dunmer should cultivate ambitions of empire.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwDagothUr "Dagoth Ur" [NPC_:0100A1E7]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "fbmwMQ14defendyourself [DIAL:01026A08]", 
+        "TCLT - Choice": "fbmwMQ14dwemer [DIAL:01026A09]", 
+        "TCLT - Choice": "fbmwMQ14akulakhan [DIAL:01026A0A]", 
+        "TCLT - Choice": "fbmwMQ14jusitfycrimes [DIAL:01026A07]", 
+        "TCLT - Choice": "fbmwMQ14sixthhouseplan [DIAL:01026A05]", 
+        "TCLT - Choice": "fbmwMQ14whatsyourplan [DIAL:01026A04]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

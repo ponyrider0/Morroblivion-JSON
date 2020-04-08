@@ -1,0 +1,53 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1467, 
+        "Record Flags": {}, 
+        "FormID": "01F8B1A9", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwbmRigmorScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 8, 
+        "CompiledSize": 352, 
+        "VariableCount": 2, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 26 00 00 00 00 00 1C 00 01 00 22 10 00 00 1C 00 02 00 22 10 00 00 1C 00 03 00 22 10 00 00 1C 00 04 00 73 10 02 00 00 00 11 00 00 00 10 00 06 00 00 00 20 01 00 00 16 00 15 00 08 00 11 00 20 58 01 10 05 00 01 00 72 05 00 20 31 30 30 20 3C 89 10 0A 00 02 00 72 06 00 6E FF FF FF FF 1C 00 01 00 21 10 00 00 16 10 05 00 01 00 72 01 00 1C 00 02 00 21 10 00 00 16 10 05 00 01 00 72 02 00 1C 00 03 00 21 10 00 00 16 10 05 00 01 00 72 03 00 1C 00 04 00 72 10 07 00 01 00 6E 64 00 00 00 19 00 00 00 16 00 22 00 02 00 1E 00 20 58 3A 10 05 00 01 00 72 07 00 20 31 30 30 20 3D 3D 20 73 01 00 20 30 20 3D 3D 20 26 26 97 10 05 00 01 00 72 08 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 16 00 21 00 02 00 1D 00 20 58 3A 10 05 00 01 00 72 07 00 20 37 30 20 3D 3D 20 73 02 00 20 30 20 3D 3D 20 26 26 5E 10 00 00 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 16 00 22 00 02 00 1E 00 20 58 3A 10 05 00 01 00 72 07 00 20 31 30 35 20 3D 3D 20 73 01 00 20 30 20 3D 3D 20 26 26 5E 10 00 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwbmRigmorScript\n\nshort DoOnce\nshort DoOncefol\n\nbegin ondeath\n	fbmwbmCaerlorn1REFD.Disable\n	fbmwbmCaerlorn2REFD.Disable\n	fbmwbmCaerlorn3REFD.Disable\n	fbmwbmSkaalGateREF.UnLock\nend\nbegin gamemode\n	if(GetDistance fbmwbmRigmorDieMarker < 100)\n		SetFactionRank 0Skaal -1 ;try to avoid the other skaal to help him\n		fbmwbmCaerlorn1REFD.Enable\n		StartCombat fbmwbmCaerlorn1REFD\n		fbmwbmCaerlorn2REFD.Enable\n		StartCombat fbmwbmCaerlorn2REFD\n		fbmwbmCaerlorn3REFD.Enable\n		StartCombat fbmwbmCaerlorn3REFD\n		fbmwbmSkaalGateREF.Lock 100\n	endif\n	if (GetStage fbmwBMTrial == 100) && (DoOnce == 0)\n		AddScriptPackage fbmwBmRigmorExile\n		set DoOnce to 1\n	endif\n	if (GetStage fbmwBMTrial == 70) && (DoOncefol == 0)\n		evp\n		set DoOncefol to 1\n	endif\n	if (GetStage fbmwBMTrial == 105) && (DoOnce == 0)\n		evp\n		set DoOnce to 1\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "08 74 61 67 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "09 A8 5F 27 0C 00 00"
+            }, 
+            "SCVR - Name": "DoOnce"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "53 74 61 67 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "72 69 61 6C 20 3D 3D"
+            }, 
+            "SCVR - Name": "DoOncefol"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwbmCaerlorn1REFD [ACRE:01F8EB14]", 
+        "SCRO - Global Reference": "fbmwbmCaerlorn2REFD [ACRE:01F8EB15]", 
+        "SCRO - Global Reference": "fbmwbmCaerlorn3REFD [ACRE:01F8EB16]", 
+        "SCRO - Global Reference": "fbmwbmSkaalGateREF [REFR:01F029E8]", 
+        "SCRO - Global Reference": "fbmwbmRigmorDieMarker [REFR:01F8B1C2]", 
+        "SCRO - Global Reference": "0Skaal [FACT:0122001A]", 
+        "SCRO - Global Reference": "fbmwBMTrial [QUST:0101B6D7]", 
+        "SCRO - Global Reference": "fbmwBmRigmorExile [PACK:0107B8F2]"
+    ]
+}

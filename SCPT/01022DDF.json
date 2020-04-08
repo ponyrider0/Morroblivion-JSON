@@ -1,0 +1,36 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 413, 
+        "Record Flags": {}, 
+        "FormID": "01022DDF", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwTelvanniHortCount", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 90, 
+        "VariableCount": 1, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 4C 00 00 00 16 00 32 00 01 00 2E 00 20 73 01 00 20 36 20 3E 3D 20 58 54 10 05 00 01 00 72 01 00 20 30 20 3E 20 26 26 20 58 3A 10 05 00 01 00 72 02 00 20 36 30 20 3C 20 26 26 39 10 0A 00 02 00 72 02 00 6E 3C 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwTelvanniHortCount\r\n\r\nSHORT HortVotes\r\n\r\nBEGIN GameMode\r\n	IF HortVotes >= 6 && GetDeadCount 0Aryon > 0 && GetStage fbmwMQTelvanni < 60\r\n		SetStage fbmwMQTelvanni 60\r\n	ENDIF\r\nEND", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "4D 51 54 65 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "6F 6E 53 74 61 67 65"
+            }, 
+            "SCVR - Name": "hortvotes"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "0aryon [NPC_:0126040A]", 
+        "SCRO - Global Reference": "fbmwMQTelvanni [QUST:01002C4A]"
+    ]
+}

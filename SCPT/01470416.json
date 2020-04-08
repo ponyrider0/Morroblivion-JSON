@@ -1,0 +1,24 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 503, 
+        "Record Flags": {}, 
+        "FormID": "01470416", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwBMIcewallScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 3, 
+        "CompiledSize": 120, 
+        "VariableCount": 4, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 6A 00 00 00 16 00 3E 00 02 00 3A 00 20 58 3A 10 05 00 01 00 72 02 00 20 33 30 20 3D 3D 20 72 01 00 58 2F 10 05 00 01 00 72 03 00 20 30 20 3E 20 26 26 20 58 01 10 05 00 01 00 72 01 00 20 31 30 30 20 3C 20 26 26 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 39 10 0A 00 02 00 72 02 00 6E 28 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptName mwBMIcewallScript\n\nbegin gamemode\n\n	if GetStage fbmwBMSun == 30 && Player.GetItemCount 0ingredUeyeballUunique > 0 && GetDistance Player < 100\n		Player.RemoveItem 0ingredUeyeballUunique 1\n		SetStage fbmwBMSun 40\n	endif\n\nend\n;<CSEBlock>\n;<CSECaretPos> 30 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "fbmwBMSun [QUST:0101B6D5]", 
+        "SCRO - Global Reference": "0ingredUeyeballUunique [INGR:010A007D]"
+    ]
+}

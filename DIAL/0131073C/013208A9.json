@@ -1,0 +1,95 @@
+{
+    "Topic": "1RedoranSMasterSHelm [DIAL:0131073C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 582, 
+        "Record Flags": {}, 
+        "FormID": "013208A9", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTGMasterHelm [QUST:01009335]", 
+    "PNAM - Previous INFO": "01034FE4", 
+    "Add topics": [
+        "NAME - Topic": "0131073C", 
+        "NAME - Topic": "0131095D", 
+        "NAME - Topic": "013109EA", 
+        "NAME - Topic": "01310A57", 
+        "NAME - Topic": "01310BEF", 
+        "NAME - Topic": "01310CF4"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "A client of ours wants a Redoran Master Helm. Most of the Councilors in House Redoran have one, but they can be hard to find.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I know Miner Arobar has one, probably in his bedroom. You'd have to check Arobar Manor here in Ald'ruhn, Under-Skar.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0aengoth "Aengoth the Jeweler" [NPC_:01260023]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetPCInFaction:132", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ThievesSGuild "Thieves Guild" [FACT:01220001]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwtgmasterhelm 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTGMasterHelm [QUST:01009335]"
+        ]
+    }
+}

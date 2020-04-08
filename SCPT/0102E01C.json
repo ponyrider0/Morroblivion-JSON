@@ -1,0 +1,36 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 531, 
+        "Record Flags": {}, 
+        "FormID": "0102E01C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwUderFrykteScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 137, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 5D 00 00 00 16 00 0D 00 03 00 09 00 20 73 01 00 20 30 20 3D 3D 54 11 0B 00 01 00 7A 00 00 00 00 00 00 F0 3F 23 11 05 00 01 00 72 01 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 16 00 15 00 01 00 11 00 20 58 3A 10 05 00 01 00 72 02 00 20 33 30 20 3E 3D 21 10 00 00 19 00 00 00 11 00 00 00 10 00 08 00 0A 00 12 00 00 00 00 00 39 10 0A 00 02 00 72 02 00 6E 28 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwuderfryktescript\r\n\r\nshort camo\r\n\r\nBegin GameMode\r\n\r\nif camo == 0\r\n	SetActorRefraction 1\r\n	PlayMagicShaderVisuals effectAtronachFrost\r\n	set camo to 1\r\nendif\r\n\r\nif getstage fbmwbmmeadhall>=30\r\nenable\r\nendif\r\n\r\nEnd\r\nbegin ondeath\r\nsetstage fbmwbmmeadhall 40\r\nend ", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "36 72 0A 7B 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "36 50 53 0C A1 89 3B"
+            }, 
+            "SCVR - Name": "camo"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "effectAtronachFrost [EFSH:00089975]", 
+        "SCRO - Global Reference": "fbmwBMMeadHall [QUST:0101B6C8]"
+    ]
+}

@@ -1,0 +1,145 @@
+{
+    "Topic": "1shareSaScare [DIAL:01310A37]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1342, 
+        "Record Flags": {}, 
+        "FormID": "01AABE6A", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwRomanceAhnassi [QUST:0101BE47]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 52 6F"
+            }, 
+            "NAM1 - Response Text": "A friend tells Ahnassi that J'Dhannar has left Vivec to return to Elsweyr. She says that he looks well, and that he has stopped using sugar.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "57 52 6F"
+            }, 
+            "NAM1 - Response Text": "Ahnassi is not sorry that she is free of her bond with J'Dhannar, but Ahnassi is very happy that he seems to be better.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "57 52 6F"
+            }, 
+            "NAM1 - Response Text": "Ahnassi is VERY grateful to her VERY special friend.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "57 52 6F"
+            }, 
+            "NAM1 - Response Text": "And Ahnassi hopes that her VERY special friend will come visit her at Ahnassi's house here in Pelagiad.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "05", 
+                "Unused": "57 52 6F"
+            }, 
+            "NAM1 - Response Text": "We mustn't keep meeting here in this old cornerclub.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "06", 
+                "Unused": "57 52 6F"
+            }, 
+            "NAM1 - Response Text": "At Ahnassi's house, Ahnassi can show her VERY special friend some good, old-fashioned Khajiit hospitality.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "07", 
+                "Unused": "57 52 6F"
+            }, 
+            "NAM1 - Response Text": "It's the house here in Pelagiad, across the street from the Halfway, by the fort wall, off the street, with the stone fences nearby. Here.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "08", 
+                "Unused": "57 52 6F"
+            }, 
+            "NAM1 - Response Text": "You'll need the key. If you come by the Halfway again, and I'm not here, I'll be at the house.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 45.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwRomanceAhnassi "Ahnassi, a Special Friend" [QUST:0101BE47]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ahnassi "Ahnassi" [NPC_:012600FD]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 39 10 0A 00 02 00 72 03 00 6E 50 00 00 00", 
+        "SCTX - Result script source": "player.additem 0keyUahnassi 1\r\nsetstage FBMWRomanceAhnassi 80", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0keyUahnassi [KEYM:01400128]", 
+            "SCRO - Global Reference": "fbmwRomanceAhnassi [QUST:0101BE47]"
+        ]
+    }
+}

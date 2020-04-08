@@ -1,0 +1,89 @@
+{
+    "Topic": "1exquisiteSshoes [DIAL:0131088B]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 598, 
+        "Record Flags": {}, 
+        "FormID": "01AA52F4", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ11z [QUST:01001DD3]", 
+    "PNAM - Previous INFO": "01AA52F3", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "Thank you. These remarkable shoes are... very fancy. Too fancy for a simple Ashlander like myself, But I thank you very much for the gift.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "It was very thoughtful.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "43", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0exquisiteUshoesU01 "Exquisite Shoes" [CLOT:0114000E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ10 "The Path of the Incarnate" [QUST:01001DC9]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0kaushad "Kaushad" [NPC_:0126018E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 60, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 53 10 0A 00 02 00 72 01 00 6E 28 00 00 00 39 10 0A 00 02 00 72 03 00 6E 04 00 00 00", 
+        "SCTX - Result script source": "Player.RemoveItem 0exquisiteushoesu01 1\r\nAddItem 0exquisiteushoesu01 1\r\nModDisposition player 40\r\nSetStage fbmwMQ11z 4", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0exquisiteUshoesU01 [CLOT:0114000E]", 
+            "SCRO - Global Reference": "fbmwMQ11z [QUST:01001DD3]"
+        ]
+    }
+}

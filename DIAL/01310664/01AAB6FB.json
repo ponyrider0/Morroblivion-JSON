@@ -1,0 +1,87 @@
+{
+    "Topic": "1murderSofSProcessusSVitellius [DIAL:01310664]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 550, 
+        "Record Flags": {}, 
+        "FormID": "01AAB6FB", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVDeadTaxman [QUST:01003404]", 
+    "PNAM - Previous INFO": "01AAB6FC", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000004", 
+                "Emotion Value": 80, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 4D 56"
+            }, 
+            "NAM1 - Response Text": "Processus, murdered! No! Tell me it's not so. He was the gentlest man I've ever met. He and I had become so close in the past few months...", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000004", 
+                "Emotion Value": 90, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "57 4D 56"
+            }, 
+            "NAM1 - Response Text": "I don't know what I will do without him. I've only seen him get angry once or twice; and never raised a hand to anyone. This is so sad.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0thavereSvedrano "Thavere Vedrano" [NPC_:0126023D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "A0", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVDeadTaxman "Death of a Taxman" [QUST:01003404]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 48.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVDeadTaxman "Death of a Taxman" [QUST:01003404]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 9, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00", 
+        "SCTX - Result script source": "addtopic 1seenShimSgetSangry", 
+        "References": [
+            "SCRO - Global Reference": "1seenShimSgetSangry [DIAL:013107A2]"
+        ]
+    }
+}

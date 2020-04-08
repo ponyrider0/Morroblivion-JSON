@@ -1,0 +1,70 @@
+{
+    "Topic": "1escort [DIAL:01310C94]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 401, 
+        "Record Flags": {}, 
+        "FormID": "01F8AB48", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVRichPilgrim [QUST:0100340E]", 
+    "PNAM - Previous INFO": "01F8AB47", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "74 72 69"
+            }, 
+            "NAM1 - Response Text": "I need an escort to Ghostgate Shrine, and I need to be there in two days' time. I'll give you a tip when you get me there safely. I haven't got all day. Shall we go?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVRichPilgrim "Viatrix, the Annoying Pilgrim" [QUST:0100340E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0viatrixSpetilia "Viatrix Petilia" [NPC_:012606C5]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1escort1 [DIAL:01322C6F]", 
+        "TCLT - Choice": "1escort2 [DIAL:01322C71]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmvrichpilgrim 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMVRichPilgrim [QUST:0100340E]"
+        ]
+    }
+}

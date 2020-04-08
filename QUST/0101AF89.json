@@ -1,0 +1,121 @@
+{
+    "Record Header": {
+        "Signature": "QUST", 
+        "Data Size": 1871, 
+        "Record Flags": {}, 
+        "FormID": "0101AF89", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwBMCeremony1", 
+    "FULL - Name": "The Totem of Claw and Fang", 
+    "ICON - Icon FileName": "darthsouth\\Quests\\bloodmoonmainquest.dds", 
+    "DATA - General": {
+        "Flags": {}, 
+        "Priority": 97
+    }, 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestRunning:56", 
+            "Unused": "00 00", 
+            "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Stages": [
+        {
+            "INDX - Stage index": 10, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Korst Wind-Eye has told me that he would like me to take part in a Skaal ceremony called Ristaag, in order to cleanse and bless the Skaal people. First, though, he would like me to retrieve the Totem of Claw and Fang.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 11, 
+                            "CompiledSize": 88, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 22 10 00 00 1C 00 02 00 21 10 00 00 1C 00 03 00 21 10 00 00 1C 00 04 00 21 10 00 00 1C 00 05 00 21 10 00 00 1C 00 06 00 21 10 00 00 1C 00 07 00 21 10 00 00 1C 00 08 00 21 10 00 00 1C 00 09 00 21 10 00 00 1C 00 0A 00 21 10 00 00 1C 00 0B 00 21 10 00 00", 
+                        "SCTX - Result script source": "fbmwbmTotemHuntDoorREF.disable\r\nfbmwbmTotemWere1REF.enable\r\nfbmwbmTotemWere2REF.enable\r\nfbmwbmTotemWere3REF.enable\r\nfbmwbmTotemWere4REF.enable\r\nfbmwbmTotemWere5REF.enable\r\nfbmwbmTotemWere6REF.enable\r\nfbmwbmTotemWere7REF.enable\r\nfbmwbmTotemWere8REF.enable\r\nfbmwbmTotemWere9REF.enable\r\nfbmwbmTotemWere10REF.enable", 
+                        "References": [
+                            "SCRO - Global Reference": "fbmwbmTotemHuntDoorREF [REFR:01F03326]", 
+                            "SCRO - Global Reference": "fbmwbmTotemWere1REF [ACHR:01F09F45]", 
+                            "SCRO - Global Reference": "fbmwbmTotemWere2REF [ACHR:01F09F46]", 
+                            "SCRO - Global Reference": "fbmwbmTotemWere3REF [ACHR:01F09F47]", 
+                            "SCRO - Global Reference": "fbmwbmTotemWere4REF [ACHR:01F09F48]", 
+                            "SCRO - Global Reference": "fbmwbmTotemWere5REF [ACHR:01F09F49]", 
+                            "SCRO - Global Reference": "fbmwbmTotemWere6REF [ACHR:01F09F4A]", 
+                            "SCRO - Global Reference": "fbmwbmTotemWere7REF [ACHR:01F09F4B]", 
+                            "SCRO - Global Reference": "fbmwbmTotemWere8REF [ACHR:01F09F4C]", 
+                            "SCRO - Global Reference": "fbmwbmTotemWere9REF [ACHR:01F09F4D]", 
+                            "SCRO - Global Reference": "fbmwbmTotemWere10REF [ACHR:01F09F4E]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 20, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "The Totem of Claw and Fang is located in the Tombs of Skaalara, located east and a bit south of the Skaal Village.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 30, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I have retrieved the Totem of Claw and Fang.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 100, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "Wind-Eye was pleased that I was able to return the Totem of Claw and Fang from the Tombs of Skaalara, and rewarded me with knowledge of the Skaal nature magic. He has taught me the Skaal ritual to summon a wolf to fight by my side.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 184, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 64 00 01 00 60 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 43 6F 6D 70 6C 65 74 65 64 20 54 68 65 20 54 6F 74 65 6D 20 6F 66 20 43 6C 61 77 20 61 6E 64 20 46 61 6E 67 20 71 75 65 73 74 22 F9 16 27 00 01 00 23 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 31 30 30 19 00 00 00", 
+                        "SCTX - Result script source": "if ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qCompleted The Totem of Claw and Fang quest%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 100\"\r\nendif\r\n"
+                    }
+                }
+            ]
+        }
+    ]
+}

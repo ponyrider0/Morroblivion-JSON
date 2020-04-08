@@ -1,0 +1,24 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 337, 
+        "Record Flags": {}, 
+        "FormID": "01F8B84F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwTRGoblinChief1Script", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 3, 
+        "CompiledSize": 79, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 3F 00 00 00 00 00 16 00 25 00 01 00 21 00 20 58 54 10 05 00 01 00 72 01 00 20 30 20 3E 20 58 54 10 05 00 01 00 72 02 00 20 30 20 3E 20 26 26 39 10 0A 00 02 00 72 03 00 6E 32 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwTRGoblinChief1Script\r\nbegin ondeath\r\nif getdeadcount fbmwtrGoblinChief1>0&&getdeadcount fbmwtrGoblinChief2>0\r\nsetstage fbmwtrkillGoblins 50\r\nendif\r\nend", 
+    "References": [
+        "SCRO - Global Reference": "fbmwTRGoblinChief1 [CREA:01F8B888]", 
+        "SCRO - Global Reference": "fbmwTRGoblinChief2 [CREA:01F8B87F]", 
+        "SCRO - Global Reference": "fbmwTRKillGoblins [QUST:0101C655]"
+    ]
+}

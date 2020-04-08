@@ -1,0 +1,81 @@
+{
+    "Topic": "1goldSkanetSflower [DIAL:013107E8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 680, 
+        "Record Flags": {}, 
+        "FormID": "01F8AA6D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSGoldKanetFlower [QUST:0101C620]", 
+    "PNAM - Previous INFO": "01F8AA6C", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 4D 53"
+            }, 
+            "NAM1 - Response Text": "The flower I need is called Roland's Tear, and it has magical powers greater than the ordinary gold kanet. It grows in the Daedric ruins near Vivec.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 4D 53"
+            }, 
+            "NAM1 - Response Text": "I'd be grateful if you could go fetch five of the flowers for me.  Mind you, it's one particular type. The others won't do. If you could do this little favor for me I will make you I will make you something rare and wonderful from the ingredients left over.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0auraneSfrernis "Aurane Frernis" [NPC_:0126034D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSGoldKanetFlower "Roland's Tear" [QUST:0101C620]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1goldSkanetSflower2 [DIAL:01320BCC]", 
+        "TCLT - Choice": "1goldSkanetSflower3 [DIAL:01320BCA]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmsgoldkanetflower 1", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMSGoldKanetFlower [QUST:0101C620]"
+        ]
+    }
+}

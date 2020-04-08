@@ -1,0 +1,110 @@
+{
+    "Topic": "1tradeSgoodsSwanted [DIAL:0131079C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1094, 
+        "Record Flags": {}, 
+        "FormID": "01F8ACB3", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTownTelVos [QUST:0101C648]", 
+    "PNAM - Previous INFO": "01F8A2EF", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "So you come to ask me about the trade goods wanted by the Zainab. Perhaps I should ask you why you want to know. But perhaps I already know why. The mage-lord Master Aryon is shrewd. He thinks to bind us to Telvanni ways by binding us to Telvanni things.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "75 6D 6D"
+            }, 
+            "NAM1 - Response Text": "But I see no harm, and much good, in giving you an answer.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "75 6D 6D"
+            }, 
+            "NAM1 - Response Text": "We need more cure common disease and cure blight disease potions. Our men travel long distances, hunting and herding, and when they catch diseases --", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "75 6D 6D"
+            }, 
+            "NAM1 - Response Text": "which they often do -- they are too busy -- or too proud -- to hurry back to camp for my cures. So if we could give them potions to carry with them, they could cure themselves.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "05", 
+                "Unused": "75 6D 6D"
+            }, 
+            "NAM1 - Response Text": "You roof-loving people are better at some things than our people, and bottling magic is one of them.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTownTelVos "Trade Mission to the Zainab" [QUST:0101C648]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0sonummuSzabamat "Sonummu Zabamat" [NPC_:0126018D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 1E 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwtowntelvos 30", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTownTelVos [QUST:0101C648]"
+        ]
+    }
+}

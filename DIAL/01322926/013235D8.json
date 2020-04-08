@@ -1,0 +1,86 @@
+{
+    "Topic": "1diamond1 [DIAL:01322926]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 734, 
+        "Record Flags": {}, 
+        "FormID": "013235D8", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTGDiamonds [QUST:0100932C]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310C3B", 
+        "NAME - Topic": "01310C7A"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Yes, a diamond. Habasi will take care of everything. Habasi cannot pay you until Habasi's friend pays Habasi...", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "But Habasi has this potion to give you.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ingredUdiamondU01 "Diamond" [INGR:010A0006]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0habasi "Sugar-Lips Habasi" [NPC_:01260133]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 6, 
+            "CompiledSize": 95, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00 A9 10 0D 00 03 00 72 05 00 72 06 00 6E 05 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwtgdiamonds 100\r\nplayer.removeitem 0ingredudiamondu01 1\r\nadditem 0ingredudiamondu01 1\r\nplayer.additem 0puinvisibilityue 1\r\nmodfactionreaction 0thievessguild playerfaction 5\r\nmoddisposition player 10", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwTGDiamonds [QUST:0100932C]", 
+            "SCRO - Global Reference": "0ingredUdiamondU01 [INGR:010A0006]", 
+            "SCRO - Global Reference": "0pUinvisibilityUe [ALCH:0108006D]", 
+            "SCRO - Global Reference": "0ThievesSGuild [FACT:01220001]", 
+            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]"
+        ]
+    }
+}

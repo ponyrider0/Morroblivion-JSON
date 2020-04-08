@@ -1,0 +1,23 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 685, 
+        "Record Flags": {}, 
+        "FormID": "01470469", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwBMStoneEarthScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 228, 
+        "VariableCount": 2, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 D4 00 00 00 00 00 16 00 26 00 02 00 22 00 20 58 3A 10 05 00 01 00 72 01 00 20 31 30 20 3C 20 58 3A 10 05 00 01 00 72 02 00 20 30 20 3E 20 26 26 59 10 5B 00 01 00 51 00 54 72 61 76 65 6C 20 6E 6F 72 74 68 65 61 73 74 20 74 6F 20 74 68 65 20 43 61 76 65 20 6F 66 20 74 68 65 20 48 69 64 64 65 6E 20 4D 75 73 69 63 20 61 6E 64 20 6C 65 61 72 6E 20 74 68 65 20 53 6F 6E 67 20 6F 66 20 74 68 65 20 45 61 72 74 68 2E 00 00 00 00 00 00 39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 18 00 15 00 02 00 11 00 20 58 3A 10 05 00 01 00 72 01 00 20 35 30 20 3D 3D 39 10 0A 00 02 00 72 01 00 6E 64 00 00 00 39 10 0A 00 02 00 72 02 00 6E 3E 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwBMStoneEarthScript\n\nbegin onactivate\n\n	if GetStage fbmwbmearth<10&&getstage fbmwbmStones>0\n		Message \"Travel northeast to the Cave of the Hidden Music and learn the Song of the Earth.\"\n		SetStage fbmwBMEarth 10\n	elseif GetStage fbmwbmearth==50\n		SetStage fbmwBMEarth 100\n		SetStage fbmwBMStones 62\n	endif\n\nend\n;<CSEBlock>\n;<CSECaretPos> 3 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "fbmwBMEarth [QUST:0101AF8E]", 
+        "SCRO - Global Reference": "fbmwBMStones [QUST:0101B6D4]"
+    ]
+}

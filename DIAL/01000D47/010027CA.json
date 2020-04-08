@@ -1,0 +1,58 @@
+{
+    "Topic": "AAADestination [DIAL:01000D47]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 198, 
+        "Record Flags": {}, 
+        "FormID": "010027CA", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "aaaStriderTransport [QUST:01000D46]", 
+    "PNAM - Previous INFO": "010027C9", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6E 65 6D"
+            }, 
+            "NAM1 - Response Text": "Where would you like to go?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0selvilSsareloth "Selvil Sareloth" [NPC_:0126077E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "AAASelvilSarelothAldRuhn [DIAL:0100C6F6]", 
+        "TCLT - Choice": "AAASelvilSarelothSeydaNeen [DIAL:0100C6F4]", 
+        "TCLT - Choice": "AAASelvilSarelothSuran [DIAL:0100C6F0]", 
+        "TCLT - Choice": "AAASelvilSarelothVivec [DIAL:0100C6F2]", 
+        "TCLT - Choice": "AAASelvilSarelothCancel [DIAL:0100C6EE]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

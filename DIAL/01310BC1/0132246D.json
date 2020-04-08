@@ -1,0 +1,81 @@
+{
+    "Topic": "1mySlocket [DIAL:01310BC1]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 429, 
+        "Record Flags": {}, 
+        "FormID": "0132246D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHRRansomMandas [QUST:01005196]", 
+    "PNAM - Previous INFO": "01003846", 
+    "Add topics": [
+        "NAME - Topic": "013108ED", 
+        "NAME - Topic": "01310CB6"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Yes, I will give it to you so that you can prove to my father, Arethan Mandas, that I am safe.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "But first I must *be* safe. Let's travel together and escape this tower.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHRRansomMandas "House Redoran: Delyna Mandas in Tel Fyr" [QUST:01005196]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0delynaSmandas "Delyna Mandas" [NPC_:01260220]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 9, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00", 
+        "SCTX - Result script source": "AddTopic 1TravelSTogether", 
+        "References": [
+            "SCRO - Global Reference": "1travelStogether [DIAL:0131086A]"
+        ]
+    }
+}

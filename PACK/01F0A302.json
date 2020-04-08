@@ -1,0 +1,54 @@
+{
+    "Record Header": {
+        "Signature": "PACK", 
+        "Data Size": 135, 
+        "Record Flags": {}, 
+        "FormID": "01F0A302", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwCGGuard01MovePackage", 
+    "PKDT - General": {
+        "General": {
+            "Flags": {
+                "Must reach location": true, 
+                "Skip fallout behavior": true
+            }, 
+            "Type": "06", 
+            "Unused": "00 00 00"
+        }
+    }, 
+    "PLDT - Location": {
+        "Type": 0, 
+        "Location": "01F0A2AC", 
+        "Radius": 0
+    }, 
+    "PSDT - Schedule": {
+        "Month": -1, 
+        "Day of week": -1, 
+        "Date": "00", 
+        "Time": -1, 
+        "Duration": 0
+    }, 
+    "Conditions": [
+        {
+            "Type": "A0", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 3.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwChargen "Stranger in a Strange Land" [QUST:01F0A28C]", 
+            "Parameter #2": "Guard01Stage", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwChargen "Stranger in a Strange Land" [QUST:01F0A28C]", 
+            "Parameter #2": "Guard01Stage", 
+            "Unused": "00000000"
+        }
+    ]
+}

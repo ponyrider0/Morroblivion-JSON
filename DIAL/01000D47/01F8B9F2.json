@@ -1,0 +1,58 @@
+{
+    "Topic": "AAADestination [DIAL:01000D47]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 264, 
+        "Record Flags": {}, 
+        "FormID": "01F8B9F2", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "aaaBoatTransport [QUST:01F0A330]", 
+    "PNAM - Previous INFO": "01F8B9F1", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "F8 C3 1F"
+            }, 
+            "NAM1 - Response Text": "Talmeni Drethan claims she's a better shipmaster, but she can't match the speed of the Arrow!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0haemaSfarseer "Haema Farseer" [NPC_:01260708]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "BBBHaemaFarseerKhuul [DIAL:01F0A31E]", 
+        "TCLT - Choice": "BBBHaemaFarseerTelAruhn [DIAL:01F0A321]", 
+        "TCLT - Choice": "BBBHaemaFarseerTelMora [DIAL:01F0A323]", 
+        "TCLT - Choice": "BBBHaemaFarseeSadrithMora [DIAL:01F0A320]", 
+        "TCLT - Choice": "BBBHaemaFarseerCancel [DIAL:0100CC67]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

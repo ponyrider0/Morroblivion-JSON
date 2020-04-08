@@ -1,0 +1,58 @@
+{
+    "Topic": "1guarShideSshipment2 [DIAL:01320A74]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 416, 
+        "Record Flags": {}, 
+        "FormID": "013230B7", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVInnocentAshlanders [QUST:01003406]", 
+    "PNAM - Previous INFO": "013230B6", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "If this is your decision, outlander, so be it. Here, take this as a token of our friendship. I hope to meet you again. Travel with the winds, my friend.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0hairan "Hairan" [NPC_:012606DD]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 50 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmvinnocentashlanders 80\r\nplayer.additem 0silverSdagger 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMVInnocentAshlanders [QUST:01003406]", 
+            "SCRO - Global Reference": "0silverSdagger [WEAP:01F8E981]"
+        ]
+    }
+}

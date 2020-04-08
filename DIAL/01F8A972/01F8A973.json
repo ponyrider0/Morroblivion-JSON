@@ -1,0 +1,64 @@
+{
+    "Topic": "fbmwfgcodeyes [DIAL:01F8A972]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 653, 
+        "Record Flags": {}, 
+        "FormID": "01F8A973", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Say Once": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwFGSottilde [QUST:010033E8]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "69 73 53"
+            }, 
+            "NAM1 - Response Text": "Here's your 50 Septims. The guild needs more like you -- obedient and efficient. If you want more orders, just ask.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0eydisSfireTeye "Eydis Fire-Eye" [NPC_:0126011B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 7, 
+            "CompiledSize": 98, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 32 00 00 00 39 10 0A 00 02 00 72 04 00 6E 64 00 00 00 A9 10 0D 00 03 00 72 05 00 72 06 00 6E 05 00 00 00 A9 10 0D 00 03 00 72 07 00 72 06 00 6E F6 FF FF FF", 
+        "SCTX - Result script source": "player.removeitem 0bkusottildescodebook 1\r\nadditem 0bkusottildescodebook 1\r\nplayer.additem gold001 50\r\nsetstage fbmwfgsottilde 100\r\nmodfactionreaction fbmwfightersguild playerfaction 5\r\nmodfactionreaction 0thievessguild playerfaction -10", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0bkUsottildescodebook [BOOK:011800CD]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "fbmwFGSottilde [QUST:010033E8]", 
+            "SCRO - Global Reference": "fbmwFightersGuild [FACT:0100761A]", 
+            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]", 
+            "SCRO - Global Reference": "0ThievesSGuild [FACT:01220001]"
+        ]
+    }
+}

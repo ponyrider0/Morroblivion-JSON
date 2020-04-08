@@ -1,0 +1,67 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 2636, 
+        "Record Flags": {}, 
+        "FormID": "01F8AF07", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwSABoethiahBuildScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 22, 
+        "CompiledSize": 514, 
+        "VariableCount": 3, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 F4 01 00 00 16 00 0D 00 13 00 09 00 20 73 01 00 20 31 20 3D 3D 15 00 09 00 73 02 00 04 00 20 47 15 00 1C 00 01 00 21 10 00 00 1C 00 02 00 21 10 00 00 1C 00 03 00 21 10 00 00 1C 00 04 00 21 10 00 00 1C 00 05 00 21 10 00 00 1C 00 06 00 21 10 00 00 1C 00 07 00 21 10 00 00 1C 00 08 00 21 10 00 00 1C 00 09 00 21 10 00 00 1C 00 0A 00 21 10 00 00 1C 00 0B 00 21 10 00 00 1C 00 0C 00 21 10 00 00 1C 00 0D 00 21 10 00 00 1C 00 0E 00 21 10 00 00 1C 00 0F 00 21 10 00 00 1C 00 10 00 21 10 00 00 1C 00 11 00 21 10 00 00 15 00 07 00 73 01 00 02 00 20 32 18 00 1F 00 01 00 1B 00 20 73 01 00 20 32 20 3D 3D 20 47 15 00 20 73 02 00 20 2D 20 31 20 3E 3D 20 26 26 15 00 07 00 73 01 00 02 00 20 33 18 00 0D 00 03 00 09 00 20 73 01 00 20 33 20 3D 3D 1C 00 12 00 21 10 00 00 1C 00 13 00 22 10 00 00 15 00 07 00 73 01 00 02 00 20 34 18 00 20 00 02 00 1C 00 20 73 01 00 20 34 20 3D 3D 20 47 15 00 20 73 02 00 20 2D 20 31 34 20 3E 3D 20 26 26 15 00 07 00 73 01 00 02 00 20 35 39 10 0A 00 02 00 72 16 00 6E 3D 00 00 00 18 00 0D 00 12 00 09 00 20 73 01 00 20 35 20 3D 3D 1C 00 01 00 22 10 00 00 1C 00 03 00 22 10 00 00 1C 00 04 00 22 10 00 00 1C 00 05 00 22 10 00 00 1C 00 06 00 22 10 00 00 1C 00 07 00 22 10 00 00 1C 00 08 00 22 10 00 00 1C 00 09 00 22 10 00 00 1C 00 0A 00 22 10 00 00 1C 00 0B 00 22 10 00 00 1C 00 0C 00 22 10 00 00 1C 00 0D 00 22 10 00 00 1C 00 0E 00 22 10 00 00 1C 00 0F 00 22 10 00 00 1C 00 10 00 22 10 00 00 1C 00 11 00 22 10 00 00 1C 00 14 00 21 10 00 00 15 00 07 00 73 01 00 02 00 20 30 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwSABoethiahBuildScript\r\n\r\nshort buildstate\r\nshort timer\r\n\r\n;0-Nothing going\r\n;1-Send in the Orcs and scaffolds\r\n;2-wait a day\r\n;3-Move Duma to the shrine\r\n;4-Orcs are working, check for progress\r\n;5-Finished, kick everyone out\r\n\r\nbegin gamemode\r\n	if buildstate == 1\r\n		SET Timer TO GameDaysPassed\r\n		\r\n		fbdumburzref.enable\r\n		fbexdaeplatformboeref.enable\r\n		fbexdescaffold02boeref.enable\r\n		fbexdescaffold03boeref.enable\r\n		fbexdescaffold2boeref.enable\r\n		fbexdescaffold3boeref.enable\r\n		fbexdescaffoldaboeref.enable\r\n		fbexdescaffoldu01boeref.enable\r\n		fbexdescaffoldu02boeref.enable\r\n		fbexdescaffoldu2boeref.enable\r\n		fblazgarref.enable\r\n		fblugdumphref.enable\r\n		fbmisccombucketboeuni.enable\r\n		fbmisccombucketboeuniaref.enable\r\n		fbmisccombucketboeunib.enable\r\n		fbmwdaboerockref.enable\r\n		fbshulonkref.enable\r\n		\r\n		set buildstate to 2\r\n		\r\n	elseif buildstate == 2 && GameDaysPassed - timer >= 1\r\n		set buildstate to 3\r\n		\r\n	elseif buildstate == 3\r\n		fbduma2ref.enable\r\n		fbmwduma1REF.disable\r\n		set buildstate to 4\r\n		\r\n	elseif buildstate == 4 && GameDaysPassed - timer >= 14\r\n		set buildstate to 5\r\n		setstage fbmwdaboethiah 61\r\n		\r\n	elseif buildstate == 5\r\n		fbdumburzref.disable\r\n		fbexdescaffold02boeref.disable\r\n		fbexdescaffold03boeref.disable\r\n		fbexdescaffold2boeref.disable\r\n		fbexdescaffold3boeref.disable\r\n		fbexdescaffoldaboeref.disable\r\n		fbexdescaffoldu01boeref.disable\r\n		fbexdescaffoldu02boeref.disable\r\n		fbexdescaffoldu2boeref.disable\r\n		fblazgarref.disable\r\n		fblugdumphref.disable\r\n		fbmisccombucketboeuni.disable\r\n		fbmisccombucketboeuniaref.disable\r\n		fbmisccombucketboeunib.disable\r\n		fbmwdaboerockref.disable\r\n		fbshulonkref.disable\r\n		fbexdaeboathiahref.enable\r\n		set buildstate to 0\r\n	endif\r\nend", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "01 00 01 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 01 00 01 00 01 00"
+            }, 
+            "SCVR - Name": "buildstate"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "timer"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbdumburzref [ACHR:0185F5AA]", 
+        "SCRO - Global Reference": "fbexdaeplatformboeref [REFR:0100564B]", 
+        "SCRO - Global Reference": "fbexdescaffold02boeref [REFR:01851D03]", 
+        "SCRO - Global Reference": "fbexdescaffold03boeref [REFR:01851D01]", 
+        "SCRO - Global Reference": "fbexdescaffold2boeref [REFR:01851CFE]", 
+        "SCRO - Global Reference": "fbexdescaffold3boeref [REFR:01851D00]", 
+        "SCRO - Global Reference": "fbexdescaffoldaboeref [REFR:01851CFD]", 
+        "SCRO - Global Reference": "fbexdescaffoldu01boeref [REFR:01851D02]", 
+        "SCRO - Global Reference": "fbexdescaffoldu02boeref [REFR:0185F5AF]", 
+        "SCRO - Global Reference": "fbexdescaffoldu2boeref [REFR:01851CFF]", 
+        "SCRO - Global Reference": "fblazgarref [ACHR:0185F5AD]", 
+        "SCRO - Global Reference": "fblugdumphref [ACHR:0185F5AC]", 
+        "SCRO - Global Reference": "fbmisccombucketboeuni [REFR:01851CFB]", 
+        "SCRO - Global Reference": "fbmisccombucketboeuniaref [REFR:01851CFC]", 
+        "SCRO - Global Reference": "fbmisccombucketboeunib [REFR:0185F5AE]", 
+        "SCRO - Global Reference": "fbmwdaboeRockREF [REFR:01851D04]", 
+        "SCRO - Global Reference": "fbshulonkref [ACHR:0185F5AB]", 
+        "SCRO - Global Reference": "fbduma2ref [ACHR:01858A6F]", 
+        "SCRO - Global Reference": "fbmwduma1REF [ACHR:018468E0]", 
+        "SCRO - Global Reference": "fbexdaeboathiahref [REFR:0184E53F]", 
+        "SCRO - Global Reference": "GameDaysPassed [GLOB:00000039]", 
+        "SCRO - Global Reference": "fbmwDABoethiah [QUST:01002C87]"
+    ]
+}

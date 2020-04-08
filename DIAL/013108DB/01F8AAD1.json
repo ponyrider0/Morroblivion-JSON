@@ -1,0 +1,66 @@
+{
+    "Topic": "1kindlySRedguard [DIAL:013108DB]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 308, 
+        "Record Flags": {}, 
+        "FormID": "01F8AAD1", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVFakeSlave [QUST:01003405]", 
+    "PNAM - Previous INFO": "01F8AAD0", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 4D 56"
+            }, 
+            "NAM1 - Response Text": "Ri'Zaadha has heard tales of this. Not far from here, but farther than Ri'Zaadha will ever go.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "A0", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 55.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVFakeSlave "Tul's Escape" [QUST:01003405]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0riAzaadha "Ri'Zaadha" [NPC_:0126051B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 37 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmvfakeslave 55", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMVFakeSlave [QUST:01003405]"
+        ]
+    }
+}

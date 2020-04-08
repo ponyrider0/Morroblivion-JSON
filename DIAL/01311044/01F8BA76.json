@@ -1,0 +1,90 @@
+{
+    "Topic": "1goblinSarmy [DIAL:01311044]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 879, 
+        "Record Flags": {}, 
+        "FormID": "01F8BA76", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRKillGoblins [QUST:0101C655]", 
+    "PNAM - Previous INFO": "01F8BA75", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": "Foul, vicious creatures. No wonder Helseth has chosen them to be his footsoldiers. I know that the goblins are being trained nearby, though not where, exactly. Ask around the city about goblins. Someone will know.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": "I wish for you to find the location of goblin training area. When you do, kill the warchiefs--there should be two. Sever the head of this army, and the rest will shatter like a scrib.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": "You might rid the city of their two Altmer trainers, as well. Complete this task, and the Lady will be pleased.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "A0", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRKillGoblins "The Goblin Army" [QUST:0101C655]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0fedrisShler "Fedris Hler" [NPC_:01260ABB]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 14 00 00 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "setstage fbmwtrKillGoblins 20\r\naddtopic 1altmerstrainers\r\naddtopic 1goblins", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTRKillGoblins [QUST:0101C655]", 
+            "SCRO - Global Reference": "1AltmerStrainers [DIAL:01310FEC]", 
+            "SCRO - Global Reference": "1goblins [DIAL:01311082]"
+        ]
+    }
+}

@@ -1,0 +1,73 @@
+{
+    "Topic": "1CureSBlight1 [DIAL:01321E06]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 519, 
+        "Record Flags": {}, 
+        "FormID": "01323472", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHTCureBlight [QUST:01003437]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310C39"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Good. Thank you. This will help. I can spare a few other potions. Why not take these?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 3.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0pUcureUblightUs "Potion of Cure Blight Disease" [ALCH:01004BA5]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0andil "Andil" [NPC_:01260414]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 68, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 03 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 03 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E 03 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHTCureBlight 50\r\nPlayer.RemoveItem 0pUcureUblightUs 3\r\nPlayer.AddItem 0pUrestoreUhealthUq 3\r\nPlayer.AddItem 0pUrestoreUfatigueUq 3", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwHTCureBlight [QUST:01003437]", 
+            "SCRO - Global Reference": "0pUcureUblightUs [ALCH:01004BA5]", 
+            "SCRO - Global Reference": "0pUrestoreUhealthUq [ALCH:010800DF]", 
+            "SCRO - Global Reference": "0pUrestoreUfatigueUq [ALCH:010800AE]"
+        ]
+    }
+}

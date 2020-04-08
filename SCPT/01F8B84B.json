@@ -1,0 +1,39 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1053, 
+        "Record Flags": {}, 
+        "FormID": "01F8B84B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwColonyUrynScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 5, 
+        "CompiledSize": 322, 
+        "VariableCount": 2, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 34 01 00 00 16 00 48 00 02 00 44 00 20 58 B4 10 05 00 01 00 72 01 00 20 33 20 3D 3D 20 58 3A 10 05 00 01 00 72 02 00 20 35 30 20 3C 20 26 26 20 58 6E 10 00 00 20 31 34 20 3D 3D 20 26 26 20 58 3A 10 05 00 01 00 72 02 00 20 30 20 3E 20 26 26 39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 15 00 0A 00 72 02 00 73 01 00 02 00 20 30 19 00 00 00 16 00 29 00 01 00 25 00 20 58 01 10 05 00 01 00 72 03 00 20 31 30 30 20 3C 20 58 3A 10 05 00 01 00 72 02 00 20 34 30 20 3D 3D 20 26 26 39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 19 00 00 00 16 00 29 00 02 00 25 00 20 58 01 10 05 00 01 00 72 03 00 20 31 30 30 20 3C 20 58 3A 10 05 00 01 00 72 04 00 20 34 30 20 3E 3D 20 26 26 39 10 0A 00 02 00 72 04 00 6E 32 00 00 00 02 10 0A 00 02 00 72 05 00 6E 0A 00 00 00 19 00 00 00 16 00 21 00 02 00 1D 00 20 58 3A 10 05 00 01 00 72 02 00 20 34 30 20 3D 3D 20 73 02 00 20 30 20 3D 3D 20 26 26 5E 10 00 00 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwColonyUrynScript\n\nshort moving\n\nbegin gamemode\n	if GetDetectionLevel player == 3&&getstage fbmwco6<50&&GetCurrentAIPackage ==14&&getstage fbmwco6>0\n		SetStage fbmwCO6 100\n		set fbmwCO6.move to 0\n	endif\n\n\n	if GetDistance fbmwCO6UrynMarker <100 && GetStage fbmwCO6 == 40\n		SetStage fbmwCO6 50\n	endif\n\n\n	if GetDistance fbmwCO6UrynMarker <100 && GetStage fbmwCO6a >= 40\n		SetStage fbmwCO6a 50\n		additem 0ingredUrawUebonyU01 10\n	endif\n\n	if GetStage fbmwCO6 == 40 && moving == 0\n		evp\n		set moving to 1\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 24 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "43 6F 6C 6F 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "72 53 63 72 69 70 74"
+            }, 
+            "SCVR - Name": "moving"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "fbmwCO6 [QUST:0101BED4]", 
+        "SCRO - Global Reference": "fbmwCO6UrynMarker [REFR:01F8B8A2]", 
+        "SCRO - Global Reference": "fbmwCO6a [QUST:0101BED5]", 
+        "SCRO - Global Reference": "0ingredUrawUebonyU01 [INGR:010A0009]"
+    ]
+}

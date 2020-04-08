@@ -1,0 +1,24 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 695, 
+        "Record Flags": {}, 
+        "FormID": "01009488", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwShrineSanctusShrine", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 3, 
+        "CompiledSize": 215, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 C7 00 00 00 00 00 16 00 15 00 05 00 11 00 20 58 3A 10 05 00 01 00 72 01 00 20 32 30 20 3E 3D 16 00 14 00 03 00 10 00 20 58 3A 10 05 00 01 00 72 01 00 20 35 30 20 3C 00 10 46 00 01 00 3E 00 5B 59 6F 75 20 68 61 76 65 20 6D 61 64 65 20 74 68 65 20 70 69 6C 67 72 69 6D 61 67 65 2E 20 59 6F 75 72 20 76 6F 77 20 6F 66 20 73 69 6C 65 6E 63 65 20 69 73 20 6C 69 66 74 65 64 2E 5D 00 00 00 00 1E 10 08 00 02 00 72 02 00 72 03 00 39 10 0A 00 02 00 72 01 00 6E 32 00 00 00 19 00 00 00 18 00 16 00 01 00 12 00 20 58 3A 10 05 00 01 00 72 01 00 20 31 30 30 20 3D 3D 1E 10 08 00 02 00 72 02 00 72 03 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwShrineSanctusShrine\r\n\r\nBegin OnActivate\r\n\r\nif Getstage fbmwTTSanctusShrine >= 20\r\n	if Getstage fbmwTTSanctusShrine < 50\r\n		MessageBox \"[You have made the pilgrimage. Your vow of silence is lifted.]\"\r\n		Cast 0shrineusanctususp Player\r\n		setstage fbmwTTSanctusShrine 50\r\nendif\r\n\r\nelseif Getstage fbmwTTSanctusShrine == 100\r\n	Cast 0shrineUsanctusUsp Player\r\nendif\r\n\r\nEnd", 
+    "References": [
+        "SCRO - Global Reference": "fbmwTTSanctusShrine [QUST:01002C82]", 
+        "SCRO - Global Reference": "0shrineUsanctusUsp [SPEL:01060397]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+    ]
+}

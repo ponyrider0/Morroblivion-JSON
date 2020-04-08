@@ -1,0 +1,44 @@
+{
+    "Record Header": {
+        "Signature": "PACK", 
+        "Data Size": 111, 
+        "Record Flags": {}, 
+        "FormID": "010039E2", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwSlavesMenelrasFollowPlayer", 
+    "PKDT - General": {
+        "General": {
+            "Flags": {
+                "Skip fallout behavior": true, 
+                "Defensive combat": true
+            }, 
+            "Type": "01", 
+            "Unused": "00 00 00"
+        }
+    }, 
+    "PSDT - Schedule": {
+        "Month": -1, 
+        "Day of week": -1, 
+        "Date": "00", 
+        "Time": -1, 
+        "Duration": 0
+    }, 
+    "PTDT - Target": {
+        "Type": 1, 
+        "Target": "00000007", 
+        "Count": 0
+    }, 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "mwBuySlavesQuest [QUST:01F8E376]", 
+            "Parameter #2": "MenelrasFollow", 
+            "Unused": "00000000"
+        }
+    ]
+}

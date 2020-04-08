@@ -1,0 +1,89 @@
+{
+    "Topic": "1exoticSproducts [DIAL:0131089A]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 595, 
+        "Record Flags": {}, 
+        "FormID": "01320F54", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "0131089A", 
+        "NAME - Topic": "01310A9D", 
+        "NAME - Topic": "01310BCA", 
+        "NAME - Topic": "01310830", 
+        "NAME - Topic": "01310A76", 
+        "NAME - Topic": "01310916", 
+        "NAME - Topic": "01310B8C", 
+        "NAME - Topic": "01310B23", 
+        "NAME - Topic": "01310A8F", 
+        "NAME - Topic": "01310A90", 
+        "NAME - Topic": "01310B8D", 
+        "NAME - Topic": "01310B8E", 
+        "NAME - Topic": "01310B8F", 
+        "NAME - Topic": "01310B24", 
+        "NAME - Topic": "01310A1D", 
+        "NAME - Topic": "01310B25"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Exotic products of commercial value on Vvardenfell include the following: bonemeal, corprus weepings, Daedra skin, Daedra's heart, ectoplasm, fire salts, frost salts, Ghoul heart, gravedust, raw ebony, raw glass, Scamp skin, Vampire dust, and void salts.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0tendrisSvedran "Tendris Vedran" [NPC_:012609EE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "PlayerRef [PLYR:00000014]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

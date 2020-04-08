@@ -1,0 +1,37 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 536, 
+        "Record Flags": {}, 
+        "FormID": "01470388", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwBMCariusGoneScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 3, 
+        "CompiledSize": 114, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 64 00 00 00 16 00 37 00 03 00 33 00 20 73 01 00 20 30 20 3D 3D 20 58 3A 10 05 00 01 00 72 02 00 20 39 33 20 3E 3D 20 26 26 20 58 01 10 05 00 01 00 72 03 00 20 31 35 32 38 20 3C 3D 20 26 26 39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 1C 00 01 00 22 10 00 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptName mwBMCariusGoneScript\n\nshort doOnce\n\nbegin gamemode\n	if(doOnce == 0)&&(GetStage fbmwBMSmugglers >= 93)&&(GetDistance Player <= 1528)\n		SetStage fbmwBMSmugglers 100\n		fbmwFalx1REF.Disable\n		set doOnce to 1\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 139 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "doOnce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwFalx1REF [ACHR:01F0718C]", 
+        "SCRO - Global Reference": "fbmwBMSmugglers [QUST:0101B6D3]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+    ]
+}

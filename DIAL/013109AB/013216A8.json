@@ -1,0 +1,95 @@
+{
+    "Topic": "1lesserSsaints [DIAL:013109AB]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 816, 
+        "Record Flags": {}, 
+        "FormID": "013216A8", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
+    "PNAM - Previous INFO": "013216A7", 
+    "Add topics": [
+        "NAME - Topic": "013109AB", 
+        "NAME - Topic": "01310C9C", 
+        "NAME - Topic": "01310AB5", 
+        "NAME - Topic": "013109AD", 
+        "NAME - Topic": "01310AB8", 
+        "NAME - Topic": "01310AB6", 
+        "NAME - Topic": "01310A30", 
+        "NAME - Topic": "01310AB7", 
+        "NAME - Topic": "01310CCA", 
+        "NAME - Topic": "01310B40", 
+        "NAME - Topic": "01310AB3", 
+        "NAME - Topic": "01310AB4"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "The lesser saints of the Temple are: Saint Felms the Bold -- Butchers, Fishmongers, Saint Llothis the Pious --  Tailors, Dyers, Saint Meris the Peacemaker -- Farmers, Laborers, Saint Roris the Martyr -- Furnishers and Caravaners, Saint Aralor the Penitent -- Tanners and Miners, Saint Delyn the Wise -- Potters, Glassmakers, Saint Olms the Just -- Sailors, Chandlers, Clerks, Saint Rilms the Barefooted -- Pilgrims, Beggars, and Saint Seryn the Merciful -- Brewers, Bakers, Distillers.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Temple "Temple" [FACT:01220002]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsClass:68", 
+            "Unused": "00 00", 
+            "Parameter #1": "Monk "Monk" [CLAS:000237A9]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "PlayerRef [PLYR:00000014]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

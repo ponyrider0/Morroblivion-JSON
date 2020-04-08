@@ -1,0 +1,47 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 476, 
+        "Record Flags": {}, 
+        "FormID": "01033F0E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwCo6aQscript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 72, 
+        "VariableCount": 2, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 3A 00 00 00 16 00 18 00 02 00 14 00 20 72 01 00 58 01 10 05 00 01 00 72 02 00 20 37 30 20 3C 3D 15 00 07 00 73 02 00 02 00 20 32 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwCo6aQscript\n\nshort urynmove\nshort aldammove\n\nbegin gamemode\n	if fbmwCO6AldamMarker.getdistance fbmwAldamREF <= 70\n		set aldammove to 2\n		set urynmove to 1\n	endif\n	end\n;<CSEBlock>\n;<CSECaretPos> 162 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "08 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "03 38 00 2A 01 00 00"
+            }, 
+            "SCVR - Name": "urynmove"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "aldammove"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwCO6AldamMarker [REFR:01017DE6]", 
+        "SCRO - Global Reference": "fbmwAldamREF [ACHR:01F07C90]"
+    ]
+}

@@ -1,0 +1,127 @@
+{
+    "Topic": "1mushrooms1 [DIAL:01322463]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1012, 
+        "Record Flags": {}, 
+        "FormID": "01323569", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMGBCShrooms [QUST:01006770]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310A62", 
+        "NAME - Topic": "01310C39"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Yes, these are all good samples. Now Ajira can write the report and be a Journeyman of the Mages Guild.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Ajira has made potions for you to take in return. Ajira is no great alchemist yet, but Ajira thinks you can use these.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ajira "Ajira" [NPC_:01260123]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ingredUbcUhyphaUfacia "Hypha Facia" [INGR:010A0045]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ingredUcoprinusU01 "Violet Coprinus" [INGR:010A0041]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ingredUrussulaU01 "Luminous Russula" [INGR:010A0042]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ingredUbcUbunglerAsUbane "Bungler's Bane" [INGR:010A0044]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 7, 
+            "CompiledSize": 118, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 04 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 05 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 06 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 07 00 6E 04 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmgbcshrooms 100\r\nplayer.removeitem 0ingredubcubunglerasubane 1\r\nplayer.removeitem 0ingredubcuhyphaufacia 1\r\nplayer.removeitem 0ingreducoprinusu01 1\r\nplayer.removeitem 0ingredurussulau01 1\r\nplayer.additem 0purestoreuhealthuc 4\r\nmoddisposition player 10", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMGBCShrooms [QUST:01006770]", 
+            "SCRO - Global Reference": "0ingredUbcUbunglerAsUbane [INGR:010A0044]", 
+            "SCRO - Global Reference": "0ingredUbcUhyphaUfacia [INGR:010A0045]", 
+            "SCRO - Global Reference": "0ingredUcoprinusU01 [INGR:010A0041]", 
+            "SCRO - Global Reference": "0ingredUrussulaU01 [INGR:010A0042]", 
+            "SCRO - Global Reference": "0pUrestoreUhealthUc [ALCH:010800B0]"
+        ]
+    }
+}

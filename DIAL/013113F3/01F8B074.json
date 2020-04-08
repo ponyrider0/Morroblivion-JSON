@@ -1,0 +1,78 @@
+{
+    "Topic": "1edgy [DIAL:013113F3]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 662, 
+        "Record Flags": {}, 
+        "FormID": "01F8B074", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMMorale [QUST:0101B6CE]", 
+    "PNAM - Previous INFO": "01F8B073", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "As I said, this is a difficult post. These soldiers are separated from their families and forced to live in harsh conditions. To be fair, most of these men were sent to this island as punishment for a past offense. They are not the best of soldiers. Yet.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6D 77 42"
+            }, 
+            "NAM1 - Response Text": "Still, until recently, they had performed their duties adequately. Lately, I have noticed some disturbing trends.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMMorale "Rebellion at Frostmoth" [QUST:0101B6CE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0falxScarius "Captain Falx Carius" [NPC_:01260B17]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "setstage fbmwbmmorale 10\r\naddtopic 1disturbingstrends", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMMorale [QUST:0101B6CE]", 
+            "SCRO - Global Reference": "1disturbingStrends [DIAL:01311340]"
+        ]
+    }
+}

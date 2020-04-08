@@ -1,0 +1,47 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 497, 
+        "Record Flags": {}, 
+        "FormID": "0101AFAD", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwMQ13QuestScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 98, 
+        "VariableCount": 3, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 54 00 00 00 16 00 2C 00 02 00 28 00 20 58 3A 10 05 00 01 00 72 01 00 20 35 30 20 3C 20 73 02 00 20 31 20 3E 3D 20 26 26 20 73 03 00 20 31 20 3E 3D 20 26 26 39 10 0A 00 02 00 72 01 00 6E 32 00 00 00 39 10 0A 00 02 00 72 02 00 6E 01 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwMQ13QuestScript\r\n\r\nSHORT FoundSunder\r\nSHORT FoundKeening\r\n\r\nBEGIN GameMode\r\n	IF GetStage fbmwMQ13 < 50 && FoundSunder >= 1 && FoundKeening >= 1\r\n		SetStage fbmwMQ13 50\r\n		SetStage fbmwMQ14 1\r\n	ENDIF\r\nEND", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "08 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "03 1B 00 27 0C 00 00"
+            }, 
+            "SCVR - Name": "FoundSunder"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "08 65 66 65 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 39 00 2A 0C 00 00"
+            }, 
+            "SCVR - Name": "FoundKeening"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwMQ13 [QUST:01002C55]", 
+        "SCRO - Global Reference": "fbmwMQ14 [QUST:01002C56]"
+    ]
+}

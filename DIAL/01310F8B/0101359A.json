@@ -1,0 +1,137 @@
+{
+    "Topic": "1learnSmoreSaboutStheSattacks [DIAL:01310F8B]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1270, 
+        "Record Flags": {}, 
+        "FormID": "0101359A", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRChampion [QUST:0101C652]", 
+    "PNAM - Previous INFO": "01001C43", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "61 6C 65"
+            }, 
+            "NAM1 - Response Text": "The attacks were Almalexia's doing? She murders Sotha Sil, and then tries to kill you as well.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "61 6C 65"
+            }, 
+            "NAM1 - Response Text": "Astounding! With Vivec dead as well, this is truly the end of the Tribunal.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "61 6C 65"
+            }, 
+            "NAM1 - Response Text": "I believe your tale, outlander, but do not expect my people to be so accepting of it. ", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "You will find it is not so easy to kill these gods in the hearts and minds of their followers.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "05", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "It will take time, but this will be a new era for Morrowind, and I will lead them into it. You have done well, my friend.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "06", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "You have my gratitude.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwVivec "Vivec" [NPC_:0102626A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 110.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRSothaSil "The Mad God" [QUST:0101C65C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0KingSHlaaluSHelseth "King Hlaalu Helseth" [NPC_:01260A7D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 7, 
+            "CompiledSize": 104, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 6E 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 06 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 07 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwTRChampion 110\r\nPlayer.AddItem 0HelsethguardUboots 1\r\nPlayer.AddItem 0HelsethguardUcuirass 1\r\nPlayer.AddItem 0HelsethguardUgauntletUright 1\r\nPlayer.AddItem 0HelsethguardUgreaves 1\r\nPlayer.AddItem 0HelsethguardUHelmet 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwTRChampion [QUST:0101C652]", 
+            "SCRO - Global Reference": "0HelsethguardUboots [ARMO:0112012F]", 
+            "SCRO - Global Reference": "0HelsethguardUcuirass [ARMO:01120130]", 
+            "SCRO - Global Reference": "0HelsethguardUgauntletUright [ARMO:01120133]", 
+            "SCRO - Global Reference": "0HelsethguardUgreaves [ARMO:01120131]", 
+            "SCRO - Global Reference": "0HelsethguardUHelmet [ARMO:0112012E]"
+        ]
+    }
+}

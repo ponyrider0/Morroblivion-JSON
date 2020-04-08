@@ -1,0 +1,89 @@
+{
+    "Topic": "1moonSsugarSinvestigation [DIAL:01311316]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 743, 
+        "Record Flags": {}, 
+        "FormID": "01F8AFE9", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMMoonSugar [QUST:0101B6CD]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "65 72 69"
+            }, 
+            "NAM1 - Response Text": "That Severia Gratius is so grumpy!  Maybe I should visit her next!  Because that's what I do!  I visit the sad and miserable and spread all the happiness I can!", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "65 72 69"
+            }, 
+            "NAM1 - Response Text": "It is the way of Uncle Sweetshare, you see!  Now that Jeleen, there's a sad, sad boy.  His true love has disappeared, don't you know.  Very sad, very sad.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "65 72 69"
+            }, 
+            "NAM1 - Response Text": "That's why I sang to him!  He needed something extra, something special!  Sugar and a song!  It cures all!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMMoonSugar "The Moon Sugar Mystery" [QUST:0101B6CD]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0uncleSsweetshare "Uncle Sweetshare" [NPC_:01260B4D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 18, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "addtopic 1candystreats\r\naddtopic 1unclessweetshare", 
+        "References": [
+            "SCRO - Global Reference": "1candyStreats [DIAL:0131138F]", 
+            "SCRO - Global Reference": "1UncleSSweetshare [DIAL:01311350]"
+        ]
+    }
+}

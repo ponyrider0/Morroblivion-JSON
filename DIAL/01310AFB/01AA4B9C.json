@@ -1,0 +1,98 @@
+{
+    "Topic": "1badSdreams [DIAL:01310AFB]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 577, 
+        "Record Flags": {}, 
+        "FormID": "01AA4B9C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHRClearSarethi [QUST:0100431A]", 
+    "PNAM - Previous INFO": "01AA4B9B", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "76 75 72"
+            }, 
+            "NAM1 - Response Text": "Sometimes I kill Bralen Carvaren in my dreams. It's... horrible. But that doesn't mean I killed him, does it?", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "76 75 72"
+            }, 
+            "NAM1 - Response Text": "I was having bad dreams before Bralen Carvaren died. About the time I got that ash statue. It's right over there.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "76 75 72"
+            }, 
+            "NAM1 - Response Text": "Maybe if you take it away the bad dreams will stop.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHRClearSarethi "House Redoran: Clear Varvur Sarethi's Name" [QUST:0100431A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 110.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHRClearSarethi "House Redoran: Clear Varvur Sarethi's Name" [QUST:0100431A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0varvurSsarethi "Varvur Sarethi" [NPC_:012600B5]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 9, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00", 
+        "SCTX - Result script source": "AddTopic 1AshSStatue", 
+        "References": [
+            "SCRO - Global Reference": "1ashSstatue [DIAL:01310AFA]"
+        ]
+    }
+}

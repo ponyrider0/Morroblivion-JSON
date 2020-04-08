@@ -1,0 +1,56 @@
+{
+    "Topic": "1travelStogether1 [DIAL:013210A8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 234, 
+        "Record Flags": {}, 
+        "FormID": "0102FE31", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVCultistVictim [QUST:01003403]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "Please. Let's find my husband.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0malexa "Malexa" [NPC_:012606D3]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 18, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 01 00 02 00 20 31 5E 10 00 00", 
+        "SCTX - Result script source": "set fbmwmvcultistvictim.follownow to 1\r\nevp", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMVCultistVictim [QUST:01003403]"
+        ]
+    }
+}

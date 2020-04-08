@@ -1,0 +1,100 @@
+{
+    "Topic": "1MudanTMulSEggSMine [DIAL:01310769]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 660, 
+        "Record Flags": {}, 
+        "FormID": "013209CF", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHTMineCure [QUST:01003442]", 
+    "PNAM - Previous INFO": "01002445", 
+    "Add topics": [
+        "NAME - Topic": "01310C45", 
+        "NAME - Topic": "01310A88", 
+        "NAME - Topic": "0131091C", 
+        "NAME - Topic": "01310A75"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "This mine is due west of my tower here in Tel Vos, just a few minutes from here.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "There's also a shortcut if you go through the dungeon.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "The Kwama queen there has a blight disease.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "If you wish, I can teach you a spell of cure blight that you can cast on the queen.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0aryon "Aryon" [NPC_:0126040A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1MudanTMulSEggSMine1 [DIAL:013209CC]", 
+        "TCLT - Choice": "1MudanTMulSEggSMine2 [DIAL:013209CE]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 55 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "SetStage fbmwHTMineCure 10\r\nShowMap mwMudanMullMapMarker", 
+        "References": [
+            "SCRO - Global Reference": "fbmwHTMineCure [QUST:01003442]", 
+            "SCRO - Global Reference": "mwMudanMullMapMarker [REFR:01002448]"
+        ]
+    }
+}

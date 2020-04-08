@@ -1,0 +1,80 @@
+{
+    "Topic": "1seenShimSgetSangry [DIAL:013107A2]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 623, 
+        "Record Flags": {}, 
+        "FormID": "01F8D277", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "Well, not even angry, I suppose. I saw him arguing once with Foryn Gilnith about his taxes. He thought Processus had been levying too much, and skimming off the top for himself.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000004", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 4D 56"
+            }, 
+            "NAM1 - Response Text": "Ridiculous! Processus wouldn't have done such a thing, I'm sure of it. Please find out what happened, friend. And if you find out what became of Processus' ring, it would ease my heart.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 60.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVDeadTaxman "Death of a Taxman" [QUST:01003404]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0thavereSvedrano "Thavere Vedrano" [NPC_:0126023D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1ProcessusASRing [DIAL:013108B4]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 3C 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMVDeadTaxman 60", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMVDeadTaxman [QUST:01003404]"
+        ]
+    }
+}

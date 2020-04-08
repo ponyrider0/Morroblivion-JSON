@@ -1,0 +1,70 @@
+{
+    "Topic": "fbmwTRBandGive [DIAL:01F8BCBC]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 569, 
+        "Record Flags": {}, 
+        "FormID": "01F8BCBD", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRMazedBand [QUST:0101C656]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": "It is I who serve all of Morrowind. Your help has been appreciated. I have seen something in you that I have not seen in a very long time.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": "I bestow the blessing of My Light upon you. We will speak again in the future.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwAlmalexia "Almalexia" [NPC_:01F8B879]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 45, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 1C 10 05 00 01 00 72 04 00", 
+        "SCTX - Result script source": "setstage fbmwtrmazedband 100\r\nplayer.removeitem fbmwMazedBand 1\r\nplayer.addspell 0almalexiaasslight", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwTRMazedBand [QUST:0101C656]", 
+            "SCRO - Global Reference": "fbmwMazedBand [CLOT:0102BB06]", 
+            "SCRO - Global Reference": "0almalexiaAsSlight [SPEL:01060403]"
+        ]
+    }
+}

@@ -1,0 +1,69 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1027, 
+        "Record Flags": {}, 
+        "FormID": "01F8D06B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwSpellSlowfallEffectScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 221, 
+        "VariableCount": 7, 
+        "Type": "Magic Effect:256"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 11 00 13 00 00 00 15 00 0B 00 66 02 00 06 00 20 58 CE 10 00 00 11 00 00 00 10 00 06 00 13 00 B2 00 00 00 34 11 00 00 16 00 25 00 01 00 21 00 20 72 01 00 58 B9 10 00 00 20 72 01 00 58 2E 10 00 00 20 7C 7C 20 72 01 00 58 BA 16 00 00 20 7C 7C 1E 00 00 00 19 00 00 00 15 00 11 00 66 06 00 0C 00 20 72 01 00 58 DB 19 03 00 01 00 58 15 00 11 00 66 07 00 0C 00 20 72 01 00 58 DB 19 03 00 01 00 59 15 00 11 00 66 04 00 0C 00 20 72 01 00 58 DB 19 03 00 01 00 5A 15 00 0F 00 66 05 00 0A 00 20 66 04 00 20 31 2E 35 20 2F 16 00 0C 00 01 00 08 00 20 66 04 00 20 30 20 3C 1C 00 01 00 D8 19 0B 00 03 00 66 06 00 66 07 00 66 05 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwSpellSlowfallEffectScript\n\nref actor\nfloat VelZ\nfloat newVelZ\nfloat VelX\nfloat VelY\n\nbegin scripteffectstart\n	set actor to GetSelf\nend\n\n\nbegin scripteffectupdate\n	ResetFallDamageTimer\n\n	if actor.IsSwimming || actor.GetDead || Actor.IsOnGround\n		return\n	endif\n\n	set VelX to actor.GetVelocity x\n	set VelY to actor.GetVelocity y\n	set VelZ to actor.GetVelocity z\n	set newVelZ to ( VelZ / 1.5 )\n	if VelZ < 0\n		actor.SetVelocity VelX VelY newVelZ\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 11 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "actor"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "VelZ"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "newVelZ"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "VelX"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000007", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "VelY"
+        }
+    ], 
+    "References": [
+        "SCRV - Local Variable": "00000002"
+    ]
+}

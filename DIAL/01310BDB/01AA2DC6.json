@@ -1,0 +1,72 @@
+{
+    "Topic": "1mySstory [DIAL:01310BDB]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 606, 
+        "Record Flags": {}, 
+        "FormID": "01AA2DC6", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Say Once": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMQ10 [QUST:01001DC9]", 
+    "PNAM - Previous INFO": "01AA2DC5", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "73 74 55"
+            }, 
+            "NAM1 - Response Text": "I died four hundred years ago, in the last days of turmoil and unrest after the Empire came to Morrowind.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "73 74 55"
+            }, 
+            "NAM1 - Response Text": "I was a thinker, and not a doer, and though I was marked by the stars, I was not a hero. Take these things of mine. My bones won't complain.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ghostUnpcUhortUledd "Hort Ledd" [NPC_:01260674]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 50, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 39 10 0A 00 02 00 72 04 00 6E 48 00 00 00", 
+        "SCTX - Result script source": "player.additem 0bookskillualteration3 1\r\nplayer.additem 0hortuleddurobeuunique 1\r\nSetStage fbmwMQ10 72", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0BookSkillUAlteration3 [BOOK:0118000C]", 
+            "SCRO - Global Reference": "0hortUleddUrobeUunique [CLOT:011401AF]", 
+            "SCRO - Global Reference": "fbmwMQ10 [QUST:01001DC9]"
+        ]
+    }
+}

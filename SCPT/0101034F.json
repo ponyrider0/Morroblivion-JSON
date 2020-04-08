@@ -1,0 +1,36 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 782, 
+        "Record Flags": {}, 
+        "FormID": "0101034F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwBarDoor2Script", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 220, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 CC 00 00 00 00 00 16 00 15 00 03 00 11 00 20 58 3A 10 05 00 01 00 72 01 00 20 38 35 20 3D 3D 26 10 05 00 01 00 72 02 00 00 10 47 00 01 00 3F 00 54 68 69 73 20 64 6F 6F 72 20 68 61 73 20 62 65 65 6E 20 6D 61 67 69 63 61 6C 6C 79 20 73 65 61 6C 65 64 2C 20 61 6E 64 20 69 73 20 69 6D 70 6F 73 73 69 62 6C 65 20 74 6F 20 6F 70 65 6E 2E 00 00 00 00 1E 00 00 00 19 00 00 00 16 00 0D 00 02 00 09 00 20 73 01 00 20 30 20 3D 3D 15 00 07 00 73 01 00 02 00 20 31 15 00 0A 00 72 01 00 73 06 00 02 00 20 31 17 00 02 00 02 00 15 00 07 00 73 01 00 02 00 20 30 15 00 0A 00 72 01 00 73 06 00 02 00 20 30 19 00 00 00 0D 10 02 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwBarDoor2Script\nshort door2open\n\nbegin onactivate\nif Getstage fbmwTRAssassins == 85\n		PlaySound 0LockedDoor\n		MessageBox \"This door has been magically sealed, and is impossible to open.\"\n		return\n	endif\n\n	if door2open == 0\n		set door2open to 1\n		set fbmwtrassassins.door2check to 1\n	else\n		set door2open to 0\n		set fbmwtrassassins.door2check to 0\n	endif	\n	Activate\nend\n;<CSEBlock>\n;<CSECaretPos> 98 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "door2open"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwTRAssassins [QUST:0101C64F]", 
+        "SCRO - Global Reference": "0LockedDoor [SOUN:01300089]"
+    ]
+}

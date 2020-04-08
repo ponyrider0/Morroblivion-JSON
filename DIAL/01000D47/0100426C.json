@@ -1,0 +1,58 @@
+{
+    "Topic": "AAADestination [DIAL:01000D47]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 233, 
+        "Record Flags": {}, 
+        "FormID": "0100426C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "aaaBoatTransport [QUST:01F0A330]", 
+    "PNAM - Previous INFO": "0100426A", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "64 72 61"
+            }, 
+            "NAM1 - Response Text": "The Elf-Skerring, she'll take you farther than any other boat!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0galsSarethi "Gals Arethi" [NPC_:0126070A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "BBBGalsArethiTelBranora [DIAL:0100D1CB]", 
+        "TCLT - Choice": "BBBGalsArethiDagonFel [DIAL:0100D1D1]", 
+        "TCLT - Choice": "BBBGalsArethiEbonheart [DIAL:0100D1CD]", 
+        "TCLT - Choice": "BBBGalsArethiTelMora [DIAL:0100D1CF]", 
+        "TCLT - Choice": "BBBGalsArethiCancel [DIAL:0100D1C9]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

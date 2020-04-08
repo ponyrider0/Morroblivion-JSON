@@ -1,0 +1,88 @@
+{
+    "Topic": "1CalderaSminingScontracts1 [DIAL:0132047C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 750, 
+        "Record Flags": {}, 
+        "FormID": "01322F27", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHHCaptureSpy [QUST:0100345A]", 
+    "PNAM - Previous INFO": "01322F26", 
+    "Add topics": [
+        "NAME - Topic": "0131107A", 
+        "NAME - Topic": "013108F6", 
+        "NAME - Topic": "01310D0E", 
+        "NAME - Topic": "01310C77"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Yes, these are the contracts. It seems Elmussa Damori was the thief, and you have dealt with her already. Good work, outlander.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Take these 1000 drakes and these scrolls with my gratitude.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "0elmussaSdamori "Elmussa Damori" [NPC_:01260399]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0odralShelvi "Odral Helvi" [NPC_:0126038E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 6, 
+            "CompiledSize": 86, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 78 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E E8 03 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E 02 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 06 00 6E 02 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHHCaptureSpy 120\r\nPlayer.RemoveItem 0bkUCalderaMiningContract 1\r\nPlayer.AddItem Gold001 1000\r\nPlayer.AddItem 0scUgolnaraseyemaze 2\r\nPlayer.AddItem 0scUfourthbarrier 2", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwHHCaptureSpy [QUST:0100345A]", 
+            "SCRO - Global Reference": "0bkUCalderaMiningContract [BOOK:011800FE]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "0scUgolnaraseyemaze [BOOK:0118017C]", 
+            "SCRO - Global Reference": "0scUfourthbarrier [BOOK:011801C4]"
+        ]
+    }
+}

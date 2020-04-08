@@ -1,0 +1,77 @@
+{
+    "Topic": "1duel1 [DIAL:01322EC6]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 798, 
+        "Record Flags": {}, 
+        "FormID": "01004B16", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwHRCowardDisgrace [QUST:0100431C]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Okay. Meet me in the Arena. I'll be there this time.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0pUrestoreUhealthUs "Standard Restore Health Potion" [ALCH:010800FB]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0rothisSnethan "Rothis Nethan" [NPC_:0126022D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 10, 
+            "CompiledSize": 126, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 07 00 6E 32 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 08 00 6E 0A 00 00 00 02 10 0A 00 02 00 72 08 00 6E 0A 00 00 00 1C 00 02 00 9E 10 05 00 01 00 72 09 00 1C 00 02 00 0F 10 09 00 02 00 21 00 6E 64 00 00 00 1C 00 02 00 53 10 0A 00 02 00 72 0A 00 6E 9C FF FF FF 1C 00 03 00 21 10 00 00 1C 00 04 00 21 10 00 00 1C 00 05 00 21 10 00 00 1C 00 06 00 21 10 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHRCowardDisgrace 50\r\nPlayer.RemoveItem 0pUrestoreUhealthUs 10\r\nAddItem 0pUrestoreUhealthUs 10\r\nmwRothisNethanREF.MoveTo fbmwArenaMarker\r\nmwRothisNethanREF.SetAV Aggression 100\r\nmwRothisNethanREF.ModDisposition mwBrethasDerasREF -100\r\nmwArenaContainment1.Enable\r\nmwArenaContainment2.Enable\r\nmwArenaContainment3.Enable\r\nmwArenaContainment4.Enable", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "mwRothisNethanREF [ACHR:0182E0CE]", 
+            "SCRO - Global Reference": "mwArenaContainment1 [REFR:0100D272]", 
+            "SCRO - Global Reference": "mwArenaContainment2 [REFR:0100D271]", 
+            "SCRO - Global Reference": "mwArenaContainment3 [REFR:0100D274]", 
+            "SCRO - Global Reference": "mwArenaContainment4 [REFR:0100D273]", 
+            "SCRO - Global Reference": "fbmwHRCowardDisgrace [QUST:0100431C]", 
+            "SCRO - Global Reference": "0pUrestoreUhealthUs [ALCH:010800FB]", 
+            "SCRO - Global Reference": "fbmwarenamarker [REFR:0102789A]", 
+            "SCRO - Global Reference": "mwBrethasDerasREF [ACHR:018314E9]"
+        ]
+    }
+}

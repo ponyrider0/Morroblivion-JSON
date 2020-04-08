@@ -1,0 +1,59 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 359, 
+        "Record Flags": {}, 
+        "FormID": "01003490", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Say Once": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMSGreetings [QUST:01F2A564]", 
+    "PNAM - Previous INFO": "0102A4BF", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000006", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "69 6E 53"
+            }, 
+            "NAM1 - Response Text": "Excuse me, can you help me? No, I'm over here. My name is Cassius Olcinius. Sorry...you see, I've been made invisible by a wizard!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0cassiusSolcinius "Cassius Olcinius" [NPC_:01260A44]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "setstage FBMWEBInvisible 10\r\naddtopic 1madesinvisible", 
+        "References": [
+            "SCRO - Global Reference": "fbmwEBInvisible [QUST:01003423]", 
+            "SCRO - Global Reference": "1madeSinvisible [DIAL:0131094C]"
+        ]
+    }
+}

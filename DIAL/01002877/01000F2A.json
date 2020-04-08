@@ -1,0 +1,132 @@
+{
+    "Topic": "1entertainStheSpatrons2 [DIAL:01002877]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1056, 
+        "Record Flags": {}, 
+        "FormID": "01000F2A", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMSEntertainers [QUST:01002199]", 
+    "PNAM - Previous INFO": "01000F29", 
+    "Add topics": [
+        "NAME - Topic": "01310CC4", 
+        "NAME - Topic": "01310CC4", 
+        "NAME - Topic": "01310CC4"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "[You dance around on your bonemold shield, spring high into the air, kick nimbly, and land gracefully.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "They watch with interest, smiling and nodding.] Not bad at all. A pleasure to see you dance. Thank you. Hope to see you dance here again.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0holyshield "Holy Shield" [ARMO:010414E5]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetActorValue:14", 
+            "Unused": "00 00", 
+            "Parameter #1": "Acrobatics [ACVA:0000001A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetActorValue:14", 
+            "Unused": "00 00", 
+            "Parameter #1": "Athletics [ACVA:0000000D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0dulneaSralaal "Dulnea Ralaal" [NPC_:01260118]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "PlayerRef [PLYR:00000014]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 9, 
+            "CompiledSize": 115, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "15 00 0C 00 72 06 00 73 02 00 04 00 20 47 07 00 26 10 05 00 01 00 72 08 00 1C 00 01 00 02 10 0A 00 02 00 72 09 00 6E 0A 00 00 00 1C 00 02 00 53 10 0A 00 02 00 72 01 00 6E 05 00 00 00 1C 00 03 00 53 10 0A 00 02 00 72 01 00 6E 05 00 00 00 1C 00 04 00 53 10 0A 00 02 00 72 01 00 6E 05 00 00 00 1C 00 05 00 53 10 0A 00 02 00 72 01 00 6E 05 00 00 00", 
+        "SCTX - Result script source": "set fbmwMSEntertainers.currentday to GameDay\r\nplaysound 0entertainersUreact03\r\nPlayer.additem gold001 10\r\ndulnea.ModDisposition player 5\r\nfbmwTravenMarvosREF.ModDisposition player 5\r\nmwAlvisTeriREF.ModDisposition player 5\r\nmwMerilHlaanoREF.ModDisposition player 5", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "Dulnea [ACHR:0181080F]", 
+            "SCRO - Global Reference": "fbmwTravenMarvosREF [ACHR:01810810]", 
+            "SCRO - Global Reference": "mwAlvisTeriREF [ACHR:018149DC]", 
+            "SCRO - Global Reference": "mwMerilHlaanoREF [ACHR:01810811]", 
+            "SCRO - Global Reference": "fbmwMSEntertainers [QUST:01002199]", 
+            "SCRO - Global Reference": "GameDay [GLOB:00000037]", 
+            "SCRO - Global Reference": "0entertainersUreact03 [SOUN:01000ED7]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]"
+        ]
+    }
+}

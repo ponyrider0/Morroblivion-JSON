@@ -1,0 +1,76 @@
+{
+    "Topic": "1mustSgetShome [DIAL:0131099C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 411, 
+        "Record Flags": {}, 
+        "FormID": "01F8A54A", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVRunawaySlave [QUST:01003410]", 
+    "PNAM - Previous INFO": "01F8A549", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "65 68 55"
+            }, 
+            "NAM1 - Response Text": "No, not home. To the Argonian Mission in Ebonheart before they find me, that's where I must go. The Tel Aruhn hunters be out looking for me, no doubt about it. If they find Reeh-Jah, that's it for me!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "TARGET - Target Reference [00000000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVRunawaySlave "The Runaway Slave" [QUST:01003410]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0reehUjah "Reeh-Jah" [NPC_:012606E6]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1mustSgetShome1 [DIAL:01321A1A]", 
+        "TCLT - Choice": "1mustSgetShome2 [DIAL:01321A1C]", 
+        "TCLT - Choice": "1mustSgetShome3 [DIAL:01321A1E]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "Topic": "1pressingSbusiness1 [DIAL:01320B7A]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 591, 
+        "Record Flags": {}, 
+        "FormID": "01F8AF5B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwVTraderLate [QUST:01003416]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 56 54"
+            }, 
+            "NAM1 - Response Text": "Most excellent, yes? We will both gain from this...I shall keep my good name, and you shall benefit from Teneran's generosity. Wonderful. Take care, for one should not take an oath sworn to Zenithar lightly. No, never lightly.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0rasha "Rasha" [NPC_:012606CC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 55, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 02 00 39 10 0A 00 02 00 72 03 00 6E 1E 00 00 00 52 10 0A 00 02 00 72 04 00 6E 05 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 05 00 00 00", 
+        "SCTX - Result script source": "addtopic 1rashaassshirts\r\nsetstage fbmwvtraderlate 30\r\nremoveitem 0exquisiteushirtu01urasha 5\r\nplayer.additem 0exquisiteushirtu01urasha 5", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "1RashaAsSshirts [DIAL:0131091F]", 
+            "SCRO - Global Reference": "fbmwVTraderLate [QUST:01003416]", 
+            "SCRO - Global Reference": "0exquisiteUshirtU01Urasha [CLOT:01140187]"
+        ]
+    }
+}

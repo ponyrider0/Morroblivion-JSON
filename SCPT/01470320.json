@@ -1,0 +1,49 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1331, 
+        "Record Flags": {}, 
+        "FormID": "01470320", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwTRProximityMineScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 6, 
+        "CompiledSize": 355, 
+        "VariableCount": 17, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 55 01 00 00 16 00 0D 00 06 00 09 00 20 73 10 00 20 31 20 3D 3D 15 00 11 00 66 0D 00 0C 00 20 66 0D 00 20 58 0C 10 00 00 20 2B 16 00 0C 00 02 00 08 00 20 66 0D 00 20 34 20 3E 15 00 07 00 73 10 00 02 00 20 30 15 00 07 00 66 0D 00 02 00 20 30 19 00 00 00 1E 00 00 00 19 00 00 00 16 00 15 00 11 00 11 00 20 58 01 10 05 00 01 00 72 01 00 20 33 30 30 20 3C 15 00 07 00 73 10 00 02 00 20 31 16 00 12 00 03 00 0E 00 20 72 01 00 58 1E 11 00 00 20 31 20 3D 3D 16 00 19 00 01 00 15 00 20 58 4D 10 00 00 20 72 01 00 58 0E 10 04 00 01 00 1F 00 20 3C 1E 00 00 00 19 00 00 00 19 00 00 00 16 00 0F 00 01 00 0B 00 20 58 4D 10 00 00 20 32 30 20 3C 1E 10 08 00 02 00 72 02 00 72 01 00 18 00 0F 00 01 00 0B 00 20 58 4D 10 00 00 20 34 30 20 3C 1E 10 08 00 02 00 72 03 00 72 01 00 18 00 0F 00 01 00 0B 00 20 58 4D 10 00 00 20 36 30 20 3C 1E 10 08 00 02 00 72 04 00 72 01 00 18 00 0F 00 01 00 0B 00 20 58 4D 10 00 00 20 38 30 20 3C 1E 10 08 00 02 00 72 05 00 72 01 00 17 00 02 00 01 00 1E 10 08 00 02 00 72 06 00 72 01 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptName mwTRProximityMineScript\n\nfloat timer\nshort triggered\n\nbegin gamemode\n\n	if ( triggered == 1 )\n		set timer to ( timer + GetSecondsPassed )\n		if ( timer > 4 )\n			set triggered to 0\n			set timer to 0\n		endif\n		return\n	endif\n\n	if ( GetDistance Player < 300 )\n		set triggered to 1\n\n		if ( Player.IsSneaking == 1 )\n			if ( GetRandomPercent < Player.getav sneak )\n				return\n			endif\n		endif\n\n		if GetRandomPercent < 20\n			Cast 0proxUmineUfire Player\n		elseif GetRandomPercent < 40\n			Cast 0proxUmineUfrost Player\n		elseif GetRandomPercent < 60\n			Cast 0proxUmineUpoison Player\n		elseif GetRandomPercent < 80\n			Cast 0proxUmineUshock Player\n		else\n			Cast 0proxUmineUlife Player\n		endif\n\n	endif\n\nEnd\n;<CSEBlock>\n;<CSECaretPos> 36 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000D", 
+                "Unused": "73 74 4F 62 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "72 64 69 6E 61 74 65"
+            }, 
+            "SCVR - Name": "timer"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000010", 
+                "Unused": "73 74 4F 62 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "72 64 69 6E 61 74 65"
+            }, 
+            "SCVR - Name": "triggered"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "0proxUmineUfire [SPEL:010603EF]", 
+        "SCRO - Global Reference": "0proxUmineUfrost [SPEL:010603F0]", 
+        "SCRO - Global Reference": "0proxUmineUpoison [SPEL:010603F2]", 
+        "SCRO - Global Reference": "0proxUmineUshock [SPEL:010603F1]", 
+        "SCRO - Global Reference": "0proxUmineUlife [SPEL:010603F3]"
+    ]
+}

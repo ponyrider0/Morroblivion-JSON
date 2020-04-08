@@ -1,0 +1,102 @@
+{
+    "Topic": "1darkSbusiness [DIAL:01311375]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 634, 
+        "Record Flags": {}, 
+        "FormID": "01F8AC8E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMWomanScorned [QUST:0101B6DD]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000001", 
+                "Emotion Value": 100, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "C7 16 3E"
+            }, 
+            "NAM1 - Response Text": "My husband Brandr has been running around behind my back with a harlot named Erna the Quiet.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000001", 
+                "Emotion Value": 80, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "C7 16 3E"
+            }, 
+            "NAM1 - Response Text": "I love my husband.  He's my entire world, and that world isn't big enough for both Erna and me.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000004", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "C7 16 3E"
+            }, 
+            "NAM1 - Response Text": "I want Erna dead. But I'm no killer. Will you help me in this errand? You'll be well compensated, of course.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0kjolver "Kjolver" [NPC_:01260B12]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMWomanScorned "A Woman Scorned" [QUST:0101B6DD]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "A0", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMWomanScorned "A Woman Scorned" [QUST:0101B6DD]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1darkSbusiness1 [DIAL:01321A6E]", 
+        "TCLT - Choice": "1darkSbusiness2 [DIAL:01321A70]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwBMWomanScorned 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMWomanScorned [QUST:0101B6DD]"
+        ]
+    }
+}

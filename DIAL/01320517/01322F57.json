@@ -1,0 +1,71 @@
+{
+    "Topic": "1RedoranSCookingSSecrets1 [DIAL:01320517]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 545, 
+        "Record Flags": {}, 
+        "FormID": "01322F57", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTGRedoranCookbook [QUST:01009338]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Yes, I'm sure Fara will appreciate this. Well done. And take this, it could come in handy.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0bigShelende "Big Helende" [NPC_:012601B6]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 6, 
+            "CompiledSize": 67, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00 A9 10 0D 00 03 00 72 05 00 72 06 00 6E 05 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwtgredorancookbook 100\r\nplayer.removeitem 0bkuredorancookingsecrets 1\r\nplayer.additem 0puchameleonuq 1\r\nmodfactionreaction 0thievessguild playerfaction 5", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwTGRedoranCookbook [QUST:01009338]", 
+            "SCRO - Global Reference": "0bkUredorancookingsecrets [BOOK:01180159]", 
+            "SCRO - Global Reference": "0pUchameleonUq [ALCH:010800D0]", 
+            "SCRO - Global Reference": "0ThievesSGuild [FACT:01220001]", 
+            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]"
+        ]
+    }
+}

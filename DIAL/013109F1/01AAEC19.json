@@ -1,0 +1,84 @@
+{
+    "Topic": "1FourthStrial [DIAL:013109F1]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 850, 
+        "Record Flags": {}, 
+        "FormID": "01AAEC19", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ10 [QUST:01001DC9]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "The Fourth Trial is: 'A stranger's voice unites the Houses./Three Halls call him Hortator.'", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "When you have been named 'Hortator' by each of the three Great Houses of Vvardenfell, come to me for further guidance, for you will have passed the Fourth Trial.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ10 "The Path of the Incarnate" [QUST:01001DC9]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0nibaniSmaesa "Nibani Maesa" [NPC_:0126018B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 8, 
+            "CompiledSize": 92, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 3C 00 00 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 58 10 05 00 01 00 72 04 00 39 10 0A 00 02 00 72 05 00 6E 01 00 00 00 39 10 0A 00 02 00 72 06 00 6E 01 00 00 00 39 10 0A 00 02 00 72 07 00 6E 01 00 00 00 55 10 05 00 01 00 72 08 00", 
+        "SCTX - Result script source": "setstage FBMWMQ10 60 \r\naddtopic 1telvannishortator\r\naddtopic 1redoranshortator\r\naddtopic 1hlaalushortator\r\nSetStage fbmwMQHlaaluCurio 1\r\nSetStage fbmwMQRedoranSarethi 1\r\nSetStage fbmwMQTelvanniAryon 1\r\nShowMap mwTelVosMapMarker", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQ10 [QUST:01001DC9]", 
+            "SCRO - Global Reference": "1TelvanniSHortator [DIAL:013107C6]", 
+            "SCRO - Global Reference": "1RedoranSHortator [DIAL:01310819]", 
+            "SCRO - Global Reference": "1HlaaluSHortator [DIAL:01310881]", 
+            "SCRO - Global Reference": "fbmwMQHlaaluCurio [QUST:01001DD6]", 
+            "SCRO - Global Reference": "fbmwMQRedoranSarethi [QUST:01001DE1]", 
+            "SCRO - Global Reference": "fbmwMQTelvanniAryon [QUST:01002C4B]", 
+            "SCRO - Global Reference": "mwTelVosMapMarker [REFR:0100AFCC]"
+        ]
+    }
+}

@@ -1,0 +1,76 @@
+{
+    "Topic": "1helpSaSpoorSpilgrim [DIAL:01310737]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 520, 
+        "Record Flags": {}, 
+        "FormID": "01F8AA44", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVPoorPilgrim [QUST:0100340C]", 
+    "PNAM - Previous INFO": "01F8AA43", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "75 73 53"
+            }, 
+            "NAM1 - Response Text": "I've been trying to get to Ruddy Man, but I've lost my way. If you would be so kind as to help, I can pay you 150 septims upon our arrival. I need to get there rather quickly, though. I'm on a pilgrimage, and there are others I must meet there. ", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "75 73 53"
+            }, 
+            "NAM1 - Response Text": "I must be at Ruddy Man, in Koal Cave, within two days. Can you help?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVPoorPilgrim "Lead the Pilgrim to Koal Cave" [QUST:0100340C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0fonusSrathryon "Fonus Rathryon" [NPC_:012606C3]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1helpSaSpoorSpilgrim1 [DIAL:0132089C]", 
+        "TCLT - Choice": "1helpSaSpoorSpilgrim2 [DIAL:0132089E]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

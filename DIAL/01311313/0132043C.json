@@ -1,0 +1,96 @@
+{
+    "Topic": "1shipmentsSstoppedSarriving [DIAL:01311313]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 699, 
+        "Record Flags": {}, 
+        "FormID": "0132043C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMMorale [QUST:0101B6CE]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310BE1", 
+        "NAME - Topic": "01310CE5", 
+        "NAME - Topic": "01310B7D"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Well, I have no idea.... You've been in my desk? My desk? You've been in there? Why...that's an outrage! Stolen liquor? I have no idea.... All right. Perhaps I have been hiding the alcohol. It was for their own good! And...", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6D 77 42"
+            }, 
+            "NAM1 - Response Text": "I had hoped that if the soldiers got fed up and revolted, I'd be able to justify going home to my superiors. Look, I don't want any trouble from you.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMMorale "Rebellion at Frostmoth" [QUST:0101B6CE]", 
+            "Parameter #2": "foundbooze", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 90.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMMorale "Rebellion at Frostmoth" [QUST:0101B6CE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0antoniusSnuncius "Antonius Nuncius" [NPC_:01260B1A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1shipmentsSstoppedSarriving1 [DIAL:0132043B]", 
+        "TCLT - Choice": "1shipmentsSstoppedSarriving2 [DIAL:01320439]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 5A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwbmmorale 90", 
+        "References": [
+            "SCRO - Global Reference": "fbmwBMMorale [QUST:0101B6CE]"
+        ]
+    }
+}

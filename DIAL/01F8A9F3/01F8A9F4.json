@@ -1,0 +1,81 @@
+{
+    "Topic": "fbmwicledger [DIAL:01F8A9F3]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 619, 
+        "Record Flags": {}, 
+        "FormID": "01F8A9F4", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwICRich [QUST:0100849A]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "69 75 73"
+            }, 
+            "NAM1 - Response Text": "This is most awkward. Since you confront me with this, I presume you intend blackmail? If you hope for cash, I must disappoint you -- I have no ready cash at present.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "69 75 73"
+            }, 
+            "NAM1 - Response Text": "You must content yourself with these pieces of raw ebony. I'm sure you can get your 500 drakes for them... and more. Now, leave me.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0bkUCalderaRecordBook2 "Secret Caldera Ledger" [BOOK:011800F9]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0cuniusSpelelius "Cunius Pelelius" [NPC_:012603D0]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 03 00 00 00 39 10 0A 00 02 00 72 03 00 6E 2A 00 00 00", 
+        "SCTX - Result script source": "player.additem 0ingredurawuebonyu01 3\r\nsetstage fbmwicrich 42", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0ingredUrawUebonyU01 [INGR:010A0009]", 
+            "SCRO - Global Reference": "fbmwICRich [QUST:0100849A]"
+        ]
+    }
+}

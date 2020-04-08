@@ -1,0 +1,50 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1102, 
+        "Record Flags": {}, 
+        "FormID": "01F8E542", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwCreatureMerchantScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 0, 
+        "CompiledSize": 264, 
+        "VariableCount": 3, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 97 00 00 00 00 00 15 00 1D 00 66 01 00 18 00 20 58 00 11 12 00 01 00 0E 00 66 42 61 72 74 65 72 42 75 79 42 61 73 65 15 00 1E 00 66 02 00 19 00 20 58 00 11 13 00 01 00 0F 00 66 42 61 72 74 65 72 53 65 6C 6C 42 61 73 65 15 00 07 00 73 03 00 02 00 20 31 69 14 1B 00 02 00 0E 00 66 42 61 72 74 65 72 42 75 79 42 61 73 65 7A 00 00 00 00 00 00 59 40 69 14 1C 00 02 00 0F 00 66 42 61 72 74 65 72 53 65 6C 6C 42 61 73 65 7A 00 00 00 00 00 00 59 40 0D 10 02 00 00 00 11 00 00 00 10 00 06 00 00 00 57 00 00 00 16 00 0D 00 03 00 09 00 20 73 03 00 20 31 20 3E 3D 69 14 15 00 02 00 0E 00 66 42 61 72 74 65 72 42 75 79 42 61 73 65 66 01 00 69 14 16 00 02 00 0F 00 66 42 61 72 74 65 72 53 65 6C 6C 42 61 73 65 66 02 00 15 00 07 00 73 03 00 02 00 20 30 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName mwCreatureMerchantScript\n\nfloat fBarterBuyBaseTemp\nfloat fBarterSellBaseTemp\n\nshort activated\n\nBegin OnActivate\n	set fBarterBuyBaseTemp to (GetGameSetting fBarterBuyBase) \n	set fBarterSellBaseTemp to (GetGameSetting fBarterSellBase)\n	\n	set activated to 1\n	\n	SetNumericGameSetting fBarterBuyBase 100\n	SetNumericGameSetting fBarterSellBase 100\n\n	Activate\nEnd\n\nBegin GameMode\n	if(activated >=1 )\n		SetNumericGameSetting fBarterBuyBase fBarterBuyBaseTemp\n		SetNumericGameSetting fBarterSellBase fBarterSellBaseTemp\n		set activated to 0\n	endif\nEnd\n;<CSEBlock>\n;<CSECaretPos> 537 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "fBarterBuyBaseTemp"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "fBarterSellBaseTemp"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "activated"
+        }
+    ]
+}

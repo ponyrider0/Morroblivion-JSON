@@ -1,0 +1,76 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1216, 
+        "Record Flags": {}, 
+        "FormID": "01470317", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwTRPlagueRock02Script", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 274, 
+        "VariableCount": 7, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 04 01 00 00 16 00 0D 00 14 00 09 00 20 73 05 00 20 30 20 3D 3D 16 00 0D 00 02 00 09 00 20 73 02 00 20 30 20 3D 3D 15 00 0E 00 66 06 00 09 00 20 58 06 10 03 00 01 00 58 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 16 00 10 00 0E 00 0C 00 20 72 01 00 73 05 00 20 31 20 3D 3D 16 00 0D 00 02 00 09 00 20 73 01 00 20 30 20 3D 3D 26 10 05 00 01 00 72 02 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 16 00 16 00 04 00 12 00 20 58 06 10 03 00 01 00 58 20 32 34 30 30 20 7E 20 3E 15 00 10 00 66 04 00 0B 00 20 35 30 20 58 0C 10 00 00 20 2A 15 00 0F 00 66 06 00 0A 00 20 66 06 00 20 66 04 00 20 2D 07 10 06 00 02 00 58 66 06 00 1E 00 00 00 17 00 02 00 03 00 07 10 0C 00 02 00 58 7A 00 00 00 00 00 C0 A2 C0 15 00 07 00 73 05 00 02 00 20 31 3C 19 00 00 19 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptName mwTRPlagueRock02Script\n\nshort initialized\nshort doonce\nfloat XPos\nfloat CurrentPos\nshort open\n\nbegin gamemode\n\n	if open == 0\n		if ( initialized == 0 )\n			set CurrentPos to GetPos X\n			set initialized to 1\n		endif\n		if (fbmwMSCrimsonPlague.plaguerock == 1)\n			if ( doonce == 0 )\n				PlaySound 0DoorSStoneSOpen\n				set doonce to 1\n			endif\n			if ( GetPos X > -2400 )\n				set XPos to 50 * GetSecondsPassed\n				set CurrentPos to CurrentPos - XPos\n				SetPos X, CurrentPos\n				return\n			else\n				SetPos X, -2400\n				set open to 1\n				Update3D\n			endif\n		endif\n	endif\nend \n;<CSEBlock>\n;<CSECaretPos> 33 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "doonce"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "initialized"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "XPos"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "open"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "CurrentPos"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwMSCrimsonPlague [QUST:0101C61D]", 
+        "SCRO - Global Reference": "0DoorSStoneSOpen [SOUN:013000A3]"
+    ]
+}

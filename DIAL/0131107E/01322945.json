@@ -1,0 +1,73 @@
+{
+    "Topic": "1Dilborn [DIAL:0131107E]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 450, 
+        "Record Flags": {}, 
+        "FormID": "01322945", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSBarbarianBookA [QUST:01008558]", 
+    "PNAM - Previous INFO": "01F8A8E0", 
+    "Add topics": [
+        "NAME - Topic": "0131107E", 
+        "NAME - Topic": "0131107E", 
+        "NAME - Topic": "0131107E", 
+        "NAME - Topic": "0131107E", 
+        "NAME - Topic": "0131107E"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Dilborn big and mighty wizard. Dilborn read books to Thrud... all the words, big words, two, maybe three times.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Now Dilborn gone, no one read books to Thrud. Thrud sad. Thrud miss friend Dilborn. You help Thrud find Dilborn?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0thrud "Thrud" [NPC_:01260AA2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1Dilborn1 [DIAL:01322942]", 
+        "TCLT - Choice": "1Dilborn2 [DIAL:01322944]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

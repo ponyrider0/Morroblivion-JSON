@@ -1,0 +1,72 @@
+{
+    "Topic": "1HrothmundAsSBarrow [DIAL:01311335]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 511, 
+        "Record Flags": {}, 
+        "FormID": "01F8BAB2", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMAirship [QUST:0101AF81]", 
+    "PNAM - Previous INFO": "01F8BAB1", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "69 73 53"
+            }, 
+            "NAM1 - Response Text": "It's a gravesite, you see.  Located...situated near...um...well, if the stories are true, and I believe...well, I hope they are...Hrothmund's Barrow is at the eye...eye of the wolf, you see.  You can only see the eye...only see the whole wolf, really...", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "69 73 53"
+            }, 
+            "NAM1 - Response Text": "from the air!  So...if I may say so...the airship was a brilliant idea.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMAirship "The Patchwork Airship" [QUST:0101AF81]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0louisSbeauchamp "Louis Beauchamp" [NPC_:01260B3C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

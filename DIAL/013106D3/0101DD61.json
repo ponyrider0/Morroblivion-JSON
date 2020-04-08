@@ -1,0 +1,125 @@
+{
+    "Topic": "1NerevarineSprophecies [DIAL:013106D3]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1234, 
+        "Record Flags": {}, 
+        "FormID": "0101DD61", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ11e [QUST:01001DCE]", 
+    "PNAM - Previous INFO": "0101DD60", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "You wish to be named Erabenimsun Nerevarine? Never. Not while Ashkhan Ulath-Pal and his war-loving Erabenimsun live.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "They all hate Outlanders, and are proud and haughty, and will never suffer an Outlander to rule them.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "If you would be Nerevarine of the Erabenimsun, you must kill Ulath-Pal and his supporters, the gulakhans Ahaz, Ranabi, and Ashu-Ahhe.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "Then you must help me make peace-loving Erabenimsun Gulakhan Han-Ammu our ashkhan. Ashkhan Han-Ammu could then name you Nerevarine Erabenimsun.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "05", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "But before anything else can be done, you must first eliminate Ulath-Pal and his supporters.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "06", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "Then you should come speak with me, and we will discuss further how you might be named Erabenimsun Nerevarine.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ11e "Erabenimsum Nereverine" [QUST:01001DCE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0manirai "Manirai" [NPC_:0126018C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 50, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 05 00 00 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 58 10 05 00 01 00 72 04 00 58 10 05 00 01 00 72 05 00", 
+        "SCTX - Result script source": "setstage FBMWMQ11e 5\r\nAddTopic 1UlathTPal\r\nAddTopic 1Ahaz\r\nAddTopic 1AshuTAhhe\r\nAddTopic 1Ranabi", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQ11e [QUST:01001DCE]", 
+            "SCRO - Global Reference": "1UlathTPal [DIAL:01310B79]", 
+            "SCRO - Global Reference": "1Ahaz [DIAL:01310CFF]", 
+            "SCRO - Global Reference": "1AshuTAhhe [DIAL:01310B7A]", 
+            "SCRO - Global Reference": "1Ranabi [DIAL:01310C81]"
+        ]
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 803, 
+        "Record Flags": {}, 
+        "FormID": "01470125", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwHolamayanCoverScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 218, 
+        "VariableCount": 4, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 CC 00 00 00 16 00 2F 00 01 00 2B 00 20 47 01 00 20 36 20 3E 20 47 01 00 20 38 20 3C 20 26 26 20 47 01 00 20 31 38 20 3E 20 47 01 00 20 32 30 20 3C 20 26 26 20 7C 7C 15 00 07 00 73 01 00 02 00 20 31 17 00 02 00 01 00 15 00 07 00 73 01 00 02 00 20 30 19 00 00 00 16 00 0D 00 04 00 09 00 20 73 01 00 20 31 20 3D 3D 16 00 0D 00 02 00 09 00 20 73 02 00 20 30 20 3D 3D 13 10 09 00 02 00 03 00 6E 00 00 00 00 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 17 00 02 00 04 00 16 00 0D 00 02 00 09 00 20 73 02 00 20 31 20 3D 3D 13 10 09 00 02 00 04 00 6E 00 00 00 00 15 00 07 00 73 02 00 02 00 20 30 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptName mwHolamayanCoverScript\n\nshort BeOpen\nshort open\n\nBegin GameMode\n\n	if ( Gamehour > 6 && Gamehour < 8 ) || ( Gamehour > 18 && GameHour < 20 )\n		set BeOpen to 1\n	else\n		set BeOpen to 0\n	endif\n\n	if (BeOpen == 1)\n		if (open == 0)\n			PlayGroup Forward 0\n			set open to 1\n		endif\n	else\n		if (open == 1)\n			PlayGroup Backward 0\n			set open to 0\n		endif\n	endif\nEnd\n;<CSEBlock>\n;<CSECaretPos> 33 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "BeOpen"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "open"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "GameHour [GLOB:00000038]"
+    ]
+}

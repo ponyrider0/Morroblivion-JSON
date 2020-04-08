@@ -1,0 +1,38 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 975, 
+        "Record Flags": {}, 
+        "FormID": "0101CE63", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwMQDagothGaresScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 4, 
+        "CompiledSize": 293, 
+        "VariableCount": 2, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 4E 00 00 00 16 00 0D 00 04 00 09 00 20 73 01 00 20 31 20 21 3D 16 00 16 00 02 00 12 00 20 58 01 10 05 00 01 00 72 01 00 20 31 30 30 30 20 3C 56 10 08 00 02 00 72 01 00 72 02 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 19 00 00 00 11 00 00 00 10 00 08 00 0A 00 BD 00 00 00 00 00 1C 00 01 00 1C 10 05 00 01 00 72 03 00 00 10 9A 00 01 00 8C 00 57 69 74 68 20 68 69 73 20 64 79 69 6E 67 20 62 72 65 61 74 68 2C 20 44 61 67 6F 74 68 20 47 61 72 65 73 20 73 6D 69 6C 65 73 20 61 6E 64 20 63 75 72 73 65 73 20 79 6F 75 2E 20 27 45 76 65 6E 20 61 73 20 6D 79 20 4D 61 73 74 65 72 20 77 69 6C 6C 73 2C 20 79 6F 75 20 73 68 61 6C 6C 20 63 6F 6D 65 20 74 6F 20 68 69 6D 2C 20 69 6E 20 68 69 73 20 66 6C 65 73 68 2C 20 61 6E 64 20 6F 66 20 68 69 73 20 66 6C 65 73 68 2E 27 00 00 01 00 01 00 02 00 4F 6B 15 00 0A 00 72 04 00 73 01 00 02 00 20 31 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName mwMQDagothGaresScript\n\n; Applied to Dagoth Gares, Illinubi Soul's Rattle\n\nshort doonce\n\nbegin gamemode\n	if doonce != 1\n		if GetDistance Player < 1000\n			StartConversation Player, GREETING\n			set doonce to 1\n		endif\n	endif\nend\n\nbegin ondeath\n	Player.AddSpell 0corprus\n	MessageBox \"With his dying breath, Dagoth Gares smiles and curses you. 'Even as my Master wills, you shall come to him, in his flesh, and of his flesh.'\", \"Ok\"\n	Set fbmwMQ07.MessageDelay to 1	\nend\n;<CSEBlock>\n;<CSECaretPos> 15 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "doonce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "GREETING [DIAL:000000C8]", 
+        "SCRO - Global Reference": "0corprus [SPEL:010602FD]", 
+        "SCRO - Global Reference": "fbmwMQ07 [QUST:01001DBF]"
+    ]
+}

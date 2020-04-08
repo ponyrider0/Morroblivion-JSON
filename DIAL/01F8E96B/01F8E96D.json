@@ -1,0 +1,61 @@
+{
+    "Topic": "mwCGGuard01Talk [DIAL:01F8E96B]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 212, 
+        "Record Flags": {}, 
+        "FormID": "01F8E96D", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "01", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwChargen [QUST:01F0A28C]", 
+    "PNAM - Previous INFO": "01F8E96C", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000001", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "72 67 65"
+            }, 
+            "NAM1 - Response Text": "Get yourself on deck and lets keep this as civil as possible!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 4.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwChargen "Stranger in a Strange Land" [QUST:01F0A28C]", 
+            "Parameter #2": "Guard01Stage", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0chargenSboatSguardS2 "Julius Cerantus" [NPC_:0126046A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

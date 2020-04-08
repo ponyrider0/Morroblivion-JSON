@@ -1,0 +1,134 @@
+{
+    "Topic": "1equipment [DIAL:013113C0]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1197, 
+        "Record Flags": {}, 
+        "FormID": "0103EDAC", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwCO13a [QUST:0101BE42]", 
+    "PNAM - Previous INFO": "0103EDAB", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "Passed it all out, did yeh? That's a good lackey. Now, I'll just be taking what you've got for me, and then we'll be dispatchin' yeh.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "'Fraid so, on Carnius' orders. Seems he don't have much need of yeh anymore, and thought yeh might be a good warm up for us.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "Nothin' personal, yeh understand.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0BMShuntsmanSwarSaxe "Huntsman War Axe" [WEAP:01100237]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0BMSwolfScuirass "Wolf Cuirass" [ARMO:0112015C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0BMSwolfSgreaves "Wolf Greaves" [ARMO:0112015D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 25.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwCO13a "East Empire Company: Drastic Measures" [QUST:0101BE42]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Toralf "Toralf" [NPC_:01260BA5]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 161, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 04 00 6E 01 00 00 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00 EE 10 0A 00 02 00 72 02 00 6E 01 00 00 00 EE 10 0A 00 02 00 72 03 00 6E 01 00 00 00 EE 10 0A 00 02 00 72 04 00 6E 01 00 00 00 16 10 05 00 01 00 72 01 00 39 10 0A 00 02 00 72 05 00 6E 1E 00 00 00", 
+        "SCTX - Result script source": "player.removeitem 0BMSwolfScuirass 1\r\nplayer.removeitem 0BMSwolfSgreaves 1\r\nplayer.removeitem 0BMShuntsmanSwarSaxe 1\r\nadditem 0BMSwolfScuirass 1\r\nadditem 0BMSwolfSgreaves 1\r\nadditem 0BMShuntsmanSwarSaxe 1\r\nequipitem 0BMSwolfScuirass 1\r\nequipitem 0BMSwolfSgreaves 1\r\nequipitem 0BMShuntsmanSwarSaxe 1\r\nstartcombat player\r\nsetstage fbmwCO13a 30", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0BMSwolfScuirass [ARMO:0112015C]", 
+            "SCRO - Global Reference": "0BMSwolfSgreaves [ARMO:0112015D]", 
+            "SCRO - Global Reference": "0BMShuntsmanSwarSaxe [WEAP:01100237]", 
+            "SCRO - Global Reference": "fbmwCO13a [QUST:0101BE42]"
+        ]
+    }
+}

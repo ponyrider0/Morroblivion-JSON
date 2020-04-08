@@ -1,0 +1,82 @@
+{
+    "Topic": "fbmwbmAirshipFound [DIAL:01F8B217]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1032, 
+        "Record Flags": {}, 
+        "FormID": "01F8BCD6", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMAirship [QUST:0101AF81]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "69 73 53"
+            }, 
+            "NAM1 - Response Text": "The airship...crashed?  Smashed...was dashed into the mountains?  Horrible, horrible...such a loss of time...and money!  Oh, yes...yes...human life, too.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "69 73 53"
+            }, 
+            "NAM1 - Response Text": "Mustn't forget the crew...people, after all.  Well...I am thankful...grateful really, that you've come to me with...um...with this information.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "69 73 53"
+            }, 
+            "NAM1 - Response Text": "And...ah...incredible work with the finding...that is, the recovery...of, um...the Amulet of Infectious Charm.....  My thanks!  Here, please...take...have this gold!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0louisSbeauchamp "Louis Beauchamp" [NPC_:01260B3C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 96, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 5A 00 00 00 39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 04 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E D0 07 00 00", 
+        "SCTX - Result script source": "setstage fbmwbmAirship 90\r\nsetstage fbmwbmAirship 100\r\nplayer.removeitem fbmwamuletofinfectiouscharm 1\r\nadditem fbmwamuletofinfectiouscharm 1\r\nplayer.removeitem 0bkuairshipucaptainsujournal 1\r\nplayer.additem gold001 2000", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwBMAirship [QUST:0101AF81]", 
+            "SCRO - Global Reference": "fbmwAmuletofInfectiousCharm [CLOT:0102B36D]", 
+            "SCRO - Global Reference": "0bkUAirshipUCaptainsUJournal [BOOK:0118025B]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]"
+        ]
+    }
+}

@@ -1,0 +1,89 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 3623, 
+        "Record Flags": {}, 
+        "FormID": "010024D9", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwbmSummonwolfscript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 6, 
+        "CompiledSize": 620, 
+        "VariableCount": 6, 
+        "Type": "Magic Effect:256"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 11 00 B9 00 00 00 15 00 09 00 66 04 00 04 00 20 5A 02 00 1C 00 01 00 22 10 00 00 65 17 13 00 01 12 00 56 02 00 00 05 00 58 03 00 1B 17 04 00 00 00 00 65 17 1C 00 01 1B 00 56 02 00 00 06 00 56 02 00 00 05 00 1B 53 07 00 27 73 20 57 6F 6C 66 0E 00 1C 00 01 00 A3 14 0C 00 01 00 08 00 24 6E 65 77 6E 61 6D 65 1C 00 01 00 9E 10 20 00 04 00 72 04 00 7A 00 00 00 00 00 00 3E 40 7A 00 00 00 00 00 00 3E 40 7A 00 00 00 00 00 00 24 40 1C 00 01 00 21 10 00 00 15 00 07 00 66 02 00 02 00 20 31 FE 16 09 00 01 08 00 56 02 00 00 06 00 FE 16 09 00 01 08 00 56 02 00 00 05 00 11 00 00 00 10 00 06 00 13 00 53 01 00 00 16 00 0D 00 04 00 09 00 20 66 01 00 20 34 35 20 3E 1C 00 01 00 8B 10 02 00 00 00 1C 00 01 00 9E 10 20 00 04 00 72 05 00 7A 00 00 00 00 00 00 00 00 7A 00 00 00 00 00 00 00 00 7A 00 00 00 00 00 00 24 40 1C 00 01 00 8C 10 02 00 00 00 1C 00 01 00 22 10 00 00 19 00 00 00 16 00 1E 00 01 00 1A 00 20 72 01 00 58 2E 10 00 00 20 31 20 3D 3D 20 66 01 00 20 34 33 20 3C 20 26 26 15 00 08 00 66 01 00 03 00 20 34 33 19 00 00 00 16 00 1A 00 02 00 16 00 20 66 01 00 20 30 2E 31 20 3E 20 73 03 00 20 30 20 3D 3D 20 26 26 1C 00 01 00 23 11 0E 00 02 00 72 06 00 7A 00 00 00 00 00 00 F0 3F 15 00 07 00 73 03 00 02 00 20 31 19 00 00 00 15 00 11 00 66 01 00 0C 00 20 66 01 00 20 58 0C 10 00 00 20 2B 16 00 19 00 02 00 15 00 20 66 01 00 20 34 33 20 3E 20 73 03 00 20 31 20 3D 3D 20 26 26 1C 00 01 00 8B 10 02 00 00 00 15 00 07 00 73 03 00 02 00 20 32 19 00 00 00 16 00 0D 00 02 00 09 00 20 73 03 00 20 32 20 3D 3D 15 00 10 00 66 02 00 0B 00 20 66 02 00 20 30 2E 30 33 20 2D 1C 00 01 00 29 11 05 00 01 00 66 02 00 19 00 00 00 11 00 00 00 10 00 06 00 12 00 3E 00 00 00 1C 00 01 00 9E 10 20 00 04 00 72 05 00 7A 00 00 00 00 00 00 00 00 7A 00 00 00 00 00 00 00 00 7A 00 00 00 00 00 00 24 40 1C 00 01 00 8C 10 02 00 00 00 1C 00 01 00 22 10 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwbmSummonwolfscript\r\n\r\nfloat timersummon\r\nfloat fade\r\nshort playonce\r\nref SUMN\r\nstring_var playername\r\nstring_var newname\r\nBegin ScriptEffectStart\r\n\r\n;Set temp reference for scripting. \r\n;Allows faster transition of script as template. Also allows for leveled summon.\r\n    set SUMN to fbmwbmSummonWolfRef\r\n    ;Reset our creature if re-summoned before time runs out on spell                                            \r\n    SUMN.disable        \r\n	let playername := player.Getname\r\n	let newname := $playername + \"'s Wolf\"\r\n	SUMN.SetName $newname\r\n    ;Now we move our creature to the Player\r\n    ;Move the creature reference to the worldspace of the Player\r\n    SUMN.moveto Player 30 30 10    \r\n    ;Make our creature visible and active    \r\n    SUMN.enable                        \r\n	\r\n    set fade to 1    ;Resets the alpha fade variable to 1\r\n	sv_Destruct newname\r\n	sv_Destruct playername\r\nEnd\r\n\r\nBegin ScriptEffectUpdate\r\n\r\n    if ( timersummon > 45 )    ;Creature is dead and fade timer passed\r\n        ;Move our creature back to its holding cell\r\n        SUMN.kill\r\n        SUMN.moveto FBMWDeadAttackerMarker 0 0 10 \r\n        ;Reset our creature if dead\r\n        SUMN.resurrect    \r\n        ;Set our creature to an unprocessed state                            \r\n        SUMN.disable                                    \r\n    endif\r\n\r\n    ;Adjust timer state for early fade/disable upon death\r\n    if ( SUMN.getdead == 1 ) && ( timersummon < 43 )                \r\n        set timersummon to 43\r\n    endif\r\n\r\n    if ( timersummon > 0.1 ) && ( playonce == 0 )\r\n        ;Play effect for creature entrance\r\n        SUMN.pms effectSummonMythicDawn 1            \r\n        set playonce to 1\r\n    endif\r\n\r\n    \r\n    ;Increment timer\r\n    set timersummon to timersummon + GetSecondsPassed        \r\n\r\n\r\n    if ( timersummon > 43 ) && ( playonce == 1 )\r\n        ;Play effect for creature exit/death\r\n        SUMN.kill            \r\n        set playonce to 2\r\n    endif\r\n\r\n    if ( playonce == 2 )    \r\n        ;Fade creature for exit/death                                            \r\n        set fade to fade - 0.03\r\n        SUMN.saa fade\r\n    endif\r\n        \r\n\r\nEnd\r\n\r\nBegin ScriptEffectFinish\r\n\r\n    ;Move our creature back to its holding cell\r\n    SUMN.moveto FBMWDeadAttackerMarker 0 0 10    \r\n    ;Reset our creature if dead                        \r\n    SUMN.resurrect        \r\n    ;Set our creature to an unprocessed state                                        \r\n    SUMN.disable                                                    \r\n\r\nEnd\n;<CSEBlock>\n;<CSECaretPos> 1834 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 FA 01 00"
+            }, 
+            "SCVR - Name": "timersummon"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 B0 E7 00 00"
+            }, 
+            "SCVR - Name": "fade"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "playonce"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "90 02 91 3A 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "01 91 3A F0 8A 90 3A"
+            }, 
+            "SCVR - Name": "SUMN"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "playername"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "00 00 00 08 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "21 1E 3A 00 00 00 00"
+            }, 
+            "SCVR - Name": "newname"
+        }
+    ], 
+    "References": [
+        "SCRV - Local Variable": "00000004", 
+        "SCRO - Global Reference": "fbmwbmSummonWolfRef [ACRE:010024DD]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "FBMWDeadAttackerMarker [REFR:0101CE5D]", 
+        "SCRO - Global Reference": "effectSummonMythicDawn [EFSH:000711B7]"
+    ]
+}

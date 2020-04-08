@@ -1,0 +1,93 @@
+{
+    "Topic": "1nameSyouSNerevarine [DIAL:0131072E]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 897, 
+        "Record Flags": {}, 
+        "FormID": "01022DCA", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ11a [QUST:01001DCC]", 
+    "PNAM - Previous INFO": "01022DCB", 
+    "Add topics": [
+        "NAME - Topic": "01310BDE"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "You have made this place safe for the Ahemmusa. And so I name you Ahemmusa Nerevarine, War Leader of the Ahemmusa, and Protector of the People.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "57 4D 51"
+            }, 
+            "NAM1 - Response Text": "I also give you the Madstone of the Ahemmusa, which shall be a sign to all Dunmer, that you are the Nerevarine, and that the Ahemmusa shall follow you in all thing, even unto death, until the Enemy is defeated, or until you are dead.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "6E 54 61"
+            }, 
+            "NAM1 - Response Text": "Now, I can stay only briefly. Soon I must return to Ahemmusa camp and make preparations to relocate here.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 40.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ11a "Ahemmusa Nereverine" [QUST:01001DCC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0sinnammuSmirpal "Sinnammu Mirpal" [NPC_:01260180]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 46, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 15 00 0A 00 72 02 00 73 01 00 02 00 20 30", 
+        "SCTX - Result script source": "SetStage fbmwMQ11a 50\r\nPlayer.AddItem FBMWMadstoneoftheAhemmusa 1\r\nset fbmwmq11a.follownow to 0", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMQ11a [QUST:01001DCC]", 
+            "SCRO - Global Reference": "fbmwMadstoneoftheAhemmusa [CLOT:0102BB01]"
+        ]
+    }
+}

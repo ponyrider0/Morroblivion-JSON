@@ -1,0 +1,49 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 3428, 
+        "Record Flags": {}, 
+        "FormID": "01019A16", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwCalvusNPCScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 6, 
+        "CompiledSize": 645, 
+        "VariableCount": 4, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 36 00 00 00 00 00 15 00 0A 00 72 02 00 73 05 00 02 00 20 31 15 00 0A 00 72 02 00 73 04 00 02 00 20 30 71 10 05 00 01 00 72 02 00 37 10 05 00 01 00 72 02 00 1E 00 00 00 11 00 00 00 10 00 06 00 00 00 35 02 00 00 16 00 0E 00 01 00 0A 00 20 58 2E 10 00 00 20 30 20 3E 1E 00 00 00 19 00 00 00 16 00 10 00 02 00 0C 00 20 72 02 00 73 0F 00 20 31 20 3D 3D 00 10 6D 00 01 00 53 00 4F 75 72 20 63 6F 6E 74 72 61 63 74 20 69 73 20 66 6F 72 20 33 30 20 64 61 79 73 2C 20 73 74 61 72 74 69 6E 67 20 25 67 2F 25 67 2E 20 59 6F 75 20 68 61 76 65 20 25 67 20 64 61 79 73 20 6C 65 66 74 20 69 6E 20 74 68 65 20 63 6F 6E 74 72 61 63 74 2E 03 00 72 02 00 73 09 00 72 02 00 73 08 00 72 02 00 73 0A 00 00 00 15 00 0A 00 72 02 00 73 0F 00 02 00 20 30 19 00 00 00 16 00 10 00 03 00 0C 00 20 72 02 00 73 0E 00 20 31 20 3D 3D 15 00 0A 00 72 02 00 73 0E 00 02 00 20 32 1C 00 01 00 0D 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1E 00 00 00 18 00 10 00 07 00 0C 00 20 72 02 00 73 0E 00 20 32 20 3D 3D 16 00 24 00 05 00 20 00 20 58 24 10 02 00 00 00 20 32 20 21 3D 20 58 24 10 02 00 00 00 20 31 30 30 38 20 21 3D 20 26 26 15 00 0A 00 72 02 00 73 0E 00 02 00 20 33 1C 00 01 00 AD 10 05 00 01 00 72 04 00 97 10 05 00 01 00 72 05 00 5E 10 00 00 1E 00 00 00 19 00 00 00 18 00 10 00 03 00 0C 00 20 72 02 00 73 0E 00 20 33 20 3D 3D 15 00 0A 00 72 02 00 73 0E 00 02 00 20 30 98 10 00 00 5E 10 00 00 19 00 00 00 16 00 10 00 01 00 0C 00 20 72 02 00 73 02 00 20 30 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 0C 00 02 00 08 00 20 66 01 00 20 33 20 3C 15 00 11 00 66 01 00 0C 00 20 66 01 00 20 58 0C 10 00 00 20 2B 1E 00 00 00 19 00 00 00 16 00 15 00 01 00 11 00 20 58 01 10 05 00 01 00 72 03 00 20 35 30 30 20 3C 15 00 07 00 73 02 00 02 00 20 30 19 00 00 00 15 00 07 00 66 01 00 02 00 20 30 1E 00 00 00 16 00 0D 00 02 00 09 00 20 73 02 00 20 30 20 3D 3D 33 10 0A 00 02 00 72 06 00 6E 01 00 00 00 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwCalvusNPCScript\n\nfloat timer\nshort DistanceCheck\n\n\nbegin ondeath\n	set fbmwMercCalvusQuest.isdead to 1\n	set fbmwMercCalvusQuest.MercenaryNear to 0\n	CompleteQuest fbmwMercCalvusQuest\n	StopQuest fbmwMercCalvusQuest\n	return\nend\n\nbegin gamemode\n\n	if GetDead > 0\n		return\n	endif\n\n	if fbmwMercCalvusQuest.info == 1\n		messagebox \"Our contract is for 30 days, starting %g/%g. You have %g days left in the contract.\" fbmwMercCalvusQuest.contractCalvusMonth fbmwMercCalvusQuest.contractCalvusDay fbmwMercCalvusQuest.ContractCalvusDaysLeft \n		set fbmwMercCalvusQuest.info to 0\n	endif\n	\n\n	if fbmwMercCalvusQuest.DoShare == 1\n		set fbmwMercCalvusQuest.DoShare to 2\n		fbmwCalvusMercInventoryREF.Activate Player 1\n		return\n	elseif fbmwMercCalvusQuest.DoShare == 2\n		if ( MenuMode != 2 ) && ( MenuMode != 1008 )\n			set fbmwMercCalvusQuest.DoShare to 3\n			fbmwCalvusMercInventoryREF.RemoveAllItems fbmwCalvusMercREF\n			AddScriptPackage fbmwMercCalvusInventory\n			EvaluatePackage\n			return\n		endif\n	elseif fbmwMercCalvusQuest.DoShare == 3\n		set fbmwMercCalvusQuest.DoShare to 0\n		RemoveScriptPackage fbmwMercCalvusInventory\n		EvaluatePackage\n	endif\n\n\n;this section handles changes in state when Calvus leaves a contract, either because the contract expires, or because the player has taken Calvus' stuff\n\n;if ( GetStage fbmwMercCalvusQuest < 100 )		;if Calvus has already quit, don't do this\n\n;	if ( fbmwMercCalvusQuest.ContractCalvus == 1 )				;if Calvus doesn't have a contract, don't do this\n\n;		if ( fbmwMercCalvusQuest.minimumProfit < 0 )					;handles Calvus quitting because player took his stuff\n\n;			Set fbmwMercCalvusQuest.Companion to 0\n;		Set fbmwMercCalvusQuest.ContractCalvus to 0\n;		    sifh 0\n;			evp\n;			StartConversation Player\n;			return\n;		else\n\n;			if ( fbmwMercCalvusQuest.ContractCalvus == 0 )			;handles Calvus after a contract expires\n;				Set fbmwMercCalvusQuest.Companion to 0\n;				evp\n\n;				if ( GetStage fbmwMercCalvusQuest < 10 )\n;					SetStage fbmwMercCalvusQuest 10		;tells player the first mercenary contract is expired\n;				else\n;					SetStage fbmwMercCalvusQuest 20		;tells player the most recent mercenary contract is expired\n;				endif\n\n;			endif	\n\n;		endif\n\n;	endif\n\n;endif\n\nif ( fbmwMercCalvusQuest.companion == 0 )\n	return\nendif\n\n\nif ( timer < 3 )\n	set timer to ( timer + GetSecondsPassed )\n	return	\nendif\n\nif ( GetDistance Player < 500 )\n	set DistanceCheck to 0\nendif\nset timer to 0\nreturn\n\nif ( DistanceCheck == 0 )\n	Say fbmwCalvusMercDist 1\n	set DistanceCheck to 1\nendif\n\n\nend\n;<CSEBlock>\n;<CSECaretPos> 123 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "43 61 6C 76 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "65 6E 74 6F 72 79 52"
+            }, 
+            "SCVR - Name": "timer"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "43 61 6C 76 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "65 6E 74 6F 72 79 52"
+            }, 
+            "SCVR - Name": "DistanceCheck"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwCalvusMercInventoryREF [REFR:0101B314]", 
+        "SCRO - Global Reference": "fbmwMercCalvusQuest [QUST:01024454]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "fbmwCalvusMercREF [ACHR:01F0493A]", 
+        "SCRO - Global Reference": "fbmwMercCalvusInventory [PACK:0101B31F]", 
+        "SCRO - Global Reference": "fbmwCalvusMercDist [DIAL:01019A14]"
+    ]
+}

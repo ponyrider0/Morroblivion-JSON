@@ -1,0 +1,71 @@
+{
+    "Topic": "1dwarvenSlimeware1 [DIAL:01320E1F]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 763, 
+        "Record Flags": {}, 
+        "FormID": "01F8AB90", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwEBShipment [QUST:01003425]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 45 42"
+            }, 
+            "NAM1 - Response Text": "You were able to take this from one of our ships? I'll have the guards' heads for this! It's good you are an honest person, and it is good that I know about the holes in my security at the docks.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 45 42"
+            }, 
+            "NAM1 - Response Text": "Here, take this as a reward. I would suggest you stay off my ships in the future.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Bolrin "Bolrin" [NPC_:012602F0]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 96, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 05 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 04 00 6E 05 00 00 00 02 10 0A 00 02 00 72 03 00 6E 05 00 00 00 02 10 0A 00 02 00 72 04 00 6E 05 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E F4 01 00 00", 
+        "SCTX - Result script source": "setstage fbmwebshipment 50\r\nplayer.removeitem 0misculwubowl 5\r\nplayer.removeitem 0misculwucup 5\r\nadditem 0misculwubowl 5\r\nadditem 0misculwucup 5\r\nplayer.additem gold001 500", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwEBShipment [QUST:01003425]", 
+            "SCRO - Global Reference": "0miscUlwUbowl [MISC:01160129]", 
+            "SCRO - Global Reference": "0miscUlwUcup [MISC:0116012A]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]"
+        ]
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 338, 
+        "Record Flags": {}, 
+        "FormID": "01F8B852", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwtrAlennoteScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 96, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 18 00 00 00 00 00 39 10 0A 00 02 00 72 01 00 6E 32 00 00 00 0D 10 02 00 00 00 11 00 00 00 10 00 06 00 00 00 2E 00 00 00 16 00 14 00 01 00 10 00 20 58 3A 10 05 00 01 00 72 01 00 20 31 20 3E 3D 21 10 00 00 17 00 02 00 01 00 22 10 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwtrAlennoteScript\r\nbegin onactivate\r\nsetstage fbmwtr08Hlaalu 50\r\nactivate\r\nend\r\nbegin gamemode\r\nif getstage fbmwtr08hlaalu>=1\r\nenable\r\nelse\r\ndisable\r\nendif\r\nend", 
+    "References": [
+        "SCRO - Global Reference": "fbmwTR08Hlaalu [QUST:0101C64D]"
+    ]
+}

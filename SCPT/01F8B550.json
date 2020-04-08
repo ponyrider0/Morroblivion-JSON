@@ -1,0 +1,111 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 2131, 
+        "Record Flags": {}, 
+        "FormID": "01F8B550", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "moXscrXdagothtalkengine", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 6, 
+        "CompiledSize": 368, 
+        "VariableCount": 8, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 62 01 00 00 16 00 2D 00 01 00 29 00 20 72 02 00 58 43 10 05 00 01 00 72 03 00 20 31 20 3D 3D 20 72 02 00 58 43 10 05 00 01 00 72 04 00 20 31 20 3D 3D 20 7C 7C 15 00 0B 00 66 08 00 06 00 20 30 2E 30 30 31 17 00 02 00 02 00 15 00 07 00 66 08 00 02 00 20 35 1E 00 00 00 19 00 00 00 16 00 0D 00 0F 00 09 00 20 73 04 00 20 31 20 3D 3D 15 00 11 00 66 03 00 0C 00 20 66 03 00 20 58 0C 10 00 00 20 2B 16 00 13 00 03 00 0F 00 20 66 03 00 20 66 02 00 20 33 20 2D 20 3C 3D 1C 00 01 00 9E 10 05 00 01 00 72 02 00 15 00 07 00 73 05 00 02 00 20 31 15 00 07 00 73 06 00 02 00 20 31 17 00 02 00 08 00 15 00 07 00 73 01 00 02 00 20 30 15 00 07 00 66 02 00 02 00 20 30 15 00 07 00 66 03 00 02 00 20 30 15 00 07 00 73 04 00 02 00 20 30 15 00 07 00 73 05 00 02 00 20 30 15 00 07 00 73 06 00 02 00 20 30 15 00 07 00 73 07 00 02 00 20 30 1E 00 00 00 19 00 00 00 19 00 00 00 16 00 19 00 02 00 15 00 20 73 05 00 20 31 20 3D 3D 20 73 07 00 20 30 20 3D 3D 20 26 26 1C 00 01 00 33 10 12 00 04 00 72 05 00 6E 01 00 00 00 72 06 00 6E 01 00 00 00 15 00 07 00 73 07 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn moXscrXdagothtalkengine	;Handles Dagoth Ur's Voiced Taunts ... linked with Quest moXqueXdagothtalkengine\n\n;Information Stores\n\nSHORT SpeechIndex\nFloat SpeechLength\nFloat Timer\nFLOAT fQuestDelayTime\n\n;Switches\n\nSHORT MoveSpeaker	\nSHORT StartSpeaker	\nSHORT SpeechLock	\nSHORT SpeakOnce		\n\nBegin GameMode\n\n	If Player.GetInCell DagothSUr==1 || Player.GetInCell AkulakhanAsSChamber==1\n		Set fQuestDelayTime to 0.001\n	Else\n		Set fQuestDelayTime to 5\n		Return\n	EndIF\n\n\n	If (MoveSPeaker==1)\n		Set Timer to (Timer+GetSecondsPassed)\n;Set SpeechLength to moXprefXDagothSpeaker.Say moXdiagXDagothTaunts 1\n		If timer<=(SpeechLength - 3)\n;If SpeechLength>0\n;Message \"Now Following\"\n			moXprefXDagothSpeaker.MoveTo Player   \n			Set StartSpeaker to 1\n			Set SpeechLock to 1\n;Constantly move the sound source next to player\n		Else\n;Message \"Now ending\"\n			Set SpeechIndex to 0\n			Set SpeechLength to 0\n			Set Timer to 0\n			Set MoveSpeaker to 0\n			Set StartSpeaker to 0\n			Set SpeechLock to 0\n			Set SpeakOnce to 0			\n			Return\n; Clean Up for re-use.\n		EndIF\n	EndIF\n\n\n	If (StartSpeaker==1) && (SpeakOnce==0)\n		moXprefXDagothSpeaker.Say moXdiagXDagothTaunts 1 moXDagothTalker 1\n		Set SpeakOnce to 1\n	EndIF\n\nEnd	\n\n\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 40 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "SpeechIndex"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "SpeechLength"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "Timer"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "MoveSpeaker"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "StartSpeaker"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "SpeechLock"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000007", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "01 00 00 1E 00 00 00"
+            }, 
+            "SCVR - Name": "SpeakOnce"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000008", 
+                "Unused": "42 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "48 19 00 A0 05 00 00"
+            }, 
+            "SCVR - Name": "fQuestDelayTime"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "moXprefXDagothSpeaker [REFR:01F8B55C]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "DagothSUr [CELL:0148002C]", 
+        "SCRO - Global Reference": "AkulakhanAsSChamber [CELL:01480073]", 
+        "SCRO - Global Reference": "moXdiagXDagothTaunts [DIAL:01F8B563]", 
+        "SCRO - Global Reference": "moXDagothTalker [NPC_:01F8B55B]"
+    ]
+}

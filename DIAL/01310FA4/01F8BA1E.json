@@ -1,0 +1,67 @@
+{
+    "Topic": "1joinStheSRoyalSGuards [DIAL:01310FA4]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 403, 
+        "Record Flags": {}, 
+        "FormID": "01F8BA1E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTR07Guard [QUST:0101C64C]", 
+    "PNAM - Previous INFO": "01F8BA1D", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "61 64 65"
+            }, 
+            "NAM1 - Response Text": "Suit yourself. It's Delitian's call. I like it here. I know Tienius Delitian pretty well, and when Helseth became king, Delitian asked me if I was interested.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "61 64 65"
+            }, 
+            "NAM1 - Response Text": "It's respectable, quiet work, and the pay is fine with me.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ErvisSVerano "Ervis Verano" [NPC_:01260A86]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "fbmwtr07helseth [DIAL:01F8BC96]", 
+        "TCLT - Choice": "fbmwtr07hlaalu [DIAL:01F8BC8C]", 
+        "TCLT - Choice": "fbmwtr07llethan [DIAL:01F8BC9F]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

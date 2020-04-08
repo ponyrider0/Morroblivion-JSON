@@ -1,0 +1,100 @@
+{
+    "Topic": "1shirtSandSvest [DIAL:01310949]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 801, 
+        "Record Flags": {}, 
+        "FormID": "01F8A506", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwICShirt [QUST:01008498]", 
+    "PNAM - Previous INFO": "01F8A505", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "Indeed? I do make a fine garment, if I do say so myself, and the red shirt with the black vest is one of my favorite traditional designs. And, I admit, I am weak when it come to such generous praise. Here.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "Please accept the shirt and vest for the Imperial cult, with my compliments. And also, for yourself, take another shirt, with these matching trousers.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0falanaamo "Falanaamo" [NPC_:012603D7]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 80.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "TARGET - Target Reference [00000000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICShirt "Imperial Cult: Shirt and Vest for Harvest's End" [QUST:01008498]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICDinner "Imperial Cult: Brandy for the Fundraising Dinner" [QUST:01008499]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 50, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 02 00 00 00 39 10 0A 00 02 00 72 04 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "player.additem 0tailoredutrousers 1\r\nplayer.additem 0commonushirtu04uc 2\r\nsetstage fbmwicshirt 10", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0tailoredUtrousers [CLOT:011401D9]", 
+            "SCRO - Global Reference": "0commonUshirtU04Uc [CLOT:0114008C]", 
+            "SCRO - Global Reference": "fbmwICShirt [QUST:01008498]"
+        ]
+    }
+}

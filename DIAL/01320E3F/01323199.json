@@ -1,0 +1,72 @@
+{
+    "Topic": "1DwemerSartifacts1 [DIAL:01320E3F]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 632, 
+        "Record Flags": {}, 
+        "FormID": "01323199", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTGOverduePayments [QUST:01009337]", 
+    "PNAM - Previous INFO": "01323198", 
+    "Add topics": [
+        "NAME - Topic": "01310B13"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "So you know who's who around here. Ra'Zhid does not have the Dwemer artifacts. Understand? Run along, kitten.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0RaAzhid "Ra'Zhid" [NPC_:0126029B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 96, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 04 00 6E 01 00 00 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "player.removeitem 0miscudwrvuartifact60 1\r\nplayer.removeitem 0miscudwrvugoblet00 1\r\nplayer.removeitem 0miscudwrvubowl00 1\r\nadditem 0miscudwrvugoblet00 1\r\nadditem 0miscudwrvubowl00 1\r\nadditem 0miscudwrvuartifact60 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0miscUdwrvUartifact60 [MISC:011600A6]", 
+            "SCRO - Global Reference": "0miscUdwrvUgoblet00 [MISC:0116009D]", 
+            "SCRO - Global Reference": "0miscUdwrvUbowl00 [MISC:0116009C]"
+        ]
+    }
+}

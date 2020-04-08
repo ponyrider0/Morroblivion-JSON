@@ -1,0 +1,92 @@
+{
+    "Topic": "1beSofSsomeSuse [DIAL:0131091D]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 750, 
+        "Record Flags": {}, 
+        "FormID": "01F8A4B4", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwVRichTrader [QUST:0100340F]", 
+    "PNAM - Previous INFO": "01AAE019", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "69 73 53"
+            }, 
+            "NAM1 - Response Text": "You see, Rollie and I are heading to Vivec to deliver this shipment of clothing to Agrippina Herrenia the clothier.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "69 73 53"
+            }, 
+            "NAM1 - Response Text": "Truly, it's some of the finest clothing you'll ever see...perhaps I could interest you in some? Well, regardless, I've heard rumor that the road to Vivec has become rather dangerous of late.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "69 73 53"
+            }, 
+            "NAM1 - Response Text": "Perhaps you'd be willing to escort the two of us? Rollie and I would be most appreciative, and would be willing to offer some compensation.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwVRichTrader "A Man and His Guar" [QUST:0100340F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0terisSraledran "Teris Raledran" [NPC_:012606C8]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1beSofSsomeSuse1 [DIAL:013212F5]", 
+        "TCLT - Choice": "1beSofSsomeSuse2 [DIAL:013212F7]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwvrichtrader 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwVRichTrader [QUST:0100340F]"
+        ]
+    }
+}

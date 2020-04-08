@@ -1,0 +1,27 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 854, 
+        "Record Flags": {}, 
+        "FormID": "014701BA", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwShishiDoorScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 6, 
+        "CompiledSize": 221, 
+        "VariableCount": 2, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0B 00 02 00 CA 00 00 00 01 00 72 03 00 26 10 05 00 01 00 72 04 00 1C 00 01 00 21 10 00 00 16 00 29 00 02 00 25 00 20 58 3A 10 05 00 01 00 72 05 00 20 31 30 20 3E 3D 20 58 3A 10 05 00 01 00 72 05 00 20 31 30 30 20 3C 20 26 26 1C 00 02 00 0F 10 09 00 02 00 21 00 6E 64 00 00 00 1C 00 02 00 53 10 0A 00 02 00 72 03 00 6E 9C FF FF FF 19 00 00 00 16 00 28 00 03 00 24 00 20 58 3A 10 05 00 01 00 72 06 00 20 31 30 20 3E 3D 20 58 3A 10 05 00 01 00 72 06 00 20 35 30 20 3C 20 26 26 39 10 0A 00 02 00 72 06 00 6E 0B 00 00 00 1C 00 02 00 0F 10 09 00 02 00 21 00 6E 00 00 00 00 1C 00 02 00 53 10 0A 00 02 00 72 03 00 6E 64 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName mwShishiDoorScript\n\nBEGIN OnActivate Player\n	PlaySound DRSStoneOpen\n	msShishiTrapDoor.Enable\n\n	IF GetStage fbmwHRShishiReport >= 10 && GetStage fbmwHRShishiReport < 100\n		mwFavesAndasREF.SetAV Aggression 100\n		mwFavesAndasREF.ModDisposition Player -100\n	ENDIF\n\n	IF GetStage fbmwHTShishi >= 10 && GetStage fbmwHTShishi < 50\n		SetStage fbmwHTShishi 11\n		mwFavesAndasREF.SetAV Aggression 0\n		mwFavesAndasREF.ModDisposition Player 100\n	ENDIF\nEND\n;<CSEBlock>\n;<CSECaretPos> 29 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "msShishiTrapDoor [REFR:01814A85]", 
+        "SCRO - Global Reference": "mwFavesAndasREF [ACHR:01814A7A]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "DRSStoneOpen [SOUN:00092C2C]", 
+        "SCRO - Global Reference": "fbmwHRShishiReport [QUST:01005199]", 
+        "SCRO - Global Reference": "fbmwHTShishi [QUST:01003448]"
+    ]
+}

@@ -1,0 +1,66 @@
+{
+    "Topic": "1embezzledSfunds [DIAL:013108CA]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 372, 
+        "Record Flags": {}, 
+        "FormID": "01F8AABE", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwICMossanon [QUST:0100B81C]", 
+    "PNAM - Previous INFO": "01F8AABD", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "63 74 75"
+            }, 
+            "NAM1 - Response Text": "Our clerk Mossanon took 3000 drakes in gold from our treasury. Since he kept all accountings, we didn't even suspect the gold was missing until he disappeared.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICMossanon "Imperial Cult: Pledge from Canctunian Ponius" [QUST:0100B81C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0CanctunianSPonius "Canctunian Ponius" [NPC_:01260223]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 12 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwicmossanon 18", 
+        "References": [
+            "SCRO - Global Reference": "fbmwICMossanon [QUST:0100B81C]"
+        ]
+    }
+}

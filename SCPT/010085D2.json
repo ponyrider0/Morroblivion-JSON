@@ -1,0 +1,82 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1901, 
+        "Record Flags": {}, 
+        "FormID": "010085D2", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwMSWarlordsaScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 15, 
+        "CompiledSize": 390, 
+        "VariableCount": 4, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 78 01 00 00 16 00 0D 00 1A 00 09 00 20 73 04 00 20 31 20 3D 3D 16 00 0D 00 02 00 09 00 20 73 01 00 20 30 20 3D 3D 15 00 09 00 73 02 00 04 00 20 47 04 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 16 00 0F 00 02 00 0B 00 20 73 02 00 20 47 04 00 20 21 3D 15 00 0D 00 73 01 00 08 00 20 73 01 00 20 31 20 2B 15 00 09 00 73 02 00 04 00 20 47 04 00 19 00 00 00 16 00 0D 00 10 00 09 00 20 73 03 00 20 30 20 3D 3D 16 00 17 00 0E 00 13 00 20 72 05 00 58 43 10 05 00 01 00 72 06 00 20 30 20 3D 3D 16 00 0D 00 0C 00 09 00 20 73 01 00 20 32 20 3D 3D 1C 00 01 00 9E 10 05 00 01 00 72 07 00 1C 00 01 00 52 10 0A 00 02 00 72 08 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 09 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 0A 00 6E 01 00 00 00 1C 00 02 00 9E 10 05 00 01 00 72 0B 00 1C 00 02 00 52 10 0A 00 02 00 72 0C 00 6E 01 00 00 00 1C 00 02 00 52 10 0A 00 02 00 72 0D 00 6E 01 00 00 00 1C 00 02 00 52 10 0A 00 02 00 72 0E 00 6E 01 00 00 00 39 10 0A 00 02 00 72 0F 00 6E 23 00 00 00 1C 00 03 00 8B 10 02 00 00 00 15 00 07 00 73 03 00 02 00 20 31 15 00 07 00 73 04 00 02 00 20 30 19 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwMSWarlordsaScript\n\nshort daysgoneby\nshort timerday\nshort doonce\nshort TimerStart\n\n\nbegin gamemode\n	if TimerStart == 1\n		if ( daysgoneby == 0 )\n			set timerday to GameDay\n			set daysgoneby to 1\n		endif\n\n		if ( timerday != GameDay )\n;presumably it went up...\n			set daysgoneby to daysgoneby + 1\n			set timerday to GameDay\n		endif\n\n		if ( doonce == 0 )\n			if ( Player.GetInCell MournholdVSVacantSManor == 0 )\n				if ( daysgoneby == 2 )\n					fbmwFelvanIenithREF.moveto fbmwMSWarlordsIenithMarker\n					fbmwFelvanIenithREF.RemoveItem 0ebonySwarSaxeUelanande 1\n					fbmwFelvanIenithREF.RemoveItem 0extravagantUrobeU02Uelanande 1\n					fbmwFelvanIenithREF.RemoveItem 0steelSbattleSaxe 1\n					fbmwOlvyneDobarREF.moveto fbmwMSWarlordsDobarMarker\n					fbmwOlvyneDobarREF.RemoveItem 0silverUhelmUuvenim 1\n					fbmwOlvyneDobarREF.RemoveItem 0silverSspearUuvenim 1\n					fbmwOlvyneDobarREF.RemoveItem 0silverSwaraxe 1\n					SetStage fbmwMSWarlordsa 35\n					fbmwDovorOrenREF.Kill \n					set doonce to 1\n					set TimerStart to 0\n				endif\n			endif\n		endif\n	endif\nEnd\n;<CSEBlock>\n;<CSECaretPos> 907 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "daysgoneby"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "timerday"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "52 B5 1D 08 00 00 00"
+            }, 
+            "SCVR - Name": "doonce"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "TimerStart"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwFelvanIenithREF [ACHR:01F051F4]", 
+        "SCRO - Global Reference": "fbmwOlvyneDobarREF [ACHR:01F051F5]", 
+        "SCRO - Global Reference": "fbmwDovorOrenREF [ACHR:01F051F3]", 
+        "SCRO - Global Reference": "GameDay [GLOB:00000037]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "MournholdVSVacantSManor [CELL:014804EF]", 
+        "SCRO - Global Reference": "fbmwMSWarlordsIenithMarker [REFR:010085D5]", 
+        "SCRO - Global Reference": "0ebonySwarSaxeUelanande [WEAP:011001F4]", 
+        "SCRO - Global Reference": "0extravagantUrobeU02Uelanande [CLOT:01140201]", 
+        "SCRO - Global Reference": "0steelSbattleSaxe [WEAP:01F8E98C]", 
+        "SCRO - Global Reference": "fbmwMSWarlordsDobarMarker [REFR:010085D6]", 
+        "SCRO - Global Reference": "0silverUhelmUuvenim [ARMO:01120125]", 
+        "SCRO - Global Reference": "0silverSspearUuvenim [WEAP:011001F6]", 
+        "SCRO - Global Reference": "0silverSwaraxe [WEAP:01F8E982]", 
+        "SCRO - Global Reference": "fbmwMSWarlordsa [QUST:0101C639]"
+    ]
+}

@@ -1,0 +1,83 @@
+{
+    "Topic": "1notStheSone [DIAL:01310A79]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 737, 
+        "Record Flags": {}, 
+        "FormID": "01AA2DC1", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Say Once": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMQ10 [QUST:01001DC9]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "2E 20 49"
+            }, 
+            "NAM1 - Response Text": "I am a failed Incarnate. So are all these who remain here with me in the Cavern of the Incarnate.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "2E 20 49"
+            }, 
+            "NAM1 - Response Text": "I survived the blight, but I fell in battle with an Ash Vampire. I could not master the arts of war. Nor could I learn the ways of the Great Houses. ", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "2E 20 49"
+            }, 
+            "NAM1 - Response Text": "They would not have accepted me as Hortator. Take these few poor things... they are of no use to me.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ghostUnpcUpeakstar "Peakstar" [NPC_:01260675]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 50, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 39 10 0A 00 02 00 72 04 00 6E 46 00 00 00", 
+        "SCTX - Result script source": "Player.Additem 0peakstarupantsuunique 1\r\nPlayer.Additem 0EmbroideredBelt 1\r\nSetStage fbmwMQ10 70", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0peakstarUpantsUunique [CLOT:011401AD]", 
+            "SCRO - Global Reference": "0EmbroideredBelt [CLOT:01001B34]", 
+            "SCRO - Global Reference": "fbmwMQ10 [QUST:01001DC9]"
+        ]
+    }
+}

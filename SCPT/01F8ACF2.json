@@ -1,0 +1,22 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 575, 
+        "Record Flags": {}, 
+        "FormID": "01F8ACF2", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwVAVampHunterAnoVandoScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 149, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 85 00 00 00 00 00 16 00 15 00 05 00 11 00 20 58 3A 10 05 00 01 00 72 01 00 20 32 30 20 3E 3D 16 00 20 00 01 00 1C 00 20 58 12 10 00 00 20 36 2E 30 20 3E 3D 20 58 12 10 00 00 20 32 30 20 3C 3D 20 26 26 39 10 0A 00 02 00 72 01 00 6E 46 00 00 00 18 00 1C 00 01 00 18 00 20 58 12 10 00 00 20 32 30 20 3E 20 58 12 10 00 00 20 36 20 3C 20 26 26 39 10 0A 00 02 00 72 01 00 6E 3C 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwVAVampHunterAnoVandoScript\n\nbegin OnDeath\n\n	if (GetStage fbmwVAVampHunter >= 20)	\n		if (GetCurrentTime >= 6.0) && (GetCurrentTime <= 20)\n			SetStage fbmwVAVampHunter 70\n		elseif (GetCurrentTime > 20) && (GetCurrentTime < 6)\n			SetStage fbmwVAVampHunter 60\n		endif\n	endif\n\nend\n;<CSEBlock>\n;<CSECaretPos> 23 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "fbmwVAVampHunter [QUST:01003BCF]"
+    ]
+}

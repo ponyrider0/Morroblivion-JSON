@@ -1,0 +1,109 @@
+{
+    "Topic": "1threeSsigns [DIAL:0131139E]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 892, 
+        "Record Flags": {}, 
+        "FormID": "01F8BB28", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMWildHunt [QUST:0101B6DA]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "73 74 53"
+            }, 
+            "NAM1 - Response Text": "The first tells of Fire From the Eye of Glass. This we have seen on Lake Fjalding, though I had hoped it was the mere magic of the draugr lord. Next, the prophecy tells us of the Tide of Woe.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "73 74 53"
+            }, 
+            "NAM1 - Response Text": "Even now, our shores are lined with the corpses of the horkers, dead for a reason we cannot fathom. Finally, the prophecy tells us of the Bloodmoon, when the young moon itself runs red with the blood of the Hunter's prey.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "73 74 53"
+            }, 
+            "NAM1 - Response Text": "Look to the skies, Blodskaal. The third sign is upon us. Now we wait for the Hunter's Game.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "61", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMFrostGiant1 "The Castle Karstaag" [QUST:0101B6C3]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMFrostGiant2 "Siege of Castle Karstaag" [QUST:0101B6C4]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMWildHunt "Hircine's Hunt" [QUST:0101B6DA]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0korstSwindTeye "Korst Wind-Eye" [NPC_:01260B23]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 39 10 0A 00 02 00 72 02 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "addtopic 1hunterassgame\r\nsetstage fbmwbmwildhunt 10", 
+        "References": [
+            "SCRO - Global Reference": "1HunterAsSGame [DIAL:01311384]", 
+            "SCRO - Global Reference": "fbmwBMWildHunt [QUST:0101B6DA]"
+        ]
+    }
+}

@@ -1,0 +1,110 @@
+{
+    "Topic": "1GatewayShaunting [DIAL:0131084A]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 915, 
+        "Record Flags": {}, 
+        "FormID": "01F8AF34", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTownSadrith [QUST:0101C647]", 
+    "PNAM - Previous INFO": "01F8AF33", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 54 6F"
+            }, 
+            "NAM1 - Response Text": "So. You suspect me of being behind the Gateway haunting? Hah-hah-hah! Angaredhel is taking it pretty hard, eh? He brought me before the magistrate when I first came here for not having my Hospitality Papers. And this is my revenge.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 54 6F"
+            }, 
+            "NAM1 - Response Text": "But since you are a member of the Imperial Legion, at your request, I will put an end to the Gateway haunting. Go tell Angaredhel. And would you please give him these 'Ghost-Free Papers' as a token of my... 'affection' for him?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetPCInFaction:132", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ImperialSLegion "Imperial Legion" [FACT:0122000F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 40.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "TARGET - Target Reference [00000000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "41", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStageDone:59", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTownSadrith "Gateway Ghost" [QUST:0101C647]", 
+            "Parameter #2": "002", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 15.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTownSadrith "Gateway Ghost" [QUST:0101C647]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0uleniSheleran "Uleni Heleran" [NPC_:012601BE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 40, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 39 10 0A 00 02 00 72 04 00 6E 23 00 00 00 1C 00 02 00 22 10 00 00", 
+        "SCTX - Result script source": "player.additem 0bkuuleniasupapers 1\r\nsetstage fbmwtownsadrith 35\r\nfbmwgatewayREF.disable", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwgatewayREF [ACRE:0100C22C]", 
+            "SCRO - Global Reference": "0bkUuleniAsUpapers [BOOK:01180158]", 
+            "SCRO - Global Reference": "fbmwTownSadrith [QUST:0101C647]"
+        ]
+    }
+}

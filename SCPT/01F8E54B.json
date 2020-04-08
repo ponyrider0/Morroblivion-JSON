@@ -1,0 +1,87 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1983, 
+        "Record Flags": {}, 
+        "FormID": "01F8E54B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwTR08AlenScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 450, 
+        "VariableCount": 6, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 B4 01 00 00 15 00 0B 00 66 03 00 06 00 20 30 2E 30 30 31 16 00 1E 00 01 00 1A 00 20 72 01 00 73 03 00 20 31 20 3D 3D 20 58 23 10 00 00 20 30 20 3D 3D 20 26 26 22 10 00 00 19 00 00 00 16 00 14 00 04 00 10 00 20 58 20 10 05 00 01 00 72 02 00 20 31 20 3D 3D 16 00 0D 00 02 00 09 00 20 73 01 00 20 30 20 3D 3D 15 00 0E 00 73 05 00 09 00 20 72 02 00 58 74 10 00 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 19 00 00 00 16 00 0F 00 15 00 0B 00 20 58 2E 10 00 00 20 31 20 3D 3D 16 00 15 00 13 00 11 00 20 58 3A 10 05 00 01 00 72 01 00 20 37 30 20 3E 3D 16 00 29 00 01 00 25 00 20 58 3A 10 05 00 01 00 72 01 00 20 37 33 20 3D 3D 20 58 3A 10 05 00 01 00 72 01 00 20 37 34 20 3D 3D 20 7C 7C 1E 00 00 00 19 00 00 00 16 00 0D 00 01 00 09 00 20 73 02 00 20 31 20 3D 3D 1E 00 00 00 18 00 0C 00 01 00 08 00 20 66 04 00 20 35 20 3E 15 00 07 00 73 02 00 02 00 20 31 17 00 02 00 01 00 15 00 11 00 66 04 00 0C 00 20 66 04 00 20 58 0C 10 00 00 20 2B 19 00 00 00 16 00 0D 00 07 00 09 00 20 73 02 00 20 31 20 3D 3D 15 00 0E 00 73 06 00 09 00 20 72 02 00 58 74 10 00 00 15 00 0E 00 73 06 00 09 00 20 73 06 00 20 34 30 20 2D 16 00 0E 00 01 00 0A 00 20 73 06 00 20 73 05 00 20 3E 39 10 0A 00 02 00 72 01 00 6E 49 00 00 00 17 00 02 00 01 00 39 10 0A 00 02 00 72 01 00 6E 4A 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwTR08AlenScript\n\nShort DoOnce\nShort TimerOnce\nfloat fQuestDelayTime\nfloat timer\nshort CL1\nshort CL2\n\nbegin gamemode\n\nset fQuestDelayTime to 0.001\n\n	if fbmwTr08Hlaalu.Bedalfree == 1 && getdisabled == 0\n		disable\n	endif\n	\nif ( getinsamecell player == 1 )\n	if ( DoOnce == 0 )\n		set CL1 to player.getcrimegold\n		set DoOnce to 1	\n	endif\nendif\n\nif ( getdead == 1 )\n	; when we are killed...\n	if ( GetStage fbmwTR08Hlaalu >= 70 )\n		; ... and if the player has a writ for us...\n		if (GetStage fbmwTR08Hlaalu == 73 || GetStage fbmwTR08Hlaalu == 74 )\n			return\n		endif\n		\n;now we take into acount the time it takes bounty to update for a murder...\n		If TimerOnce ==1\n			return\n		elseif (timer > 5)\n			set TimerOnce to 1\n		else\n			set timer to timer + GetSecondsPassed\n		endif\n;and after this time has passed....\n\n	if timeronce ==1\n		set CL2 to player.getcrimegold\n		set CL2 to (CL2 - 40)\n		if ( CL2 > CL1 )\n			; ... append a journal entry if the execution is seen ...\n			setstage fbmwTR08Hlaalu 73\n		else\n			; ... append a journal entry if the execution is NOT seen ...\n			setstage fbmwTR08Hlaalu 74\n		endif\n	endif\n	endif\nendif\n\nEnd\n;<CSEBlock>\n;<CSECaretPos> 217 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "DoOnce"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "TimerOnce"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "fQuestDelayTime"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "timer"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 02 00 00 00"
+            }, 
+            "SCVR - Name": "CL1"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "FF FF FF FF 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "FF FF FF 04 00 00 00"
+            }, 
+            "SCVR - Name": "CL2"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwTR08Hlaalu [QUST:0101C64D]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+    ]
+}

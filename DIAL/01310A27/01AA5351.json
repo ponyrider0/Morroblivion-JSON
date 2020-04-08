@@ -1,0 +1,103 @@
+{
+    "Topic": "1witchSnearby [DIAL:01310A27]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 798, 
+        "Record Flags": {}, 
+        "FormID": "01AA5351", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwRecoverWidowmaker [QUST:0100340D]", 
+    "PNAM - Previous INFO": "01AA5350", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 52 65"
+            }, 
+            "NAM1 - Response Text": "Aye, I was escorting this...woman, Iveri Llothri, to Tel Aruhn, and she seemed real friendly. Then for no reason, she turned on me!", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "57 52 65"
+            }, 
+            "NAM1 - Response Text": "Put me under some spell, and by the time I realized what was happening, she had taken off with my gold, my armor, and my axe, Widowmaker!", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "57 52 65"
+            }, 
+            "NAM1 - Response Text": "Damn her for even laying hands on the axe of my fathers! I'll tear her throat out and wear it as a belt! Come with me, stranger;", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "57 52 65"
+            }, 
+            "NAM1 - Response Text": "Help me find this devil and end her pitiful existence!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwRecoverWidowmaker "Widowmaker" [QUST:0100340D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0botrir "Botrir" [NPC_:012606E1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1witchSnearby1 [DIAL:01321C73]", 
+        "TCLT - Choice": "1witchSnearby2 [DIAL:01321C75]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 14 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwrecoverwidowmaker 20", 
+        "References": [
+            "SCRO - Global Reference": "fbmwRecoverWidowmaker [QUST:0100340D]"
+        ]
+    }
+}

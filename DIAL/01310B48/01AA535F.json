@@ -1,0 +1,99 @@
+{
+    "Topic": "1whiteSguar [DIAL:01310B48]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 793, 
+        "Record Flags": {}, 
+        "FormID": "01AA535F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSWhiteGuar [QUST:0101C63A]", 
+    "PNAM - Previous INFO": "01AA535E", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "68 61 6D"
+            }, 
+            "NAM1 - Response Text": "I have seen your journey in a vision. I know what the white guar led you to, and I know who she was.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "68 61 6D"
+            }, 
+            "NAM1 - Response Text": "In my vision, I saw you were led to the corpse of Ashamanu. She was a healer many, many years ago. She gave her own life to save the lives of others.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "68 61 6D"
+            }, 
+            "NAM1 - Response Text": "It is said that she will give her life again and again, so that others may live through her sacrifice. You have witnessed a miracle, my child; you now hold the Amulet of Ashamanu.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSWhiteGuarAmulet "Amulet of Ashamanu" [CLOT:0101C6B1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 60.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSWhiteGuar "Dreams of a White Guar" [QUST:0101C63A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0urshamusaSrapli "Urshamusa Rapli" [NPC_:01260929]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 41 00 00 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "setstage fbmwmswhiteguar 65\r\naddtopic 1amuletsofsashamanu", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMSWhiteGuar [QUST:0101C63A]", 
+            "SCRO - Global Reference": "1AmuletSofSAshamanu [DIAL:013107A5]"
+        ]
+    }
+}

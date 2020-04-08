@@ -1,0 +1,22 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 423, 
+        "Record Flags": {}, 
+        "FormID": "014703CB", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwBMColonyRoot2Script", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 110, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 60 00 00 00 16 00 24 00 01 00 20 00 20 58 3A 10 05 00 01 00 72 01 00 20 31 32 30 20 3D 3D 20 58 23 10 00 00 20 31 20 3D 3D 20 26 26 21 10 00 00 18 00 24 00 01 00 20 00 20 58 3A 10 05 00 01 00 72 01 00 20 31 32 30 20 21 3D 20 58 23 10 00 00 20 30 20 3D 3D 20 26 26 22 10 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptName mwBMColonyRoot2Script\n\nbegin gamemode\n	if GetStage fbmwCO10 == 120 && GetDisabled == 1\n		Enable\n	elseif GetStage fbmwCO10 != 120 && GetDisabled == 0\n		Disable\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "fbmwCO10 [QUST:0101BE3D]"
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "Topic": "AAADestination [DIAL:01000D47]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 198, 
+        "Record Flags": {}, 
+        "FormID": "0100426A", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "aaaBoatTransport [QUST:01F0A330]", 
+    "PNAM - Previous INFO": "01004268", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6D 65 6E"
+            }, 
+            "NAM1 - Response Text": "Just tell me where to point Whistler.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0rindralSdralor "Rindral Dralor" [NPC_:01260789]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "BBBRindralDralorTelBranora [DIAL:0100D1C7]", 
+        "TCLT - Choice": "BBBRindralDralorHlaOad [DIAL:0100D1C3]", 
+        "TCLT - Choice": "BBBRindralDralorVivec [DIAL:0100D1C5]", 
+        "TCLT - Choice": "BBBRindralDralorCancel [DIAL:0100D1C1]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

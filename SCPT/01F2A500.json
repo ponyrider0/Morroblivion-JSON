@@ -1,0 +1,25 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 699, 
+        "Record Flags": {}, 
+        "FormID": "01F2A500", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwmgescortscholar1tenscript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 4, 
+        "CompiledSize": 153, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 8B 00 00 00 16 00 14 00 01 00 10 00 20 58 38 10 05 00 01 00 72 02 00 20 30 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 14 00 06 00 10 00 20 58 3A 10 05 00 01 00 72 02 00 20 37 30 20 3C 16 00 16 00 04 00 12 00 20 58 01 10 05 00 01 00 72 03 00 20 32 35 36 20 3C 3D 39 10 0A 00 02 00 72 02 00 6E 46 00 00 00 15 00 0A 00 72 02 00 73 01 00 02 00 20 30 1C 00 01 00 5E 10 00 00 56 10 05 00 01 00 72 04 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwmgescortscholar1tenscript\n\nBegin GameMode\n	if GetQuestRunning fbmwMGEscortScholar1 == 0\n		return\n	endif\n\n	if GetStage fbmwMGEscortScholar1 < 70\n		IF GetDistance mwNartiseArobarEscapeMarker <= 256\n			SetStage fbmwMGEscortScholar1 70\n			SET fbmwMGEscortScholar1.FollowNow TO 0\n			mwTenyeminweREF.EvaluatePackage\n			StartConversation player\n		ENDIF		\n	ENDIF\nEND\n;<CSEBlock>\n;<CSECaretPos> 352 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "mwTenyeminweREF [ACHR:0185C455]", 
+        "SCRO - Global Reference": "fbmwMGEscortScholar1 [QUST:01006774]", 
+        "SCRO - Global Reference": "mwNartiseArobarEscapeMarker [REFR:01009CA6]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+    ]
+}

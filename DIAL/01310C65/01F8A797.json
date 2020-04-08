@@ -1,0 +1,77 @@
+{
+    "Topic": "1Eggmine [DIAL:01310C65]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 539, 
+        "Record Flags": {}, 
+        "FormID": "01F8A797", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwILGnisisBlight [QUST:010058E7]", 
+    "PNAM - Previous INFO": "01F8A796", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "65 72 61"
+            }, 
+            "NAM1 - Response Text": "The eggmine was closed recently because of the risk of spreading the blight, but the miners here need the eggmine to support their families. Find the blighted kwama queen and cure her.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "65 72 61"
+            }, 
+            "NAM1 - Response Text": "Either cast a cure blight spell on her, or speak with Hetman Abelmawia who has scrolls of cure blight.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwILWidowLand "Imperial Legion: Widow Vabdas' Deed" [QUST:0100602E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0generalSdarius "General Darius" [NPC_:01260051]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwilgnisisblight 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwILGnisisBlight [QUST:010058E7]"
+        ]
+    }
+}

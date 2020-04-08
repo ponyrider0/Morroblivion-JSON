@@ -1,0 +1,68 @@
+{
+    "Topic": "1jobs [DIAL:01310D0A]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 388, 
+        "Record Flags": {}, 
+        "FormID": "01034157", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTGAdvancement [QUST:01010562]", 
+    "PNAM - Previous INFO": "01034158", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Based on what we know, I think we can win over Eydis Fire-Eye if we can find the Bitter Cup.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 110.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTGEnemyParley "Thieves Guild: Speak With Percius" [QUST:0100932E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0stacey "Gentleman Jim Stacey" [NPC_:0126026C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 27, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00 36 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "addtopic 1eydissfireteye\r\naddtopic 1bitterscup\r\nstartquest fbmwtgbitterbribe", 
+        "References": [
+            "SCRO - Global Reference": "1EydisSFireTEye [DIAL:013108EA]", 
+            "SCRO - Global Reference": "1BitterSCup [DIAL:01310B35]", 
+            "SCRO - Global Reference": "fbmwTGBitterBribe [QUST:01009327]"
+        ]
+    }
+}

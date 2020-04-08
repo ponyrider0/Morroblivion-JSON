@@ -1,0 +1,103 @@
+{
+    "Topic": "1wildSnixShounds [DIAL:013108A1]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 856, 
+        "Record Flags": {}, 
+        "FormID": "01AA5356", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVMissingCompanion [QUST:01003408]", 
+    "PNAM - Previous INFO": "01AA5355", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "72 65 6C"
+            }, 
+            "NAM1 - Response Text": "Yes, there must have been three at least. It was hard to tell in all of the confusion. Perhaps you've seen them around here.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "72 65 6C"
+            }, 
+            "NAM1 - Response Text": "Anyway, Falanu smartly tried to play dead while I fought them off. They were too much for me, though, and they chased me off.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "72 65 6C"
+            }, 
+            "NAM1 - Response Text": "I ran away from where my wife was lying, so as not to draw them closer to her. I fear, however, that they could have gone back for her.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "72 65 6C"
+            }, 
+            "NAM1 - Response Text": "Can you help me? The two of us together can certainly find her, and kill the foul beasts should they show themselves again.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 15.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVMissingCompanion "Divided by Nix-Hounds" [QUST:01003408]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0drerelSindaren "Drerel Indaren" [NPC_:012606E3]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1wildSnixShounds3 [DIAL:01320F6B]", 
+        "TCLT - Choice": "1wildSnixShounds4 [DIAL:01320F6D]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0F 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmvmissingcompanion 15", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMVMissingCompanion [QUST:01003408]"
+        ]
+    }
+}

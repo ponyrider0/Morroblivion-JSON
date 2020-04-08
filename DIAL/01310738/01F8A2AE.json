@@ -1,0 +1,101 @@
+{
+    "Topic": "1GirithAsSguarShides [DIAL:01310738]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 981, 
+        "Record Flags": {}, 
+        "FormID": "01F8A2AE", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVOutcastAshlanders [QUST:0100340A]", 
+    "PNAM - Previous INFO": "01F8A2AD", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 4D 56"
+            }, 
+            "NAM1 - Response Text": "Ahhh...my old friend Girith! I heard you helped him out of some serious trouble not long ago. Some business with a couple of no-good Ashlanders, right?", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 4D 56"
+            }, 
+            "NAM1 - Response Text": "They'll never learn. Anyway, you have my thanks; I had quite an investment in those guar hides. Would have taken quite a beating had Girith not been had not been able to sell them.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "77 4D 56"
+            }, 
+            "NAM1 - Response Text": "Here, take these as a token of our appreciation.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 110.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVOutcastAshlanders "Girith's Stolen Hides" [QUST:0100340A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVOutcastAshlanders "Girith's Stolen Hides" [QUST:0100340A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0berwen "Berwen" [NPC_:01260272]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 92, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 52 10 0A 00 02 00 72 02 00 6E 03 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 03 00 00 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 0B 00 00 00 39 10 0A 00 02 00 72 04 00 6E 6E 00 00 00", 
+        "SCTX - Result script source": "moddisposition player 10\r\nremoveitem 0pufortifyuhealthus 3\r\nplayer.additem 0pufortifyuhealthus 3\r\nremoveitem fbmwringofhornhand 1\r\nplayer.additem fbmwringofhornhand 11\r\nsetstage fbmwmvoutcastashlanders 110", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0pUfortifyUhealthUs [ALCH:0108000E]", 
+            "SCRO - Global Reference": "fbmwRingofHornhand [CLOT:0102BB16]", 
+            "SCRO - Global Reference": "fbmwMVOutcastAshlanders [QUST:0100340A]"
+        ]
+    }
+}

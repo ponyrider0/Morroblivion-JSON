@@ -1,0 +1,118 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 2605, 
+        "Record Flags": {}, 
+        "FormID": "01F8EB70", 
+        "Version Control Info": "13 17 00 00"
+    }, 
+    "EDID - Editor ID": "mwBlightTransmissionFunc", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 8, 
+        "CompiledSize": 683, 
+        "VariableCount": 15, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 11 00 07 00 92 02 00 00 01 02 01 00 04 02 00 04 01 05 00 65 17 16 00 01 15 00 56 00 00 00 0F 00 58 00 00 4A 10 07 00 01 00 72 04 00 00 65 17 38 00 01 37 00 56 00 00 00 0D 00 42 64 56 00 00 00 0F 00 0F 58 00 00 00 11 1F 00 01 00 19 00 66 4D 61 67 69 63 44 69 73 65 61 73 65 54 72 61 6E 73 66 65 72 4D 75 6C 74 10 00 65 17 13 00 01 12 00 56 03 00 00 05 00 58 03 00 61 18 04 00 00 00 00 15 00 1F 00 66 08 00 1A 00 20 58 17 14 14 00 02 00 7A 00 00 00 00 00 00 00 00 7A 00 00 00 00 00 00 59 40 65 17 1A 00 01 19 00 56 01 00 00 09 00 58 00 00 67 17 0B 00 01 08 00 56 03 00 00 05 00 00 65 17 27 00 01 26 00 56 02 00 00 0E 00 58 00 00 1C 17 18 00 01 00 12 00 73 43 6F 6E 74 72 61 63 74 65 64 44 69 73 65 61 73 65 00 16 00 0E 00 13 00 0A 00 20 66 08 00 20 66 0D 00 20 3C 6B 17 14 00 7C 02 00 00 01 0F 00 56 01 00 00 06 00 56 01 00 00 09 00 07 16 00 1E 00 02 00 1A 00 20 58 69 17 14 00 01 13 00 56 03 00 00 05 00 56 01 00 00 06 00 18 52 05 00 04 1C 00 01 00 6A 16 05 00 01 00 72 05 00 0E 16 1C 00 02 00 15 00 25 7A 20 42 6C 61 63 6B 2D 48 65 61 72 74 20 42 6C 69 67 68 74 73 0E 00 19 00 00 00 16 00 1E 00 02 00 1A 00 20 58 69 17 14 00 01 13 00 56 03 00 00 05 00 56 01 00 00 06 00 18 52 06 00 04 1C 00 01 00 6A 16 05 00 01 00 72 06 00 0E 16 18 00 02 00 11 00 25 7A 20 41 73 68 20 57 6F 65 20 42 6C 69 67 68 74 73 0E 00 19 00 00 00 16 00 1E 00 02 00 1A 00 20 58 69 17 14 00 01 13 00 56 03 00 00 05 00 56 01 00 00 06 00 18 52 07 00 04 1C 00 01 00 6A 16 05 00 01 00 72 07 00 0E 16 19 00 02 00 12 00 25 7A 20 43 68 61 6E 74 72 61 78 20 42 6C 69 67 68 74 73 0E 00 19 00 00 00 16 00 1E 00 02 00 1A 00 20 58 69 17 14 00 01 13 00 56 03 00 00 05 00 56 01 00 00 06 00 18 52 08 00 04 1C 00 01 00 6A 16 05 00 01 00 72 08 00 0E 16 1C 00 02 00 15 00 25 7A 20 41 73 68 2D 63 68 61 6E 63 72 65 20 42 6C 69 67 68 74 73 0E 00 19 00 00 00 65 17 13 00 01 12 00 56 01 00 00 06 00 56 01 00 00 06 00 42 01 0E 00 6C 17 00 00 19 00 00 00 65 17 13 00 01 12 00 56 03 00 00 05 00 58 00 00 78 18 04 00 00 00 00 15 00 0C 00 73 0E 00 07 00 20 58 FE 16 01 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwBlightTransmissionFunc\n\nref target\nref attacker\nshort resoult\nfloat random\narray_var spells\nstring_var diseasestring\nshort size\nfloat blightresistancetot\nfloat resist\n\nBegin Function {target, attacker}\n	Let resist := GetGlobalValue mwPlayerBlightResistance\n	Let blightresistancetot := (100 - resist)*(GetGameSetting fMagicDiseaseTransferMult)\n	Let spells := attacker.GetSpells\n	set random to Rand 0 100\n	Let size := ar_Size spells\n	Let diseasestring := (GetStringGameSetting sContractedDisease)\n	if (random < blightresistancetot); && ((GetGlobalValue mwPlayerBlightResistance) < 100)\n		while resoult < size\n			if eval (spells[resoult] == 0blackTheartSblight)\n				Player.AddSpellNS 0blackTheartSblight\n				MessageEX \"%z Black-Heart Blight\" diseasestring\n			endif\n			if eval (spells[resoult] == 0ashSwoeSblight)\n				Player.AddSpellNS 0ashSwoeSblight\n				MessageEX \"%z Ash Woe Blight\" diseasestring\n			endif\n\n			if eval (spells[resoult] == 0chanthraxSblight)\n				Player.AddSpellNS 0chanthraxSblight\n				MessageEX \"%z Chantrax Blight\" diseasestring\n			endif\n			if eval (spells[resoult] == 0ashTchancre)\n				Player.AddSpellNS 0ashTchancre\n				MessageEX \"%z Ash-chancre Blight\" diseasestring\n			endif\n			Let resoult := resoult + 1\n		loop \n	endif	\n\n	Let spells := ar_Null\n	set diseasestring to sv_Destruct\nEnd\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "target"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "attacker"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "spells"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "resoult"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000008", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "random"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000009", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "size"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000D", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "blightresistancetot"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000E", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "diseasestring"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000F", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "resist"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRV - Local Variable": "00000001", 
+        "SCRV - Local Variable": "00000002", 
+        "SCRO - Global Reference": "mwPlayerBlightResistance [GLOB:01017D90]", 
+        "SCRO - Global Reference": "0blackTheartSblight [SPEL:010602D7]", 
+        "SCRO - Global Reference": "0ashSwoeSblight [SPEL:010602D6]", 
+        "SCRO - Global Reference": "0chanthraxSblight [SPEL:010602D8]", 
+        "SCRO - Global Reference": "0ashTchancre [SPEL:010602D9]"
+    ]
+}

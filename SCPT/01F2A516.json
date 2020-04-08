@@ -1,0 +1,25 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 683, 
+        "Record Flags": {}, 
+        "FormID": "01F2A516", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwpaurmastonscript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 4, 
+        "CompiledSize": 165, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 12 00 00 00 00 00 39 10 0A 00 02 00 72 02 00 6E 5A 00 00 00 11 00 00 00 10 00 0B 00 10 00 28 00 00 00 01 00 72 03 00 39 10 0A 00 02 00 72 02 00 6E 5F 00 00 00 15 00 0A 00 72 02 00 73 01 00 02 00 20 30 1C 00 01 00 5E 10 00 00 11 00 00 00 10 00 06 00 00 00 42 00 00 00 16 00 28 00 01 00 24 00 20 58 01 10 05 00 01 00 72 04 00 20 32 35 36 20 3C 20 58 3A 10 05 00 01 00 72 02 00 20 39 35 20 3C 20 26 26 39 10 0A 00 02 00 72 02 00 6E 5F 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwpaurmastonscript\n\nBegin onDeath\n	SetStage fbmwVTraderMissed 90\nEND\n\nBegin OnPackageEnd fbmwpaurfollow\n	SetStage fbmwVTraderMissed 95\n	SET fbmwVTraderMissed.FollowNow TO 0\n	mwPaurMastonREF.EvaluatePackage\nEND\n\n\nBegin GameMode\n	IF GetDistance mwVanjirraREF < 256 && GetStage fbmwVTraderMissed < 95\n		SetStage fbmwVTraderMissed 95\n	ENDIF\nEND\n;<CSEBlock>\n;<CSECaretPos> 276 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "mwPaurMastonREF [ACHR:018480C2]", 
+        "SCRO - Global Reference": "fbmwVTraderMissed [QUST:01003417]", 
+        "SCRO - Global Reference": "fbmwpaurfollow [PACK:01F2A572]", 
+        "SCRO - Global Reference": "mwVanjirraREF [ACHR:0183FE34]"
+    ]
+}

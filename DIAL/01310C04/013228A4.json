@@ -1,0 +1,115 @@
+{
+    "Topic": "1Services [DIAL:01310C04]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 831, 
+        "Record Flags": {}, 
+        "FormID": "013228A4", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
+    "PNAM - Previous INFO": "013228A3", 
+    "Add topics": [
+        "NAME - Topic": "013109B9", 
+        "NAME - Topic": "01310C04", 
+        "NAME - Topic": "013109D7", 
+        "NAME - Topic": "013109D8", 
+        "NAME - Topic": "01310BD1", 
+        "NAME - Topic": "01310AA5", 
+        "NAME - Topic": "01310A24", 
+        "NAME - Topic": "01310CD9", 
+        "NAME - Topic": "013108A7", 
+        "NAME - Topic": "01310C02", 
+        "NAME - Topic": "01310B99", 
+        "NAME - Topic": "01310BD6", 
+        "NAME - Topic": "013109D7", 
+        "NAME - Topic": "013109D8", 
+        "NAME - Topic": "01310B99", 
+        "NAME - Topic": "01310C02", 
+        "NAME - Topic": "01310C44", 
+        "NAME - Topic": "01310A60", 
+        "NAME - Topic": "013109B9", 
+        "NAME - Topic": "013109CA"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "You can find Imperial cult services in Fort Buckmoth, Fort Moonmoth, Fort Pelagiad, Fort Darius, Wolverine Hall in Sadrith Mora, Vivec Foreign Quarter, and Imperial chapels in Ebonheart.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Seek training at Wolverine Hall, Fort Buckmoth, Fort Moonmoth, Ebonheart Imperial Chapels, Governor's Hall in Caldera, and Ald Velothi Outpost.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Many Imperial cult locations have healing altars.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0somutisSvunnis "Somutis Vunnis" [NPC_:012601D7]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "PlayerRef [PLYR:00000014]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

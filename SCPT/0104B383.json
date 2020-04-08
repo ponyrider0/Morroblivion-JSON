@@ -1,0 +1,24 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 559, 
+        "Record Flags": {}, 
+        "FormID": "0104B383", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwHardcoreHarvestOreScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 3, 
+        "CompiledSize": 134, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0B 00 02 00 73 00 00 00 01 00 72 01 00 16 00 26 00 02 00 22 00 20 72 02 00 73 03 00 20 31 20 3D 3D 20 72 01 00 58 2F 10 05 00 01 00 72 03 00 20 30 20 3D 3D 20 26 26 59 10 2D 00 01 00 23 00 59 6F 75 20 6E 65 65 64 20 61 20 70 69 63 6B 61 78 65 20 74 6F 20 68 61 72 76 65 73 74 20 74 68 69 73 2E 00 00 00 00 00 00 1E 00 00 00 17 00 02 00 01 00 0D 10 02 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwHardcoreHarvestOreScript\r\n\r\nbegin OnActivate Player\r\n\r\n	if MorroDefaultQuest.HardcoreHarvestOre == 1 && Player.GetItemCount 0minerAsSpick == 0\r\n		Message \"You need a pickaxe to harvest this.\"\r\n		return\r\n	else\r\n		Activate\r\n		;PlayGroup Forward 0\r\n	endif\r\n\r\nend\n;<CSEBlock>\n;<CSECaretPos> 265 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "MorroDefaultQuest [QUST:013A0000]", 
+        "SCRO - Global Reference": "0minerAsSpick [WEAP:0110018C]"
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "Topic": "AAADestination [DIAL:01000D47]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 207, 
+        "Record Flags": {}, 
+        "FormID": "01F8B229", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "aaaMagesTransport [QUST:01F0A331]", 
+    "PNAM - Previous INFO": "01F8B228", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6E 64 61"
+            }, 
+            "NAM1 - Response Text": "May I teleport you to another guild?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0flacassiaSfauseius "Flacassia Fauseius" [NPC_:012605C9]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "CCCAldRuhn [DIAL:0100DC9E]", 
+        "TCLT - Choice": "CCCBalmora [DIAL:01F0A32C]", 
+        "TCLT - Choice": "CCCCaldera [DIAL:0100DCA0]", 
+        "TCLT - Choice": "CCCSadrithMora [DIAL:01F0A32D]", 
+        "TCLT - Choice": "CCCCancel [DIAL:01F0A32E]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

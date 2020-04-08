@@ -1,0 +1,95 @@
+{
+    "Topic": "fbmwMQhlaalucrassiusbribe [DIAL:01025ACC]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 754, 
+        "Record Flags": {}, 
+        "FormID": "01025ACD", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQHlaaluCurio [QUST:01001DD6]", 
+    "PNAM - Previous INFO": "0132320C", 
+    "Add topics": [
+        "NAME - Topic": "013109F6", 
+        "NAME - Topic": "01310BDA", 
+        "NAME - Topic": "0131080B"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "You've broken my heart. But in time it will mend. And in the meantime, I'll console myself with your gold. And now, pumpkin, it's time for YOUR gift...", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "And I have just what you want. In my formal capacity as Councilor of House Hlaalu, I give you my vote for the title of Hortator.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Perhaps I can also give you a little suggestion?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0crassiusScurio "Crassius Curio" [NPC_:0126038C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 46, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 02 00 6E F4 01 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 39 10 0A 00 02 00 72 03 00 6E 32 00 00 00", 
+        "SCTX - Result script source": "player.removeitem gold001 500\r\nmoddisposition player 10\r\nSetStage fbmwMQHlaaluCurio 50", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "fbmwMQHlaaluCurio [QUST:01001DD6]"
+        ]
+    }
+}

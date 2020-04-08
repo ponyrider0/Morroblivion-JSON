@@ -1,0 +1,114 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1258, 
+        "Record Flags": {}, 
+        "FormID": "0102A476", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMMoonSugar [QUST:0101B6CD]", 
+    "PNAM - Previous INFO": "0102A475", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "65 72 69"
+            }, 
+            "NAM1 - Response Text": "Do my eyes deceive me, or is that a white Colovian fur helm?  Then the deed is done.  The moon sugar poisoner has been brought to justice. ", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "64 61 61"
+            }, 
+            "NAM1 - Response Text": "Excellent work.  You have done a great service to me, the Legion, and the Empire itself.  Take this gold as payment for a job well done.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "64 61 61"
+            }, 
+            "NAM1 - Response Text": "And I would also give you another reward, as a symbol of my personal thanks. This shortsword has served me well, and you'll find its enchantments will help rally others to your cause.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0furUcolovianUhelmUwhite "White Colovian Fur Helm" [ARMO:0112016E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMMoonSugar "The Moon Sugar Mystery" [QUST:0101B6CD]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMMoonSugar "The Moon Sugar Mystery" [QUST:0101B6CD]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0severiaSgratius "Severia Gratius" [NPC_:01260B49]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 7, 
+            "CompiledSize": 127, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 A9 10 0D 00 03 00 72 03 00 72 04 00 6E 05 00 00 00 02 10 0A 00 02 00 72 05 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 05 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 06 00 6E DC 05 00 00 52 10 0A 00 02 00 72 07 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 07 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwbmmoonsugar 100\r\nmoddisposition player 10\r\nmodfactionreaction 0imperialslegion playerfaction 5\r\nadditem 0furucolovianuhelmuwhite 1\r\nplayer.removeitem 0furucolovianuhelmuwhite 1\r\nplayer.additem gold001 1500\r\nremoveitem 0imperialsshortswordsseverio 1\r\nplayer.additem 0imperialsshortswordsseverio 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwBMMoonSugar [QUST:0101B6CD]", 
+            "SCRO - Global Reference": "0ImperialSLegion [FACT:0122000F]", 
+            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]", 
+            "SCRO - Global Reference": "0furUcolovianUhelmUwhite [ARMO:0112016E]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "0imperialSshortswordSseverio [WEAP:01100239]"
+        ]
+    }
+}

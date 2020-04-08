@@ -1,0 +1,79 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 796, 
+        "Record Flags": {}, 
+        "FormID": "0102E022", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwTRmsPlagueScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 111, 
+        "VariableCount": 6, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 61 00 00 00 16 00 0D 00 06 00 09 00 20 73 02 00 20 31 20 3D 3D 16 00 0D 00 01 00 09 00 20 73 03 00 20 30 20 3D 3D 15 00 09 00 73 03 00 04 00 20 47 01 00 19 00 00 00 16 00 13 00 01 00 0F 00 20 47 01 00 20 73 03 00 20 2D 20 33 20 3E 3D 15 00 07 00 73 02 00 02 00 20 32 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwTRmsPlagueScript\nshort Plagueactivate\nshort StartDay\nshort PlagueStage\nshort PlagueRock\nshort PlagueRockStanding\n\nbegin gamemode\n	if Plagueactivate == 1\n		if StartDay == 0\n			set StartDay to GameDaysPassed\n		endif\n\n		if GameDaysPassed - StartDay >= 3\n			set Plagueactivate to 2\n		endif\n	endif\nend		\n;<CSEBlock>\n;<CSECaretPos> 95 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "79 73 42 6F 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "4D 6F 64 69 66 69 65"
+            }, 
+            "SCVR - Name": "Plagueactivate"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "StartDay"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "E8 AF 8B 0B 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "7E A2 00 E8 E8 78 78"
+            }, 
+            "SCVR - Name": "PlagueStage"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "PlagueRock"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "46 75 72 6E 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "74 72 79 5F 30 34 20"
+            }, 
+            "SCVR - Name": "PlagueRockStanding"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "GameDaysPassed [GLOB:00000039]"
+    ]
+}

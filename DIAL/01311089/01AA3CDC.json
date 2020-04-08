@@ -1,0 +1,66 @@
+{
+    "Topic": "1assist [DIAL:01311089]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 436, 
+        "Record Flags": {}, 
+        "FormID": "01AA3CDC", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSWarlords [QUST:0101C638]", 
+    "PNAM - Previous INFO": "01AA3CDB", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "57 4D 53"
+            }, 
+            "NAM1 - Response Text": "Since you've proven to be very helpful, I have another task that needs completing.  Felvan here is also desperately in need of new equipment, and he  knows just the place to get it from.  Why don't you have a chat with him?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 40.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSWarlords "The Warlords" [QUST:0101C638]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0DovorSOren "Dovor Oren" [NPC_:01260A8D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 32 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmswarlords 50", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMSWarlords [QUST:0101C638]"
+        ]
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "Record Header": {
+        "Signature": "PACK", 
+        "Data Size": 163, 
+        "Record Flags": {}, 
+        "FormID": "01017D81", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwPostQuestMGApprenticePackage02", 
+    "PKDT - General": {
+        "General": {
+            "Flags": {
+                "Must complete": true, 
+                "Skip fallout behavior": true
+            }, 
+            "Type": "00", 
+            "Unused": "6C 6F 77"
+        }
+    }, 
+    "PLDT - Location": {
+        "Type": 3, 
+        "Location": "00000000", 
+        "Radius": 512
+    }, 
+    "PSDT - Schedule": {
+        "Month": -1, 
+        "Day of week": -1, 
+        "Date": "00", 
+        "Time": -1, 
+        "Duration": 0
+    }, 
+    "PTDT - Target": {
+        "Type": 1, 
+        "Target": "01140008", 
+        "Count": 1
+    }, 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0commonUshoesU05 "Common Shoes" [CLOT:01140008]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 40.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMGApprentice "Mages Guild: Huleen's Hut" [QUST:0100676F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ]
+}

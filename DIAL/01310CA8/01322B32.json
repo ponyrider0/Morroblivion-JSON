@@ -1,0 +1,95 @@
+{
+    "Topic": "1HajTEi [DIAL:01310CA8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 670, 
+        "Record Flags": {}, 
+        "FormID": "01322B32", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVBountyHunter [QUST:01003401]", 
+    "PNAM - Previous INFO": "01322B31", 
+    "Add topics": [
+        "NAME - Topic": "01310CB6", 
+        "NAME - Topic": "01310CC5", 
+        "NAME - Topic": "01310C03", 
+        "NAME - Topic": "01310CAF", 
+        "NAME - Topic": "01310B60"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Haven't heard of him. An escaped slave you say? Not from my shipment. And I don't have a lot of time to worry about the ones that aren't mine.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Gets tough to track down the Argonian slaves--they're clever and fast, and other Argonians aren't likely to help.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "That makes it tough, because few others understand their language or habits.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0dranasSsarathram "Dranas Sarathram" [NPC_:012606F5]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 46 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmvbountyhunter 70", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMVBountyHunter [QUST:01003401]"
+        ]
+    }
+}

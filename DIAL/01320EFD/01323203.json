@@ -1,0 +1,97 @@
+{
+    "Topic": "1HlaaluSHortator1 [DIAL:01320EFD]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 663, 
+        "Record Flags": {}, 
+        "FormID": "01323203", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQHlaaluOmani [QUST:01001DD9]", 
+    "TPIC - Topic": "01320F00", 
+    "PNAM - Previous INFO": "01323202", 
+    "Add topics": [
+        "NAME - Topic": "013107BE", 
+        "NAME - Topic": "01310D13", 
+        "NAME - Topic": "01310A65", 
+        "NAME - Topic": "01310BDA", 
+        "NAME - Topic": "01310B05", 
+        "NAME - Topic": "01310CB8"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "That is a very interesting story you tell. And the Moon-and-Star is an impressive ring. I believe your story and credentials are genuine.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "But I will tell you frankly that I would never confirm you as Hortator without the approval of Orvas Dren.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I depend on his patronage, and would not risk his displeasure.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetPCInFaction:132", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Hlaalu "Great House Hlaalu" [FACT:01220005]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0velandaSomani "Velanda Omani" [NPC_:012604AA]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 14 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMQHlaaluOmani 20", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQHlaaluOmani [QUST:01001DD9]"
+        ]
+    }
+}

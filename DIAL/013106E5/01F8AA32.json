@@ -1,0 +1,79 @@
+{
+    "Topic": "1spellStoSCureSDisease [DIAL:013106E5]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 745, 
+        "Record Flags": {}, 
+        "FormID": "01F8AA32", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVParalyzedBarbarian [QUST:0100340B]", 
+    "PNAM - Previous INFO": "01F8AA31", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6C 61 73"
+            }, 
+            "NAM1 - Response Text": "Well done! For a magic-user, you have a great deal of honor! Take this, my family's helm, Icecap. It was worn by my father, and his father, and by his father before him.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6C 61 73"
+            }, 
+            "NAM1 - Response Text": "It will protect you from the coldest of nights. Wear it with honor. Now, I must go kill that witch. I shall plant her head on a stake for all to see!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 65.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVParalyzedBarbarian "The Paralyzed Barbarian" [QUST:0100340B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0hisinSdeepTraed "Hisin Deep-Raed" [NPC_:012606E0]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 60, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 39 10 0A 00 02 00 72 02 00 6E 6E 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmvparalyzedbarbarian 100\r\nremoveitem 0icecapuunique 1\r\nplayer.additem 0icecapuunique 1\r\nsetstage fbmwmvparalyzedbarbarian 110", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMVParalyzedBarbarian [QUST:0100340B]", 
+            "SCRO - Global Reference": "0icecapUunique [ARMO:0112010A]"
+        ]
+    }
+}

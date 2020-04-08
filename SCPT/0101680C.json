@@ -1,0 +1,45 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 924, 
+        "Record Flags": {}, 
+        "FormID": "0101680C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwTRkarrodguardScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 193, 
+        "VariableCount": 3, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 B3 00 00 00 16 00 0D 00 01 00 09 00 20 73 01 00 20 32 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 10 00 02 00 0C 00 20 72 01 00 73 01 00 20 30 20 3D 3D 15 00 07 00 73 01 00 02 00 20 32 22 10 00 00 19 00 00 00 16 00 0D 00 02 00 09 00 20 66 03 00 20 2E 35 20 3C 15 00 11 00 66 03 00 0C 00 20 66 03 00 20 58 0C 10 00 00 20 2B 1E 00 00 00 19 00 00 00 16 00 10 00 04 00 0C 00 20 72 01 00 73 01 00 20 31 20 3D 3D 16 00 0D 00 02 00 09 00 20 73 01 00 20 31 20 21 3D 15 00 07 00 73 01 00 02 00 20 31 56 10 05 00 01 00 72 02 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwTRkarrodguardScript\n\n\nshort jailOnce\n\nfloat timer\n\nbegin gamemode\n\n	if ( jailOnce == 2 )\n		return\n	endif\n\n\n	if ( fbmwTRchampion.CheapShot == 0 )\n;if no longer necessary disable it\n		Set jailOnce to 2\n		Disable\n	endif\n\n	if ( timer < .5 )\n;give alarm chance to be raised\n		set timer to ( timer + GetSecondsPassed )\n		return\n	endif\n\n	if ( fbmwTRchampion.CheapShot == 1 )\n		if ( jailOnce != 1 )\n;no one else did it so we will\n			Set jailOnce to 1\n			StartConversation Player\n		endif\n	endif\n\nEnd\n;<CSEBlock>\n;<CSECaretPos> 10 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "jailOnce"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 B0 D0 00 00"
+            }, 
+            "SCVR - Name": "timer"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwTRChampion [QUST:0101C652]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+    ]
+}

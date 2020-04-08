@@ -1,0 +1,168 @@
+{
+    "Topic": "1attributeTdamaging [DIAL:01310792]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1125, 
+        "Record Flags": {}, 
+        "FormID": "01320A98", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310792", 
+        "NAME - Topic": "013106C0", 
+        "NAME - Topic": "01310C4E", 
+        "NAME - Topic": "01310BA7", 
+        "NAME - Topic": "01310C4F", 
+        "NAME - Topic": "01310C9B", 
+        "NAME - Topic": "01310A2B", 
+        "NAME - Topic": "01310D0B", 
+        "NAME - Topic": "01310AA8", 
+        "NAME - Topic": "01310CDD", 
+        "NAME - Topic": "01310BF3", 
+        "NAME - Topic": "01310BA8", 
+        "NAME - Topic": "0131078E", 
+        "NAME - Topic": "01310C4E", 
+        "NAME - Topic": "01310BA7", 
+        "NAME - Topic": "01310C4F", 
+        "NAME - Topic": "01310C9B", 
+        "NAME - Topic": "01310A2B", 
+        "NAME - Topic": "01310D0B", 
+        "NAME - Topic": "01310AA8", 
+        "NAME - Topic": "01310CDD", 
+        "NAME - Topic": "01310BF3", 
+        "NAME - Topic": "01310BA8"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Attribute-damaging spells actually destroy the eleven fundamental attributes of natural and supernatural beings: agility, endurance, fatigue, health, intelligence, luck, personality, speed, strength, willpower, magicka.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "The victim's attributes are reduced permanently.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "The most common of these destruction spells are: curse agility, curse endurance, curse fatigue, curse health, curse intelligence, curse luck, curse personality, curse speed, curse strength, curse willpower, and curse magicka.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "PlayerRef [PLYR:00000014]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "01", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0eraamion "Eraamion" [NPC_:012603CB]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "01", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0estirdalin "Estirdalin" [NPC_:01260124]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "01", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0smokeySmorth "Smokey Morth" [NPC_:01260565]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "01", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0artisaSarelas "Artisa Arelas" [NPC_:012604C1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "01", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0melvureSrindu "Melvure Rindu" [NPC_:012605BA]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "01", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ygfa "Ygfa" [NPC_:01260074]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0strillianSmacro "Strillian Macro" [NPC_:0126003E]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

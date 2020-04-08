@@ -1,0 +1,98 @@
+{
+    "Topic": "1mustSbeScleansed [DIAL:01310FDB]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 814, 
+        "Record Flags": {}, 
+        "FormID": "01F8BA50", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRShrineDead [QUST:0101C65B]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "AA A5 A9"
+            }, 
+            "NAM1 - Response Text": "No...certainly not by you. This task falls to one of Almalexia's chosen. You will escort this young priest, Urvel Dulni, to the shrine. Protect him well.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "AA A5 A9"
+            }, 
+            "NAM1 - Response Text": "His experience is limited, but he is necessary to complete the ritual. The Shrine is protected by the Profane, powerful liches who feed from the power of the shrine.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "AA A5 A9"
+            }, 
+            "NAM1 - Response Text": "You must destroy them for Dulni to perform his duties. I stress again...protect Dulni at all costs. It is he who must perform the ceremony. If he is not able, there are no others.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "0gavasSdrin "Gavas Drin" [NPC_:01260ABF]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 40.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRShrineDead "The Shrine of the Dead" [QUST:0101C65B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0gavasSdrin "Gavas Drin" [NPC_:01260ABF]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 28 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwtrShrineDead 40", 
+        "References": [
+            "SCRO - Global Reference": "fbmwTRShrineDead [QUST:0101C65B]"
+        ]
+    }
+}

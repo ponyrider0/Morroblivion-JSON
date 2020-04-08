@@ -1,0 +1,35 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 528, 
+        "Record Flags": {}, 
+        "FormID": "01F8B856", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwAirshipJournalScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 129, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 71 00 00 00 00 00 16 00 21 00 03 00 1D 00 20 58 3A 10 05 00 01 00 72 01 00 20 34 30 20 3E 3D 20 73 01 00 20 30 20 3D 3D 20 26 26 39 10 0A 00 02 00 72 01 00 6E 3C 00 00 00 15 00 07 00 73 01 00 02 00 20 31 0D 10 02 00 00 00 17 00 02 00 03 00 39 10 0A 00 02 00 72 01 00 6E 05 00 00 00 0D 10 02 00 00 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwAirshipJournalScript\nshort done\nbegin onactivate\n	if GetStage fbmwbmAirship>=40&&done==0\n		SetStage fbmwBMAirship 60\n		set done to 1\n		Activate\n	else\n		SetStage fbmwBMAirship 5\n		Activate\n		set done to 1\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "08 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "05 7A D1 2A 01 00 00"
+            }, 
+            "SCVR - Name": "done"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwBMAirship [QUST:0101AF81]"
+    ]
+}

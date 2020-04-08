@@ -1,0 +1,73 @@
+{
+    "Topic": "1joinStheSEastSEmpireSCompany1 [DIAL:0132040B]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 713, 
+        "Record Flags": {}, 
+        "FormID": "01322F0A", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwCOAdvancement [QUST:01004AD9]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Very well, then. You are now a member of the East Empire Company, outlander. I'll make it clear to you now that I am the one in charge;", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "see me when you're ready for an assignment or want a promotion.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0CarniusSMagius "Carnius Magius" [NPC_:01260B0A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 7, 
+            "CompiledSize": 68, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 01 00 00 00 36 10 05 00 01 00 72 03 00 1C 00 01 00 89 10 0A 00 02 00 72 04 00 6E 01 00 00 00 58 10 05 00 01 00 72 05 00 58 10 05 00 01 00 72 06 00 58 10 05 00 01 00 72 07 00", 
+        "SCTX - Result script source": ";Message \"Membership Accepted...\"\r\nSetStage fbmwCOAdvancement 1\r\nstartquest fbmwCOupdate\r\nplayer.setfactionrank 0eastsempirescompany 1\r\naddtopic 1assignment\r\naddtopic 1EastSEmpireSCompany\r\naddtopic 1promotion", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwCOAdvancement [QUST:01004AD9]", 
+            "SCRO - Global Reference": "fbmwCOUpdate [QUST:01F8E330]", 
+            "SCRO - Global Reference": "0EastSEmpireSCompany [FACT:01220019]", 
+            "SCRO - Global Reference": "1assignment [DIAL:013113A5]", 
+            "SCRO - Global Reference": "1EastSEmpireSCompany [DIAL:0131073D]", 
+            "SCRO - Global Reference": "1promotion [DIAL:013113BE]"
+        ]
+    }
+}

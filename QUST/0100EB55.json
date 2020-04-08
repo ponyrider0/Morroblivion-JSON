@@ -1,0 +1,642 @@
+{
+    "Record Header": {
+        "Signature": "QUST", 
+        "Data Size": 4929, 
+        "Record Flags": {}, 
+        "FormID": "0100EB55", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwHHAdvancement", 
+    "SCRI - Script": "fbmwHHAdvancementQuestScript [SCPT:0100EB56]", 
+    "FULL - Name": "Great House Hlaalu", 
+    "ICON - Icon FileName": "darthsouth\\Quests\\househlaalu.dds", 
+    "DATA - General": {
+        "Flags": {
+            "Start game enabled": true, 
+            "Allow repeated conversation topics": true
+        }, 
+        "Priority": 80
+    }, 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestRunning:56", 
+            "Unused": "00 00", 
+            "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsPlayableRace:254", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Stages": [
+        {
+            "INDX - Stage index": 1, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I have joined Great House Hlaalu. The Primary Attributes are Speed and Agility. The Primary Skills are Light Armor, Marksman, Mercantile, Blade, Security, and Speechcraft. I must perform regular duties and concentrate on increasing these areas to gain rank in House Hlaalu.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 7, 
+                            "CompiledSize": 68, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 89 10 0A 00 02 00 72 02 00 6E 00 00 00 00 15 00 0A 00 72 03 00 73 01 00 02 00 20 30 58 10 05 00 01 00 72 04 00 58 10 05 00 01 00 72 05 00 58 10 05 00 01 00 72 06 00 58 10 05 00 01 00 72 07 00", 
+                        "SCTX - Result script source": "Player.SetFactionRank 0Hlaalu, 0\r\nSET fbmwHHAdvancement.HlaaluAdvancement TO 0\r\n\r\nAddTopic 1Slavery\r\nAddTopic 1GoSFree\r\nAddTopic 1TwinSLamps\r\nAddTopic 1Stronghold", 
+                        "References": [
+                            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+                            "SCRO - Global Reference": "0Hlaalu [FACT:01220005]", 
+                            "SCRO - Global Reference": "fbmwHHAdvancement [QUST:0100EB55]", 
+                            "SCRO - Global Reference": "1slavery [DIAL:01310C24]", 
+                            "SCRO - Global Reference": "1goSfree [DIAL:01310C5C]", 
+                            "SCRO - Global Reference": "1TwinSLamps [DIAL:01310B04]", 
+                            "SCRO - Global Reference": "1stronghold [DIAL:01310B01]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 10, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I am eligible for promotion to the rank of Retainer in House Hlaalu.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 11, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I have achieved the rank of Retainer in House Hlaalu.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 3, 
+                            "CompiledSize": 32, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 89 10 0A 00 02 00 72 02 00 6E 01 00 00 00 15 00 0A 00 72 03 00 73 01 00 02 00 20 30", 
+                        "SCTX - Result script source": "Player.SetFactionRank 0Hlaalu, 1\r\nSET fbmwHHAdvancement.HlaaluAdvancement TO 0", 
+                        "References": [
+                            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+                            "SCRO - Global Reference": "0Hlaalu [FACT:01220005]", 
+                            "SCRO - Global Reference": "fbmwHHAdvancement [QUST:0100EB55]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 20, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I am eligible for promotion to the rank of Oathman in House Hlaalu.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 21, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I have achieved the rank of Oathman in House Hlaalu.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 3, 
+                            "CompiledSize": 32, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 89 10 0A 00 02 00 72 02 00 6E 02 00 00 00 15 00 0A 00 72 03 00 73 01 00 02 00 20 30", 
+                        "SCTX - Result script source": "Player.SetFactionRank 0Hlaalu, 2\r\nSET fbmwHHAdvancement.HlaaluAdvancement TO 0", 
+                        "References": [
+                            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+                            "SCRO - Global Reference": "0Hlaalu [FACT:01220005]", 
+                            "SCRO - Global Reference": "fbmwHHAdvancement [QUST:0100EB55]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 30, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I am eligible for promotion to the rank of Lawman in House Hlaalu.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 31, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I have achieved the rank of Lawman in House Hlaalu.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 3, 
+                            "CompiledSize": 32, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 89 10 0A 00 02 00 72 02 00 6E 03 00 00 00 15 00 0A 00 72 03 00 73 01 00 02 00 20 30", 
+                        "SCTX - Result script source": "Player.SetFactionRank 0Hlaalu, 3\r\nSET fbmwHHAdvancement.HlaaluAdvancement TO 0", 
+                        "References": [
+                            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+                            "SCRO - Global Reference": "0Hlaalu [FACT:01220005]", 
+                            "SCRO - Global Reference": "fbmwHHAdvancement [QUST:0100EB55]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 40, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I am eligible for promotion to the rank of Kinsman in House Hlaalu.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 9, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00", 
+                        "SCTX - Result script source": "AddTopic 1Stronghold", 
+                        "References": [
+                            "SCRO - Global Reference": "1stronghold [DIAL:01310B01]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 41, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I have achieved the rank of Kinsman in House Hlaalu.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 3, 
+                            "CompiledSize": 32, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 89 10 0A 00 02 00 72 02 00 6E 04 00 00 00 15 00 0A 00 72 03 00 73 01 00 02 00 20 30", 
+                        "SCTX - Result script source": "Player.SetFactionRank 0Hlaalu, 4\r\nSET fbmwHHAdvancement.HlaaluAdvancement TO 0", 
+                        "References": [
+                            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+                            "SCRO - Global Reference": "0Hlaalu [FACT:01220005]", 
+                            "SCRO - Global Reference": "fbmwHHAdvancement [QUST:0100EB55]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 50, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I am eligible for promotion to the rank of House Cousin in House Hlaalu.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 51, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I have achieved the rank of House Cousin in House Hlaalu.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 3, 
+                            "CompiledSize": 32, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 89 10 0A 00 02 00 72 02 00 6E 05 00 00 00 15 00 0A 00 72 03 00 73 01 00 02 00 20 30", 
+                        "SCTX - Result script source": "Player.SetFactionRank 0Hlaalu, 5\r\nSET fbmwHHAdvancement.HlaaluAdvancement TO 0", 
+                        "References": [
+                            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+                            "SCRO - Global Reference": "0Hlaalu [FACT:01220005]", 
+                            "SCRO - Global Reference": "fbmwHHAdvancement [QUST:0100EB55]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 60, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I am eligible for promotion to the rank of House Brother in House Hlaalu.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 61, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I have achieved the rank of House Brother in House Hlaalu.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 3, 
+                            "CompiledSize": 32, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 89 10 0A 00 02 00 72 02 00 6E 06 00 00 00 15 00 0A 00 72 03 00 73 01 00 02 00 20 30", 
+                        "SCTX - Result script source": "Player.SetFactionRank 0Hlaalu, 6\r\nSET fbmwHHAdvancement.HlaaluAdvancement TO 0", 
+                        "References": [
+                            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+                            "SCRO - Global Reference": "0Hlaalu [FACT:01220005]", 
+                            "SCRO - Global Reference": "fbmwHHAdvancement [QUST:0100EB55]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 69, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I am eligible for promotion to the rank of House Father in House Hlaalu, but first I must build a Stronghold.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 70, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I am eligible for promotion to the rank of House Father in House Hlaalu.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 71, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I have achieved the rank of House Father in House Hlaalu.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 3, 
+                            "CompiledSize": 32, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 89 10 0A 00 02 00 72 02 00 6E 07 00 00 00 15 00 0A 00 72 03 00 73 01 00 02 00 20 30", 
+                        "SCTX - Result script source": "Player.SetFactionRank 0Hlaalu, 7\r\nSET fbmwHHAdvancement.HlaaluAdvancement TO 0", 
+                        "References": [
+                            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+                            "SCRO - Global Reference": "0Hlaalu [FACT:01220005]", 
+                            "SCRO - Global Reference": "fbmwHHAdvancement [QUST:0100EB55]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 79, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I am eligible for promotion to the rank of Councilman in House Hlaalu, but first I must improve business in the area around my Stronghold..", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 80, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I am eligible for promotion to the rank of Councilman in House Hlaalu.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 81, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I have achieved the rank of Councilman in House Hlaalu.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 3, 
+                            "CompiledSize": 32, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 89 10 0A 00 02 00 72 02 00 6E 08 00 00 00 15 00 0A 00 72 03 00 73 01 00 02 00 20 30", 
+                        "SCTX - Result script source": "Player.SetFactionRank 0Hlaalu, 8\r\nSET fbmwHHAdvancement.HlaaluAdvancement TO 0", 
+                        "References": [
+                            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+                            "SCRO - Global Reference": "0Hlaalu [FACT:01220005]", 
+                            "SCRO - Global Reference": "fbmwHHAdvancement [QUST:0100EB55]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 90, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I am eligible for promotion to the rank of Grand Master of House Hlaalu.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 91, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "I have achieved the rank of Grand Master of House Hlaalu.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 3, 
+                            "CompiledSize": 32, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 89 10 0A 00 02 00 72 02 00 6E 09 00 00 00 15 00 0A 00 72 03 00 73 01 00 02 00 20 35", 
+                        "SCTX - Result script source": "Player.SetFactionRank 0Hlaalu, 9\r\nSET fbmwHHAdvancement.HlaaluAdvancement TO 5", 
+                        "References": [
+                            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+                            "SCRO - Global Reference": "0Hlaalu [FACT:01220005]", 
+                            "SCRO - Global Reference": "fbmwHHAdvancement [QUST:0100EB55]"
+                        ]
+                    }
+                }
+            ]
+        }
+    ], 
+    "Targets": [
+        {
+            "QSTA - Target": {
+                "Target": "018596FB", 
+                "Flags": {}, 
+                "Unused": "00 54 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "01", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 69.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwHHAdvancement "Great House Hlaalu" [QUST:0100EB55]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "01", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 79.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwHHAdvancement "Great House Hlaalu" [QUST:0100EB55]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "0183115F", 
+                "Flags": {}, 
+                "Unused": "00 54 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "60", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 5.000000000000000, 
+                    "Function": "GetFactionRank:73", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "0Hlaalu "Great House Hlaalu" [FACT:01220005]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "20", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 69.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwHHAdvancement "Great House Hlaalu" [QUST:0100EB55]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "20", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 79.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwHHAdvancement "Great House Hlaalu" [QUST:0100EB55]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 3.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwHHAdvancement "Great House Hlaalu" [QUST:0100EB55]", 
+                    "Parameter #2": "HlaaluAdvancement", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "01810831", 
+                "Flags": {}, 
+                "Unused": "00 54 21"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 3.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwHHAdvancement "Great House Hlaalu" [QUST:0100EB55]", 
+                    "Parameter #2": "HlaaluAdvancement", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "80", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 5.000000000000000, 
+                    "Function": "GetFactionRank:73", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "0Hlaalu "Great House Hlaalu" [FACT:01220005]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }
+    ]
+}

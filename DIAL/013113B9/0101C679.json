@@ -1,0 +1,88 @@
+{
+    "Topic": "1aidingSme [DIAL:013113B9]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 670, 
+        "Record Flags": {}, 
+        "FormID": "0101C679", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwCOChoice [QUST:0101BEDB]", 
+    "PNAM - Previous INFO": "0101C67A", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "4D 57 43"
+            }, 
+            "NAM1 - Response Text": "Believe me, I can make you a much better offer than Falco ever could. Don't be fooled. I will tolerate you only for as long as you are useful to me.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "4D 57 43"
+            }, 
+            "NAM1 - Response Text": "If you perform well enough, it will be to your benefit. I think it's clear that I'm in a position to offer you a great deal more than Falco might;", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "4D 57 43"
+            }, 
+            "NAM1 - Response Text": "serve me well, and you may end up taking Falco's place. Take a little time and think it over.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 20.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwCOChoice "East Empire Company: Making a Choice" [QUST:0101BEDB]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0CarniusSMagius "Carnius Magius" [NPC_:01260B0A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 19 00 00 00", 
+        "SCTX - Result script source": "setstage FBMWCOChoice 25", 
+        "References": [
+            "SCRO - Global Reference": "fbmwCOChoice [QUST:0101BEDB]"
+        ]
+    }
+}

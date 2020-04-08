@@ -1,0 +1,106 @@
+{
+    "Topic": "1RingSinSDarkness [DIAL:0131085A]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1132, 
+        "Record Flags": {}, 
+        "FormID": "01F8AAA0", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwICJonHawker [QUST:0100B824]", 
+    "PNAM - Previous INFO": "01F8AA9F", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "61 74 69"
+            }, 
+            "NAM1 - Response Text": "I have seen a Ring in Darkness. I have seen the Ring of the Wind, a legendary treasure of Elsweyr, sacred to Kynareth.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "61 74 69"
+            }, 
+            "NAM1 - Response Text": "I have seen the wind upon a dark elf's hand. I have seen fire gleam upon a Dwarf's face. I have seen darkness on a ring of water.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "61 74 69"
+            }, 
+            "NAM1 - Response Text": "I have heard no name whispered in the mouth of stone. Seek the Ring in Darkness, and bring it to me. Speak with a Dunmer savant and Dunmer scout to discover the meaning of this vision.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "61 74 69"
+            }, 
+            "NAM1 - Response Text": "Take these gifts. May they make your journey easier.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICOracleQuest "Imperial Cult: Oracle's Quests" [QUST:0100B823]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0LalatiaSVarian "Lalatia Varian" [NPC_:012602E1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 8, 
+            "CompiledSize": 95, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 02 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 02 00 00 00 58 10 05 00 01 00 72 04 00 58 10 05 00 01 00 72 05 00 1C 00 01 00 02 10 0A 00 02 00 72 06 00 6E 02 00 00 00 39 10 0A 00 02 00 72 07 00 6E 01 00 00 00 58 10 05 00 01 00 72 08 00", 
+        "SCTX - Result script source": "player.additem 0scudivineintervention 2\r\nplayer.additem 0scuvigor 2\r\naddtopic 1dunmersscout\r\naddtopic 1dunmerssavant\r\nplayer.additem 0scuvitality 2\r\nsetstage fbmwicjonhawker 1\r\naddtopic 1ringsofstheswind", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0scUdivineintervention [BOOK:011801D6]", 
+            "SCRO - Global Reference": "0scUvigor [BOOK:0118019E]", 
+            "SCRO - Global Reference": "1DunmerSscout [DIAL:01310A5D]", 
+            "SCRO - Global Reference": "1DunmerSsavant [DIAL:013109D9]", 
+            "SCRO - Global Reference": "0scUvitality [BOOK:0118019F]", 
+            "SCRO - Global Reference": "fbmwICJonHawker [QUST:0100B824]", 
+            "SCRO - Global Reference": "1RingSofStheSWind [DIAL:0131085B]"
+        ]
+    }
+}

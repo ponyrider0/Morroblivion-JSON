@@ -1,0 +1,57 @@
+{
+    "Record Header": {
+        "Signature": "PACK", 
+        "Data Size": 138, 
+        "Record Flags": {}, 
+        "FormID": "01F8B760", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "VoriGoWolverineTeleporter", 
+    "PKDT - General": {
+        "General": {
+            "Flags": {
+                "Must reach location": true, 
+                "Must complete": true, 
+                "Once per day": true, 
+                "Skip fallout behavior": true, 
+                "Always run": true
+            }, 
+            "Type": "06", 
+            "Unused": "00 00 00"
+        }
+    }, 
+    "PLDT - Location": {
+        "Type": 0, 
+        "Location": "01F0A313", 
+        "Radius": 0
+    }, 
+    "PSDT - Schedule": {
+        "Month": -1, 
+        "Day of week": 7, 
+        "Date": "00", 
+        "Time": 17, 
+        "Duration": 2
+    }, 
+    "Conditions": [
+        {
+            "Type": "01", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInCell:67", 
+            "Unused": "00 00", 
+            "Parameter #1": "WolverineSHall "Wolverine Hall" [CELL:01480002]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "01", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInCell:67", 
+            "Unused": "00 00", 
+            "Parameter #1": "SadrithSMora "Sadrith Mora" [CELL:01480001]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ]
+}

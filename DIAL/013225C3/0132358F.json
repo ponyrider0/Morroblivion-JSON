@@ -1,0 +1,84 @@
+{
+    "Topic": "1robbedSme1 [DIAL:013225C3]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 634, 
+        "Record Flags": {}, 
+        "FormID": "0132358F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVOutcastAshlanders [QUST:0100340A]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310789", 
+        "NAME - Topic": "01310669", 
+        "NAME - Topic": "01310BCB"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Excellent. Go get those bastard Ashlanders. I promise, when you get those hides back to me, Berwen will be very generous.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "She has a stake in this trade, after all, and we can't let an unwarranted attack on a guar hide trader ruin business.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0athandenSgirith "Athanden Girith" [NPC_:012606D8]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 1E 00 00 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "setstage fbmwmvoutcastashlanders 30\r\naddtopic 1attacksonsasguarshidestrader\r\naddtopic 1bastardsashlanders", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMVOutcastAshlanders [QUST:0100340A]", 
+            "SCRO - Global Reference": "1attackSonSaSguarShideStrader [DIAL:01310669]", 
+            "SCRO - Global Reference": "1bastardSAshlanders [DIAL:01310789]"
+        ]
+    }
+}

@@ -1,0 +1,83 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1259, 
+        "Record Flags": {}, 
+        "FormID": "01F8B85F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwmsBarbarianBookScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 5, 
+        "CompiledSize": 242, 
+        "VariableCount": 5, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 E4 00 00 00 16 00 0D 00 07 00 09 00 20 73 04 00 20 33 20 3D 3D 16 00 13 00 05 00 0F 00 20 58 3A 10 05 00 01 00 72 03 00 20 31 20 3C 16 00 17 00 03 00 13 00 20 72 04 00 58 43 10 05 00 01 00 72 05 00 20 30 20 3D 3D 1C 00 01 00 22 10 00 00 37 10 05 00 01 00 72 03 00 15 00 07 00 73 04 00 02 00 20 34 19 00 00 00 19 00 00 00 19 00 00 00 16 00 0D 00 08 00 09 00 20 73 05 00 20 30 20 3D 3D 16 00 15 00 06 00 11 00 20 58 3A 10 05 00 01 00 72 03 00 20 31 31 30 20 3E 16 00 17 00 04 00 13 00 20 72 04 00 58 20 10 05 00 01 00 72 02 00 20 30 20 3D 3D 1C 00 02 00 22 10 00 00 1C 00 01 00 22 10 00 00 37 10 05 00 01 00 72 03 00 15 00 07 00 73 05 00 02 00 20 31 19 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwmsBarbarianBookScript\nshort follownow\nshort DilbornDead\nshort ThrudDead\nshort Control\nshort doOnceB\n\nbegin gamemode\n	if ( Control == 3 )\n		if ( GetStage fbmwMSBarbarianBookA < 1 )\n			if ( Player.GetInCell OldSMournholdXSResidentialSSewers == 0 )\n				fbmwDilbornREF.Disable\n				StopQuest fbmwMSBarbarianBookA\n				set Control to 4\n			endif\n		endif\n	endif\n\n	if  doOnceB == 0 \n		if ( GetStage fbmwMSBarbarianBookA > 110 )\n			if ( Player.GetInSameCell fbmwThrudREF == 0 )\n				fbmwThrudREF.Disable\n				fbmwDilbornREF.Disable\n				StopQuest fbmwMSBarbarianBookA\n				set doOnceB to 1\n			endif\n		endif\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 405 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "follownow"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "01 00 00 0E 02 00 00"
+            }, 
+            "SCVR - Name": "DilbornDead"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "0F 63 74 65 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "ThrudDead"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "01 00 00 D8 00 00 00"
+            }, 
+            "SCVR - Name": "Control"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "74 3A 20 27 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "75 6C 74 51 75 65 73"
+            }, 
+            "SCVR - Name": "doOnceB"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwDilbornREF [ACHR:01F061BA]", 
+        "SCRO - Global Reference": "fbmwThrudREF [ACHR:01F04130]", 
+        "SCRO - Global Reference": "fbmwMSBarbarianBookA [QUST:01008558]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "OldSMournholdXSResidentialSSewers [CELL:01480505]"
+    ]
+}

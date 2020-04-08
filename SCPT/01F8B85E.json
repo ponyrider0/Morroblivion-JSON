@@ -1,0 +1,38 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 884, 
+        "Record Flags": {}, 
+        "FormID": "01F8B85E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwbmMirisaScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 4, 
+        "CompiledSize": 228, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 12 00 00 00 00 00 39 10 0A 00 02 00 72 01 00 6E 78 00 00 00 11 00 00 00 10 00 06 00 00 00 B8 00 00 00 16 00 14 00 01 00 10 00 20 58 43 10 05 00 01 00 72 02 00 20 31 20 3D 3D 39 10 0A 00 02 00 72 01 00 6E 64 00 00 00 19 00 00 00 16 00 13 00 02 00 0F 00 20 58 3A 10 05 00 01 00 72 03 00 20 30 20 3E 9E 10 05 00 01 00 72 04 00 3C 19 00 00 19 00 00 00 16 00 1C 00 02 00 18 00 20 72 01 00 73 01 00 20 31 20 3D 3D 20 73 01 00 20 30 20 3D 3D 20 26 26 5E 10 00 00 15 00 07 00 73 01 00 02 00 20 31 18 00 1C 00 02 00 18 00 20 72 01 00 73 01 00 20 30 20 3D 3D 20 73 01 00 20 31 20 3D 3D 20 26 26 5E 10 00 00 15 00 07 00 73 01 00 02 00 20 30 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwbmMirisaScript\n\nshort DoOnce\n\nbegin ondeath\n	SetStage fbmwBMMissionary 120\nend\n\nbegin gamemode\n	if(GetInCell fortsfrostmothvsimperialscultsshrine == 1)\n		SetStage fbmwBMMissionary 100\n	endif\n	if(Getstage fbmwBMMeadHall > 0)\n		movetomarker fbmwbmMirisaMarker\n		update3d\n	endif\n	if(fbmwBMMissionary.follownow == 1)&&(DoOnce == 0)\n		evp\n		set DoOnce to 1 \n	elseif(fbmwBMMissionary.follownow == 0)&&(DoOnce == 1)\n		evp\n		set DoOnce to 0\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 359 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "49 73 49 44 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "3D 3D 20 31 2E 30 30"
+            }, 
+            "SCVR - Name": "DoOnce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwBMMissionary [QUST:0101B6CC]", 
+        "SCRO - Global Reference": "FortSFrostmothVSImperialSCultSShrine [CELL:01480533]", 
+        "SCRO - Global Reference": "fbmwBMMeadHall [QUST:0101B6C8]", 
+        "SCRO - Global Reference": "fbmwbmMirisaMarker [REFR:01F8EAE5]"
+    ]
+}

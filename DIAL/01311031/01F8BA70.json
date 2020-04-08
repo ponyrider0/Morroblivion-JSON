@@ -1,0 +1,78 @@
+{
+    "Topic": "1newSrecruits [DIAL:01311031]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 642, 
+        "Record Flags": {}, 
+        "FormID": "01F8BA70", 
+        "Version Control Info": "03 10 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTRKillGoblins [QUST:0101C655]", 
+    "PNAM - Previous INFO": "01F8BA6E", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": "A standing army is nothing new in the city, though it is largely unnecessary. Mournhold is protected by her walls from the outside, and by our Lady Almalexia from within. None would dare mount an attack here.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 54 52"
+            }, 
+            "NAM1 - Response Text": "Still, tradition dictates that the king maintain an army. We believe that Helseth is raising quite a different sort of army...a goblin army.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetStageDone:59", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTRKillGoblins "The Goblin Army" [QUST:0101C655]", 
+            "Parameter #2": "010 Fedris Hler, Almalexia's Chief Steward, has asked me to perform a service for the goddess. It seems that King Helseth is recruiting a troop of goblins to serve as footsoldiers for his army.", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0fedrisShler "Fedris Hler" [NPC_:01260ABB]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 39 10 0A 00 02 00 72 02 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "addtopic 1goblinsarmy\r\nsetstage fbmwtrKillGoblins 10", 
+        "References": [
+            "SCRO - Global Reference": "1goblinSarmy [DIAL:01311044]", 
+            "SCRO - Global Reference": "fbmwTRKillGoblins [QUST:0101C655]"
+        ]
+    }
+}

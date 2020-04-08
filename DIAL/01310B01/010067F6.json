@@ -1,0 +1,77 @@
+{
+    "Topic": "1stronghold [DIAL:01310B01]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 453, 
+        "Record Flags": {}, 
+        "FormID": "010067F6", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHHStronghold [QUST:0100346D]", 
+    "PNAM - Previous INFO": "010067F5", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Your stronghold is now helping House Hlaalu with business and trade.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "I will give the orders to begin the next phase of construction.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 150.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHHStronghold "House Hlaalu: Stronghold" [QUST:0100346D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0dondosSdriler "Dondos Driler" [NPC_:012609E5]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 28, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 01 00 02 00 20 32 39 10 0A 00 02 00 72 01 00 6E AA 00 00 00", 
+        "SCTX - Result script source": "SET fbmwHHStronghold.BuildProgress TO 2 ; Just in Case\r\nSetStage fbmwHHStronghold 170", 
+        "References": [
+            "SCRO - Global Reference": "fbmwHHStronghold [QUST:0100346D]"
+        ]
+    }
+}

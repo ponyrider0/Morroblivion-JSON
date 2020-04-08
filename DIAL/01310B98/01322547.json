@@ -1,0 +1,96 @@
+{
+    "Topic": "1WestSGash [DIAL:01310B98]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 656, 
+        "Record Flags": {}, 
+        "FormID": "01322547", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
+    "PNAM - Previous INFO": "01322546", 
+    "Add topics": [
+        "NAME - Topic": "01310A9D", 
+        "NAME - Topic": "01310B98", 
+        "NAME - Topic": "01310C93", 
+        "NAME - Topic": "01310BEF", 
+        "NAME - Topic": "01310C44", 
+        "NAME - Topic": "01310C1E", 
+        "NAME - Topic": "01310A60", 
+        "NAME - Topic": "01310CDB", 
+        "NAME - Topic": "01310CF9", 
+        "NAME - Topic": "01310B91", 
+        "NAME - Topic": "01310BEA"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "The western highlands of Vvardenfell are called the West Gash.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "The largest settlements are the trading village of Gnisis, north of Ald'ruhn, and Caldera and Balmora to the south.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "The fishing villages of Ald Velothi and Khuul lie on the north coast. Muckspunge grows there, and I have collected chokeweed and roobrush as well.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0artisaSarelas "Artisa Arelas" [NPC_:012604C1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

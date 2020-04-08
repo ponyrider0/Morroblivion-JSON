@@ -1,0 +1,37 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 600, 
+        "Record Flags": {}, 
+        "FormID": "0107EABE", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwBMlakelight", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 3, 
+        "CompiledSize": 150, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 88 00 00 00 16 00 34 00 02 00 30 00 20 58 3A 10 05 00 01 00 72 01 00 20 31 30 30 20 3E 3D 20 73 01 00 20 30 20 3D 3D 20 26 26 20 58 3A 10 05 00 01 00 72 02 00 20 30 20 3E 20 26 26 21 10 00 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 16 00 22 00 02 00 1E 00 20 58 3A 10 05 00 01 00 72 03 00 20 31 30 30 20 3D 3D 20 73 01 00 20 31 20 3D 3D 20 26 26 22 10 00 00 15 00 07 00 73 01 00 02 00 20 32 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwBMlakelight\nshort DoOnce\nbegin GameMode\n	if (GetStage fbmwBMTrial >= 100) && (DoOnce == 0) && (GetStage fbmwBMDraugr > 0)\n		enable\n		set DoOnce to 1\n	endif\n	if (GetStage fbmwBMWildhunt == 100) && (DoOnce == 1)\n		disable\n		set DoOnce to 2\n	endif\nEnd\n\n\n;<CSEBlock>\n;<CSECaretPos> 196 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "08 3A 20 27 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "07 AC 93 27 0C 00 00"
+            }, 
+            "SCVR - Name": "DoOnce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwBMTrial [QUST:0101B6D7]", 
+        "SCRO - Global Reference": "fbmwBMDraugr [QUST:0101AF8D]", 
+        "SCRO - Global Reference": "fbmwBMWildHunt [QUST:0101B6DA]"
+    ]
+}

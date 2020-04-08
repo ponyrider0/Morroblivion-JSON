@@ -1,0 +1,81 @@
+{
+    "Topic": "1hopeSofSescape [DIAL:01310921]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 674, 
+        "Record Flags": {}, 
+        "FormID": "01F8AADC", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVSlaveMule [QUST:01003412]", 
+    "PNAM - Previous INFO": "01F8AADB", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "74 20 30"
+            }, 
+            "NAM1 - Response Text": "Rabinna has none, once in the possession of Vorar Helas. He will likely slaughter Rabinna for the drugs in my belly. My only hope is that you do not take Rabinna to that monster, and instead help me escape.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "74 20 30"
+            }, 
+            "NAM1 - Response Text": "There are those, such as Im-Kilaya in Ebonheart, who are willing to help those like me return to our homes. If you were to take Rabinna to him at the Argonian Mission, Rabinna is sure he would help.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 75.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVSlaveMule "Rabinna's Inner Beauty" [QUST:01003412]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Rabinna "Rabinna" [NPC_:012606E8]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1hopeSofSescape1 [DIAL:01321305]", 
+        "TCLT - Choice": "1hopeSofSescape2 [DIAL:01321307]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 4B 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmvslavemule 75", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMVSlaveMule [QUST:01003412]"
+        ]
+    }
+}

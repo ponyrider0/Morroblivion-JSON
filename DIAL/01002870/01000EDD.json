@@ -1,0 +1,96 @@
+{
+    "Topic": "1entertainStheSpatrons [DIAL:01002870]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 393, 
+        "Record Flags": {}, 
+        "FormID": "01000EDD", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMSEntertainers [QUST:01002199]", 
+    "PNAM - Previous INFO": "01000EDC", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "You want to perform? What are you going to do?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "TARGET - Target Reference [00000000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "24", 
+            "Unused": "00 00 00", 
+            "Comparison Value": "00000037", 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMSEntertainers "Entertainers" [QUST:01002199]", 
+            "Parameter #2": "currentDay", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0dulneaSralaal "Dulnea Ralaal" [NPC_:01260118]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1entertainStheSpatrons1 [DIAL:01000EDB]", 
+        "TCLT - Choice": "1entertainStheSpatrons2 [DIAL:01002877]", 
+        "TCLT - Choice": "1entertainStheSpatrons3 [DIAL:01002876]", 
+        "TCLT - Choice": "1entertainStheSpatrons4 [DIAL:01002875]", 
+        "TCLT - Choice": "1entertainStheSpatrons5 [DIAL:01002874]", 
+        "TCLT - Choice": "1entertainStheSpatrons6 [DIAL:01002873]", 
+        "TCLT - Choice": "1entertainStheSpatrons7 [DIAL:01002872]", 
+        "TCLT - Choice": "1entertainStheSpatrons8 [DIAL:01002871]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 9, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00", 
+        "SCTX - Result script source": "addtopic 1HandySHighSKick", 
+        "References": [
+            "SCRO - Global Reference": "1HandySHighSKick [DIAL:0100219A]"
+        ]
+    }
+}

@@ -1,0 +1,58 @@
+{
+    "Topic": "1shipmentSofSebony7 [DIAL:01320B12]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 351, 
+        "Record Flags": {}, 
+        "FormID": "013230CA", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHHEbonyDelivery [QUST:0100345F]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Yes, five pieces. Good. You are dismissed. I will tell Odral you made the delivery.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0drinarSvaryon "Drinar Varyon" [NPC_:01260032]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 05 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHHEbonyDelivery 50\r\nPlayer.RemoveItem 0IngredURawUEbonyU01 5", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwHHEbonyDelivery [QUST:0100345F]", 
+            "SCRO - Global Reference": "0ingredUrawUebonyU01 [INGR:010A0009]"
+        ]
+    }
+}

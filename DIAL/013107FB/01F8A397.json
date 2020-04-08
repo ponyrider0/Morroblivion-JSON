@@ -1,0 +1,79 @@
+{
+    "Topic": "1donateS500Sdrakes [DIAL:013107FB]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 262, 
+        "Record Flags": {}, 
+        "FormID": "01F8A397", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwICRich [QUST:0100849A]", 
+    "PNAM - Previous INFO": "01F8A396", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "I am busy. Excuse me.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICMossanon "Imperial Cult: Pledge from Canctunian Ponius" [QUST:0100B81C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwICRich "Imperial Cult: Donation from Cunius Pelelius" [QUST:0100849A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0cuniusSpelelius "Cunius Pelelius" [NPC_:012603D0]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "fbmwicledger [DIAL:01F8A9F3]", 
+        "TCLT - Choice": "fbmwicrichdemand [DIAL:01F8A9EB]", 
+        "TCLT - Choice": "fbmwicrichebony [DIAL:01F8A9F1]", 
+        "TCLT - Choice": "fbmwicrichpress [DIAL:01F8A9ED]", 
+        "TCLT - Choice": "fbmwicrichslave [DIAL:01F8A9F5]", 
+        "TCLT - Choice": "fbmwicrichthank [DIAL:01F8A9EF]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

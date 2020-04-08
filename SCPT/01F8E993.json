@@ -1,0 +1,24 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 618, 
+        "Record Flags": {}, 
+        "FormID": "01F8E993", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwTRhelsethScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 3, 
+        "CompiledSize": 157, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 08 00 8D 00 00 00 00 00 16 00 10 00 04 00 0C 00 20 72 01 00 73 02 00 20 33 20 21 3D 16 00 14 00 02 00 10 00 20 58 0E 10 04 00 01 00 08 00 20 34 30 30 20 3C 15 00 0A 00 72 01 00 73 0B 00 02 00 20 31 16 10 05 00 01 00 72 02 00 19 00 00 00 17 00 02 00 05 00 51 11 07 00 01 00 6E 01 00 00 00 17 10 00 00 0F 10 09 00 02 00 21 00 6E 00 00 00 00 53 10 0A 00 02 00 72 02 00 6E 0A 00 00 00 53 10 0A 00 02 00 72 03 00 6E 0A 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwTRhelsethScript\n\nBegin OnHit\n	if fbmwTRChampion.karrodFightStart != 3\n		if ( GetAV Health < 400 )\n			set fbmwTRChampion.kingHit to 1\n			StartCombat Player\n		endif\n	else\n		SetIgnoreFriendlyHits 1\n		StopCombat\n		SetAV Aggression 0\n		ModDisposition Player 10\n		ModDisposition fbmwKarrodREF 10\n	endif\nEnd \n;<CSEBlock>\n;<CSECaretPos> 48 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "fbmwTRChampion [QUST:0101C652]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "fbmwKarrodREF [ACHR:01F0480E]"
+    ]
+}

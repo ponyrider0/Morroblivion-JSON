@@ -1,0 +1,82 @@
+{
+    "Topic": "1robbedSme [DIAL:01310BA3]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 735, 
+        "Record Flags": {}, 
+        "FormID": "01F8AF48", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVOutcastAshlanders [QUST:0100340A]", 
+    "PNAM - Previous INFO": "01F8AF47", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6F 6E 20"
+            }, 
+            "NAM1 - Response Text": "Yes, the bastard n'wahs nearly killed me, and they took my entire shipment of guar hides. It's easy to tell they're mine; they have my damn mark on them! Look, if you can help me get those hides back, and kill the fetchers who stole them,", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "61 6E 64"
+            }, 
+            "NAM1 - Response Text": "I promise you an excellent reward. Although I have nothing left since I was attacked, my friend Berwen in Tel Mora will be most generous, I promise you. What do you say?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "A0", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 25.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVOutcastAshlanders "Girith's Stolen Hides" [QUST:0100340A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0athandenSgirith "Athanden Girith" [NPC_:012606D8]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1robbedSme1 [DIAL:013225C3]", 
+        "TCLT - Choice": "1robbedSme2 [DIAL:013225C5]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 14 00 00 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "setstage fbmwmvoutcastashlanders 20\r\naddtopic 1girithassguarshides", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMVOutcastAshlanders [QUST:0100340A]", 
+            "SCRO - Global Reference": "1GirithAsSguarShides [DIAL:01310738]"
+        ]
+    }
+}

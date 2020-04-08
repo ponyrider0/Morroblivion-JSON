@@ -1,0 +1,71 @@
+{
+    "Topic": "1SanctusSShrine [DIAL:01310906]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 713, 
+        "Record Flags": {}, 
+        "FormID": "01F8A4A9", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTTSanctusShrine [QUST:01002C82]", 
+    "PNAM - Previous INFO": "01F8A4A8", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "64 72 79"
+            }, 
+            "NAM1 - Response Text": "You made the Pilgrimage to the Sanctus Shrine, and you have proven your piety. I celebrate your devotion. Perhaps you would enjoy these books.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0endrynSllethan "Endryn Llethan" [NPC_:01260509]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwTTSanctusShrine "Temple: Silent Pilgrimage" [QUST:01002C82]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 6, 
+            "CompiledSize": 111, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0F 00 00 00 F8 10 07 00 01 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 06 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwttsanctusshrine 100\r\nmoddisposition player 15\r\nmodpcfame 1\r\nplayer.additem 0bookskilluillusion2 1\r\nplayer.additem 0bookskillubluntsweapon5 1\r\nplayer.additem 0bookskillurestoration3 1\r\nplayer.additem 0bookskilluspeechcraft5 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwTTSanctusShrine [QUST:01002C82]", 
+            "SCRO - Global Reference": "0bookskillUillusion2 [BOOK:01180010]", 
+            "SCRO - Global Reference": "0BookSkillUBluntSWeapon5 [BOOK:01180045]", 
+            "SCRO - Global Reference": "0bookskillUrestoration3 [BOOK:01180020]", 
+            "SCRO - Global Reference": "0bookskillUspeechcraft5 [BOOK:01180081]"
+        ]
+    }
+}

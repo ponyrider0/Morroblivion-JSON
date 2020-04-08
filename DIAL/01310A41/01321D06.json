@@ -1,0 +1,56 @@
+{
+    "Topic": "1necromancers [DIAL:01310A41]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 291, 
+        "Record Flags": {}, 
+        "FormID": "01321D06", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMGSharnNecro [QUST:01006784]", 
+    "PNAM - Previous INFO": "01321D05", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "No. Of course not. I can't teach you spells. I'm NOT a necromancer. No. Absolutely not. Not a necromancer.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0sharnSgraTmuzgob "Sharn Gra-Muzgob" [NPC_:01260122]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMGSharnNecro 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMGSharnNecro [QUST:01006784]"
+        ]
+    }
+}

@@ -1,0 +1,60 @@
+{
+    "Topic": "1Shishi2 [DIAL:010068DA]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 312, 
+        "Record Flags": {}, 
+        "FormID": "010068DC", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHTShishi [QUST:01003448]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "I would rather you kill Brerama Selas, but perhaps there are too many Redoran for just the two of us to handle.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0favesSandas "Faves Andas" [NPC_:01260214]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1travelStogether1 [DIAL:013210A8]", 
+        "TCLT - Choice": "1travelStogether2 [DIAL:013210A6]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 32 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHTShishi 50", 
+        "References": [
+            "SCRO - Global Reference": "fbmwHTShishi [QUST:01003448]"
+        ]
+    }
+}

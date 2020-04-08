@@ -1,0 +1,82 @@
+{
+    "Topic": "1Counsel [DIAL:01310C2C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 708, 
+        "Record Flags": {}, 
+        "FormID": "01023C87", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ11e [QUST:01001DCE]", 
+    "PNAM - Previous INFO": "01023C88", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 61"
+            }, 
+            "NAM1 - Response Text": "If you hope to persuade Han-Ammu to become ashkhan, you must find some way to give him strength, willpower, and intelligence.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "20 30 61"
+            }, 
+            "NAM1 - Response Text": "Han-Ammu is unpopular with the tribe, and he knows it. But if he bore tokens recognized by all the tribe as conferring strength, willpower, and intelligence, it would give him the confidence to accept the responsibilities of tribe leadership.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ11e "Erabenimsum Nereverine" [QUST:01001DCE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0manirai "Manirai" [NPC_:0126018C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1tokens [DIAL:01310C82]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 27, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "AddTopic 1wantStoSbeSashkhan\r\nAddTopic 1whatSManiraiSsays\r\nAddTopic 1Tokens", 
+        "References": [
+            "SCRO - Global Reference": "1wantStoSbeSashkhan [DIAL:0131076F]", 
+            "SCRO - Global Reference": "1whatSManiraiSsays [DIAL:013107CF]", 
+            "SCRO - Global Reference": "1tokens [DIAL:01310C82]"
+        ]
+    }
+}

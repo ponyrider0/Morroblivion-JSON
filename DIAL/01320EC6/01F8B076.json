@@ -1,0 +1,80 @@
+{
+    "Topic": "1UncleSSweetshare2 [DIAL:01320EC6]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 763, 
+        "Record Flags": {}, 
+        "FormID": "01F8B076", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMMoonSugar [QUST:0101B6CD]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "Give you my helm?  Stop sharing...stop sharing my sugar?  He...heh...ho...hmmm....  Distressing...most distressing....  But you WILL let me live?", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "I do so love to live!  All right, then.  We have a deal!  Here's my white helm, and you have my promise I will not spread any more cheer!", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "77 42 4D"
+            }, 
+            "NAM1 - Response Text": "I will keep my candy all to myself!  That won't be so bad, will it? He he he he!  Ha ha ha!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0uncleSsweetshare "Uncle Sweetshare" [NPC_:01260B4D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 46, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 39 10 0A 00 02 00 72 03 00 6E 46 00 00 00", 
+        "SCTX - Result script source": "removeitem 0furucolovianuhelmuwhite 1\r\nplayer.additem 0furucolovianuhelmuwhite 1\r\nsetstage fbmwbmmoonsugar 70", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0furUcolovianUhelmUwhite [ARMO:0112016E]", 
+            "SCRO - Global Reference": "fbmwBMMoonSugar [QUST:0101B6CD]"
+        ]
+    }
+}

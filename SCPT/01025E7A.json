@@ -1,0 +1,81 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1088, 
+        "Record Flags": {}, 
+        "FormID": "01025E7A", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwCO10Qscript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 3, 
+        "CompiledSize": 250, 
+        "VariableCount": 5, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 EC 00 00 00 16 00 20 00 02 00 1C 00 20 58 54 10 05 00 01 00 72 01 00 20 34 20 3D 3D 20 73 05 00 20 31 20 21 3D 20 26 26 39 10 0A 00 02 00 72 02 00 6E 1E 00 00 00 15 00 07 00 73 05 00 02 00 20 31 19 00 00 00 16 00 18 00 02 00 14 00 20 73 02 00 20 31 20 3D 3D 20 73 04 00 20 31 20 3C 20 26 26 15 00 09 00 73 03 00 04 00 20 47 03 00 15 00 07 00 73 04 00 02 00 20 31 19 00 00 00 16 00 1F 00 03 00 1B 00 20 47 03 00 20 73 03 00 20 2D 20 33 20 3E 3D 20 73 04 00 20 31 20 3D 3D 20 26 26 39 10 0A 00 02 00 72 02 00 6E 78 00 00 00 59 10 2B 00 01 00 21 00 54 68 65 20 72 6F 6F 74 73 20 73 68 6F 75 6C 64 20 62 65 20 70 6F 69 73 65 6E 65 64 20 6E 6F 77 2E 00 00 00 00 00 00 15 00 07 00 73 04 00 02 00 20 32 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwCO10Qscript\n\nshort follow\nshort rootspoisoned\nshort startday\nshort doonce\nshort alldead\n\nbegin gamemode\n	if GetDeadCount fbmwBMsprigganco10 == 4 && alldead != 1\n		SetStage fbmwCO10 30\n		set alldead to 1\n	endif\n\n	if rootspoisoned==1 && doonce < 1\n		set startday to GameDaysPassed\n		set doonce to 1\n\n		endif\n\nif GameDaysPassed - startday >= 3 && doonce == 1\n			SetStage fbmwCO10 120\n		message \"The roots should be poisened now.\"\n		set doonce to 2\n		endif\nend\n;<CSEBlock>\n;<CSECaretPos> 464 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "follow"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 20 01 00 00"
+            }, 
+            "SCVR - Name": "rootspoisoned"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "startday"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "doonce"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "alldead"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwBMsprigganco10 [CREA:01025E7B]", 
+        "SCRO - Global Reference": "fbmwCO10 [QUST:0101BE3D]", 
+        "SCRO - Global Reference": "GameDaysPassed [GLOB:00000039]"
+    ]
+}

@@ -1,0 +1,123 @@
+{
+    "Topic": "fbmwMQ07Imready [DIAL:0101DD33]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 1211, 
+        "Record Flags": {}, 
+        "FormID": "0101DD34", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ07 [QUST:01001DBF]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "4C 65 76"
+            }, 
+            "NAM1 - Response Text": "Good. I'm going to give you the mission.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "4C 65 76"
+            }, 
+            "NAM1 - Response Text": "Before you head out, make sure you outfit yourself with healing potions, new gear, a little training, whatever you think you need most.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "4C 65 76"
+            }, 
+            "NAM1 - Response Text": "And if you get in trouble, back off, rest up, and go back fresh. Don't take any chances. I think this will be a tough one.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "74 77 7F"
+            }, 
+            "NAM1 - Response Text": "Here's your mission. Fort Buckmoth sent a patrol to Gnaar Mok, hunting smugglers with Sixth House connections.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "05", 
+                "Unused": "4D 57 4D"
+            }, 
+            "NAM1 - Response Text": "They found a Sixth House base, a Sixth House shrine, and a Sixth House priest named Dagoth Gares. Speak to Champion Raesa Pullia at Fort Buckmoth;", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "06", 
+                "Unused": "4D 57 4D"
+            }, 
+            "NAM1 - Response Text": "she'll tell you about the patrol and the Sixth House base. Your orders: find that Sixth House base, kill Dagoth Gares, and bring me a full report on  the Sixth House base.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 60.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ06 "Meet Sul-Matuul" [QUST:01001DBE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0caiusScosades "Caius Cosades" [NPC_:01260135]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 31, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 05 00 00 00 55 10 05 00 01 00 72 03 00 1C 00 01 00 21 10 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMQ07 5\r\nShowMap mwBuckmothLegionFortMapMarker\r\nfbdagothgaresref.enable", 
+        "References": [
+            "SCRO - Global Reference": "fbdagothgaresref [ACHR:0101CE62]", 
+            "SCRO - Global Reference": "fbmwMQ07 [QUST:01001DBF]", 
+            "SCRO - Global Reference": "mwBuckmothLegionFortMapMarker [REFR:01002C73]"
+        ]
+    }
+}

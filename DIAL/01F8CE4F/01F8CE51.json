@@ -1,0 +1,146 @@
+{
+    "Topic": "1SanguineSAll [DIAL:01F8CE4F]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 903, 
+        "Record Flags": {}, 
+        "FormID": "01F8CE51", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMTSanguineItems [QUST:01F8CE65]", 
+    "PNAM - Previous INFO": "01F8CE50", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "My amulet? This is the Amulet of Sanguine Enterprise, one of the twenty-seven threads of the Webspinner. I already have this thread.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "Perhaps you will find other threads. When you do, bring them to me.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "20", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMTSanguineItems "Threads of the Webspinner" [QUST:01F8CE65]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "20", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMTSanguineItems "Threads of the Webspinner" [QUST:01F8CE65]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetPCInFaction:132", 
+            "Unused": "00 00", 
+            "Parameter #1": "0MoragSTong "Morag Tong" [FACT:01220008]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0enoShlaalu "Eno Hlaalu" [NPC_:0126058D]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetPCExpelled:193", 
+            "Unused": "00 00", 
+            "Parameter #1": "0MoragSTong "Morag Tong" [FACT:01220008]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1SanguineSBalancedSArmor [DIAL:01310694]", 
+        "TCLT - Choice": "1SanguineSDeepSBiting [DIAL:01310708]", 
+        "TCLT - Choice": "1SanguineSDenial [DIAL:01310890]", 
+        "TCLT - Choice": "1SanguineSEnterprise [DIAL:01310730]", 
+        "TCLT - Choice": "1SanguineSFleetness [DIAL:01310775]", 
+        "TCLT - Choice": "1SanguineSFluidSEvasion [DIAL:013106B2]", 
+        "TCLT - Choice": "1SanguineSGlibSSpeech [DIAL:0131070A]", 
+        "TCLT - Choice": "1SanguineSGoldenSWisdom [DIAL:013106B7]", 
+        "TCLT - Choice": "1SanguineSGreenSWisdom [DIAL:013106E0]", 
+        "TCLT - Choice": "1SanguineSHewing [DIAL:0131089C]", 
+        "TCLT - Choice": "1SanguineSHornySFist [DIAL:01310735]", 
+        "TCLT - Choice": "1SanguineSImpalingSThrust [DIAL:01310681]", 
+        "TCLT - Choice": "1SanguineSLeaping [DIAL:01310838]", 
+        "TCLT - Choice": "1SanguineSMartialSCraft [DIAL:013106B8]", 
+        "TCLT - Choice": "1SanguineSNimbleSArmor [DIAL:013106E2]", 
+        "TCLT - Choice": "1SanguineSRedSWisdom [DIAL:01310733]", 
+        "TCLT - Choice": "1SanguineSSafekeeping [DIAL:0131070B]", 
+        "TCLT - Choice": "1SanguineSSilverSWisdom [DIAL:013106B9]", 
+        "TCLT - Choice": "1SanguineSSmiting [DIAL:01310832]", 
+        "TCLT - Choice": "1SanguineSStalking [DIAL:013107DB]", 
+        "TCLT - Choice": "1SanguineSStolidSArmor [DIAL:013106E1]", 
+        "TCLT - Choice": "1SanguineSSublimeSWisdom [DIAL:01310696]", 
+        "TCLT - Choice": "1SanguineSSureflight [DIAL:01310734]", 
+        "TCLT - Choice": "1SanguineSSwiftblade [DIAL:01310736]", 
+        "TCLT - Choice": "1SanguineSTranscendence [DIAL:013106BA]", 
+        "TCLT - Choice": "1SanguineSTransfiguring [DIAL:013106B6]", 
+        "TCLT - Choice": "1SanguineSUnseenSWisdom [DIAL:013106B5]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "; response for the first time you ask about sanguine items\r\nSetStage fbmwMTSanguineItems 10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMTSanguineItems [QUST:01F8CE65]"
+        ]
+    }
+}

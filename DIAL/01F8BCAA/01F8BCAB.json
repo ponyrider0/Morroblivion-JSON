@@ -1,0 +1,78 @@
+{
+    "Topic": "fbmwtr09burglar [DIAL:01F8BCAA]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 750, 
+        "Record Flags": {}, 
+        "FormID": "01F8BCAB", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTR09 [QUST:0101C64E]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "A8 AA 0A"
+            }, 
+            "NAM1 - Response Text": "I see. You've made a serious mistake. I don't approve of your trade -- but I understand that a desperate person -- or imprudently greedy person -- ", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "A8 AA 0A"
+            }, 
+            "NAM1 - Response Text": "may turn his hand to crime without being truly evil. Very well. You may go. I'd like to preserve our secret office... but I won't kill you to do it. ", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "A8 AA 0A"
+            }, 
+            "NAM1 - Response Text": "Oh, well. Since our offices are no longer secret, we'll have to relocate immediately. But don't touch anything here, and don't interfere with myself or my colleagues, or you will not leave here alive.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0TrelsSVaris "Trels Varis" [NPC_:01260AC5]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "53 10 0A 00 02 00 72 01 00 6E EC FF FF FF", 
+        "SCTX - Result script source": "moddisposition player -20", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

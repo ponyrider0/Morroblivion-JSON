@@ -1,0 +1,25 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 651, 
+        "Record Flags": {}, 
+        "FormID": "01F8E83F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwSirilonweScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 4, 
+        "CompiledSize": 173, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 9D 00 00 00 00 00 16 00 40 00 03 00 3C 00 20 72 01 00 58 2F 10 05 00 01 00 72 02 00 20 30 20 3E 20 72 01 00 58 30 10 00 00 20 31 31 31 37 31 20 3D 3D 20 26 26 20 72 01 00 58 2F 10 05 00 01 00 72 03 00 20 30 20 3E 20 26 26 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00 00 10 1D 00 01 00 15 00 47 6F 20 74 6F 20 48 65 6C 6C 2C 20 43 61 72 6F 6C 69 6E 61 21 00 00 00 00 17 00 02 00 01 00 0D 10 02 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwSirilonweScript\n\nbegin OnActivate\n\n	if Player.GetItemCount 0keyUshashev > 0 && Player.GetGold == 11171 && Player.GetItemCount 0katanaUgoldbrandUunique > 0\n		Player.RemoveItem 0katanaUgoldbrandUunique 1\n		Player.AddItem 0katanaUbluebrandUunique 1\n		MessageBox \"Go to Hell, Carolina!\"\n	else\n		Activate\n	endif\n\nend\n;<CSEBlock>\n;<CSECaretPos> 202 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "0keyUshashev [KEYM:0140020C]", 
+        "SCRO - Global Reference": "0katanaUgoldbrandUunique [WEAP:01100197]", 
+        "SCRO - Global Reference": "0katanaUbluebrandUunique [WEAP:011001D6]"
+    ]
+}

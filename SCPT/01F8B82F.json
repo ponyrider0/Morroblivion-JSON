@@ -1,0 +1,47 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1289, 
+        "Record Flags": {}, 
+        "FormID": "01F8B82F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwbmCeremony2Script", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 13, 
+        "CompiledSize": 238, 
+        "VariableCount": 1, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 E0 00 00 00 16 00 38 00 10 00 34 00 20 58 3A 10 05 00 01 00 72 06 00 20 32 35 20 3D 3D 20 72 07 00 58 01 10 05 00 01 00 72 08 00 20 35 31 32 20 3C 20 26 26 20 73 01 00 20 30 20 3D 3D 20 26 26 1C 00 01 00 9E 10 05 00 01 00 72 09 00 1C 00 02 00 9E 10 05 00 01 00 72 0A 00 1C 00 03 00 9E 10 05 00 01 00 72 0B 00 1C 00 04 00 9E 10 05 00 01 00 72 0C 00 1C 00 05 00 9E 10 05 00 01 00 72 0D 00 1C 00 01 00 21 10 00 00 1C 00 02 00 21 10 00 00 1C 00 03 00 21 10 00 00 1C 00 04 00 21 10 00 00 1C 00 05 00 21 10 00 00 1C 00 01 00 5E 10 00 00 1C 00 02 00 5E 10 00 00 1C 00 03 00 5E 10 00 00 1C 00 04 00 5E 10 00 00 1C 00 05 00 5E 10 00 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwbmCeremony2Script\nshort DoOnce\nBegin GameMode\n	if(GetStage fbmwBMCeremony2 == 25)&&(Player.GetDistance fbmwbmChestClawFangREF < 512)&&(DoOnce == 0)\n		fbmwbmHunterSpawn1.MoveToMarker fbmwbmHunterSpawnPointRef\n		fbmwbmHunterSpawn2.MoveToMarker fbmwbmHunterSpawnPointRef1\n		fbmwbmHunterSpawn3.MoveToMarker fbmwbmHunterSpawnPointRef2\n		fbmwbmHunterSpawn4.MoveToMarker fbmwbmHunterSpawnPointRef3\n		fbmwbmHunterSpawn5.MoveToMarker fbmwbmHunterSpawnPointRef4\n		fbmwbmHunterSpawn1.Enable\n		fbmwbmHunterSpawn2.Enable\n		fbmwbmHunterSpawn3.Enable\n		fbmwbmHunterSpawn4.Enable\n		fbmwbmHunterSpawn5.Enable\n		fbmwbmHunterSpawn1.evp\n		fbmwbmHunterSpawn2.evp\n		fbmwbmHunterSpawn3.evp\n		fbmwbmHunterSpawn4.evp\n		fbmwbmHunterSpawn5.evp\n		set DoOnce to 1\n	endif\nEnd\n;<CSEBlock>\n;<CSECaretPos> 155 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "31 20 4C 20 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "46 6F 72 65 61 72 6D"
+            }, 
+            "SCVR - Name": "DoOnce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwbmHunterSpawn1 [ACHR:0103A5D8]", 
+        "SCRO - Global Reference": "fbmwbmHunterSpawn2 [ACHR:01F07868]", 
+        "SCRO - Global Reference": "fbmwbmHunterSpawn3 [ACHR:01F07869]", 
+        "SCRO - Global Reference": "fbmwbmHunterSpawn4 [ACHR:01F0786A]", 
+        "SCRO - Global Reference": "fbmwbmHunterSpawn5 [ACHR:01F07867]", 
+        "SCRO - Global Reference": "fbmwBMCeremony2 [QUST:0101AF8A]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "fbmwbmChestClawFangREF [REFR:01F09F54]", 
+        "SCRO - Global Reference": "fbmwbmHunterSpawnPointRef [REFR:010757B3]", 
+        "SCRO - Global Reference": "fbmwbmHunterSpawnPointRef1 [REFR:010757B7]", 
+        "SCRO - Global Reference": "fbmwbmHunterSpawnPointRef2 [REFR:010757B4]", 
+        "SCRO - Global Reference": "fbmwbmHunterSpawnPointRef3 [REFR:010757B5]", 
+        "SCRO - Global Reference": "fbmwbmHunterSpawnPointRef4 [REFR:010757B6]"
+    ]
+}

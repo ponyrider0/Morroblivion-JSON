@@ -1,0 +1,89 @@
+{
+    "Topic": "1CamonnaSTong [DIAL:01310A31]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 625, 
+        "Record Flags": {}, 
+        "FormID": "010112BF", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHHWinCamonna [QUST:01003472]", 
+    "PNAM - Previous INFO": "010112C0", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Yes, I heard that you were the Hortator of House Hlaalu.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "You could not hold that rank if Orvas Dren did not wish it.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Since you already have some agreement with Orvas Dren, I will name you the new Grandmaster of House Hlaalu.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQHlaalu "Hlaalu Hortator" [QUST:01001DD8]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0VedamSDren "Duke Vedam Dren" [NPC_:0126027B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 42, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 6E 00 00 00 39 10 0A 00 02 00 72 02 00 6E 5B 00 00 00 15 00 0A 00 72 02 00 73 01 00 02 00 20 35", 
+        "SCTX - Result script source": "SetStage fbmwHHWinCamonna 110\r\nSetStage fbmwHHAdvancement 91\r\nSET fbmwHHAdvancement.HlaaluAdvancement TO 5", 
+        "References": [
+            "SCRO - Global Reference": "fbmwHHWinCamonna [QUST:01003472]", 
+            "SCRO - Global Reference": "fbmwHHAdvancement [QUST:0100EB55]"
+        ]
+    }
+}

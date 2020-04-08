@@ -1,0 +1,37 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1304, 
+        "Record Flags": {}, 
+        "FormID": "01F8CCD1", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "JDLevitationWeakScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 5, 
+        "CompiledSize": 378, 
+        "VariableCount": 1, 
+        "Type": "Magic Effect:256"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 11 00 09 01 00 00 16 00 10 00 02 00 0C 00 20 72 01 00 73 01 00 20 30 20 3D 3D 00 10 36 00 01 00 2E 00 4A 44 4C 65 76 69 74 61 74 69 6F 6E 20 72 65 71 75 69 72 65 73 20 4F 42 53 45 20 76 32 30 20 6F 72 20 6C 61 74 65 72 20 74 6F 20 72 75 6E 00 00 00 00 1E 00 00 00 19 00 00 00 16 00 23 00 02 00 1F 00 20 72 02 00 58 43 10 05 00 01 00 72 03 00 20 72 02 00 58 43 10 05 00 01 00 72 04 00 20 7C 7C 59 10 3A 00 01 00 30 00 59 6F 75 72 20 6C 65 76 69 74 61 74 69 6F 6E 20 73 70 65 6C 6C 20 64 6F 65 73 6E 27 74 20 77 6F 72 6B 20 69 6E 20 74 68 69 73 20 70 6C 61 63 65 00 00 00 00 00 00 1E 00 00 00 19 00 00 00 15 00 18 00 72 01 00 66 15 00 10 00 20 72 01 00 66 0D 00 20 72 01 00 66 0E 00 20 2A 15 00 0F 00 72 01 00 66 16 00 07 00 20 72 01 00 66 11 00 83 18 0F 00 01 05 00 52 05 00 02 04 00 42 01 04 00 42 00 11 00 00 00 10 00 06 00 13 00 59 00 00 00 16 00 23 00 01 00 1F 00 20 72 02 00 58 43 10 05 00 01 00 72 03 00 20 72 02 00 58 43 10 05 00 01 00 72 04 00 20 7C 7C 1E 00 00 00 19 00 00 00 15 00 0B 00 66 01 00 06 00 20 58 BA 10 00 00 83 18 13 00 01 05 00 52 05 00 02 04 00 42 00 08 00 56 00 00 00 01 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptname JDLevitationWeakScript\n\nfloat secPassed\n\nbegin ScriptEffectStart\n\n	if JDLevitationData.OBSEinstalled == 0\n		MessageBox \"JDLevitation requires OBSE v20 or later to run\"\n		return\n	endif\n\n	if Player.GetInCell Mournhold || Player.GetInCell SothaSSil\n		Message \"Your levitation spell doesn't work in this place\"\n		return\n	endif\n\n	set JDLevitationData.accFact to JDLevitationData.accBaseFact * JDLevitationData.accWeakFact\n	set JDLevitationData.dampFact to JDLevitationData.dampBaseFact\n\n	Call JDLevitate 1 0\n\nend\n\n\nbegin ScriptEffectUpdate\n\n	if Player.GetInCell Mournhold || Player.GetInCell SothaSSil\n		return\n	endif\n\n	set secPassed to ScriptEffectElapsedSeconds \n	Call JDLevitate 0 secPassed\n\nend\n;<CSEBlock>\n;<CSECaretPos> 623 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "secPassed"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "JDLevitationData [QUST:01F8CCD6]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "Mournhold [CELL:014804C8]", 
+        "SCRO - Global Reference": "SothaSSil [CELL:01480512]", 
+        "SCRO - Global Reference": "JDLevitate [SCPT:01F8CCCD]"
+    ]
+}

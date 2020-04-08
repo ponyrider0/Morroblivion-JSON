@@ -1,0 +1,88 @@
+{
+    "Topic": "1RedoranScouncilors [DIAL:0131076B]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 644, 
+        "Record Flags": {}, 
+        "FormID": "013209DF", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQRedoranSarethi [QUST:01001DE1]", 
+    "PNAM - Previous INFO": "013209DE", 
+    "Add topics": [
+        "NAME - Topic": "0131076B", 
+        "NAME - Topic": "01310966", 
+        "NAME - Topic": "013109EB", 
+        "NAME - Topic": "013108F0", 
+        "NAME - Topic": "013108EE", 
+        "NAME - Topic": "013109C7", 
+        "NAME - Topic": "013109EA"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Currently the Redoran Councilors are myself, Athyn Sarethi, the Archmaster Bolvyn Venim, Garisa Llethri, Hlaren Ramoran, Brara Morvayn, and Miner Arobar.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Please take this copy of the Red Book. It lists each of the councilors and where they currently reside.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQRedoranSarethi "Convincing Sarethi" [QUST:01001DE1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0athynSsarethi "Athyn Sarethi" [NPC_:012600B2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 39 10 0A 00 02 00 72 03 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "Player.Additem 0bkUredbook426 1\r\nSetStage fbmwMQRedoran 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0bkUredbook426 [BOOK:01180113]", 
+            "SCRO - Global Reference": "fbmwMQRedoran [QUST:01001DDC]"
+        ]
+    }
+}

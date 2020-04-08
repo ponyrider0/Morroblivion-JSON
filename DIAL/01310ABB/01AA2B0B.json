@@ -1,0 +1,80 @@
+{
+    "Topic": "1SkoomaSpipe [DIAL:01310ABB]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 786, 
+        "Record Flags": {}, 
+        "FormID": "01AA2B0B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMVSkoomaCorpse [QUST:01003411]", 
+    "PNAM - Previous INFO": "01AA2B0A", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Oh, you've found it! Excellent. Here's a little something for you. It was supposed to be Ernil's when he got here. Tsiya would appreciate it if you'd keep quiet about this. You understand, yes?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 15.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMVSkoomaCorpse "The Corpse and the Skooma Pipe" [QUST:01003411]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "42", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0apparatusUaUspipeUtsiya "Tsiya's Skooma Pipe" [APPA:01420015]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0tsiya "Tsiya" [NPC_:012606C2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 110, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 14 00 00 00 52 10 0A 00 02 00 72 03 00 6E 32 00 00 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 04 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 32 00 00 00 52 10 0A 00 02 00 72 05 00 6E 0A 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwmvskoomacorpse 20\r\nremoveitem gold001 50\r\nadditem 0apparatusuauspipeutsiya 1\r\nplayer.removeitem 0apparatusuauspipeutsiya 1\r\nplayer.additem gold001 50\r\nremoveitem 0ingredumoonusugaru01 10\r\nplayer.additem 0ingredumoonusugaru01 10", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMVSkoomaCorpse [QUST:01003411]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "0apparatusUaUspipeUtsiya [APPA:01420015]", 
+            "SCRO - Global Reference": "0ingredUmoonUsugarU01 [INGR:010A0028]"
+        ]
+    }
+}

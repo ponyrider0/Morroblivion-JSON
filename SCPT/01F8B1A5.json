@@ -1,0 +1,81 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1502, 
+        "Record Flags": {}, 
+        "FormID": "01F8B1A5", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwbmEarthScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 5, 
+        "CompiledSize": 330, 
+        "VariableCount": 11, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 3C 01 00 00 16 00 1F 00 02 00 1B 00 20 58 3A 10 05 00 01 00 72 01 00 20 30 20 3E 20 73 0A 00 20 30 20 3D 3D 20 26 26 15 00 07 00 73 0A 00 02 00 20 31 15 00 07 00 73 05 00 02 00 20 31 19 00 00 00 16 00 0D 00 01 00 09 00 20 73 05 00 20 32 20 3D 3D 39 10 0A 00 02 00 72 01 00 6E 28 00 00 00 18 00 0D 00 01 00 09 00 20 73 05 00 20 33 20 3D 3D 39 10 0A 00 02 00 72 01 00 6E 32 00 00 00 19 00 00 00 16 00 1D 00 0B 00 19 00 20 72 02 00 58 43 10 05 00 01 00 72 03 00 20 73 05 00 20 33 20 3C 20 26 26 15 00 07 00 66 09 00 02 00 20 32 15 00 11 00 73 07 00 0C 00 20 73 07 00 20 58 0C 10 00 00 20 2B 16 00 0D 00 07 00 09 00 20 73 07 00 20 38 20 3E 3D 16 00 0D 00 02 00 09 00 20 73 05 00 20 31 20 3D 3D 26 10 05 00 01 00 72 04 00 15 00 07 00 73 07 00 02 00 20 30 18 00 0D 00 02 00 09 00 20 73 05 00 20 32 20 3D 3D 26 10 05 00 01 00 72 05 00 15 00 07 00 73 07 00 02 00 20 30 19 00 00 00 19 00 00 00 17 00 02 00 01 00 15 00 07 00 66 09 00 02 00 20 30 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwbmEarthScript\n\nshort soundpuzzlenumber\nshort answerright\nshort timersong\nshort DoOnce\nfloat fQuestDelayTime \nBegin GameMode\n	if (GetStage fbmwBMEarth > 0)&&(DoOnce == 0)\n		set DoOnce to 1\n		set soundpuzzlenumber to 1\n	Endif\n	if (soundpuzzlenumber == 2)\n		SetStage fbmwBMEarth 40\n	elseif (soundpuzzlenumber == 3)\n		SetStage fbmwBMEarth 50\n	endif\n	if (Player.GetInCell SolstheimVSChamberSofSSong) && (soundpuzzlenumber < 3)\n		set fQuestDelayTime to 2\n		set timersong to timersong + GetSecondsPassed\n		if(timersong >= 8)\n			if (soundpuzzlenumber == 1)\n				PlaySound fbmwsongpuzzle1\n				set timersong to 0\n			elseif (soundpuzzlenumber == 2)\n				PlaySound fbmwsongpuzzle2\n				set timersong to 0\n			endif\n		endif\n	else\n		set fQuestDelayTime to 0\n	endif\nEnd\n;<CSEBlock>\n;<CSECaretPos> 747 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "soundpuzzlenumber"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "answerright"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000007", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "timersong"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000009", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "fQuestDelayTime"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000A", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "DoOnce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwBMEarth [QUST:0101AF8E]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "SolstheimVSChamberSofSSong [CELL:01480562]", 
+        "SCRO - Global Reference": "fbmwsongpuzzle1 [SOUN:0104068A]", 
+        "SCRO - Global Reference": "fbmwsongpuzzle2 [SOUN:0104068B]"
+    ]
+}

@@ -1,0 +1,114 @@
+{
+    "Topic": "1commonSdisease [DIAL:0131091B]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 918, 
+        "Record Flags": {}, 
+        "FormID": "013212E2", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
+    "PNAM - Previous INFO": "013212E1", 
+    "Add topics": [
+        "NAME - Topic": "0131091B", 
+        "NAME - Topic": "01310A9D", 
+        "NAME - Topic": "01310B94", 
+        "NAME - Topic": "01310B95", 
+        "NAME - Topic": "01310C3F", 
+        "NAME - Topic": "01310C8F", 
+        "NAME - Topic": "01310709", 
+        "NAME - Topic": "01310B2B", 
+        "NAME - Topic": "01310BEC", 
+        "NAME - Topic": "01310A21", 
+        "NAME - Topic": "01310C90", 
+        "NAME - Topic": "01310C91", 
+        "NAME - Topic": "01310C92", 
+        "NAME - Topic": "01310A98", 
+        "NAME - Topic": "01310A22", 
+        "NAME - Topic": "01310B96", 
+        "NAME - Topic": "01310A99", 
+        "NAME - Topic": "01310C40", 
+        "NAME - Topic": "01310CF8"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "There are sixteen common diseases I've encountered on Vvardenfell: rockjoint, helljoint, witbane, chills, serpiginous dementia, greenspore, dampworm, rust chancre, droops, ataxia, wither, swamp fever, collywobbles, brown rot, yellow tick, rattles.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "We group their effects in three levels: mild, serious, and acute. Serious and acute are more dangerous, of course, but none of them are fatal.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "But you must get them cured, or they weaken you, and people won't want to talk to you.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0artisaSarelas "Artisa Arelas" [NPC_:012604C1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "PlayerRef [PLYR:00000014]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

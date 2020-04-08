@@ -1,0 +1,78 @@
+{
+    "Topic": "1joinStheSRoyalSGuards [DIAL:01310FA4]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 706, 
+        "Record Flags": {}, 
+        "FormID": "01F8BA18", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwTR07Guard [QUST:0101C64C]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "7F 7F 7F"
+            }, 
+            "NAM1 - Response Text": "What did Tienius Delitian send you to me for? If he wants you to be a Royal Guard, then you'll be a Royal Guard. Nothing to do with me. How do I like it?", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "7F 7F 7F"
+            }, 
+            "NAM1 - Response Text": "You think I was born yesterday? My mom didn't teach me to blabber to strangers. So old King Llethan was a bit of a fool, but he was good to me.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "7F 7F 7F"
+            }, 
+            "NAM1 - Response Text": "And King Helseth is no fool. He's got to keep some experienced men like me around. All these new fellows, like you... someone's gotta teach them their business, 'cause they don't like it.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0IvulenSIrano "Ivulen Irano" [NPC_:01260A83]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "fbmwtr07helseth [DIAL:01F8BC96]", 
+        "TCLT - Choice": "fbmwtr07hlaalu [DIAL:01F8BC8C]", 
+        "TCLT - Choice": "fbmwtr07llethan [DIAL:01F8BC9F]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

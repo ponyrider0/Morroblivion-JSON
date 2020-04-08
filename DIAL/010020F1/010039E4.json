@@ -1,0 +1,78 @@
+{
+    "Topic": "mwSlaveOrderFollow [DIAL:010020F1]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 283, 
+        "Record Flags": {}, 
+        "FormID": "010039E4", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "mwSlavesDialogue [QUST:010020ED]", 
+    "PNAM - Previous INFO": "010039E3", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Yes, master.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0jadierSmannick "Jadier Mannick" [NPC_:01260486]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "mwBuySlavesQuest [QUST:01F8E376]", 
+            "Parameter #2": "JadierMannickBought", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "mwBuySlavesQuest [QUST:01F8E376]", 
+            "Parameter #2": "JadierMannickFollow", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 18, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 0B 00 02 00 20 31 5E 10 00 00", 
+        "SCTX - Result script source": "set mwBuySlavesQuest.JadierMannickFollow to 1\r\nevp", 
+        "References": [
+            "SCRO - Global Reference": "mwBuySlavesQuest [QUST:01F8E376]"
+        ]
+    }
+}

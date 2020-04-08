@@ -1,0 +1,328 @@
+{
+    "Record Header": {
+        "Signature": "QUST", 
+        "Data Size": 3655, 
+        "Record Flags": {}, 
+        "FormID": "0101C624", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwMSHolyElf", 
+    "SCRI - Script": "fbmwMSHolyElfScript [SCPT:01F8E847]", 
+    "FULL - Name": "Wood Elf with a Grievance", 
+    "ICON - Icon FileName": "darthsouth\\Quests\\miscquest-wild.dds", 
+    "DATA - General": {
+        "Flags": {}, 
+        "Priority": 70
+    }, 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsPlayableRace:254", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestRunning:56", 
+            "Unused": "00 00", 
+            "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Stages": [
+        {
+            "INDX - Stage index": 10, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I encountered a particularly agitated wood elf today going by the name of High-Pockets. He was visibly angered at a Nord named Holmar inside the Winged Guar who he claims beat him up for no good reason.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 20, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I have agreed to help High-Pockets go teach Holmar some manners.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 30, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "High-Pockets has borrowed my copy of Saryoni's Sermons, and told me to come back in a little while after he reads it.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 40, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I entered the bar with High-Pockets to find Holmar loudly bragging about his stunt. The two of us confronted him, and I persuaded him to stop his bragging and apologize. High-Pockets was satisfied, and paid me for my help.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 50, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I entered the bar with High-Pockets to find Holmar loudly bragging about his stunt. When the two of us confronted Holmar directly, he became violent, and we had to kill him to defend ourselves. High-Pockets rewarded me with some money.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 28, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 04 00 02 00 20 31 15 00 0A 00 72 01 00 73 03 00 02 00 20 31", 
+                        "SCTX - Result script source": "set fbmwMSHolyElf.HolmarDisable to 1\r\nset fbmwMSHolyElf.Change to 1", 
+                        "References": [
+                            "SCRO - Global Reference": "fbmwMSHolyElf [QUST:0101C624]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 100, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "I returned to find High-Pockets standing almost naked by the bar, waiting for me. He told me he has renounced worldly possessions, whereupon he gave me everything he owned. He has now committed his life to serving and spreading the word of Vivec.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 2, 
+                            "CompiledSize": 36, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 22 10 00 00 15 00 0A 00 72 02 00 73 05 00 02 00 20 31 15 00 0A 00 72 02 00 73 03 00 02 00 20 31", 
+                        "SCTX - Result script source": "fbmwHolmarREF.Disable\r\nset fbmwMSHolyElf.HighPocketsDisable to 1\r\nset fbmwMSHolyElf.Change to 1", 
+                        "References": [
+                            "SCRO - Global Reference": "fbmwHolmarREF [ACHR:01F04F76]", 
+                            "SCRO - Global Reference": "fbmwMSHolyElf [QUST:0101C624]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 110, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "High-Pockets tried to get me to help him take on a brutish Nord, but I refused. I have better things to do than take care of problems for a midget Wood Elf.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": ""
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 120, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "We confronted Holmar in the bar, and found him drunk and belligerent. We fought, and Holmar and High-Pockets are dead.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 42, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 04 00 02 00 20 31 15 00 0A 00 72 01 00 73 05 00 02 00 20 31 15 00 0A 00 72 01 00 73 03 00 02 00 20 31", 
+                        "SCTX - Result script source": "set fbmwMSHolyElf.HolmarDisable to 1\r\nset fbmwMSHolyElf.HighPocketsDisable to 1\r\nset fbmwMSHolyElf.Change to 1", 
+                        "References": [
+                            "SCRO - Global Reference": "fbmwMSHolyElf [QUST:0101C624]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 130, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "Holmar was drunk and belligerent, but I offered to buy him a couple drinks. Upon consuming them, he fainted.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 28, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 04 00 02 00 20 31 15 00 0A 00 72 01 00 73 03 00 02 00 20 31", 
+                        "SCTX - Result script source": "set fbmwMSHolyElf.HolmarDisable to 1\r\nset fbmwMSHolyElf.Change to 1", 
+                        "References": [
+                            "SCRO - Global Reference": "fbmwMSHolyElf [QUST:0101C624]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 140, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "We confronted Holmar in the bar, and found him drunk and belligerent. We fought, and Holmar is dead.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 28, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 04 00 02 00 20 31 15 00 0A 00 72 01 00 73 03 00 02 00 20 31", 
+                        "SCTX - Result script source": "set fbmwMSHolyElf.HolmarDisable to 1\r\nset fbmwMSHolyElf.Change to 1", 
+                        "References": [
+                            "SCRO - Global Reference": "fbmwMSHolyElf [QUST:0101C624]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 150, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "Holmar was drunk and belligerent, but I talked him out of doing any more harm. Hopefully he will head home soon and sober up before showing his face again.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 28, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 04 00 02 00 20 31 15 00 0A 00 72 01 00 73 03 00 02 00 20 31", 
+                        "SCTX - Result script source": "set fbmwMSHolyElf.HolmarDisable to 1\r\nset fbmwMSHolyElf.Change to 1", 
+                        "References": [
+                            "SCRO - Global Reference": "fbmwMSHolyElf [QUST:0101C624]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 160, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "We confronted Holmar in the bar, and found him drunk and belligerent. He attacked me, and I knocked him senseless.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 28, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 04 00 02 00 20 31 15 00 0A 00 72 01 00 73 03 00 02 00 20 31", 
+                        "SCTX - Result script source": "set fbmwMSHolyElf.HolmarDisable to 1\r\nset fbmwMSHolyElf.Change to 1", 
+                        "References": [
+                            "SCRO - Global Reference": "fbmwMSHolyElf [QUST:0101C624]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 200, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "High-Pockets thanked me for my help with Holmar, and gave me a magic ring and gold as reward.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,68 @@
+{
+    "Topic": "1SapriusSEntius [DIAL:01310936]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 541, 
+        "Record Flags": {}, 
+        "FormID": "01F8A4DC", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwILProtectEntius [QUST:01006023]", 
+    "PNAM - Previous INFO": "01F8A4DB", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 49 4C"
+            }, 
+            "NAM1 - Response Text": "I'm glad you both got here safely. I'll find a way to get him out of the city. This helm was my father's when he served in the Legions. He had it enchanted and gave it to me. Now I'm giving it to you.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0FraldStheSWhite "Frald the White" [NPC_:012602D9]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 70.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwILProtectEntius "Imperial Legion: Saprius Entius" [QUST:01006023]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 46, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwilprotectentius 100\r\nplayer.additem 0imperialuhelmufralduuniq 1\r\nmoddisposition player 10", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwILProtectEntius [QUST:01006023]", 
+            "SCRO - Global Reference": "0imperialUhelmUfraldUuniq [ARMO:01120107]"
+        ]
+    }
+}

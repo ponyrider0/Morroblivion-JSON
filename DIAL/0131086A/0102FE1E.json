@@ -1,0 +1,67 @@
+{
+    "Topic": "1travelStogether [DIAL:0131086A]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 393, 
+        "Record Flags": {}, 
+        "FormID": "0102FE1E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHRArobarKidnap [QUST:01003475]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "Thank you for rescuing me. I will take a ship back to Ald'ruhn. I am sure my father, Miner Arobar, will reward you.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 70.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHRArobarKidnap "House Redoran: Miner Arobar's Support" [QUST:01003475]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0nartiseSarobar "Nartise Arobar" [NPC_:01260221]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 22, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "15 00 0A 00 72 02 00 73 01 00 02 00 20 30 1C 00 01 00 5E 10 00 00", 
+        "SCTX - Result script source": "SET fbmwHRArobarKidnap.FollowNow TO 0\r\nmwNartiseArobarREF.EvaluatePackage", 
+        "References": [
+            "SCRO - Global Reference": "mwNartiseArobarREF [ACHR:01872F31]", 
+            "SCRO - Global Reference": "fbmwHRArobarKidnap [QUST:01003475]"
+        ]
+    }
+}

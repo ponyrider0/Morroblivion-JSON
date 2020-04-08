@@ -1,0 +1,40 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 760, 
+        "Record Flags": {}, 
+        "FormID": "0100ECE8", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwHRArchmasterQuestScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 6, 
+        "CompiledSize": 167, 
+        "VariableCount": 1, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 99 00 00 00 16 00 37 00 06 00 33 00 20 58 3A 10 05 00 01 00 72 02 00 20 35 30 20 3D 3D 20 72 03 00 58 43 10 05 00 01 00 72 04 00 20 31 20 3D 3D 20 26 26 20 73 01 00 20 30 20 3D 3D 20 26 26 15 00 0A 00 72 05 00 73 01 00 02 00 20 31 1C 00 01 00 9E 10 05 00 01 00 72 06 00 1C 00 01 00 53 10 0A 00 02 00 72 03 00 6E 9C FF FF FF 1C 00 01 00 0F 10 09 00 02 00 21 00 6E 64 00 00 00 1C 00 01 00 16 10 05 00 01 00 72 03 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwHRArchmasterQuestScript\r\n\r\nSHORT DoOnce\r\n\r\nBEGIN GameMode\r\n	IF GetStage fbmwHRArchmaster == 50 && Player.GetInCell VivecVSArenaSPit == 1 && DoOnce == 0\r\n		SET fbmwMQRedoranVenim.BolvynDuelPlayer TO 1\r\n		mwBolvynVenimREF.MoveTo fbmwArenaMarker\r\n		mwBolvynVenimREF.ModDisposition Player -100\r\n		mwBolvynVenimREF.SetAV Aggression 100\r\n		mwBolvynVenimREF.StartCombat Player\r\n\r\n		SET DoOnce TO 1\r\n	ENDIF\r\nEND", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "48 48 52 65 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "53 74 61 67 65 33 30"
+            }, 
+            "SCVR - Name": "DoOnce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "mwBolvynVenimREF [ACHR:0183D056]", 
+        "SCRO - Global Reference": "fbmwHRArchmaster [QUST:01003474]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "VivecVSArenaSPit [CELL:0148040B]", 
+        "SCRO - Global Reference": "fbmwMQRedoranVenim [QUST:01001DE2]", 
+        "SCRO - Global Reference": "fbmwarenamarker [REFR:0102789A]"
+    ]
+}

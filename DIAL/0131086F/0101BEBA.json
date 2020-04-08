@@ -1,0 +1,93 @@
+{
+    "Topic": "1thoughtfulSgift [DIAL:0131086F]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 669, 
+        "Record Flags": {}, 
+        "FormID": "0101BEBA", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMQ05 [QUST:01001DBD]", 
+    "PNAM - Previous INFO": "0101BEBB", 
+    "Add topics": [
+        "NAME - Topic": "013107BB"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "62 61 6D"
+            }, 
+            "NAM1 - Response Text": "Yes. A gift that shows you have taken the care to learn something of the receiver. For example, I love poetry.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "No stranger could be expected to know this, but a book of poetry given to me by a stranger shows the giver respects me, and has made a special effort", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "20 66 61"
+            }, 
+            "NAM1 - Response Text": "to know and please me. But now, I have answered your question, and would like some time to myself. If you will excuse me?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ05 "Zainsubani Informant" [QUST:01001DBD]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0hassourSzainsubani "Hassour Zainsubani" [NPC_:01260066]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 14 00 00 00", 
+        "SCTX - Result script source": "setstage FBMWMQ05 20", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQ05 [QUST:01001DBD]"
+        ]
+    }
+}

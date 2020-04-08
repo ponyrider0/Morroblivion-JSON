@@ -1,0 +1,25 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 765, 
+        "Record Flags": {}, 
+        "FormID": "0100A174", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwSinnammuScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 4, 
+        "CompiledSize": 190, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0B 00 10 00 28 00 00 00 01 00 72 02 00 39 10 0A 00 02 00 72 03 00 6E 28 00 00 00 15 00 0A 00 72 03 00 73 01 00 02 00 20 30 1C 00 01 00 5E 10 00 00 11 00 00 00 10 00 06 00 00 00 79 00 00 00 16 00 14 00 01 00 10 00 20 58 38 10 05 00 01 00 72 03 00 20 30 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 29 00 03 00 25 00 20 58 01 10 05 00 01 00 72 04 00 20 32 35 36 20 3C 3D 20 58 3A 10 05 00 01 00 72 03 00 20 34 30 20 3C 20 26 26 39 10 0A 00 02 00 72 03 00 6E 28 00 00 00 15 00 0A 00 72 03 00 73 01 00 02 00 20 30 1C 00 01 00 5E 10 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwSinnammuScript\n\n\nBegin OnPackageEnd fbmwq11sinnammumirpalfollow\n	SetStage fbmwMQ11a 40\n	SET fbmwMQ11a.FollowNow TO 0\n	mwSinnammuMirpalREF.EvaluatePackage\nEND\n\n\nBegin GameMode\n	if GetQuestRunning fbmwMQ11a == 0\n		return\n	endif\n\n	IF GetDistance mwSinnamuSafeMarker <= 256 && GetStage fbmwMQ11a < 40\n		SetStage fbmwMQ11a 40\n		SET fbmwMQ11a.FollowNow TO 0\n		mwSinnammuMirpalREF.EvaluatePackage\n	ENDIF\nEND\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "mwSinnammuMirpalREF [ACHR:0181FFDB]", 
+        "SCRO - Global Reference": "fbmwq11sinnammumirpalfollow [PACK:01023C69]", 
+        "SCRO - Global Reference": "fbmwMQ11a [QUST:01001DCC]", 
+        "SCRO - Global Reference": "mwSinnamuSafeMarker [REFR:01012F2C]"
+    ]
+}

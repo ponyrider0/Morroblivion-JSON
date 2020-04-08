@@ -1,0 +1,71 @@
+{
+    "Topic": "BBBAnoAndaramHlaOad [DIAL:0100D1F5]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 375, 
+        "Record Flags": {}, 
+        "FormID": "0100D1F6", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "aaaBoatTransport [QUST:01F0A330]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Ano shall glide through the Inner Sea.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 26.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "Gold001 "Gold" [MISC:0000000F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0anoSandaram "Ano Andaram" [NPC_:01260A56]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 47, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 02 00 6E 1A 00 00 00 15 00 08 00 47 03 00 03 00 20 32 34 15 00 0D 00 47 04 00 08 00 20 47 04 00 20 35 20 2B", 
+        "SCTX - Result script source": "Player.RemoveItem Gold001 26\r\nSet MWDestinationCode to 24\r\nSet GameHour to GameHour + 5", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "MWDestinationCode [GLOB:01F8B224]", 
+            "SCRO - Global Reference": "GameHour [GLOB:00000038]"
+        ]
+    }
+}

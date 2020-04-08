@@ -1,0 +1,81 @@
+{
+    "Record Header": {
+        "Signature": "PACK", 
+        "Data Size": 228, 
+        "Record Flags": {}, 
+        "FormID": "01F8D1F5", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwSeydaNeenFargothDrinking11x1Raining", 
+    "PKDT - General": {
+        "General": {
+            "Flags": {
+                "Unlock doors at location": true, 
+                "Skip fallout behavior": true, 
+                "Armor unequipped": true, 
+                "Weapons unequipped": true
+            }, 
+            "Type": "08", 
+            "Unused": "00 00 00"
+        }
+    }, 
+    "PLDT - Location": {
+        "Type": 0, 
+        "Location": "0184E7E0", 
+        "Radius": 0
+    }, 
+    "PSDT - Schedule": {
+        "Month": -1, 
+        "Day of week": -1, 
+        "Date": "00", 
+        "Time": 11, 
+        "Duration": 1
+    }, 
+    "PTDT - Target": {
+        "Type": 1, 
+        "Target": "01080005", 
+        "Count": 0
+    }, 
+    "Conditions": [
+        {
+            "Type": "01", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsCurrentWeather:149", 
+            "Unused": "00 00", 
+            "Parameter #1": "mwWeatherAshstormBlight [WTHR:01F8B26B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "01", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsCurrentWeather:149", 
+            "Unused": "00 00", 
+            "Parameter #1": "mwWeatherAshstorm [WTHR:01460000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "01", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "IsSnowing:75", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "01", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "IsRaining:62", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ]
+}

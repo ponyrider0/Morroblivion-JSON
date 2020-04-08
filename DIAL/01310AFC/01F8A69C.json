@@ -1,0 +1,80 @@
+{
+    "Topic": "1RelsSTenim [DIAL:01310AFC]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 664, 
+        "Record Flags": {}, 
+        "FormID": "01F8A69C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Say Once": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwFGTenimBounty [QUST:010033EB]", 
+    "PNAM - Previous INFO": "01F8A69B", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "A man went to the cavern of Shallit, on a small island southwest of Ald Daedroth. He left at night when neither Masser nor Secunda could be seen.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "Perhaps this is the man you seek. To get there, cross the water to the first island north of camp. From that island, travel northwest, two more islands.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "On the second island's north side, the entrance to Shallit will be found at the water's edge in a small cove.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInCell:67", 
+            "Unused": "00 00", 
+            "Parameter #1": "AhemmusaSCamp "Ahemmusa Camp" [CELL:0148000F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 3C 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwFGTenimBounty 60", 
+        "References": [
+            "SCRO - Global Reference": "fbmwFGTenimBounty [QUST:010033EB]"
+        ]
+    }
+}

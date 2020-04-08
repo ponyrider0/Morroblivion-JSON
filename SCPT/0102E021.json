@@ -1,0 +1,35 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 519, 
+        "Record Flags": {}, 
+        "FormID": "0102E021", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwPlagueStart", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 110, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 5E 00 00 00 00 00 16 00 0F 00 06 00 0B 00 20 58 05 10 00 00 20 30 20 3D 3D 16 00 0D 00 04 00 09 00 20 73 01 00 20 30 20 3D 3D 36 10 05 00 01 00 72 01 00 15 00 0A 00 72 01 00 73 02 00 02 00 20 31 15 00 07 00 73 01 00 02 00 20 31 0D 10 02 00 00 00 19 00 00 00 19 00 00 00 0D 10 02 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwPlagueStart\n\nshort doonce\n\nbegin OnActivate\n\n	if ( GetLocked == 0 )\n		if ( doonce == 0 )\n			startQuest fbmwMSCrimsonPlague\n			set fbmwMSCrimsonPlague.PlagueActivate to 1\n			set doonce to 1\n			Activate\n		endif\n	endif\n	Activate\nend\n;<CSEBlock>\n;<CSECaretPos> 196 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "doonce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwMSCrimsonPlague [QUST:0101C61D]"
+    ]
+}

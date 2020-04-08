@@ -1,0 +1,84 @@
+{
+    "Topic": "1DisappearanceSofStheSDwarves1 [DIAL:01320404]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 654, 
+        "Record Flags": {}, 
+        "FormID": "01322F09", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHTSpyBaladas [QUST:0100344C]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310B13", 
+        "NAME - Topic": "01310B13", 
+        "NAME - Topic": "01310C21", 
+        "NAME - Topic": "01310BF7"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "As the Dwemer left no corpses or traces of conflict behind, I believe that generations of ritualistic 'anti-creations' resulted in their immediate, but foreseen removal from the Mundus.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "They retreated behind math, behind color, behind the active principle itself.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "That the Dwemer vanished during a conflict with Nerevar and the Tribunal is merely coincidence.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0baladasSdemnevanni "Baladas Demnevanni" [NPC_:01260409]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 33 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwHTSpyBaladas 51", 
+        "References": [
+            "SCRO - Global Reference": "fbmwHTSpyBaladas [QUST:0100344C]"
+        ]
+    }
+}

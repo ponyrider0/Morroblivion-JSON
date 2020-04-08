@@ -1,0 +1,36 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 584, 
+        "Record Flags": {}, 
+        "FormID": "01F8ACF9", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwBerneAmuletScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 145, 
+        "VariableCount": 1, 
+        "Type": "Magic Effect:256"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 11 00 24 00 00 00 16 00 0D 00 01 00 09 00 20 73 01 00 20 31 20 21 3D 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 11 00 00 00 10 00 06 00 13 00 55 00 00 00 16 00 0D 00 02 00 09 00 20 73 01 00 20 31 20 3D 3D 15 00 07 00 73 01 00 02 00 20 30 1C 00 01 00 79 10 29 00 05 00 7A 23 DB F9 7E 6A E4 86 C0 7A F1 63 CC 5D FB 7E B5 40 7A 00 00 00 00 00 E0 C7 40 7A 00 00 00 00 00 80 56 40 72 02 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwBerneAmuletScript\r\n\r\nshort BerneTeleport\r\n\r\nbegin scripteffectstart\r\nif (BerneTeleport != 1)\r\n	set BerneTeleport to 1\r\nendif\r\nend\r\n\r\nbegin scripteffectupdate\r\nif (BerneTeleport == 1)\r\n	set BerneTeleport to 0\r\n	player.positioncell -732.5520, 5502.9819, 12224, 90 GalomSDaeusVSEntry\r\nendif	\r\nend\r\n", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "10 00 06 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 9E 10 05 00 01 00"
+            }, 
+            "SCVR - Name": "BerneTeleport"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "GalomSDaeusVSEntry [CELL:014801D6]"
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 592, 
+        "Record Flags": {}, 
+        "FormID": "01F8ACF3", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwVAAundaeTeleportMagic", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 145, 
+        "VariableCount": 11, 
+        "Type": "Magic Effect:256"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 11 00 24 00 00 00 16 00 0D 00 01 00 09 00 20 73 0B 00 20 31 20 21 3D 15 00 07 00 73 0B 00 02 00 20 31 19 00 00 00 11 00 00 00 10 00 06 00 13 00 55 00 00 00 16 00 0D 00 02 00 09 00 20 73 0B 00 20 31 20 3D 3D 15 00 07 00 73 0B 00 02 00 20 30 1C 00 01 00 79 10 29 00 05 00 7A 5A 64 3B DF CF 00 A6 40 7A C7 4B 37 89 C1 68 BB 40 7A 0C 02 2B 87 F6 D2 B0 40 7A 00 00 00 00 00 80 66 40 72 02 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwVAAundaeTeleportMagic\r\n\r\nshort AundaeTeleport\r\n\r\nbegin ScriptEffectStart\r\nif (AundaeTeleport != 1)\r\n	set AundaeTeleport to 1\r\nendif\r\nend\r\n\r\nbegin scripteffectupdate\r\nif (AundaeTeleport == 1)\r\n	set AundaeTeleport to 0\r\n	Player.PositionCell, 2816.406, 7016.756, 4306.963, 180, Ashmelech\r\nendif\r\nend\r\n", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000B", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "AundaeTeleport"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "Ashmelech [CELL:014800F5]"
+    ]
+}

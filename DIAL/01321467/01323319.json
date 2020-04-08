@@ -1,0 +1,68 @@
+{
+    "Topic": "1materialSgains2 [DIAL:01321467]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 599, 
+        "Record Flags": {}, 
+        "FormID": "01323319", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwVAVampCult [QUST:01003BCC]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310C60"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Me die? I think not, vampire. To me, my minions! Slay this false god! He seeks to kill me!!!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Irarak "Irarak" [NPC_:01260A08]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 8, 
+            "CompiledSize": 87, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 07 00 1C 00 01 00 16 10 05 00 01 00 72 08 00 1C 00 02 00 16 10 05 00 01 00 72 08 00 1C 00 03 00 16 10 05 00 01 00 72 08 00 1C 00 04 00 16 10 05 00 01 00 72 08 00 1C 00 05 00 16 10 05 00 01 00 72 08 00 1C 00 06 00 16 10 05 00 01 00 72 08 00", 
+        "SCTX - Result script source": "addtopic 1killsme\r\nfbmwIrarak.startcombat player\r\nAndenref.startcombat player\r\nSarvilref.startcombat player\r\nErvisRef.startcombat player\r\nVulyneRef.startcombat player\r\nTredereRef.startcombat player", 
+        "References": [
+            "SCRO - Global Reference": "fbmwIrarak [ACHR:0186B803]", 
+            "SCRO - Global Reference": "AndenRef [ACHR:0186B808]", 
+            "SCRO - Global Reference": "SarvilRef [ACHR:0186B807]", 
+            "SCRO - Global Reference": "ErvisRef [ACHR:0186B806]", 
+            "SCRO - Global Reference": "VulyneRef [ACHR:0186B805]", 
+            "SCRO - Global Reference": "TredereRef [ACHR:0186B804]", 
+            "SCRO - Global Reference": "1killSme [DIAL:01310C60]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

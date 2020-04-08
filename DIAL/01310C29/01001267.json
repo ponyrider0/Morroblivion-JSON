@@ -1,0 +1,101 @@
+{
+    "Topic": "1TelSFyr [DIAL:01310C29]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 845, 
+        "Record Flags": {}, 
+        "FormID": "01001267", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ08 [QUST:01001DC0]", 
+    "PNAM - Previous INFO": "01001266", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "Tel Fyr, Divayth Fyr's tower, is southwest of Sadrith Mora, on an island on the southwestern edge of Zafirbel Bay. Here. Let me mark it on your map.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "5C 66 69"
+            }, 
+            "NAM1 - Response Text": "There's a dock, but no boat service, so you must water-walk or swim from Sadrith Mora.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "6D 77 4D"
+            }, 
+            "NAM1 - Response Text": "Use the Guild Guide service at the Balmora Mages Guild to reach Sadrith Mora.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "6D 77 4D"
+            }, 
+            "NAM1 - Response Text": " At Sadrith Mora, find Wolverine Hall, Fighters Guild, and ask the scout Sondryn Irathi for detailed directions to Tel Fyr.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ08 "Corprus Cure" [QUST:01001DC0]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0caiusScosades "Caius Cosades" [NPC_:01260135]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 05 00 00 00 55 10 05 00 01 00 72 02 00 55 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "SetStage fbmwMQ08 5\r\nShowMap mwSadrithMoraMapMarker\r\nShowMap mwTelFyrMapMarker", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQ08 [QUST:01001DC0]", 
+            "SCRO - Global Reference": "mwSadrithMoraMapMarker [REFR:0145103C]", 
+            "SCRO - Global Reference": "mwTelFyrMapMarker [REFR:0100DC7F]"
+        ]
+    }
+}

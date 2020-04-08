@@ -1,0 +1,92 @@
+{
+    "Topic": "GREETING [DIAL:000000C8]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 711, 
+        "Record Flags": {}, 
+        "FormID": "01F8E89B", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true, 
+            "Say Once": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMSSummoner [QUST:0101C632]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "76 69 73"
+            }, 
+            "NAM1 - Response Text": "Greetings, fair citizens of Mournhold! I am the great, renowned, respected, and feared wizard, Ovis Velas!", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "76 69 73"
+            }, 
+            "NAM1 - Response Text": "In the coming weeks you shall see more and more of me, as I bring this city to its knees.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "76 69 73"
+            }, 
+            "NAM1 - Response Text": "But for the moment, allow me to demonstrate my power on one of your hapless countrymen. You there! Yes, you, you ugly outlander.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "04", 
+                "Unused": "76 69 73"
+            }, 
+            "NAM1 - Response Text": "Prepare yourself to feel my wrath!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0ovisSvelas "Ovis Velas" [NPC_:01260AB6]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 1, 
+            "CompiledSize": 36, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "0F 10 09 00 02 00 21 00 6E 5A 00 00 00 53 10 0A 00 02 00 72 01 00 6E 9C FF FF FF 16 10 05 00 01 00 72 01 00", 
+        "SCTX - Result script source": "SetAV Aggression 90\r\nmoddisposition Player -100\r\nStartCombat Player", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

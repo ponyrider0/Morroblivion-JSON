@@ -1,0 +1,67 @@
+{
+    "Topic": "1slaveSrebellion2 [DIAL:01320EEA]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 512, 
+        "Record Flags": {}, 
+        "FormID": "013231DE", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwHTSlaveRebellion [QUST:0100344A]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Add topics": [
+        "NAME - Topic": "01310D1D", 
+        "NAME - Topic": "01310CC5"
+    ], 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I would rather die free than be a slave again.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0eleedalUlei "Eleedal-Lei" [NPC_:01260657]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 6, 
+            "CompiledSize": 74, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "16 10 05 00 01 00 72 06 00 1C 00 01 00 16 10 05 00 01 00 72 06 00 1C 00 02 00 16 10 05 00 01 00 72 06 00 1C 00 03 00 16 10 05 00 01 00 72 06 00 1C 00 04 00 16 10 05 00 01 00 72 06 00 1C 00 05 00 16 10 05 00 01 00 72 06 00", 
+        "SCTX - Result script source": "StartCombat Player\r\nfbseenreirref.StartCombat Player\r\nfbdarruref.StartCombat Player\r\nfbahnarraref.StartCombat Player\r\nfbdrozahref.StartCombat Player\r\nfbjdatoref.StartCombat Player", 
+        "References": [
+            "SCRO - Global Reference": "fbseenreirref [ACHR:0180C628]", 
+            "SCRO - Global Reference": "fbdarruref [ACHR:0180C62A]", 
+            "SCRO - Global Reference": "fbahnarraref [ACHR:0180C627]", 
+            "SCRO - Global Reference": "fbdrozahref [ACHR:0180C626]", 
+            "SCRO - Global Reference": "fbjdatoref [ACHR:0180C625]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

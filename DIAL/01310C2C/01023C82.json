@@ -1,0 +1,101 @@
+{
+    "Topic": "1Counsel [DIAL:01310C2C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 778, 
+        "Record Flags": {}, 
+        "FormID": "01023C82", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ11e [QUST:01001DCE]", 
+    "PNAM - Previous INFO": "01023C85", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6E 69 72"
+            }, 
+            "NAM1 - Response Text": "If you would fight Ashkhan Ulath-Pal and his supporters, know your enemy, and come prepared. His supporters are the gulakhans Ahaz, Ranabi, and Ashu-Ahhe.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6E 69 72"
+            }, 
+            "NAM1 - Response Text": "They are the strongest of the fighting Erabenimsun, and more experienced than you.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "6E 69 72"
+            }, 
+            "NAM1 - Response Text": "Unless you have hidden skills and resources, or you are a mighty sorcerer or enchanter, I don't know how you could defeat them.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "A2", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetLevel:80", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 5.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ11e "Erabenimsum Nereverine" [QUST:01001DCE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0manirai "Manirai" [NPC_:0126018C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 4, 
+            "CompiledSize": 36, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 58 10 05 00 01 00 72 04 00", 
+        "SCTX - Result script source": "AddTopic 1UlathTPal\r\nAddTopic 1Ahaz\r\nAddTopic 1AshuTAhhe\r\nAddTopic 1Ranabi", 
+        "References": [
+            "SCRO - Global Reference": "1UlathTPal [DIAL:01310B79]", 
+            "SCRO - Global Reference": "1Ahaz [DIAL:01310CFF]", 
+            "SCRO - Global Reference": "1AshuTAhhe [DIAL:01310B7A]", 
+            "SCRO - Global Reference": "1Ranabi [DIAL:01310C81]"
+        ]
+    }
+}

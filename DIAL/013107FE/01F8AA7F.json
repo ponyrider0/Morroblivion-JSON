@@ -1,0 +1,76 @@
+{
+    "Topic": "1getSthatScontract [DIAL:013107FE]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 466, 
+        "Record Flags": {}, 
+        "FormID": "01F8AA7F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwEBDeed [QUST:01003420]", 
+    "PNAM - Previous INFO": "01F8AA7E", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6D 77 45"
+            }, 
+            "NAM1 - Response Text": "Sure, I'd like that contract! Hmm...how would you like to help me out, friend? If you could steal that contract from Ralen Tilvur, he wouldn't be able to fill the order properly.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "6D 77 45"
+            }, 
+            "NAM1 - Response Text": "Then, when his customer shows up to collect, I'll be ready with the proper order!", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 15.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwEBDeed "A Friend in Deed" [QUST:01003420]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0alusaron "Alusaron" [NPC_:012609B8]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1getSthatScontract1 [DIAL:01320C46]", 
+        "TCLT - Choice": "1getSthatScontract2 [DIAL:01320C44]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1702, 
+        "Record Flags": {}, 
+        "FormID": "010C9843", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwbminnocentscript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 8, 
+        "CompiledSize": 487, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 BA 00 00 00 00 00 16 00 0D 00 02 00 09 00 20 73 01 00 20 30 20 3D 3D 02 10 0A 00 02 00 72 01 00 6E 01 00 00 00 CC 10 07 00 01 00 6E 00 00 00 00 19 00 00 00 16 00 0D 00 08 00 09 00 20 73 01 00 20 31 20 3D 3D A4 14 21 00 01 00 1D 00 43 68 61 72 61 63 74 65 72 73 5C 5F 6D 61 6C 65 5C 53 6B 65 6C 65 74 6F 6E 2E 6E 69 66 EF 10 05 00 01 00 72 02 00 EF 10 05 00 01 00 72 03 00 52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 52 10 0A 00 02 00 72 04 00 6E 01 00 00 00 39 10 0A 00 02 00 72 05 00 6E 78 00 00 00 3C 19 00 00 19 00 00 00 11 00 00 00 10 00 06 00 00 00 13 01 00 00 16 00 15 00 02 00 11 00 20 58 3A 10 05 00 01 00 72 05 00 20 38 30 20 3D 3D 21 10 00 00 CC 10 07 00 01 00 6E 01 00 00 00 19 00 00 00 16 00 22 00 0E 00 1E 00 20 58 3A 10 05 00 01 00 72 05 00 20 31 31 30 20 3D 3D 20 73 01 00 20 30 20 3D 3D 20 26 26 8C 10 07 00 01 00 6E 01 00 00 00 0F 10 09 00 02 00 21 00 6E 64 00 00 00 15 00 07 00 73 01 00 02 00 20 31 89 10 0A 00 02 00 72 06 00 6E 00 00 00 00 A4 14 29 00 01 00 25 00 43 68 61 72 61 63 74 65 72 73 5C 5F 6D 61 6C 65 5C 73 6B 65 6C 65 74 6F 6E 57 65 72 65 77 6F 6C 66 2E 6E 69 66 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 EE 10 05 00 01 00 72 02 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 EE 10 05 00 01 00 72 03 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00 EE 10 05 00 01 00 72 04 00 1C 10 05 00 01 00 72 07 00 1C 10 05 00 01 00 72 08 00 3C 19 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwbminnocentscript\nshort WolfGiven\nBegin OnDeath\n	if(WolfGiven == 0)\n		AddItem 0ingredUinnocentUheart 1\n		SetDestroyed 0\n	endif\n	if(WolfGiven == 1)\n		SetModelPath \"Characters\\_male\\Skeleton.nif\"\n		UnequipItem fbmwWereBodyNPC \n		UnequipItem fbmwWereHeadNPC \n		RemoveItem fbmwWereBodyNPC 1\n		RemoveItem fbmwWereHeadNPC 1\n		RemoveItem fbmwbmwerewolfclaw 1\n		SetStage fbmwBMWolfGiver 120\n		update3d\n	endif\nEnd\nBegin GameMode\n	if(GetStage fbmwBMWolfGiver == 80)\n		Enable\n		SetDestroyed 1\n	endif\n	if(GetStage fbmwBMWolfGiver == 110)&&(WolfGiven == 0)	\n		resurrect 1\n		setav aggression 100\n		set WolfGiven to 1\n		SetFactionRank fbmwbmWerewolfFaction 0\n		SetModelPath \"Characters\\_male\\skeletonWerewolf.nif\"\n		AddItem fbmwWereBodyNPC 1\n		EquipItem fbmwWereBodyNPC\n		AddItem fbmwWereHeadNPC 1\n		EquipItem fbmwWereHeadNPC\n		Additem  fbmwbmwerewolfclaw 1\n		EquipItem fbmwbmwerewolfclaw\n		AddSpell 0werewolfSregeneration\n		AddSpell 0werewolfSresists\n		update3d\n	endif\nEnd\n;<CSEBlock>\n;<CSECaretPos> 880 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "62 6D 57 65 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "77 53 68 69 65 6C 64"
+            }, 
+            "SCVR - Name": "WolfGiven"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "0ingredUinnocentUheart [INGR:010A0076]", 
+        "SCRO - Global Reference": "fbmwWereBodyNPC [CLOT:01F8AF95]", 
+        "SCRO - Global Reference": "fbmwWereHeadNPC [CLOT:01F8AF96]", 
+        "SCRO - Global Reference": "fbmwbmwerewolfclaw [WEAP:010168D5]", 
+        "SCRO - Global Reference": "fbmwBMWolfGiver [QUST:0101B6DC]", 
+        "SCRO - Global Reference": "fbmwbmWerewolfFaction [FACT:01F8B824]", 
+        "SCRO - Global Reference": "0werewolfSregeneration [SPEL:01060419]", 
+        "SCRO - Global Reference": "0werewolfSresists [SPEL:01060428]"
+    ]
+}

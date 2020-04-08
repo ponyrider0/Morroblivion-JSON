@@ -1,0 +1,22 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 411, 
+        "Record Flags": {}, 
+        "FormID": "01F8B846", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwTRChapelDoorScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 146, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 82 00 00 00 00 00 16 00 14 00 01 00 10 00 20 58 3A 10 05 00 01 00 72 01 00 20 39 30 20 3C 59 10 52 00 01 00 48 00 4E 6F 6E 65 20 6D 61 79 20 65 6E 74 65 72 20 74 68 65 20 48 69 67 68 20 43 68 61 70 65 6C 20 75 6E 6C 65 73 73 20 73 75 6D 6D 6F 6E 65 64 20 62 79 20 74 68 65 20 67 6F 64 64 65 73 73 20 41 6C 6D 61 6C 65 78 69 61 2E 00 00 00 00 00 00 17 00 02 00 01 00 0D 10 02 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwTRChapelDoorScript\r\nbegin onactivate\r\nif getstage fbmwtrmazedband<90\r\nmessage \"None may enter the High Chapel unless summoned by the goddess Almalexia.\"\r\nelse\r\nactivate\r\nendif\r\nend", 
+    "References": [
+        "SCRO - Global Reference": "fbmwTRMazedBand [QUST:0101C656]"
+    ]
+}

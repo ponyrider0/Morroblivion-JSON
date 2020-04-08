@@ -1,0 +1,35 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 368, 
+        "Record Flags": {}, 
+        "FormID": "01005357", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwFireMothLichScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 66, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 32 00 00 00 00 00 16 00 0D 00 02 00 09 00 20 73 01 00 20 31 20 21 3D 02 10 0A 00 02 00 72 01 00 6E 01 00 00 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwFireMothLichScript\nshort doonce\nbegin ondeath\n	if doonce !=1\n		AddItem 0WardUofUAkavir 1\n		set doonce to 1\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "74 75 72 65 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "53 6C 65 65 70 65 72"
+            }, 
+            "SCVR - Name": "doonce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "0WardUofUAkavir [ARMO:01003A16]"
+    ]
+}

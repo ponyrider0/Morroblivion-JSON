@@ -1,0 +1,48 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1003, 
+        "Record Flags": {}, 
+        "FormID": "01F2A507", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwexpsoulgemscript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 3, 
+        "CompiledSize": 268, 
+        "VariableCount": 3, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 80 00 00 00 00 00 16 00 16 00 02 00 12 00 20 72 01 00 58 2F 10 05 00 01 00 72 02 00 20 30 20 3E 00 10 4F 00 01 00 38 00 57 6F 75 6C 64 20 79 6F 75 20 6C 69 6B 65 20 74 6F 20 64 69 73 63 68 61 72 67 65 20 6F 6E 65 20 6F 66 20 79 6F 75 72 20 70 65 74 74 79 20 73 6F 75 6C 20 67 65 6D 73 3F 00 00 02 00 01 00 04 00 59 65 73 2E 01 00 03 00 4E 6F 2E 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 11 00 00 00 10 00 06 00 00 00 72 00 00 00 16 00 0D 00 07 00 09 00 20 73 02 00 20 31 20 3D 3D 15 00 0B 00 73 01 00 06 00 20 58 1F 10 00 00 16 00 0D 00 02 00 09 00 20 73 01 00 20 30 20 3D 3D 1C 00 01 00 52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 17 00 02 00 01 00 15 00 07 00 73 01 00 02 00 20 30 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwexpsoulgemscript\r\n\r\nshort button\r\nshort MessageOn\r\n\r\nBegin OnActivate\r\n	if player.GetItemCount soulgem1petty1pettysoul>0\r\n		MessageBox \"Would you like to discharge one of your petty soul gems?\" \"Yes.\" \"No.\"\r\n		set MessageOn to 1\r\n	endif\r\nEnd\r\n\r\nBegin GameMode\r\n\r\n	if ( MessageOn == 1 )\r\n		set button to GetButtonPressed\r\n		if ( button == 0 )\r\n			player.RemoveItem soulgem1petty1pettysoul 1\r\n			player.AddItem soulgemempty1petty 1\r\n		else\r\n			set button to 0\r\n		endif\r\n	endif\r\n\r\nEnd \r\n;<CSEBlock>\r\n;<CSECaretPos> 54 </CSECaretPos>\r\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "button"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "MessageOn"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "SoulGem1Petty1PettySoul [SLGM:000382D1]", 
+        "SCRO - Global Reference": "SoulGemEmpty1Petty [SLGM:00023D67]"
+    ]
+}
