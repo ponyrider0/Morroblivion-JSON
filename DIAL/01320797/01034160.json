@@ -2,10 +2,10 @@
     "Topic": "1GrandmasterAsSRetort1 [DIAL:01320797]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 568, 
+        "Data Size": 480, 
         "Record Flags": {}, 
         "FormID": "01034160", 
-        "Version Control Info": "00 00 00 00"
+        "Version Control Info": "02 1B 00 00"
     }, 
     "DATA - DATA": {
         "Type": "00", 
@@ -52,20 +52,18 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 6, 
-            "CompiledSize": 67, 
+            "RefCount": 4, 
+            "CompiledSize": 50, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E C8 00 00 00 A9 10 0D 00 03 00 72 05 00 72 06 00 6E 05 00 00 00", 
-        "SCTX - Result script source": "setstage fbmwtggrandmasterretort 100\r\nplayer.removeitem 0apparatusuguretortu01 1\r\nplayer.additem gold001 200\r\nmodfactionreaction 0thievessguild playerfaction 5", 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E C8 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwtggrandmasterretort 100\r\nplayer.removeitem 0apparatusuguretortu01 1\r\nplayer.additem gold001 200", 
         "References": [
             "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
             "SCRO - Global Reference": "fbmwTGGrandmasterRetort [QUST:0100932F]", 
             "SCRO - Global Reference": "0apparatusUgUretortU01 [APPA:01420012]", 
-            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
-            "SCRO - Global Reference": "0ThievesSGuild [FACT:01220001]", 
-            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]"
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]"
         ]
     }
 }

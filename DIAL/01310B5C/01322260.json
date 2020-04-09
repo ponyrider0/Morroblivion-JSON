@@ -2,7 +2,7 @@
     "Topic": "1clanfriend [DIAL:01310B5C]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 503, 
+        "Data Size": 612, 
         "Record Flags": {}, 
         "FormID": "01322260", 
         "Version Control Info": "00 00 00 00"
@@ -14,14 +14,6 @@
     }, 
     "QSTI - Quest": "fbmwMQ06 [QUST:01001DBE]", 
     "PNAM - Previous INFO": "00000000", 
-    "Add topics": [
-        "NAME - Topic": "01310B5C", 
-        "NAME - Topic": "01310B61", 
-        "NAME - Topic": "01310B61", 
-        "NAME - Topic": "01310B61", 
-        "NAME - Topic": "01310CBF", 
-        "NAME - Topic": "01310A7E"
-    ], 
     "Responses": [
         {
             "TRDT - Response Data": {
@@ -81,10 +73,18 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 0, 
-            "CompiledSize": 0, 
+            "RefCount": 4, 
+            "CompiledSize": 36, 
             "VariableCount": 0, 
             "Type": "Object:0"
-        }
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 58 10 05 00 01 00 72 04 00", 
+        "SCTX - Result script source": "addtopic 1clanfriend\r\naddtopic 1hospitality\r\naddtopic 1rules\r\naddtopic 1Urshilaku", 
+        "References": [
+            "SCRO - Global Reference": "1clanfriend [DIAL:01310B5C]", 
+            "SCRO - Global Reference": "1hospitality [DIAL:01310A7E]", 
+            "SCRO - Global Reference": "1rules [DIAL:01310CBF]", 
+            "SCRO - Global Reference": "1Urshilaku [DIAL:01310B61]"
+        ]
     }
 }

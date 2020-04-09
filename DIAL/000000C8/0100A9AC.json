@@ -5,19 +5,19 @@
         "Data Size": 427, 
         "Record Flags": {}, 
         "FormID": "0100A9AC", 
-        "Version Control Info": "00 00 00 00"
+        "Version Control Info": "16 1A 00 00"
     }, 
     "DATA - DATA": {
         "Type": "00", 
         "Next Speaker": "00", 
         "Flags": {}
     }, 
-    "QSTI - Quest": "fbmwVampireGeneric [QUST:01F8ADA4]", 
+    "QSTI - Quest": "fbmwVampireGreetings [QUST:01F8ADA4]", 
     "PNAM - Previous INFO": "0100A9AB", 
     "Responses": [
         {
             "TRDT - Response Data": {
-                "Emotion Type": "00000000", 
+                "Emotion Type": "00000006", 
                 "Emotion Value": 50, 
                 "Unused": "00 00 00 00", 
                 "Response number": "01", 
@@ -40,6 +40,16 @@
     ], 
     "Conditions": [
         {
+            "Type": "02", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetVampire:40", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
             "Type": "01", 
             "Unused": "00 00 00", 
             "Comparison Value": 1.000000000000000, 
@@ -56,16 +66,6 @@
             "Function": "GetIsClass:68", 
             "Unused": "00 00", 
             "Parameter #1": "Mage "Mage" [CLAS:000105D6]", 
-            "Parameter #2": "00 00 00 00", 
-            "Unused": "00000000"
-        }, 
-        {
-            "Type": "02", 
-            "Unused": "00 00 00", 
-            "Comparison Value": 1.000000000000000, 
-            "Function": "GetVampire:40", 
-            "Unused": "00 00", 
-            "Parameter #1": "00 00 00 00", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }, 

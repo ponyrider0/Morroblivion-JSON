@@ -2,7 +2,7 @@
     "Topic": "1theSchoiceSISgiveSyou2 [DIAL:01320719]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 367, 
+        "Data Size": 387, 
         "Record Flags": {}, 
         "FormID": "01322FF3", 
         "Version Control Info": "00 00 00 00"
@@ -39,31 +39,22 @@
             "Parameter #1": "0tul "Tul" [NPC_:0126091F]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
-        }, 
-        {
-            "Type": "00", 
-            "Unused": "00 00 00", 
-            "Comparison Value": 1.000000000000000, 
-            "Function": "GetInFaction:71", 
-            "Unused": "00 00", 
-            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
-            "Parameter #2": "00 00 00 00", 
-            "Unused": "00000000"
         }
     ], 
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 2, 
-            "CompiledSize": 37, 
+            "RefCount": 3, 
+            "CompiledSize": 51, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 01 00 02 00 20 30 39 10 0A 00 02 00 72 01 00 6E 46 00 00 00 16 10 05 00 01 00 72 02 00", 
-        "SCTX - Result script source": "SET fbmwMVFakeSlave.FollowNow TO 0\r\nSetStage fbmwMVFakeSlave 70\r\nstartcombat fbmwsterdecanref", 
+        "SCDA - Compiled result script": "02 10 0A 00 02 00 72 01 00 6E 01 00 00 00 15 00 0A 00 72 02 00 73 01 00 02 00 20 30 39 10 0A 00 02 00 72 02 00 6E 46 00 00 00 16 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "additem 0direSviperblade 1\r\nset fbmwMVFakeSlave.FollowNow to 0\r\nSetStage fbmwMVFakeSlave 70\r\nstartcombat mwSterdecanREF", 
         "References": [
+            "SCRO - Global Reference": "0direSviperblade [WEAP:011000F4]", 
             "SCRO - Global Reference": "fbmwMVFakeSlave [QUST:01003405]", 
-            "SCRO - Global Reference": "fbmwsterdecanref [ACHR:0182CE1F]"
+            "SCRO - Global Reference": "mwSterdecanREF [ACHR:0182CE1F]"
         ]
     }
 }

@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 2034, 
+        "Data Size": 2132, 
         "Record Flags": {}, 
         "FormID": "01001DA3", 
         "Version Control Info": "00 00 00 00"
@@ -9,33 +9,33 @@
     "EDID - Editor ID": "fbmwDialogQuestScript", 
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
-        "RefCount": 17, 
-        "CompiledSize": 479, 
+        "RefCount": 19, 
+        "CompiledSize": 497, 
         "VariableCount": 10, 
         "Type": "Quest:1"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 D1 01 00 00 16 00 0D 00 0B 00 09 00 20 73 09 00 20 30 20 3D 3D 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 58 10 05 00 01 00 72 04 00 58 10 05 00 01 00 72 05 00 58 10 05 00 01 00 72 06 00 58 10 05 00 01 00 72 07 00 58 10 05 00 01 00 72 08 00 58 10 05 00 01 00 72 09 00 58 10 05 00 01 00 72 0A 00 58 10 05 00 01 00 72 0B 00 15 00 07 00 73 09 00 02 00 20 31 19 00 00 00 15 00 13 00 73 01 00 0E 00 20 72 01 00 58 2F 10 05 00 01 00 72 0C 00 16 00 0C 00 02 00 08 00 20 73 01 00 20 30 20 3E 1C 00 01 00 67 16 08 00 02 00 72 0C 00 73 01 00 1C 00 01 00 66 16 08 00 02 00 72 0D 00 73 01 00 19 00 00 00 16 00 16 00 02 00 12 00 20 72 01 00 58 2F 10 05 00 01 00 72 0E 00 20 30 20 3E 1C 00 01 00 67 16 0A 00 02 00 72 0E 00 6E 01 00 00 00 1C 00 01 00 66 16 0A 00 02 00 72 0D 00 6E 05 00 00 00 19 00 00 00 16 00 16 00 02 00 12 00 20 72 01 00 58 2F 10 05 00 01 00 72 0F 00 20 30 20 3E 1C 00 01 00 67 16 0A 00 02 00 72 0F 00 6E 01 00 00 00 1C 00 01 00 66 16 0A 00 02 00 72 0D 00 6E 0A 00 00 00 19 00 00 00 16 00 16 00 02 00 12 00 20 72 01 00 58 2F 10 05 00 01 00 72 10 00 20 30 20 3E 1C 00 01 00 67 16 0A 00 02 00 72 10 00 6E 01 00 00 00 1C 00 01 00 66 16 0A 00 02 00 72 0D 00 6E 19 00 00 00 19 00 00 00 16 00 16 00 02 00 12 00 20 72 01 00 58 2F 10 05 00 01 00 72 11 00 20 30 20 3E 1C 00 01 00 67 16 0A 00 02 00 72 11 00 6E 01 00 00 00 1C 00 01 00 66 16 0A 00 02 00 72 0D 00 6E 64 00 00 00 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "SCN fbmwDialogQuestScript\n\n; Applied to quest AAMWDialog.\n; Script contains assorted junk not related to dialog. \n\nShort Wealth\nShort DoOnce\n\nBegin GameMode\n\n	if DoOnce == 0\n		AddTopic 1joinSHouseSHlaalu\n		AddTopic 1joinSHouseSRedoran\n		AddTopic 1joinSHouseSTelvanni\n		AddTopic 1joinStheSFightersSGuild\n		AddTopic 1joinStheSImperialSCult\n		AddTopic 1joinStheSImperialSLegion\n		AddTopic 1joinStheSMagesSGuild\n		AddTopic 1joinStheSMoragSTong\n		AddTopic 1joinStheSTemple\n		AddTopic 1joinStheSThievesSGuild\n		set DoOnce to 1\n	endif\n\n; This section converts Morrowind gold into usable money.\n\n	Set Wealth to Player.GetItemCount 0GoldU001\n	If Wealth > 0\n		Player.RemoveItemNS 0GoldU001 Wealth\n		Player.AddItemNS Gold001 Wealth		\n	EndIf\n\n	If Player.GetItemCount 0GoldU005 > 0\n		Player.RemoveItemNS 0GoldU005 1\n		Player.AddItemNS Gold001 5\n	EndIf\n\n	If Player.GetItemCount 0GoldU010 > 0\n		Player.RemoveItemNS 0GoldU010 1\n		Player.AddItemNS Gold001 10\n	EndIf\n\n	If Player.GetItemCount 0GoldU025 > 0\n		Player.RemoveItemNS 0GoldU025 1\n		Player.AddItemNS Gold001 25\n	EndIf\n\n	If Player.GetItemCount 0GoldU100 > 0\n		Player.RemoveItemNS 0GoldU100 1\n		Player.AddItemNS Gold001 100\n	EndIf\n\nEnd\n;<CSEBlock>\n;<CSECaretPos> 127 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 E3 01 00 00 16 00 0D 00 0D 00 09 00 20 73 09 00 20 30 20 3D 3D 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 58 10 05 00 01 00 72 04 00 58 10 05 00 01 00 72 05 00 58 10 05 00 01 00 72 06 00 58 10 05 00 01 00 72 07 00 58 10 05 00 01 00 72 08 00 58 10 05 00 01 00 72 09 00 58 10 05 00 01 00 72 0A 00 58 10 05 00 01 00 72 0B 00 58 10 05 00 01 00 72 0C 00 58 10 05 00 01 00 72 0D 00 15 00 07 00 73 09 00 02 00 20 31 19 00 00 00 15 00 13 00 73 01 00 0E 00 20 72 01 00 58 2F 10 05 00 01 00 72 0E 00 16 00 0C 00 02 00 08 00 20 73 01 00 20 30 20 3E 1C 00 01 00 67 16 08 00 02 00 72 0E 00 73 01 00 1C 00 01 00 66 16 08 00 02 00 72 0F 00 73 01 00 19 00 00 00 16 00 16 00 02 00 12 00 20 72 01 00 58 2F 10 05 00 01 00 72 10 00 20 30 20 3E 1C 00 01 00 67 16 0A 00 02 00 72 10 00 6E 01 00 00 00 1C 00 01 00 66 16 0A 00 02 00 72 0F 00 6E 05 00 00 00 19 00 00 00 16 00 16 00 02 00 12 00 20 72 01 00 58 2F 10 05 00 01 00 72 11 00 20 30 20 3E 1C 00 01 00 67 16 0A 00 02 00 72 11 00 6E 01 00 00 00 1C 00 01 00 66 16 0A 00 02 00 72 0F 00 6E 0A 00 00 00 19 00 00 00 16 00 16 00 02 00 12 00 20 72 01 00 58 2F 10 05 00 01 00 72 12 00 20 30 20 3E 1C 00 01 00 67 16 0A 00 02 00 72 12 00 6E 01 00 00 00 1C 00 01 00 66 16 0A 00 02 00 72 0F 00 6E 19 00 00 00 19 00 00 00 16 00 16 00 02 00 12 00 20 72 01 00 58 2F 10 05 00 01 00 72 13 00 20 30 20 3E 1C 00 01 00 67 16 0A 00 02 00 72 13 00 6E 01 00 00 00 1C 00 01 00 66 16 0A 00 02 00 72 0F 00 6E 64 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "SCN fbmwDialogQuestScript\n\n; Applied to quest AAMWDialog.\n; Script contains assorted junk not related to dialog. \n\nShort Wealth\nShort DoOnce\n\nBegin GameMode\n\n	if DoOnce == 0\n		AddTopic 1joinSHouseSHlaalu\n		AddTopic 1joinSHouseSRedoran\n		AddTopic 1joinSHouseSTelvanni\n		AddTopic 1joinStheSFightersSGuild\n		AddTopic 1joinStheSImperialSCult\n		AddTopic 1joinStheSImperialSLegion\n		AddTopic 1joinStheSMagesSGuild\n		AddTopic 1joinStheSMoragSTong\n		AddTopic 1joinStheSTemple\n		AddTopic 1joinStheSThievesSGuild\n\n		AddTopic CliffREQEnchanting\n		AddTopic CliffREQSpellmaking\n		set DoOnce to 1\n	endif\n\n; This section converts Morrowind gold into usable money.\n\n	Set Wealth to Player.GetItemCount 0GoldU001\n	If Wealth > 0\n		Player.RemoveItemNS 0GoldU001 Wealth\n		Player.AddItemNS Gold001 Wealth		\n	EndIf\n\n	If Player.GetItemCount 0GoldU005 > 0\n		Player.RemoveItemNS 0GoldU005 1\n		Player.AddItemNS Gold001 5\n	EndIf\n\n	If Player.GetItemCount 0GoldU010 > 0\n		Player.RemoveItemNS 0GoldU010 1\n		Player.AddItemNS Gold001 10\n	EndIf\n\n	If Player.GetItemCount 0GoldU025 > 0\n		Player.RemoveItemNS 0GoldU025 1\n		Player.AddItemNS Gold001 25\n	EndIf\n\n	If Player.GetItemCount 0GoldU100 > 0\n		Player.RemoveItemNS 0GoldU100 1\n		Player.AddItemNS Gold001 100\n	EndIf\n\nEnd\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
     "Local Variables": [
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000001", 
-                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Unused": "47 3A 20 41 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "69 6E 73 20 61 72 65"
             }, 
             "SCVR - Name": "Wealth"
         }, 
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000009", 
-                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Unused": "5D 10 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "00 02 00 5C 10 05 00"
             }, 
             "SCVR - Name": "DoOnce"
         }
@@ -52,6 +52,8 @@
         "SCRO - Global Reference": "1joinStheSMoragSTong [DIAL:0131074C]", 
         "SCRO - Global Reference": "1joinStheSTemple [DIAL:013108B8]", 
         "SCRO - Global Reference": "1joinStheSThievesSGuild [DIAL:013106C4]", 
+        "SCRO - Global Reference": "CliffREQEnchanting [DIAL:01F8B0A4]", 
+        "SCRO - Global Reference": "CliffREQSpellmaking [DIAL:01F8B0A6]", 
         "SCRO - Global Reference": "0GoldU001 [MISC:01160000]", 
         "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
         "SCRO - Global Reference": "0GoldU005 [MISC:01160001]", 

@@ -5,14 +5,14 @@
         "Data Size": 201, 
         "Record Flags": {}, 
         "FormID": "0100A24E", 
-        "Version Control Info": "00 00 00 00"
+        "Version Control Info": "16 1A 00 00"
     }, 
     "DATA - DATA": {
         "Type": "00", 
         "Next Speaker": "00", 
         "Flags": {}
     }, 
-    "QSTI - Quest": "fbmwVampireGeneric [QUST:01F8ADA4]", 
+    "QSTI - Quest": "fbmwVampireGreetings [QUST:01F8ADA4]", 
     "PNAM - Previous INFO": "0100A24D", 
     "Responses": [
         {
@@ -29,12 +29,12 @@
     ], 
     "Conditions": [
         {
-            "Type": "00", 
+            "Type": "02", 
             "Unused": "00 00 00", 
             "Comparison Value": 1.000000000000000, 
-            "Function": "GetIsID:72", 
+            "Function": "GetVampire:40", 
             "Unused": "00 00", 
-            "Parameter #1": "0tusamircil "Tusamircil" [NPC_:012601BD]", 
+            "Parameter #1": "00 00 00 00", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }, 
@@ -49,12 +49,12 @@
             "Unused": "00000000"
         }, 
         {
-            "Type": "02", 
+            "Type": "00", 
             "Unused": "00 00 00", 
             "Comparison Value": 1.000000000000000, 
-            "Function": "GetVampire:40", 
+            "Function": "GetIsID:72", 
             "Unused": "00 00", 
-            "Parameter #1": "00 00 00 00", 
+            "Parameter #1": "0tusamircil "Tusamircil" [NPC_:012601BD]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }

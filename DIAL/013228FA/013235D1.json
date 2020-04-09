@@ -2,7 +2,7 @@
     "Topic": "1fightSme1 [DIAL:013228FA]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 575, 
+        "Data Size": 531, 
         "Record Flags": {}, 
         "FormID": "013235D1", 
         "Version Control Info": "00 00 00 00"
@@ -65,17 +65,16 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 3, 
-            "CompiledSize": 44, 
+            "RefCount": 2, 
+            "CompiledSize": 31, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "1C 00 01 00 0F 10 09 00 02 00 21 00 6E 5A 00 00 00 1C 00 01 00 16 10 05 00 01 00 72 02 00 15 00 0A 00 72 03 00 73 01 00 02 00 20 30", 
-        "SCTX - Result script source": "SelerFavelnimREF.SetAV Aggression 90\r\nSelerFavelnimREF.startcombat player\r\nset fbmwCO7.Selerattack to 0", 
+        "SCDA - Compiled result script": "1C 00 01 00 53 10 0A 00 02 00 72 02 00 6E 9C FF FF FF 1C 00 01 00 16 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "SelerFavelnimREF.ModDisposition player -100\r\nSelerFavelnimREF.startcombat player\r\n", 
         "References": [
             "SCRO - Global Reference": "SelerFavelnimREF [ACHR:01F0796C]", 
-            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
-            "SCRO - Global Reference": "fbmwCO7 [QUST:0101BED6]"
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
         ]
     }
 }

@@ -2,7 +2,7 @@
     "Topic": "fbmwMQ12acceptwraithguard [DIAL:0102626E]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 623, 
+        "Data Size": 719, 
         "Record Flags": {}, 
         "FormID": "01026278", 
         "Version Control Info": "00 00 00 00"
@@ -102,10 +102,16 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 0, 
-            "CompiledSize": 0, 
+            "RefCount": 2, 
+            "CompiledSize": 18, 
             "VariableCount": 0, 
             "Type": "Object:0"
-        }
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "player.additem 0miscuwraithguardunouequip 1\r\n", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0miscUwraithguardUnoUequip [MISC:011600E3]"
+        ]
     }
 }

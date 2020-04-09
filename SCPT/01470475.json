@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 857, 
+        "Data Size": 875, 
         "Record Flags": {}, 
         "FormID": "01470475", 
         "Version Control Info": "00 00 00 00"
@@ -10,12 +10,12 @@
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
         "RefCount": 2, 
-        "CompiledSize": 299, 
+        "CompiledSize": 300, 
         "VariableCount": 2, 
         "Type": "Object:0"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 1B 01 00 00 00 00 16 00 26 00 02 00 22 00 20 58 3A 10 05 00 01 00 72 01 00 20 31 30 20 3C 20 58 3A 10 05 00 01 00 72 02 00 20 30 20 3E 20 26 26 59 10 A2 00 01 00 98 00 54 68 65 20 46 69 72 73 74 20 54 72 65 65 73 20 61 72 65 20 67 6F 6E 65 2E 20 54 72 61 76 65 6C 20 65 61 73 74 20 61 6E 64 20 66 69 6E 64 20 74 68 65 20 6F 6E 65 20 77 68 6F 20 68 61 73 20 73 74 6F 6C 65 6E 20 74 68 65 20 53 65 65 64 73 2E 20 42 65 77 61 72 65 2D 2D 68 65 20 77 68 6F 20 68 61 73 20 74 68 65 20 73 65 65 64 73 2C 20 63 6F 6E 74 72 6F 6C 73 20 74 68 65 20 74 72 65 65 73 2E 20 50 6C 61 6E 74 20 74 68 65 20 46 69 72 73 74 20 61 6E 65 77 2E 00 00 00 00 00 00 39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 18 00 15 00 02 00 11 00 20 58 3A 10 05 00 01 00 72 01 00 20 34 30 20 3D 3D 39 10 0A 00 02 00 72 01 00 6E 64 00 00 00 39 10 0A 00 02 00 72 02 00 6E 40 00 00 00 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "scriptName mwBMStoneTreesScript\n\n\n\nbegin onactivate\n	if GetStage fbmwbmtrees<10&&getstage fbmwbmStones>0\n		Message \"The First Trees are gone. Travel east and find the one who has stolen the Seeds. Beware--he who has the seeds, controls the trees. Plant the First anew.\"\n		SetStage fbmwBMTrees 10\n	elseif GetStage fbmwbmtrees==40\n;	fbmwbmTreeREF.Enable\n		SetStage fbmwBMTrees 100\n		SetStage fbmwBMStones 64\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 1C 01 00 00 00 00 16 00 27 00 02 00 23 00 20 58 3A 10 05 00 01 00 72 01 00 20 31 30 20 3C 20 58 3A 10 05 00 01 00 72 02 00 20 33 30 20 3E 20 26 26 59 10 A2 00 01 00 98 00 54 68 65 20 46 69 72 73 74 20 54 72 65 65 73 20 61 72 65 20 67 6F 6E 65 2E 20 54 72 61 76 65 6C 20 65 61 73 74 20 61 6E 64 20 66 69 6E 64 20 74 68 65 20 6F 6E 65 20 77 68 6F 20 68 61 73 20 73 74 6F 6C 65 6E 20 74 68 65 20 53 65 65 64 73 2E 20 42 65 77 61 72 65 2D 2D 68 65 20 77 68 6F 20 68 61 73 20 74 68 65 20 73 65 65 64 73 2C 20 63 6F 6E 74 72 6F 6C 73 20 74 68 65 20 74 72 65 65 73 2E 20 50 6C 61 6E 74 20 74 68 65 20 46 69 72 73 74 20 61 6E 65 77 2E 00 00 00 00 00 00 39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 18 00 15 00 02 00 11 00 20 58 3A 10 05 00 01 00 72 01 00 20 34 30 20 3D 3D 39 10 0A 00 02 00 72 01 00 6E 64 00 00 00 39 10 0A 00 02 00 72 02 00 6E 40 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptName mwBMStoneTreesScript\r\n\r\n\r\n\r\nbegin onactivate\r\n	if GetStage fbmwbmtrees<10&&getstage fbmwbmStones>30\r\n		Message \"The First Trees are gone. Travel east and find the one who has stolen the Seeds. Beware--he who has the seeds, controls the trees. Plant the First anew.\"\r\n		SetStage fbmwBMTrees 10\r\n	elseif GetStage fbmwbmtrees==40\r\n;	fbmwbmTreeREF.Enable\r\n		SetStage fbmwBMTrees 100\r\n		SetStage fbmwBMStones 64\r\n	endif\r\nend\r\n;<CSEBlock>\r\n;<CSECaretPos> 0 </CSECaretPos>\r\n;</CSEBlock>", 
     "References": [
         "SCRO - Global Reference": "fbmwBMTrees [QUST:0101B6D6]", 
         "SCRO - Global Reference": "fbmwBMStones [QUST:0101B6D4]"

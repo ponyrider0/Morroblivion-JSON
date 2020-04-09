@@ -1,10 +1,10 @@
 {
     "Record Header": {
         "Signature": "QUST", 
-        "Data Size": 2584, 
+        "Data Size": 2621, 
         "Record Flags": {}, 
         "FormID": "0101BE44", 
-        "Version Control Info": "01 12 00 00"
+        "Version Control Info": "00 00 00 00"
     }, 
     "EDID - Editor ID": "fbmwCO3", 
     "SCRI - Script": "fbmwCo3bScript [SCPT:01F8B844]", 
@@ -46,16 +46,15 @@
                     "Result Script": {
                         "SCHR - Basic Script Data": {
                             "Unused": "00 00 00 00", 
-                            "RefCount": 2, 
-                            "CompiledSize": 16, 
+                            "RefCount": 1, 
+                            "CompiledSize": 8, 
                             "VariableCount": 0, 
                             "Type": "Quest:1"
                         }, 
-                        "SCDA - Compiled result script": "1C 00 01 00 21 10 00 00 1C 00 02 00 21 10 00 00", 
-                        "SCTX - Result script source": "fbmwUrynMarenREF.enable\r\nfbmwAproniaREF.enable", 
+                        "SCDA - Compiled result script": "1C 00 01 00 21 10 00 00", 
+                        "SCTX - Result script source": "fbmwUrynMarenREF.enable\r\n", 
                         "References": [
-                            "SCRO - Global Reference": "fbmwUrynMarenREF [ACHR:01F07C8F]", 
-                            "SCRO - Global Reference": "fbmwAproniaREF [ACHR:01F00017]"
+                            "SCRO - Global Reference": "fbmwUrynMarenREF [ACHR:01F07C8F]"
                         ]
                     }
                 }
@@ -147,11 +146,16 @@
                     "Result Script": {
                         "SCHR - Basic Script Data": {
                             "Unused": "00 00 00 00", 
-                            "RefCount": 0, 
-                            "CompiledSize": 0, 
+                            "RefCount": 1, 
+                            "CompiledSize": 8, 
                             "VariableCount": 0, 
                             "Type": "Quest:1"
-                        }
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 21 10 00 00", 
+                        "SCTX - Result script source": ";fbmwAproniaREF.enable\r\nmwElberothREF.enable\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "mwElberothREF [ACHR:01F0001A]"
+                        ]
                     }
                 }
             ]
@@ -205,7 +209,7 @@
             "QSTA - Target": {
                 "Target": "01F075B3", 
                 "Flags": {}, 
-                "Unused": "00 4D 22"
+                "Unused": "00 A1 2A"
             }, 
             "Conditions": [
                 {
@@ -234,7 +238,7 @@
             "QSTA - Target": {
                 "Target": "01F00742", 
                 "Flags": {}, 
-                "Unused": "00 4D 22"
+                "Unused": "00 A1 2A"
             }, 
             "Conditions": [
                 {
@@ -263,7 +267,7 @@
             "QSTA - Target": {
                 "Target": "01F0001A", 
                 "Flags": {}, 
-                "Unused": "00 4D 22"
+                "Unused": "00 A1 2A"
             }, 
             "Conditions": [
                 {
@@ -302,7 +306,7 @@
             "QSTA - Target": {
                 "Target": "01F00742", 
                 "Flags": {}, 
-                "Unused": "00 4D 22"
+                "Unused": "00 A1 2A"
             }, 
             "Conditions": [
                 {
@@ -331,7 +335,7 @@
             "QSTA - Target": {
                 "Target": "01F00742", 
                 "Flags": {}, 
-                "Unused": "00 4D 22"
+                "Unused": "00 A1 2A"
             }, 
             "Conditions": [
                 {

@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 1407, 
+        "Data Size": 2393, 
         "Record Flags": {}, 
         "FormID": "01F8B82D", 
         "Version Control Info": "00 00 00 00"
@@ -9,13 +9,13 @@
     "EDID - Editor ID": "fbmwbmHeartFangHuntScript", 
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
-        "RefCount": 6, 
-        "CompiledSize": 402, 
+        "RefCount": 11, 
+        "CompiledSize": 612, 
         "VariableCount": 2, 
         "Type": "Object:0"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 BF 00 00 00 00 00 59 10 7B 00 01 00 71 00 41 73 20 48 65 61 72 74 2D 46 61 6E 67 20 62 72 65 61 74 68 65 73 20 68 69 73 20 6C 61 73 74 20 62 72 65 61 74 68 2C 20 74 68 65 20 48 69 72 63 69 6E 65 27 73 20 52 69 6E 67 20 64 69 73 61 70 70 65 61 72 73 20 66 72 6F 6D 20 68 69 73 20 66 69 6E 67 65 72 2C 20 61 6E 64 20 68 61 73 20 66 6F 75 6E 64 20 61 20 6E 65 77 20 6F 77 6E 65 72 2E 00 00 00 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 39 10 0A 00 02 00 72 04 00 6E 45 00 00 00 11 00 00 00 10 00 06 00 00 00 B9 00 00 00 16 00 1C 00 02 00 18 00 20 72 04 00 73 03 00 20 32 20 3D 3D 20 73 02 00 20 30 20 3D 3D 20 26 26 56 10 08 00 02 00 72 01 00 72 05 00 15 00 07 00 73 02 00 02 00 20 31 18 00 10 00 05 00 0C 00 20 72 04 00 73 03 00 20 33 20 3D 3D 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 13 19 05 00 01 00 72 02 00 15 00 0A 00 72 04 00 73 03 00 02 00 20 35 10 10 09 00 02 00 21 00 6E 64 00 00 00 16 10 05 00 01 00 72 01 00 18 00 10 00 02 00 0C 00 20 72 06 00 73 01 00 20 31 20 3D 3D 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 13 19 05 00 01 00 72 02 00 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "scn fbmwbmHeartFangHuntScript\n\nshort doonce\n\nbegin ondeath\n	Message \"As Heart-Fang breathes his last breath, the Hircine's Ring disappears from his finger, and has found a new owner.\"\n	Player.AddItem fbmwBMringhircine 1\n	removeitem fbmwBMringhircine 1\n	removeitem fbmwbmwerewolfclaw 1\n	SetStage fbmwBMWildHunt 69\nend\n\nbegin gamemode\n	if(fbmwBMWildHunt.fangtalk == 2)&&(doonce == 0)\n		StartConversation Player GREETING\n		set doonce to 1\n	elseif(fbmwBMWildHunt.fangtalk == 3)\n		additem fbmwBMringhircine 1\n		EquipItem2 fbmwBMringhircine\n		set fbmwBMWildHunt.fangtalk to 5\n		modav aggression 100\n		StartCombat Player\n	elseif(fbmwBMAAAImAWere.iswerewolf == 1)\n		additem fbmwBMringhircine 1\n		EquipItem2 fbmwBMringhircine\n	;	modav aggression 100\n	;	StartCombat Player\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 658 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 05 01 00 00 00 00 59 10 7B 00 01 00 71 00 41 73 20 48 65 61 72 74 2D 46 61 6E 67 20 62 72 65 61 74 68 65 73 20 68 69 73 20 6C 61 73 74 20 62 72 65 61 74 68 2C 20 74 68 65 20 48 69 72 63 69 6E 65 27 73 20 52 69 6E 67 20 64 69 73 61 70 70 65 61 72 73 20 66 72 6F 6D 20 68 69 73 20 66 69 6E 67 65 72 2C 20 61 6E 64 20 68 61 73 20 66 6F 75 6E 64 20 61 20 6E 65 77 20 6F 77 6E 65 72 2E 00 00 00 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00 02 10 0A 00 02 00 72 05 00 6E 01 00 00 00 02 10 0A 00 02 00 72 06 00 6E 01 00 00 00 02 10 0A 00 02 00 72 07 00 6E 01 00 00 00 02 10 0A 00 02 00 72 08 00 6E 01 00 00 00 39 10 0A 00 02 00 72 09 00 6E 45 00 00 00 11 00 00 00 10 00 06 00 00 00 45 01 00 00 16 00 1C 00 02 00 18 00 20 72 09 00 73 03 00 20 32 20 3D 3D 20 73 02 00 20 30 20 3D 3D 20 26 26 56 10 08 00 02 00 72 01 00 72 0A 00 15 00 07 00 73 02 00 02 00 20 31 18 00 10 00 0A 00 0C 00 20 72 09 00 73 03 00 20 33 20 3D 3D 52 10 0A 00 02 00 72 04 00 6E 01 00 00 00 52 10 0A 00 02 00 72 05 00 6E 01 00 00 00 52 10 0A 00 02 00 72 06 00 6E 01 00 00 00 52 10 0A 00 02 00 72 07 00 6E 01 00 00 00 52 10 0A 00 02 00 72 08 00 6E 01 00 00 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 13 19 05 00 01 00 72 02 00 15 00 0A 00 72 09 00 73 03 00 02 00 20 35 10 10 09 00 02 00 21 00 6E 64 00 00 00 16 10 05 00 01 00 72 01 00 18 00 10 00 07 00 0C 00 20 72 0B 00 73 01 00 20 31 20 3D 3D 52 10 0A 00 02 00 72 04 00 6E 01 00 00 00 52 10 0A 00 02 00 72 05 00 6E 01 00 00 00 52 10 0A 00 02 00 72 06 00 6E 01 00 00 00 52 10 0A 00 02 00 72 07 00 6E 01 00 00 00 52 10 0A 00 02 00 72 08 00 6E 01 00 00 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 13 19 05 00 01 00 72 02 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwbmHeartFangHuntScript\n\nshort doonce\n\nbegin ondeath\n	Message \"As Heart-Fang breathes his last breath, the Hircine's Ring disappears from his finger, and has found a new owner.\"\n	Player.AddItem fbmwBMringhircine 1\n	removeitem fbmwBMringhircine 1\n	removeitem fbmwbmwerewolfclaw 1\n	AddItem 0BMUNordicMailUBoots 1\n	AddItem 0BMUNordicMailUcuirass 1\n	AddItem 0BMUNordicMailUgauntletR 1\n	AddItem 0BMUNordicMailUgreaves 1\n	AddItem 0BMUaxeUHeartfangUUnique 1\n	SetStage fbmwBMWildHunt 69\nend\n\nbegin gamemode\n	if(fbmwBMWildHunt.fangtalk == 2)&&(doonce == 0)\n		StartConversation Player GREETING\n		set doonce to 1\n	elseif(fbmwBMWildHunt.fangtalk == 3)\n		; get naked: workaround for Oblivion engine not equipping werewolf 'clothing'\n		RemoveItem 0BMUNordicMailUBoots 1\n		RemoveItem 0BMUNordicMailUcuirass 1\n		RemoveItem 0BMUNordicMailUgauntletR 1\n		RemoveItem 0BMUNordicMailUgreaves 1\n		RemoveItem 0BMUaxeUHeartfangUUnique 1\n		;\n		additem fbmwBMringhircine 1\n		EquipItem2 fbmwBMringhircine\n		set fbmwBMWildHunt.fangtalk to 5\n		modav aggression 100\n		StartCombat Player\n	elseif(fbmwBMAAAImAWere.iswerewolf == 1)\n		; get naked: workaround for Oblivion engine not equipping werewolf 'clothing'\n		RemoveItem 0BMUNordicMailUBoots 1\n		RemoveItem 0BMUNordicMailUcuirass 1\n		RemoveItem 0BMUNordicMailUgauntletR 1\n		RemoveItem 0BMUNordicMailUgreaves 1\n		RemoveItem 0BMUaxeUHeartfangUUnique 1\n		;\n		additem fbmwBMringhircine 1\n		EquipItem2 fbmwBMringhircine\n	;	modav aggression 100\n	;	StartCombat Player\n	endif\nend\n\n;<CSEBlock>\n;<CSECaretPos> 1375 </CSECaretPos>\n;</CSEBlock>", 
     "Local Variables": [
         {
             "SLSD - Local Variable Data": {
@@ -33,6 +33,11 @@
         "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
         "SCRO - Global Reference": "fbmwBMringhircine [CLOT:0102A414]", 
         "SCRO - Global Reference": "fbmwbmwerewolfclaw [WEAP:010168D5]", 
+        "SCRO - Global Reference": "0BMUNordicMailUBoots [ARMO:01120181]", 
+        "SCRO - Global Reference": "0BMUNordicMailUcuirass [ARMO:01120182]", 
+        "SCRO - Global Reference": "0BMUNordicMailUgauntletR [ARMO:01120186]", 
+        "SCRO - Global Reference": "0BMUNordicMailUgreaves [ARMO:01120188]", 
+        "SCRO - Global Reference": "0BMUaxeUHeartfangUUnique [WEAP:0110025C]", 
         "SCRO - Global Reference": "fbmwBMWildHunt [QUST:0101B6DA]", 
         "SCRO - Global Reference": "GREETING [DIAL:000000C8]", 
         "SCRO - Global Reference": "fbmwBMAAAImAWere [QUST:01F8B08D]"

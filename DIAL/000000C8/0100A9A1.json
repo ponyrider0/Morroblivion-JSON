@@ -5,7 +5,7 @@
         "Data Size": 378, 
         "Record Flags": {}, 
         "FormID": "0100A9A1", 
-        "Version Control Info": "00 00 00 00"
+        "Version Control Info": "16 1A 00 00"
     }, 
     "DATA - DATA": {
         "Type": "00", 
@@ -13,7 +13,7 @@
         "Flags": {}
     }, 
     "QSTI - Quest": "fbmwMSGreetings [QUST:01F2A564]", 
-    "PNAM - Previous INFO": "0100A9A0", 
+    "PNAM - Previous INFO": "0100A99E", 
     "Responses": [
         {
             "TRDT - Response Data": {
@@ -29,22 +29,22 @@
     ], 
     "Conditions": [
         {
+            "Type": "02", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetVampire:40", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
             "Type": "00", 
             "Unused": "00 00 00", 
             "Comparison Value": 0.000000000000000, 
             "Function": "GetStage:58", 
             "Unused": "00 00", 
             "Parameter #1": "fbmwVAShashev "Shashev's Key" [QUST:01003BC6]", 
-            "Parameter #2": "00 00 00 00", 
-            "Unused": "00000000"
-        }, 
-        {
-            "Type": "60", 
-            "Unused": "00 00 00", 
-            "Comparison Value": 1.000000000000000, 
-            "Function": "GetGlobalValue:74", 
-            "Unused": "00 00", 
-            "Parameter #1": "fbmwPCVampire [GLOB:01F8ACE1]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }, 

@@ -2,7 +2,7 @@
     "Topic": "1initiationSrite [DIAL:01310874]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 729, 
+        "Data Size": 784, 
         "Record Flags": {}, 
         "FormID": "01AAD5D6", 
         "Version Control Info": "00 00 00 00"
@@ -85,15 +85,16 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 1, 
-            "CompiledSize": 14, 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 28 00 00 00", 
-        "SCTX - Result script source": "setstage FBMWMQ06 40", 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 28 00 00 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "setstage FBMWMQ06 40\r\naddtopic 1UrshilakuSburialScaverns", 
         "References": [
-            "SCRO - Global Reference": "fbmwMQ06 [QUST:01001DBE]"
+            "SCRO - Global Reference": "fbmwMQ06 [QUST:01001DBE]", 
+            "SCRO - Global Reference": "1UrshilakuSburialScaverns [DIAL:0131067B]"
         ]
     }
 }

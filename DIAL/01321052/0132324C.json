@@ -2,10 +2,10 @@
     "Topic": "1StaffSofSMagnus3 [DIAL:01321052]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 282, 
+        "Data Size": 562, 
         "Record Flags": {}, 
         "FormID": "0132324C", 
-        "Version Control Info": "00 00 00 00"
+        "Version Control Info": "08 1A 00 00"
     }, 
     "DATA - DATA": {
         "Type": "00", 
@@ -13,7 +13,7 @@
         "Flags": {}
     }, 
     "QSTI - Quest": "fbmwMSMuseum [QUST:0101C629]", 
-    "PNAM - Previous INFO": "0132324B", 
+    "PNAM - Previous INFO": "00000000", 
     "Responses": [
         {
             "TRDT - Response Data": {
@@ -23,7 +23,7 @@
                 "Response number": "01", 
                 "Unused": "CD CD CD"
             }, 
-            "NAM1 - Response Text": "Quite an addition for our collection.  It is one of the oldest artifacts in all of Tamriel, to my knowledge.  Thank you, outlander.", 
+            "NAM1 - Response Text": "Quite an addition for our collection. It is one of the oldest artifacts in all of Tamriel, to my knowledge. Thank you, outlander.", 
             "NAM2 - Actor notes": ""
         }
     ], 
@@ -52,10 +52,18 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 0, 
-            "CompiledSize": 0, 
+            "RefCount": 4, 
+            "CompiledSize": 63, 
             "VariableCount": 0, 
             "Type": "Object:0"
-        }
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 15 00 0A 00 72 04 00 73 1A 00 02 00 20 31 1C 00 02 00 21 10 00 00 15 00 13 00 72 04 00 73 23 00 0B 00 20 72 04 00 73 23 00 20 31 20 2B", 
+        "SCTX - Result script source": "player.removeitem 0staffUmagnusUunique 1\r\nset fbmwMSMuseum.staffmagnus to 1\r\nmwMagnusMuseumREF.enable\r\nset fbmwMSMuseum.ItemsDonated to (fbmwMSMuseum.ItemsDonated + 1)", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "mwMagnusMuseumREF [REFR:01F04651]", 
+            "SCRO - Global Reference": "0staffUmagnusUunique [WEAP:01100191]", 
+            "SCRO - Global Reference": "fbmwMSMuseum [QUST:0101C629]"
+        ]
     }
 }

@@ -1,10 +1,10 @@
 {
     "Record Header": {
         "Signature": "QUST", 
-        "Data Size": 1688, 
+        "Data Size": 1835, 
         "Record Flags": {}, 
         "FormID": "0101AF86", 
-        "Version Control Info": "00 00 00 00"
+        "Version Control Info": "1A 4E 00 00"
     }, 
     "EDID - Editor ID": "fbmwBMBeasts", 
     "SCRI - Script": "fbmwBMBeastsScript [SCPT:0101E4C9]", 
@@ -42,7 +42,7 @@
             "Log Entries": [
                 {
                     "QSDT - Stage Flags": {}, 
-                    "CNAM - Log Entry": "As I approached the Beast Stone, magical writing appeared on its surface. It said: \"Travel south. Find the Good Beast and ease its suffering.\"", 
+                    "CNAM - Log Entry": "As I approached the Beast Stone, magical writing appeared on its surface. It said: \"Travel east. Find the Good Beast and ease its suffering.\"", 
                     "Result Script": {
                         "SCHR - Basic Script Data": {
                             "Unused": "00 00 00 00", 
@@ -166,6 +166,66 @@
                             "Type": "Quest:1"
                         }
                     }
+                }
+            ]
+        }
+    ], 
+    "Targets": [
+        {
+            "QSTA - Target": {
+                "Target": "01F8B1C3", 
+                "Flags": {}, 
+                "Unused": "00 B4 2B"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "80", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 50.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwBMBeasts "The Ritual of Beasts" [QUST:0101AF86]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "01F02943", 
+                "Flags": {}, 
+                "Unused": "00 B4 2B"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 50.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwBMBeasts "The Ritual of Beasts" [QUST:0101AF86]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
                 }
             ]
         }

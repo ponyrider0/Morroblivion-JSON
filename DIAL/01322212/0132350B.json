@@ -2,7 +2,7 @@
     "Topic": "1Chrysamere1 [DIAL:01322212]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 584, 
+        "Data Size": 471, 
         "Record Flags": {}, 
         "FormID": "0132350B", 
         "Version Control Info": "00 00 00 00"
@@ -37,28 +37,18 @@
             "Parameter #1": "0VarusSVatinius "Varus Vatinius" [NPC_:012602D1]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
-        }, 
-        {
-            "Type": "00", 
-            "Unused": "00 00 00", 
-            "Comparison Value": 1.000000000000000, 
-            "Function": "GetInFaction:71", 
-            "Unused": "00 00", 
-            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
-            "Parameter #2": "00 00 00 00", 
-            "Unused": "00000000"
         }
     ], 
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
             "RefCount": 4, 
-            "CompiledSize": 95, 
+            "CompiledSize": 60, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 59 10 1F 00 01 00 15 00 50 72 6F 6D 6F 74 69 6F 6E 20 41 63 63 65 70 74 65 64 2E 2E 2E 00 00 00 00 00 00 15 00 0A 00 72 04 00 73 01 00 02 00 20 34", 
-        "SCTX - Result script source": "setstage fbmwilknightshield 100\r\nadditem 0claymoreuchrysamereuunique 1\r\nplayer.removeitem 0claymoreuchrysamereuunique 1\r\nMessage \"Promotion Accepted...\"\r\nSET fbmwILAdvancement.LegionAdvancement TO 4", 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 39 10 0A 00 02 00 72 04 00 6E 51 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwilknightshield 100\r\nadditem 0claymoreuchrysamereuunique 1\r\nplayer.removeitem 0claymoreuchrysamereuunique 1\r\nsetstage fbmwILAdvancement 81", 
         "References": [
             "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
             "SCRO - Global Reference": "fbmwILKnightShield [QUST:010058E9]", 

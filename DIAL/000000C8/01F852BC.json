@@ -2,7 +2,7 @@
     "Topic": "GREETING [DIAL:000000C8]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 287, 
+        "Data Size": 332, 
         "Record Flags": {}, 
         "FormID": "01F852BC", 
         "Version Control Info": "00 00 00 00"
@@ -23,11 +23,21 @@
                 "Response number": "01", 
                 "Unused": "77 4D 47"
             }, 
-            "NAM1 - Response Text": "Ajira has some duties for Ajira's good friend.", 
+            "NAM1 - Response Text": "Ajira has some duties for Ajira's good friend,&sUActnQuick1;.", 
             "NAM2 - Actor notes": ""
         }
     ], 
     "Conditions": [
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 6.000000000000000, 
+            "Function": "GetFactionRank:73", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMagesGuild "Mages Guild" [FACT:0100761B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
         {
             "Type": "60", 
             "Unused": "00 00 00", 

@@ -2,7 +2,7 @@
     "Topic": "1snowSbearSarmor [DIAL:0131135C]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 813, 
+        "Data Size": 925, 
         "Record Flags": {}, 
         "FormID": "01321184", 
         "Version Control Info": "00 00 00 00"
@@ -10,17 +10,12 @@
     "DATA - DATA": {
         "Type": "00", 
         "Next Speaker": "00", 
-        "Flags": {}
+        "Flags": {
+            "Goodbye": true
+        }
     }, 
-    "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
-    "PNAM - Previous INFO": "01321181", 
-    "Add topics": [
-        "NAME - Topic": "013113F5", 
-        "NAME - Topic": "0131135C", 
-        "NAME - Topic": "01310C77", 
-        "NAME - Topic": "013109DB", 
-        "NAME - Topic": "01310CF8"
-    ], 
+    "QSTI - Quest": "fbmwBMFurArmor [QUST:0101B6C5]", 
+    "PNAM - Previous INFO": "01F8EB83", 
     "Responses": [
         {
             "TRDT - Response Data": {
@@ -69,6 +64,16 @@
     ], 
     "Conditions": [
         {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMFurArmor "Fur Armor" [QUST:0101B6C5]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
             "Type": "00", 
             "Unused": "00 00 00", 
             "Comparison Value": 1.000000000000000, 
@@ -92,10 +97,17 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 0, 
-            "CompiledSize": 0, 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
             "VariableCount": 0, 
             "Type": "Object:0"
-        }
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 39 10 0A 00 02 00 72 03 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "player.additem 0scufuruarmor 1\r\nSetstage fbmwBMFurArmor 10", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0scUfurUarmor [BOOK:0118026C]", 
+            "SCRO - Global Reference": "fbmwBMFurArmor [QUST:0101B6C5]"
+        ]
     }
 }

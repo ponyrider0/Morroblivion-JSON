@@ -2,10 +2,10 @@
     "Topic": "1someoneSkilled [DIAL:01310958]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 699, 
+        "Data Size": 755, 
         "Record Flags": {}, 
         "FormID": "01F8A51C", 
-        "Version Control Info": "00 00 00 00"
+        "Version Control Info": "16 1A 00 00"
     }, 
     "DATA - DATA": {
         "Type": "00", 
@@ -13,7 +13,10 @@
         "Flags": {}
     }, 
     "QSTI - Quest": "fbmwVAShashev [QUST:01003BC6]", 
-    "PNAM - Previous INFO": "01F8A51B", 
+    "PNAM - Previous INFO": "01F8A51A", 
+    "Add topics": [
+        "NAME - Topic": "01310A1D"
+    ], 
     "Responses": [
         {
             "TRDT - Response Data": {
@@ -40,22 +43,22 @@
     ], 
     "Conditions": [
         {
-            "Type": "00", 
+            "Type": "02", 
             "Unused": "00 00 00", 
-            "Comparison Value": 10.000000000000000, 
-            "Function": "GetStage:58", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetItemCount:47", 
             "Unused": "00 00", 
-            "Parameter #1": "fbmwVAShashev "Shashev's Key" [QUST:01003BC6]", 
+            "Parameter #1": "0keyUshashev "Shashev's Key" [KEYM:0140020C]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }, 
         {
             "Type": "00", 
             "Unused": "00 00 00", 
-            "Comparison Value": 1.000000000000000, 
-            "Function": "GetIsID:72", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
             "Unused": "00 00", 
-            "Parameter #1": "0sirilonwe "Sirilonwe" [NPC_:0126017A]", 
+            "Parameter #1": "fbmwVAShashev "Shashev's Key" [QUST:01003BC6]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }, 
@@ -70,12 +73,12 @@
             "Unused": "00000000"
         }, 
         {
-            "Type": "02", 
+            "Type": "00", 
             "Unused": "00 00 00", 
             "Comparison Value": 1.000000000000000, 
-            "Function": "GetItemCount:47", 
+            "Function": "GetIsID:72", 
             "Unused": "00 00", 
-            "Parameter #1": "0keyUshashev "Shashev's Key" [KEYM:0140020C]", 
+            "Parameter #1": "0sirilonwe "Sirilonwe" [NPC_:0126017A]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }
@@ -83,17 +86,18 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 3, 
-            "CompiledSize": 46, 
+            "RefCount": 4, 
+            "CompiledSize": 55, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00", 
-        "SCTX - Result script source": "setstage fbmwvashashev 100\r\nplayer.removeitem 0keyushashev 1\r\nadditem 0keyushashev 1", 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 36 10 05 00 01 00 72 04 00", 
+        "SCTX - Result script source": "setstage fbmwvashashev 100\r\nplayer.removeitem 0keyushashev 1\r\nadditem 0keyushashev 1\r\nstartquest fbmwVAVampDust", 
         "References": [
             "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
             "SCRO - Global Reference": "fbmwVAShashev [QUST:01003BC6]", 
-            "SCRO - Global Reference": "0keyUshashev [KEYM:0140020C]"
+            "SCRO - Global Reference": "0keyUshashev [KEYM:0140020C]", 
+            "SCRO - Global Reference": "fbmwVAVampDust [QUST:01003BCE]"
         ]
     }
 }

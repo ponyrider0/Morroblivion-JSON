@@ -2,7 +2,7 @@
     "Topic": "1Eggmine [DIAL:01310C65]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 340, 
+        "Data Size": 370, 
         "Record Flags": {}, 
         "FormID": "01F8A79D", 
         "Version Control Info": "00 00 00 00"
@@ -29,7 +29,17 @@
     ], 
     "Conditions": [
         {
-            "Type": "00", 
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "0keyUgnisisUeggmine "Gnisis Eggmine Key" [KEYM:01400092]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "02", 
             "Unused": "00 00 00", 
             "Comparison Value": 1.000000000000000, 
             "Function": "GetPCInFaction:132", 

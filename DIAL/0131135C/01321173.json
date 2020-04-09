@@ -2,18 +2,20 @@
     "Topic": "1snowSbearSarmor [DIAL:0131135C]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 233, 
+        "Data Size": 297, 
         "Record Flags": {}, 
         "FormID": "01321173", 
-        "Version Control Info": "00 00 00 00"
+        "Version Control Info": "11 19 00 00"
     }, 
     "DATA - DATA": {
         "Type": "00", 
         "Next Speaker": "00", 
-        "Flags": {}
+        "Flags": {
+            "Goodbye": true
+        }
     }, 
-    "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
-    "PNAM - Previous INFO": "01321172", 
+    "QSTI - Quest": "fbmwBMFurArmor [QUST:0101B6C5]", 
+    "PNAM - Previous INFO": "01F8EB84", 
     "Add topics": [
         "NAME - Topic": "013113F5"
     ], 
@@ -26,11 +28,31 @@
                 "Response number": "01", 
                 "Unused": "CD CD CD"
             }, 
-            "NAM1 - Response Text": "Your custom Snow Bear Helm isn't ready yet, outlander.  Come back later.", 
+            "NAM1 - Response Text": "Your custom Snow Bear Helm isn't ready yet,&sUActnQuick1;.  Come back later.", 
             "NAM2 - Actor notes": ""
         }
     ], 
     "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMFurArmor "Fur Armor" [QUST:0101B6C5]", 
+            "Parameter #2": "BearHelmet", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "04", 
+            "Unused": "00 00 00", 
+            "Comparison Value": "00000039", 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMFurArmor "Fur Armor" [QUST:0101B6C5]", 
+            "Parameter #2": "StartDay", 
+            "Unused": "00000000"
+        }, 
         {
             "Type": "00", 
             "Unused": "00 00 00", 

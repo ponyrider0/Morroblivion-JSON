@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 3209, 
+        "Data Size": 4652, 
         "Record Flags": {}, 
         "FormID": "01006BD1", 
         "Version Control Info": "00 00 00 00"
@@ -9,13 +9,13 @@
     "EDID - Editor ID": "fbmwTRSothaSilQuestScript", 
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
-        "RefCount": 7, 
-        "CompiledSize": 385, 
-        "VariableCount": 21, 
+        "RefCount": 8, 
+        "CompiledSize": 714, 
+        "VariableCount": 23, 
         "Type": "Quest:1"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 73 01 00 00 16 00 23 00 03 00 1F 00 20 72 03 00 58 43 10 05 00 01 00 72 04 00 20 31 20 3D 3D 20 73 01 00 20 31 20 3D 3D 20 26 26 39 10 0A 00 02 00 72 05 00 6E 14 00 00 00 15 00 07 00 73 01 00 02 00 20 30 1C 00 01 00 22 10 00 00 19 00 00 00 16 00 0E 00 02 00 0A 00 20 73 02 00 20 31 30 20 3D 3D 1C 00 02 00 56 10 08 00 02 00 72 02 00 72 06 00 15 00 08 00 73 02 00 03 00 20 31 31 19 00 00 00 16 00 0E 00 02 00 0A 00 20 73 02 00 20 32 30 20 3D 3D 1C 00 02 00 56 10 08 00 02 00 72 02 00 72 06 00 15 00 08 00 73 02 00 03 00 20 32 31 19 00 00 00 16 00 0E 00 02 00 0A 00 20 73 02 00 20 33 30 20 3D 3D 1C 00 02 00 56 10 08 00 02 00 72 02 00 72 06 00 15 00 08 00 73 02 00 03 00 20 33 31 19 00 00 00 16 00 0E 00 02 00 0A 00 20 73 02 00 20 34 30 20 3D 3D 1C 00 02 00 56 10 08 00 02 00 72 02 00 72 06 00 15 00 09 00 73 02 00 04 00 20 31 30 30 19 00 00 00 16 00 23 00 01 00 1F 00 20 73 02 00 20 31 30 30 20 3D 3D 20 58 3A 10 05 00 01 00 72 05 00 20 37 30 20 3D 3D 20 26 26 1C 00 02 00 16 10 05 00 01 00 72 03 00 19 00 00 00 16 00 0D 00 01 00 09 00 20 73 01 00 20 31 20 3D 3D 1C 00 03 00 9E 10 05 00 01 00 72 07 00 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "Scn fbmwTRSothaSilQuestScript\n\n;###Variables for the quest###\nshort Sothateleport\nshort state\nshort Azurastate\nshort doonce\nshort gamestate\n;###Variables for the Fabricant Machine###\nshort ActSothaMachDoor2State\nshort ActSothaMachDoor1State\nshort ActSothaMachInside\n;###Variables for the various doors that can't be accessed via local scripts###\nshort SothaPreDoor1state\nshort SothaPreDoor2state\nshort SothaPreDoor3state\nshort SothaPreDoor4state\nshort SothaPreDoor5state\nshort SothaPreDoor6state\nshort SothaPreDoor7state\nshort SothaPreDoor8state\nshort SothaPreDoor9state\nshort SothaPreDoor10state\nshort SothaPreDoor11state\n\nshort actsothaoilbridgeState\n\nbegin gamemode\n\n	if Player.GetInCell SothaSSilVSOuterSFloodedSHalls == 1 && Sothateleport == 1\n		setstage fbmwTRSothaSil 20\n		set Sothateleport to 0\n		fbmwAlmalexiabaseREF.disable\n	endif\n\n\n	if state==10\n		fbmwTRSothaSilAlmalexiaREF.StartConversation fbmwTRSothaSilAlmalexiaREF 1TRAlmalexiaEndTalk\n		set state to 11\n	endif\n\n	if state==20\n		fbmwTRSothaSilAlmalexiaREF.StartConversation fbmwTRSothaSilAlmalexiaREF 1TRAlmalexiaEndTalk\n		set state to 21\n	endif\n\n	if state==30\n		fbmwTRSothaSilAlmalexiaREF.StartConversation fbmwTRSothaSilAlmalexiaREF 1TRAlmalexiaEndTalk\n		set state to 31\n	endif\n\n	if state==40\n		fbmwTRSothaSilAlmalexiaREF.StartConversation fbmwTRSothaSilAlmalexiaREF 1TRAlmalexiaEndTalk\n		set state to 100\n	endif\n\n	if state == 100 && GetStage fbmwTRSothaSil ==70\n		fbmwTRSothaSilAlmalexiaREF.StartCombat Player\n	endif\n\n\n	if Sothateleport == 1\n		Player.moveto fbmwSothaTeleportMarker\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 23 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 BC 02 00 00 16 00 14 00 01 00 10 00 20 58 3A 10 05 00 01 00 72 04 00 20 35 30 20 3C 15 00 07 00 66 16 00 02 00 20 30 19 00 00 00 16 00 15 00 0F 00 11 00 20 58 3A 10 05 00 01 00 72 04 00 20 35 30 20 3D 3D 15 00 09 00 66 16 00 04 00 20 30 2E 35 16 00 11 00 02 00 0D 00 20 72 04 00 73 02 00 20 31 30 20 3D 3D 1C 00 01 00 56 10 08 00 02 00 72 01 00 72 05 00 15 00 0B 00 72 04 00 73 02 00 03 00 20 31 31 18 00 11 00 02 00 0D 00 20 72 04 00 73 02 00 20 32 30 20 3D 3D 1C 00 01 00 56 10 08 00 02 00 72 01 00 72 05 00 15 00 0B 00 72 04 00 73 02 00 03 00 20 32 31 18 00 11 00 02 00 0D 00 20 72 04 00 73 02 00 20 33 30 20 3D 3D 1C 00 01 00 56 10 08 00 02 00 72 01 00 72 05 00 15 00 0B 00 72 04 00 73 02 00 03 00 20 33 31 18 00 11 00 03 00 0D 00 20 72 04 00 73 02 00 20 34 30 20 3D 3D 1C 00 01 00 56 10 08 00 02 00 72 01 00 72 05 00 15 00 0C 00 72 04 00 73 02 00 04 00 20 31 30 30 15 00 07 00 66 16 00 02 00 20 30 19 00 00 00 19 00 00 00 16 00 16 00 12 00 12 00 20 58 3A 10 05 00 01 00 72 04 00 20 31 30 30 20 3D 3D 15 00 09 00 66 16 00 04 00 20 30 2E 35 16 00 1F 00 0F 00 1B 00 20 72 02 00 73 03 00 20 32 20 3D 3D 20 72 02 00 73 06 00 20 31 20 3D 3D 20 26 26 16 00 10 00 03 00 0C 00 20 72 04 00 73 05 00 20 31 30 20 3C 15 00 0B 00 72 04 00 73 05 00 03 00 20 31 30 1C 00 02 00 56 10 08 00 02 00 72 02 00 72 06 00 15 00 0B 00 72 04 00 73 05 00 03 00 20 31 31 19 00 00 00 16 00 11 00 02 00 0D 00 20 72 04 00 73 05 00 20 31 32 20 3D 3D 1C 00 02 00 56 10 08 00 02 00 72 02 00 72 06 00 15 00 0B 00 72 04 00 73 05 00 03 00 20 31 33 19 00 00 00 16 00 11 00 04 00 0D 00 20 72 04 00 73 05 00 20 31 34 20 3D 3D 1C 00 02 00 56 10 08 00 02 00 72 02 00 72 06 00 15 00 0B 00 72 04 00 73 05 00 03 00 20 31 35 15 00 0A 00 72 02 00 73 03 00 02 00 20 33 15 00 07 00 66 16 00 02 00 20 30 19 00 00 00 19 00 00 00 19 00 00 00 16 00 23 00 02 00 1F 00 20 72 03 00 58 43 10 05 00 01 00 72 07 00 20 31 20 3D 3D 20 73 01 00 20 31 20 3D 3D 20 26 26 39 10 0A 00 02 00 72 04 00 6E 14 00 00 00 15 00 07 00 73 01 00 02 00 20 30 19 00 00 00 16 00 0D 00 01 00 09 00 20 73 01 00 20 31 20 3D 3D 1C 00 03 00 9E 10 05 00 01 00 72 08 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwTRSothaSilQuestScript\n\n;###Variables for the quest###\nshort Sothateleport\nshort state\nshort Azurastate\nshort doonce\nshort gamestate\n;###Variables for the Fabricant Machine###\nshort ActSothaMachDoor2State\nshort ActSothaMachDoor1State\nshort ActSothaMachInside\n;###Variables for the various doors that can't be accessed via local scripts###\nshort SothaPreDoor1state\nshort SothaPreDoor2state\nshort SothaPreDoor3state\nshort SothaPreDoor4state\nshort SothaPreDoor5state\nshort SothaPreDoor6state\nshort SothaPreDoor7state\nshort SothaPreDoor8state\nshort SothaPreDoor9state\nshort SothaPreDoor10state\nshort SothaPreDoor11state\n\nshort actsothaoilbridgeState\n\nfloat fQuestDelayTime\nfloat speechtimer\n\nbegin gamemode\n\n	if GetStage fbmwTRSothaSil < 50\n		set fQuestDelayTime to 0\n	endif\n	\n	if GetStage fbmwTRSothaSil == 50\n		set fQuestDelayTime to 0.5\n\n		if fbmwTRSothaSil.state==10\n			fbmwTRSothaSilAlmalexiaREF.StartConversation fbmwTRSothaSilAlmalexiaREF 1TRAlmalexiaEndTalk\n			set fbmwTRSothaSil.state to 11\n	\n		elseif fbmwTRSothaSil.state==20\n			fbmwTRSothaSilAlmalexiaREF.StartConversation fbmwTRSothaSilAlmalexiaREF 1TRAlmalexiaEndTalk\n				set fbmwTRSothaSil.state to 21\n	\n		elseif fbmwTRSothaSil.state==30\n			fbmwTRSothaSilAlmalexiaREF.StartConversation fbmwTRSothaSilAlmalexiaREF 1TRAlmalexiaEndTalk\n			set fbmwTRSothaSil.state to 31\n	\n		elseif fbmwTRSothaSil.state==40\n			fbmwTRSothaSilAlmalexiaREF.StartConversation fbmwTRSothaSilAlmalexiaREF 1TRAlmalexiaEndTalk\n			set fbmwTRSothaSil.state to 100\n			set fQuestDelayTime to 0\n\n		endif\n	\n	endif\n\n	if GetStage fbmwTRSothaSil == 100\n		set fQuestDelayTime to 0.5\n		\n		if fbmwTRSothaSilAzuraAvatar.state == 2 && fbmwTRSothaSilAzuraAvatar.readyToTalk == 1\n			if fbmwTRSothaSil.Azurastate < 10\n				set fbmwTRSothaSil.Azurastate to 10\n				fbmwTRSothaSilAzuraAvatar.StartConversation fbmwTRSothaSilAzuraAvatar 1TRAzuraEndTalk\n				set fbmwTRSothaSil.Azurastate to 11\n			endif\n\n			if fbmwTRSothaSil.azurastate == 12\n				fbmwTRSothaSilAzuraAvatar.StartConversation fbmwTRSothaSilAzuraAvatar 1TRAzuraEndTalk\n				set fbmwTRSothaSil.Azurastate to 13\n			endif\n\n			if fbmwTRSothaSil.azurastate == 14\n				fbmwTRSothaSilAzuraAvatar.StartConversation fbmwTRSothaSilAzuraAvatar 1TRAzuraEndTalk\n				set fbmwTRSothaSil.Azurastate to 15\n				set fbmwTRSothaSilAzuraAvatar.state to 3\n				set fQuestDelayTime to 0\n			endif\n		endif\n	endif\n	\n	if Player.GetInCell SothaSSil == 1 && Sothateleport == 1\n		setstage fbmwTRSothaSil 20\n		set Sothateleport to 0\n	endif\n	\n	if Sothateleport == 1\n		Player.moveto fbmwSothaTeleportMarker\n	endif\n	\nend\n;<CSEBlock>\n;<CSECaretPos> 2339 </CSECaretPos>\n;</CSEBlock>", 
     "Local Variables": [
         {
             "SLSD - Local Variable Data": {
@@ -24,7 +24,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 F8 67 B5 1D"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "Sothateleport"
         }, 
@@ -35,7 +35,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "state"
         }, 
@@ -57,7 +57,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "69 B5 1D 18 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "Azurastate"
         }, 
@@ -68,7 +68,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "gamestate"
         }, 
@@ -79,7 +79,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "67 B5 1D 20 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "ActSothaMachDoor2State"
         }, 
@@ -90,7 +90,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "ActSothaMachDoor1State"
         }, 
@@ -101,7 +101,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "ActSothaMachInside"
         }, 
@@ -112,7 +112,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "SothaPreDoor1state"
         }, 
@@ -123,7 +123,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "SothaPreDoor2state"
         }, 
@@ -134,7 +134,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "SothaPreDoor3state"
         }, 
@@ -145,7 +145,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "SothaPreDoor4state"
         }, 
@@ -156,7 +156,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "SothaPreDoor5state"
         }, 
@@ -167,7 +167,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "SothaPreDoor6state"
         }, 
@@ -178,7 +178,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "SothaPreDoor7state"
         }, 
@@ -189,7 +189,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "SothaPreDoor8state"
         }, 
@@ -200,7 +200,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "SothaPreDoor9state"
         }, 
@@ -211,7 +211,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "01 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "SothaPreDoor10state"
         }, 
@@ -222,7 +222,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "6E B5 1D 08 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "SothaPreDoor11state"
         }, 
@@ -233,18 +233,37 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "actsothaoilbridgeState"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000016", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "fQuestDelayTime"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000017", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "speechtimer"
         }
     ], 
     "References": [
-        "SCRO - Global Reference": "fbmwAlmalexiabaseREF [ACHR:01F8B893]", 
         "SCRO - Global Reference": "fbmwTRSothaSilAlmalexiaREF [ACHR:010084C5]", 
+        "SCRO - Global Reference": "fbmwTRSothaSilAzuraAvatar [ACHR:0101335B]", 
         "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
-        "SCRO - Global Reference": "SothaSSilVSOuterSFloodedSHalls [CELL:0148051F]", 
         "SCRO - Global Reference": "fbmwTRSothaSil [QUST:0101C65C]", 
         "SCRO - Global Reference": "1TRAlmalexiaEndTalk [DIAL:010084CB]", 
+        "SCRO - Global Reference": "1TRAzuraEndTalk [DIAL:01014C61]", 
+        "SCRO - Global Reference": "SothaSSil [CELL:01480512]", 
         "SCRO - Global Reference": "fbmwSothaTeleportMarker [REFR:01006BD0]"
     ]
 }

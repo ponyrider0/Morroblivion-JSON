@@ -2,7 +2,7 @@
     "Topic": "1Pelagiad [DIAL:01310BD1]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 388, 
+        "Data Size": 446, 
         "Record Flags": {}, 
         "FormID": "01322743", 
         "Version Control Info": "00 00 00 00"
@@ -79,10 +79,15 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 0, 
-            "CompiledSize": 0, 
+            "RefCount": 1, 
+            "CompiledSize": 9, 
             "VariableCount": 0, 
             "Type": "Object:0"
-        }
+        }, 
+        "SCDA - Compiled result script": "55 10 05 00 01 00 72 01 00", 
+        "SCTX - Result script source": "showmap mwPelagiadMapMarker", 
+        "References": [
+            "SCRO - Global Reference": "mwPelagiadMapMarker [REFR:0100C570]"
+        ]
     }
 }

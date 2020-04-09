@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 707, 
+        "Data Size": 931, 
         "Record Flags": {}, 
         "FormID": "01470105", 
         "Version Control Info": "00 00 00 00"
@@ -10,12 +10,12 @@
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
         "RefCount": 0, 
-        "CompiledSize": 173, 
-        "VariableCount": 4, 
+        "CompiledSize": 229, 
+        "VariableCount": 6, 
         "Type": "Object:0"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 9F 00 00 00 15 00 07 00 66 02 00 02 00 20 31 15 00 11 00 66 01 00 0C 00 20 58 0C 10 00 00 20 66 01 00 20 2B 16 00 0E 00 01 00 0A 00 20 66 01 00 20 66 02 00 20 3C 04 10 08 00 02 00 58 6E 02 00 00 00 18 00 12 00 01 00 0E 00 20 66 01 00 20 33 20 66 02 00 20 2A 20 3C 04 10 08 00 02 00 58 6E FE FF FF FF 18 00 12 00 01 00 0E 00 20 66 01 00 20 34 20 66 02 00 20 2A 20 3C 04 10 08 00 02 00 58 6E 02 00 00 00 17 00 02 00 02 00 15 00 07 00 66 01 00 02 00 20 30 11 10 00 00 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "scriptName mwFloatScript\r\n\r\nfloat timer\r\nfloat swingTime\r\n\r\nBegin GameMode\r\n	Set swingTime to 1\r\n	Set timer to (GetSecondsPassed + timer)\r\n	if (timer < swingTime)\r\n		Rotate X 2\r\n	elseif (timer < (3 * swingTime))\r\n		Rotate X -2\r\n	elseif (timer < (4 * swingTime))\r\n		Rotate X 2\r\n	else\r\n		Set timer to 0\r\n		SetAtStart\r\n	endif\r\nEnd\r\n;<CSEBlock>\r\n;<CSECaretPos> 53 </CSECaretPos>\r\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 D7 00 00 00 16 00 0D 00 02 00 09 00 20 73 06 00 20 30 20 3D 3D 15 00 0E 00 66 05 00 09 00 20 58 0B 10 03 00 01 00 58 15 00 07 00 73 06 00 02 00 20 31 19 00 00 00 15 00 07 00 66 02 00 02 00 20 31 15 00 11 00 66 01 00 0C 00 20 58 0C 10 00 00 20 66 01 00 20 2B 16 00 0E 00 01 00 0A 00 20 66 01 00 20 66 02 00 20 3C 04 10 08 00 02 00 58 6E 02 00 00 00 18 00 12 00 01 00 0E 00 20 66 01 00 20 33 20 66 02 00 20 2A 20 3C 04 10 08 00 02 00 58 6E FE FF FF FF 18 00 12 00 01 00 0E 00 20 66 01 00 20 34 20 66 02 00 20 2A 20 3C 04 10 08 00 02 00 58 6E 02 00 00 00 17 00 02 00 02 00 15 00 07 00 66 01 00 02 00 20 30 09 10 06 00 02 00 58 66 05 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptName mwFloatScript\n\nfloat timer\nfloat swingTime\nfloat StartX\nshort init\n\nBegin GameMode\n	If init == 0\n		Set StartX to GetStartingAngle X\n		set init to 1\n	endif\n\n	Set swingTime to 1\n	Set timer to (GetSecondsPassed + timer)\n	if (timer < swingTime)\n		Rotate X 2\n	elseif (timer < (3 * swingTime))\n		Rotate X -2\n	elseif (timer < (4 * swingTime))\n		Rotate X 2\n	else\n		Set timer to 0\n		SetAngle X StartX\n	endif\nEnd\n;<CSEBlock>\n;<CSECaretPos> 391 </CSECaretPos>\n;</CSEBlock>", 
     "Local Variables": [
         {
             "SLSD - Local Variable Data": {
@@ -34,6 +34,26 @@
                 "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "swingTime"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "StartX"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "init"
         }
     ]
 }

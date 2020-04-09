@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 1776, 
+        "Data Size": 1832, 
         "Record Flags": {}, 
         "FormID": "0100A189", 
         "Version Control Info": "00 00 00 00"
@@ -10,35 +10,13 @@
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
         "RefCount": 1, 
-        "CompiledSize": 274, 
-        "VariableCount": 13, 
+        "CompiledSize": 265, 
+        "VariableCount": 14, 
         "Type": "Quest:1"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 04 01 00 00 16 00 0D 00 08 00 09 00 20 73 0D 00 20 31 20 3D 3D 16 00 0D 00 01 00 09 00 20 73 09 00 20 30 20 3D 3D 15 00 09 00 73 09 00 04 00 20 47 01 00 19 00 00 00 15 00 0F 00 73 06 00 0A 00 20 47 01 00 20 73 09 00 20 2D 16 00 0D 00 02 00 09 00 20 73 06 00 20 37 20 3E 3D 15 00 07 00 73 05 00 02 00 20 31 15 00 07 00 73 04 00 02 00 20 31 19 00 00 00 19 00 00 00 16 00 0D 00 04 00 09 00 20 73 0C 00 20 31 20 3D 3D 16 00 0D 00 01 00 09 00 20 73 0A 00 20 30 20 3D 3D 15 00 09 00 73 0A 00 04 00 20 47 01 00 19 00 00 00 15 00 0F 00 73 07 00 0A 00 20 47 01 00 20 73 0A 00 20 2D 19 00 00 00 16 00 19 00 03 00 15 00 20 73 04 00 20 30 20 3D 3D 20 73 05 00 20 31 20 3D 3D 20 26 26 16 00 0D 00 01 00 09 00 20 73 08 00 20 37 20 3E 3D 15 00 07 00 73 04 00 02 00 20 31 19 00 00 00 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "scn fbmwBmMeadHallMassacreBusiness\n\nshort localdaypassedmead\nshort localdaypassedhunt\nshort localdaypassedprofit\nshort daystartmead\nshort daystarthunter\nshort daystartprofit\nshort orderhunter ;external\nshort ordermead ;external\nshort canprofit\nshort meadarrived\nBegin GameMode\n\n	if(ordermead == 1)	;mead shipment\n		if(daystartmead == 0)\n			set daystartmead to GameDaysPassed\n		endif\n		set localdaypassedmead to (GameDaysPassed - daystartmead)\n\n		if(localdaypassedmead >= 7)\n			set meadarrived to 1\n			set canprofit to 1\n		endif\n	endif\n	if(orderhunter == 1);hunter in wild(maybe add real hunters?)\n		if(daystarthunter == 0)\n			set daystarthunter to GameDaysPassed\n		endif\n		set localdaypassedhunt to (GameDaysPassed - daystarthunter)\n	endif\n	if(canprofit == 0)&&(meadarrived == 1)\n		if(localdaypassedprofit >= 7)\n			set canprofit to 1\n		endif\n	endif\nEnd\n;<CSEBlock>\n;<CSECaretPos> 173 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 FB 00 00 00 16 00 0A 00 01 00 06 00 20 58 D4 15 00 00 15 00 07 00 66 0E 00 02 00 20 30 19 00 00 00 16 00 0D 00 04 00 09 00 20 73 0D 00 20 31 20 3D 3D 16 00 0D 00 01 00 09 00 20 73 09 00 20 30 20 3D 3D 15 00 09 00 73 09 00 04 00 20 47 01 00 19 00 00 00 15 00 0F 00 73 06 00 0A 00 20 47 01 00 20 73 09 00 20 2D 18 00 0D 00 04 00 09 00 20 73 0D 00 20 32 20 3D 3D 16 00 0D 00 01 00 09 00 20 73 0B 00 20 30 20 3D 3D 15 00 09 00 73 0B 00 04 00 20 47 01 00 19 00 00 00 15 00 0F 00 73 08 00 0A 00 20 47 01 00 20 73 0B 00 20 2D 19 00 00 00 16 00 0D 00 04 00 09 00 20 73 0C 00 20 31 20 3D 3D 16 00 0D 00 01 00 09 00 20 73 0A 00 20 30 20 3D 3D 15 00 09 00 73 0A 00 04 00 20 47 01 00 19 00 00 00 15 00 0F 00 73 07 00 0A 00 20 47 01 00 20 73 0A 00 20 2D 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwBmMeadHallMassacreBusiness\n\nshort localdaypassedmead\nshort localdaypassedhunt\nshort localdaypassedprofit\nshort daystartmead\nshort daystarthunter\nshort daystartprofit ;external reset\nshort orderhunter ;external\nshort ordermead ;external\nfloat fQuestDelayTime\n;\nBegin GameMode\nif GetGameRestarted\n  set fQuestDelayTime to 0		; set back to default\nendif\n;\n; Case 1, order Mead initially.\nif(ordermead == 1)\n  if(daystartmead == 0)\n	set daystartmead to GameDaysPassed\n  endif\n  set localdaypassedmead to (GameDaysPassed - daystartmead)\n  ;\n  ; Case 2, profit from the Mead flowing every week.\nelseif(ordermead == 2)\n  if(daystartprofit == 0)\n    set daystartprofit to GameDaysPassed\n  endif\n  set localdaypassedprofit to (GameDaysPassed - daystartprofit)\nendif\n;\n; Case 3, send out hunters.\nif(orderhunter == 1)\n  if(daystarthunter == 0)\n	set daystarthunter to GameDaysPassed\n  endif\n  set localdaypassedhunt to (GameDaysPassed - daystarthunter)\nendif\nEnd\n;<CSEBlock>\n;<CSECaretPos> 331 </CSECaretPos>\n;</CSEBlock>", 
     "Local Variables": [
-        {
-            "SLSD - Local Variable Data": {
-                "Index": "00000004", 
-                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
-                "Flags": {
-                    "IsLongOrShort": true
-                }, 
-                "Unused": "00 00 00 00 00 00 00"
-            }, 
-            "SCVR - Name": "canprofit"
-        }, 
-        {
-            "SLSD - Local Variable Data": {
-                "Index": "00000005", 
-                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
-                "Flags": {
-                    "IsLongOrShort": true
-                }, 
-                "Unused": "00 00 00 00 00 00 00"
-            }, 
-            "SCVR - Name": "meadarrived"
-        }, 
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000006", 
@@ -46,7 +24,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "DB 5B 1D 20 00 00 00"
             }, 
             "SCVR - Name": "localdaypassedmead"
         }, 
@@ -57,7 +35,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "00 00 00 CD CD CD CD"
             }, 
             "SCVR - Name": "localdaypassedhunt"
         }, 
@@ -68,7 +46,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "01 00 00 D8 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "localdaypassedprofit"
         }, 
@@ -79,7 +57,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "00 00 00 CD CD CD CD"
             }, 
             "SCVR - Name": "daystartmead"
         }, 
@@ -101,7 +79,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "C0 58 1D 20 00 00 00"
             }, 
             "SCVR - Name": "daystartprofit"
         }, 
@@ -112,7 +90,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "C0 58 1D 20 00 00 00"
             }, 
             "SCVR - Name": "orderhunter"
         }, 
@@ -123,9 +101,18 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "C2 58 1D 10 00 00 00"
             }, 
             "SCVR - Name": "ordermead"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000E", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "fQuestDelayTime"
         }
     ], 
     "References": [

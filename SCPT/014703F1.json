@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 717, 
+        "Data Size": 944, 
         "Record Flags": {}, 
         "FormID": "014703F1", 
         "Version Control Info": "00 00 00 00"
@@ -9,38 +9,44 @@
     "EDID - Editor ID": "mwBMFortDisableScript", 
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
-        "RefCount": 3, 
-        "CompiledSize": 135, 
+        "RefCount": 9, 
+        "CompiledSize": 183, 
         "VariableCount": 2, 
         "Type": "Object:0"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 79 00 00 00 16 00 21 00 02 00 1D 00 20 58 3A 10 05 00 01 00 72 02 00 20 39 33 20 3E 3D 20 73 01 00 20 31 20 3D 3D 20 26 26 21 10 00 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 16 00 22 00 02 00 1E 00 20 58 3A 10 05 00 01 00 72 03 00 20 31 30 30 20 3E 3D 20 73 02 00 20 30 20 3D 3D 20 26 26 1C 00 01 00 21 10 00 00 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "scriptName mwBMFortDisableScript\n\nshort DoOnce\nshort DoOnce1\n\nbegin gamemode\n	if (GetStage fbmwBMSmugglers >= 93 && DoOnce ==1)\n;disable\n		Enable ;placeholder\n;fbmwwellbrokenref.Enable\n;fbmwbrokenpart1.Enable\n		set DoOnce to 1\n	endif\n	if (GetStage fbmwBMMorale >= 100) && (DoOnce1 == 0)\n		fbmwbmseveriaRef.Enable\n		set DoOnce1 to 1\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 A9 00 00 00 16 00 21 00 08 00 1D 00 20 58 3A 10 05 00 01 00 72 08 00 20 39 33 20 3E 3D 20 73 01 00 20 30 20 3D 3D 20 26 26 22 10 00 00 1C 00 01 00 21 10 00 00 1C 00 02 00 21 10 00 00 1C 00 03 00 21 10 00 00 1C 00 04 00 21 10 00 00 1C 00 05 00 21 10 00 00 1C 00 06 00 21 10 00 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 16 00 22 00 02 00 1E 00 20 58 3A 10 05 00 01 00 72 09 00 20 31 30 30 20 3E 3D 20 73 02 00 20 30 20 3D 3D 20 26 26 1C 00 07 00 21 10 00 00 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptName mwBMFortDisableScript\n\nshort DoOnce\nshort DoOnce1\n\nbegin gamemode\n	if (GetStage fbmwBMSmugglers >= 93 && DoOnce == 0)\n		disable\n;		Enable ;placeholder\n		fbmwwellbrokenref.Enable\n		fbmwbrokenpart1.Enable\n		mwFrostmothRubble1.Enable\n		mwFrostmothRubble2.Enable\n		mwFrostmothRubble3.Enable\n		mwFrostmothRubble4.Enable\n		set DoOnce to 1\n	endif\n	if (GetStage fbmwBMMorale >= 100) && (DoOnce1 == 0)\n		fbmwbmseveriaRef.Enable\n		set DoOnce1 to 1\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 325 </CSECaretPos>\n;</CSEBlock>", 
     "Local Variables": [
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000001", 
-                "Unused": "62 6D 45 6E 00 00 00 00 00 00 00 00", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "70 6F 72 74 4D 41 72"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "DoOnce"
         }, 
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000002", 
-                "Unused": "62 6D 57 69 00 00 00 00 00 00 00 00", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "65 4D 61 72 6B 65 72"
+                "Unused": "00 00 00 00 00 00 00"
             }, 
             "SCVR - Name": "DoOnce1"
         }
     ], 
     "References": [
+        "SCRO - Global Reference": "fbmwwellbrokenref [REFR:01F8EB17]", 
+        "SCRO - Global Reference": "fbmwbrokenpart1 [REFR:01011A01]", 
+        "SCRO - Global Reference": "mwFrostmothRubble1 [REFR:01F8EC59]", 
+        "SCRO - Global Reference": "mwFrostmothRubble2 [REFR:01F8EC5B]", 
+        "SCRO - Global Reference": "mwFrostmothRubble3 [REFR:01F8EC5C]", 
+        "SCRO - Global Reference": "mwFrostmothRubble4 [REFR:01F8EC5A]", 
         "SCRO - Global Reference": "fbmwbmseveriaRef [ACHR:01F01767]", 
         "SCRO - Global Reference": "fbmwBMSmugglers [QUST:0101B6D3]", 
         "SCRO - Global Reference": "fbmwBMMorale [QUST:0101B6CE]"

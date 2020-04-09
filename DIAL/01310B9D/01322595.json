@@ -2,7 +2,7 @@
     "Topic": "1TelSAruhn [DIAL:01310B9D]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 521, 
+        "Data Size": 579, 
         "Record Flags": {}, 
         "FormID": "01322595", 
         "Version Control Info": "00 00 00 00"
@@ -81,10 +81,15 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 0, 
-            "CompiledSize": 0, 
+            "RefCount": 1, 
+            "CompiledSize": 9, 
             "VariableCount": 0, 
             "Type": "Object:0"
-        }
+        }, 
+        "SCDA - Compiled result script": "55 10 05 00 01 00 72 01 00", 
+        "SCTX - Result script source": "showmap mwTelAruhnMapMarker", 
+        "References": [
+            "SCRO - Global Reference": "mwTelAruhnMapMarker [REFR:0100AFC9]"
+        ]
     }
 }

@@ -2,7 +2,7 @@
     "Topic": "1Balmora [DIAL:01310C1E]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 663, 
+        "Data Size": 720, 
         "Record Flags": {}, 
         "FormID": "01322AA0", 
         "Version Control Info": "00 00 00 00"
@@ -13,7 +13,7 @@
         "Flags": {}
     }, 
     "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
-    "PNAM - Previous INFO": "01322A9E", 
+    "PNAM - Previous INFO": "00000000", 
     "Add topics": [
         "NAME - Topic": "013109F6", 
         "NAME - Topic": "01310A9D", 
@@ -74,10 +74,15 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 0, 
-            "CompiledSize": 0, 
+            "RefCount": 1, 
+            "CompiledSize": 9, 
             "VariableCount": 0, 
             "Type": "Object:0"
-        }
+        }, 
+        "SCDA - Compiled result script": "55 10 05 00 01 00 72 01 00", 
+        "SCTX - Result script source": "showmap mwBalmoraMapMarker", 
+        "References": [
+            "SCRO - Global Reference": "mwBalmoraMapMarker [REFR:0100C56C]"
+        ]
     }
 }

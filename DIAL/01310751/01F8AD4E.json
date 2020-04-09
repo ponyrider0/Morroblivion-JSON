@@ -2,18 +2,18 @@
     "Topic": "1QuarraSBloodSPotion [DIAL:01310751]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 803, 
+        "Data Size": 737, 
         "Record Flags": {}, 
         "FormID": "01F8AD4E", 
-        "Version Control Info": "00 00 00 00"
+        "Version Control Info": "16 1A 00 00"
     }, 
     "DATA - DATA": {
         "Type": "00", 
         "Next Speaker": "00", 
         "Flags": {}
     }, 
-    "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
-    "PNAM - Previous INFO": "01F8AD4D", 
+    "QSTI - Quest": "fbmwVAVampBlood2 [QUST:01003BC9]", 
+    "PNAM - Previous INFO": "01F8AD4F", 
     "Responses": [
         {
             "TRDT - Response Data": {
@@ -23,18 +23,7 @@
                 "Response number": "01", 
                 "Unused": "75 65 20"
             }, 
-            "NAM1 - Response Text": "Mistress Dratha believes that the study of the Blood of the Quarra Ancients could lead to a greater understanding of the abilities your kind", 
-            "NAM2 - Actor notes": ""
-        }, 
-        {
-            "TRDT - Response Data": {
-                "Emotion Type": "00000000", 
-                "Emotion Value": 50, 
-                "Unused": "00 00 00 00", 
-                "Response number": "02", 
-                "Unused": "75 65 20"
-            }, 
-            "NAM1 - Response Text": "possesses. It is important for her to obtain it. ", 
+            "NAM1 - Response Text": "Mistress Dratha believes that the study of the Blood of the Quarra Ancients could lead to a greater understanding of the abilities your kind possesses. It is important for her to obtain it.", 
             "NAM2 - Actor notes": ""
         }, 
         {
@@ -62,22 +51,22 @@
     ], 
     "Conditions": [
         {
-            "Type": "00", 
+            "Type": "02", 
             "Unused": "00 00 00", 
-            "Comparison Value": 1.000000000000000, 
-            "Function": "GetIsID:72", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetItemCount:47", 
             "Unused": "00 00", 
-            "Parameter #1": "0ravenSomayn "Raven Omayn" [NPC_:0126040D]", 
+            "Parameter #1": "0pUquarrabloodUUNIQUE "Blood of the Quarra Masters" [ALCH:010800FD]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }, 
         {
-            "Type": "60", 
+            "Type": "00", 
             "Unused": "00 00 00", 
-            "Comparison Value": 1.000000000000000, 
-            "Function": "GetGlobalValue:74", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
             "Unused": "00 00", 
-            "Parameter #1": "fbmwPCVampire [GLOB:01F8ACE1]", 
+            "Parameter #1": "fbmwVARimintil "Murder Rimintil" [QUST:01003BC5]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }, 
@@ -94,20 +83,10 @@
         {
             "Type": "00", 
             "Unused": "00 00 00", 
-            "Comparison Value": 100.000000000000000, 
-            "Function": "GetStage:58", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
             "Unused": "00 00", 
-            "Parameter #1": "fbmwVARimintil "Murder Rimintil" [QUST:01003BC5]", 
-            "Parameter #2": "00 00 00 00", 
-            "Unused": "00000000"
-        }, 
-        {
-            "Type": "02", 
-            "Unused": "00 00 00", 
-            "Comparison Value": 0.000000000000000, 
-            "Function": "GetItemCount:47", 
-            "Unused": "00 00", 
-            "Parameter #1": "0pUquarrabloodUUNIQUE "Blood of the Quarra Masters" [ALCH:010800FD]", 
+            "Parameter #1": "0ravenSomayn "Raven Omayn" [NPC_:0126040D]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }

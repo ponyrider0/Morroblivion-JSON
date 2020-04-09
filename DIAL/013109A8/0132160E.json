@@ -2,7 +2,7 @@
     "Topic": "1latestSrumors [DIAL:013109A8]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 395, 
+        "Data Size": 482, 
         "Record Flags": {}, 
         "FormID": "0132160E", 
         "Version Control Info": "00 00 00 00"
@@ -53,12 +53,12 @@
             "Unused": "00000000"
         }, 
         {
-            "Type": "00", 
+            "Type": "80", 
             "Unused": "00 00 00", 
-            "Comparison Value": 0.000000000000000, 
-            "Function": "GetDeadCount:84", 
+            "Comparison Value": 110.000000000000000, 
+            "Function": "GetStage:58", 
             "Unused": "00 00", 
-            "Parameter #1": "0Fjol "Fjol" [NPC_:0126058F]", 
+            "Parameter #1": "fbmwMVBastard "Fjol the Outlaw" [QUST:01003400]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }, 
@@ -76,15 +76,17 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 1, 
-            "CompiledSize": 9, 
+            "RefCount": 3, 
+            "CompiledSize": 27, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "36 10 05 00 01 00 72 01 00", 
-        "SCTX - Result script source": "startquest fbmwmvbastard", 
+        "SCDA - Compiled result script": "36 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "startquest fbmwmvbastard\r\naddtopic 1carelessStravelers\r\naddtopic 1hlaSoad", 
         "References": [
-            "SCRO - Global Reference": "fbmwMVBastard [QUST:01003400]"
+            "SCRO - Global Reference": "fbmwMVBastard [QUST:01003400]", 
+            "SCRO - Global Reference": "1carelessStravelers [DIAL:01310776]", 
+            "SCRO - Global Reference": "1HlaSOad [DIAL:01310C43]"
         ]
     }
 }

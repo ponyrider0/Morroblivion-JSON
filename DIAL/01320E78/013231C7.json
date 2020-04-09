@@ -12,7 +12,7 @@
         "Next Speaker": "00", 
         "Flags": {}
     }, 
-    "QSTI - Quest": "fbmwMQRamoran [QUST:01001DE0]", 
+    "QSTI - Quest": "fbmwMQRedoran [QUST:01001DDC]", 
     "PNAM - Previous INFO": "01025B1C", 
     "Add topics": [
         "NAME - Topic": "01310D13", 
@@ -56,22 +56,12 @@
     ], 
     "Conditions": [
         {
-            "Type": "60", 
+            "Type": "80", 
             "Unused": "00 00 00", 
             "Comparison Value": 50.000000000000000, 
             "Function": "GetStage:58", 
             "Unused": "00 00", 
             "Parameter #1": "fbmwMQRedoranSarethi "Convincing Sarethi" [QUST:01001DE1]", 
-            "Parameter #2": "00 00 00 00", 
-            "Unused": "00000000"
-        }, 
-        {
-            "Type": "80", 
-            "Unused": "00 00 00", 
-            "Comparison Value": 50.000000000000000, 
-            "Function": "GetDisposition:76", 
-            "Unused": "00 00", 
-            "Parameter #1": "TARGET - Target Reference [00000000]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }, 
@@ -82,6 +72,16 @@
             "Function": "GetIsID:72", 
             "Unused": "00 00", 
             "Parameter #1": "0hlarenSramoran "Hlaren Ramoran" [NPC_:012600AE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 80.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "TARGET - Target Reference [00000000]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }

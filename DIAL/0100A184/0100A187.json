@@ -2,7 +2,7 @@
     "Topic": "fbmwbmMeadhallCollectProfit [DIAL:0100A184]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 373, 
+        "Data Size": 342, 
         "Record Flags": {}, 
         "FormID": "0100A187", 
         "Version Control Info": "00 00 00 00"
@@ -23,29 +23,19 @@
                 "Response number": "01", 
                 "Unused": "6E 6A 61"
             }, 
-            "NAM1 - Response Text": "You have already collected the profits for this week, &sUActnQuick1;. Talk to me again when seven days have passed, and I will give you the gold I have collected.", 
+            "NAM1 - Response Text": "You have already collected the profits for this week,&sUActnQuick1;. Talk to me again when seven days have passed, and I will give you the gold I have collected.", 
             "NAM2 - Actor notes": ""
         }
     ], 
     "Conditions": [
         {
-            "Type": "60", 
+            "Type": "80", 
             "Unused": "00 00 00", 
-            "Comparison Value": 0.000000000000000, 
+            "Comparison Value": 7.000000000000000, 
             "Function": "GetQuestVariable:79", 
             "Unused": "00 00", 
             "Parameter #1": "fbmwBMMeadHall "The Mead Hall Massacre" [QUST:0101B6C8]", 
-            "Parameter #2": "canprofit", 
-            "Unused": "00000000"
-        }, 
-        {
-            "Type": "60", 
-            "Unused": "00 00 00", 
-            "Comparison Value": 1.000000000000000, 
-            "Function": "GetQuestVariable:79", 
-            "Unused": "00 00", 
-            "Parameter #1": "fbmwBMMeadHall "The Mead Hall Massacre" [QUST:0101B6C8]", 
-            "Parameter #2": "meadarrived", 
+            "Parameter #2": "localdaypassedprofit", 
             "Unused": "00000000"
         }, 
         {

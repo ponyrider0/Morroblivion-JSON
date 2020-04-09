@@ -2,7 +2,7 @@
     "Topic": "1supportSonStheSCouncil [DIAL:013106A9]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 404, 
+        "Data Size": 457, 
         "Record Flags": {}, 
         "FormID": "0100CBD4", 
         "Version Control Info": "00 00 00 00"
@@ -50,7 +50,7 @@
             "Unused": "00000000"
         }, 
         {
-            "Type": "60", 
+            "Type": "00", 
             "Unused": "00 00 00", 
             "Comparison Value": 70.000000000000000, 
             "Function": "GetStage:58", 
@@ -73,15 +73,16 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 1, 
-            "CompiledSize": 14, 
+            "RefCount": 2, 
+            "CompiledSize": 28, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 64 00 00 00", 
-        "SCTX - Result script source": "SetStage fbmwHHBeroSupport 100", 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 64 00 00 00 53 10 0A 00 02 00 72 02 00 6E F6 FF FF FF", 
+        "SCTX - Result script source": "setstage fbmwHHBeroSupport 100\r\nmoddisposition player -10\r\n", 
         "References": [
-            "SCRO - Global Reference": "fbmwHHBeroSupport [QUST:01003458]"
+            "SCRO - Global Reference": "fbmwHHBeroSupport [QUST:01003458]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
         ]
     }
 }

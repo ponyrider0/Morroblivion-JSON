@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "QUST", 
-        "Data Size": 2751, 
+        "Data Size": 2659, 
         "Record Flags": {}, 
         "FormID": "01006024", 
         "Version Control Info": "00 00 00 00"
@@ -187,17 +187,15 @@
                     "Result Script": {
                         "SCHR - Basic Script Data": {
                             "Unused": "00 00 00 00", 
-                            "RefCount": 3, 
-                            "CompiledSize": 235, 
+                            "RefCount": 1, 
+                            "CompiledSize": 218, 
                             "VariableCount": 0, 
                             "Type": "Quest:1"
                         }, 
-                        "SCDA - Compiled result script": "15 00 13 00 72 01 00 73 02 00 0B 00 20 72 01 00 73 02 00 20 35 20 2B A9 10 0D 00 03 00 72 02 00 72 03 00 6E 0A 00 00 00 16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 6F 00 01 00 6B 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 43 6F 6D 70 6C 65 74 65 64 20 49 6D 70 65 72 69 61 6C 20 4C 65 67 69 6F 6E 3A 20 52 65 73 63 75 65 20 4A 6F 63 69 65 6E 20 41 6E 63 6F 69 73 20 71 75 65 73 74 22 F9 16 27 00 01 00 23 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 31 30 30 19 00 00 00", 
-                        "SCTX - Result script source": "Set fbmwILAdvancement.LegionReputation TO fbmwILAdvancement.LegionReputation + 5\r\nModFactionReaction 0ImperialSLegion, PlayerFaction 10\r\n\r\nif ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qCompleted Imperial Legion: Rescue Jocien Ancois quest%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 100\"\r\nendif", 
+                        "SCDA - Compiled result script": "15 00 13 00 72 01 00 73 02 00 0B 00 20 72 01 00 73 02 00 20 35 20 2B 16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 6F 00 01 00 6B 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 43 6F 6D 70 6C 65 74 65 64 20 49 6D 70 65 72 69 61 6C 20 4C 65 67 69 6F 6E 3A 20 52 65 73 63 75 65 20 4A 6F 63 69 65 6E 20 41 6E 63 6F 69 73 20 71 75 65 73 74 22 F9 16 27 00 01 00 23 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 31 30 30 19 00 00 00", 
+                        "SCTX - Result script source": "Set fbmwILAdvancement.LegionReputation TO fbmwILAdvancement.LegionReputation + 5\r\n\r\nif ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qCompleted Imperial Legion: Rescue Jocien Ancois quest%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 100\"\r\nendif", 
                         "References": [
-                            "SCRO - Global Reference": "fbmwILAdvancement [QUST:01010563]", 
-                            "SCRO - Global Reference": "0ImperialSLegion [FACT:0122000F]", 
-                            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]"
+                            "SCRO - Global Reference": "fbmwILAdvancement [QUST:01010563]"
                         ]
                     }
                 }
@@ -230,7 +228,7 @@
             "QSTA - Target": {
                 "Target": "01856403", 
                 "Flags": {}, 
-                "Unused": "00 50 21"
+                "Unused": "00 5B 22"
             }, 
             "Conditions": [
                 {
@@ -259,7 +257,7 @@
             "QSTA - Target": {
                 "Target": "0186C258", 
                 "Flags": {}, 
-                "Unused": "00 50 21"
+                "Unused": "00 5B 22"
             }, 
             "Conditions": [
                 {
@@ -288,7 +286,7 @@
             "QSTA - Target": {
                 "Target": "0186C259", 
                 "Flags": {}, 
-                "Unused": "00 50 21"
+                "Unused": "00 5B 22"
             }, 
             "Conditions": [
                 {
@@ -327,7 +325,7 @@
             "QSTA - Target": {
                 "Target": "0181FB4B", 
                 "Flags": {}, 
-                "Unused": "00 50 21"
+                "Unused": "00 5B 22"
             }, 
             "Conditions": [
                 {
@@ -356,7 +354,7 @@
             "QSTA - Target": {
                 "Target": "01008B08", 
                 "Flags": {}, 
-                "Unused": "00 50 21"
+                "Unused": "00 5B 22"
             }, 
             "Conditions": [
                 {
@@ -395,7 +393,7 @@
             "QSTA - Target": {
                 "Target": "01003AF7", 
                 "Flags": {}, 
-                "Unused": "00 50 21"
+                "Unused": "00 5B 22"
             }, 
             "Conditions": [
                 {

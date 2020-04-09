@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 1697, 
+        "Data Size": 1871, 
         "Record Flags": {}, 
         "FormID": "010033CA", 
         "Version Control Info": "00 00 00 00"
@@ -9,13 +9,13 @@
     "EDID - Editor ID": "fbmwTTSevenGracesScript", 
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
-        "RefCount": 6, 
-        "CompiledSize": 339, 
-        "VariableCount": 9, 
+        "RefCount": 7, 
+        "CompiledSize": 372, 
+        "VariableCount": 10, 
         "Type": "Quest:1"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 45 01 00 00 15 00 0B 00 66 09 00 06 00 20 30 2E 30 30 31 16 00 17 00 09 00 13 00 20 72 04 00 58 43 10 05 00 01 00 72 05 00 20 31 20 3D 3D 16 00 22 00 07 00 1E 00 20 72 04 00 58 0E 10 04 00 01 00 08 00 20 31 35 20 3C 20 72 04 00 58 B9 10 00 00 20 26 26 16 00 0D 00 05 00 09 00 20 72 01 00 58 23 10 00 00 1C 00 01 00 21 10 00 00 1C 00 02 00 21 10 00 00 1C 00 03 00 22 10 00 00 1C 00 04 00 68 14 09 00 02 00 08 00 6E 10 27 00 00 1C 00 04 00 9E 10 05 00 01 00 72 06 00 19 00 00 00 19 00 00 00 19 00 00 00 16 00 0D 00 0D 00 09 00 20 73 01 00 20 31 20 3D 3D 16 00 0D 00 0B 00 09 00 20 73 02 00 20 31 20 3D 3D 16 00 0D 00 09 00 09 00 20 73 03 00 20 31 20 3D 3D 16 00 0D 00 07 00 09 00 20 73 04 00 20 31 20 3D 3D 16 00 0D 00 05 00 09 00 20 73 05 00 20 31 20 3D 3D 16 00 0D 00 03 00 09 00 20 73 06 00 20 31 20 3D 3D 16 00 0D 00 01 00 09 00 20 73 07 00 20 31 20 3D 3D 15 00 07 00 73 08 00 02 00 20 31 19 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "scn fbmwTTSevenGracesScript\nshort moon\nshort fields\nshort puzzle\nshort money\nshort mask\nshort dreugh\nshort ghostgate\nshort alldone\nfloat fQuestDelayTime\nbegin gamemode\n\n	set fQuestDelayTime to 0.001\n\n	if Player.GetInCell VivecVSPuzzleSCanalVSCenter == 1\n		if Player.getav health < 15 && Player.IsSwimming\n			if fbmwpuzzlecanalbrigdearef.GetDisabled\n				fbmwpuzzlecanalbrigdearef.Enable\n				fbmwpuzzlecanalbrigdebref.Enable\n				fbmwpuzzlecanalforcefieldref.Disable\n				Player.ModAV2 health 10000\n				Player.moveto fbmwttshrinepuzzleref1\n			endif\n		endif\n	endif\n\n	if moon==1\n		if fields==1\n			if puzzle==1\n				if money==1\n					if mask==1\n						if dreugh==1\n							if ghostgate==1\n								set alldone to 1\n							endif\n						endif\n					endif\n				endif\n			endif\n		endif\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 304 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 66 01 00 00 16 00 17 00 0A 00 13 00 20 72 04 00 58 43 10 05 00 01 00 72 05 00 20 31 20 3D 3D 15 00 0A 00 66 09 00 05 00 20 30 2E 30 31 16 00 33 00 07 00 2F 00 20 72 04 00 58 CD 15 00 00 20 72 04 00 58 0E 10 04 00 01 00 08 00 20 31 35 20 3C 20 72 04 00 58 D6 10 05 00 01 00 72 06 00 20 7C 7C 20 26 26 16 00 0D 00 05 00 09 00 20 72 01 00 58 23 10 00 00 1C 00 01 00 21 10 00 00 1C 00 02 00 21 10 00 00 1C 00 03 00 22 10 00 00 1C 00 04 00 68 14 09 00 02 00 08 00 6E 10 27 00 00 1C 00 04 00 9E 10 05 00 01 00 72 07 00 19 00 00 00 19 00 00 00 17 00 02 00 01 00 15 00 07 00 66 09 00 02 00 20 31 19 00 00 00 16 00 0D 00 0D 00 09 00 20 73 01 00 20 31 20 3D 3D 16 00 0D 00 0B 00 09 00 20 73 02 00 20 31 20 3D 3D 16 00 0D 00 09 00 09 00 20 73 03 00 20 31 20 3D 3D 16 00 0D 00 07 00 09 00 20 73 04 00 20 31 20 3D 3D 16 00 0D 00 05 00 09 00 20 73 05 00 20 31 20 3D 3D 16 00 0D 00 03 00 09 00 20 73 06 00 20 31 20 3D 3D 16 00 0D 00 01 00 09 00 20 73 07 00 20 31 20 3D 3D 15 00 07 00 73 08 00 02 00 20 31 19 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwTTSevenGracesScript\nshort moon\nshort fields\nshort puzzle\nshort money\nshort mask\nshort dreugh\nshort ghostgate\nshort alldone\nfloat fQuestDelayTime\n\nshort givenbook\n\nbegin gamemode\n\n	if Player.GetInCell VivecVSPuzzleSCanalVSCenter == 1\n		set fQuestDelayTime to 0.01\n		if Player.IsUnderWater && (Player.GetAV health < 15 || Player.HasMagicEffect WABR)\n			if fbmwpuzzlecanalbrigdearef.GetDisabled\n				fbmwpuzzlecanalbrigdearef.Enable\n				fbmwpuzzlecanalbrigdebref.Enable\n				fbmwpuzzlecanalforcefieldref.Disable\n				Player.ModAV2 health 10000\n				Player.MoveTo fbmwttshrinepuzzleref1\n			endif\n		endif\n	else\n		set fQuestDelayTime to 1\n	endif\n\n	if moon==1\n		if fields==1\n			if puzzle==1\n				if money==1\n					if mask==1\n						if dreugh==1\n							if ghostgate==1\n								set alldone to 1\n							endif\n						endif\n					endif\n				endif\n			endif\n		endif\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 644 </CSECaretPos>\n;</CSEBlock>", 
     "Local Variables": [
         {
             "SLSD - Local Variable Data": {
@@ -24,7 +24,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "CD CD CD CD CD CD CD"
+                "Unused": "01 00 00 00 00 00 00"
             }, 
             "SCVR - Name": "moon"
         }, 
@@ -35,7 +35,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "CD CD CD CD CD CD CD"
+                "Unused": "CD CD CD 84 58 6A 1D"
             }, 
             "SCVR - Name": "fields"
         }, 
@@ -46,7 +46,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "CD CD CD CD CD CD CD"
+                "Unused": "00 00 00 00 00 00 00"
             }, 
             "SCVR - Name": "puzzle"
         }, 
@@ -57,62 +57,73 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "CD CD CD CD CD CD CD"
+                "Unused": "CD CD CD 84 58 6A 1D"
             }, 
             "SCVR - Name": "money"
         }, 
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000005", 
-                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Unused": "73 5C 4C 6F 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "CD CD CD CD CD CD CD"
+                "Unused": "64 70 61 6C 61 63 65"
             }, 
             "SCVR - Name": "mask"
         }, 
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000006", 
-                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Unused": "73 5C 4C 6F 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "CD CD CD CD CD CD CD"
+                "Unused": "64 70 61 6C 61 63 65"
             }, 
             "SCVR - Name": "dreugh"
         }, 
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000007", 
-                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Unused": "73 5C 4C 6F 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "CD CD CD CD CD CD CD"
+                "Unused": "64 5F 74 72 6F 6C 6C"
             }, 
             "SCVR - Name": "ghostgate"
         }, 
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000008", 
-                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Unused": "74 75 72 65 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "CD CD CD CD CD CD CD"
+                "Unused": "6C 65 74 6F 6E 43 68"
             }, 
             "SCVR - Name": "alldone"
         }, 
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000009", 
-                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Unused": "74 75 72 65 00 00 00 00 00 00 00 00", 
                 "Flags": {}, 
-                "Unused": "CD CD CD CD CD CD CD"
+                "Unused": "6C 65 74 6F 6E 48 65"
             }, 
             "SCVR - Name": "fQuestDelayTime"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000A", 
+                "Unused": "73 5C 4C 6F 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "64 72 75 69 6E 73 2E"
+            }, 
+            "SCVR - Name": "givenbook"
         }
     ], 
     "References": [
@@ -121,6 +132,7 @@
         "SCRO - Global Reference": "fbmwpuzzlecanalforcefieldref [REFR:01874934]", 
         "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
         "SCRO - Global Reference": "VivecVSPuzzleSCanalVSCenter [CELL:01480440]", 
+        "SCRO - Global Reference": "WABR [MGEF:000018A4]", 
         "SCRO - Global Reference": "fbmwttshrinepuzzleref1 [REFR:01F2A537]"
     ]
 }

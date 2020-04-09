@@ -2,7 +2,7 @@
     "Topic": "GREETING [DIAL:000000C8]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 440, 
+        "Data Size": 558, 
         "Record Flags": {}, 
         "FormID": "01F8B96A", 
         "Version Control Info": "00 00 00 00"
@@ -32,19 +32,19 @@
     ], 
     "Conditions": [
         {
-            "Type": "80", 
+            "Type": "00", 
             "Unused": "00 00 00", 
-            "Comparison Value": 295.000000000000000, 
-            "Function": "GetActorValue:14", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestVariable:79", 
             "Unused": "00 00", 
-            "Parameter #1": "Health [ACVA:00000008]", 
-            "Parameter #2": "00 00 00 00", 
+            "Parameter #1": "fbmwCO2 "East Empire Company: A Blocked Door" [QUST:0101BE43]", 
+            "Parameter #2": "HroldarGivesUp", 
             "Unused": "00000000"
         }, 
         {
-            "Type": "80", 
+            "Type": "00", 
             "Unused": "00 00 00", 
-            "Comparison Value": 50.000000000000000, 
+            "Comparison Value": 40.000000000000000, 
             "Function": "GetStage:58", 
             "Unused": "00 00", 
             "Parameter #1": "fbmwCO2 "East Empire Company: A Blocked Door" [QUST:0101BE43]", 
@@ -65,15 +65,17 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 1, 
-            "CompiledSize": 18, 
+            "RefCount": 3, 
+            "CompiledSize": 40, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 32 00 00 00 17 10 00 00", 
-        "SCTX - Result script source": "setstage fbmwco2 50\r\nstopcombat", 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 1C 00 01 00 89 10 0A 00 02 00 72 03 00 6E 00 00 00 00 17 10 00 00 60 10 00 00", 
+        "SCTX - Result script source": "setstage fbmwco2 50\r\nfbmwHroldar1REF.SetFactionRank 0GoodCitizenFaction 0\r\nstopcombat\r\nEnablePlayerControls", 
         "References": [
-            "SCRO - Global Reference": "fbmwCO2 [QUST:0101BE43]"
+            "SCRO - Global Reference": "fbmwHroldar1REF [ACHR:01F00739]", 
+            "SCRO - Global Reference": "fbmwCO2 [QUST:0101BE43]", 
+            "SCRO - Global Reference": "0GoodCitizenFaction [FACT:01F0A263]"
         ]
     }
 }

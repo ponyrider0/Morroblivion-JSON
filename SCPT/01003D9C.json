@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 191, 
+        "Data Size": 837, 
         "Record Flags": {}, 
         "FormID": "01003D9C", 
         "Version Control Info": "00 00 00 00"
@@ -9,11 +9,30 @@
     "EDID - Editor ID": "fbmwSeniusLupinus", 
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
-        "RefCount": 0, 
-        "CompiledSize": 18, 
-        "VariableCount": 0, 
+        "RefCount": 4, 
+        "CompiledSize": 156, 
+        "VariableCount": 1, 
         "Type": "Magic Effect:256"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 11 00 04 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "scn fbmwSeniusLupinus\r\nBegin ScriptEffectStart\r\nEnd\r\n\n;<CSEBlock>\n;<CSECaretPos> 53 </CSECaretPos>\n;</CSEBlock>"
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 11 00 8E 00 00 00 16 00 12 00 01 00 0E 00 20 72 01 00 73 03 00 20 31 20 7E 20 3D 3D 1E 00 00 00 19 00 00 00 15 00 45 00 73 01 00 40 00 20 58 75 19 3A 00 04 15 00 53 10 00 4F 6E 4D 61 67 69 63 45 66 66 65 63 74 48 69 74 05 00 52 02 00 0C 00 53 03 00 72 65 66 52 03 00 24 13 00 53 06 00 6F 62 6A 65 63 74 53 04 00 43 55 44 49 24 16 00 0D 00 01 00 09 00 20 73 01 00 20 31 20 3D 3D 15 00 0A 00 72 04 00 73 05 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwSeniusLupinus\n\n; This script installs the callback to remove the SeniesLupinus ability (pseudo-disease for godmode)\nshort success\n\nBegin ScriptEffectStart\n	if (fbmwBMAAAImAWere.werestatus == -1)\n		return\n	endif\n	\n	set success to	SetEventHandler \"OnMagicEffectHit\" fbmwbmremovesenieslupinusability \"ref\"::Player \"object\"::\"CUDI\"\n	if (success == 1)\n		set fbmwBMWereStart.DoOnceHandle to 1\n		;MessageBox \"DEBUG: Senies Lupinus: Effect eventhandler installed\"\n	endif\n\nEnd\n\n;<CSEBlock>\n;<CSECaretPos> 219 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "success"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwBMAAAImAWere [QUST:01F8B08D]", 
+        "SCRO - Global Reference": "fbmwbmremovesenieslupinusability [SCPT:01006F76]", 
+        "SCRO - Global Reference": "Player [NPC_:00000007]", 
+        "SCRO - Global Reference": "fbmwBMWereStart [QUST:01F8BCBE]"
+    ]
 }

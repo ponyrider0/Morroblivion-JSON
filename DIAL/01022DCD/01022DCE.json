@@ -2,7 +2,7 @@
     "Topic": "fbmwMQ10corprus [DIAL:01022DCD]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 807, 
+        "Data Size": 1107, 
         "Record Flags": {}, 
         "FormID": "01022DCE", 
         "Version Control Info": "00 00 00 00"
@@ -64,7 +64,7 @@
         {
             "Type": "00", 
             "Unused": "00 00 00", 
-            "Comparison Value": 3.000000000000000, 
+            "Comparison Value": 4.000000000000000, 
             "Function": "GetStage:58", 
             "Unused": "00 00", 
             "Parameter #1": "fbmwMQ10 "The Path of the Incarnate" [QUST:01001DC9]", 
@@ -85,15 +85,22 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 1, 
-            "CompiledSize": 14, 
+            "RefCount": 8, 
+            "CompiledSize": 77, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 05 00 00 00", 
-        "SCTX - Result script source": "setstage fbmwmq10 5", 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 05 00 00 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 58 10 05 00 01 00 72 04 00 58 10 05 00 01 00 72 05 00 58 10 05 00 01 00 72 06 00 58 10 05 00 01 00 72 07 00 58 10 05 00 01 00 72 08 00", 
+        "SCTX - Result script source": "setstage fbmwmq10 5\r\naddtopic 1firstStrial\r\naddtopic 1secondStrial\r\naddtopic 1thirdStrial\r\naddtopic 1fourthStrial\r\naddtopic 1fifthStrial\r\naddtopic 1sixthStrial\r\naddtopic 1seventhStrial\r\n", 
         "References": [
-            "SCRO - Global Reference": "fbmwMQ10 [QUST:01001DC9]"
+            "SCRO - Global Reference": "fbmwMQ10 [QUST:01001DC9]", 
+            "SCRO - Global Reference": "1FirstStrial [DIAL:01310A6E]", 
+            "SCRO - Global Reference": "1SecondStrial [DIAL:013109F0]", 
+            "SCRO - Global Reference": "1ThirdStrial [DIAL:01310A6F]", 
+            "SCRO - Global Reference": "1FourthStrial [DIAL:013109F1]", 
+            "SCRO - Global Reference": "1FifthStrial [DIAL:01310A70]", 
+            "SCRO - Global Reference": "1SixthStrial [DIAL:01310A71]", 
+            "SCRO - Global Reference": "1SeventhStrial [DIAL:0131096E]"
         ]
     }
 }

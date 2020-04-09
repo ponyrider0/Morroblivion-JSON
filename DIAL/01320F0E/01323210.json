@@ -2,7 +2,7 @@
     "Topic": "1HlaaluSHortator6 [DIAL:01320F0E]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 424, 
+        "Data Size": 569, 
         "Record Flags": {}, 
         "FormID": "01323210", 
         "Version Control Info": "00 00 00 00"
@@ -58,10 +58,17 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 0, 
-            "CompiledSize": 0, 
+            "RefCount": 3, 
+            "CompiledSize": 27, 
             "VariableCount": 0, 
             "Type": "Object:0"
-        }
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "addtopic 1chooseSaShortator\r\naddtopic 1hortatorAsSduty\r\naddtopic 1warSleader", 
+        "References": [
+            "SCRO - Global Reference": "1chooseSaSHortator [DIAL:013107C5]", 
+            "SCRO - Global Reference": "1HortatorAsSduty [DIAL:01310880]", 
+            "SCRO - Global Reference": "1WarSLeader [DIAL:01310B0D]"
+        ]
     }
 }

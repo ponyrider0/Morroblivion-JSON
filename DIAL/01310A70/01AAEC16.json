@@ -2,7 +2,7 @@
     "Topic": "1FifthStrial [DIAL:01310A70]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 690, 
+        "Data Size": 888, 
         "Record Flags": {}, 
         "FormID": "01AAEC16", 
         "Version Control Info": "00 00 00 00"
@@ -62,6 +62,16 @@
     ], 
     "Conditions": [
         {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetStageDone:59", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQ06 "Meet Sul-Matuul" [QUST:01001DBE]", 
+            "Parameter #2": "055 Nibani Maesa recited a version of the Nerevarine prophecies she calls 'Seven Visions of Seven Trials of the Incarnate'.", 
+            "Unused": "00000000"
+        }, 
+        {
             "Type": "60", 
             "Unused": "00 00 00", 
             "Comparison Value": 45.000000000000000, 
@@ -95,10 +105,18 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 0, 
-            "CompiledSize": 0, 
+            "RefCount": 4, 
+            "CompiledSize": 36, 
             "VariableCount": 0, 
             "Type": "Object:0"
-        }
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 58 10 05 00 01 00 72 04 00", 
+        "SCTX - Result script source": "addtopic 1urshilaku\r\naddtopic 1ahemmusa\r\naddtopic 1zainab\r\naddtopic 1erabenimsun", 
+        "References": [
+            "SCRO - Global Reference": "1Urshilaku [DIAL:01310B61]", 
+            "SCRO - Global Reference": "1Ahemmusa [DIAL:01310BDC]", 
+            "SCRO - Global Reference": "1Zainab [DIAL:01310C7D]", 
+            "SCRO - Global Reference": "1Erabenimsun [DIAL:01310A7A]"
+        ]
     }
 }

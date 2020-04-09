@@ -1,10 +1,10 @@
 {
     "Record Header": {
         "Signature": "QUST", 
-        "Data Size": 1474, 
+        "Data Size": 1622, 
         "Record Flags": {}, 
         "FormID": "0101B6D9", 
-        "Version Control Info": "0F 17 00 00"
+        "Version Control Info": "1A 4E 00 00"
     }, 
     "EDID - Editor ID": "fbmwBMWater", 
     "SCRI - Script": "fbmwBMWaterScript [SCPT:0101E4CE]", 
@@ -140,9 +140,9 @@
     "Targets": [
         {
             "QSTA - Target": {
-                "Target": "01F001D6", 
+                "Target": "01F8B1C4", 
                 "Flags": {}, 
-                "Unused": "00 B3 20"
+                "Unused": "00 B4 2B"
             }, 
             "Conditions": [
                 {
@@ -156,9 +156,38 @@
                     "Unused": "00000000"
                 }, 
                 {
-                    "Type": "82", 
+                    "Type": "80", 
                     "Unused": "00 00 00", 
-                    "Comparison Value": 70.000000000000000, 
+                    "Comparison Value": 60.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwBMWater "The Ritual of Water" [QUST:0101B6D9]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "01F09DD9", 
+                "Flags": {}, 
+                "Unused": "00 B4 2B"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 60.000000000000000, 
                     "Function": "GetStage:58", 
                     "Unused": "00 00", 
                     "Parameter #1": "fbmwBMWater "The Ritual of Water" [QUST:0101B6D9]", 
@@ -166,9 +195,38 @@
                     "Unused": "00000000"
                 }, 
                 {
-                    "Type": "60", 
+                    "Type": "00", 
                     "Unused": "00 00 00", 
-                    "Comparison Value": 50.000000000000000, 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetInCell:67", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "SolstheimVSStahlmanAsSGorge "Solstheim, Stahlman's Gorge" [CELL:01480585]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "01F00489", 
+                "Flags": {}, 
+                "Unused": "00 B4 2B"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MorroDefaultQuest "Morrowind Default Quest" [QUST:013A0000]", 
+                    "Parameter #2": "QuestMarkersEnabled", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 70.000000000000000, 
                     "Function": "GetStage:58", 
                     "Unused": "00 00", 
                     "Parameter #1": "fbmwBMWater "The Ritual of Water" [QUST:0101B6D9]", 

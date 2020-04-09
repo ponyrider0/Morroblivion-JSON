@@ -1,41 +1,41 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 564, 
+        "Data Size": 596, 
         "Record Flags": {}, 
         "FormID": "01F2A503", 
-        "Version Control Info": "00 00 00 00"
+        "Version Control Info": "02 1B 00 00"
     }, 
     "EDID - Editor ID": "fbmwFGNchurdamzScript", 
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
         "RefCount": 3, 
-        "CompiledSize": 83, 
+        "CompiledSize": 78, 
         "VariableCount": 3, 
         "Type": "Quest:1"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 45 00 00 00 16 00 0D 00 03 00 09 00 20 73 03 00 20 31 20 3D 3D 1C 00 01 00 1E 10 08 00 02 00 72 02 00 72 03 00 15 00 0D 00 73 02 00 08 00 20 73 02 00 20 31 20 2B 15 00 07 00 73 03 00 02 00 20 30 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "ScriptName fbmwFGNchurdamzScript\r\n\r\nshort followNow\r\nshort healCount\r\nshort healNow\r\n\r\nBegin GameMode\r\n\r\nif ( healNow == 1 )\r\n	\"mwLariennaMacrinaREF\".Cast \"0healScompanion\" Player\r\n	set healCount to ( healCount + 1 )\r\n	set healNow to 0\r\nendif\r\n\r\nEnd", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 40 00 00 00 16 00 08 00 03 00 04 00 20 73 03 00 1C 00 01 00 1E 10 08 00 02 00 72 02 00 72 03 00 15 00 0D 00 73 02 00 08 00 20 73 02 00 20 31 20 2B 15 00 07 00 73 03 00 02 00 20 30 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwFGNchurdamzScript\n\nshort followNow\nshort healCount\nshort healNow\n\nBegin GameMode\n\n	if healNow\n		mwLariennaMacrinaREF.Cast 0healScompanion Player\n		set healCount to ( healCount + 1 )\n		set healNow to 0\n	endif\n\nEnd\n;<CSEBlock>\n;<CSECaretPos> 152 </CSECaretPos>\n;</CSEBlock>", 
     "Local Variables": [
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000001", 
-                "Unused": "08 00 00 08 00 00 00 00 00 00 00 00", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "12 58 00 2A 01 00 00"
+                "Unused": "00 00 00 00 00 00 00"
             }, 
-            "SCVR - Name": "follownow"
+            "SCVR - Name": "followNow"
         }, 
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000002", 
-                "Unused": "08 00 00 00 00 00 00 00 00 00 00 00", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "12 02 00 0E 01 00 00"
+                "Unused": "00 00 00 00 00 00 00"
             }, 
             "SCVR - Name": "healCount"
         }, 
@@ -46,7 +46,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 B0 D0 00 00"
+                "Unused": "00 00 00 00 00 00 00"
             }, 
             "SCVR - Name": "healNow"
         }

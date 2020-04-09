@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "QUST", 
-        "Data Size": 3867, 
+        "Data Size": 3906, 
         "Record Flags": {}, 
         "FormID": "0100B826", 
         "Version Control Info": "00 00 00 00"
@@ -23,15 +23,16 @@
                     "Result Script": {
                         "SCHR - Basic Script Data": {
                             "Unused": "00 00 00 00", 
-                            "RefCount": 1, 
-                            "CompiledSize": 8, 
+                            "RefCount": 2, 
+                            "CompiledSize": 16, 
                             "VariableCount": 0, 
                             "Type": "Quest:1"
                         }, 
-                        "SCDA - Compiled result script": "1C 00 01 00 21 10 00 00", 
-                        "SCTX - Result script source": "mwDeadWarriorApostleBootsREF.Enable", 
+                        "SCDA - Compiled result script": "1C 00 01 00 21 10 00 00 1C 00 02 00 21 10 00 00", 
+                        "SCTX - Result script source": "mwDeadWarriorApostleBootsREF.Enable\r\nmwAmaNinREF.Enable", 
                         "References": [
-                            "SCRO - Global Reference": "mwDeadWarriorApostleBootsREF [ACHR:0187241B]"
+                            "SCRO - Global Reference": "mwDeadWarriorApostleBootsREF [ACHR:0187241B]", 
+                            "SCRO - Global Reference": "mwAmaNinREF [ACHR:0185F21E]"
                         ]
                     }
                 }

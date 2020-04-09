@@ -2,7 +2,7 @@
     "Topic": "1ThirdStrial2 [DIAL:01321D5C]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 887, 
+        "Data Size": 1128, 
         "Record Flags": {}, 
         "FormID": "0132345B", 
         "Version Control Info": "00 00 00 00"
@@ -14,16 +14,6 @@
     }, 
     "QSTI - Quest": "fbmwMQ10 [QUST:01001DC9]", 
     "PNAM - Previous INFO": "00000000", 
-    "Add topics": [
-        "NAME - Topic": "01310830", 
-        "NAME - Topic": "01310C42", 
-        "NAME - Topic": "01310CE5", 
-        "NAME - Topic": "01310C47", 
-        "NAME - Topic": "01310B36", 
-        "NAME - Topic": "013109E4", 
-        "NAME - Topic": "01310BD9", 
-        "NAME - Topic": "01310C0B"
-    ], 
     "Responses": [
         {
             "TRDT - Response Data": {
@@ -95,15 +85,23 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 1, 
-            "CompiledSize": 14, 
+            "RefCount": 9, 
+            "CompiledSize": 86, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
-        "SCTX - Result script source": "setstage FBMWMQ10 10", 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 58 10 05 00 01 00 72 04 00 58 10 05 00 01 00 72 05 00 58 10 05 00 01 00 72 06 00 58 10 05 00 01 00 72 07 00 58 10 05 00 01 00 72 08 00 58 10 05 00 01 00 72 09 00", 
+        "SCTX - Result script source": "setstage FBMWMQ10 10\r\naddtopic 1corprus\r\naddtopic 1corprusSweepings\r\naddtopic 1corruption\r\naddtopic 1disease\r\naddtopic 1houseSdagoth\r\naddtopic 1knowSyou\r\naddtopic 1kogoruhn\r\naddtopic 1proof", 
         "References": [
-            "SCRO - Global Reference": "fbmwMQ10 [QUST:01001DC9]"
+            "SCRO - Global Reference": "fbmwMQ10 [QUST:01001DC9]", 
+            "SCRO - Global Reference": "1Corprus [DIAL:01310C42]", 
+            "SCRO - Global Reference": "1corprusSweepings [DIAL:01310830]", 
+            "SCRO - Global Reference": "1corruption [DIAL:01310B36]", 
+            "SCRO - Global Reference": "1disease [DIAL:01310C47]", 
+            "SCRO - Global Reference": "1HouseSDagoth [DIAL:013109E4]", 
+            "SCRO - Global Reference": "1knowSyou [DIAL:01310BD9]", 
+            "SCRO - Global Reference": "1Kogoruhn [DIAL:01310C0B]", 
+            "SCRO - Global Reference": "1proof [DIAL:01310CE5]"
         ]
     }
 }

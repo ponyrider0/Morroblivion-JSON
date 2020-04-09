@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 1099, 
+        "Data Size": 1093, 
         "Record Flags": {}, 
         "FormID": "01F8B866", 
         "Version Control Info": "00 00 00 00"
@@ -10,19 +10,19 @@
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
         "RefCount": 5, 
-        "CompiledSize": 319, 
+        "CompiledSize": 315, 
         "VariableCount": 1, 
         "Type": "Object:0"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 2F 01 00 00 00 00 16 00 11 00 08 00 0D 00 20 58 CD 10 00 00 20 5A 01 00 20 3D 3D 16 00 14 00 01 00 10 00 20 58 38 10 05 00 01 00 72 03 00 20 31 20 3D 3D 59 10 43 00 01 00 39 00 54 68 6F 73 65 20 63 75 72 73 65 64 20 62 79 20 74 68 65 20 42 65 61 73 74 20 6D 61 79 20 6E 6F 74 20 6F 70 65 6E 20 74 68 69 73 20 73 61 63 72 65 64 20 63 68 65 73 74 2E 00 00 00 00 00 00 18 00 14 00 04 00 10 00 20 58 3A 10 05 00 01 00 72 04 00 20 33 30 20 3C 52 10 0A 00 02 00 72 05 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E 01 00 00 00 59 10 30 00 01 00 26 00 59 6F 75 20 72 65 74 72 69 65 76 65 20 74 68 65 20 54 6F 74 65 6D 20 66 72 6F 6D 20 74 68 65 20 63 68 65 73 74 2E 00 00 00 00 00 00 39 10 0A 00 02 00 72 04 00 6E 1E 00 00 00 19 00 00 00 17 00 02 00 03 00 15 00 0B 00 66 01 00 06 00 20 58 CD 10 00 00 1C 00 02 00 02 10 0A 00 02 00 72 05 00 6E 01 00 00 00 52 10 0A 00 02 00 72 05 00 6E 01 00 00 00 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "scn fbmwbmtotemchestScript\nref totemtaker\nbegin onactivate\n	if(GetActionRef == Player)\n		if (GetQuestRunning fbmwBMAAAImAWere == 1)\n			Message \"Those cursed by the Beast may not open this sacred chest.\"\n		elseif (GetStage fbmwBMCeremony1 < 30)\n			RemoveItem 0MiscUBMUClawFangUUNIQUE 1\n			Player.AddItem 0MiscUBMUClawFangUUNIQUE 1\n			Message \"You retrieve the Totem from the chest.\"\n			SetStage fbmwBMCeremony1 30\n		endif\n	else \n		set totemtaker to GetActionRef\n		totemtaker.AddItem 0MiscUBMUClawFangUUNIQUE 1\n		RemoveItem 0MiscUBMUClawFangUUNIQUE 1\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 2B 01 00 00 00 00 16 00 11 00 08 00 0D 00 20 58 CD 10 00 00 20 5A 01 00 20 3D 3D 16 00 10 00 01 00 0C 00 20 72 03 00 73 03 00 20 31 20 3D 3D 59 10 43 00 01 00 39 00 54 68 6F 73 65 20 63 75 72 73 65 64 20 62 79 20 74 68 65 20 42 65 61 73 74 20 6D 61 79 20 6E 6F 74 20 6F 70 65 6E 20 74 68 69 73 20 73 61 63 72 65 64 20 63 68 65 73 74 2E 00 00 00 00 00 00 18 00 14 00 04 00 10 00 20 58 3A 10 05 00 01 00 72 04 00 20 33 30 20 3C 52 10 0A 00 02 00 72 05 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E 01 00 00 00 59 10 30 00 01 00 26 00 59 6F 75 20 72 65 74 72 69 65 76 65 20 74 68 65 20 54 6F 74 65 6D 20 66 72 6F 6D 20 74 68 65 20 63 68 65 73 74 2E 00 00 00 00 00 00 39 10 0A 00 02 00 72 04 00 6E 1E 00 00 00 19 00 00 00 17 00 02 00 03 00 15 00 0B 00 66 01 00 06 00 20 58 CD 10 00 00 1C 00 02 00 02 10 0A 00 02 00 72 05 00 6E 01 00 00 00 52 10 0A 00 02 00 72 05 00 6E 01 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwbmtotemchestScript\nref totemtaker\nbegin onactivate\n	if (GetActionRef == Player)\n		if (fbmwBMAAAImAWere.werestatus == 1)\n			Message \"Those cursed by the Beast may not open this sacred chest.\"\n		elseif (GetStage fbmwBMCeremony1 < 30)\n			RemoveItem 0MiscUBMUClawFangUUNIQUE 1\n			Player.AddItem 0MiscUBMUClawFangUUNIQUE 1\n			Message \"You retrieve the Totem from the chest.\"\n			SetStage fbmwBMCeremony1 30\n		endif\n	else \n		set totemtaker to GetActionRef\n		totemtaker.AddItem 0MiscUBMUClawFangUUNIQUE 1\n		RemoveItem 0MiscUBMUClawFangUUNIQUE 1\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 552 </CSECaretPos>\n;</CSEBlock>", 
     "Local Variables": [
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000001", 
-                "Unused": "74 68 65 69 00 00 00 00 00 00 00 00", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {}, 
-                "Unused": "6F 66 53 53 6B 61 61"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "totemtaker"
         }

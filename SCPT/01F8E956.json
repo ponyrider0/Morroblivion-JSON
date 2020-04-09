@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 501, 
+        "Data Size": 546, 
         "Record Flags": {}, 
         "FormID": "01F8E956", 
         "Version Control Info": "00 00 00 00"
@@ -9,14 +9,15 @@
     "EDID - Editor ID": "mwCinematicNewGameHandler", 
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
-        "RefCount": 1, 
-        "CompiledSize": 142, 
+        "RefCount": 2, 
+        "CompiledSize": 153, 
         "VariableCount": 0, 
         "Type": "Object:0"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 09 00 07 00 7D 00 00 00 01 00 00 16 00 10 00 01 00 0C 00 20 72 01 00 73 02 00 20 31 20 3D 3D 60 17 27 00 01 00 23 00 53 4F 62 6C 69 76 69 6F 6E 49 6E 74 72 6F 3A 47 65 6E 65 72 61 6C 7C 6D 77 5F 69 6E 74 72 6F 2E 62 69 6B 17 00 02 00 01 00 60 17 2C 00 01 00 28 00 53 4F 62 6C 69 76 69 6F 6E 49 6E 74 72 6F 3A 47 65 6E 65 72 61 6C 7C 4F 62 6C 69 76 69 6F 6E 49 6E 74 72 6F 2E 62 69 6B 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "scn mwCinematicNewGameHandler\n\nbegin Function { }\n\n	if mwMainMenu.AltStart == 1\n		SetStringIniSetting \"SOblivionIntro:General|mw_intro.bik\"\n	else\n		SetStringIniSetting \"SOblivionIntro:General|OblivionIntro.bik\"\n	endif\n\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 09 00 07 00 88 00 00 00 01 00 00 16 00 10 00 01 00 0C 00 20 72 01 00 73 02 00 20 31 20 3D 3D 60 17 27 00 01 00 23 00 53 4F 62 6C 69 76 69 6F 6E 49 6E 74 72 6F 3A 47 65 6E 65 72 61 6C 7C 6D 77 5F 69 6E 74 72 6F 2E 62 69 6B 17 00 02 00 01 00 60 17 2C 00 01 00 28 00 53 4F 62 6C 69 76 69 6F 6E 49 6E 74 72 6F 3A 47 65 6E 65 72 61 6C 7C 4F 62 6C 69 76 69 6F 6E 49 6E 74 72 6F 2E 62 69 6B 19 00 00 00 83 18 07 00 01 05 00 52 02 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwCinematicNewGameHandler\n\nbegin Function { }\n\n	if mwMainMenu.AltStart == 1\n		SetStringIniSetting \"SOblivionIntro:General|mw_intro.bik\"\n	else\n		SetStringIniSetting \"SOblivionIntro:General|OblivionIntro.bik\"\n	endif\n\n	Call mwFnInitialize\n\nend\n;<CSEBlock>\n;<CSECaretPos> 239 </CSECaretPos>\n;</CSEBlock>", 
     "References": [
-        "SCRO - Global Reference": "mwMainMenu [QUST:01F8E978]"
+        "SCRO - Global Reference": "mwMainMenu [QUST:01F8E978]", 
+        "SCRO - Global Reference": "mwFnInitialize [SCPT:01F8EC4B]"
     ]
 }
