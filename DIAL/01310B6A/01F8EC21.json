@@ -1,0 +1,71 @@
+{
+    "Topic": "1Odirniran [DIAL:01310B6A]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 282, 
+        "Record Flags": {}, 
+        "FormID": "01F8EC21", 
+        "Version Control Info": "02 20 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwHHOdirniran [QUST:01003469]", 
+    "PNAM - Previous INFO": "013224C1", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6E 46 61"
+            }, 
+            "NAM1 - Response Text": "You killed the necromancer, but where is Vedelea? Is she okay? Escort her back to me if you find her.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "0milynSfaram "Milyn Faram" [NPC_:01260171]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHHOdirniran "House Hlaalu: Telvanni at Odirniran" [QUST:01003469]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0remasaSothril "Remasa Othril" [NPC_:0126016C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

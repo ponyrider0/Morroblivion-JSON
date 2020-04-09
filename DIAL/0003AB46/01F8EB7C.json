@@ -1,0 +1,68 @@
+{
+    "Topic": "BedYes [DIAL:0003AB46]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 433, 
+        "Record Flags": {}, 
+        "FormID": "01F8EB7C", 
+        "Version Control Info": "05 1A 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "BedRental [QUST:0003AB56]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "74 65 6D"
+            }, 
+            "NAM1 - Response Text": "Very well, the bed is yours for the day. You'll find the room on the bottom floor, at the North end of the bar.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0hession "Hession" [NPC_:01260AAA]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "Gold001 "Gold" [MISC:0000000F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 46, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "15 00 0A 00 72 02 00 73 01 00 02 00 20 31 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 0A 00 00 00 53 10 0A 00 02 00 72 01 00 6E 02 00 00 00", 
+        "SCTX - Result script source": "set fbmwHessionREF.rent to 1\r\nplayer.removeitem gold001 10\r\nmoddisposition player 2", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwHessionREF [ACHR:01F04F78]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]"
+        ]
+    }
+}
