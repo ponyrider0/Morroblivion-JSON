@@ -1,0 +1,70 @@
+{
+    "Topic": "1RedoranSHortator2 [DIAL:01320E78]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 428, 
+        "Record Flags": {}, 
+        "FormID": "0100410C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMQRedoran [QUST:01001DDC]", 
+    "PNAM - Previous INFO": "01004A76", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "77 4D 51"
+            }, 
+            "NAM1 - Response Text": "You are a fool. An ignorant, ill-mannered, outlander fool. I'd rather make a guar Hortator.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "As long as I am head of this House, you will never be Hortator.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0bolvynSvenim "Bolvyn Venim" [NPC_:012600B4]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 2, 
+            "CompiledSize": 28, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 14 00 00 00 53 10 0A 00 02 00 72 02 00 6E F6 FF FF FF", 
+        "SCTX - Result script source": "SetStage fbmwMQRedoranVenim 20\r\nModDisposition Player -10", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQRedoranVenim [QUST:01001DE2]", 
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
+    }
+}

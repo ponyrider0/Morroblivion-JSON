@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "QUST", 
-        "Data Size": 1402, 
+        "Data Size": 1467, 
         "Record Flags": {}, 
         "FormID": "0101B6D5", 
         "Version Control Info": "00 00 00 00"
@@ -49,7 +49,8 @@
                             "CompiledSize": 0, 
                             "VariableCount": 0, 
                             "Type": "Quest:1"
-                        }
+                        }, 
+                        "SCTX - Result script source": ""
                     }
                 }
             ]
@@ -63,11 +64,16 @@
                     "Result Script": {
                         "SCHR - Basic Script Data": {
                             "Unused": "00 00 00 00", 
-                            "RefCount": 0, 
-                            "CompiledSize": 0, 
+                            "RefCount": 1, 
+                            "CompiledSize": 8, 
                             "VariableCount": 0, 
                             "Type": "Quest:1"
-                        }
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 21 10 00 00", 
+                        "SCTX - Result script source": "mwLightKeeperGrahlREF.enable\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "mwLightKeeperGrahlREF [ACRE:01F8B1B2]"
+                        ]
                     }
                 }
             ]
@@ -136,7 +142,7 @@
             "QSTA - Target": {
                 "Target": "01F0944B", 
                 "Flags": {}, 
-                "Unused": "00 2E 26"
+                "Unused": "00 D8 28"
             }, 
             "Conditions": [
                 {
@@ -165,7 +171,7 @@
             "QSTA - Target": {
                 "Target": "01F024A9", 
                 "Flags": {}, 
-                "Unused": "00 2E 26"
+                "Unused": "00 D8 28"
             }, 
             "Conditions": [
                 {

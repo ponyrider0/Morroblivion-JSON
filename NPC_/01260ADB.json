@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "NPC_", 
-        "Data Size": 838, 
+        "Data Size": 874, 
         "Record Flags": {
             "Compressed ": true
         }, 
@@ -12,7 +12,7 @@
     "FULL - Name": "Black Dart Adren", 
     "Model": {
         "MODL - Model FileName": "Characters\\_Male\\skeleton.nif", 
-        "MODB - Bound Radius": 71.400482000000000
+        "MODB - Bound Radius": 90.551239000000000
     }, 
     "ACBS - Configuration": {
         "Flags": {
@@ -26,6 +26,11 @@
         "Calc max": "00000000"
     }, 
     "Factions": [
+        {
+            "Faction": "01003B47", 
+            "Rank": "00", 
+            "Unused": "4F 44 42"
+        }, 
         {
             "Faction": "0122001B", 
             "Rank": "00", 
@@ -43,10 +48,6 @@
             "Count": 18
         }, 
         {
-            "Item": "0blackSdart [WEAP:01100206]", 
-            "Count": 2
-        }, 
-        {
             "Item": "0commonUpantsU07 [CLOT:01140208]", 
             "Count": 1
         }, 
@@ -61,13 +62,26 @@
         {
             "Item": "0randomSgold [LVLI:011A0020]", 
             "Count": 12
+        }, 
+        {
+            "Item": "mwBlackDartPoison [ALCH:060020E5]", 
+            "Count": 3
+        }, 
+        {
+            "Item": "mwBleederDartPoison [ALCH:06017D7F]", 
+            "Count": 3
+        }, 
+        {
+            "Item": "mwCarmineDartPoison [ALCH:06017D80]", 
+            "Count": 3
         }
     ], 
+    "SCRI - Script": "mwBlackDartNPCScript [SCPT:06010105]", 
     "AIDT - AI Data": {
-        "Aggression": "64", 
-        "Confidence": "64", 
+        "Aggression": "5A", 
+        "Confidence": "63", 
         "Energy Level": "32", 
-        "Responsibility": "32", 
+        "Responsibility": "1E", 
         "Buys/Sells and Services": "00000000", 
         "Teaches": "Hand To Hand:5", 
         "Maximum training level": "5E", 
@@ -122,9 +136,9 @@
         "Unused": "00"
     }, 
     "FaceGen Data": {
-        "FGGS - FaceGen Geometry-Symmetric": "D2 BB 9B BE E0 E7 18 3F 49 DA 76 BF 5A 2F C7 BF DB 0A 10 BE F8 E6 24 BF F0 E6 A1 BF CE 42 08 3F A0 1A 2F 3F 52 89 49 BF F0 9A 63 BE 84 0E E8 3E 24 38 33 BF 98 17 E0 3E 48 39 23 BF 00 91 AB BD F8 3F BE BE 3E 42 83 BF A4 BE 39 BE A0 6D 89 BF D4 61 4E BF F6 BA A7 3E 19 01 D6 3F 1C F7 12 3F 29 10 3A 3E C0 EE E5 BF 68 0B 42 BE B0 9D F2 BE BB CD C4 3E 5C DE 12 3F 18 32 36 3F D3 78 F0 3E BE 23 72 3F 00 64 DF BB A4 FC 04 BF B4 2A FE BD A0 2F 4F 3D 55 8B 0B BF 97 B0 D1 3F 8B 13 04 BF 0C 4C 6F BF 10 02 84 BE 85 A5 EA 3F 0C 60 83 BE 34 26 0D BF A4 DF 3D BF 78 C6 67 3F C0 D2 A1 BD 8C A8 00 3F 88 5C 9E BE", 
-        "FGGA - FaceGen Geometry-Asymmetric": "83 A2 97 3D E2 26 9F BF 7E B2 8D 3F 3F AF 15 BE 14 89 DC 3E 46 97 28 BF E6 0C D0 BE A9 21 69 3F 9C E3 4A BD A0 01 DC BE 0A 6D 19 BF 10 41 A6 BE 33 01 0D 3D 99 CC 0A BF F5 2A 0A BF 4E ED D4 3E D2 45 56 3E 39 5C 38 3F 2B 95 AD BE 6A 57 04 3E A1 FA C3 3F 26 F8 33 3F E5 2F 67 3F 1E 3A 47 BE 07 3E AE 3F 46 A5 66 3E 6A 0E 05 3F 6C 6A E4 3F 6D 2D 26 3F 12 C4 D9 BF", 
-        "FGTS - FaceGen Texture-Symmetric": "4B F6 81 3E 77 10 14 BE 42 1D BC BE B3 99 1A BE 80 48 0D 3D F0 0A 54 BE D1 DC 03 3F 45 FF E1 3E 9F 29 0F BF 88 AD 1B 3F 8C 5F 51 3F C7 2A 1B BF 83 36 FD 3E 60 7E 26 3F 52 F4 75 3F 2C AE 62 BE C1 CD 15 BF BD 5C BA BE AA B3 95 3F 27 DB 30 3F 07 E7 C9 BF B7 A6 92 3F 8A 41 F0 3D 4B 26 36 3F 66 B0 7A 3F 7E 11 36 BE 0A C2 00 BE A9 90 6A BF DC 69 F2 BE AB F2 87 BE 25 46 57 BE 71 D7 91 3E 13 67 08 3F B3 12 9E BE 83 41 B8 BC 26 1C 84 3F 53 D1 97 3F 50 5D 00 BF BD 8A 0B 3F B0 3C D1 BE A6 05 14 3E 81 5A 83 3E 99 18 1E BD 9B 29 A2 3F 83 FF 96 3F 92 0C 51 3F 43 05 A6 BD BD 01 C0 3E FD 81 9C BF 5D D1 54 3E"
+        "FGGS - FaceGen Geometry-Symmetric": "7A F4 6C 3F C1 9C 61 BF E3 56 8D 3F DA 1D 92 3E B1 72 A2 BE A8 BD 6E 3D A0 9C 52 3F 00 86 E8 3A 12 B3 2C 3F 98 53 39 BE 59 19 AF 3D 36 29 C2 BE 11 F1 0E 3E 58 EB 65 BF B4 13 F4 BF E5 5A B6 BF 58 40 9C BF 6F 83 39 3F B7 90 82 BE 50 88 90 BE F1 E0 8C BF C9 FC 78 3F A2 1E 77 3F 86 2E CD BF A0 4F A3 BD 08 9B 6B BC 2B E8 26 3F 5D 23 86 3B 15 30 F9 3E 06 E4 2A 3F D7 A1 88 BF E4 50 20 BF 2A DD 44 BF 0A 56 48 BE 1F F5 A0 3E B6 B4 0E 3F 09 93 D6 3D 72 FE 80 3F 88 1B 5E 3E C6 05 CB BC 7F 8C C2 BE 8A B2 2E BF F8 50 60 3F 0D FA D6 BD 23 74 80 3F B4 F3 D5 BE B4 99 13 BF 83 50 5D BF 81 92 53 3E 28 BD 8D 3F", 
+        "FGGA - FaceGen Geometry-Asymmetric": "27 4D 31 3F D7 98 85 3F 75 8C BC 3D 18 75 AA BD 8B 78 DD 3E A2 79 21 BE A8 3B 6A 3F DC C1 09 3F 36 38 FB 3E 82 BB D5 3F 60 0D 24 3F B4 12 83 BF E6 E8 84 BF 31 CC 5D BE EF 9E 4B BF 16 32 FC BE D0 35 6B BD BE 55 E5 3E 0D 5F 1D BE 0A 78 14 3F 6E 1B 2A BE A3 34 36 3F E9 2D 1E BF 10 B2 26 3E 53 2D 00 3F B3 4D 69 BF 3C B4 AD 3F 36 55 07 3D DA 83 AF BE C1 E5 98 3E", 
+        "FGTS - FaceGen Texture-Symmetric": "00 2A B2 BE AD C5 F5 3E 18 7B 2A BF 98 51 D5 3E F2 C9 92 3F 9A 41 F7 BE 7A 82 44 3F E3 23 03 BF DE 4C 88 BE B9 BF DD 3E B0 FF 4C BF 48 E8 A0 BE C0 79 04 BF 24 BF E3 BE 12 EE 81 BF 94 0C 1B BE 8B BB E5 3E 72 EA 3D BE 32 48 C7 3E E4 60 21 BF C4 B1 8F 3F F0 4F 4A 3F 03 1E EA BE 98 05 7F BF 7F 39 B6 3E DC BA DE BE 6E D4 22 3E A2 E9 6C BE 7E 82 60 BC 48 CF 08 BF 3C D9 54 BF 22 24 60 3F 0B C2 A7 BE 1C 2E 8F BD D8 14 7F 3F EC 06 5D BF CA 91 52 3F 98 A3 03 40 0D 4E 97 BF 51 DB 88 BF B4 83 5E BF 78 83 DA 3D 38 07 CD 3F 92 99 9C BE C8 74 F9 3D 6D D1 49 3E EA 18 17 3E 8F 08 48 3F A2 A1 45 3D 88 BB 7F BF"
     }, 
     "FNAM - Unknown": "72 54"
 }

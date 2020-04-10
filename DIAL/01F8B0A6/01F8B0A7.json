@@ -2,7 +2,7 @@
     "Topic": "CliffREQSpellmaking [DIAL:01F8B0A6]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 1277, 
+        "Data Size": 1307, 
         "Record Flags": {}, 
         "FormID": "01F8B0A7", 
         "Version Control Info": "00 00 00 00"
@@ -10,7 +10,9 @@
     "DATA - DATA": {
         "Type": "00", 
         "Next Speaker": "00", 
-        "Flags": {}
+        "Flags": {
+            "Goodbye": true
+        }
     }, 
     "QSTI - Quest": "CliffREQEnchant [QUST:01F8B0A8]", 
     "PNAM - Previous INFO": "00000000", 
@@ -405,6 +407,16 @@
             "Function": "GetIsID:72", 
             "Unused": "00 00", 
             "Parameter #1": "0uleniSheleran "Uleni Heleran" [NPC_:012601BE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "01", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0JeanneSAndre "Jeanne Andre" [NPC_:01260AF1]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }

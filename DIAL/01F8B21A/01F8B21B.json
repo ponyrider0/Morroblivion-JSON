@@ -2,7 +2,7 @@
     "Topic": "fbmwbmDraugrNoKill [DIAL:01F8B21A]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 334, 
+        "Data Size": 381, 
         "Record Flags": {}, 
         "FormID": "01F8B21B", 
         "Version Control Info": "00 00 00 00"
@@ -42,14 +42,15 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 1, 
-            "CompiledSize": 14, 
+            "RefCount": 2, 
+            "CompiledSize": 22, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 46 00 00 00", 
-        "SCTX - Result script source": "setstage fbmwbmdraugr 70", 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 46 00 00 00 1C 00 01 00 22 10 00 00", 
+        "SCTX - Result script source": "setstage fbmwbmdraugr 70\r\nmwAeslipsBarrierREF.disable", 
         "References": [
+            "SCRO - Global Reference": "mwAeslipsBarrierREF [REFR:01F084EF]", 
             "SCRO - Global Reference": "fbmwBMDraugr [QUST:0101AF8D]"
         ]
     }

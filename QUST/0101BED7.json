@@ -1,10 +1,10 @@
 {
     "Record Header": {
         "Signature": "QUST", 
-        "Data Size": 2218, 
+        "Data Size": 2359, 
         "Record Flags": {}, 
         "FormID": "0101BED7", 
-        "Version Control Info": "01 12 00 00"
+        "Version Control Info": "00 00 00 00"
     }, 
     "EDID - Editor ID": "fbmwCO8", 
     "SCRI - Script": "fbmwCO8QuScript [SCPT:01014C11]", 
@@ -46,15 +46,16 @@
                     "Result Script": {
                         "SCHR - Basic Script Data": {
                             "Unused": "00 00 00 00", 
-                            "RefCount": 1, 
-                            "CompiledSize": 8, 
+                            "RefCount": 2, 
+                            "CompiledSize": 17, 
                             "VariableCount": 0, 
                             "Type": "Quest:1"
                         }, 
-                        "SCDA - Compiled result script": "1C 00 01 00 21 10 00 00", 
-                        "SCTX - Result script source": "fbmwCoventinaScelataREF.enable", 
+                        "SCDA - Compiled result script": "1C 00 01 00 21 10 00 00 55 10 05 00 01 00 72 02 00", 
+                        "SCTX - Result script source": "fbmwCoventinaScelataREF.enable\r\nshowmap mwGraringsHouseMapMarker", 
                         "References": [
-                            "SCRO - Global Reference": "fbmwCoventinaScelataREF [ACHR:01F021B2]"
+                            "SCRO - Global Reference": "fbmwCoventinaScelataREF [ACHR:01F021B2]", 
+                            "SCRO - Global Reference": "mwGraringsHouseMapMarker [REFR:0100999A]"
                         ]
                     }
                 }
@@ -194,6 +195,46 @@
                             "Type": "Quest:1"
                         }
                     }
+                }
+            ]
+        }
+    ], 
+    "Targets": [
+        {
+            "QSTA - Target": {
+                "Target": "01F07D8E", 
+                "Flags": {}, 
+                "Unused": "00 CF 28"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 30.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwCO8 "East Empire Company: Discovery in the Mine" [QUST:0101BED7]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "0100999A", 
+                "Flags": {}, 
+                "Unused": "00 CF 28"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 10.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwCO8 "East Empire Company: Discovery in the Mine" [QUST:0101BED7]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
                 }
             ]
         }

@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "QUST", 
-        "Data Size": 4711, 
+        "Data Size": 5008, 
         "Record Flags": {}, 
         "FormID": "0101C61A", 
         "Version Control Info": "00 00 00 00"
@@ -161,11 +161,16 @@
                     "Result Script": {
                         "SCHR - Basic Script Data": {
                             "Unused": "00 00 00 00", 
-                            "RefCount": 0, 
-                            "CompiledSize": 0, 
+                            "RefCount": 1, 
+                            "CompiledSize": 8, 
                             "VariableCount": 0, 
                             "Type": "Quest:1"
-                        }
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 21 10 00 00", 
+                        "SCTX - Result script source": "fbmwMSBlackDartTorch1REF.enable", 
+                        "References": [
+                            "SCRO - Global Reference": "fbmwMSBlackDartTorch1REF [REFR:01F066CE]"
+                        ]
                     }
                 }
             ]
@@ -268,6 +273,104 @@
                             "Type": "Quest:1"
                         }
                     }
+                }
+            ]
+        }
+    ], 
+    "Targets": [
+        {
+            "QSTA - Target": {
+                "Target": "01F05B31", 
+                "Flags": {}, 
+                "Unused": "00 CF 28"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 25.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwMSBlackDart "The Black Dart Gang" [QUST:0101C61A]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "01F05B31", 
+                "Flags": {}, 
+                "Unused": "00 CF 28"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 50.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwMSBlackDart "The Black Dart Gang" [QUST:0101C61A]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "01F066CE", 
+                "Flags": {}, 
+                "Unused": "00 CF 28"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "80", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 50.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwMSBlackDart "The Black Dart Gang" [QUST:0101C61A]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetStageDone:59", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwMSBlackDart "The Black Dart Gang" [QUST:0101C61A]", 
+                    "Parameter #2": "025 I spoke with Variner's ghost. He told me a way to drown the Black Dart Gang in their hideout by flooding the room. But first I have to find the mechanism. It's a lever that looks like a torch holder. If I pull it down, the room will flood. The mechanism is on the wall somewhere at the east end, at head height. But I must be careful not to get too close to the gang or they will kill me. The hideout is in Old Mournhold, Temple Sewers West.", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "01F8E9A6", 
+                "Flags": {}, 
+                "Unused": "00 CF 28"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "60", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwMSBlackDart "The Black Dart Gang" [QUST:0101C61A]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "80", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 25.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwMSBlackDart "The Black Dart Gang" [QUST:0101C61A]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
                 }
             ]
         }

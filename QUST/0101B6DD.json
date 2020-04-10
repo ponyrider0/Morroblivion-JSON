@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "QUST", 
-        "Data Size": 2391, 
+        "Data Size": 2483, 
         "Record Flags": {}, 
         "FormID": "0101B6DD", 
         "Version Control Info": "00 00 00 00"
@@ -60,9 +60,7 @@
             "INDX - Stage index": 20, 
             "Log Entries": [
                 {
-                    "QSDT - Stage Flags": {
-                        "Complete quest": true
-                    }, 
+                    "QSDT - Stage Flags": {}, 
                     "CNAM - Log Entry": "I refused Kjolver's request that I murder her husband's mistress, Erna the Quiet. I don't want a stranger's blood on my hands.", 
                     "Result Script": {
                         "SCHR - Basic Script Data": {
@@ -103,11 +101,17 @@
                     "Result Script": {
                         "SCHR - Basic Script Data": {
                             "Unused": "00 00 00 00", 
-                            "RefCount": 0, 
-                            "CompiledSize": 0, 
+                            "RefCount": 2, 
+                            "CompiledSize": 16, 
                             "VariableCount": 0, 
                             "Type": "Quest:1"
-                        }
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 21 10 00 00 1C 00 02 00 21 10 00 00", 
+                        "SCTX - Result script source": "mwErnaTheQuietREF.enable\r\nmwBrandrREF.enable", 
+                        "References": [
+                            "SCRO - Global Reference": "mwErnaTheQuietREF [ACHR:01F021AD]", 
+                            "SCRO - Global Reference": "mwBrandrREF [ACHR:01F021AE]"
+                        ]
                     }
                 }
             ]
@@ -176,7 +180,7 @@
             "QSTA - Target": {
                 "Target": "01F0965F", 
                 "Flags": {}, 
-                "Unused": "00 58 21"
+                "Unused": "00 D8 28"
             }, 
             "Conditions": [
                 {
@@ -205,7 +209,7 @@
             "QSTA - Target": {
                 "Target": "01F021AD", 
                 "Flags": {}, 
-                "Unused": "00 58 21"
+                "Unused": "00 D8 28"
             }, 
             "Conditions": [
                 {
@@ -244,7 +248,7 @@
             "QSTA - Target": {
                 "Target": "01451049", 
                 "Flags": {}, 
-                "Unused": "00 58 21"
+                "Unused": "00 D8 28"
             }, 
             "Conditions": [
                 {

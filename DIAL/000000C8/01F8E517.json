@@ -2,7 +2,7 @@
     "Topic": "GREETING [DIAL:000000C8]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 715, 
+        "Data Size": 766, 
         "Record Flags": {}, 
         "FormID": "01F8E517", 
         "Version Control Info": "00 00 00 00"
@@ -75,16 +75,18 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 3, 
-            "CompiledSize": 76, 
+            "RefCount": 5, 
+            "CompiledSize": 77, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 28 00 00 00 1C 00 01 00 0F 10 09 00 02 00 21 00 6E 5A 00 00 00 1C 00 01 00 53 10 0A 00 02 00 72 03 00 6E 9C FF FF FF 1C 00 01 00 16 10 05 00 01 00 72 03 00 15 00 0A 00 72 02 00 73 01 00 02 00 20 31", 
-        "SCTX - Result script source": "setstage fbmwCO7 40\r\nSelerFavelnimREF.SetAV Aggression 90\r\nSelerFavelnimREF.ModDisposition Player -100\r\nSelerFavelnimREF.startcombat player\r\nset fbmwCO7.Selerattack to 1", 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 28 00 00 00 1C 00 01 00 89 10 0A 00 02 00 72 03 00 6E FF FF FF FF 1C 00 01 00 89 10 0A 00 02 00 72 04 00 6E FF FF FF FF 1C 00 01 00 16 10 05 00 01 00 72 05 00 15 00 0A 00 72 02 00 73 01 00 02 00 20 31", 
+        "SCTX - Result script source": "setstage fbmwCO7 40\r\nSelerFavelnimREF.SetFactionRank 0EastSEmpireSCompany -1\r\nSelerFavelnimREF.SetFactionRank 0GoodCitizenFaction -1\r\nSelerFavelnimREF.startcombat player\r\nset fbmwCO7.Selerattack to 1", 
         "References": [
             "SCRO - Global Reference": "SelerFavelnimREF [ACHR:01F0796C]", 
             "SCRO - Global Reference": "fbmwCO7 [QUST:0101BED6]", 
+            "SCRO - Global Reference": "0EastSEmpireSCompany [FACT:01220019]", 
+            "SCRO - Global Reference": "0GoodCitizenFaction [FACT:01F0A263]", 
             "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
         ]
     }

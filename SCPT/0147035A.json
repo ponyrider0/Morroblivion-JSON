@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 1643, 
+        "Data Size": 1895, 
         "Record Flags": {}, 
         "FormID": "0147035A", 
         "Version Control Info": "00 00 00 00"
@@ -10,12 +10,12 @@
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
         "RefCount": 8, 
-        "CompiledSize": 306, 
+        "CompiledSize": 416, 
         "VariableCount": 8, 
         "Type": "Object:0"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 22 01 00 00 00 00 16 00 14 00 0F 00 10 00 20 58 88 10 05 00 01 00 72 05 00 20 30 20 3D 3D 16 00 0D 00 0B 00 09 00 20 73 04 00 20 30 20 3D 3D 13 10 09 00 02 00 03 00 6E 01 00 00 00 B2 10 05 00 01 00 72 06 00 5A 18 0E 00 02 00 72 07 00 7A 00 00 00 00 00 90 8A 40 15 00 0A 00 72 08 00 73 01 00 02 00 20 31 1C 00 01 00 8B 10 02 00 00 00 1C 00 02 00 8B 10 02 00 00 00 1C 00 03 00 8B 10 02 00 00 00 1C 00 04 00 8B 10 02 00 00 00 6B 11 00 00 15 00 07 00 73 04 00 02 00 20 31 00 10 3C 00 01 00 34 00 59 6F 75 20 68 65 61 72 20 74 68 65 20 73 6F 75 6E 64 20 6F 66 20 72 75 73 68 69 6E 67 20 77 61 74 65 72 20 62 65 68 69 6E 64 20 74 68 65 20 64 6F 6F 72 73 00 00 00 00 17 00 02 00 01 00 00 10 16 00 01 00 0E 00 4C 65 76 65 72 20 69 73 20 73 74 75 63 6B 00 00 00 00 19 00 00 00 17 00 02 00 01 00 00 10 16 00 01 00 0E 00 4C 65 76 65 72 20 69 73 20 73 74 75 63 6B 00 00 00 00 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "scriptName mwTRTorchLeverScript\n\nshort changelevel\nshort crankturn\nshort currcrank\nshort state\nshort move\nfloat direction\nfloat waterlift\nfloat newwaterlevel\n\nbegin onactivate\n	if GetIsReference fbmwMSBlackDartTorch1REF == 0\n		if ( state == 0 )					;state 1 is down, state 0 is up\n			PlayGroup forward 1			;moves lever down\n			PlaySound3D 0SothaLever\n			SetCellWaterHeight OldSMournholdXSTempleSSewersSWest 850\n			set fbmwMSBlackDart.Flooded to 1\n			fbmwBlackDartMalarREF.kill\n			fbmwBlackSDartSGilurREF.kill\n			fbmwBlackDartUrvynREF.kill\n			fbmwBlackDartAdrenREF.kill\n			PurgeCellBuffers\n			set state to 1\n			MessageBox \"You hear the sound of rushing water behind the doors\"\n		else\n			MessageBox \"Lever is stuck\"	\n		endif\n	else\n		MessageBox \"Lever is stuck\"\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 15 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 A4 00 00 00 00 00 16 00 14 00 08 00 10 00 20 58 88 10 05 00 01 00 72 05 00 20 31 20 3D 3D 16 00 0D 00 04 00 09 00 20 73 04 00 20 30 20 3D 3D 13 10 09 00 02 00 03 00 6E 01 00 00 00 B2 10 05 00 01 00 72 06 00 15 00 0A 00 72 07 00 73 01 00 02 00 20 31 15 00 07 00 73 04 00 02 00 20 31 17 00 02 00 01 00 00 10 16 00 01 00 0E 00 4C 65 76 65 72 20 69 73 20 73 74 75 63 6B 00 00 00 00 19 00 00 00 17 00 02 00 01 00 00 10 16 00 01 00 0E 00 4C 65 76 65 72 20 69 73 20 73 74 75 63 6B 00 00 00 00 19 00 00 00 11 00 00 00 10 00 06 00 00 00 E2 00 00 00 16 00 0D 00 03 00 09 00 20 73 04 00 20 31 20 3D 3D 5A 18 0E 00 02 00 72 08 00 7A 00 00 00 00 00 90 8A 40 00 10 3C 00 01 00 34 00 59 6F 75 20 68 65 61 72 20 74 68 65 20 73 6F 75 6E 64 20 6F 66 20 72 75 73 68 69 6E 67 20 77 61 74 65 72 20 62 65 68 69 6E 64 20 74 68 65 20 64 6F 6F 72 73 00 00 00 00 15 00 07 00 73 04 00 02 00 20 32 19 00 00 00 16 00 0D 00 02 00 09 00 20 73 04 00 20 32 20 3D 3D 6B 11 00 00 15 00 07 00 73 04 00 02 00 20 33 19 00 00 00 16 00 0D 00 05 00 09 00 20 73 04 00 20 33 20 3D 3D 1C 00 01 00 8B 10 02 00 00 00 1C 00 02 00 8B 10 02 00 00 00 1C 00 03 00 8B 10 02 00 00 00 1C 00 04 00 8B 10 02 00 00 00 15 00 07 00 73 04 00 02 00 20 34 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptName mwTRTorchLeverScript\n\nshort changelevel\nshort crankturn\nshort currcrank\nshort state\nshort move\nfloat direction\nfloat waterlift\nfloat newwaterlevel\n\nbegin onactivate\n	if GetIsReference fbmwMSBlackDartTorch1REF == 1\n		if ( state == 0 )					;state 1 is down, state 0 is up\n			PlayGroup forward 1			;moves lever down\n			PlaySound3D 0SothaLever\n			set fbmwMSBlackDart.Flooded to 1\n			set state to 1\n		else\n			MessageBox \"Lever is stuck\"	\n		endif\n	else\n		MessageBox \"Lever is stuck\"\n	endif\nend\n\nBegin GameMode\n\n	if (state == 1)\n		SetCellWaterHeight OldSMournholdXSTempleSSewersSWest 850\n		MessageBox \"You hear the sound of rushing water behind the doors\"\n		set state to 2\n	endif\n\n	if (state == 2)\n		PurgeCellBuffers\n		set state to 3\n	endif\n\n	if (state == 3)\n		fbmwBlackDartMalarREF.kill\n		fbmwBlackSDartSGilurREF.kill\n		fbmwBlackDartUrvynREF.kill\n		fbmwBlackDartAdrenREF.kill\n		set state to 4\n	endif\n	\nEnd\n;<CSEBlock>\n;<CSECaretPos> 405 </CSECaretPos>\n;</CSEBlock>", 
     "Local Variables": [
         {
             "SLSD - Local Variable Data": {
@@ -24,7 +24,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 A4 D6 14 10"
+                "Unused": "00 00 00 CD CD CD CD"
             }, 
             "SCVR - Name": "changelevel"
         }, 
@@ -46,7 +46,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "currcrank"
         }, 
@@ -57,7 +57,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "state"
         }, 
@@ -68,7 +68,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "move"
         }, 
@@ -77,7 +77,7 @@
                 "Index": "00000006", 
                 "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {}, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "direction"
         }, 
@@ -86,7 +86,7 @@
                 "Index": "00000007", 
                 "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {}, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "waterlift"
         }, 
@@ -95,7 +95,7 @@
                 "Index": "00000008", 
                 "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {}, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "newwaterlevel"
         }
@@ -107,7 +107,7 @@
         "SCRO - Global Reference": "fbmwBlackDartAdrenREF [ACHR:01F066CB]", 
         "SCRO - Global Reference": "fbmwMSBlackDartTorch1REF [REFR:01F066CE]", 
         "SCRO - Global Reference": "0SothaLever [SOUN:013001C4]", 
-        "SCRO - Global Reference": "OldSMournholdXSTempleSSewersSWest [CELL:0148050C]", 
-        "SCRO - Global Reference": "fbmwMSBlackDart [QUST:0101C61A]"
+        "SCRO - Global Reference": "fbmwMSBlackDart [QUST:0101C61A]", 
+        "SCRO - Global Reference": "OldSMournholdXSTempleSSewersSWest [CELL:0148050C]"
     ]
 }

@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 437, 
+        "Data Size": 1649, 
         "Record Flags": {}, 
         "FormID": "01F8B845", 
         "Version Control Info": "00 00 00 00"
@@ -9,17 +9,33 @@
     "EDID - Editor ID": "mwBMColonyAproniaScript", 
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
-        "RefCount": 4, 
-        "CompiledSize": 95, 
-        "VariableCount": 0, 
+        "RefCount": 7, 
+        "CompiledSize": 507, 
+        "VariableCount": 1, 
         "Type": "Object:0"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 51 00 00 00 16 00 2B 00 02 00 27 00 20 58 01 10 05 00 01 00 72 01 00 20 31 30 32 34 20 3C 3D 20 58 3A 10 05 00 01 00 72 02 00 20 31 30 20 3D 3D 20 26 26 39 10 0A 00 02 00 72 02 00 6E 14 00 00 00 56 10 08 00 02 00 72 03 00 72 04 00 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "scn mwBMColonyAproniaScript\n\nbegin gamemode\n	if GetDistance fbmwFalcoREF <= 1024 && GetStage fbmwCO3b == 10\n		SetStage fbmwCO3b 20\n		StartConversation Player GREETING\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 ED 01 00 00 16 00 0F 00 01 00 0B 00 20 58 23 10 00 00 20 31 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 22 00 02 00 1E 00 20 58 23 10 00 00 20 30 20 3D 3D 20 58 3A 10 05 00 01 00 72 01 00 20 35 30 20 3C 20 26 26 22 10 00 00 1E 00 00 00 19 00 00 00 16 00 15 00 1D 00 11 00 20 58 3A 10 05 00 01 00 72 01 00 20 35 30 20 3D 3D 16 00 0F 00 01 00 0B 00 20 58 23 10 00 00 20 31 20 3D 3D 21 10 00 00 19 00 00 00 16 00 13 00 06 00 0F 00 20 58 54 10 05 00 01 00 72 02 00 20 33 20 3C 16 00 0D 00 04 00 09 00 20 73 01 00 20 30 20 3D 3D 03 10 0A 00 02 00 72 03 00 6E 01 00 00 00 0F 10 09 00 02 00 22 00 6E 64 00 00 00 15 00 07 00 73 01 00 02 00 20 31 1E 00 00 00 19 00 00 00 19 00 00 00 16 00 14 00 10 00 10 00 20 58 54 10 05 00 01 00 72 02 00 20 33 20 3E 3D 16 00 0D 00 04 00 09 00 20 73 01 00 20 31 20 3D 3D 0F 10 09 00 02 00 22 00 6E 32 00 00 00 68 14 09 00 02 00 08 00 6E C8 00 00 00 15 00 07 00 73 01 00 02 00 20 32 1E 00 00 00 19 00 00 00 16 00 0D 00 03 00 09 00 20 73 01 00 20 32 20 3D 3D 56 10 05 00 01 00 72 04 00 15 00 07 00 73 01 00 02 00 20 33 1E 00 00 00 19 00 00 00 16 00 0D 00 03 00 09 00 20 73 01 00 20 33 20 3D 3D 03 10 0A 00 02 00 72 03 00 6E 00 00 00 00 15 00 07 00 73 01 00 02 00 20 34 1E 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 16 00 2B 00 03 00 27 00 20 58 01 10 05 00 01 00 72 05 00 20 31 30 32 34 20 3C 3D 20 58 3A 10 05 00 01 00 72 06 00 20 31 30 20 3D 3D 20 26 26 39 10 0A 00 02 00 72 06 00 6E 14 00 00 00 5E 10 00 00 56 10 08 00 02 00 72 04 00 72 07 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwBMColonyAproniaScript\n\nshort state\n\nbegin gamemode\n\n	if (GetDisabled == 1)\n		return\n	endif\n\n	if (GetDisabled == 0) && (GetStage fbmwCO3 < 50)\n		Disable\n		return\n	endif\n\n	if (GetStage fbmwCO3 == 50)\n		if (GetDisabled == 1)\n			Enable\n		endif\n		\n		if (GetDeadCount fbmwCo3Draugr < 3)\n			if (state == 0)\n				SetEssential 0AproniaSAlfena 1\n				SetAV confidence 100\n				set state to 1\n				return\n			endif\n		endif\n\n		if (GetDeadCount fbmwCo3Draugr >= 3)\n			if (state == 1)\n				SetAV confidence 50\n				ModAV2 health 200\n				set state to 2\n				return\n			endif\n			if (state == 2)\n				StartConversation Player\n				set state to 3\n				return\n			endif\n			if (state == 3)\n				SetEssential 0AproniaSAlfena 0\n				set state to 4\n				return\n			endif\n		endif\n		\n	endif\n	\n	if (GetDistance fbmwFalcoREF <= 1024) && (GetStage fbmwCO3b == 10)\n		SetStage fbmwCO3b 20\n		EVP\n		StartConversation Player GREETING\n	endif\n	\nend\n\n;<CSEBlock>\n;<CSECaretPos> 717 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "state"
+        }
+    ], 
     "References": [
+        "SCRO - Global Reference": "fbmwCO3 [QUST:0101BE44]", 
+        "SCRO - Global Reference": "fbmwCo3Draugr [CREA:01F8B882]", 
+        "SCRO - Global Reference": "0AproniaSAlfena [NPC_:01260B2B]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
         "SCRO - Global Reference": "fbmwFalcoREF [ACHR:01F00742]", 
         "SCRO - Global Reference": "fbmwCO3b [QUST:0101BE46]", 
-        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
         "SCRO - Global Reference": "GREETING [DIAL:000000C8]"
     ]
 }

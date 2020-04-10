@@ -2,7 +2,7 @@
     "Topic": "1CastleSKarstaag [DIAL:0131135A]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 762, 
+        "Data Size": 789, 
         "Record Flags": {}, 
         "FormID": "01F8BAC9", 
         "Version Control Info": "00 00 00 00"
@@ -34,7 +34,7 @@
                 "Response number": "02", 
                 "Unused": "73 74 53"
             }, 
-            "NAM1 - Response Text": "This slaughter could be the workings of the Rieklings who serve him. Go there and find out what you can. You will not be allowed in the main entrance in the waters north of the castle. Good luck to you, Blodskaal.", 
+            "NAM1 - Response Text": "This slaughter could be the workings of the Rieklings who serve him. Go there and find out what you can. You will not be allowed in the main entrance, but we have recently discovered an entrance in the waters north of the castle. Good luck to you, Blodskaal.", 
             "NAM2 - Actor notes": ""
         }
     ], 
@@ -73,16 +73,15 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 2, 
-            "CompiledSize": 23, 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 1E 00 00 00 37 10 05 00 01 00 72 02 00", 
-        "SCTX - Result script source": "setstage fbmwbmfrostgiant1 30\r\nstopquest fbmwbmBearHunt1\r\n", 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 1E 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwbmfrostgiant1 30\r\n;stopquest fbmwbmBearHunt1\r\n", 
         "References": [
-            "SCRO - Global Reference": "fbmwBMFrostGiant1 [QUST:0101B6C3]", 
-            "SCRO - Global Reference": "fbmwBMBearHunt1 [QUST:0101AF84]"
+            "SCRO - Global Reference": "fbmwBMFrostGiant1 [QUST:0101B6C3]"
         ]
     }
 }

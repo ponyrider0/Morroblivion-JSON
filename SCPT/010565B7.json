@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 672, 
+        "Data Size": 747, 
         "Record Flags": {}, 
         "FormID": "010565B7", 
         "Version Control Info": "00 00 00 00"
@@ -10,19 +10,19 @@
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
         "RefCount": 3, 
-        "CompiledSize": 91, 
+        "CompiledSize": 146, 
         "VariableCount": 2, 
         "Type": "Object:0"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 0F 00 07 00 44 00 00 00 01 02 02 00 04 01 00 04 00 16 00 10 00 03 00 0C 00 20 72 03 00 73 10 00 20 30 20 3D 3D 16 00 12 00 01 00 0E 00 20 72 02 00 58 40 10 00 00 20 30 20 3D 3D 15 00 0A 00 72 03 00 73 10 00 02 00 20 31 19 00 00 00 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "scn fbmwbmhandlesdeathbywerewolf\nref attacker\nref killed\nBegin Function{killed, attacker}\n	if(fbmwBMAAAImAWere.haskilledaswere == 0)\n		if(killed.GetIsCreature==0)\n			set fbmwBMAAAImAWere.haskilledaswere to 1\n			;			message \"I satisfied my hunger\" ;debug message\n			;TODO bloodlust malus and bonus after feeding.\n		endif\n	endif\nEnd\n;<CSEBlock>\n;<CSECaretPos> 311 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0F 00 07 00 7B 00 00 00 01 02 02 00 04 01 00 04 00 16 00 10 00 04 00 0C 00 20 72 03 00 73 10 00 20 30 20 3D 3D 16 00 12 00 02 00 0E 00 20 72 02 00 58 40 10 00 00 20 30 20 3D 3D 15 00 0A 00 72 03 00 73 10 00 02 00 20 31 00 10 33 00 01 00 2B 00 49 20 68 61 76 65 20 73 61 74 69 73 66 69 65 64 20 6D 79 20 68 75 6E 67 65 72 20 61 6E 64 20 63 61 6E 20 6E 6F 77 20 72 65 73 74 00 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwbmhandlesdeathbywerewolf\nref attacker\nref killed\nBegin Function{killed, attacker}\n	if(fbmwBMAAAImAWere.haskilledaswere == 0)\n		if(killed.GetIsCreature==0)\n			set fbmwBMAAAImAWere.haskilledaswere to 1\n			messagebox \"I have satisfied my hunger and can now rest\" ;debug message\n			;TODO bloodlust malus and bonus after feeding.\n		endif\n	endif\nEnd\n;<CSEBlock>\n;<CSECaretPos> 351 </CSECaretPos>\n;</CSEBlock>", 
     "Local Variables": [
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000001", 
                 "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {}, 
-                "Unused": "CD CD CD CD CD CD CD"
+                "Unused": "00 00 00 00 00 00 00"
             }, 
             "SCVR - Name": "attacker"
         }, 

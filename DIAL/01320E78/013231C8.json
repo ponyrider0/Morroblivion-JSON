@@ -2,7 +2,7 @@
     "Topic": "1RedoranSHortator2 [DIAL:01320E78]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 224, 
+        "Data Size": 254, 
         "Record Flags": {}, 
         "FormID": "013231C8", 
         "Version Control Info": "00 00 00 00"
@@ -10,9 +10,11 @@
     "DATA - DATA": {
         "Type": "00", 
         "Next Speaker": "00", 
-        "Flags": {}
+        "Flags": {
+            "Info Refusal": true
+        }
     }, 
-    "QSTI - Quest": "fbmwMQRamoran [QUST:01001DE0]", 
+    "QSTI - Quest": "fbmwMQRedoran [QUST:01001DDC]", 
     "PNAM - Previous INFO": "013231C7", 
     "Add topics": [
         "NAME - Topic": "01310C02"
@@ -31,6 +33,16 @@
         }
     ], 
     "Conditions": [
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQRedoranSarethi "Convincing Sarethi" [QUST:01001DE1]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
         {
             "Type": "00", 
             "Unused": "00 00 00", 

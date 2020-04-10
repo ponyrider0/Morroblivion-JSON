@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 857, 
+        "Data Size": 833, 
         "Record Flags": {}, 
         "FormID": "01F8B831", 
         "Version Control Info": "00 00 00 00"
@@ -9,13 +9,13 @@
     "EDID - Editor ID": "fbmwbmwereinside", 
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
-        "RefCount": 6, 
-        "CompiledSize": 190, 
+        "RefCount": 5, 
+        "CompiledSize": 176, 
         "VariableCount": 2, 
         "Type": "Object:0"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 2E 00 00 00 00 00 39 10 0A 00 02 00 72 02 00 6E 1E 00 00 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 52 10 0A 00 02 00 72 04 00 6E 01 00 00 00 11 00 00 00 10 00 06 00 00 00 76 00 00 00 16 00 0A 00 01 00 06 00 20 58 E7 14 00 00 15 00 07 00 73 01 00 02 00 20 30 19 00 00 00 15 00 0B 00 66 02 00 06 00 20 58 CE 10 00 00 16 00 0D 00 03 00 09 00 20 73 01 00 20 30 20 3D 3D 83 18 0F 00 01 05 00 52 05 00 01 08 00 56 04 00 00 02 00 83 18 0F 00 01 05 00 52 06 00 01 08 00 56 04 00 00 02 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "scn fbmwbmwereinside\nshort DoOnce\nref myself\n;;NAIN\nbegin ondeath\n	SetStage fbmwBMSkaalAttack 30\n	RemoveItem fbmwbmwerewolfclaw 1\n	RemoveItem fbmwbmWerewolfClawShield 1\nend\nBegin GameMode\n	if(GetGameLoaded)\n		set DoOnce to 0\n	endif\n	set myself to GetSelf\n	if(DoOnce == 0)\n		Call fbmwBMWerewolfTransform myself\n		;Call fbmwBMWerewolfEquip myself\n		Call fbmwUpdate3D myself\n		set DoOnce to 1\n	Endif\nEnd\n;<CSEBlock>\n;<CSECaretPos> 169 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 20 00 00 00 00 00 52 10 0A 00 02 00 72 02 00 6E 01 00 00 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 11 00 00 00 10 00 06 00 00 00 76 00 00 00 16 00 0A 00 01 00 06 00 20 58 E7 14 00 00 15 00 07 00 73 01 00 02 00 20 30 19 00 00 00 15 00 0B 00 66 02 00 06 00 20 58 CE 10 00 00 16 00 0D 00 03 00 09 00 20 73 01 00 20 30 20 3D 3D 83 18 0F 00 01 05 00 52 04 00 01 08 00 56 04 00 00 02 00 83 18 0F 00 01 05 00 52 05 00 01 08 00 56 04 00 00 02 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwbmwereinside\nshort DoOnce\nref myself\n;;NAIN\nbegin ondeath\n;	SetStage fbmwBMSkaalAttack 30\n	RemoveItem fbmwbmwerewolfclaw 1\n	RemoveItem fbmwbmWerewolfClawShield 1\nend\nBegin GameMode\n	if(GetGameLoaded)\n		set DoOnce to 0\n	endif\n	set myself to GetSelf\n	if(DoOnce == 0)\n		Call fbmwBMWerewolfTransform myself\n		;Call fbmwBMWerewolfEquip myself\n		Call fbmwUpdate3D myself\n		set DoOnce to 1\n	Endif\nEnd\n;<CSEBlock>\n;<CSECaretPos> 401 </CSECaretPos>\n;</CSEBlock>", 
     "Local Variables": [
         {
             "SLSD - Local Variable Data": {
@@ -24,7 +24,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "DoOnce"
         }, 
@@ -33,17 +33,16 @@
                 "Index": "00000002", 
                 "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {}, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "myself"
         }
     ], 
     "References": [
         "SCRV - Local Variable": "00000002", 
-        "SCRO - Global Reference": "fbmwBMSkaalAttack [QUST:0101B6D2]", 
         "SCRO - Global Reference": "fbmwbmwerewolfclaw [WEAP:010168D5]", 
         "SCRO - Global Reference": "fbmwbmWerewolfClawShield [ARMO:0101CC71]", 
-        "SCRO - Global Reference": "fbmwBMWerewolfTransform [SCPT:060119D9]", 
-        "SCRO - Global Reference": "fbmwUpdate3D [SCPT:060132C6]"
+        "SCRO - Global Reference": "fbmwBMWerewolfTransform [SCPT:050119D9]", 
+        "SCRO - Global Reference": "fbmwUpdate3D [SCPT:050132C6]"
     ]
 }
