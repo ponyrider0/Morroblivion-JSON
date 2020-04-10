@@ -1,34 +1,30 @@
 {
     "Record Header": {
         "Signature": "SPEL", 
-        "Data Size": 110, 
+        "Data Size": 117, 
         "Record Flags": {}, 
         "FormID": "0106001D", 
         "Version Control Info": "00 00 00 00"
     }, 
     "EDID - Editor ID": "0argonianSbreathing", 
-    "FULL - Name": "Water Breathing", 
+    "OBME - Oblivion Magic Extender": {
+        "Record Version": "00", 
+        "OBME Version": {
+            "Beta": "FF", 
+            "Minor": "00", 
+            "Major": "01"
+        }, 
+        "Unused": "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"
+    }, 
+    "FULL - Name": "Argonian Water Breathing", 
     "SPIT - SPIT": {
-        "Type": "00000000", 
-        "Cost": "00000005", 
-        "Level": "00000001", 
+        "Type": "00000003", 
+        "Cost": "00000000", 
+        "Level": "00000000", 
         "Flags": {
             "Manual Spell Cost": true, 
             "Script Effect Always Applies": true
         }, 
         "Unused": "00 00 00"
-    }, 
-    "Effects": [
-        {
-            "EFID - Magic effect name": "WABR", 
-            "EFIT - EFIT": {
-                "Magic effect name": "WABR", 
-                "Magnitude": 1, 
-                "Area": 0, 
-                "Duration": 120, 
-                "Type": "Self:0", 
-                "Actor Value": "Water Breathing:55"
-            }
-        }
-    ]
+    }
 }

@@ -2,7 +2,7 @@
     "Topic": "1NererSBeneran [DIAL:0131096A]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 625, 
+        "Data Size": 463, 
         "Record Flags": {}, 
         "FormID": "01321817", 
         "Version Control Info": "00 00 00 00"
@@ -60,18 +60,15 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 6, 
-            "CompiledSize": 80, 
+            "RefCount": 3, 
+            "CompiledSize": 46, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "A9 10 0D 00 03 00 72 02 00 72 03 00 6E 05 00 00 00 A9 10 0D 00 03 00 72 04 00 72 03 00 6E 05 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 05 00 6E F4 01 00 00 39 10 0A 00 02 00 72 06 00 6E 64 00 00 00", 
-        "SCTX - Result script source": "modfactionreaction fbmwfightersguild playerfaction 5\r\nmodfactionreaction 0redoran playerfaction 5\r\nmoddisposition player 10\r\nplayer.additem gold001 500\r\nsetstage fbmwfgbeneranbounty 100", 
+        "SCDA - Compiled result script": "53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E F4 01 00 00 39 10 0A 00 02 00 72 03 00 6E 64 00 00 00", 
+        "SCTX - Result script source": "moddisposition player 10\r\nplayer.additem gold001 500\r\nsetstage fbmwfgbeneranbounty 100", 
         "References": [
             "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
-            "SCRO - Global Reference": "fbmwFightersGuild [FACT:0100761A]", 
-            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]", 
-            "SCRO - Global Reference": "0Redoran [FACT:01220000]", 
             "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
             "SCRO - Global Reference": "fbmwFGBeneranBounty [QUST:010033D1]"
         ]

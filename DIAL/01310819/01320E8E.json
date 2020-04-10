@@ -2,7 +2,7 @@
     "Topic": "1RedoranSHortator [DIAL:01310819]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 732, 
+        "Data Size": 867, 
         "Record Flags": {}, 
         "FormID": "01320E8E", 
         "Version Control Info": "00 00 00 00"
@@ -12,7 +12,7 @@
         "Next Speaker": "00", 
         "Flags": {}
     }, 
-    "QSTI - Quest": "fbmwMQRedoranSarethi [QUST:01001DE1]", 
+    "QSTI - Quest": "fbmwMQRedoran [QUST:01001DDC]", 
     "PNAM - Previous INFO": "01025B0D", 
     "Add topics": [
         "NAME - Topic": "0131095D", 
@@ -100,10 +100,17 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 0, 
-            "CompiledSize": 0, 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
             "VariableCount": 0, 
             "Type": "Object:0"
-        }
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 32 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwMQRedoran 50\r\nPlayer.AddItem fbmwHortatorRing 1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwMQRedoran [QUST:01001DDC]", 
+            "SCRO - Global Reference": "fbmwHortatorRing [CLOT:0102BAFA]"
+        ]
     }
 }

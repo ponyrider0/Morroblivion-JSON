@@ -2,7 +2,7 @@
     "Topic": "1shareSaSgift [DIAL:01310A36]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 548, 
+        "Data Size": 612, 
         "Record Flags": {}, 
         "FormID": "0101BE84", 
         "Version Control Info": "00 00 00 00"
@@ -51,7 +51,7 @@
     ], 
     "Conditions": [
         {
-            "Type": "40", 
+            "Type": "42", 
             "Unused": "00 00 00", 
             "Comparison Value": 0.000000000000000, 
             "Function": "GetItemCount:47", 
@@ -84,10 +84,15 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 0, 
-            "CompiledSize": 0, 
+            "RefCount": 1, 
+            "CompiledSize": 9, 
             "VariableCount": 0, 
             "Type": "Object:0"
-        }
+        }, 
+        "SCDA - Compiled result script": "71 10 05 00 01 00 72 01 00", 
+        "SCTX - Result script source": "CompleteQuest FbmwRomanceAhnassi", 
+        "References": [
+            "SCRO - Global Reference": "fbmwRomanceAhnassi [QUST:0101BE47]"
+        ]
     }
 }

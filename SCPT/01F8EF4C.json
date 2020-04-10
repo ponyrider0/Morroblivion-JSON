@@ -1,0 +1,79 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1413, 
+        "Record Flags": {}, 
+        "FormID": "01F8EF4C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwOBMELevitationEffectScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 7, 
+        "CompiledSize": 321, 
+        "VariableCount": 6, 
+        "Type": "Magic Effect:256"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 11 00 FF 00 00 00 15 00 0B 00 66 01 00 06 00 20 58 CE 10 00 00 15 00 0B 00 73 03 00 06 00 20 58 F7 15 00 00 15 00 10 00 66 06 00 0B 00 20 58 B0 15 05 00 01 00 73 03 00 16 00 23 00 03 00 1F 00 20 72 03 00 58 43 10 05 00 01 00 72 04 00 20 72 03 00 58 43 10 05 00 01 00 72 05 00 20 7C 7C 59 10 3A 00 01 00 30 00 59 6F 75 72 20 6C 65 76 69 74 61 74 69 6F 6E 20 73 70 65 6C 6C 20 64 6F 65 73 6E 27 74 20 77 6F 72 6B 20 69 6E 20 74 68 69 73 20 70 6C 61 63 65 00 00 00 00 00 00 1C 00 01 00 42 11 05 00 01 00 72 02 00 1E 00 00 00 19 00 00 00 15 00 10 00 73 02 00 0B 00 20 58 AD 15 05 00 01 00 73 03 00 15 00 11 00 72 06 00 66 15 00 09 00 20 73 02 00 20 33 30 20 2F 15 00 0F 00 72 06 00 66 16 00 07 00 20 72 06 00 66 11 00 83 18 0F 00 01 05 00 52 07 00 02 04 00 42 01 04 00 42 00 11 00 00 00 10 00 06 00 13 00 2A 00 00 00 15 00 0B 00 66 05 00 06 00 20 58 BA 10 00 00 83 18 13 00 01 05 00 52 07 00 02 04 00 42 00 08 00 56 00 00 00 05 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwOBMELevitationEffectScript\n\nref actor\nlong mag\nshort index\nfloat secPassed\nref spell\n\nbegin ScriptEffectStart\n	set actor to GetSelf\n	set index to GetScriptActiveEffectIndex\n	set spell to GetNthActiveEffectMagicItem index\n\n	if Player.GetInCell Mournhold || Player.GetInCell SothaSSil\n		Message \"Your levitation spell doesn't work in this place\"\n		actor.Dispel spell\n		return\n	endif\n	\n	set mag to GetNthActiveEffectMagnitude index\n	set JDLevitationData.accFact to ( mag / 30 )\n	set JDLevitationData.dampFact to JDLevitationData.dampBaseFact\n\n	Call JDLevitate 1 0\nend\n\nbegin ScriptEffectUpdate\n\n	set secPassed to ScriptEffectElapsedSeconds \n	Call JDLevitate 0 secPassed\n\nend\n;<CSEBlock>\n;<CSECaretPos> 111 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "actor"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "mag"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "index"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "secPassed"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "spell"
+        }
+    ], 
+    "References": [
+        "SCRV - Local Variable": "00000001", 
+        "SCRV - Local Variable": "00000006", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "Mournhold [CELL:014804C8]", 
+        "SCRO - Global Reference": "SothaSSil [CELL:01480512]", 
+        "SCRO - Global Reference": "JDLevitationData [QUST:01F8CCD6]", 
+        "SCRO - Global Reference": "JDLevitate [SCPT:01F8CCCD]"
+    ]
+}

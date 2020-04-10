@@ -2,7 +2,7 @@
     "Topic": "GREETING [DIAL:000000C8]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 846, 
+        "Data Size": 676, 
         "Record Flags": {}, 
         "FormID": "01000F4A", 
         "Version Control Info": "00 00 00 00"
@@ -86,22 +86,18 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 10, 
-            "CompiledSize": 95, 
+            "RefCount": 6, 
+            "CompiledSize": 59, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 58 10 05 00 01 00 72 04 00 58 10 05 00 01 00 72 05 00 58 10 05 00 01 00 72 06 00 58 10 05 00 01 00 72 07 00 58 10 05 00 01 00 72 08 00 1C 00 01 00 52 10 0A 00 02 00 72 09 00 6E 01 00 00 00 15 00 0A 00 72 0A 00 73 09 00 02 00 20 30", 
-        "SCTX - Result script source": "addtopic 1duties\r\naddtopic 1Background\r\naddtopic 1latestSrumors\r\naddtopic 1littleSsecret\r\naddtopic 1littleSadvice\r\naddtopic 1Morrowind\r\naddtopic 1myStrade\r\nplayer.removeitem 0chargenSstatssheet 1\r\nset fbmwChargen.GotPapers to 0", 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 58 10 05 00 01 00 72 04 00 1C 00 01 00 52 10 0A 00 02 00 72 05 00 6E 01 00 00 00 15 00 0A 00 72 06 00 73 09 00 02 00 20 30", 
+        "SCTX - Result script source": "addtopic 1Background\r\naddtopic 1Morrowind\r\naddtopic 1duties\r\nplayer.removeitem 0chargenSstatssheet 1\r\nset fbmwChargen.GotPapers to 0", 
         "References": [
             "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
-            "SCRO - Global Reference": "1duties [DIAL:01310C71]", 
             "SCRO - Global Reference": "1Background [DIAL:01310B38]", 
-            "SCRO - Global Reference": "1latestSrumors [DIAL:013109A8]", 
-            "SCRO - Global Reference": "1littleSsecret [DIAL:01310997]", 
-            "SCRO - Global Reference": "1littleSadvice [DIAL:01310986]", 
             "SCRO - Global Reference": "1Morrowind [DIAL:01310B72]", 
-            "SCRO - Global Reference": "1myStrade [DIAL:01310BE2]", 
+            "SCRO - Global Reference": "1duties [DIAL:01310C71]", 
             "SCRO - Global Reference": "0chargenSstatssheet [BOOK:01180102]", 
             "SCRO - Global Reference": "fbmwChargen [QUST:01F0A28C]"
         ]

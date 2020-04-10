@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 218, 
+        "Data Size": 753, 
         "Record Flags": {}, 
         "FormID": "0101E4CB", 
         "Version Control Info": "00 00 00 00"
@@ -9,24 +9,31 @@
     "EDID - Editor ID": "fbmwBMFrostGiant1Script", 
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
-        "RefCount": 0, 
-        "CompiledSize": 4, 
+        "RefCount": 5, 
+        "CompiledSize": 170, 
         "VariableCount": 1, 
         "Type": "Quest:1"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00", 
-    "SCTX - Script Source": "scn FBMWBMFrostGiant1Script\nshort follownow\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 9C 00 00 00 16 00 14 00 01 00 10 00 20 58 3A 10 05 00 01 00 72 02 00 20 37 35 20 3C 1E 00 00 00 19 00 00 00 16 00 15 00 04 00 11 00 20 58 3A 10 05 00 01 00 72 02 00 20 37 35 20 3D 3D 16 00 14 00 02 00 10 00 20 58 54 10 05 00 01 00 72 03 00 20 38 20 3E 3D 39 10 0A 00 02 00 72 02 00 6E 50 00 00 00 1E 00 00 00 19 00 00 00 19 00 00 00 16 00 15 00 01 00 11 00 20 58 3A 10 05 00 01 00 72 02 00 20 38 30 20 3D 3D 1C 00 01 00 56 10 08 00 02 00 72 04 00 72 05 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn FBMWBMFrostGiant1Script\n\nshort follownow\n\nBegin GameMode\n\n	if (GetStage fbmwBMFrostGiant1 < 75)\n		return\n	endif\n\n	if (GetStage fbmwBMFrostGiant1 == 75)\n		if (GetDeadCount fbmwbmGrahlKarstaag >= 8)\n			SetStage fbmwBMFrostGiant1 80\n			return\n		endif\n	endif\n\n	if (GetStage fbmwBMFrostGiant1 == 80)\n		mwKrishREF.StartConversation Player GREETING\n	endif\n\n	\nEnd\n;<CSEBlock>\n;<CSECaretPos> 353 </CSECaretPos>\n;</CSEBlock>", 
     "Local Variables": [
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000001", 
-                "Unused": "74 3A 20 27 00 00 00 00 00 00 00 00", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "75 6C 74 51 75 65 73"
+                "Unused": "00 00 00 00 00 00 00"
             }, 
             "SCVR - Name": "follownow"
         }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "mwKrishREF [ACHR:01F8B8A3]", 
+        "SCRO - Global Reference": "fbmwBMFrostGiant1 [QUST:0101B6C3]", 
+        "SCRO - Global Reference": "fbmwbmGrahlKarstaag [CREA:01F8B881]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "GREETING [DIAL:000000C8]"
     ]
 }

@@ -2,7 +2,7 @@
     "Topic": "1AldAruhn [DIAL:01310BEF]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 817, 
+        "Data Size": 933, 
         "Record Flags": {}, 
         "FormID": "0132281F", 
         "Version Control Info": "00 00 00 00"
@@ -104,10 +104,16 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 0, 
-            "CompiledSize": 0, 
+            "RefCount": 2, 
+            "CompiledSize": 18, 
             "VariableCount": 0, 
             "Type": "Object:0"
-        }
+        }, 
+        "SCDA - Compiled result script": "55 10 05 00 01 00 72 01 00 55 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "showmap mwAldRuhnMapMarker\r\nShowMap mwBuckmothLegionFortMapMarker", 
+        "References": [
+            "SCRO - Global Reference": "mwAldRuhnMapMarker [REFR:0100C572]", 
+            "SCRO - Global Reference": "mwBuckmothLegionFortMapMarker [REFR:01002C73]"
+        ]
     }
 }

@@ -1,0 +1,65 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1807, 
+        "Record Flags": {}, 
+        "FormID": "01F8EF3A", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwWeaponConstantEffectScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 4, 
+        "CompiledSize": 500, 
+        "VariableCount": 6, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 04 00 58 01 00 00 00 00 15 00 0B 00 66 05 00 06 00 20 58 50 14 00 00 15 00 0B 00 66 04 00 06 00 20 58 CF 10 00 00 65 17 22 00 01 21 00 56 01 00 00 02 00 58 00 00 65 18 13 00 02 08 00 56 04 00 00 05 00 08 00 56 03 04 00 04 00 00 16 00 13 00 03 00 0F 00 20 73 02 00 20 39 39 39 39 39 20 7E 20 21 3D 65 17 17 00 01 16 00 56 04 00 00 03 00 56 03 04 00 05 00 56 01 00 00 02 00 18 00 1C 00 01 00 6A 16 05 00 01 00 72 03 00 06 14 5C 00 05 00 4C 00 4D 6F 72 72 6F 62 6C 69 76 69 6F 6E 2D 4D 61 67 69 63 2D 46 69 78 65 73 20 44 65 62 75 67 3A 20 57 65 61 70 6F 6E 20 25 6E 28 25 69 29 20 61 73 73 6F 63 69 61 74 65 64 20 77 69 74 68 20 65 66 66 65 63 74 3A 20 25 6E 28 25 69 29 66 05 00 66 05 00 66 03 00 66 03 00 17 00 02 00 02 00 15 00 07 00 66 03 00 02 00 20 30 06 14 58 00 03 00 4E 00 4D 6F 72 72 6F 62 6C 69 76 69 6F 6E 2D 4D 61 67 69 63 2D 46 69 78 65 73 20 44 65 62 75 67 3A 20 57 65 61 70 6F 6E 20 25 6E 28 25 69 29 20 6E 6F 74 20 61 73 73 6F 63 69 61 74 65 64 20 77 69 74 68 20 61 6E 79 20 65 66 66 65 63 74 73 2E 66 05 00 66 05 00 19 00 00 00 11 00 00 00 10 00 08 00 05 00 80 00 00 00 00 00 16 00 0D 00 02 00 09 00 20 66 03 00 20 30 20 21 3D 1C 00 01 00 6B 16 05 00 01 00 72 03 00 06 14 56 00 05 00 46 00 4D 6F 72 72 6F 62 6C 69 76 69 6F 6E 2D 4D 61 67 69 63 2D 46 69 78 65 73 20 44 65 62 75 67 3A 20 52 65 6D 6F 76 69 6E 67 20 4D 61 67 69 63 20 45 66 66 65 63 74 3A 20 25 6E 28 25 69 29 20 2D 20 25 6E 28 25 69 29 66 05 00 66 05 00 66 03 00 66 03 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "; Assign a constant magic effect to a weapon\n; -- due to how engine hardcodes bound weapons, this script can't not be used with them.\nScriptname mwWeaponConstantEffectScript\n\nref me\nshort index\nref magicEffectRef\nref actorRef\n\nBegin OnEquip\n\n	set me to GetBaseObject\n	set actorRef to GetContainer\n\n	let index := ar_Find me mwMagicFixes.weaponList\n	if (index != -99999)\n		let magicEffectRef := mwMagicFixes.weaponeffectList[index]\n		actorRef.AddSpellNS magicEffectRef\n		PrintC \"Morroblivion-Magic-Fixes Debug: Weapon %n(%i) associated with effect: %n(%i)\", me, me, magicEffectRef, magicEffectRef\n	else\n		set magicEffectRef to 0\n		PrintC \"Morroblivion-Magic-Fixes Debug: Weapon %n(%i) not associated with any effects.\", me, me\n	endif\n	\nEnd\n\nBegin OnUnEquip\n\n	if (magicEffectRef != 0)\n		actorRef.RemoveSpellNS magicEffectRef\n		PrintC \"Morroblivion-Magic-Fixes Debug: Removing Magic Effect: %n(%i) - %n(%i)\", me, me, magicEffectRef, magicEffectRef\n	endif\n	\nEnd\n\n;<CSEBlock>\n;<CSECaretPos> 822 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "index"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "magicEffectRef"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "actorRef"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "me"
+        }
+    ], 
+    "References": [
+        "SCRV - Local Variable": "00000004", 
+        "SCRV - Local Variable": "00000005", 
+        "SCRV - Local Variable": "00000003", 
+        "SCRO - Global Reference": "mwMagicFixes [QUST:01F8EF3D]"
+    ]
+}

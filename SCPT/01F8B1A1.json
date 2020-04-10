@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 472, 
+        "Data Size": 400, 
         "Record Flags": {}, 
         "FormID": "01F8B1A1", 
         "Version Control Info": "00 00 00 00"
@@ -10,12 +10,12 @@
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
         "RefCount": 2, 
-        "CompiledSize": 123, 
+        "CompiledSize": 93, 
         "VariableCount": 0, 
         "Type": "Object:0"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 12 00 00 00 00 00 39 10 0A 00 02 00 72 01 00 6E 1E 00 00 00 11 00 00 00 10 00 06 00 00 00 4F 00 00 00 16 00 13 00 04 00 0F 00 20 58 3A 10 05 00 01 00 72 01 00 20 30 20 3E 21 10 00 00 16 00 16 00 01 00 12 00 20 58 01 10 05 00 01 00 72 02 00 20 38 30 30 20 3C 3D 39 10 0A 00 02 00 72 01 00 6E 14 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "scn fbmwRieklingTreesScript\nbegin ondeath\n	SetStage fbmwBMTrees 30\nend\nbegin gamemode\n	if GetStage fbmwBMTrees > 0\n		Enable\n		if (GetDistance player <= 800)\n			SetStage fbmwBMTrees 20\n		endif\n	Endif\nend\n;<CSEBlock>\n;<CSECaretPos> 129 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 4F 00 00 00 16 00 13 00 04 00 0F 00 20 58 3A 10 05 00 01 00 72 01 00 20 30 20 3E 21 10 00 00 16 00 16 00 01 00 12 00 20 58 01 10 05 00 01 00 72 02 00 20 38 30 30 20 3C 3D 39 10 0A 00 02 00 72 01 00 6E 14 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwRieklingTreesScript\n\nbegin gamemode\n	if GetStage fbmwBMTrees > 0\n		Enable\n		if (GetDistance player <= 800)\n			SetStage fbmwBMTrees 20\n		endif\n	Endif\nend\n;<CSEBlock>\n;<CSECaretPos> 29 </CSECaretPos>\n;</CSEBlock>", 
     "References": [
         "SCRO - Global Reference": "fbmwBMTrees [QUST:0101B6D6]", 
         "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"

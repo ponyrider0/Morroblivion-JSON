@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 277, 
+        "Data Size": 526, 
         "Record Flags": {}, 
         "FormID": "0100B783", 
         "Version Control Info": "00 00 00 00"
@@ -9,15 +9,29 @@
     "EDID - Editor ID": "fbmwbmoddrumorscript", 
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
-        "RefCount": 2, 
-        "CompiledSize": 43, 
-        "VariableCount": 0, 
+        "RefCount": 3, 
+        "CompiledSize": 112, 
+        "VariableCount": 1, 
         "Type": "Object:0"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 0B 00 02 00 18 00 00 00 01 00 72 01 00 39 10 0A 00 02 00 72 02 00 6E 0A 00 00 00 0D 10 02 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "scn fbmwbmoddrumorscript\nBegin OnActivate player\n	SetStage fbmwBMWolfGiver 10\n	activate\nEnd\n;<CSEBlock>\n;<CSECaretPos> 48 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0B 00 02 00 18 00 00 00 01 00 72 01 00 39 10 0A 00 02 00 72 02 00 6E 0A 00 00 00 0D 10 02 00 00 00 11 00 00 00 10 00 06 00 00 00 3B 00 00 00 16 00 20 00 02 00 1C 00 20 58 38 10 05 00 01 00 72 03 00 20 31 20 3D 3D 20 73 01 00 20 30 20 3D 3D 20 26 26 21 10 00 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwbmoddrumorscript\nshort DoOnce\nBegin OnActivate player\n	SetStage fbmwBMWolfGiver 10\n	activate\nEnd\nBegin GameMode\n	if(GetQuestRunning fbmwBMAAAImAWere == 1)&&(DoOnce == 0)\n		enable\n		set DoOnce to 1\n	endif\nend\n\n;<CSEBlock>\n;<CSECaretPos> 204 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "C4 76 1D 08 00 00 00"
+            }, 
+            "SCVR - Name": "DoOnce"
+        }
+    ], 
     "References": [
         "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
-        "SCRO - Global Reference": "fbmwBMWolfGiver [QUST:0101B6DC]"
+        "SCRO - Global Reference": "fbmwBMWolfGiver [QUST:0101B6DC]", 
+        "SCRO - Global Reference": "fbmwBMAAAImAWere [QUST:01F8B08D]"
     ]
 }

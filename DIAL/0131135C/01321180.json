@@ -2,7 +2,7 @@
     "Topic": "1snowSbearSarmor [DIAL:0131135C]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 391, 
+        "Data Size": 653, 
         "Record Flags": {}, 
         "FormID": "01321180", 
         "Version Control Info": "00 00 00 00"
@@ -10,10 +10,12 @@
     "DATA - DATA": {
         "Type": "00", 
         "Next Speaker": "00", 
-        "Flags": {}
+        "Flags": {
+            "Goodbye": true
+        }
     }, 
-    "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
-    "PNAM - Previous INFO": "0132117F", 
+    "QSTI - Quest": "fbmwBMFurArmor [QUST:0101B6C5]", 
+    "PNAM - Previous INFO": "0132117A", 
     "Add topics": [
         "NAME - Topic": "013113F5", 
         "NAME - Topic": "01310CFC"
@@ -27,7 +29,7 @@
                 "Response number": "01", 
                 "Unused": "CD CD CD"
             }, 
-            "NAM1 - Response Text": "Your custom piece of armor is ready!  Here you go, outlander, one expertly crafted Snow Bear Cuirass.  It came out even better than I expected.", 
+            "NAM1 - Response Text": "Your custom piece of armor is ready!  Here you go,&sUActnQuick1;, one expertly crafted Snow Bear Cuirass.  It came out even better than I expected.", 
             "NAM2 - Actor notes": ""
         }, 
         {
@@ -43,6 +45,26 @@
         }
     ], 
     "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMFurArmor "Fur Armor" [QUST:0101B6C5]", 
+            "Parameter #2": "BearCuirass", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "84", 
+            "Unused": "00 00 00", 
+            "Comparison Value": "00000039", 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMFurArmor "Fur Armor" [QUST:0101B6C5]", 
+            "Parameter #2": "StartDay", 
+            "Unused": "00000000"
+        }, 
         {
             "Type": "00", 
             "Unused": "00 00 00", 
@@ -67,10 +89,17 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 0, 
-            "CompiledSize": 0, 
+            "RefCount": 3, 
+            "CompiledSize": 46, 
             "VariableCount": 0, 
             "Type": "Object:0"
-        }
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 15 00 0A 00 72 03 00 73 01 00 02 00 20 30 15 00 0A 00 72 03 00 73 06 00 02 00 20 30", 
+        "SCTX - Result script source": "Player.AddItem 0BMUbearUcuirassUsnow 1\r\nSet fbmwBMFurArmor.BearCuirass to 0\r\nSet fbmwBMFurArmor.StartDay to 0", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0BMUbearUcuirassUsnow [ARMO:01120178]", 
+            "SCRO - Global Reference": "fbmwBMFurArmor [QUST:0101B6C5]"
+        ]
     }
 }

@@ -2,7 +2,7 @@
     "Topic": "1AhemmusaScamp [DIAL:01310979]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 173, 
+        "Data Size": 256, 
         "Record Flags": {}, 
         "FormID": "0132185F", 
         "Version Control Info": "00 00 00 00"
@@ -52,10 +52,15 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 0, 
-            "CompiledSize": 0, 
+            "RefCount": 1, 
+            "CompiledSize": 9, 
             "VariableCount": 0, 
             "Type": "Object:0"
-        }
+        }, 
+        "SCDA - Compiled result script": "55 10 05 00 01 00 72 01 00", 
+        "SCTX - Result script source": "showmap AhemmusaSCampVSWiseSWomanAsSYurtMapMarker45", 
+        "References": [
+            "SCRO - Global Reference": "AhemmusaSCampVSWiseSWomanAsSYurtMapMarker45 [REFR:0145102D]"
+        ]
     }
 }

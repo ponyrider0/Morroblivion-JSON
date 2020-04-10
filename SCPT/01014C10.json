@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 821, 
+        "Data Size": 920, 
         "Record Flags": {}, 
         "FormID": "01014C10", 
         "Version Control Info": "00 00 00 00"
@@ -10,12 +10,12 @@
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
         "RefCount": 6, 
-        "CompiledSize": 190, 
+        "CompiledSize": 185, 
         "VariableCount": 0, 
         "Type": "Object:0"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 B0 00 00 00 16 00 2A 00 0A 00 26 00 20 58 3A 10 05 00 01 00 72 05 00 20 31 30 20 3E 3D 20 58 01 10 05 00 01 00 72 06 00 20 35 30 30 20 3C 3D 20 26 26 1C 00 01 00 16 10 05 00 01 00 72 04 00 1C 00 02 00 16 10 05 00 01 00 72 01 00 1C 00 03 00 16 10 05 00 01 00 72 01 00 1C 00 04 00 16 10 05 00 01 00 72 01 00 16 00 0D 00 04 00 09 00 20 72 01 00 58 2E 10 00 00 39 10 0A 00 02 00 72 05 00 6E 14 00 00 00 16 00 0D 00 01 00 09 00 20 72 04 00 58 2E 10 00 00 39 10 0A 00 02 00 72 05 00 6E 50 00 00 00 19 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "Scn fbmwcoventiaattScript\n\nbegin gamemode\n\n	if GetStage fbmwCO8 >= 10 && GetDistance Player <= 500\n		fbmwCoventinaScelataREF.StartCombat fbmwgraringREF\n		fbmwhidarREF.StartCombat fbmwCoventinaScelataREF\n		fbmwAenarREF.StartCombat fbmwCoventinaScelataREF\n		fbmwgraringREF.StartCombat fbmwCoventinaScelataREF\n		if fbmwCoventinaScelataREF.GetDead\n			SetStage fbmwCO8 20\n			if fbmwgraringREF.GetDead\n				SetStage fbmwCO8 80\n			endif\n		endif\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 96 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 35 00 00 00 00 00 39 10 0A 00 02 00 72 05 00 6E 14 00 00 00 16 00 0D 00 01 00 09 00 20 72 04 00 58 2E 10 00 00 39 10 0A 00 02 00 72 05 00 6E 50 00 00 00 19 00 00 00 11 00 00 00 10 00 06 00 00 00 6A 00 00 00 16 00 2A 00 04 00 26 00 20 58 3A 10 05 00 01 00 72 05 00 20 31 30 20 3E 3D 20 58 01 10 05 00 01 00 72 06 00 20 35 30 30 20 3C 3D 20 26 26 1C 00 01 00 16 10 05 00 01 00 72 04 00 1C 00 02 00 16 10 05 00 01 00 72 01 00 1C 00 03 00 16 10 05 00 01 00 72 01 00 1C 00 04 00 16 10 05 00 01 00 72 01 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwcoventiaattScript\n\nBegin OnDeath\n	SetStage fbmwCO8 20\n	if fbmwgraringREF.GetDead\n		SetStage fbmwCO8 80\n	endif\nEnd\n\nbegin gamemode\n\n	if GetStage fbmwCO8 >= 10 && GetDistance Player <= 500\n		fbmwCoventinaScelataREF.StartCombat fbmwgraringREF\n		fbmwhidarREF.StartCombat fbmwCoventinaScelataREF\n		fbmwAenarREF.StartCombat fbmwCoventinaScelataREF\n		fbmwgraringREF.StartCombat fbmwCoventinaScelataREF\n;		if fbmwCoventinaScelataREF.GetDead\n;			SetStage fbmwCO8 20\n;			if fbmwgraringREF.GetDead\n;				SetStage fbmwCO8 80\n;			endif\n;		endif\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 549 </CSECaretPos>\n;</CSEBlock>", 
     "References": [
         "SCRO - Global Reference": "fbmwCoventinaScelataREF [ACHR:01F021B2]", 
         "SCRO - Global Reference": "fbmwhidarREF [ACHR:01F021B1]", 

@@ -1,12 +1,21 @@
 {
     "Record Header": {
         "Signature": "ENCH", 
-        "Data Size": 79, 
+        "Data Size": 77, 
         "Record Flags": {}, 
         "FormID": "01F0A303", 
         "Version Control Info": "00 00 00 00"
     }, 
     "EDID - Editor ID": "mwViperEnu", 
+    "OBME - Oblivion Magic Extender": {
+        "Record Version": "00", 
+        "OBME Version": {
+            "Beta": "FF", 
+            "Minor": "00", 
+            "Major": "01"
+        }, 
+        "Unused": "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"
+    }, 
     "ENIT - ENIT": {
         "Type": "00000002", 
         "Charge Amount": "00000028", 
@@ -15,18 +24,5 @@
             "Manual Enchant Cost (Autocalc Off)": true
         }, 
         "Unused": "CC 3F 3D"
-    }, 
-    "Effects": [
-        {
-            "EFID - Magic effect name": "DGHE", 
-            "EFIT - EFIT": {
-                "Magic effect name": "DGHE", 
-                "Magnitude": 10, 
-                "Area": 0, 
-                "Duration": 6, 
-                "Type": "Touch:1", 
-                "Actor Value": "Health:8"
-            }
-        }
-    ]
+    }
 }

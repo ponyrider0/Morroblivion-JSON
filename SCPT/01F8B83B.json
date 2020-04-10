@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 932, 
+        "Data Size": 934, 
         "Record Flags": {}, 
         "FormID": "01F8B83B", 
         "Version Control Info": "00 00 00 00"
@@ -15,7 +15,7 @@
         "Type": "Object:0"
     }, 
     "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 12 00 00 00 00 00 39 10 0A 00 02 00 72 01 00 6E 31 00 00 00 11 00 00 00 10 00 06 00 00 00 C2 00 00 00 16 00 3A 00 02 00 36 00 20 58 01 10 05 00 01 00 72 02 00 20 32 35 36 20 3C 3D 20 72 01 00 73 01 00 20 31 20 3D 3D 20 26 26 20 72 03 00 58 2F 10 05 00 01 00 72 04 00 20 30 20 3E 20 26 26 15 00 0A 00 72 01 00 73 04 00 02 00 20 31 56 10 08 00 02 00 72 03 00 72 05 00 19 00 00 00 16 00 1C 00 02 00 18 00 20 72 01 00 73 01 00 20 31 20 3D 3D 20 73 01 00 20 30 20 3D 3D 20 26 26 5E 10 00 00 15 00 07 00 73 01 00 02 00 20 31 18 00 1C 00 02 00 18 00 20 72 01 00 73 01 00 20 30 20 3D 3D 20 73 01 00 20 31 20 3D 3D 20 26 26 5E 10 00 00 15 00 07 00 73 01 00 02 00 20 32 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "scn fbmwbmCariusHuntScript\n\nshort DoOnce\n\nbegin ondeath\n	SetStage fbmwBMWildHunt 49\nend\nbegin gamemode\n	if (GetDistance fbmwbmActiveCariusREF <= 256) && (fbmwBMWildHunt.cariusfollow == 1)&&(player.GetItemCount 0keyUhircine1 > 0)\n		set fbmwBMWildHunt.capntalk to 1\n		StartConversation Player GREETING\n	endif\n	if(fbmwBMWildHunt.cariusfollow == 1)&&(DoOnce == 0)\n		evp\n		set DoOnce to 1\n	elseif(fbmwBMWildHunt.cariusfollow == 0)&&(DoOnce == 1)\n		evp\n		set DoOnce to 2\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 148 </CSECaretPos>\n;</CSEBlock>", 
+    "SCTX - Script Source": "scn fbmwbmCariusHuntScript\n\nshort DoOnce\n\nbegin ondeath\n	SetStage fbmwBMWildHunt 49\nend\nbegin gamemode\n	if (GetDistance fbmwbmActiveCariusREF <= 256) && (fbmwBMWildHunt.cariusfollow == 1)&&(player.GetItemCount 0keyUhircine1 > 0)\n		set fbmwBMWildHunt.capntalk to 1\n		StartConversation Player GREETING\n	endif\n	if(fbmwBMWildHunt.cariusfollow == 1)&&(DoOnce == 0)\n		evp\n		set DoOnce to 1\n	elseif(fbmwBMWildHunt.cariusfollow == 0)&&(DoOnce == 1)\n		evp\n		set DoOnce to 2\n	endif\n\nend\n;<CSEBlock>\n;<CSECaretPos> 473 </CSECaretPos>\n;</CSEBlock>", 
     "Local Variables": [
         {
             "SLSD - Local Variable Data": {

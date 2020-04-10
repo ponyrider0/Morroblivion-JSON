@@ -2,7 +2,7 @@
     "Topic": "1Advancement [DIAL:01310A5F]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 576, 
+        "Data Size": 513, 
         "Record Flags": {}, 
         "FormID": "013220BB", 
         "Version Control Info": "00 00 00 00"
@@ -23,7 +23,7 @@
                 "Response number": "01", 
                 "Unused": "CD CD CD"
             }, 
-            "NAM1 - Response Text": "You are a good soldier, outlander. I am proud to give you the rank Knight Errant, and this cuirass and greaves.", 
+            "NAM1 - Response Text": "You are a good soldier,&sUActnQuick1;. I am proud to give you the rank Knight Errant, and this cuirass and greaves.", 
             "NAM2 - Actor notes": ""
         }
     ], 
@@ -63,12 +63,12 @@
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
             "RefCount": 4, 
-            "CompiledSize": 85, 
+            "CompiledSize": 50, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "59 10 1F 00 01 00 15 00 50 72 6F 6D 6F 74 69 6F 6E 20 41 63 63 65 70 74 65 64 2E 2E 2E 00 00 00 00 00 00 15 00 0A 00 72 02 00 73 01 00 02 00 20 34 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00", 
-        "SCTX - Result script source": "Message \"Promotion Accepted...\"\r\nSET fbmwILAdvancement.LegionAdvancement TO 4\r\nPlayer.AddItem 0templarUcuirass 1\r\nPlayer.AddItem 0templarUgreaves 1", 
+        "SCDA - Compiled result script": "15 00 0A 00 72 02 00 73 01 00 02 00 20 34 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00", 
+        "SCTX - Result script source": "SET fbmwILAdvancement.LegionAdvancement TO 4\r\nPlayer.AddItem 0templarUcuirass 1\r\nPlayer.AddItem 0templarUgreaves 1", 
         "References": [
             "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
             "SCRO - Global Reference": "fbmwILAdvancement [QUST:01010563]", 

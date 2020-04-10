@@ -2,7 +2,7 @@
     "Topic": "1Orders [DIAL:01310C70]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 747, 
+        "Data Size": 791, 
         "Record Flags": {}, 
         "FormID": "0101DD2D", 
         "Version Control Info": "00 00 00 00"
@@ -99,14 +99,15 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 1, 
-            "CompiledSize": 9, 
+            "RefCount": 2, 
+            "CompiledSize": 18, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "36 10 05 00 01 00 72 01 00", 
-        "SCTX - Result script source": "StartQuest fbmwMQ07", 
+        "SCDA - Compiled result script": "71 10 05 00 01 00 72 01 00 36 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "CompleteQuest fbmwMQ06\r\nStartQuest fbmwMQ07", 
         "References": [
+            "SCRO - Global Reference": "fbmwMQ06 [QUST:01001DBE]", 
             "SCRO - Global Reference": "fbmwMQ07 [QUST:01001DBF]"
         ]
     }

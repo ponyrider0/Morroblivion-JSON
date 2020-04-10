@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "QUST", 
-        "Data Size": 1114, 
+        "Data Size": 1163, 
         "Record Flags": {}, 
         "FormID": "01006782", 
         "Version Control Info": "00 00 00 00"
@@ -48,11 +48,16 @@
                     "Result Script": {
                         "SCHR - Basic Script Data": {
                             "Unused": "00 00 00 00", 
-                            "RefCount": 0, 
-                            "CompiledSize": 0, 
+                            "RefCount": 1, 
+                            "CompiledSize": 8, 
                             "VariableCount": 0, 
                             "Type": "Quest:1"
-                        }
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 5E 10 00 00", 
+                        "SCTX - Result script source": "mwGalbedirREF.evp", 
+                        "References": [
+                            "SCRO - Global Reference": "mwGalbedirREF [ACHR:01810825]"
+                        ]
                     }
                 }
             ]

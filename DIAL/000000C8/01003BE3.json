@@ -2,10 +2,10 @@
     "Topic": "GREETING [DIAL:000000C8]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 233, 
+        "Data Size": 234, 
         "Record Flags": {}, 
         "FormID": "01003BE3", 
-        "Version Control Info": "1D 16 00 00"
+        "Version Control Info": "00 00 00 00"
     }, 
     "DATA - DATA": {
         "Type": "00", 
@@ -31,22 +31,22 @@
     ], 
     "Conditions": [
         {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0tidrosSindaram "Tidros Indaram" [NPC_:0126021C]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
             "Type": "40", 
             "Unused": "00 00 00", 
             "Comparison Value": 0.000000000000000, 
             "Function": "GetDeadCount:84", 
             "Unused": "00 00", 
             "Parameter #1": "0girasSindaram "Giras Indaram" [NPC_:0126021A]", 
-            "Parameter #2": "00 00 00 00", 
-            "Unused": "00000000"
-        }, 
-        {
-            "Type": "00", 
-            "Unused": "00 00 00", 
-            "Comparison Value": 1.000000000000000, 
-            "Function": "GetIsID:72", 
-            "Unused": "00 00", 
-            "Parameter #1": "0birerSindaram "Birer Indaram" [NPC_:0126021B]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }

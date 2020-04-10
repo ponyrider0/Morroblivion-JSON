@@ -1,30 +1,28 @@
 {
     "Record Header": {
         "Signature": "ENCH", 
-        "Data Size": 86, 
+        "Data Size": 84, 
         "Record Flags": {}, 
         "FormID": "01017E47", 
         "Version Control Info": "00 00 00 00"
     }, 
     "EDID - Editor ID": "0fatherAsShandUen", 
+    "OBME - Oblivion Magic Extender": {
+        "Record Version": "00", 
+        "OBME Version": {
+            "Beta": "FF", 
+            "Minor": "00", 
+            "Major": "01"
+        }, 
+        "Unused": "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"
+    }, 
     "ENIT - ENIT": {
         "Type": "00000003", 
-        "Charge Amount": "00000001", 
-        "Enchant Cost": "00000001", 
-        "Flags": {}, 
+        "Charge Amount": "00000019", 
+        "Enchant Cost": "00000005", 
+        "Flags": {
+            "Manual Enchant Cost (Autocalc Off)": true
+        }, 
         "Unused": "4E 41 4D"
-    }, 
-    "Effects": [
-        {
-            "EFID - Magic effect name": "SHLD", 
-            "EFIT - EFIT": {
-                "Magic effect name": "SHLD", 
-                "Magnitude": 15, 
-                "Area": 0, 
-                "Duration": 0, 
-                "Type": "Self:0", 
-                "Actor Value": "Defend Bonus:43"
-            }
-        }
-    ]
+    }
 }

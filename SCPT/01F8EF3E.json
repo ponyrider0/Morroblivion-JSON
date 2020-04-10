@@ -1,0 +1,126 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 2682, 
+        "Record Flags": {}, 
+        "FormID": "01F8EF3E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwOBMESanctuaryEffectScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 485, 
+        "VariableCount": 10, 
+        "Type": "Magic Effect:256"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 11 00 97 00 00 00 15 00 0B 00 66 01 00 06 00 20 58 CE 10 00 00 15 00 0B 00 73 02 00 06 00 20 58 F7 15 00 00 15 00 10 00 73 03 00 0B 00 20 58 AD 15 05 00 01 00 73 02 00 15 00 0F 00 73 04 00 0A 00 20 58 0E 10 04 00 01 00 06 00 15 00 14 00 66 05 00 0F 00 20 58 6B 19 09 00 02 00 2B 00 03 00 6D 61 78 15 00 07 00 73 0A 00 02 00 20 30 15 00 09 00 66 07 00 04 00 20 31 30 30 15 00 0F 00 66 08 00 0A 00 20 31 20 7E 20 66 07 00 20 2A 15 00 07 00 73 06 00 02 00 20 30 11 00 00 00 10 00 06 00 12 00 45 00 00 00 16 00 0D 00 01 00 09 00 20 73 06 00 20 30 20 3D 3D 1E 00 00 00 17 00 02 00 03 00 6D 19 0F 00 03 00 2B 00 06 00 73 63 72 69 70 74 66 08 00 15 00 07 00 73 06 00 02 00 20 30 1E 00 00 00 19 00 00 00 11 00 00 00 10 00 06 00 13 00 E7 00 00 00 16 00 0C 00 02 00 08 00 20 73 0A 00 20 35 20 3C 15 00 0D 00 73 0A 00 08 00 20 73 0A 00 20 31 20 2B 1E 00 00 00 17 00 02 00 01 00 15 00 07 00 73 0A 00 02 00 20 30 19 00 00 00 15 00 0B 00 73 09 00 06 00 20 58 4D 10 00 00 16 00 0E 00 07 00 0A 00 20 73 09 00 20 73 03 00 20 3E 16 00 0D 00 01 00 09 00 20 73 06 00 20 30 20 3D 3D 1E 00 00 00 17 00 02 00 02 00 6D 19 0F 00 03 00 2B 00 06 00 73 63 72 69 70 74 66 08 00 15 00 07 00 73 06 00 02 00 20 30 19 00 00 00 1E 00 00 00 17 00 02 00 06 00 16 00 0D 00 01 00 09 00 20 73 06 00 20 31 20 3D 3D 1E 00 00 00 17 00 02 00 02 00 6D 19 0F 00 03 00 2B 00 06 00 73 63 72 69 70 74 66 07 00 15 00 07 00 73 06 00 02 00 20 31 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName mwOBMESanctuaryEffectScript\n\nref caster\nshort index\nlong magnitude\nlong casterPersonality\nfloat casterDefendBonus\nshort bIsEffectOn\nfloat ARBonusOn\nfloat ARBonusOff\nlong randVal\nshort delayFrames\n\nBegin ScriptEffectStart\n\n	set caster to GetSelf\n	set index to GetScriptActiveEffectIndex\n	set magnitude to GetNthActiveEffectMagnitude index\n	set casterPersonality to GetActorValue Personality\n	set casterDefendBonus to GetAVMod DefendBonus max\n	\n	set delayFrames to 0\n;	set ARBonusOn to (casterPersonality/50)*100\n	set ARBonusOn to 100\n	set ARBonusOff to (-1 * ARBonusOn)\n;	ModAVMod DefendBonus max ARBonusOn\n	set bIsEffectOn to 0\n;	Message \"Sanctuary started. Magnitude = %.0f\", magnitude\n	\nEnd\n\nBegin ScriptEffectFinish\n	if (bIsEffectOn == 0)\n;		Message \"Effect Off->Off\"\n		return\n	else\n;		Message \"Effect On->Off\"\n		ModAVMod DefendBonus script ARBonusOff\n		set bIsEffectOn to 0\n		return\n	endif\n	\nEnd\n\nBegin ScriptEffectUpdate\n;	set delayFrames to (ScriptEffectElapsedSeconds % 1)\n	if (delayFrames < 5)\n		set delayFrames to delayFrames + 1\n		return\n	else\n		set delayFrames to 0\n	endif\n	\n	set randVal to GetRandomPercent\n;	Message \"Rand = %.0f, Magnitude = %.0f\", randVal, magnitude\n	if (randVal > magnitude)\n		; turn off\n		if (bIsEffectOn == 0)\n			return\n		else\n;			PrintC \"Effect On->Off, %.0f frames\", delayFrames\n			ModAVMod DefendBonus script ARBonusOff\n			set bIsEffectOn to 0\n		endif\n		return\n	else\n		; turn on\n		if (bIsEffectOn == 1)\n			return\n		else\n;			Print \"Effect Off->On\"\n			ModAVMod DefendBonus script ARBonusOn\n			set bIsEffectOn to 1\n		endif\n	endif\n		\nEnd\n\n;<CSEBlock>\n;<CSECaretPos> 1581 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "caster"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "index"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "magnitude"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "casterPersonality"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "casterDefendBonus"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "bIsEffectOn"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000007", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "ARBonusOn"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000008", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "ARBonusOff"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000009", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "randVal"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000A", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "delayFrames"
+        }
+    ], 
+    "References": [
+        "SCRV - Local Variable": "00000001"
+    ]
+}

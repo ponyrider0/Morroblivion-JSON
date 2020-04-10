@@ -2,7 +2,7 @@
     "Topic": "1RedoranScouncilors [DIAL:0131076B]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 644, 
+        "Data Size": 960, 
         "Record Flags": {}, 
         "FormID": "013209DF", 
         "Version Control Info": "00 00 00 00"
@@ -10,7 +10,9 @@
     "DATA - DATA": {
         "Type": "00", 
         "Next Speaker": "00", 
-        "Flags": {}
+        "Flags": {
+            "Say Once": true
+        }
     }, 
     "QSTI - Quest": "fbmwMQRedoranSarethi [QUST:01001DE1]", 
     "PNAM - Previous INFO": "013209DE", 
@@ -72,17 +74,24 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 3, 
-            "CompiledSize": 32, 
+            "RefCount": 10, 
+            "CompiledSize": 95, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 39 10 0A 00 02 00 72 03 00 6E 01 00 00 00", 
-        "SCTX - Result script source": "Player.Additem 0bkUredbook426 1\r\nSetStage fbmwMQRedoran 1", 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 39 10 0A 00 02 00 72 03 00 6E 01 00 00 00 58 10 05 00 01 00 72 04 00 58 10 05 00 01 00 72 05 00 58 10 05 00 01 00 72 06 00 58 10 05 00 01 00 72 07 00 58 10 05 00 01 00 72 08 00 58 10 05 00 01 00 72 09 00 58 10 05 00 01 00 72 0A 00", 
+        "SCTX - Result script source": "Player.Additem 0bkUredbook426 1\r\nSetStage fbmwMQRedoran 1\r\naddtopic 1redoranScouncilors\r\naddtopic 1athynSsarethi\r\naddtopic 1bolvynSvenim\r\naddtopic 1braraSmorvayn\r\naddtopic 1garisaSllethri\r\naddtopic 1hlarenSramoran\r\naddtopic 1minerSarobar\r\n", 
         "References": [
             "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
             "SCRO - Global Reference": "0bkUredbook426 [BOOK:01180113]", 
-            "SCRO - Global Reference": "fbmwMQRedoran [QUST:01001DDC]"
+            "SCRO - Global Reference": "fbmwMQRedoran [QUST:01001DDC]", 
+            "SCRO - Global Reference": "1RedoranScouncilors [DIAL:0131076B]", 
+            "SCRO - Global Reference": "1AthynSSarethi [DIAL:01310966]", 
+            "SCRO - Global Reference": "1BolvynSVenim [DIAL:013109EB]", 
+            "SCRO - Global Reference": "1BraraSMorvayn [DIAL:013109C7]", 
+            "SCRO - Global Reference": "1GarisaSLlethri [DIAL:013108F0]", 
+            "SCRO - Global Reference": "1HlarenSRamoran [DIAL:013108EE]", 
+            "SCRO - Global Reference": "1MinerSArobar [DIAL:013109EA]"
         ]
     }
 }

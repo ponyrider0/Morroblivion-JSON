@@ -2,7 +2,7 @@
     "Topic": "1Sargon [DIAL:01310C76]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 655, 
+        "Data Size": 702, 
         "Record Flags": {}, 
         "FormID": "01F8BD39", 
         "Version Control Info": "00 00 00 00"
@@ -76,16 +76,17 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 2, 
-            "CompiledSize": 23, 
+            "RefCount": 3, 
+            "CompiledSize": 32, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 32 00 00 00 55 10 05 00 01 00 72 02 00", 
-        "SCTX - Result script source": "SetStage fbmwFGBeneranBounty 50\r\nShowMap mwVasMapMarker", 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 32 00 00 00 55 10 05 00 01 00 72 02 00 55 10 05 00 01 00 72 03 00", 
+        "SCTX - Result script source": "SetStage fbmwFGBeneranBounty 50\r\nShowMap mwVasMapMarker\r\nShowMap mwSargonMapMarker", 
         "References": [
             "SCRO - Global Reference": "fbmwFGBeneranBounty [QUST:010033D1]", 
-            "SCRO - Global Reference": "mwVasMapMarker [REFR:0100DC91]"
+            "SCRO - Global Reference": "mwVasMapMarker [REFR:0100DC91]", 
+            "SCRO - Global Reference": "mwSargonMapMarker [REFR:010083C5]"
         ]
     }
 }

@@ -2,7 +2,7 @@
     "Topic": "1TelSVos [DIAL:01310C45]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 431, 
+        "Data Size": 488, 
         "Record Flags": {}, 
         "FormID": "01322984", 
         "Version Control Info": "00 00 00 00"
@@ -79,10 +79,15 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 0, 
-            "CompiledSize": 0, 
+            "RefCount": 1, 
+            "CompiledSize": 9, 
             "VariableCount": 0, 
             "Type": "Object:0"
-        }
+        }, 
+        "SCDA - Compiled result script": "55 10 05 00 01 00 72 01 00", 
+        "SCTX - Result script source": "showmap mwTelVosMapMarker", 
+        "References": [
+            "SCRO - Global Reference": "mwTelVosMapMarker [REFR:0100AFCC]"
+        ]
     }
 }

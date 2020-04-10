@@ -1,0 +1,77 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1174, 
+        "Record Flags": {}, 
+        "FormID": "01005C95", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwOBMESwiftSwimEffectScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 281, 
+        "VariableCount": 5, 
+        "Type": "Magic Effect:256"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 11 00 49 00 00 00 15 00 0B 00 66 01 00 06 00 20 58 CE 10 00 00 15 00 0B 00 73 03 00 06 00 20 58 F7 15 00 00 15 00 10 00 73 02 00 0B 00 20 58 AD 15 05 00 01 00 73 03 00 15 00 0F 00 73 05 00 0A 00 20 73 02 00 20 31 20 7E 20 2A 11 00 00 00 10 00 06 00 13 00 7B 00 00 00 16 00 19 00 02 00 15 00 20 72 01 00 58 B9 10 00 00 20 73 04 00 20 30 20 3D 3D 20 26 26 1C 00 01 00 10 10 07 00 02 00 04 00 73 02 00 15 00 07 00 73 04 00 02 00 20 31 18 00 1E 00 02 00 1A 00 20 72 01 00 58 B9 10 00 00 20 30 20 3D 3D 20 73 04 00 20 31 20 3D 3D 20 26 26 1C 00 01 00 10 10 07 00 02 00 04 00 73 05 00 15 00 07 00 73 04 00 02 00 20 30 19 00 00 00 11 00 00 00 10 00 06 00 12 00 33 00 00 00 16 00 0D 00 02 00 09 00 20 73 04 00 20 31 20 3D 3D 1C 00 01 00 10 10 07 00 02 00 04 00 73 05 00 15 00 07 00 73 04 00 02 00 20 30 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwOBMESwiftSwimEffectScript\n\nref actor\nlong mag\nlong magneg\nshort index\nshort swim\n\nbegin scripteffectstart\n\n	set actor to GetSelf\n	set index to GetScriptActiveEffectIndex\n	set mag to GetNthActiveEffectMagnitude index\n	set magneg to mag * -1\n\nend\n\nbegin scripteffectupdate\n\n	if actor.IsSwimming && swim == 0\n		actor.modav speed mag\n		set swim to 1\n	elseif actor.IsSwimming == 0 && swim == 1\n		actor.modav speed magneg\n		set swim to 0\n	endif\nend\n\nbegin scripteffectfinish\n\n	if swim == 1\n		actor.modav speed magneg\n		set swim to 0\n	endif\n\nend\n;<CSEBlock>\n;<CSECaretPos> 10 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "actor"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "mag"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "index"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "swim"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "magneg"
+        }
+    ], 
+    "References": [
+        "SCRV - Local Variable": "00000001"
+    ]
+}

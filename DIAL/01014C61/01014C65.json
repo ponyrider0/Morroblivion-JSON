@@ -2,7 +2,7 @@
     "Topic": "1TRAzuraEndTalk [DIAL:01014C61]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 445, 
+        "Data Size": 616, 
         "Record Flags": {}, 
         "FormID": "01014C65", 
         "Version Control Info": "00 00 00 00"
@@ -25,19 +25,19 @@
                 "Response number": "01", 
                 "Unused": "77 41 6C"
             }, 
-            "NAM1 - Response Text": "Your work in Morrowind is not finished, Nerevarine. The Tribunal are dead, and the faith of my people is shaken. Protect them. Defend these lands. Th", 
+            "NAM1 - Response Text": "Your work in Morrowind is not finished, Nerevarine. The Tribunal are dead, and the faith of my people is shaken. Protect them. Defend these lands. The skies of Mournhold are clear once again. Let these people suffer no longer. Now go, mortal. Embrace your destiny, and go with my blessing.", 
             "NAM2 - Actor notes": ""
         }
     ], 
     "Conditions": [
         {
-            "Type": "00", 
+            "Type": "60", 
             "Unused": "00 00 00", 
-            "Comparison Value": 4.000000000000000, 
-            "Function": "GetQuestVariable:79", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
             "Unused": "00 00", 
-            "Parameter #1": "fbmwTRSothaSil "The Mad God" [QUST:0101C65C]", 
-            "Parameter #2": "gamestate", 
+            "Parameter #1": "fbmwMQ14 "Destroy Dagoth Ur" [QUST:01002C56]", 
+            "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }, 
         {
@@ -57,6 +57,16 @@
             "Function": "GetIsID:72", 
             "Unused": "00 00", 
             "Parameter #1": "0TRAzuraAvatar "Azura" [NPC_:0101335A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetDeadCount:84", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwVivec "Vivec" [NPC_:0102626A]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }

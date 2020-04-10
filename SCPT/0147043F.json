@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 876, 
+        "Data Size": 2345, 
         "Record Flags": {}, 
         "FormID": "0147043F", 
         "Version Control Info": "00 00 00 00"
@@ -9,40 +9,63 @@
     "EDID - Editor ID": "mwBMPlantScript", 
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
-        "RefCount": 3, 
-        "CompiledSize": 246, 
-        "VariableCount": 3, 
+        "RefCount": 6, 
+        "CompiledSize": 651, 
+        "VariableCount": 5, 
         "Type": "Object:0"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 E8 00 00 00 16 00 37 00 02 00 33 00 20 58 01 10 05 00 01 00 72 01 00 20 35 31 32 20 3C 3D 20 73 02 00 20 31 20 21 3D 20 26 26 20 72 01 00 58 2F 10 05 00 01 00 72 02 00 20 30 20 3E 20 26 26 00 10 53 00 01 00 3E 00 57 6F 75 6C 64 20 79 6F 75 20 6C 69 6B 65 20 74 6F 20 70 6C 61 6E 74 20 74 68 65 20 53 74 72 61 6E 67 65 20 53 65 65 64 73 20 69 6E 20 74 68 65 20 66 65 72 74 69 6C 65 20 73 6F 69 6C 3F 00 00 02 00 01 00 03 00 59 65 73 01 00 02 00 4E 6F 15 00 07 00 73 02 00 02 00 20 31 18 00 0D 00 04 00 09 00 20 73 02 00 20 31 20 3D 3D 15 00 0B 00 73 03 00 06 00 20 58 1F 10 00 00 16 00 0D 00 01 00 09 00 20 73 03 00 20 30 20 3D 3D 39 10 0A 00 02 00 72 03 00 6E 28 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "scriptName mwBMPlantScript\n\n\nshort messageOn\nshort button\n\nbegin gamemode\n	if ((GetDistance Player <= 512) && (messageon!=1) && (Player.GetItemCount 0BMUSeedsUUNIQUE > 0))\n		MessageBox \"Would you like to plant the Strange Seeds in the fertile soil?\"\"Yes\"\"No\"\n		set messageOn to 1\n	elseif messageon==1\n		set button to GetButtonPressed\n		if button==0\n			SetStage fbmwBMTrees 40\n		endif\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 B1 00 00 00 00 00 16 00 0D 00 01 00 09 00 20 73 02 00 20 31 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 2A 00 02 00 26 00 20 58 3A 10 05 00 01 00 72 05 00 20 33 30 20 3D 3D 20 72 04 00 58 2F 10 05 00 01 00 72 06 00 20 30 20 3E 20 26 26 00 10 53 00 01 00 3E 00 57 6F 75 6C 64 20 79 6F 75 20 6C 69 6B 65 20 74 6F 20 70 6C 61 6E 74 20 74 68 65 20 53 74 72 61 6E 67 65 20 53 65 65 64 73 20 69 6E 20 74 68 65 20 66 65 72 74 69 6C 65 20 73 6F 69 6C 3F 00 00 02 00 01 00 03 00 59 65 73 01 00 02 00 4E 6F 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 11 00 00 00 10 00 06 00 00 00 C0 01 00 00 16 00 20 00 04 00 1C 00 20 58 3A 10 05 00 01 00 72 05 00 20 34 30 20 3C 20 73 04 00 20 30 20 3D 3D 20 26 26 1C 00 01 00 22 10 00 00 1C 00 02 00 22 10 00 00 1C 00 03 00 22 10 00 00 15 00 09 00 73 04 00 04 00 20 31 20 7E 19 00 00 00 16 00 0C 00 02 00 08 00 20 66 05 00 20 30 20 3E 15 00 11 00 66 05 00 0C 00 20 66 05 00 20 58 0C 10 00 00 20 2D 1E 00 00 00 19 00 00 00 16 00 0D 00 0A 00 09 00 20 73 02 00 20 31 20 3D 3D 15 00 0B 00 73 03 00 06 00 20 58 1F 10 00 00 16 00 0F 00 01 00 0B 00 20 73 03 00 20 31 20 7E 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 0D 00 03 00 09 00 20 73 03 00 20 30 20 3D 3D 15 00 07 00 73 04 00 02 00 20 31 1C 00 04 00 52 10 0A 00 02 00 72 06 00 6E 01 00 00 00 39 10 0A 00 02 00 72 05 00 6E 28 00 00 00 19 00 00 00 15 00 07 00 73 02 00 02 00 20 30 19 00 00 00 16 00 0D 00 05 00 09 00 20 73 04 00 20 31 20 3D 3D 1C 00 01 00 21 10 00 00 15 00 07 00 73 04 00 02 00 20 32 15 00 08 00 66 05 00 03 00 20 31 30 0C 10 00 00 1E 00 00 00 19 00 00 00 16 00 0D 00 05 00 09 00 20 73 04 00 20 32 20 3D 3D 1C 00 01 00 22 10 00 00 1C 00 02 00 21 10 00 00 15 00 07 00 73 04 00 02 00 20 33 15 00 08 00 66 05 00 03 00 20 31 30 1E 00 00 00 19 00 00 00 16 00 0D 00 05 00 09 00 20 73 04 00 20 33 20 3D 3D 1C 00 01 00 22 10 00 00 1C 00 02 00 22 10 00 00 1C 00 03 00 21 10 00 00 15 00 07 00 73 04 00 02 00 20 34 1E 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptName mwBMPlantScript\n\n\nshort messageOn\nshort button\nshort growTree\nfloat countdownTimer\n\nBegin OnActivate\n	if (messageOn == 1)\n		return\n	endif\n	\n	if (GetStage fbmwBMTrees == 30) && (Player.GetItemCount 0BMUSeedsUUNIQUE > 0)\n		MessageBox \"Would you like to plant the Strange Seeds in the fertile soil?\"\"Yes\"\"No\"\n		set messageOn to 1\n	endif\nEnd\n	\nbegin gamemode\n\n	if (GetStage fbmwBMTrees < 40) && (growTree == 0)\n		mwFirstTree1REF.disable\n		mwFirstTree2REF.disable\n		mwFirstTree3REF.disable\n		set growTree to -1 ; use -1 as a doonce value\n	endif\n	\n	if (countdownTimer > 0)\n		set countdownTimer to countdownTimer - GetSecondsPassed\n		return\n	endif\n	\n	if (messageOn == 1)\n		set button to GetButtonPressed\n		if (button == -1)\n			return\n		endif\n\n		if (button == 0)\n			set growTree to 1\n			Player.RemoveItem 0BMUSeedsUUNIQUE 1\n			SetStage fbmwBMTrees 40\n		endif\n		\n		set messageOn to 0		\n	endif\n\n	if (growTree == 1)\n		mwFirstTree1REF.enable\n		set growTree to 2\n		set countdownTimer to 10\n		GetSecondsPassed ; run this once to reset timer\n		return\n	endif\n\n	if (growTree == 2)\n		mwFirstTree1REF.disable\n		mwFirstTree2REF.enable\n		set growTree to 3\n		set countdownTimer to 10\n		return\n	endif\n	\n	if (growTree == 3)\n		mwFirstTree1REF.disable\n		mwFirstTree2REF.disable\n		mwFirstTree3REF.enable\n		set growTree to 4\n		return\n	endif\n\nend\n;<CSEBlock>\n;<CSECaretPos> 1308 </CSECaretPos>\n;</CSEBlock>", 
     "Local Variables": [
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000002", 
-                "Unused": "62 6D 65 74 00 00 00 00 00 00 00 00", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "65 70 6F 72 74 62 61"
+                "Unused": "00 00 00 94 DE AC 23"
             }, 
             "SCVR - Name": "messageOn"
         }, 
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000003", 
-                "Unused": "42 4D 45 74 00 00 00 00 00 00 00 00", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "70 6F 72 74 52 65 66"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "button"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "growTree"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "countdownTimer"
         }
     ], 
     "References": [
+        "SCRO - Global Reference": "mwFirstTree1REF [REFR:01F019F5]", 
+        "SCRO - Global Reference": "mwFirstTree2REF [REFR:01F019F7]", 
+        "SCRO - Global Reference": "mwFirstTree3REF [REFR:01F019F6]", 
         "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
-        "SCRO - Global Reference": "0BMUSeedsUUNIQUE [MISC:0116023B]", 
-        "SCRO - Global Reference": "fbmwBMTrees [QUST:0101B6D6]"
+        "SCRO - Global Reference": "fbmwBMTrees [QUST:0101B6D6]", 
+        "SCRO - Global Reference": "0BMUSeedsUUNIQUE [MISC:0116023B]"
     ]
 }

@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 453, 
+        "Data Size": 547, 
         "Record Flags": {}, 
         "FormID": "01007DB6", 
         "Version Control Info": "00 00 00 00"
@@ -9,15 +9,11 @@
     "EDID - Editor ID": "fbmwRingViperboltScript", 
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
-        "RefCount": 2, 
-        "CompiledSize": 77, 
+        "RefCount": 0, 
+        "CompiledSize": 4, 
         "VariableCount": 0, 
         "Type": "Object:0"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 0B 00 04 00 1A 00 00 00 01 00 72 01 00 1C 00 01 00 1C 10 05 00 01 00 72 02 00 B3 10 05 00 01 00 72 02 00 11 00 00 00 10 00 0B 00 05 00 11 00 00 00 01 00 72 01 00 1C 00 01 00 1D 10 05 00 01 00 72 02 00 11 00 00 00", 
-    "SCTX - Script Source": "SCN FBMWRingViperboltSCRIPT\n\n; Applied to the Viperbolt Ring.\n\nBegin OnEquip Player\n	Player.AddSpell fbmwViperBoltSpell\n	SelectPlayerSpell fbmwViperBoltSpell\nEnd\n\n\nBegin OnUnequip Player\n	Player.RemoveSpell fbmwViperBoltSpell\nEnd\n;<CSEBlock>\n;<CSECaretPos> 225 </CSECaretPos>\n;</CSEBlock>", 
-    "References": [
-        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
-        "SCRO - Global Reference": "fbmwViperBoltSpell [SPEL:01007DB7]"
-    ]
+    "SCDA - Compiled Script": "1D 00 00 00", 
+    "SCTX - Script Source": "; This script is no longer needed with Universal Cast-When-Used System.\n; Viperbolt rings now use mwCWUTargetItemScript to correctly assign \n; appropriate viperbolt enchantment.\nSCN FBMWRingViperboltSCRIPT\n\n; Applied to the Viperbolt Ring.\n\n;Begin OnEquip Player\n;	Player.AddSpell fbmwViperBoltSpell\n;	SelectPlayerSpell fbmwViperBoltSpell\n;End\n\n\n;Begin OnUnequip Player\n;	Player.RemoveSpell fbmwViperBoltSpell\n;End\n\n;<CSEBlock>\n;<CSECaretPos> 414 </CSECaretPos>\n;</CSEBlock>"
 }

@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "QUST", 
-        "Data Size": 4141, 
+        "Data Size": 4276, 
         "Record Flags": {}, 
         "FormID": "0101B6D2", 
         "Version Control Info": "00 00 00 00"
@@ -47,12 +47,12 @@
                         "SCHR - Basic Script Data": {
                             "Unused": "00 00 00 00", 
                             "RefCount": 4, 
-                            "CompiledSize": 32, 
+                            "CompiledSize": 64, 
                             "VariableCount": 0, 
                             "Type": "Quest:1"
                         }, 
-                        "SCDA - Compiled result script": "1C 00 01 00 21 10 00 00 1C 00 02 00 21 10 00 00 1C 00 03 00 21 10 00 00 1C 00 04 00 21 10 00 00", 
-                        "SCTX - Result script source": "fbmwbmWereSkaal1.enable\r\nfbmwbmWereSkaal2.enable\r\nfbmwbmWereSkaal3.enable\r\nfbmwbmWereSkaal4.enable", 
+                        "SCDA - Compiled result script": "1C 00 01 00 21 10 00 00 1C 00 02 00 21 10 00 00 1C 00 03 00 21 10 00 00 1C 00 04 00 21 10 00 00 1C 00 01 00 5E 10 00 00 1C 00 02 00 5E 10 00 00 1C 00 03 00 5E 10 00 00 1C 00 04 00 5E 10 00 00", 
+                        "SCTX - Result script source": "fbmwbmWereSkaal1.enable\r\nfbmwbmWereSkaal2.enable\r\nfbmwbmWereSkaal3.enable\r\nfbmwbmWereSkaal4.enable\r\n\r\nfbmwbmWereSkaal1.evp\r\nfbmwbmWereSkaal2.evp\r\nfbmwbmWereSkaal3.evp\r\nfbmwbmWereSkaal4.evp\r\n", 
                         "References": [
                             "SCRO - Global Reference": "fbmwbmWereSkaal1 [ACHR:01F8B8C1]", 
                             "SCRO - Global Reference": "fbmwbmWereSkaal2 [ACHR:01F8B8C0]", 
@@ -122,7 +122,7 @@
                             "Type": "Quest:1"
                         }, 
                         "SCDA - Compiled result script": "16 00 0F 00 01 00 0B 00 20 58 BD 16 00 00 20 30 20 3D 3D 1C 00 01 00 1C 10 05 00 01 00 72 02 00 19 00 00 00 16 00 0F 00 01 00 0B 00 20 58 BD 16 00 00 20 31 20 3D 3D 1C 00 01 00 1C 10 05 00 01 00 72 03 00 19 00 00 00", 
-                        "SCTX - Result script source": "if (GetGodMode == 0)\r\nplayer.addspell 0werewolfSblood\r\nendif\r\nif(GetGodMode == 1)\r\nplayer.addspell fbmwbmwerewolfbloodab\r\nendif", 
+                        "SCTX - Result script source": "if (GetGodMode == 0)\r\n  player.addspell 0werewolfSblood\r\nendif\r\nif(GetGodMode == 1)\r\n  player.addspell fbmwbmwerewolfbloodab\r\nendif", 
                         "References": [
                             "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
                             "SCRO - Global Reference": "0werewolfSblood [SPEL:01060413]", 

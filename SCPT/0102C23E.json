@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 525, 
+        "Data Size": 610, 
         "Record Flags": {}, 
         "FormID": "0102C23E", 
         "Version Control Info": "00 00 00 00"
@@ -10,12 +10,12 @@
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
         "RefCount": 3, 
-        "CompiledSize": 144, 
+        "CompiledSize": 174, 
         "VariableCount": 0, 
         "Type": "Object:0"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 82 00 00 00 16 00 29 00 03 00 25 00 20 58 3A 10 05 00 01 00 72 01 00 20 31 30 20 3E 3D 20 58 3A 10 05 00 01 00 72 01 00 20 32 30 20 3C 3D 20 26 26 16 00 16 00 01 00 12 00 20 58 01 10 05 00 01 00 72 02 00 20 33 30 30 20 3E 3D 56 10 05 00 01 00 72 02 00 19 00 00 00 19 00 00 00 16 00 15 00 01 00 11 00 20 58 3A 10 05 00 01 00 72 03 00 20 32 30 20 3D 3D 56 10 05 00 01 00 72 02 00 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "Scn fbmwFalcoscript\n\nbegin gamemode\n	if GetStage fbmwCO12 >= 10 && GetStage fbmwCO12 <= 20\n		if GetDistance Player >= 300 \n			StartConversation Player\n		endif\n	endif\n\n	if getstage fbmwCO13 == 20\n		startconversation Player\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 232 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 A0 00 00 00 16 00 29 00 03 00 25 00 20 58 3A 10 05 00 01 00 72 01 00 20 31 30 20 3D 3D 20 58 3A 10 05 00 01 00 72 01 00 20 32 30 20 3D 3D 20 7C 7C 16 00 34 00 01 00 30 00 20 58 01 10 05 00 01 00 72 02 00 20 34 30 30 20 3E 20 58 21 11 00 00 20 30 20 3D 3D 20 26 26 20 72 02 00 58 21 11 00 00 20 30 20 3D 3D 20 26 26 56 10 05 00 01 00 72 02 00 19 00 00 00 19 00 00 00 16 00 15 00 01 00 11 00 20 58 3A 10 05 00 01 00 72 03 00 20 32 30 20 3D 3D 56 10 05 00 01 00 72 02 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwFalcoscript\n\nbegin gamemode\n	if (GetStage fbmwCO12 == 10) || (GetStage fbmwCO12 == 20)\n		if (GetDistance Player > 400) && (IsInCombat == 0) && (Player.IsInCombat == 0)\n			StartConversation Player\n		endif\n	endif\n\n	if (getstage fbmwCO13 == 20)\n		startconversation Player\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 95 </CSECaretPos>\n;</CSEBlock>", 
     "References": [
         "SCRO - Global Reference": "fbmwCO12 [QUST:0101BE3F]", 
         "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 

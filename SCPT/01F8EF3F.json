@@ -1,0 +1,61 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1547, 
+        "Record Flags": {}, 
+        "FormID": "01F8EF3F", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwMagicFixesOBMEScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 0, 
+        "CompiledSize": 404, 
+        "VariableCount": 6, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 86 01 00 00 16 00 1D 00 01 00 19 00 20 58 D4 15 00 00 20 30 20 3D 3D 20 58 E7 14 00 00 20 30 20 3D 3D 20 26 26 1E 00 00 00 19 00 00 00 16 00 0D 00 09 00 09 00 20 73 03 00 20 30 20 3D 3D 16 00 17 00 01 00 13 00 20 58 BE 15 08 00 01 00 04 00 4F 42 4D 45 20 30 20 3D 3D 0F 16 96 00 01 00 92 00 4D 6F 72 72 6F 62 6C 69 76 69 6F 6E 2D 4D 61 67 69 63 2D 46 69 78 65 73 20 45 52 52 4F 52 3A 20 0A 0A 54 68 69 73 20 6D 6F 64 20 72 65 71 75 69 72 65 73 20 74 68 65 20 4F 62 6C 69 76 69 6F 6E 20 4D 61 67 69 63 20 45 78 74 65 6E 64 65 72 20 28 4F 42 4D 45 29 20 70 6C 75 67 69 6E 20 66 6F 72 20 4F 42 53 45 2E 20 0A 0A 50 6C 65 61 73 65 20 71 75 69 74 20 74 68 65 20 67 61 6D 65 20 61 6E 64 20 69 6E 73 74 61 6C 6C 20 69 74 20 6E 6F 77 2E 17 00 02 00 01 00 06 14 2F 00 01 00 2B 00 4D 6F 72 72 6F 62 6C 69 76 69 6F 6E 2D 4D 61 67 69 63 2D 46 69 78 65 73 20 76 20 31 2E 37 3A 20 69 6E 69 74 61 6C 69 7A 65 64 2E 19 00 00 00 65 17 1A 00 01 19 00 56 03 00 00 04 00 58 00 00 66 17 0B 00 01 00 05 00 41 72 72 61 79 00 65 17 1A 00 01 19 00 56 03 00 00 05 00 58 00 00 66 17 0B 00 01 00 05 00 41 72 72 61 79 00 15 00 07 00 73 06 00 02 00 20 30 15 00 07 00 73 03 00 02 00 20 31 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwMagicFixesOBMEScript\n; Morroblivion Magic Fixes v1.7\n; This is a quest script which checks for the required installation\n;   of the OBME plugin for OBSE.\n\nshort Initialized\n\narray_var weaponList\narray_var weaponeffectList\nshort i\n\nBegin GameMode\n\n	if (GetGameRestarted == 0) && (GetGameLoaded == 0)\n		return\n	endif\n\n	\n	if (Initialized == 0)\n		if ((IsPluginInstalled \"OBME\")==0)\n			MessageBoxEx \"Morroblivion-Magic-Fixes ERROR: %r%rThis mod requires the Oblivion Magic Extender (OBME) plugin for OBSE. %r%rPlease quit the game and install it now.\"\n		else\n			PrintC \"Morroblivion-Magic-Fixes v 1.7: initalized.\"\n		endif\n\n		; initalize arrays\n		let weaponList := ar_Construct Array\n		let weaponeffectList := ar_Construct Array\n\n		set i to 0\n\n;		let weaponList[i] := 0boundSdagger\n;		let weaponeffectList[i] := mwBoundDaggerEffect\n;		set i to i+1\n		\n		set Initialized to 1\n\n	endif\n	\nEnd\n", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "Initialized"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "weaponList"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "weaponeffectList"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "i"
+        }
+    ]
+}

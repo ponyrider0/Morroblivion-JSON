@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 1226, 
+        "Data Size": 1286, 
         "Record Flags": {}, 
         "FormID": "01470410", 
         "Version Control Info": "00 00 00 00"
@@ -10,12 +10,12 @@
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
         "RefCount": 3, 
-        "CompiledSize": 432, 
+        "CompiledSize": 451, 
         "VariableCount": 1, 
         "Type": "Object:0"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 A0 01 00 00 00 00 16 00 0F 00 0A 00 0B 00 20 73 01 00 20 31 20 7E 20 21 3D 16 00 16 00 03 00 12 00 20 58 3A 10 05 00 01 00 72 01 00 20 31 31 30 20 3D 3D 00 10 84 00 01 00 7C 00 59 6F 75 20 67 72 61 73 70 20 74 68 65 20 6D 69 67 68 74 79 20 61 78 65 20 6F 66 20 48 72 6F 74 68 6D 75 6E 64 2C 20 61 6E 64 20 75 74 74 65 72 20 79 6F 75 72 20 69 6E 74 65 6E 74 69 6F 6E 20 74 6F 20 72 75 6C 65 20 6F 76 65 72 20 54 68 69 72 73 6B 2E 20 20 48 72 6F 74 68 6D 75 6E 64 20 64 6F 65 73 20 6E 6F 74 20 67 72 61 6E 74 20 68 69 73 20 62 6C 65 73 73 69 6E 67 2E 00 00 00 00 39 10 0A 00 02 00 72 01 00 6E 78 00 00 00 15 00 09 00 73 01 00 04 00 20 31 20 7E 17 00 02 00 04 00 1E 10 08 00 02 00 72 02 00 72 03 00 00 10 93 00 01 00 8B 00 59 6F 75 20 67 72 61 73 70 20 74 68 65 20 6D 69 67 68 74 79 20 61 78 65 20 6F 66 20 48 72 6F 74 68 6D 75 6E 64 2C 20 61 6E 64 20 75 74 74 65 72 20 79 6F 75 72 20 69 6E 74 65 6E 74 69 6F 6E 20 74 6F 20 72 75 6C 65 20 6F 76 65 72 20 54 68 69 72 73 6B 2E 20 20 49 6E 20 61 6E 73 77 65 72 20 6F 66 20 61 70 70 72 6F 76 61 6C 2C 20 48 72 6F 74 68 6D 75 6E 64 20 67 72 61 6E 74 73 20 68 69 73 20 62 6C 65 73 73 69 6E 67 2E 00 00 00 00 39 10 0A 00 02 00 72 01 00 6E 46 00 00 00 15 00 09 00 73 01 00 04 00 20 31 20 7E 19 00 00 00 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "scriptName mwBMHrothmundAxeScript\n\nshort axegrabber\n\nbegin OnActivate\n	if axegrabber != -1\n		if GetStage fbmwBMMeadHall == 110\n			MessageBox \"You grasp the mighty axe of Hrothmund, and utter your intention to rule over Thirsk.  Hrothmund does not grant his blessing.\"\n			SetStage fbmwBMMeadHall 120\n			set axegrabber to -1\n		else\n			Cast 0hrothmundSblessing Player\n			MessageBox \"You grasp the mighty axe of Hrothmund, and utter your intention to rule over Thirsk.  In answer of approval, Hrothmund grants his blessing.\"\n			SetStage fbmwBMMeadHall 70\n			set axegrabber to -1\n		endif\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 B3 01 00 00 00 00 16 00 0F 00 0A 00 0B 00 20 73 01 00 20 31 20 7E 20 21 3D 16 00 16 00 03 00 12 00 20 58 3A 10 05 00 01 00 72 01 00 20 31 31 30 20 3D 3D 00 10 84 00 01 00 7C 00 59 6F 75 20 67 72 61 73 70 20 74 68 65 20 6D 69 67 68 74 79 20 61 78 65 20 6F 66 20 48 72 6F 74 68 6D 75 6E 64 2C 20 61 6E 64 20 75 74 74 65 72 20 79 6F 75 72 20 69 6E 74 65 6E 74 69 6F 6E 20 74 6F 20 72 75 6C 65 20 6F 76 65 72 20 54 68 69 72 73 6B 2E 20 20 48 72 6F 74 68 6D 75 6E 64 20 64 6F 65 73 20 6E 6F 74 20 67 72 61 6E 74 20 68 69 73 20 62 6C 65 73 73 69 6E 67 2E 00 00 00 00 39 10 0A 00 02 00 72 01 00 6E 78 00 00 00 15 00 09 00 73 01 00 04 00 20 31 20 7E 18 00 15 00 04 00 11 00 20 58 3A 10 05 00 01 00 72 01 00 20 34 30 20 3E 3D 1E 10 08 00 02 00 72 02 00 72 03 00 00 10 93 00 01 00 8B 00 59 6F 75 20 67 72 61 73 70 20 74 68 65 20 6D 69 67 68 74 79 20 61 78 65 20 6F 66 20 48 72 6F 74 68 6D 75 6E 64 2C 20 61 6E 64 20 75 74 74 65 72 20 79 6F 75 72 20 69 6E 74 65 6E 74 69 6F 6E 20 74 6F 20 72 75 6C 65 20 6F 76 65 72 20 54 68 69 72 73 6B 2E 20 20 49 6E 20 61 6E 73 77 65 72 20 6F 66 20 61 70 70 72 6F 76 61 6C 2C 20 48 72 6F 74 68 6D 75 6E 64 20 67 72 61 6E 74 73 20 68 69 73 20 62 6C 65 73 73 69 6E 67 2E 00 00 00 00 39 10 0A 00 02 00 72 01 00 6E 46 00 00 00 15 00 09 00 73 01 00 04 00 20 31 20 7E 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptName mwBMHrothmundAxeScript\n\nshort axegrabber\n\nbegin OnActivate\n	if (axegrabber != -1)\n		if (GetStage fbmwBMMeadHall == 110)\n			MessageBox \"You grasp the mighty axe of Hrothmund, and utter your intention to rule over Thirsk.  Hrothmund does not grant his blessing.\"\n			SetStage fbmwBMMeadHall 120\n			set axegrabber to -1\n		elseif (GetStage fbmwBMMeadHall >= 40)\n			Cast 0hrothmundSblessing Player\n			MessageBox \"You grasp the mighty axe of Hrothmund, and utter your intention to rule over Thirsk.  In answer of approval, Hrothmund grants his blessing.\"\n			SetStage fbmwBMMeadHall 70\n			set axegrabber to -1\n		endif\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 631 </CSECaretPos>\n;</CSEBlock>", 
     "Local Variables": [
         {
             "SLSD - Local Variable Data": {
@@ -24,7 +24,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "21 68 1D 88 01 00 00"
             }, 
             "SCVR - Name": "axegrabber"
         }

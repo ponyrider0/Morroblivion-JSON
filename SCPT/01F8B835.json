@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 876, 
+        "Data Size": 916, 
         "Record Flags": {}, 
         "FormID": "01F8B835", 
         "Version Control Info": "00 00 00 00"
@@ -9,18 +9,19 @@
     "EDID - Editor ID": "fbmwbmWildHuntFinalGateScript", 
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
-        "RefCount": 9, 
-        "CompiledSize": 227, 
+        "RefCount": 10, 
+        "CompiledSize": 235, 
         "VariableCount": 0, 
         "Type": "Object:0"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 D3 00 00 00 00 00 16 00 16 00 08 00 12 00 20 72 03 00 58 2F 10 05 00 01 00 72 05 00 20 30 20 3E 1C 00 01 00 21 10 00 00 1C 00 02 00 22 10 00 00 1C 00 03 00 83 18 0C 00 01 05 00 52 06 00 01 05 00 52 07 00 14 11 12 00 01 00 0E 00 62 6D 5F 65 6E 64 67 61 6D 65 2E 62 69 6B 39 10 0A 00 02 00 72 08 00 6E 64 00 00 00 16 00 14 00 01 00 10 00 20 58 54 10 05 00 01 00 72 09 00 20 30 20 3D 3D 1C 00 04 00 21 10 00 00 19 00 00 00 17 00 02 00 01 00 59 10 3B 00 01 00 31 00 4F 6E 6C 79 20 6F 6E 65 20 77 69 74 68 20 74 68 65 20 6B 65 79 20 6D 61 79 20 70 61 73 73 20 74 68 72 6F 75 67 68 20 74 68 69 73 20 67 61 74 65 2E 00 00 00 00 00 00 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "scn fbmwbmWildHuntFinalGateScript\nbegin onactivate\n	if (Player.GetItemCount 0keyuhircine3 > 0)\n		fbmwbmCollapsedIcebergREF.Enable\n		fbmwbmWholeIcebergREF.Disable\n		Player.Call fbmwMovetoFunct fbmwbmEndGameTeleportMArker\n		playbink \"bm_endgame.bik\"\n		SetStage fbmwBMWildHunt 100\n		if (GetDeadCount 0falxscarius2 == 0)\n			fbmwFalx1REF.Enable\n		endif\n	else\n		Message \"Only one with the key may pass through this gate.\"\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 191 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 DB 00 00 00 00 00 16 00 16 00 09 00 12 00 20 72 03 00 58 2F 10 05 00 01 00 72 06 00 20 30 20 3E 1C 00 01 00 21 10 00 00 1C 00 02 00 22 10 00 00 1C 00 03 00 83 18 0C 00 01 05 00 52 07 00 01 05 00 52 08 00 14 11 12 00 01 00 0E 00 62 6D 5F 65 6E 64 67 61 6D 65 2E 62 69 6B 39 10 0A 00 02 00 72 09 00 6E 64 00 00 00 16 00 14 00 01 00 10 00 20 58 54 10 05 00 01 00 72 0A 00 20 30 20 3D 3D 1C 00 04 00 21 10 00 00 19 00 00 00 1C 00 05 00 22 10 00 00 17 00 02 00 01 00 59 10 3B 00 01 00 31 00 4F 6E 6C 79 20 6F 6E 65 20 77 69 74 68 20 74 68 65 20 6B 65 79 20 6D 61 79 20 70 61 73 73 20 74 68 72 6F 75 67 68 20 74 68 69 73 20 67 61 74 65 2E 00 00 00 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwbmWildHuntFinalGateScript\nbegin onactivate\n	if (Player.GetItemCount 0keyuhircine3 > 0)\n		fbmwbmCollapsedIcebergREF.Enable\n		fbmwbmWholeIcebergREF.Disable\n		Player.Call fbmwMovetoFunct fbmwbmEndGameTeleportMArker\n		playbink \"bm_endgame.bik\"\n		SetStage fbmwBMWildHunt 100\n		if (GetDeadCount 0falxscarius2 == 0)\n			fbmwFalx1REF.Enable\n		endif\n		mwFalx2REF.Disable\n	else\n		Message \"Only one with the key may pass through this gate.\"\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 348 </CSECaretPos>\n;</CSEBlock>", 
     "References": [
         "SCRO - Global Reference": "fbmwbmCollapsedIcebergREF [REFR:01F0067A]", 
         "SCRO - Global Reference": "fbmwbmWholeIcebergREF [REFR:01F00679]", 
         "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
         "SCRO - Global Reference": "fbmwFalx1REF [ACHR:01F0718C]", 
+        "SCRO - Global Reference": "mwFalx2REF [ACHR:01F09ABA]", 
         "SCRO - Global Reference": "0keyUhircine3 [KEYM:01400246]", 
         "SCRO - Global Reference": "fbmwMoveToFunct [SCPT:010A10D4]", 
         "SCRO - Global Reference": "fbmwbmEndGameTeleportMArker [REFR:01F8B8BB]", 

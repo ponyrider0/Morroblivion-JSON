@@ -1,0 +1,82 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1278, 
+        "Record Flags": {}, 
+        "FormID": "01008ED8", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwOBMEJumpEffectScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 266, 
+        "VariableCount": 6, 
+        "Type": "Magic Effect:256"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 11 00 BC 00 00 00 15 00 0B 00 66 01 00 06 00 20 58 CE 10 00 00 15 00 0B 00 73 02 00 06 00 20 58 F7 15 00 00 15 00 10 00 73 03 00 0B 00 20 58 AD 15 05 00 01 00 73 02 00 15 00 0E 00 66 04 00 09 00 20 73 03 00 20 31 30 20 2A 15 00 1D 00 66 05 00 18 00 20 58 00 11 12 00 01 00 0E 00 66 4A 75 6D 70 48 65 69 67 68 74 4D 69 6E 15 00 1D 00 66 06 00 18 00 20 58 00 11 12 00 01 00 0E 00 66 4A 75 6D 70 48 65 69 67 68 74 4D 61 78 69 14 15 00 02 00 0E 00 66 4A 75 6D 70 48 65 69 67 68 74 4D 69 6E 66 04 00 69 14 15 00 02 00 0E 00 66 4A 75 6D 70 48 65 69 67 68 74 4D 61 78 66 04 00 11 00 00 00 10 00 06 00 12 00 36 00 00 00 69 14 15 00 02 00 0E 00 66 4A 75 6D 70 48 65 69 67 68 74 4D 69 6E 66 05 00 69 14 15 00 02 00 0E 00 66 4A 75 6D 70 48 65 69 67 68 74 4D 61 78 66 06 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwOBMEJumpEffectScript\n\nref actor\nshort index\nlong mag\nfloat jumpheight\nfloat originalMin\nfloat originalMax\n\nbegin scripteffectstart\n\n	set actor to GetSelf\n	set index to GetScriptActiveEffectIndex\n	set mag to GetNthActiveEffectMagnitude index\n	set jumpheight to mag*10\n\n	set originalMin to GetGameSetting fJumpHeightMin\n	set originalMax to GetGameSetting fJumpHeightMax\n\n	SetNumericGameSetting fJumpHeightMin jumpheight\n	SetNumericGameSetting fJumpHeightMax jumpheight\n\nend\n\nbegin scripteffectfinish\n\n	SetNumericGameSetting fJumpHeightMin originalMin\n	SetNumericGameSetting fJumpHeightMax originalMax\n\nend\n;<CSEBlock>\n;<CSECaretPos> 10 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "actor"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "index"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "mag"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "jumpheight"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "originalMin"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "originalMax"
+        }
+    ], 
+    "References": [
+        "SCRV - Local Variable": "00000001"
+    ]
+}

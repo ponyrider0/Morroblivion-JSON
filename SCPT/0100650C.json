@@ -1,0 +1,87 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1511, 
+        "Record Flags": {}, 
+        "FormID": "0100650C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwCWUCastEventHandler", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 8, 
+        "CompiledSize": 319, 
+        "VariableCount": 6, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 11 00 07 00 26 01 00 00 01 02 01 00 04 02 00 04 01 03 00 16 00 15 00 0B 00 11 00 20 72 05 00 73 20 00 20 72 05 00 73 1F 00 20 3E 3D 15 00 0C 00 66 06 00 07 00 20 72 05 00 66 14 00 65 17 16 00 01 15 00 56 03 00 00 03 00 58 06 00 80 19 07 00 01 00 72 04 00 00 65 17 13 00 01 12 00 56 04 00 00 04 00 56 03 00 00 03 00 42 00 18 00 1C 00 01 00 48 19 05 00 01 00 72 07 00 65 17 16 00 01 15 00 56 03 00 00 03 00 58 08 00 80 19 07 00 01 00 72 04 00 00 65 17 13 00 01 12 00 56 04 00 00 04 00 56 03 00 00 03 00 42 00 18 00 65 17 14 00 01 13 00 56 01 00 00 05 00 42 01 14 56 01 05 00 1F 00 10 00 1C 00 01 00 DF 18 05 00 01 00 73 05 00 65 17 13 00 01 12 00 56 01 05 00 20 00 58 01 00 1B 15 04 00 00 00 00 1C 00 01 00 48 19 05 00 01 00 72 06 00 06 14 39 00 04 00 23 00 25 6E 20 2D 20 43 68 61 72 67 65 20 25 2E 30 66 2F 25 2E 30 66 20 28 61 63 74 69 76 65 20 69 74 65 6D 29 72 05 00 66 03 00 72 05 00 73 20 00 72 05 00 73 1E 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwCWUCastEventHandler\n\n;This is OBSE event handler to track when CWU spell is casted\n;DO NOT attach this script to any object\n\nref caster\nref spell\n\narray_var ar\nref ir\nshort cost\nref rWeap\n\nbegin Function { caster, spell }\n\n	if mwCWU.ItemChargeCurrent >= mwCWU.ItemChargeCost\n\n		set rWeap to mwCWU.ItemWeap\n\n		Let ar := mwCWUHolderREF.GetInvRefsForItem rWeap\n		Let ir := ar[0]\n		ir.RemoveMeIR Player\n\n		Let ar := Player.GetInvRefsForItem rWeap\n		Let ir := ar[0]\n		Let cost := (-1 * mwCWU.ItemChargeCost)\n\n		ir.ModCurrentCharge cost\n\n		Let mwCWU.ItemChargeCurrent := ir.GetCurrentCharge\n\n		ir.RemoveMeIR mwCWUHolderREF\n\n		printc \"%n - Charge %.0f/%.0f (active item)\", mwCWU.Item, mwCWU.ItemChargeCurrent, mwCWU.ItemChargeMax\n	endif\n\nend\n;<CSEBlock>\n;<CSECaretPos> 259 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "08 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "05 74 01 F8 00 00 00"
+            }, 
+            "SCVR - Name": "caster"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "6F 72 65 20 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "74 79 20 31 30 20 70"
+            }, 
+            "SCVR - Name": "spell"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "ar"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "ir"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "cost"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "rWeap"
+        }
+    ], 
+    "References": [
+        "SCRV - Local Variable": "00000004", 
+        "SCRV - Local Variable": "00000001", 
+        "SCRV - Local Variable": "00000002", 
+        "SCRV - Local Variable": "00000006", 
+        "SCRO - Global Reference": "mwCWU [QUST:01F8ED5E]", 
+        "SCRO - Global Reference": "mwCWUHolderREF [REFR:01F8ED55]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+    ]
+}

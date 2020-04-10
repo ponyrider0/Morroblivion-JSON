@@ -2,7 +2,7 @@
     "Topic": "1seeSusSdead [DIAL:0131104C]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 599, 
+        "Data Size": 635, 
         "Record Flags": {}, 
         "FormID": "01321DAC", 
         "Version Control Info": "00 00 00 00"
@@ -84,15 +84,16 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 1, 
-            "CompiledSize": 9, 
+            "RefCount": 2, 
+            "CompiledSize": 18, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00", 
-        "SCTX - Result script source": "addtopic 1someSunderstanding", 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "addtopic 1someSunderstanding\r\naddtopic 1plot", 
         "References": [
-            "SCRO - Global Reference": "1someSunderstanding [DIAL:01310FC3]"
+            "SCRO - Global Reference": "1someSunderstanding [DIAL:01310FC3]", 
+            "SCRO - Global Reference": "1plot [DIAL:01311099]"
         ]
     }
 }

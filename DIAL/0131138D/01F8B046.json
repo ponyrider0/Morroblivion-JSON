@@ -2,7 +2,7 @@
     "Topic": "1NordSvillage [DIAL:0131138D]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 910, 
+        "Data Size": 963, 
         "Record Flags": {}, 
         "FormID": "01F8B046", 
         "Version Control Info": "00 00 00 00"
@@ -63,18 +63,19 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 4, 
-            "CompiledSize": 60, 
+            "RefCount": 5, 
+            "CompiledSize": 69, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "15 00 0A 00 72 02 00 73 01 00 02 00 20 30 15 00 0A 00 72 02 00 73 02 00 02 00 20 30 39 10 0A 00 02 00 72 03 00 6E 14 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00", 
-        "SCTX - Result script source": "set fbmwbmsmugglers.saenusfollow to 0\r\nset fbmwbmsmugglers.artoriafollow to 0\r\nsetstage fbmwbmcariusgone 20\r\nplayer.additem 0miscuskulluskaal 1", 
+        "SCDA - Compiled result script": "15 00 0A 00 72 02 00 73 01 00 02 00 20 30 15 00 0A 00 72 02 00 73 02 00 02 00 20 30 39 10 0A 00 02 00 72 03 00 6E 14 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00 55 10 05 00 01 00 72 05 00", 
+        "SCTX - Result script source": "set fbmwbmsmugglers.saenusfollow to 0\r\nset fbmwbmsmugglers.artoriafollow to 0\r\nsetstage fbmwbmcariusgone 20\r\nplayer.additem 0miscuskulluskaal 1\r\nshowmap mwSkaalVillageMapMarker", 
         "References": [
             "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
             "SCRO - Global Reference": "fbmwBMSmugglers [QUST:0101B6D3]", 
             "SCRO - Global Reference": "fbmwBMCariusGone [QUST:0101AF88]", 
-            "SCRO - Global Reference": "0miscUskullUSkaal [MISC:01160242]"
+            "SCRO - Global Reference": "0miscUskullUSkaal [MISC:01160242]", 
+            "SCRO - Global Reference": "mwSkaalVillageMapMarker [REFR:01451049]"
         ]
     }
 }

@@ -1,22 +1,24 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 302, 
+        "Data Size": 770, 
         "Record Flags": {}, 
         "FormID": "01003BDD", 
         "Version Control Info": "00 00 00 00"
     }, 
-    "EDID - Editor ID": "fbmwHRBillCollectGirasIndaramScript", 
+    "EDID - Editor ID": "mwHRBillCollectGirasIndaramScript", 
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
-        "RefCount": 1, 
-        "CompiledSize": 63, 
+        "RefCount": 3, 
+        "CompiledSize": 199, 
         "VariableCount": 1, 
         "Type": "Object:0"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 2F 00 00 00 00 00 16 00 15 00 01 00 11 00 20 58 3A 10 05 00 01 00 72 01 00 20 37 30 20 3E 3D 39 10 0A 00 02 00 72 01 00 6E 5A 00 00 00 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "ScriptName fbmwHRBillCollectGirasIndaramScript\r\n\r\nBegin OnDeath\r\n	IF GetStage fbmwHRBillCollect >= 70\r\n		SetStage fbmwHRBillCollect 90\r\n	ENDIF\r\nEND\r\n", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 2F 00 00 00 00 00 16 00 15 00 01 00 11 00 20 58 3A 10 05 00 01 00 72 01 00 20 37 30 20 3E 3D 39 10 0A 00 02 00 72 01 00 6E 5A 00 00 00 19 00 00 00 11 00 00 00 10 00 06 00 00 00 7E 00 00 00 16 00 15 00 01 00 11 00 20 58 3A 10 05 00 01 00 72 01 00 20 37 30 20 21 3D 1E 00 00 00 17 00 02 00 07 00 16 00 13 00 05 00 0F 00 20 58 0E 10 04 00 01 00 08 00 20 37 35 20 3C 39 10 0A 00 02 00 72 01 00 6E 5A 00 00 00 0F 10 09 00 02 00 21 00 6E 05 00 00 00 17 10 00 00 68 14 09 00 02 00 08 00 6E C8 00 00 00 56 10 08 00 02 00 72 02 00 72 03 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName mwHRBillCollectGirasIndaramScript\n\nBegin OnDeath\n	IF GetStage fbmwHRBillCollect >= 70\n		SetStage fbmwHRBillCollect 90\n	ENDIF\nEND\n\nbegin GameMode\n\n	IF GetStage fbmwHRBillCollect != 70\n		return\n	else\n		if GetAV Health < 75\n			SetStage fbmwHRBillCollect 90\n			SetAV Aggression 5\n			StopCombat\n			ModAV2 Health 200	;Heal him to full health\n			StartConversation Player, GREETING\n		endif\n	endif\n\nend\n;<CSEBlock>\n;<CSECaretPos> 59 </CSECaretPos>\n;</CSEBlock>", 
     "References": [
-        "SCRO - Global Reference": "fbmwHRBillCollect [QUST:01003479]"
+        "SCRO - Global Reference": "fbmwHRBillCollect [QUST:01003479]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "GREETING [DIAL:000000C8]"
     ]
 }

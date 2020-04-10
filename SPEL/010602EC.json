@@ -1,12 +1,21 @@
 {
     "Record Header": {
         "Signature": "SPEL", 
-        "Data Size": 130, 
+        "Data Size": 91, 
         "Record Flags": {}, 
         "FormID": "010602EC", 
         "Version Control Info": "00 00 00 00"
     }, 
     "EDID - Editor ID": "0slowfall", 
+    "OBME - Oblivion Magic Extender": {
+        "Record Version": "00", 
+        "OBME Version": {
+            "Beta": "FF", 
+            "Minor": "00", 
+            "Major": "01"
+        }, 
+        "Unused": "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"
+    }, 
     "FULL - Name": "Slowfall", 
     "SPIT - SPIT": {
         "Type": "00000000", 
@@ -16,28 +25,5 @@
             "Manual Spell Cost": true
         }, 
         "Unused": "CD CD CD"
-    }, 
-    "Effects": [
-        {
-            "EFID - Magic effect name": "SEFF", 
-            "EFIT - EFIT": {
-                "Magic effect name": "SEFF", 
-                "Magnitude": 0, 
-                "Area": 0, 
-                "Duration": 30, 
-                "Type": "Self:0", 
-                "Actor Value": "Acrobatics:26"
-            }, 
-            "Script effect": {
-                "SCIT - Script effect data": {
-                    "Script effect": "01F8D06B", 
-                    "Magic school": "00000000", 
-                    "Visual effect name": "00000000", 
-                    "Flags": {}, 
-                    "Unused": "50 56 00"
-                }, 
-                "FULL - Name": "Slowfall"
-            }
-        }
-    ]
+    }
 }

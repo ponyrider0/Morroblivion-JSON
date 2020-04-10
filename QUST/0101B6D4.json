@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "QUST", 
-        "Data Size": 3080, 
+        "Data Size": 4010, 
         "Record Flags": {}, 
         "FormID": "0101B6D4", 
         "Version Control Info": "00 00 00 00"
@@ -118,11 +118,21 @@
                     "Result Script": {
                         "SCHR - Basic Script Data": {
                             "Unused": "00 00 00 00", 
-                            "RefCount": 0, 
-                            "CompiledSize": 0, 
+                            "RefCount": 6, 
+                            "CompiledSize": 54, 
                             "VariableCount": 0, 
                             "Type": "Quest:1"
-                        }
+                        }, 
+                        "SCDA - Compiled result script": "55 10 05 00 01 00 72 01 00 55 10 05 00 01 00 72 02 00 55 10 05 00 01 00 72 03 00 55 10 05 00 01 00 72 04 00 55 10 05 00 01 00 72 05 00 55 10 05 00 01 00 72 06 00", 
+                        "SCTX - Result script source": "ShowMap mwBeastStoneMapMarker\r\nShowMap mwEarthStoneMapMarker\r\nShowMap mwSunStoneMapMarker\r\nShowMap mwTreeStoneMapMarker\r\nShowMap mwWaterStoneMapMarker\r\nShowMap mwWindStoneMapMarker", 
+                        "References": [
+                            "SCRO - Global Reference": "mwBeastStoneMapMarker [REFR:0100D070]", 
+                            "SCRO - Global Reference": "mwEarthStoneMapMarker [REFR:01054A74]", 
+                            "SCRO - Global Reference": "mwSunStoneMapMarker [REFR:0101E280]", 
+                            "SCRO - Global Reference": "mwTreeStoneMapMarker [REFR:0100D06F]", 
+                            "SCRO - Global Reference": "mwWaterStoneMapMarker [REFR:0100D06C]", 
+                            "SCRO - Global Reference": "mwWindStoneMapMarker [REFR:0100D06E]"
+                        ]
                     }
                 }
             ]
@@ -272,6 +282,252 @@
                         "SCDA - Compiled result script": "16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 63 00 01 00 5F 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 43 6F 6D 70 6C 65 74 65 64 20 54 68 65 20 53 6B 61 61 6C 20 54 65 73 74 20 6F 66 20 4C 6F 79 61 6C 74 79 20 71 75 65 73 74 22 F9 16 27 00 01 00 23 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 31 35 30 19 00 00 00", 
                         "SCTX - Result script source": "if ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qCompleted The Skaal Test of Loyalty quest%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 150\"\r\nendif\r\n"
                     }
+                }
+            ]
+        }
+    ], 
+    "Targets": [
+        {
+            "QSTA - Target": {
+                "Target": "01F083A5", 
+                "Flags": {}, 
+                "Unused": "00 2E 26"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "60", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 30.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwBMStones "The Skaal Test of Loyalty" [QUST:0101B6D4]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "80", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 50.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwBMStones "The Skaal Test of Loyalty" [QUST:0101B6D4]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "01F01BF4", 
+                "Flags": {}, 
+                "Unused": "00 2E 26"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetStageDone:59", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwBMStones "The Skaal Test of Loyalty" [QUST:0101B6D4]", 
+                    "Parameter #2": "050 Wind-Eye has given me a scroll that shows the location of each of the Standing Stones, as well as a book that gives the history of the Skaal's beliefs. I should investigate these Stones if I am to restore the power of the Skaal.", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetStageDone:59", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwBMStones "The Skaal Test of Loyalty" [QUST:0101B6D4]", 
+                    "Parameter #2": "070 I have completed the Gift of Winds ritual.", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "01F00489", 
+                "Flags": {}, 
+                "Unused": "00 2E 26"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetStageDone:59", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwBMStones "The Skaal Test of Loyalty" [QUST:0101B6D4]", 
+                    "Parameter #2": "050 Wind-Eye has given me a scroll that shows the location of each of the Standing Stones, as well as a book that gives the history of the Skaal's beliefs. I should investigate these Stones if I am to restore the power of the Skaal.", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetStageDone:59", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwBMStones "The Skaal Test of Loyalty" [QUST:0101B6D4]", 
+                    "Parameter #2": "060 I have completed the Gift of Water ritual.", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "01F019F8", 
+                "Flags": {}, 
+                "Unused": "00 2E 26"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetStageDone:59", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwBMStones "The Skaal Test of Loyalty" [QUST:0101B6D4]", 
+                    "Parameter #2": "050 Wind-Eye has given me a scroll that shows the location of each of the Standing Stones, as well as a book that gives the history of the Skaal's beliefs. I should investigate these Stones if I am to restore the power of the Skaal.", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetStageDone:59", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwBMStones "The Skaal Test of Loyalty" [QUST:0101B6D4]", 
+                    "Parameter #2": "064 I have completed the Gift of Trees ritual.", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "01F024A9", 
+                "Flags": {
+                    "Compass marker ignores locks": true
+                }, 
+                "Unused": "00 2E 26"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetStageDone:59", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwBMStones "The Skaal Test of Loyalty" [QUST:0101B6D4]", 
+                    "Parameter #2": "050 Wind-Eye has given me a scroll that shows the location of each of the Standing Stones, as well as a book that gives the history of the Skaal's beliefs. I should investigate these Stones if I am to restore the power of the Skaal.", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetStageDone:59", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwBMStones "The Skaal Test of Loyalty" [QUST:0101B6D4]", 
+                    "Parameter #2": "068 I have completed the Gift of the Sun ritual.", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "01F002E6", 
+                "Flags": {}, 
+                "Unused": "00 2E 26"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 1.000000000000000, 
+                    "Function": "GetStageDone:59", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwBMStones "The Skaal Test of Loyalty" [QUST:0101B6D4]", 
+                    "Parameter #2": "050 Wind-Eye has given me a scroll that shows the location of each of the Standing Stones, as well as a book that gives the history of the Skaal's beliefs. I should investigate these Stones if I am to restore the power of the Skaal.", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetStageDone:59", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwBMStones "The Skaal Test of Loyalty" [QUST:0101B6D4]", 
+                    "Parameter #2": "062 I have completed the Gift of Earth ritual.", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "01F08467", 
+                "Flags": {}, 
+                "Unused": "00 2E 26"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "81", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 30.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwBMStones "The Skaal Test of Loyalty" [QUST:0101B6D4]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "60", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 80.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwBMStones "The Skaal Test of Loyalty" [QUST:0101B6D4]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }, 
+        {
+            "QSTA - Target": {
+                "Target": "01F02943", 
+                "Flags": {}, 
+                "Unused": "00 2E 26"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "60", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 50.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwBMStones "The Skaal Test of Loyalty" [QUST:0101B6D4]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetStageDone:59", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwBMBeasts "The Ritual of Beasts" [QUST:0101AF86]", 
+                    "Parameter #2": "105 The Good Beast has died. I have failed to awaken the Beast Stone.", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetStageDone:59", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "fbmwBMStones "The Skaal Test of Loyalty" [QUST:0101B6D4]", 
+                    "Parameter #2": "066 I have completed the Gift of Beasts ritual.", 
+                    "Unused": "00000000"
                 }
             ]
         }

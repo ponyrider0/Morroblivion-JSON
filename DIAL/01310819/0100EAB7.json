@@ -2,7 +2,7 @@
     "Topic": "1RedoranSHortator [DIAL:01310819]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 643, 
+        "Data Size": 721, 
         "Record Flags": {}, 
         "FormID": "0100EAB7", 
         "Version Control Info": "00 00 00 00"
@@ -51,22 +51,32 @@
     ], 
     "Conditions": [
         {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQRedoran "Redoran Hortator" [QUST:01001DDC]", 
+            "Parameter #2": "deadred", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "80", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQRedoran "Redoran Hortator" [QUST:01001DDC]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
             "Type": "60", 
             "Unused": "00 00 00", 
             "Comparison Value": 50.000000000000000, 
             "Function": "GetStage:58", 
             "Unused": "00 00", 
             "Parameter #1": "fbmwMQ10 "The Path of the Incarnate" [QUST:01001DC9]", 
-            "Parameter #2": "00 00 00 00", 
-            "Unused": "00000000"
-        }, 
-        {
-            "Type": "80", 
-            "Unused": "00 00 00", 
-            "Comparison Value": 1.000000000000000, 
-            "Function": "GetStage:58", 
-            "Unused": "00 00", 
-            "Parameter #1": "fbmwMQRedoranSarethi "Convincing Sarethi" [QUST:01001DE1]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }, 
@@ -84,15 +94,16 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 1, 
-            "CompiledSize": 14, 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 01 00 00 00", 
-        "SCTX - Result script source": "SetStage fbmwMQRedoranSarethi 1", 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 01 00 00 00 36 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "SetStage fbmwMQRedoranSarethi 1\r\nStartQuest fbmwMQRedoran\r\n", 
         "References": [
-            "SCRO - Global Reference": "fbmwMQRedoranSarethi [QUST:01001DE1]"
+            "SCRO - Global Reference": "fbmwMQRedoranSarethi [QUST:01001DE1]", 
+            "SCRO - Global Reference": "fbmwMQRedoran [QUST:01001DDC]"
         ]
     }
 }

@@ -2,7 +2,7 @@
     "Topic": "GREETING [DIAL:000000C8]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 308, 
+        "Data Size": 353, 
         "Record Flags": {}, 
         "FormID": "01F852C1", 
         "Version Control Info": "00 00 00 00"
@@ -23,11 +23,21 @@
                 "Response number": "01", 
                 "Unused": "20 30 66"
             }, 
-            "NAM1 - Response Text": "Ajira must study these flowers and mushrooms. Her friend knows this. Why do you pester Ajira now?", 
+            "NAM1 - Response Text": "Ajira must study these flowers and mushrooms.&sUActnQuick1; knows this. Why does&sUActnQuick1; pester Ajira now?", 
             "NAM2 - Actor notes": ""
         }
     ], 
     "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetPCExpelled:193", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMagesGuild "Mages Guild" [FACT:0100761B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
         {
             "Type": "60", 
             "Unused": "00 00 00", 
@@ -42,9 +52,9 @@
             "Type": "00", 
             "Unused": "00 00 00", 
             "Comparison Value": 0.000000000000000, 
-            "Function": "GetPCExpelled:193", 
+            "Function": "GetStage:58", 
             "Unused": "00 00", 
-            "Parameter #1": "fbmwMagesGuild "Mages Guild" [FACT:0100761B]", 
+            "Parameter #1": "fbmwMGBowl "Mages Guild: Ceramic Bowl" [QUST:01006772]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }, 

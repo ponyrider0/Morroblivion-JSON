@@ -9,23 +9,14 @@
     "EDID - Editor ID": "0lordAsSpraise", 
     "ENIT - ENIT": {
         "Type": "00000003", 
-        "Charge Amount": "00000183", 
-        "Enchant Cost": "00000183", 
-        "Flags": {}, 
+        "Charge Amount": "00000190", 
+        "Enchant Cost": "00000050", 
+        "Flags": {
+            "Manual Enchant Cost (Autocalc Off)": true
+        }, 
         "Unused": "CD CD CD"
     }, 
     "Effects": [
-        {
-            "EFID - Magic effect name": "RSPO", 
-            "EFIT - EFIT": {
-                "Magic effect name": "RSPO", 
-                "Magnitude": 100, 
-                "Area": 0, 
-                "Duration": 0, 
-                "Type": "Self:0", 
-                "Actor Value": "Resist Poison:67"
-            }
-        }, 
         {
             "EFID - Magic effect name": "RSMA", 
             "EFIT - EFIT": {
@@ -35,6 +26,17 @@
                 "Duration": 30, 
                 "Type": "Self:0", 
                 "Actor Value": "Resist Magic:64"
+            }
+        }, 
+        {
+            "EFID - Magic effect name": "CUPO", 
+            "EFIT - EFIT": {
+                "Magic effect name": "CUPO", 
+                "Magnitude": 0, 
+                "Area": 0, 
+                "Duration": 0, 
+                "Type": "Self:0", 
+                "Actor Value": "Health:8"
             }
         }
     ]

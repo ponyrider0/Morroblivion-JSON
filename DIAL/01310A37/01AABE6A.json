@@ -2,7 +2,7 @@
     "Topic": "1shareSaScare [DIAL:01310A37]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 1342, 
+        "Data Size": 1459, 
         "Record Flags": {}, 
         "FormID": "01AABE6A", 
         "Version Control Info": "00 00 00 00"
@@ -13,7 +13,7 @@
         "Flags": {}
     }, 
     "QSTI - Quest": "fbmwRomanceAhnassi [QUST:0101BE47]", 
-    "PNAM - Previous INFO": "00000000", 
+    "PNAM - Previous INFO": "01F8EED8", 
     "Responses": [
         {
             "TRDT - Response Data": {
@@ -108,7 +108,7 @@
         {
             "Type": "00", 
             "Unused": "00 00 00", 
-            "Comparison Value": 45.000000000000000, 
+            "Comparison Value": 75.000000000000000, 
             "Function": "GetStage:58", 
             "Unused": "00 00", 
             "Parameter #1": "fbmwRomanceAhnassi "Ahnassi, a Special Friend" [QUST:0101BE47]", 
@@ -129,17 +129,19 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 3, 
-            "CompiledSize": 32, 
+            "RefCount": 5, 
+            "CompiledSize": 51, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 02 00 6E 01 00 00 00 39 10 0A 00 02 00 72 03 00 6E 50 00 00 00", 
-        "SCTX - Result script source": "player.additem 0keyUahnassi 1\r\nsetstage FBMWRomanceAhnassi 80", 
+        "SCDA - Compiled result script": "1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 39 10 0A 00 02 00 72 04 00 6E 50 00 00 00 19 11 05 00 01 00 72 05 00 1C 00 02 00 17 11 02 00 00 00", 
+        "SCTX - Result script source": "player.additem 0keyUahnassi 1\r\nsetstage FBMWRomanceAhnassi 80\r\nsetcellownership PelagiadVSAhnassiAsSHouse\r\nfbmwAhnassiDoorREF.setownership", 
         "References": [
             "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "fbmwAhnassiDoorREF [REFR:01800DBE]", 
             "SCRO - Global Reference": "0keyUahnassi [KEYM:01400128]", 
-            "SCRO - Global Reference": "fbmwRomanceAhnassi [QUST:0101BE47]"
+            "SCRO - Global Reference": "fbmwRomanceAhnassi [QUST:0101BE47]", 
+            "SCRO - Global Reference": "PelagiadVSAhnassiAsSHouse [CELL:014802D7]"
         ]
     }
 }

@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "QUST", 
-        "Data Size": 12321, 
+        "Data Size": 13537, 
         "Record Flags": {}, 
         "FormID": "01001DC9", 
         "Version Control Info": "00 00 00 00"
@@ -12,7 +12,7 @@
     "ICON - Icon FileName": "darthsouth\\Quests\\morrowindmainquest.dds", 
     "DATA - General": {
         "Flags": {}, 
-        "Priority": 90
+        "Priority": 91
     }, 
     "Conditions": [
         {
@@ -64,16 +64,30 @@
                     "Result Script": {
                         "SCHR - Basic Script Data": {
                             "Unused": "00 00 00 00", 
-                            "RefCount": 1, 
-                            "CompiledSize": 9, 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
                             "VariableCount": 0, 
                             "Type": "Quest:1"
                         }, 
-                        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00", 
-                        "SCTX - Result script source": "AddTopic fbmwMQ10corprus", 
-                        "References": [
-                            "SCRO - Global Reference": "fbmwMQ10corprus [DIAL:01022DCD]"
-                        ]
+                        "SCTX - Result script source": ""
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 4, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": "; Intermediate stage to prevent early topic selection of \r\n;     corprus cure when talking to Nibani"
                     }
                 }
             ]
@@ -389,11 +403,27 @@
                     "Result Script": {
                         "SCHR - Basic Script Data": {
                             "Unused": "00 00 00 00", 
-                            "RefCount": 0, 
-                            "CompiledSize": 0, 
+                            "RefCount": 12, 
+                            "CompiledSize": 108, 
                             "VariableCount": 0, 
                             "Type": "Quest:1"
-                        }
+                        }, 
+                        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 58 10 05 00 01 00 72 04 00 58 10 05 00 01 00 72 05 00 58 10 05 00 01 00 72 06 00 58 10 05 00 01 00 72 07 00 58 10 05 00 01 00 72 08 00 58 10 05 00 01 00 72 09 00 58 10 05 00 01 00 72 0A 00 58 10 05 00 01 00 72 0B 00 58 10 05 00 01 00 72 0C 00", 
+                        "SCTX - Result script source": "addtopic 1urshilaku\r\naddtopic 1ahemmusa\r\naddtopic 1zainab\r\naddtopic 1erabenimsun\r\n\r\naddtopic 1urshilakuScamp\r\naddtopic 1ahemmusaScamp\r\naddtopic 1zainabScamp\r\naddtopic 1erabenimsunScamp\r\n\r\naddtopic 1urshilakuSnerevarine\r\naddtopic 1ahemmusaSnerevarine\r\naddtopic 1zainabSnerevarine\r\naddtopic 1erabenimsunSnerevarine", 
+                        "References": [
+                            "SCRO - Global Reference": "1Urshilaku [DIAL:01310B61]", 
+                            "SCRO - Global Reference": "1Ahemmusa [DIAL:01310BDC]", 
+                            "SCRO - Global Reference": "1Zainab [DIAL:01310C7D]", 
+                            "SCRO - Global Reference": "1Erabenimsun [DIAL:01310A7A]", 
+                            "SCRO - Global Reference": "1UrshilakuScamp [DIAL:013108E5]", 
+                            "SCRO - Global Reference": "1AhemmusaScamp [DIAL:01310979]", 
+                            "SCRO - Global Reference": "1ZainabScamp [DIAL:01310A7B]", 
+                            "SCRO - Global Reference": "1ErabenimsunScamp [DIAL:0131081C]", 
+                            "SCRO - Global Reference": "1UrshilakuSNerevarine [DIAL:01310700]", 
+                            "SCRO - Global Reference": "1AhemmusaSNerevarine [DIAL:0131072D]", 
+                            "SCRO - Global Reference": "1ZainabSNerevarine [DIAL:013107CE]", 
+                            "SCRO - Global Reference": "1ErabenimsunSNerevarine [DIAL:013106AC]"
+                        ]
                     }
                 }
             ]
@@ -407,11 +437,27 @@
                     "Result Script": {
                         "SCHR - Basic Script Data": {
                             "Unused": "00 00 00 00", 
-                            "RefCount": 0, 
-                            "CompiledSize": 0, 
+                            "RefCount": 12, 
+                            "CompiledSize": 108, 
                             "VariableCount": 0, 
                             "Type": "Quest:1"
-                        }
+                        }, 
+                        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 58 10 05 00 01 00 72 04 00 58 10 05 00 01 00 72 05 00 58 10 05 00 01 00 72 06 00 58 10 05 00 01 00 72 07 00 58 10 05 00 01 00 72 08 00 58 10 05 00 01 00 72 09 00 58 10 05 00 01 00 72 0A 00 58 10 05 00 01 00 72 0B 00 58 10 05 00 01 00 72 0C 00", 
+                        "SCTX - Result script source": "addtopic 1urshilaku\r\naddtopic 1ahemmusa\r\naddtopic 1zainab\r\naddtopic 1erabenimsun\r\n\r\naddtopic 1urshilakuScamp\r\naddtopic 1ahemmusaScamp\r\naddtopic 1zainabScamp\r\naddtopic 1erabenimsunScamp\r\n\r\naddtopic 1urshilakuSnerevarine\r\naddtopic 1ahemmusaSnerevarine\r\naddtopic 1zainabSnerevarine\r\naddtopic 1erabenimsunSnerevarine", 
+                        "References": [
+                            "SCRO - Global Reference": "1Urshilaku [DIAL:01310B61]", 
+                            "SCRO - Global Reference": "1Ahemmusa [DIAL:01310BDC]", 
+                            "SCRO - Global Reference": "1Zainab [DIAL:01310C7D]", 
+                            "SCRO - Global Reference": "1Erabenimsun [DIAL:01310A7A]", 
+                            "SCRO - Global Reference": "1UrshilakuScamp [DIAL:013108E5]", 
+                            "SCRO - Global Reference": "1AhemmusaScamp [DIAL:01310979]", 
+                            "SCRO - Global Reference": "1ZainabScamp [DIAL:01310A7B]", 
+                            "SCRO - Global Reference": "1ErabenimsunScamp [DIAL:0131081C]", 
+                            "SCRO - Global Reference": "1UrshilakuSNerevarine [DIAL:01310700]", 
+                            "SCRO - Global Reference": "1AhemmusaSNerevarine [DIAL:0131072D]", 
+                            "SCRO - Global Reference": "1ZainabSNerevarine [DIAL:013107CE]", 
+                            "SCRO - Global Reference": "1ErabenimsunSNerevarine [DIAL:013106AC]"
+                        ]
                     }
                 }
             ]
@@ -554,7 +600,7 @@
             "QSTA - Target": {
                 "Target": "01823CAF", 
                 "Flags": {}, 
-                "Unused": "00 46 21"
+                "Unused": "00 2E 26"
             }, 
             "Conditions": [
                 {
@@ -573,7 +619,7 @@
                     "Comparison Value": 0.000000000000000, 
                     "Function": "GetItemCount:47", 
                     "Unused": "00 00", 
-                    "Parameter #1": "0ingredUcorprusUweepingsU01 "Corprus weepings" [INGR:010A000C]", 
+                    "Parameter #1": "0ingredUcorprusUweepingsU01 "Corprus Weepings" [INGR:010A000C]", 
                     "Parameter #2": "00 00 00 00", 
                     "Unused": "00000000"
                 }, 
@@ -583,7 +629,7 @@
                     "Comparison Value": 0.000000000000000, 
                     "Function": "GetItemCount:47", 
                     "Unused": "00 00", 
-                    "Parameter #1": "0miscUgobletUdagoth "House Dagoth cup" [MISC:01160212]", 
+                    "Parameter #1": "0miscUgobletUdagoth "House Dagoth Cup" [MISC:01160212]", 
                     "Parameter #2": "00 00 00 00", 
                     "Unused": "00000000"
                 }, 
@@ -613,7 +659,7 @@
             "QSTA - Target": {
                 "Target": "01022DE3", 
                 "Flags": {}, 
-                "Unused": "00 46 21"
+                "Unused": "00 2E 26"
             }, 
             "Conditions": [
                 {
@@ -652,7 +698,7 @@
             "QSTA - Target": {
                 "Target": "0185D2F2", 
                 "Flags": {}, 
-                "Unused": "00 46 21"
+                "Unused": "00 2E 26"
             }, 
             "Conditions": [
                 {
@@ -671,7 +717,7 @@
                     "Comparison Value": 0.000000000000000, 
                     "Function": "GetItemCount:47", 
                     "Unused": "00 00", 
-                    "Parameter #1": "0miscUgobletUdagoth "House Dagoth cup" [MISC:01160212]", 
+                    "Parameter #1": "0miscUgobletUdagoth "House Dagoth Cup" [MISC:01160212]", 
                     "Parameter #2": "00 00 00 00", 
                     "Unused": "00000000"
                 }, 
@@ -691,7 +737,7 @@
             "QSTA - Target": {
                 "Target": "0185D2F1", 
                 "Flags": {}, 
-                "Unused": "00 46 21"
+                "Unused": "00 2E 26"
             }, 
             "Conditions": [
                 {
@@ -710,7 +756,7 @@
                     "Comparison Value": 0.000000000000000, 
                     "Function": "GetItemCount:47", 
                     "Unused": "00 00", 
-                    "Parameter #1": "0ingredUcorprusUweepingsU01 "Corprus weepings" [INGR:010A000C]", 
+                    "Parameter #1": "0ingredUcorprusUweepingsU01 "Corprus Weepings" [INGR:010A000C]", 
                     "Parameter #2": "00 00 00 00", 
                     "Unused": "00000000"
                 }, 
@@ -730,7 +776,7 @@
             "QSTA - Target": {
                 "Target": "01838CA2", 
                 "Flags": {}, 
-                "Unused": "00 46 21"
+                "Unused": "00 2E 26"
             }, 
             "Conditions": [
                 {
@@ -779,7 +825,7 @@
             "QSTA - Target": {
                 "Target": "01823CAF", 
                 "Flags": {}, 
-                "Unused": "00 46 21"
+                "Unused": "00 2E 26"
             }, 
             "Conditions": [
                 {

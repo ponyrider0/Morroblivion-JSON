@@ -1,0 +1,1835 @@
+{
+    "Record Header": {
+        "Signature": "QUST", 
+        "Data Size": 14943, 
+        "Record Flags": {}, 
+        "FormID": "0001E723", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "MQ01", 
+    "SCRI - Script": "MQ01Script [SCPT:000297AD]", 
+    "FULL - Name": "Tutorial", 
+    "ICON - Icon FileName": "Quest\\icon_miscellaneous.dds", 
+    "DATA - General": {
+        "Flags": {}, 
+        "Priority": 85
+    }, 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetPlayerInSEWorld:365", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsPlayableRace:254", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Stages": [
+        {
+            "INDX - Stage index": 5, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 29, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 66 02 00 02 00 20 32 15 00 0B 00 72 01 00 73 03 00 03 00 20 31 30", 
+                        "SCTX - Result script source": "; race/face menu\r\nset MQ01.timer to 2\r\nset MQ01.stage to 10\r\n\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "MQ01 [QUST:0001E723]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 10, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 14, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 06 00 00 00", 
+                        "SCTX - Result script source": "; movement tutorial done\r\n; trigger Valen Dreth talking\r\nsetstage charactergen 6\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "IsXBox:309", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "00 00 00 00", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "Use the left stick to move around. The right stick turns you.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "tutorialOff", 
+                            "Unused": "00000000"
+                        }, 
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "IsXBox:309", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "00 00 00 00", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "To move forward, &sUActnForward;, &sUActnBack; to move back. To move left, &sUActnSldleft;. To move right, &sUActnSldright;. The mouse turns you. To run, &sUActnRun;.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 15, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "weapon", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 14, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 12 00 00 00", 
+                        "SCTX - Result script source": "; if they already have a weapon, go to next part of tutorial\r\nsetstage mq01 18\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "MQ01 [QUST:0001E723]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "tutorialOff", 
+                            "Unused": "00000000"
+                        }, 
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "weapon", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "You need a weapon. Check Captain Renault's body. To open any container, approach it and &sUActnActivate; when its name appears.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 18, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 29, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 66 02 00 02 00 20 33 15 00 0B 00 72 01 00 73 03 00 03 00 20 32 30", 
+                        "SCTX - Result script source": "; when player loots one of the corpses in the initial ambush, trigger next tutorial\r\n; set timer for next message\r\nset MQ01.timer to 3\r\nset MQ01.stage to 20\r\n\r\n\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "MQ01 [QUST:0001E723]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 20, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 29, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0B 00 72 01 00 73 0A 00 03 00 20 32 32 15 00 0A 00 72 01 00 66 09 00 02 00 20 30", 
+                        "SCTX - Result script source": "; interface tutorial message done\r\n; trigger inventory tutorial\r\nset MQ01.menustage to 22\r\nset MQ01.menuTimer to 0", 
+                        "References": [
+                            "SCRO - Global Reference": "MQ01 [QUST:0001E723]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "tutorialOff", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "To bring up your journal, &sUActnMenumode;. You can use this to view your character's attributes, equip armor and weapons, and choose spells.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 22, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 29, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0B 00 72 01 00 73 03 00 03 00 20 32 38 15 00 0A 00 72 01 00 66 02 00 02 00 20 34", 
+                        "SCTX - Result script source": "; display inventory tutorial done\r\n; trigger equip tutorial\r\n; REMOVED:\r\n;set MQ01.invstage to 26\r\n;set MQ01.menuTimer to 0\r\n; instead, go directly to:\r\n; trigger weapon/block tutorial\r\nset MQ01.stage to 28\r\nset MQ01.timer to 4", 
+                        "References": [
+                            "SCRO - Global Reference": "MQ01 [QUST:0001E723]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "IsXBox:309", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "00 00 00 00", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }, 
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "weaponEquip", 
+                            "Unused": "00000000"
+                        }, 
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "bowEquip", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "Pull the Right or Left Trigger to change sections. From the items tab you can equip armor and weapons.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "tutorialOff", 
+                            "Unused": "00000000"
+                        }, 
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "IsXBox:309", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "00 00 00 00", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }, 
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "weaponEquip", 
+                            "Unused": "00000000"
+                        }, 
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "bowEquip", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "Click on the fist icon at the bottom of the journal to bring up the inventory tab. From here, you can equip armor and weapons by clicking on them.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 24, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 4, 
+                            "CompiledSize": 90, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 0F 10 09 00 02 00 21 00 6E 14 00 00 00 1C 00 02 00 0F 10 09 00 02 00 21 00 6E 14 00 00 00 1C 00 01 00 16 10 05 00 01 00 72 03 00 1C 00 02 00 16 10 05 00 01 00 72 03 00 15 00 0B 00 72 04 00 66 02 00 03 00 20 2E 35 15 00 0B 00 72 04 00 73 03 00 03 00 20 32 38", 
+                        "SCTX - Result script source": "; secret wall is activated\r\nCGRatA1.setav aggression 20\r\nCGRatA2.setav aggression 20\r\nCGRatA1.startcombat player\r\nCGRatA2.startcombat player\r\n; next tutorial\r\nset MQ01.timer to .5\r\nset MQ01.stage to 28\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "CGRatA1 [ACRE:00037E42]", 
+                            "SCRO - Global Reference": "CGRatA2 [ACRE:00037E41]", 
+                            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+                            "SCRO - Global Reference": "MQ01 [QUST:0001E723]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 26, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 29, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0B 00 72 01 00 73 03 00 03 00 20 32 38 15 00 0A 00 72 01 00 66 02 00 02 00 20 34", 
+                        "SCTX - Result script source": "; NOTE: REMOVED CURRENTLY\r\n; equip tutorial done\r\n; trigger weapon/block tutorial\r\nset MQ01.stage to 28\r\nset MQ01.timer to 4", 
+                        "References": [
+                            "SCRO - Global Reference": "MQ01 [QUST:0001E723]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "IsXBox:309", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "00 00 00 00", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "Press A to equip the item. Press A again to unequip it. X will drop items.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "tutorialOff", 
+                            "Unused": "00000000"
+                        }, 
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "IsXBox:309", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "00 00 00 00", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "Click on an item to equip it. Click again to unequip it. Shift-click to drop an item.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 28, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": "; weapon/block tutorial done\r\n; NOTE: removed; put on rat death script instead.\r\n; trigger magic selection tutorial\r\n;set MQ01.timer to 15\r\n;set MQ01.stage to 34\r\n"
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "tutorialOff", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "To ready your weapon or fists, &sUActnRdyitem;. To attack, &sUActnUse;. To block, &sUActnBlock;.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 34, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 29, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0B 00 72 01 00 73 0A 00 03 00 20 33 36 15 00 0A 00 72 01 00 66 09 00 02 00 20 30", 
+                        "SCTX - Result script source": "; how to choose spell message\r\n; trigger spell selection\r\nset MQ01.menustage to 36\r\nset MQ01.menuTimer to 0\r\n;autosave\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "MQ01 [QUST:0001E723]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "tutorialOff", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "Now practice casting spells. To cast your selected spell, &sUActnCast;. If you want to change spells, &sUActnMenumode; to bring up your journal again.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 36, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 29, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0B 00 72 01 00 73 13 00 03 00 20 33 38 15 00 0A 00 72 01 00 66 09 00 02 00 20 30", 
+                        "SCTX - Result script source": "; trigger spell selection tutorial\r\nset MQ01.magicstage to 38\r\nset MQ01.menutimer to 0", 
+                        "References": [
+                            "SCRO - Global Reference": "MQ01 [QUST:0001E723]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "IsXBox:309", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "00 00 00 00", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "Select the spell icon at the bottom of the journal to bring up the magic tab.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "tutorialOff", 
+                            "Unused": "00000000"
+                        }, 
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "IsXBox:309", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "00 00 00 00", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "Click on the spell icon at the bottom of the journal to bring up the magic tab.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 38, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 30, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0B 00 72 01 00 73 03 00 03 00 20 34 32 15 00 0B 00 72 01 00 66 02 00 03 00 20 2E 35", 
+                        "SCTX - Result script source": "; spell selection tutorial done\r\n; trigger spellcasting tutorial\r\nset MQ01.stage to 42\r\nset MQ01.timer to .5\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "MQ01 [QUST:0001E723]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 42, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 2, 
+                            "CompiledSize": 16, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "1C 00 01 00 5E 10 00 00 1C 00 02 00 5E 10 00 00", 
+                        "SCTX - Result script source": "; trigger rats to push blocks\r\nCGRatA1.evp\r\nCGRatA2.evp", 
+                        "References": [
+                            "SCRO - Global Reference": "CGRatA1 [ACRE:00037E42]", 
+                            "SCRO - Global Reference": "CGRatA2 [ACRE:00037E41]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 50, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "tutorialOff", 
+                            "Unused": "00000000"
+                        }, 
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetInCellParam:230", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "ImperialDungeon01 "Imperial Prison" [CELL:0001FBB9]", 
+                            "Parameter #2": "PlayerRef [PLYR:00000014]", 
+                            "Unused": "00000000"
+                        }, 
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "arrows", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "Before you can use the bow, you'll need arrows. Check the skeleton to see what it contains.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": "; how to use bow\r\n; 1. get arrows"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 52, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "tutorialOff", 
+                            "Unused": "00000000"
+                        }, 
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetInCellParam:230", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "ImperialDungeon01 "Imperial Prison" [CELL:0001FBB9]", 
+                            "Parameter #2": "PlayerRef [PLYR:00000014]", 
+                            "Unused": "00000000"
+                        }, 
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "bow", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "Now that you have arrows, pick up the bow and practice using it.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": "; how to use bow #2: get bow"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 54, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "tutorialOff", 
+                            "Unused": "00000000"
+                        }, 
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetInCellParam:230", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "ImperialDungeon "Dummy cell" [CELL:00005290]", 
+                            "Parameter #2": "PlayerRef [PLYR:00000014]", 
+                            "Unused": "00000000"
+                        }, 
+                        {
+                            "Type": "01", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "arrowsEquip", 
+                            "Unused": "00000000"
+                        }, 
+                        {
+                            "Type": "01", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "bowEquip", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "To use a bow, you'll need to have both the bow and some arrows equipped. Go into your inventory and equip them now.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": "; use bow tutorial (have both bow and arrows now)\r\n"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 56, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "tutorialOff", 
+                            "Unused": "00000000"
+                        }, 
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetInCellParam:230", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "ImperialDungeon01 "Imperial Prison" [CELL:0001FBB9]", 
+                            "Parameter #2": "PlayerRef [PLYR:00000014]", 
+                            "Unused": "00000000"
+                        }, 
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "nearBucket", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "Now you're ready to practice with your bow. The bucket near the well will make a good target. To draw and aim, &sUActnUse;. Release it when you're ready to fire.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": "; practice firing arrows at bucket"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 58, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "tutorialOff", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "Nice shot! You can retrieve arrows from the world, as well as recovering some of the arrows you fire into enemies.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": "; message on hitting bucket done"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 60, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 15, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0B 00 72 01 00 73 12 00 03 00 20 36 32", 
+                        "SCTX - Result script source": "; light vs. heavy armor\r\nset MQ01.invstage to 62\r\n\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "MQ01 [QUST:0001E723]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 62, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": "; light vs. heavy continued"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 64, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "tutorialOff", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "You have found a Mortar and Pestle. Equip it to create potions or poisons from ingredients with like effects. Your Alchemy skill will make your creations more powerful.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 65, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "tutorialOff", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "You have found a Repair Hammer. Equip it to repair your weapons and armor using your Armorer skill. Damaged weapons and armor are less effective, so it is wise to keep them in good repair. ", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 70, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "IsXBox:309", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "00 00 00 00", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "If you have a lockpick, you can try to pick most locks. Move the pick upward into a tumbler. When the tumbler reaches the top of the lock, press A to secure it in place. When all tumblers are at the top, the lock will open.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "tutorialOff", 
+                            "Unused": "00000000"
+                        }, 
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "IsXBox:309", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "00 00 00 00", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "If you have a lockpick, you can try to pick most locks. Move the pick upward into a tumbler. When the tumbler reaches the top of the lock, click the left mouse button to secure it in place. When all tumblers are at the top, the lock will open.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": "; lockpicking"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 72, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Your Health is low and you are close to death. Increase it by drinking potions, casting heal spells, or sleeping. The red bar at the bottom left displays your current Health.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": "; low health"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 73, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Your Magicka is low and you may not be able to cast spells. Magicka returns slowly on its own, or you can increase it by drinking potions or sleeping. The blue bar at the bottom left displays your current Magicka.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": "; low magicka"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 74, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Your Fatigue is low and you cannot do as much melee damage. Fatigue returns slowly on its own, especially while walking instead of running. The green bar at the bottom left displays your current Fatigue.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": "; low fatigue"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 75, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "You have picked up more than you can carry. In order to move again, you'll need to drop some items, so &sUActnMenumode; to bring up your journal.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 76, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "IsXBox:309", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "00 00 00 00", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "You can hotkey items and spells from your journal  by holding Y and pressing a direction on the D-pad. Pressing the D-pad while exploring will equip that item instantly.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "tutorialOff", 
+                            "Unused": "00000000"
+                        }, 
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "IsXBox:309", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "00 00 00 00", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "You can hotkey items and spells from your journal by holding down a number key and then clicking the item you want in that slot. Pressing this number while exploring will equip that item instantly.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": "; hotkey tutorial"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 78, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "IsXBox:309", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "00 00 00 00", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "Your current encumbrance exceeds the maximum you can carry (displayed in the lower left of the inventory page). Shift-click to drop items you don't need.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "IsXBox:309", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "00 00 00 00", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "Your current encumbrance exceeds the maximum you can carry (displayed in the lower left of the inventory page). Press X to drop items you don't need.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": "; how to drop items"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 80, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "tutorialOff", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "That goblin up ahead hasn't seen you yet. You may be able to sneak by him. To go into sneak mode, &sUActnCrouch;.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 4, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "5E 11 00 00", 
+                        "SCTX - Result script source": "autosave"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 82, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "tutorialOff", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "Notice that the crosshair changes to an 'eye' while you are sneaking. If the eye is dim, no one can detect you. If the eye is bright, someone can detect you.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": "; how to sneak, cont'd"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 84, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "CNAM - Log Entry": "You now must choose your class. The major skills of your class will start higher than your other skills. You will increase your level by raising these major skills.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": "; class menu"
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 88, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "IsXBox:309", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "00 00 00 00", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 11, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "4A 11 07 00 01 00 6E 01 00 00 00", 
+                        "SCTX - Result script source": "addachievement 1"
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 40, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "E7 10 07 00 01 00 6E 00 00 00 00 15 00 0A 00 72 01 00 66 02 00 02 00 20 35 15 00 0B 00 72 01 00 73 03 00 03 00 20 39 30", 
+                        "SCTX - Result script source": "; player has exited the sewers. no more character creation\r\n; set timer on tutorial hint\r\nsetinchargen 0\r\nset MQ01.timer to 5\r\nset MQ01.stage to 90\r\n\r\n\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "MQ01 [QUST:0001E723]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 90, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 14, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 64 00 00 00", 
+                        "SCTX - Result script source": "; give player fast travel help message\r\n; NOTE: all subsequent tutorials turned off\r\n;set MQ01.timer to 2\r\n;set MQ01.stage to 92\r\n; tutorial all done\r\nsetstage mq01 100", 
+                        "References": [
+                            "SCRO - Global Reference": "MQ01 [QUST:0001E723]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "GetQuestVariable:79", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                            "Parameter #2": "tutorialOff", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "The red arrow on your compass shows the direction of Weynon Priory. You can walk there by following your compass, or use your world map to travel there directly. Or you can set off in any direction and begin exploring the world on your own. Good luck!", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": ""
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 92, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": "; quest log and world map tutorial\r\n;set MQ01.menutimer to 1\r\n;set MQ01.menustage to 94"
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "To view your quest log, &sUActnMenumode; to bring up your journal.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 94, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": "; trigger quest log tutorial\r\n; NOTE: took this out for now\r\n;set MQ01.menutimer to 1\r\n;set MQ01.mapstage to 96\r\n"
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "IsXBox:309", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "00 00 00 00", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "Select the compass at the bottom of the journal to bring up the quest and map tab.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "IsXBox:309", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "00 00 00 00", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "Click on the compass at the bottom of the journal to bring up the quest and map tab.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 96, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 14, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 64 00 00 00", 
+                        "SCTX - Result script source": "; tutorial all done\r\nsetstage mq01 100", 
+                        "References": [
+                            "SCRO - Global Reference": "MQ01 [QUST:0001E723]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 1.000000000000000, 
+                            "Function": "IsXBox:309", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "00 00 00 00", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "This page displays all your active quests. Select an active quest and press X to display the world map showing your current quest target (if any). You can select any icon on the map to travel directly to that location.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Conditions": [
+                        {
+                            "Type": "00", 
+                            "Unused": "00 00 00", 
+                            "Comparison Value": 0.000000000000000, 
+                            "Function": "IsXBox:309", 
+                            "Unused": "00 00", 
+                            "Parameter #1": "00 00 00 00", 
+                            "Parameter #2": "00 00 00 00", 
+                            "Unused": "00000000"
+                        }
+                    ], 
+                    "CNAM - Log Entry": "This page displays all your active quests. Click on an active quest and hit the MAP button to display the world map showing your current quest target (if any). You can click on any icon on the map to travel directly to that location.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 100, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {
+                        "Complete quest": true
+                    }, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 3, 
+                            "CompiledSize": 33, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "37 10 05 00 01 00 72 01 00 37 10 05 00 01 00 72 02 00 15 00 0B 00 72 03 00 66 02 00 03 00 20 2E 31", 
+                        "SCTX - Result script source": "stopquest MQ01\r\nstopquest charactergen\r\nset Tutorials.fQuestDelayTime to .1", 
+                        "References": [
+                            "SCRO - Global Reference": "MQ01 [QUST:0001E723]", 
+                            "SCRO - Global Reference": "Charactergen [QUST:0002466E]", 
+                            "SCRO - Global Reference": "Tutorials [QUST:000C47C0]"
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 110, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "In each attempt to persuade, you must Admire, Boast, Joke, and Coerce. Each of these actions raises or lowers the NPC's disposition. Don't take too long, because the NPC's disposition is steadily falling.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 120, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "As you highlight each possible action, the NPC's face shows his reaction to it. He will Love, Like, Dislike or Hate each action. His disposition goes up if you select a Loved or Liked action and goes down if you select a Disliked or Hated action.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 130, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "The potential gain or loss for each action is based on your Speechcraft and how full the wedge is. Try to select fuller wedges when they are aligned with actions the NPC likes. Try to select less full wedges when they are aligned with actions he doesn't like.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 140, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "All of your possessions have been confiscated by the guards. You will get them back when you have served your sentence. Activate the bed to begin serving your sentence. ", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 150, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Combine ingredients with like effects to create potions and poisons. Your Alchemy skill will make your creations more powerful. The more potions you create, the higher your alchemy skill will go. Use additional apparatuses to improve the strength of the potions you create.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }
+    ], 
+    "Targets": [
+        {
+            "QSTA - Target": {
+                "Target": "0003E31C", 
+                "Flags": {}, 
+                "Unused": "00 24 1D"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetStageDone:59", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                    "Parameter #2": "024", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 42.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "MQ01 "Tutorial" [QUST:0001E723]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }
+            ]
+        }
+    ]
+}

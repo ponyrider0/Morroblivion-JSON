@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "QUST", 
-        "Data Size": 1965, 
+        "Data Size": 2008, 
         "Record Flags": {}, 
         "FormID": "01009333", 
         "Version Control Info": "00 00 00 00"
@@ -60,13 +60,13 @@
                     "Result Script": {
                         "SCHR - Basic Script Data": {
                             "Unused": "00 00 00 00", 
-                            "RefCount": 10, 
-                            "CompiledSize": 266, 
+                            "RefCount": 11, 
+                            "CompiledSize": 274, 
                             "VariableCount": 0, 
                             "Type": "Quest:1"
                         }, 
-                        "SCDA - Compiled result script": "15 00 13 00 72 0A 00 73 02 00 0B 00 20 72 0A 00 73 02 00 20 35 20 2B 1C 00 01 00 21 10 00 00 1C 00 02 00 21 10 00 00 1C 00 03 00 21 10 00 00 1C 00 04 00 21 10 00 00 1C 00 05 00 21 10 00 00 1C 00 06 00 21 10 00 00 1C 00 07 00 21 10 00 00 1C 00 08 00 21 10 00 00 1C 00 09 00 21 10 00 00 16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 58 00 01 00 54 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 52 6F 62 62 65 64 20 41 6C 64 27 52 75 68 6E 20 47 75 69 6C 64 20 6F 66 20 4D 61 67 65 73 22 F9 16 26 00 01 00 22 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 37 30 19 00 00 00", 
-                        "SCTX - Result script source": "Set fbmwTGAdvancement.ThiefReputation TO fbmwTGAdvancement.ThiefReputation + 5\r\nfbmwerranilref.enable\r\nfbmwmovisref.enable\r\nfbmwedwinnaref.enable\r\nfbmwtremonref.enable\r\nfbmwvalaref.enable\r\nfbmwtanarref.enable\r\nfbmworrentref.enable\r\nfbmwheemlaref.enable\r\nfbmwanarenenref.enable\r\n\r\nif ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qRobbed Ald'Ruhn Guild of Mages%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 70\"\r\nendif", 
+                        "SCDA - Compiled result script": "15 00 13 00 72 0B 00 73 02 00 0B 00 20 72 0B 00 73 02 00 20 35 20 2B 1C 00 01 00 21 10 00 00 1C 00 02 00 21 10 00 00 1C 00 03 00 21 10 00 00 1C 00 04 00 21 10 00 00 1C 00 05 00 21 10 00 00 1C 00 06 00 21 10 00 00 1C 00 07 00 21 10 00 00 1C 00 08 00 21 10 00 00 1C 00 09 00 21 10 00 00 1C 00 0A 00 22 10 00 00 16 00 1D 00 02 00 19 00 20 58 51 16 13 00 01 00 0F 00 4F 62 6C 69 76 69 6F 6E 20 58 50 2E 65 73 70 F9 16 58 00 01 00 54 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 4D 65 73 73 61 67 65 20 74 6F 20 73 76 5F 43 6F 6E 73 74 72 75 63 74 20 22 52 6F 62 62 65 64 20 41 6C 64 27 52 75 68 6E 20 47 75 69 6C 64 20 6F 66 20 4D 61 67 65 73 22 F9 16 26 00 01 00 22 00 73 65 74 20 4F 62 58 50 4D 61 69 6E 2E 69 6E 74 65 72 4F 70 47 61 69 6E 65 64 58 50 20 74 6F 20 37 30 19 00 00 00", 
+                        "SCTX - Result script source": "Set fbmwTGAdvancement.ThiefReputation TO fbmwTGAdvancement.ThiefReputation + 5\r\nfbmwerranilref.enable\r\nfbmwmovisref.enable\r\nfbmwedwinnaref.enable\r\nfbmwtremonref.enable\r\nfbmwvalaref.enable\r\nfbmwtanarref.enable\r\nfbmworrentref.enable\r\nfbmwheemlaref.enable\r\nfbmwanarenenref.enable\r\nfbmwmanisref.disable \r\n\r\nif ( isModLoaded \"Oblivion XP.esp\" )\r\n	runScriptLine \"set ObXPMain.interOpGainedXPMessage to sv_Construct %qRobbed Ald'Ruhn Guild of Mages%q\"\r\n	runScriptLine \"set ObXPMain.interOpGainedXP to 70\"\r\nendif", 
                         "References": [
                             "SCRO - Global Reference": "fbmwerranilref [ACHR:0180200E]", 
                             "SCRO - Global Reference": "fbmwmovisref [ACHR:018071EC]", 
@@ -77,6 +77,7 @@
                             "SCRO - Global Reference": "fbmworrentref [ACHR:01802011]", 
                             "SCRO - Global Reference": "fbmwheemlaref [ACHR:01802010]", 
                             "SCRO - Global Reference": "fbmwanarenenref [ACHR:0180200F]", 
+                            "SCRO - Global Reference": "fbmwmanisref [ACHR:0184322E]", 
                             "SCRO - Global Reference": "fbmwTGAdvancement [QUST:01010562]"
                         ]
                     }
@@ -89,7 +90,7 @@
             "QSTA - Target": {
                 "Target": "018024E2", 
                 "Flags": {}, 
-                "Unused": "00 53 21"
+                "Unused": "00 93 25"
             }, 
             "Conditions": [
                 {
@@ -128,7 +129,7 @@
             "QSTA - Target": {
                 "Target": "01807196", 
                 "Flags": {}, 
-                "Unused": "00 53 21"
+                "Unused": "00 93 25"
             }, 
             "Conditions": [
                 {

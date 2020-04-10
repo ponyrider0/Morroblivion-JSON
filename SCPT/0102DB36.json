@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 209, 
+        "Data Size": 270, 
         "Record Flags": {}, 
         "FormID": "0102DB36", 
         "Version Control Info": "00 00 00 00"
@@ -11,11 +11,11 @@
         "Unused": "00 00 00 00", 
         "RefCount": 0, 
         "CompiledSize": 4, 
-        "VariableCount": 1, 
+        "VariableCount": 2, 
         "Type": "Quest:1"
     }, 
     "SCDA - Compiled Script": "1D 00 00 00", 
-    "SCTX - Script Source": "Scn fbmwCO13Qscript\r\nshort colonyNord\r\n	\n;<CSEBlock>\n;<CSECaretPos> 37 </CSECaretPos>\n;</CSEBlock>", 
+    "SCTX - Script Source": "Scn fbmwCO13Qscript\nshort colonyNord\nshort findToralf\n;<CSEBlock>\n;<CSECaretPos> 53 </CSECaretPos>\n;</CSEBlock>", 
     "Local Variables": [
         {
             "SLSD - Local Variable Data": {
@@ -24,9 +24,20 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD 84 CB 63 1D"
             }, 
             "SCVR - Name": "colonyNord"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "findToralf"
         }
     ]
 }

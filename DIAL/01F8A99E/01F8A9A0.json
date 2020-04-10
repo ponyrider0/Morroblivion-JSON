@@ -2,7 +2,7 @@
     "Topic": "fbmwtrnadsgive [DIAL:01F8A99E]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 688, 
+        "Data Size": 601, 
         "Record Flags": {}, 
         "FormID": "01F8A9A0", 
         "Version Control Info": "00 00 00 00"
@@ -42,20 +42,18 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 6, 
-            "CompiledSize": 95, 
+            "RefCount": 4, 
+            "CompiledSize": 78, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E F4 01 00 00 A9 10 0D 00 03 00 72 05 00 72 06 00 6E 05 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
-        "SCTX - Result script source": "setstage fbmwtgbrotherthief 100\r\nplayer.removeitem 0keyutgbt 1\r\nadditem 0keyutgbt 1\r\nplayer.additem gold001 500\r\nmodfactionreaction 0thievessguild playerfaction 5\r\nmoddisposition player 10", 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E F4 01 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwtgbrotherthief 100\r\nplayer.removeitem 0keyutgbt 1\r\nadditem 0keyutgbt 1\r\nplayer.additem gold001 500\r\nmoddisposition player 10", 
         "References": [
             "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
             "SCRO - Global Reference": "fbmwTGBrotherThief [QUST:01009329]", 
             "SCRO - Global Reference": "0keyUtgbt [KEYM:01400104]", 
-            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
-            "SCRO - Global Reference": "0ThievesSGuild [FACT:01220001]", 
-            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]"
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]"
         ]
     }
 }

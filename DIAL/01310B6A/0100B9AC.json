@@ -2,7 +2,7 @@
     "Topic": "1Odirniran [DIAL:01310B6A]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 545, 
+        "Data Size": 402, 
         "Record Flags": {}, 
         "FormID": "0100B9AC", 
         "Version Control Info": "00 00 00 00"
@@ -13,7 +13,7 @@
         "Flags": {}
     }, 
     "QSTI - Quest": "fbmwHHOdirniran [QUST:01003469]", 
-    "PNAM - Previous INFO": "013224C1", 
+    "PNAM - Previous INFO": "01F8EC21", 
     "Responses": [
         {
             "TRDT - Response Data": {
@@ -24,17 +24,6 @@
                 "Unused": "00 00 00"
             }, 
             "NAM1 - Response Text": "Vedelea is safe! Thank you, outlander, but someone will still need to take care of the Telvanni necromancer.", 
-            "NAM2 - Actor notes": ""
-        }, 
-        {
-            "TRDT - Response Data": {
-                "Emotion Type": "00000000", 
-                "Emotion Value": 50, 
-                "Unused": "00 00 00 00", 
-                "Response number": "02", 
-                "Unused": "00 00 00"
-            }, 
-            "NAM1 - Response Text": "Kill him if you can, but we are getting out of here!", 
             "NAM2 - Actor notes": ""
         }
     ], 
@@ -73,14 +62,15 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 1, 
-            "CompiledSize": 42, 
+            "RefCount": 2, 
+            "CompiledSize": 22, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 55 00 00 00 15 00 0A 00 72 01 00 73 01 00 02 00 20 30 15 00 0A 00 72 01 00 73 03 00 02 00 20 31", 
-        "SCTX - Result script source": "SetStage fbmwHHOdirniran 85\r\nSET fbmwHHOdirniran.FollowNow to 0\r\nSET fbmwHHOdirniran.LeaveOdirniran TO 1", 
+        "SCDA - Compiled result script": "15 00 0A 00 72 02 00 73 01 00 02 00 20 30 1C 00 01 00 5E 10 00 00", 
+        "SCTX - Result script source": "SET fbmwHHOdirniran.FollowNow to 0\r\nmwVedeleaOthrilREF.evp", 
         "References": [
+            "SCRO - Global Reference": "mwVedeleaOthrilREF [ACHR:0181B890]", 
             "SCRO - Global Reference": "fbmwHHOdirniran [QUST:01003469]"
         ]
     }

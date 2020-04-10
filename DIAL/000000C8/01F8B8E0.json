@@ -2,7 +2,7 @@
     "Topic": "GREETING [DIAL:000000C8]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 382, 
+        "Data Size": 325, 
         "Record Flags": {}, 
         "FormID": "01F8B8E0", 
         "Version Control Info": "00 00 00 00"
@@ -29,27 +29,7 @@
     ], 
     "Conditions": [
         {
-            "Type": "40", 
-            "Unused": "00 00 00", 
-            "Comparison Value": 2.000000000000000, 
-            "Function": "GetDeadCount:84", 
-            "Unused": "00 00", 
-            "Parameter #1": "fbmwbmGrahlKarstaag "Deadly Grahl" [CREA:01F8B881]", 
-            "Parameter #2": "00 00 00 00", 
-            "Unused": "00000000"
-        }, 
-        {
-            "Type": "60", 
-            "Unused": "00 00 00", 
-            "Comparison Value": 70.000000000000000, 
-            "Function": "GetStage:58", 
-            "Unused": "00 00", 
-            "Parameter #1": "fbmwBMFrostGiant1 "The Castle Karstaag" [QUST:0101B6C3]", 
-            "Parameter #2": "00 00 00 00", 
-            "Unused": "00000000"
-        }, 
-        {
-            "Type": "80", 
+            "Type": "00", 
             "Unused": "00 00 00", 
             "Comparison Value": 80.000000000000000, 
             "Function": "GetStage:58", 
@@ -77,8 +57,8 @@
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 50 00 00 00", 
-        "SCTX - Result script source": "setstage fbmwbmFrostGiant1 80", 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 51 00 00 00", 
+        "SCTX - Result script source": "SetStage fbmwBMFrostGiant1 81\r\n", 
         "References": [
             "SCRO - Global Reference": "fbmwBMFrostGiant1 [QUST:0101B6C3]"
         ]

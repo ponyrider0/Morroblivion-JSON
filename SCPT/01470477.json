@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 878, 
+        "Data Size": 897, 
         "Record Flags": {}, 
         "FormID": "01470477", 
         "Version Control Info": "00 00 00 00"
@@ -10,12 +10,12 @@
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
         "RefCount": 4, 
-        "CompiledSize": 280, 
+        "CompiledSize": 281, 
         "VariableCount": 2, 
         "Type": "Object:0"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 08 01 00 00 00 00 16 00 26 00 02 00 22 00 20 58 3A 10 05 00 01 00 72 02 00 20 31 30 20 3C 20 58 3A 10 05 00 01 00 72 03 00 20 30 20 3E 20 26 26 59 10 68 00 01 00 5E 00 54 72 61 76 65 6C 20 77 65 73 74 20 74 6F 20 61 20 73 6D 61 6C 6C 20 69 73 6C 61 6E 64 20 6F 66 66 20 74 68 65 20 63 6F 61 73 74 2C 20 61 6E 64 20 66 6F 6C 6C 6F 77 20 74 68 65 20 53 77 69 6D 6D 65 72 20 74 6F 20 73 65 65 6B 20 74 68 65 20 57 61 74 65 72 20 6F 66 20 4C 69 66 65 2E 00 00 00 00 00 00 39 10 0A 00 02 00 72 02 00 6E 0A 00 00 00 18 00 2A 00 03 00 26 00 20 58 3A 10 05 00 01 00 72 02 00 20 37 30 20 3D 3D 20 72 01 00 58 2F 10 05 00 01 00 72 04 00 20 30 20 3E 20 26 26 39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 39 10 0A 00 02 00 72 03 00 6E 3C 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 04 00 6E 01 00 00 00 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "scriptName mwBMStoneWaterScript\n\nbegin onactivate\n\n	if GetStage fbmwBMWater < 10 && GetStage fbmwBMStones > 0\n		Message \"Travel west to a small island off the coast, and follow the Swimmer to seek the Water of Life.\"\n		SetStage fbmwBMWater 10\n	elseif GetStage fbmwBMWater == 70 && Player.GetItemCount 0BMUwaterlifeUUNIQUE1 > 0\n		SetStage fbmwBMWater 100\n		SetStage fbmwBMStones 60\n		Player.RemoveItem 0BMUwaterlifeUUNIQUE1 1\n	endif\n\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 09 01 00 00 00 00 16 00 27 00 02 00 23 00 20 58 3A 10 05 00 01 00 72 02 00 20 31 30 20 3C 20 58 3A 10 05 00 01 00 72 03 00 20 33 30 20 3E 20 26 26 59 10 68 00 01 00 5E 00 54 72 61 76 65 6C 20 77 65 73 74 20 74 6F 20 61 20 73 6D 61 6C 6C 20 69 73 6C 61 6E 64 20 6F 66 66 20 74 68 65 20 63 6F 61 73 74 2C 20 61 6E 64 20 66 6F 6C 6C 6F 77 20 74 68 65 20 53 77 69 6D 6D 65 72 20 74 6F 20 73 65 65 6B 20 74 68 65 20 57 61 74 65 72 20 6F 66 20 4C 69 66 65 2E 00 00 00 00 00 00 39 10 0A 00 02 00 72 02 00 6E 0A 00 00 00 18 00 2A 00 03 00 26 00 20 58 3A 10 05 00 01 00 72 02 00 20 37 30 20 3D 3D 20 72 01 00 58 2F 10 05 00 01 00 72 04 00 20 30 20 3E 20 26 26 39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 39 10 0A 00 02 00 72 03 00 6E 3C 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 04 00 6E 01 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptName mwBMStoneWaterScript\r\n\r\nbegin onactivate\r\n\r\n	if GetStage fbmwBMWater < 10 && GetStage fbmwBMStones > 30\r\n		Message \"Travel west to a small island off the coast, and follow the Swimmer to seek the Water of Life.\"\r\n		SetStage fbmwBMWater 10\r\n	elseif GetStage fbmwBMWater == 70 && Player.GetItemCount 0BMUwaterlifeUUNIQUE1 > 0\r\n		SetStage fbmwBMWater 100\r\n		SetStage fbmwBMStones 60\r\n		Player.RemoveItem 0BMUwaterlifeUUNIQUE1 1\r\n	endif\r\n\r\nend\r\n;<CSEBlock>\r\n;<CSECaretPos> 0 </CSECaretPos>\r\n;</CSEBlock>", 
     "References": [
         "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
         "SCRO - Global Reference": "fbmwBMWater [QUST:0101B6D9]", 

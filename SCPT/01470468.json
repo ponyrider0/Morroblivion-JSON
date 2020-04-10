@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 701, 
+        "Data Size": 716, 
         "Record Flags": {}, 
         "FormID": "01470468", 
         "Version Control Info": "00 00 00 00"
@@ -14,8 +14,8 @@
         "VariableCount": 2, 
         "Type": "Object:0"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 C3 00 00 00 00 00 16 00 25 00 02 00 21 00 20 58 3A 10 05 00 01 00 72 02 00 20 31 20 3C 20 58 3A 10 05 00 01 00 72 03 00 20 30 20 3E 20 26 26 59 10 43 00 01 00 39 00 54 72 61 76 65 6C 20 73 6F 75 74 68 2E 20 46 69 6E 64 20 74 68 65 20 47 6F 6F 64 20 42 65 61 73 74 20 61 6E 64 20 65 61 73 65 20 69 74 73 20 73 75 66 66 65 72 69 6E 67 2E 00 00 00 00 00 00 39 10 0A 00 02 00 72 02 00 6E 0A 00 00 00 18 00 15 00 03 00 11 00 20 58 3A 10 05 00 01 00 72 02 00 20 35 30 20 3D 3D 39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 39 10 0A 00 02 00 72 03 00 6E 42 00 00 00 1C 00 01 00 21 10 00 00 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "scriptName mwBMStoneBeastsScript\n\nbegin onactivate\n	if GetStage fbmwBMBeasts < 1 && GetStage fbmwBMStones > 0\n		Message \"Travel south. Find the Good Beast and ease its suffering.\"\n		SetStage fbmwBMBeasts 10\n	elseif GetStage fbmwBMBeasts == 50\n		SetStage fbmwBMBeasts 100\n		SetStage fbmwBMStones 66\n		fbmwbmBeastShinyREF.Enable\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 C3 00 00 00 00 00 16 00 26 00 02 00 22 00 20 58 3A 10 05 00 01 00 72 02 00 20 31 20 3C 20 58 3A 10 05 00 01 00 72 03 00 20 33 30 20 3E 20 26 26 59 10 42 00 01 00 38 00 54 72 61 76 65 6C 20 65 61 73 74 2E 20 46 69 6E 64 20 74 68 65 20 47 6F 6F 64 20 42 65 61 73 74 20 61 6E 64 20 65 61 73 65 20 69 74 73 20 73 75 66 66 65 72 69 6E 67 2E 00 00 00 00 00 00 39 10 0A 00 02 00 72 02 00 6E 0A 00 00 00 18 00 15 00 03 00 11 00 20 58 3A 10 05 00 01 00 72 02 00 20 35 30 20 3D 3D 39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 39 10 0A 00 02 00 72 03 00 6E 42 00 00 00 1C 00 01 00 21 10 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scriptName mwBMStoneBeastsScript\r\n\r\nbegin onactivate\r\n	if GetStage fbmwBMBeasts < 1 && GetStage fbmwBMStones > 30\r\n		Message \"Travel east. Find the Good Beast and ease its suffering.\"\r\n		SetStage fbmwBMBeasts 10\r\n	elseif GetStage fbmwBMBeasts == 50\r\n		SetStage fbmwBMBeasts 100\r\n		SetStage fbmwBMStones 66\r\n		fbmwbmBeastShinyREF.Enable\r\n	endif\r\nend\r\n;<CSEBlock>\r\n;<CSECaretPos> 0 </CSECaretPos>\r\n;</CSEBlock>", 
     "References": [
         "SCRO - Global Reference": "fbmwbmBeastShinyREF [REFR:01F02943]", 
         "SCRO - Global Reference": "fbmwBMBeasts [QUST:0101AF86]", 

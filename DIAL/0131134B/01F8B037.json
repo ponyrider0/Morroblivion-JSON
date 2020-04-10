@@ -2,7 +2,7 @@
     "Topic": "1findStheSCaptain [DIAL:0131134B]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 255, 
+        "Data Size": 354, 
         "Record Flags": {}, 
         "FormID": "01F8B037", 
         "Version Control Info": "00 00 00 00"
@@ -62,10 +62,16 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 0, 
-            "CompiledSize": 0, 
+            "RefCount": 2, 
+            "CompiledSize": 18, 
             "VariableCount": 0, 
             "Type": "Object:0"
-        }
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "addtopic 1nordSvillage\r\naddtopic 1wolfScreatures", 
+        "References": [
+            "SCRO - Global Reference": "1NordSvillage [DIAL:0131138D]", 
+            "SCRO - Global Reference": "1wolfScreatures [DIAL:01311366]"
+        ]
     }
 }

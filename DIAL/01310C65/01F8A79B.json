@@ -2,7 +2,7 @@
     "Topic": "1Eggmine [DIAL:01310C65]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 219, 
+        "Data Size": 280, 
         "Record Flags": {}, 
         "FormID": "01F8A79B", 
         "Version Control Info": "00 00 00 00"
@@ -13,7 +13,7 @@
         "Flags": {}
     }, 
     "QSTI - Quest": "MorroDefaultQuest [QUST:013A0000]", 
-    "PNAM - Previous INFO": "01322A70", 
+    "PNAM - Previous INFO": "00000000", 
     "Responses": [
         {
             "TRDT - Response Data": {
@@ -52,10 +52,15 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 0, 
-            "CompiledSize": 0, 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
             "VariableCount": 0, 
             "Type": "Object:0"
-        }
+        }, 
+        "SCDA - Compiled result script": "53 10 0A 00 02 00 72 01 00 6E FF FF FF FF", 
+        "SCTX - Result script source": "moddisposition player -1", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+        ]
     }
 }

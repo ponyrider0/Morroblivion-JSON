@@ -2,7 +2,7 @@
     "Topic": "1aidSaSpoorSArgonian2 [DIAL:013208DD]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 574, 
+        "Data Size": 622, 
         "Record Flags": {}, 
         "FormID": "01323070", 
         "Version Control Info": "00 00 00 00"
@@ -14,17 +14,11 @@
     }, 
     "QSTI - Quest": "fbmwMVFakeSlave [QUST:01003405]", 
     "PNAM - Previous INFO": "01323060", 
-    "Add topics": [
-        "NAME - Topic": "01310CED", 
-        "NAME - Topic": "013108A4", 
-        "NAME - Topic": "01310B05", 
-        "NAME - Topic": "01310C84"
-    ], 
     "Responses": [
         {
             "TRDT - Response Data": {
-                "Emotion Type": "00000000", 
-                "Emotion Value": 50, 
+                "Emotion Type": "00000005", 
+                "Emotion Value": 75, 
                 "Unused": "00 00 00 00", 
                 "Response number": "01", 
                 "Unused": "CD CD CD"
@@ -34,8 +28,8 @@
         }, 
         {
             "TRDT - Response Data": {
-                "Emotion Type": "00000000", 
-                "Emotion Value": 50, 
+                "Emotion Type": "00000005", 
+                "Emotion Value": 75, 
                 "Unused": "00 00 00 00", 
                 "Response number": "02", 
                 "Unused": "CD CD CD"
@@ -46,12 +40,12 @@
     ], 
     "Conditions": [
         {
-            "Type": "00", 
+            "Type": "80", 
             "Unused": "00 00 00", 
-            "Comparison Value": 1.000000000000000, 
-            "Function": "GetIsID:72", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
             "Unused": "00 00", 
-            "Parameter #1": "0tul "Tul" [NPC_:0126091F]", 
+            "Parameter #1": "fbmwHHTwinLamps1 "House Hlaalu: The Twin Lamps" [QUST:01003470]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }, 
@@ -64,21 +58,31 @@
             "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0tul "Tul" [NPC_:0126091F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
         }
     ], 
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
             "RefCount": 2, 
-            "CompiledSize": 23, 
+            "CompiledSize": 37, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 2D 00 00 00 58 10 05 00 01 00 72 02 00", 
-        "SCTX - Result script source": "setstage FBMWMVFakeSlave 45\r\naddtopic 1twinSlamps", 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 2D 00 00 00 58 10 05 00 01 00 72 02 00 15 00 0A 00 72 01 00 73 01 00 02 00 20 31", 
+        "SCTX - Result script source": "setstage FBMWMVFakeSlave 45\r\naddtopic 1travelstogether\r\nset fbmwmvfakeslave.follownow to 1\r\n", 
         "References": [
             "SCRO - Global Reference": "fbmwMVFakeSlave [QUST:01003405]", 
-            "SCRO - Global Reference": "1TwinSLamps [DIAL:01310B04]"
+            "SCRO - Global Reference": "1travelStogether [DIAL:0131086A]"
         ]
     }
 }

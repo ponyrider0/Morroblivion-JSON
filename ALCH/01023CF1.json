@@ -1,21 +1,21 @@
 {
     "Record Header": {
         "Signature": "ALCH", 
-        "Data Size": 207, 
+        "Data Size": 243, 
         "Record Flags": {}, 
         "FormID": "01023CF1", 
         "Version Control Info": "00 00 00 00"
     }, 
-    "EDID - Editor ID": "fbmwpmark", 
-    "FULL - Name": "Potion of Mark", 
+    "EDID - Editor ID": "0pUmarkUs", 
+    "FULL - Name": "Potion of Marking", 
     "Model": {
         "MODL - Model FileName": "Morroblivion\\Clutter\\Potions\\PotionBargain.nif", 
-        "MODB - Bound Radius": 15.955242000000000
+        "MODB - Bound Radius": 10.633341000000000
     }, 
     "ICON - Icon FileName": "darthsouth\\Potions\\bargainpotion.dds", 
-    "DATA - Weight": 1.500000000000000, 
+    "DATA - Weight": 1.000000000000000, 
     "ENIT - ENIT": {
-        "Value": 5, 
+        "Value": 35, 
         "Flags": {
             "No auto-calculation": true
         }, 
@@ -23,14 +23,24 @@
     }, 
     "Effects": [
         {
-            "EFID - Magic effect name": "PARA", 
+            "EFID - Magic effect name": "SEFF", 
             "EFIT - EFIT": {
-                "Magic effect name": "PARA", 
+                "Magic effect name": "SEFF", 
                 "Magnitude": 0, 
                 "Area": 0, 
-                "Duration": 8, 
+                "Duration": 0, 
                 "Type": "Self:0", 
-                "Actor Value": "Paralysis:48"
+                "Actor Value": "Health:8"
+            }, 
+            "Script effect": {
+                "SCIT - Script effect data": {
+                    "Script effect": "01001284", 
+                    "Magic school": "00000004", 
+                    "Visual effect name": "53424153", 
+                    "Flags": {}, 
+                    "Unused": "50 56 00"
+                }, 
+                "FULL - Name": "Mark"
             }
         }
     ]

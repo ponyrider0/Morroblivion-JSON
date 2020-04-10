@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 1498, 
+        "Data Size": 1499, 
         "Record Flags": {}, 
         "FormID": "0102DB58", 
         "Version Control Info": "00 00 00 00"
@@ -14,39 +14,39 @@
         "VariableCount": 4, 
         "Type": "Quest:1"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 63 01 00 00 16 00 28 00 03 00 24 00 20 58 3A 10 05 00 01 00 72 04 00 20 32 30 20 3E 3D 20 58 3A 10 05 00 01 00 72 04 00 20 34 30 20 3C 20 26 26 1C 00 01 00 21 10 00 00 1C 00 02 00 21 10 00 00 1C 00 03 00 21 10 00 00 17 00 02 00 03 00 1C 00 01 00 22 10 00 00 1C 00 02 00 22 10 00 00 1C 00 03 00 22 10 00 00 19 00 00 00 16 00 19 00 03 00 15 00 20 72 05 00 58 01 10 05 00 01 00 72 06 00 20 31 30 30 20 3C 3D 15 00 07 00 73 01 00 02 00 20 31 15 00 07 00 73 02 00 02 00 20 30 15 00 07 00 73 03 00 02 00 20 30 17 00 02 00 01 00 15 00 07 00 73 01 00 02 00 20 30 19 00 00 00 16 00 19 00 03 00 15 00 20 72 05 00 58 01 10 05 00 01 00 72 07 00 20 31 30 30 20 3C 3D 15 00 07 00 73 01 00 02 00 20 30 15 00 07 00 73 02 00 02 00 20 31 15 00 07 00 73 03 00 02 00 20 30 17 00 02 00 01 00 15 00 07 00 73 02 00 02 00 20 30 19 00 00 00 16 00 19 00 03 00 15 00 20 72 05 00 58 01 10 05 00 01 00 72 08 00 20 31 30 30 20 3C 3D 15 00 07 00 73 01 00 02 00 20 30 15 00 07 00 73 02 00 02 00 20 30 15 00 07 00 73 03 00 02 00 20 31 17 00 02 00 01 00 15 00 07 00 73 03 00 02 00 20 30 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "Scn fbmwCoestateScript\nshort torch1\nshort torch2\nshort torch3\nshort aldamfollow\n\nbegin gamemode\n	if GetStage fbmwCOEstate >= 20 && GetStage fbmwCOEstate < 40\n		fbmwcoestatetorch1.Enable\n		fbmwcoestatetorch2.Enable\n		fbmwcoestatetorch3.Enable\n	else\n		fbmwcoestatetorch1.Disable\n		fbmwcoestatetorch2.Disable\n		fbmwcoestatetorch3.Disable\n	endif\n\n	if Player.GetDistance fbmwcotorch1marker <= 100\n		set torch1 to 1\n		set torch2 to 0\n		set torch3 to 0\n	else\n		set torch1 to 0\n	endif\n\n	if Player.GetDistance fbmwcotorch2marker <= 100\n		set torch1 to 0\n		set torch2 to 1\n		set torch3 to 0\n	else\n		set torch2 to 0\n	endif\n\n	if Player.GetDistance fbmwcotorch3marker <= 100\n		set torch1 to 0\n		set torch2 to 0\n		set torch3 to 1\n	else\n		set torch3 to 0\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 750 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 63 01 00 00 16 00 28 00 03 00 24 00 20 58 3A 10 05 00 01 00 72 04 00 20 32 30 20 3E 3D 20 58 3A 10 05 00 01 00 72 04 00 20 34 30 20 3C 20 26 26 1C 00 01 00 21 10 00 00 1C 00 02 00 21 10 00 00 1C 00 03 00 21 10 00 00 17 00 02 00 03 00 1C 00 01 00 22 10 00 00 1C 00 02 00 22 10 00 00 1C 00 03 00 22 10 00 00 19 00 00 00 16 00 19 00 03 00 15 00 20 72 05 00 58 01 10 05 00 01 00 72 06 00 20 33 30 30 20 3C 3D 15 00 07 00 73 01 00 02 00 20 31 15 00 07 00 73 02 00 02 00 20 30 15 00 07 00 73 03 00 02 00 20 30 17 00 02 00 01 00 15 00 07 00 73 01 00 02 00 20 30 19 00 00 00 16 00 19 00 03 00 15 00 20 72 05 00 58 01 10 05 00 01 00 72 07 00 20 33 30 30 20 3C 3D 15 00 07 00 73 01 00 02 00 20 30 15 00 07 00 73 02 00 02 00 20 31 15 00 07 00 73 03 00 02 00 20 30 17 00 02 00 01 00 15 00 07 00 73 02 00 02 00 20 30 19 00 00 00 16 00 19 00 03 00 15 00 20 72 05 00 58 01 10 05 00 01 00 72 08 00 20 33 30 30 20 3C 3D 15 00 07 00 73 01 00 02 00 20 30 15 00 07 00 73 02 00 02 00 20 30 15 00 07 00 73 03 00 02 00 20 31 17 00 02 00 01 00 15 00 07 00 73 03 00 02 00 20 30 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "Scn fbmwCoestateScript\nshort torch1\nshort torch2\nshort torch3\nshort aldamfollow\n\nbegin gamemode\n	if GetStage fbmwCOEstate >= 20 && GetStage fbmwCOEstate < 40\n		fbmwcoestatetorch1.Enable\n		fbmwcoestatetorch2.Enable\n		fbmwcoestatetorch3.Enable\n	else\n		fbmwcoestatetorch1.Disable\n		fbmwcoestatetorch2.Disable\n		fbmwcoestatetorch3.Disable\n	endif\n\n	if Player.GetDistance fbmwcotorch1marker <= 300\n		set torch1 to 1\n		set torch2 to 0\n		set torch3 to 0\n	else\n		set torch1 to 0\n	endif\n\n	if Player.GetDistance fbmwcotorch2marker <= 300\n		set torch1 to 0\n		set torch2 to 1\n		set torch3 to 0\n	else\n		set torch2 to 0\n	endif\n\n	if Player.GetDistance fbmwcotorch3marker <= 300\n		set torch1 to 0\n		set torch2 to 0\n		set torch3 to 1\n	else\n		set torch3 to 0\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 659 </CSECaretPos>\n;</CSEBlock>", 
     "Local Variables": [
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000001", 
-                "Unused": "49 6E 46 61 00 00 00 00 00 00 00 00", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "63 74 4D 6F 72 72 6F"
+                "Unused": "CD CD CD 68 D4 63 1D"
             }, 
             "SCVR - Name": "torch1"
         }, 
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000002", 
-                "Unused": "49 6E 46 61 00 00 00 00 00 00 00 00", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "63 74 4D 6F 72 72 6F"
+                "Unused": "00 00 00 68 D4 63 1D"
             }, 
             "SCVR - Name": "torch2"
         }, 
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000003", 
-                "Unused": "49 6E 46 61 00 00 00 00 00 00 00 00", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "63 74 4D 6F 72 72 6F"
+                "Unused": "00 00 00 00 00 00 00"
             }, 
             "SCVR - Name": "torch3"
         }, 
@@ -57,7 +57,7 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD 68 D4 63 1D"
             }, 
             "SCVR - Name": "aldamfollow"
         }

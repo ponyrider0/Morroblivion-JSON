@@ -2,7 +2,7 @@
     "Topic": "GREETING [DIAL:000000C8]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 258, 
+        "Data Size": 268, 
         "Record Flags": {}, 
         "FormID": "01F852BD", 
         "Version Control Info": "00 00 00 00"
@@ -17,13 +17,13 @@
     "Responses": [
         {
             "TRDT - Response Data": {
-                "Emotion Type": "00000000", 
-                "Emotion Value": 50, 
+                "Emotion Type": "00000005", 
+                "Emotion Value": 100, 
                 "Unused": "00 00 00 00", 
                 "Response number": "01", 
                 "Unused": "77 4D 47"
             }, 
-            "NAM1 - Response Text": "Ajira knows that you is a good friend of Ajira.", 
+            "NAM1 - Response Text": "Ajira knows that&sUActnQuick1; is a good friend of Ajira.", 
             "NAM2 - Actor notes": ""
         }
     ], 
@@ -39,22 +39,22 @@
             "Unused": "00000000"
         }, 
         {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMGStolenReport "Mages Guild: Stolen Reports" [QUST:01006789]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
             "Type": "00", 
             "Unused": "00 00 00", 
             "Comparison Value": 0.000000000000000, 
             "Function": "GetPCExpelled:193", 
             "Unused": "00 00", 
             "Parameter #1": "fbmwMagesGuild "Mages Guild" [FACT:0100761B]", 
-            "Parameter #2": "00 00 00 00", 
-            "Unused": "00000000"
-        }, 
-        {
-            "Type": "60", 
-            "Unused": "00 00 00", 
-            "Comparison Value": 100.000000000000000, 
-            "Function": "GetStage:58", 
-            "Unused": "00 00", 
-            "Parameter #1": "fbmwMGWarlocksRing "Mages Guild: Warlock's Ring" [QUST:0100678E]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }, 

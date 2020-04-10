@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "QUST", 
-        "Data Size": 3540, 
+        "Data Size": 3619, 
         "Record Flags": {}, 
         "FormID": "01003408", 
         "Version Control Info": "00 00 00 00"
@@ -156,11 +156,16 @@
                     "Result Script": {
                         "SCHR - Basic Script Data": {
                             "Unused": "00 00 00 00", 
-                            "RefCount": 0, 
-                            "CompiledSize": 0, 
+                            "RefCount": 1, 
+                            "CompiledSize": 14, 
                             "VariableCount": 0, 
                             "Type": "Quest:1"
-                        }
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 01 00 02 00 20 31", 
+                        "SCTX - Result script source": "set fbmwMVMissingCompanion.follownow to 1", 
+                        "References": [
+                            "SCRO - Global Reference": "fbmwMVMissingCompanion [QUST:01003408]"
+                        ]
                     }
                 }
             ]
@@ -269,7 +274,7 @@
             "QSTA - Target": {
                 "Target": "0183FEC8", 
                 "Flags": {}, 
-                "Unused": "00 4C 21"
+                "Unused": "00 15 25"
             }, 
             "Conditions": [
                 {
@@ -308,7 +313,7 @@
             "QSTA - Target": {
                 "Target": "0183FECC", 
                 "Flags": {}, 
-                "Unused": "00 4C 21"
+                "Unused": "00 15 25"
             }, 
             "Conditions": [
                 {

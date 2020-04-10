@@ -2,7 +2,7 @@
     "Topic": "1passStheStest [DIAL:013109BB]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 1028, 
+        "Data Size": 1327, 
         "Record Flags": {}, 
         "FormID": "01AAEC28", 
         "Version Control Info": "00 00 00 00"
@@ -10,7 +10,9 @@
     "DATA - DATA": {
         "Type": "00", 
         "Next Speaker": "00", 
-        "Flags": {}
+        "Flags": {
+            "Say Once": true
+        }
     }, 
     "QSTI - Quest": "fbmwMQ06 [QUST:01001DBE]", 
     "PNAM - Previous INFO": "01AAEC27", 
@@ -75,7 +77,7 @@
         {
             "Type": "60", 
             "Unused": "00 00 00", 
-            "Comparison Value": 45.000000000000000, 
+            "Comparison Value": 50.000000000000000, 
             "Function": "GetStage:58", 
             "Unused": "00 00", 
             "Parameter #1": "fbmwMQ06 "Meet Sul-Matuul" [QUST:01001DBE]", 
@@ -96,18 +98,25 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 4, 
-            "CompiledSize": 64, 
+            "RefCount": 11, 
+            "CompiledSize": 127, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 3C 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
-        "SCTX - Result script source": "SetStage fbmwMQ06 60\r\nplayer.additem 0bkuA2u1uSevenVisions 1\r\nplayer.additem 0bkuA2u1uTheStranger 1\r\nmoddisposition player 10", 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 3C 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 04 00 6E 01 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00 58 10 05 00 01 00 72 05 00 58 10 05 00 01 00 72 06 00 58 10 05 00 01 00 72 07 00 58 10 05 00 01 00 72 08 00 58 10 05 00 01 00 72 09 00 58 10 05 00 01 00 72 0A 00 58 10 05 00 01 00 72 0B 00", 
+        "SCTX - Result script source": "SetStage fbmwMQ06 60\r\nplayer.additem 0bkuA2u1uSevenVisions 1\r\nplayer.additem 0bkuA2u1uTheStranger 1\r\nmoddisposition player 10\r\naddtopic 1firstStrial\r\naddtopic 1secondStrial\r\naddtopic 1thirdStrial\r\naddtopic 1fourthStrial\r\naddtopic 1fifthStrial\r\naddtopic 1sixthStrial\r\naddtopic 1seventhStrial", 
         "References": [
             "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
             "SCRO - Global Reference": "fbmwMQ06 [QUST:01001DBE]", 
             "SCRO - Global Reference": "0bkUa2U1Usevenvisions [BOOK:01180163]", 
-            "SCRO - Global Reference": "0bkUa2U1Uthestranger [BOOK:01180164]"
+            "SCRO - Global Reference": "0bkUa2U1Uthestranger [BOOK:01180164]", 
+            "SCRO - Global Reference": "1FirstStrial [DIAL:01310A6E]", 
+            "SCRO - Global Reference": "1SecondStrial [DIAL:013109F0]", 
+            "SCRO - Global Reference": "1ThirdStrial [DIAL:01310A6F]", 
+            "SCRO - Global Reference": "1FourthStrial [DIAL:013109F1]", 
+            "SCRO - Global Reference": "1FifthStrial [DIAL:01310A70]", 
+            "SCRO - Global Reference": "1SixthStrial [DIAL:01310A71]", 
+            "SCRO - Global Reference": "1SeventhStrial [DIAL:0131096E]"
         ]
     }
 }

@@ -1,0 +1,43 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1496, 
+        "Record Flags": {}, 
+        "FormID": "01F8EDE1", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwCWUOBMEFunction", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 9, 
+        "CompiledSize": 404, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 09 00 07 00 83 01 00 00 01 00 00 15 00 10 00 73 01 00 0B 00 20 58 90 17 05 00 01 00 72 01 00 14 26 15 00 03 00 09 00 24 69 63 6F 6E 70 61 74 68 72 02 00 6E 00 00 00 00 14 26 15 00 03 00 09 00 24 69 63 6F 6E 70 61 74 68 72 03 00 6E 00 00 00 00 15 00 10 00 73 01 00 0B 00 20 58 90 17 05 00 01 00 72 04 00 14 26 15 00 03 00 09 00 24 69 63 6F 6E 70 61 74 68 72 03 00 6E 01 00 00 00 15 00 10 00 73 01 00 0B 00 20 58 90 17 05 00 01 00 72 05 00 14 26 15 00 03 00 09 00 24 69 63 6F 6E 70 61 74 68 72 03 00 6E 02 00 00 00 15 00 10 00 73 01 00 0B 00 20 58 90 17 05 00 01 00 72 06 00 14 26 15 00 03 00 09 00 24 69 63 6F 6E 70 61 74 68 72 03 00 6E 03 00 00 00 14 26 15 00 03 00 09 00 24 69 63 6F 6E 70 61 74 68 72 03 00 6E 04 00 00 00 14 26 15 00 03 00 09 00 24 69 63 6F 6E 70 61 74 68 72 03 00 6E 05 00 00 00 14 26 15 00 03 00 09 00 24 69 63 6F 6E 70 61 74 68 72 03 00 6E 06 00 00 00 15 00 10 00 73 01 00 0B 00 20 58 90 17 05 00 01 00 72 07 00 14 26 15 00 03 00 09 00 24 69 63 6F 6E 70 61 74 68 72 08 00 6E 00 00 00 00 15 00 10 00 73 01 00 0B 00 20 58 90 17 05 00 01 00 72 09 00 14 26 15 00 03 00 09 00 24 69 63 6F 6E 70 61 74 68 72 08 00 6E 01 00 00 00 FE 16 09 00 01 08 00 56 02 00 00 01 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwCWUOBMEFunction\n\nstring_var iconpath\n\nbegin Function { }\n	set iconpath to GetMagicEffectIcon REHE\n	SetNthEIIconPath $iconpath mwEleidonsWardEn 0\n	SetNthEIIconPath $iconpath mwFleshMadeWholeEnAPP 0\n\n	set iconpath to GetMagicEffectIcon CUPO\n	SetNthEIIconPath $iconpath mwFleshMadeWholeEnAPP 1\n\n	set iconpath to GetMagicEffectIcon CUDI\n	SetNthEIIconPath $iconpath mwFleshMadeWholeEnAPP 2\n\n	set iconpath to GetMagicEffectIcon REAT\n	SetNthEIIconPath $iconpath mwFleshMadeWholeEnAPP 3\n	SetNthEIIconPath $iconpath mwFleshMadeWholeEnAPP 4\n	SetNthEIIconPath $iconpath mwFleshMadeWholeEnAPP 5\n	SetNthEIIconPath $iconpath mwFleshMadeWholeEnAPP 6\n\n	set iconpath to GetMagicEffectIcon DRHE\n	SetNthEIIconPath $iconpath mwRobeLichEn 0\n\n	set iconpath to GetMagicEffectIcon FOSP\n	SetNthEIIconPath $iconpath mwRobeLichEn 1\n\n	sv_Destruct iconpath\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "6F 72 65 20 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "74 79 20 31 30 20 70"
+            }, 
+            "SCVR - Name": "iconpath"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "REHE [MGEF:0000188C]", 
+        "SCRO - Global Reference": "mwEleidonsWardEn [ENCH:0100B993]", 
+        "SCRO - Global Reference": "mwFleshMadeWholeEnAPP [ENCH:0100DB6E]", 
+        "SCRO - Global Reference": "CUPO [MGEF:00001862]", 
+        "SCRO - Global Reference": "CUDI [MGEF:00001860]", 
+        "SCRO - Global Reference": "REAT [MGEF:00001889]", 
+        "SCRO - Global Reference": "DRHE [MGEF:0000186D]", 
+        "SCRO - Global Reference": "mwRobeLichEn [ENCH:0100B996]", 
+        "SCRO - Global Reference": "FOSP [MGEF:0000187A]"
+    ]
+}

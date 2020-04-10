@@ -1,12 +1,21 @@
 {
     "Record Header": {
         "Signature": "ALCH", 
-        "Data Size": 268, 
+        "Data Size": 227, 
         "Record Flags": {}, 
         "FormID": "0100123B", 
         "Version Control Info": "00 00 00 00"
     }, 
     "EDID - Editor ID": "0pULevitationUS", 
+    "OBME - Oblivion Magic Extender": {
+        "Record Version": "00", 
+        "OBME Version": {
+            "Beta": "FF", 
+            "Minor": "00", 
+            "Major": "01"
+        }, 
+        "Unused": "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"
+    }, 
     "FULL - Name": "Standard Rising Force Potion", 
     "Model": {
         "MODL - Model FileName": "Morroblivion\\Clutter\\Potions\\PotionStandard.nif", 
@@ -20,28 +29,5 @@
             "No auto-calculation": true
         }, 
         "Unused": "64 2E 00"
-    }, 
-    "Effects": [
-        {
-            "EFID - Magic effect name": "SEFF", 
-            "EFIT - EFIT": {
-                "Magic effect name": "SEFF", 
-                "Magnitude": 0, 
-                "Area": 0, 
-                "Duration": 30, 
-                "Type": "Self:0", 
-                "Actor Value": "Acrobatics:26"
-            }, 
-            "Script effect": {
-                "SCIT - Script effect data": {
-                    "Script effect": "01F8CCCE", 
-                    "Magic school": "00000000", 
-                    "Visual effect name": "52485446", 
-                    "Flags": {}, 
-                    "Unused": "50 56 00"
-                }, 
-                "FULL - Name": "Levitation"
-            }
-        }
-    ]
+    }
 }

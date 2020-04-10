@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 603, 
+        "Data Size": 633, 
         "Record Flags": {}, 
         "FormID": "01F8E958", 
         "Version Control Info": "00 00 00 00"
@@ -9,27 +9,28 @@
     "EDID - Editor ID": "mwCGShipExitTrigZoneScript", 
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
-        "RefCount": 4, 
-        "CompiledSize": 134, 
+        "RefCount": 5, 
+        "CompiledSize": 157, 
         "VariableCount": 1, 
         "Type": "Object:0"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 0B 00 18 00 73 00 00 00 01 00 72 02 00 16 00 16 00 01 00 12 00 20 58 3A 10 05 00 01 00 72 03 00 20 31 30 30 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 0D 00 04 00 09 00 20 73 01 00 20 30 20 3D 3D 16 00 10 00 02 00 0C 00 20 72 03 00 73 08 00 20 35 20 3D 3D 1C 00 01 00 34 10 0D 00 03 00 72 02 00 72 04 00 6E 01 00 00 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "scn mwCGShipExitTrigZoneScript\n\nshort DoOnce\n\nbegin OnTrigger Player\n\n	if GetStage fbmwChargen == 100\n		return\n	endif\n\n	if DoOnce == 0\n		if fbmwChargen.Guard01Stage == 5\n			mwCGGuard1REF.SayTo player mwCGGuard01Talk 1\n			set DoOnce to 1\n		endif\n	endif\n\nend\n;<CSEBlock>\n;<CSECaretPos> 117 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0B 00 18 00 8A 00 00 00 01 00 72 03 00 16 00 16 00 01 00 12 00 20 58 3A 10 05 00 01 00 72 04 00 20 31 30 30 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 0D 00 06 00 09 00 20 73 01 00 20 30 20 3D 3D 16 00 10 00 04 00 0C 00 20 72 04 00 73 08 00 20 36 20 3E 3D 1C 00 01 00 73 10 02 00 00 00 1C 00 02 00 34 10 0D 00 03 00 72 03 00 72 05 00 6E 01 00 00 00 1C 00 02 00 5C 10 05 00 01 00 72 03 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwCGShipExitTrigZoneScript\n\nshort DoOnce\n\nbegin OnTrigger Player\n\n	if GetStage fbmwChargen == 100\n		return\n	endif\n\n	if DoOnce == 0\n		if fbmwChargen.Guard01Stage >= 6\n			mwCGshipdoorRef.Unlock\n			mwCGGuard1REF.SayTo player mwCGGuard01Talk 1\n			mwCGGuard1REF.Look player\n			set DoOnce to 1\n		endif\n	endif\n\nend", 
     "Local Variables": [
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000001", 
-                "Unused": "49 73 49 44 00 00 00 00 00 00 00 00", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "53 63 61 70 74 61 69"
+                "Unused": "00 00 00 00 00 00 00"
             }, 
             "SCVR - Name": "DoOnce"
         }
     ], 
     "References": [
+        "SCRO - Global Reference": "mwCGshipdoorRef [REFR:01861101]", 
         "SCRO - Global Reference": "mwCGGuard1REF [ACHR:01861100]", 
         "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
         "SCRO - Global Reference": "fbmwChargen [QUST:01F0A28C]", 

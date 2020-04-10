@@ -2,7 +2,7 @@
     "Topic": "BBBBasksInTheSunRavenRock [DIAL:01F8CCB8]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 359, 
+        "Data Size": 390, 
         "Record Flags": {}, 
         "FormID": "01F8CCB9", 
         "Version Control Info": "00 00 00 00"
@@ -14,7 +14,7 @@
             "Goodbye": true
         }
     }, 
-    "QSTI - Quest": "aaaBoatTransport [QUST:01F0A330]", 
+    "QSTI - Quest": "mwServices [QUST:01F0A330]", 
     "PNAM - Previous INFO": "00000000", 
     "Responses": [
         {
@@ -30,6 +30,16 @@
         }
     ], 
     "Conditions": [
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 5.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwCOAdvancement "East Empire Company" [QUST:01004AD9]", 
+            "Parameter #2": "colonystate", 
+            "Unused": "00000000"
+        }, 
         {
             "Type": "62", 
             "Unused": "00 00 00", 

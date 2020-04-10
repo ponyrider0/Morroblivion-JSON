@@ -2,7 +2,7 @@
     "Topic": "1RedoranSHortator [DIAL:01310819]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 549, 
+        "Data Size": 519, 
         "Record Flags": {}, 
         "FormID": "01025B1E", 
         "Version Control Info": "00 00 00 00"
@@ -12,7 +12,7 @@
         "Next Speaker": "00", 
         "Flags": {}
     }, 
-    "QSTI - Quest": "fbmwMQRamoran [QUST:01001DE0]", 
+    "QSTI - Quest": "fbmwMQRedoran [QUST:01001DDC]", 
     "PNAM - Previous INFO": "01025B1F", 
     "Responses": [
         {
@@ -28,6 +28,16 @@
         }
     ], 
     "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0hlarenSramoran "Hlaren Ramoran" [NPC_:012600AE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
         {
             "Type": "60", 
             "Unused": "00 00 00", 
@@ -49,19 +59,9 @@
             "Unused": "00000000"
         }, 
         {
-            "Type": "00", 
-            "Unused": "00 00 00", 
-            "Comparison Value": 1.000000000000000, 
-            "Function": "GetIsID:72", 
-            "Unused": "00 00", 
-            "Parameter #1": "0hlarenSramoran "Hlaren Ramoran" [NPC_:012600AE]", 
-            "Parameter #2": "00 00 00 00", 
-            "Unused": "00000000"
-        }, 
-        {
             "Type": "60", 
             "Unused": "00 00 00", 
-            "Comparison Value": 30.000000000000000, 
+            "Comparison Value": 50.000000000000000, 
             "Function": "GetStage:58", 
             "Unused": "00 00", 
             "Parameter #1": "fbmwMQRedoranLlethri "Convincing Garisa Llethri" [QUST:01001DDE]", 
@@ -81,20 +81,10 @@
         {
             "Type": "60", 
             "Unused": "00 00 00", 
-            "Comparison Value": 40.000000000000000, 
-            "Function": "GetStage:58", 
-            "Unused": "00 00", 
-            "Parameter #1": "fbmwMQRedoranVenim "Convincing Bolyn Venim" [QUST:01001DE2]", 
-            "Parameter #2": "00 00 00 00", 
-            "Unused": "00000000"
-        }, 
-        {
-            "Type": "60", 
-            "Unused": "00 00 00", 
             "Comparison Value": 50.000000000000000, 
             "Function": "GetStage:58", 
             "Unused": "00 00", 
-            "Parameter #1": "fbmwMQRedoranArobar "Convincing Miner Arobar" [QUST:01001DDD]", 
+            "Parameter #1": "fbmwMQRedoranVenim "Convincing Bolyn Venim" [QUST:01001DE2]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }, 

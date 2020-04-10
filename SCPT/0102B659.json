@@ -1,0 +1,66 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 904, 
+        "Record Flags": {}, 
+        "FormID": "0102B659", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwCWUGetCurrentChargeFunc", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 5, 
+        "CompiledSize": 186, 
+        "VariableCount": 4, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0E 00 07 00 A4 00 00 00 01 01 01 00 04 01 02 00 65 17 16 00 01 15 00 56 03 00 00 02 00 58 03 00 80 19 07 00 01 00 72 02 00 00 65 17 13 00 01 12 00 56 04 00 00 03 00 56 03 00 00 02 00 42 00 18 00 1C 00 01 00 48 19 05 00 01 00 72 04 00 65 17 16 00 01 15 00 56 03 00 00 02 00 58 05 00 80 19 07 00 01 00 72 02 00 00 65 17 13 00 01 12 00 56 04 00 00 03 00 56 03 00 00 02 00 42 00 18 00 65 17 13 00 01 12 00 56 01 00 00 04 00 58 01 00 1B 15 04 00 00 00 00 1C 00 01 00 48 19 05 00 01 00 72 03 00 84 18 09 00 01 08 00 56 01 00 00 04 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwCWUGetCurrentChargeFunc\n\nref WeaponToken\n\narray_var ar\nref ir\nshort Charge\n\nbegin Function { WeaponToken }\n	Let ar := mwCWUHolderREF.GetInvRefsForItem WeaponToken\n	Let ir := ar[0]\n	ir.RemoveMeIR Player\n\n	Let ar := Player.GetInvRefsForItem WeaponToken\n	Let ir := ar[0]\n\n	Let Charge := ir.GetCurrentCharge\n\n	ir.RemoveMeIR mwCWUHolderREF\n\n	SetFunctionValue Charge\n\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "WeaponToken"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "ar"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "ir"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "Charge"
+        }
+    ], 
+    "References": [
+        "SCRV - Local Variable": "00000003", 
+        "SCRV - Local Variable": "00000001", 
+        "SCRO - Global Reference": "mwCWUHolderREF [REFR:01F8ED55]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+    ]
+}

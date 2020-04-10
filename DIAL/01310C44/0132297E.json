@@ -2,7 +2,7 @@
     "Topic": "1Caldera [DIAL:01310C44]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 600, 
+        "Data Size": 658, 
         "Record Flags": {}, 
         "FormID": "0132297E", 
         "Version Control Info": "00 00 00 00"
@@ -103,10 +103,15 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 0, 
-            "CompiledSize": 0, 
+            "RefCount": 1, 
+            "CompiledSize": 9, 
             "VariableCount": 0, 
             "Type": "Object:0"
-        }
+        }, 
+        "SCDA - Compiled result script": "55 10 05 00 01 00 72 01 00", 
+        "SCTX - Result script source": "showmap mwCalderaMapMarker", 
+        "References": [
+            "SCRO - Global Reference": "mwCalderaMapMarker [REFR:01451039]"
+        ]
     }
 }

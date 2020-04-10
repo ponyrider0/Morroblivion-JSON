@@ -2,7 +2,7 @@
     "Topic": "GREETING [DIAL:000000C8]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 354, 
+        "Data Size": 384, 
         "Record Flags": {}, 
         "FormID": "0100A9A6", 
         "Version Control Info": "00 00 00 00"
@@ -12,8 +12,8 @@
         "Next Speaker": "00", 
         "Flags": {}
     }, 
-    "QSTI - Quest": "fbmwVampireGeneric [QUST:01F8ADA4]", 
-    "PNAM - Previous INFO": "0100A9A5", 
+    "QSTI - Quest": "fbmwVampireGreetings [QUST:01F8ADA4]", 
+    "PNAM - Previous INFO": "0100A9A4", 
     "Responses": [
         {
             "TRDT - Response Data": {
@@ -28,6 +28,26 @@
         }
     ], 
     "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0sirilonwe "Sirilonwe" [NPC_:0126017A]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "02", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetVampire:40", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
         {
             "Type": "60", 
             "Unused": "00 00 00", 
@@ -45,16 +65,6 @@
             "Function": "GetInCell:67", 
             "Unused": "00 00", 
             "Parameter #1": "VivecVSGuildSofSMages "Vivec, Guild of Mages" [CELL:0148041D]", 
-            "Parameter #2": "00 00 00 00", 
-            "Unused": "00000000"
-        }, 
-        {
-            "Type": "02", 
-            "Unused": "00 00 00", 
-            "Comparison Value": 1.000000000000000, 
-            "Function": "GetVampire:40", 
-            "Unused": "00 00", 
-            "Parameter #1": "00 00 00 00", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }, 

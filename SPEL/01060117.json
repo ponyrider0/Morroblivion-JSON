@@ -1,33 +1,30 @@
 {
     "Record Header": {
         "Signature": "SPEL", 
-        "Data Size": 95, 
+        "Data Size": 93, 
         "Record Flags": {}, 
         "FormID": "01060117", 
         "Version Control Info": "00 00 00 00"
     }, 
     "EDID - Editor ID": "0fireSbite", 
+    "OBME - Oblivion Magic Extender": {
+        "Record Version": "00", 
+        "OBME Version": {
+            "Beta": "FF", 
+            "Minor": "00", 
+            "Major": "01"
+        }, 
+        "Unused": "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"
+    }, 
     "FULL - Name": "Fire Bite", 
     "SPIT - SPIT": {
         "Type": "00000000", 
-        "Cost": "00000006", 
-        "Level": "00000001", 
+        "Cost": "00000027", 
+        "Level": "00000000", 
         "Flags": {
+            "Manual Spell Cost": true, 
             "Player Start Spell": true
         }, 
         "Unused": "00 00 00"
-    }, 
-    "Effects": [
-        {
-            "EFID - Magic effect name": "FIDG", 
-            "EFIT - EFIT": {
-                "Magic effect name": "FIDG", 
-                "Magnitude": 22, 
-                "Area": 0, 
-                "Duration": 1, 
-                "Type": "Touch:1", 
-                "Actor Value": "Health:8"
-            }
-        }
-    ]
+    }
 }

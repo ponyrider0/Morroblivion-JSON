@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 516, 
+        "Data Size": 861, 
         "Record Flags": {}, 
         "FormID": "01006F76", 
         "Version Control Info": "00 00 00 00"
@@ -9,20 +9,20 @@
     "EDID - Editor ID": "fbmwbmremovesenieslupinusability", 
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
-        "RefCount": 2, 
-        "CompiledSize": 80, 
+        "RefCount": 5, 
+        "CompiledSize": 154, 
         "VariableCount": 2, 
         "Type": "Object:0"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 0F 00 07 00 39 00 00 00 01 02 01 00 04 02 00 01 00 1C 00 01 00 6B 16 05 00 01 00 72 02 00 72 17 24 00 01 23 00 53 1E 00 50 6C 61 63 65 68 6F 6C 64 65 72 20 61 62 69 6C 69 74 79 20 69 73 20 72 65 6D 6F 76 65 64 11 00 00 00", 
-    "SCTX - Script Source": "scn fbmwbmremovesenieslupinusability\nref Target\nlong effectcode\nBegin Function{Target, effectcode}\n	Target.removespellNS fbmwbmwerewolfbloodab\n	print \"Placeholder ability is removed\" \nEnd\n\n\n	\n;<CSEBlock>\n;<CSECaretPos> 52 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0F 00 07 00 83 00 00 00 01 02 01 00 04 02 00 01 00 1C 00 01 00 6B 16 05 00 01 00 72 02 00 72 17 38 00 01 37 00 53 32 00 53 65 6E 69 65 73 20 4C 75 70 69 6E 75 73 20 61 62 69 6C 69 74 79 20 28 70 73 65 75 64 6F 2D 64 69 73 65 61 73 65 29 20 69 73 20 72 65 6D 6F 76 65 64 16 00 23 00 01 00 1F 00 20 72 03 00 73 03 00 20 30 20 3D 3D 20 58 38 10 05 00 01 00 72 04 00 20 31 20 3D 3D 20 26 26 15 00 07 00 47 05 00 02 00 20 30 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwBMRemoveSeniesLupinusAbility\nref Target\nlong effectcode\n\nBegin Function{Target, effectcode}\n	;; assuming Target == player and effect code == CUDI --> check the callback installer\n	Target.removespellNS fbmwbmwerewolfbloodab\n	print \"Senies Lupinus ability (pseudo-disease) is removed\"	\n	if (fbmwBMAAAImAWere.werestatus == 0) && (GetQuestRunning fbmwBMWereStart == 1)\n		set fbmwbmplayerisinfectedwerewolf to 0\n	endif\n\nEnd\n\n\n	\n;<CSEBlock>\n;<CSECaretPos> 415 </CSECaretPos>\n;</CSEBlock>", 
     "Local Variables": [
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000001", 
                 "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {}, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "Target"
         }, 
@@ -33,13 +33,16 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "effectcode"
         }
     ], 
     "References": [
         "SCRV - Local Variable": "00000001", 
-        "SCRO - Global Reference": "fbmwbmwerewolfbloodab [SPEL:0100568B]"
+        "SCRO - Global Reference": "fbmwbmwerewolfbloodab [SPEL:0100568B]", 
+        "SCRO - Global Reference": "fbmwBMAAAImAWere [QUST:01F8B08D]", 
+        "SCRO - Global Reference": "fbmwBMWereStart [QUST:01F8BCBE]", 
+        "SCRO - Global Reference": "fbmwbmplayerisinfectedwerewolf [GLOB:0100568C]"
     ]
 }

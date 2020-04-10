@@ -2,7 +2,7 @@
     "Topic": "GREETING [DIAL:000000C8]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 268, 
+        "Data Size": 327, 
         "Record Flags": {}, 
         "FormID": "0100A9AF", 
         "Version Control Info": "00 00 00 00"
@@ -14,13 +14,13 @@
             "Goodbye": true
         }
     }, 
-    "QSTI - Quest": "fbmwVampireGeneric [QUST:01F8ADA4]", 
+    "QSTI - Quest": "fbmwVampireGreetings [QUST:01F8ADA4]", 
     "PNAM - Previous INFO": "0100A9AE", 
     "Responses": [
         {
             "TRDT - Response Data": {
-                "Emotion Type": "00000000", 
-                "Emotion Value": 50, 
+                "Emotion Type": "00000003", 
+                "Emotion Value": 100, 
                 "Unused": "00 00 00 00", 
                 "Response number": "01", 
                 "Unused": "61 72 6B"
@@ -41,12 +41,12 @@
             "Unused": "00000000"
         }, 
         {
-            "Type": "60", 
+            "Type": "02", 
             "Unused": "00 00 00", 
             "Comparison Value": 1.000000000000000, 
-            "Function": "GetGlobalValue:74", 
+            "Function": "GetVampire:40", 
             "Unused": "00 00", 
-            "Parameter #1": "fbmwPCVampire [GLOB:01F8ACE1]", 
+            "Parameter #1": "00 00 00 00", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }, 
@@ -64,15 +64,16 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 1, 
-            "CompiledSize": 14, 
+            "RefCount": 2, 
+            "CompiledSize": 23, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "53 10 0A 00 02 00 72 01 00 6E CE FF FF FF", 
-        "SCTX - Result script source": "moddisposition player -50", 
+        "SCDA - Compiled result script": "53 10 0A 00 02 00 72 01 00 6E CE FF FF FF 97 10 05 00 01 00 72 02 00", 
+        "SCTX - Result script source": "moddisposition player -50\r\naddscriptpackage mwVampireFleePackage", 
         "References": [
-            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "mwVampireFleePackage [PACK:01F8EC52]"
         ]
     }
 }

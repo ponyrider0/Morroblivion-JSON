@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 3451, 
+        "Data Size": 3519, 
         "Record Flags": {}, 
         "FormID": "0102A44B", 
         "Version Control Info": "00 00 00 00"
@@ -10,87 +10,87 @@
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
         "RefCount": 15, 
-        "CompiledSize": 694, 
+        "CompiledSize": 712, 
         "VariableCount": 13, 
         "Type": "Quest:1"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 A8 02 00 00 16 00 15 00 06 00 11 00 20 58 3A 10 05 00 01 00 72 08 00 20 32 30 20 3D 3D 16 00 0D 00 04 00 09 00 20 73 02 00 20 30 20 3D 3D 16 00 17 00 02 00 13 00 20 72 09 00 58 43 10 05 00 01 00 72 0A 00 20 31 20 21 3D 1C 00 01 00 79 10 29 00 05 00 7A BA 49 0C 02 2B B7 42 C0 7A F2 D2 4D 62 10 88 66 40 7A 54 E3 A5 9B C4 CC 60 40 7A 00 00 00 00 00 80 66 40 72 0B 00 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 19 00 00 00 19 00 00 00 16 00 0D 00 03 00 09 00 20 73 02 00 20 31 20 3D 3D 16 00 1C 00 01 00 18 00 20 47 0C 00 20 73 06 00 20 3D 3D 20 47 0D 00 20 73 08 00 20 3C 20 7C 7C 1E 00 00 00 19 00 00 00 19 00 00 00 16 00 0D 00 0B 00 09 00 20 73 02 00 20 31 20 3D 3D 16 00 17 00 01 00 13 00 20 72 09 00 58 43 10 05 00 01 00 72 0B 00 20 31 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 17 00 01 00 13 00 20 72 09 00 58 43 10 05 00 01 00 72 0A 00 20 31 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 0D 00 03 00 09 00 20 73 0A 00 20 30 20 3D 3D 1C 00 01 00 79 10 29 00 05 00 7A 87 16 D9 CE F7 C3 5B 40 7A 3B DF 4F 8D 97 26 53 C0 7A E5 D0 22 DB F9 1E 51 C0 7A 00 00 00 00 00 00 00 00 72 0A 00 15 00 07 00 73 02 00 02 00 20 32 15 00 07 00 73 0A 00 02 00 20 31 19 00 00 00 19 00 00 00 16 00 0C 00 01 00 08 00 20 73 02 00 20 33 20 3C 1E 00 00 00 19 00 00 00 16 00 0D 00 06 00 09 00 20 73 0D 00 20 30 20 3D 3D 1C 00 02 00 5E 10 00 00 1C 00 03 00 5E 10 00 00 1C 00 04 00 5E 10 00 00 1C 00 05 00 5E 10 00 00 1C 00 06 00 5E 10 00 00 15 00 07 00 73 0D 00 02 00 20 31 19 00 00 00 16 00 26 00 07 00 22 00 20 72 07 00 58 01 10 05 00 01 00 72 0E 00 20 33 35 20 3C 3D 20 73 09 00 20 31 20 7E 20 21 3D 20 26 26 15 00 07 00 73 09 00 02 00 20 32 1C 00 03 00 5C 10 05 00 01 00 72 09 00 1C 00 04 00 5C 10 05 00 01 00 72 09 00 1C 00 05 00 5C 10 05 00 01 00 72 09 00 1C 00 07 00 5C 10 05 00 01 00 72 09 00 1C 00 06 00 5C 10 05 00 01 00 72 09 00 1C 00 02 00 5C 10 05 00 01 00 72 09 00 19 00 00 00 16 00 0D 00 03 00 09 00 20 73 09 00 20 32 20 3D 3D 1C 00 07 00 33 10 05 00 01 00 72 0F 00 1C 00 01 00 16 10 05 00 01 00 72 09 00 15 00 09 00 73 09 00 04 00 20 31 20 7E 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "scn fbmwTRrChampionScript\nshort cheapshot\nshort KarrodfightStart\nshort Karrodbeaten\nshort Karrodbribe\nshort move\nshort Karrodmove\nshort FightDay\nshort StartHour\nshort moveonce\nshort doonce\nshort KingHit\nshort Mercenary\nshort atposition\n\nbegin gamemode\n\n\n	if ( GetStage fbmwTRChampion == 20 )\n		if ( KarrodfightStart == 0 )\n			if Player.GetInCell MournholdVSRoyalSPalaceSThroneSRoom != 1 \n;when player leaves room, send Karrod to bar\n				fbmwKarrodREF.PositionCell -37.431, 180.252, 134.399, 180, MournholdVSTheSWingedSGuar\n				Set KarrodfightStart to 1\n			endif\n		endif\n	endif\n\n;wait for one day to pass\n	if ( KarrodfightStart == 1 )\n		if ( GameDaysPassed == FightDay ) || GameHour < StartHour\n			return\n		endif\n	endif\n\n;if karrod at bar...\n	if ( KarrodfightStart == 1 )\n;...do not move him back if PC is at bar\n		if ( Player.GetInCell MournholdVSTheSWingedSGuar == 1 )\n			return\n		endif\n\n;...do not move him back if PC in throne room\n		if ( Player.GetInCell MournholdVSRoyalSPalaceSThroneSRoom == 1 )\n			return\n		endif\n\n;...otherwise, move him back and prep for fight\n		if ( doonce == 0 )\n			fbmwKarrodREF.PositionCell 111.062, -76.603, -68.484, 0, MournholdVSRoyalSPalaceSThroneSRoom	\n			set KarrodfightStart to 2\n			set doonce to 1\n		endif\n	endif\n\n;wait until helseth starts fight\n	if ( KarrodfightStart < 3 )\n		return\n	endif\n\n	if atposition == 0\n		fbmwFaranoREF.evp\n		fbmwIranoREF.evp\n		fbmwOthrelothREF.evp\n		fbmwTienusREF.evp\n		fbmwGratusREF.evp\n		set atposition to 1\n	endif\n\n\n	if fbmwKingHelsethREF.GetDistance fbmwHelMarker <= 35 && moveonce != -1\n		set moveonce to 2\n		fbmwIranoREF.Look Player\n		fbmwOthrelothREF.Look Player\n		fbmwTienusREF.Look Player\n		fbmwKingHelsethREF.Look Player\n		fbmwGratusREF.Look Player\n		fbmwFaranoREF.Look Player\n\n	endif\n\n	if ( moveonce == 2 )\n		fbmwKingHelsethREF.Say 1duelbegin\n		fbmwKarrodREF.StartCombat Player\n		set moveonce to -1\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 0 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 BA 02 00 00 16 00 15 00 06 00 11 00 20 58 3A 10 05 00 01 00 72 08 00 20 32 30 20 3D 3D 16 00 0D 00 04 00 09 00 20 73 02 00 20 30 20 3D 3D 16 00 17 00 02 00 13 00 20 72 09 00 58 43 10 05 00 01 00 72 0A 00 20 31 20 21 3D 1C 00 01 00 79 10 29 00 05 00 7A BA 49 0C 02 2B B7 42 C0 7A F2 D2 4D 62 10 88 66 40 7A 54 E3 A5 9B C4 CC 60 40 7A 00 00 00 00 00 80 66 40 72 0B 00 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 19 00 00 00 19 00 00 00 16 00 0D 00 03 00 09 00 20 73 02 00 20 31 20 3D 3D 16 00 2E 00 01 00 2A 00 20 47 0C 00 20 73 06 00 20 3D 3D 20 47 0C 00 20 73 06 00 20 31 20 2B 20 3D 3D 20 47 0D 00 20 73 08 00 20 3C 20 26 26 20 7C 7C 1E 00 00 00 19 00 00 00 19 00 00 00 16 00 0D 00 0B 00 09 00 20 73 02 00 20 31 20 3D 3D 16 00 17 00 01 00 13 00 20 72 09 00 58 43 10 05 00 01 00 72 0B 00 20 31 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 17 00 01 00 13 00 20 72 09 00 58 43 10 05 00 01 00 72 0A 00 20 31 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 0D 00 03 00 09 00 20 73 0A 00 20 30 20 3D 3D 1C 00 01 00 79 10 29 00 05 00 7A 87 16 D9 CE F7 C3 5B 40 7A 3B DF 4F 8D 97 26 53 C0 7A E5 D0 22 DB F9 1E 51 C0 7A 00 00 00 00 00 00 00 00 72 0A 00 15 00 07 00 73 02 00 02 00 20 32 15 00 07 00 73 0A 00 02 00 20 31 19 00 00 00 19 00 00 00 16 00 0C 00 01 00 08 00 20 73 02 00 20 33 20 3C 1E 00 00 00 19 00 00 00 16 00 0D 00 06 00 09 00 20 73 0D 00 20 30 20 3D 3D 1C 00 02 00 5E 10 00 00 1C 00 03 00 5E 10 00 00 1C 00 04 00 5E 10 00 00 1C 00 05 00 5E 10 00 00 1C 00 06 00 5E 10 00 00 15 00 07 00 73 0D 00 02 00 20 31 19 00 00 00 16 00 26 00 07 00 22 00 20 72 07 00 58 01 10 05 00 01 00 72 0E 00 20 33 35 20 3C 3D 20 73 09 00 20 31 20 7E 20 21 3D 20 26 26 15 00 07 00 73 09 00 02 00 20 32 1C 00 03 00 5C 10 05 00 01 00 72 09 00 1C 00 04 00 5C 10 05 00 01 00 72 09 00 1C 00 05 00 5C 10 05 00 01 00 72 09 00 1C 00 07 00 5C 10 05 00 01 00 72 09 00 1C 00 06 00 5C 10 05 00 01 00 72 09 00 1C 00 02 00 5C 10 05 00 01 00 72 09 00 19 00 00 00 16 00 0D 00 03 00 09 00 20 73 09 00 20 32 20 3D 3D 1C 00 07 00 33 10 05 00 01 00 72 0F 00 1C 00 01 00 16 10 05 00 01 00 72 09 00 15 00 09 00 73 09 00 04 00 20 31 20 7E 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwTRrChampionScript\nshort cheapshot\nshort KarrodfightStart\nshort Karrodbeaten\nshort Karrodbribe\nshort move\nshort Karrodmove\nshort FightDay\nshort StartHour\nshort moveonce\nshort doonce\nshort KingHit\nshort Mercenary\nshort atposition\n\nbegin gamemode\n\n\n	if ( GetStage fbmwTRChampion == 20 )\n		if ( KarrodfightStart == 0 )\n			if Player.GetInCell MournholdVSRoyalSPalaceSThroneSRoom != 1 \n;when player leaves room, send Karrod to bar\n				fbmwKarrodREF.PositionCell -37.431, 180.252, 134.399, 180, MournholdVSTheSWingedSGuar\n				Set KarrodfightStart to 1\n			endif\n		endif\n	endif\n\n;wait for one day to pass\n	if ( KarrodfightStart == 1 )\n		if ( GameDaysPassed == FightDay ) ||  ( ( GameDaysPassed == FightDay + 1 ) && ( GameHour < StartHour ) )\n			return\n		endif\n	endif\n\n;if karrod at bar...\n	if ( KarrodfightStart == 1 )\n;...do not move him back if PC is at bar\n		if ( Player.GetInCell MournholdVSTheSWingedSGuar == 1 )\n			return\n		endif\n\n;...do not move him back if PC in throne room\n		if ( Player.GetInCell MournholdVSRoyalSPalaceSThroneSRoom == 1 )\n			return\n		endif\n\n;...otherwise, move him back and prep for fight\n		if ( doonce == 0 )\n			fbmwKarrodREF.PositionCell 111.062, -76.603, -68.484, 0, MournholdVSRoyalSPalaceSThroneSRoom	\n			set KarrodfightStart to 2\n			set doonce to 1\n		endif\n	endif\n\n;wait until helseth starts fight\n	if ( KarrodfightStart < 3 )\n		return\n	endif\n\n	if atposition == 0\n		fbmwFaranoREF.evp\n		fbmwIranoREF.evp\n		fbmwOthrelothREF.evp\n		fbmwTienusREF.evp\n		fbmwGratusREF.evp\n		set atposition to 1\n	endif\n\n\n	if fbmwKingHelsethREF.GetDistance fbmwHelMarker <= 35 && moveonce != -1\n		set moveonce to 2\n		fbmwIranoREF.Look Player\n		fbmwOthrelothREF.Look Player\n		fbmwTienusREF.Look Player\n		fbmwKingHelsethREF.Look Player\n		fbmwGratusREF.Look Player\n		fbmwFaranoREF.Look Player\n\n	endif\n\n	if ( moveonce == 2 )\n		fbmwKingHelsethREF.Say 1duelbegin\n		fbmwKarrodREF.StartCombat Player\n		set moveonce to -1\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 649 </CSECaretPos>\n;</CSEBlock>", 
     "Local Variables": [
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000001", 
-                "Unused": "6E 68 6F 6C 00 00 00 00 00 00 00 00", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "6E 67 65 64 53 47 75"
+                "Unused": "00 00 00 00 00 00 00"
             }, 
             "SCVR - Name": "cheapshot"
         }, 
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000002", 
-                "Unused": "61 63 74 65 00 00 00 00 00 00 00 00", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "62 6F 77 6C 65 66 74"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "KarrodfightStart"
         }, 
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000003", 
-                "Unused": "61 63 74 65 00 00 00 00 00 00 00 00", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "62 6F 77 72 69 67 68"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "Karrodbeaten"
         }, 
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000004", 
-                "Unused": "61 63 74 65 00 00 00 00 00 00 00 00", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "73 77 69 6D 62 6F 77"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "Karrodbribe"
         }, 
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000005", 
-                "Unused": "61 63 74 65 00 00 00 00 00 00 00 00", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "62 6F 77 74 75 72 6E"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "move"
         }, 
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000006", 
-                "Unused": "76 65 20 64 00 00 00 00 00 00 00 00", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "68 65 20 61 73 73 61"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "FightDay"
         }, 
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000007", 
-                "Unused": "02 10 0A 00 00 00 00 00 00 00 00 00", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 39 10 0A 00 02 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "Karrodmove"
         }, 
@@ -101,18 +101,18 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "StartHour"
         }, 
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000009", 
-                "Unused": "27 57 57 D5 00 00 00 00 00 00 00 00", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "7E A2 00 DA 8B 25 15"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "moveonce"
         }, 
@@ -123,18 +123,18 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "doonce"
         }, 
         {
             "SLSD - Local Variable Data": {
                 "Index": "0000000B", 
-                "Unused": "55 57 5A 42 00 00 00 00 00 00 00 00", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "7E A2 00 50 5E D7 27"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "KingHit"
         }, 
@@ -145,18 +145,18 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "Mercenary"
         }, 
         {
             "SLSD - Local Variable Data": {
                 "Index": "0000000D", 
-                "Unused": "7F D5 B5 08 00 00 00 00 00 00 00 00", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "05 FA 53 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "atposition"
         }

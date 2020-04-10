@@ -2,7 +2,7 @@
     "Topic": "1helpSusSfight [DIAL:0131099E]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 600, 
+        "Data Size": 513, 
         "Record Flags": {}, 
         "FormID": "01F8A54D", 
         "Version Control Info": "00 00 00 00"
@@ -63,19 +63,17 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 5, 
-            "CompiledSize": 63, 
+            "RefCount": 3, 
+            "CompiledSize": 46, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E F4 01 00 00 A9 10 0D 00 03 00 72 04 00 72 05 00 6E 05 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
-        "SCTX - Result script source": "setstage fbmwtgenemyparley 100\r\nplayer.additem gold001 500\r\nmodfactionreaction 0thievessguild playerfaction 5\r\nmoddisposition player 10", 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 02 00 6E 64 00 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E F4 01 00 00 53 10 0A 00 02 00 72 01 00 6E 0A 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwtgenemyparley 100\r\nplayer.additem gold001 500\r\nmoddisposition player 10", 
         "References": [
             "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
             "SCRO - Global Reference": "fbmwTGEnemyParley [QUST:0100932E]", 
-            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
-            "SCRO - Global Reference": "0ThievesSGuild [FACT:01220001]", 
-            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]"
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]"
         ]
     }
 }

@@ -2,7 +2,7 @@
     "Topic": "fbmwtgss800 [DIAL:01F8A960]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 264, 
+        "Data Size": 543, 
         "Record Flags": {}, 
         "FormID": "01F8A961", 
         "Version Control Info": "00 00 00 00"
@@ -52,15 +52,18 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 1, 
-            "CompiledSize": 14, 
+            "RefCount": 4, 
+            "CompiledSize": 92, 
             "VariableCount": 0, 
             "Type": "Object:0"
         }, 
-        "SCDA - Compiled result script": "53 10 0A 00 02 00 72 01 00 6E 0F 00 00 00", 
-        "SCTX - Result script source": "moddisposition player 15", 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 02 00 6E 20 03 00 00 52 10 0A 00 02 00 72 03 00 6E 01 00 00 00 02 10 0A 00 02 00 72 02 00 6E 20 03 00 00 1C 00 01 00 02 10 0A 00 02 00 72 03 00 6E 01 00 00 00 39 10 0A 00 02 00 72 04 00 6E 1E 00 00 00 53 10 0A 00 02 00 72 01 00 6E 0F 00 00 00", 
+        "SCTX - Result script source": "player.removeitem gold001 800\r\nremoveitem fbmwexquisiteringbrallion 1\r\nadditem gold001 800\r\nplayer.additem fbmwexquisiteringbrallion 1\r\nsetstage fbmwtgssgreedyslaver 30\r\nmoddisposition player 15", 
         "References": [
-            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "fbmwExquisiteRingBrallion [CLOT:0102BAE1]", 
+            "SCRO - Global Reference": "fbmwTGssGreedySlaver [QUST:0100933E]"
         ]
     }
 }

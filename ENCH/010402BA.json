@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "ENCH", 
-        "Data Size": 85, 
+        "Data Size": 125, 
         "Record Flags": {}, 
         "FormID": "010402BA", 
         "Version Control Info": "00 00 00 00"
@@ -11,7 +11,9 @@
         "Type": "00000003", 
         "Charge Amount": "0000025D", 
         "Enchant Cost": "00000079", 
-        "Flags": {}, 
+        "Flags": {
+            "Manual Enchant Cost (Autocalc Off)": true
+        }, 
         "Unused": "CD CD CD"
     }, 
     "Effects": [
@@ -24,6 +26,17 @@
                 "Duration": 15, 
                 "Type": "Target:2", 
                 "Actor Value": "Paralysis:48"
+            }
+        }, 
+        {
+            "EFID - Magic effect name": "DGHE", 
+            "EFIT - EFIT": {
+                "Magic effect name": "DGHE", 
+                "Magnitude": 7, 
+                "Area": 0, 
+                "Duration": 15, 
+                "Type": "Target:2", 
+                "Actor Value": "Health:8"
             }
         }
     ]

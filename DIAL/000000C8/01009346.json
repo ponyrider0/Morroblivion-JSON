@@ -2,7 +2,7 @@
     "Topic": "GREETING [DIAL:000000C8]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 433, 
+        "Data Size": 509, 
         "Record Flags": {}, 
         "FormID": "01009346", 
         "Version Control Info": "00 00 00 00"
@@ -43,9 +43,9 @@
             "Type": "01", 
             "Unused": "00 00 00", 
             "Comparison Value": 1.000000000000000, 
-            "Function": "IsSpellTarget:223", 
+            "Function": "HasMagicEffect:214", 
             "Unused": "00 00", 
-            "Parameter #1": "0invisibility "Invisibility" [SPEL:01060160]", 
+            "Parameter #1": "INVI "Invisibility" [MGEF:00001881]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }, 
@@ -53,9 +53,9 @@
             "Type": "00", 
             "Unused": "00 00 00", 
             "Comparison Value": 1.000000000000000, 
-            "Function": "IsSpellTarget:223", 
+            "Function": "HasMagicEffect:214", 
             "Unused": "00 00", 
-            "Parameter #1": "StandardInvisibility3Journeyman "Shadow Shape" [SPEL:000A97BE]", 
+            "Parameter #1": "CHML "Chameleon" [MGEF:0000185C]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
         }, 
@@ -83,10 +83,15 @@
     "Result Script": {
         "SCHR - Basic Script Data": {
             "Unused": "00 00 00 00", 
-            "RefCount": 0, 
-            "CompiledSize": 0, 
+            "RefCount": 1, 
+            "CompiledSize": 14, 
             "VariableCount": 0, 
             "Type": "Object:0"
-        }
+        }, 
+        "SCDA - Compiled result script": "15 00 0A 00 72 01 00 73 01 00 02 00 20 31", 
+        "SCTX - Result script source": "set fbmwmvstrayedpilgrim.follownow to 1", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMVStrayedPilgrim [QUST:01003413]"
+        ]
     }
 }
