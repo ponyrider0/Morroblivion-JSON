@@ -1,0 +1,66 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 2091, 
+        "Record Flags": {}, 
+        "FormID": "04073640", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwNerevarineOblivionStartScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 635, 
+        "VariableCount": 8, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 2C 00 00 00 00 00 15 00 08 00 66 07 00 03 00 20 31 35 15 00 07 00 73 06 00 02 00 20 30 15 00 07 00 73 08 00 02 00 20 31 0D 10 02 00 00 00 11 00 00 00 10 00 0D 00 01 00 00 02 00 00 01 00 6E 02 04 00 00 16 00 0D 00 01 00 09 00 20 73 08 00 20 30 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 10 00 01 00 0C 00 20 72 01 00 73 01 00 20 30 20 21 3D 1E 00 00 00 19 00 00 00 16 00 0D 00 0B 00 09 00 20 73 06 00 20 31 20 3D 3D 15 00 0B 00 73 02 00 06 00 20 58 1F 10 00 00 16 00 0D 00 01 00 09 00 20 73 02 00 20 31 20 3D 3D 15 00 08 00 66 07 00 03 00 20 31 30 18 00 0D 00 06 00 09 00 20 73 02 00 20 30 20 3D 3D 36 10 05 00 01 00 72 01 00 39 10 0A 00 02 00 72 01 00 6E 00 00 00 00 15 00 0A 00 72 01 00 73 01 00 02 00 20 31 15 00 0C 00 72 01 00 66 03 00 04 00 20 30 2E 31 E4 16 00 00 22 10 00 00 19 00 00 00 19 00 00 00 16 00 11 00 01 00 0D 00 20 66 07 00 20 39 39 39 20 7E 20 3D 3D 1E 00 00 00 18 00 0C 00 02 00 08 00 20 66 07 00 20 30 20 3E 15 00 11 00 66 07 00 0C 00 20 66 07 00 20 58 0C 10 00 00 20 2D 1E 00 00 00 17 00 02 00 03 00 15 00 0B 00 66 07 00 06 00 20 39 39 39 20 7E 0F 16 CA 00 01 00 C6 00 44 6F 20 79 6F 75 20 77 61 6E 74 20 74 6F 20 61 63 63 65 70 74 20 74 68 69 73 20 6F 66 66 65 72 20 66 72 6F 6D 20 74 68 65 20 4E 6F 62 6C 65 20 48 6F 75 73 65 73 20 6E 6F 77 3F 20 0A 0A 54 68 69 73 20 77 69 6C 6C 20 73 74 61 72 74 20 74 68 65 20 4F 62 6C 69 76 69 6F 6E 20 6D 61 69 6E 20 71 75 65 73 74 2C 20 62 75 74 20 79 6F 75 20 77 69 6C 6C 20 73 74 69 6C 6C 20 62 65 20 61 62 6C 65 20 74 6F 20 67 6F 20 62 61 63 6B 20 61 6E 64 20 63 6F 6D 70 6C 65 74 65 20 61 6E 79 20 75 6E 66 69 6E 69 73 68 65 64 20 4D 6F 72 72 6F 77 69 6E 64 20 71 75 65 73 74 73 2E 7C 59 65 73 7C 4E 6F 74 20 59 65 74 15 00 07 00 73 06 00 02 00 20 31 19 00 00 00 11 00 00 00 10 00 06 00 00 00 24 00 00 00 16 00 0D 00 01 00 09 00 20 73 08 00 20 31 20 3D 3D 15 00 07 00 73 08 00 02 00 20 30 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwNerevarineOblivionStartScript\n\nshort buttonpressed\nshort choice\nfloat fTimer\nshort bIsActivated\n\nBegin OnActivate\n\n	set fTimer to 15\n	set buttonpressed to 0\n	set bIsActivated to 1\n	Activate\n	\nEnd\n\nBegin MenuMode 1026 ; book opened\n\n	if (bIsActivated == 0)\n		return\n	endif\n	\n	if (mwNerevarineOblivion.StartMission != 0)\n		return\n	endif\n	\n	if ( buttonpressed == 1 )\n		set choice to GetButtonPressed\n		if ( choice == 1 )\n			set fTimer to 10\n		elseif ( choice == 0 )\n			StartQuest mwNerevarineOblivion\n			SetStage mwNerevarineOblivion 0\n			set mwNerevarineOblivion.StartMission to 1\n			set mwNerevarineOblivion.fQuestDelayTime to 0.1\n			CloseAllMenus\n			Disable mwMemoirsOfThefNeravarineBookRef\n		endif\n	endif		\n\n	if ( fTimer == -999 )\n		return		\n	elseif ( fTimer > 0 )\n		set fTimer to fTimer - GetSecondsPassed\n		return\n	else		\n		set fTimer to -999\n		MessageBoxEx \"Do you want to accept this offer from the Noble Houses now? %r%rThis will start the Oblivion main quest, but you will still be able to go back and complete any unfinished Morrowind quests.|Yes|Not Yet\"\n		set buttonpressed to 1\n	endif\n\nEnd\n\nBegin GameMode\n\n	if (bIsActivated == 1)\n		set bIsActivated to 0\n	endif\n\nEnd\n", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "choice"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "buttonpressed"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000007", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "fTimer"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000008", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "bIsActivated"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "mwNerevarineOblivion [QUST:06009D67]"
+    ]
+}

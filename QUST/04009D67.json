@@ -1,0 +1,156 @@
+{
+    "Record Header": {
+        "Signature": "QUST", 
+        "Data Size": 1977, 
+        "Record Flags": {}, 
+        "FormID": "04009D67", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwNerevarineOblivion", 
+    "SCRI - Script": "mwNerevarineOblivionQuestScript [SCPT:06009D68]", 
+    "FULL - Name": "An expedition to Akavir...", 
+    "DATA - General": {
+        "Flags": {}, 
+        "Priority": 0
+    }, 
+    "Stages": [
+        {
+            "INDX - Stage index": 0, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I've spent many years adventuring in Morrowind.  Now I feel myself growing restless, yearning for something new.  As luck should have it, a new opportunity has presented itself: the nobles from the Great Houses have put aside their differences and formed an expedition to Akavir.  They have requested that I lead the journey.  I must decide if I want to accept this offer...", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 10, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "Double-crossed!  Instead of an expedition to Akavir, I was ambushed and placed in chains!  They transported me, first by boat and then by carriage, back to the Imperial City... back to the Imperial Prison.  They've taken my equipment, but I think it's being held in the evidence chest at The Bastion in the Imperial Prison.  First, I need to find a way out...", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 20, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 9, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00", 
+                        "SCTX - Result script source": "addtopic mwRightfulBelong0\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "mwRightfulBelong0 [DIAL:060132C7]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I've finally escaped from the Imperial Prison!  I know the Emperor's mission is important, but there's also the matter of payback for the people who betrayed and imprisoned me.  I think my belongings are still in the evidence chest at the Imperial Prison.  Perhaps I can convince the prison guards that I'm the Nerevarine and those items are rightfully mine, or perhaps I could just \"steal\" it back...", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCTX - Result script source": ""
+                    }
+                }
+            ]
+        }, 
+        {
+            "INDX - Stage index": 30, 
+            "Log Entries": [
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 1, 
+                            "CompiledSize": 30, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }, 
+                        "SCDA - Compiled result script": "15 00 0C 00 72 01 00 73 0C 00 04 00 20 31 38 30 15 00 0A 00 72 01 00 73 0F 00 02 00 20 31", 
+                        "SCTX - Result script source": "; set timer for 360 seconds, enable flag to reset chest owner and lock state\r\nset mwNerevarineOblivion.timer to 180\r\nset mwNerevarineOblivion.ResetChest to 1\r\n", 
+                        "References": [
+                            "SCRO - Global Reference": "mwNerevarineOblivion [QUST:06009D67]"
+                        ]
+                    }
+                }, 
+                {
+                    "QSDT - Stage Flags": {}, 
+                    "CNAM - Log Entry": "I've been given temporary access to the Evidence Chest.  I better retrieve all of my belongings within the next hour before the guards change their minds.", 
+                    "Result Script": {
+                        "SCHR - Basic Script Data": {
+                            "Unused": "00 00 00 00", 
+                            "RefCount": 0, 
+                            "CompiledSize": 0, 
+                            "VariableCount": 0, 
+                            "Type": "Quest:1"
+                        }
+                    }
+                }
+            ]
+        }
+    ], 
+    "Targets": [
+        {
+            "QSTA - Target": {
+                "Target": "0008526F", 
+                "Flags": {}, 
+                "Unused": "00 2E 26"
+            }, 
+            "Conditions": [
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 20.000000000000000, 
+                    "Function": "GetStage:58", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "mwNerevarineOblivion "An expedition to Akavir..." [QUST:04009D67]", 
+                    "Parameter #2": "00 00 00 00", 
+                    "Unused": "00000000"
+                }, 
+                {
+                    "Type": "00", 
+                    "Unused": "00 00 00", 
+                    "Comparison Value": 0.000000000000000, 
+                    "Function": "GetQuestVariable:79", 
+                    "Unused": "00 00", 
+                    "Parameter #1": "mwNerevarineOblivion "An expedition to Akavir..." [QUST:04009D67]", 
+                    "Parameter #2": "isStuffRegained", 
+                    "Unused": "00000000"
+                }
+            ]
+        }
+    ]
+}

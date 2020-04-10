@@ -1,0 +1,84 @@
+{
+    "Topic": "1snowSbearSarmor5 [DIAL:040039CF]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 643, 
+        "Record Flags": {}, 
+        "FormID": "040052C4", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwBMFurArmor [QUST:0101B6C5]", 
+    "TPIC - Topic": "060039CC", 
+    "PNAM - Previous INFO": "060039D7", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "20 30 66"
+            }, 
+            "NAM1 - Response Text": "Aha!  I knew you'd come through,&sUActnQuick1;!", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "79 6E 6A"
+            }, 
+            "NAM1 - Response Text": "Give me the pelts and gold.  Come back tomorrow, same time, and I'll have your custom Snow Bear Helm ready.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0brynjolfr "Brynjolfr" [NPC_:01260B31]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 66, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 02 00 6E 02 00 00 00 1C 00 01 00 52 10 0A 00 02 00 72 03 00 6E D0 07 00 00 15 00 0A 00 72 04 00 73 04 00 02 00 20 31 15 00 0C 00 72 04 00 73 06 00 04 00 20 47 05 00", 
+        "SCTX - Result script source": "player.removeitem 0ingredusnowbearupeltuunique 2\r\nplayer.removeitem gold001 2000\r\nset fbmwBmFurArmor.BearHelmet to 1\r\nset FbmwBmFurarmor.StartDay to GameDaysPassed", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "0ingredUsnowbearUpeltUunique [INGR:010A006E]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "fbmwBMFurArmor [QUST:0101B6C5]", 
+            "SCRO - Global Reference": "GameDaysPassed [GLOB:00000039]"
+        ]
+    }
+}

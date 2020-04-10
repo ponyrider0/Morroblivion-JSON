@@ -1,0 +1,95 @@
+{
+    "Topic": "1ThirdStrial1 [DIAL:04014BAB]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 905, 
+        "Record Flags": {}, 
+        "FormID": "0132345C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwMQ10 [QUST:01001DC9]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "Nearby lies Kogoruhn, the ancient halls of the forgotten house, House Dagoth. In recent time, creatures of the blight have come to dwell there.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "I myself went there, with some brave hunters, and came back again, but it was a bad place, and I am not ashamed to say I was afraid, for myself and my men.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "CD CD CD"
+            }, 
+            "NAM1 - Response Text": "If you would have from me the secret of the Third Trial, the 'caverns dark' where Azura's eye sees, you will first bring to me three tokens from dark Kogoruhn.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0sulTmatuul "Sul-Matuul" [NPC_:01260350]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1ThirdStrial2 [DIAL:01321D5C]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 45, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "58 10 05 00 01 00 72 01 00 58 10 05 00 01 00 72 02 00 58 10 05 00 01 00 72 03 00 58 10 05 00 01 00 72 04 00 58 10 05 00 01 00 72 05 00", 
+        "SCTX - Result script source": "addtopic 1thirdStrial\r\naddtopic 1houseSdagoth\r\naddtopic 1kogoruhn\r\naddtopic 1theSblight\r\naddtopic 1tokens\r\n", 
+        "References": [
+            "SCRO - Global Reference": "1ThirdStrial [DIAL:01310A6F]", 
+            "SCRO - Global Reference": "1HouseSDagoth [DIAL:013109E4]", 
+            "SCRO - Global Reference": "1Kogoruhn [DIAL:01310C0B]", 
+            "SCRO - Global Reference": "1theSBlight [DIAL:01310B2F]", 
+            "SCRO - Global Reference": "1tokens [DIAL:01310C82]"
+        ]
+    }
+}

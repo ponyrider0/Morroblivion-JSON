@@ -1,0 +1,78 @@
+{
+    "Topic": "mwBelongings1Nerevarine [DIAL:040132C9]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 636, 
+        "Record Flags": {}, 
+        "FormID": "040132CC", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "mwNerevarineOblivion [QUST:06009D67]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000002", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "More like the \"Never-heard-of-it\"!  That was a good story up until that last part.  Next time, make up a name that's easier to say.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "Tell you what, I'm actually a fan-fiction writer.  If you let me publish this story as my own work, you can have whatever's in the evidence chest...", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "...of course, the ending was rather lacking which means it won't be worth much.  If you add an extra 500 gold, then I'll call it even.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 30.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwMQAllHortandNer "The Fourth and Fifth Trials" [QUST:01002C53]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "mwBelongings2Cantpay [DIAL:060132D0]", 
+        "TCLT - Choice": "mwBelongings2Never [DIAL:060132D1]", 
+        "TCLT - Choice": "mwBelongings2Pay500 [DIAL:060132D7]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1993, 
+        "Record Flags": {}, 
+        "FormID": "040244B4", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwCGCensusExitDootScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 591, 
+        "VariableCount": 2, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 02 00 5E 01 00 00 00 00 16 00 20 00 02 00 1C 00 20 73 02 00 20 31 20 3D 3D 20 58 69 10 05 00 01 00 72 01 00 20 31 20 21 3D 20 7C 7C 0D 10 02 00 00 00 1E 00 00 00 19 00 00 00 16 00 24 00 02 00 20 00 20 58 3A 10 05 00 01 00 72 02 00 20 33 30 20 3D 3D 20 72 02 00 73 1A 00 20 30 20 3D 3D 20 26 26 1C 00 01 00 01 11 00 00 00 10 88 00 01 00 40 00 42 65 66 6F 72 65 20 65 78 69 74 69 6E 67 20 74 68 65 20 43 65 6E 73 75 73 20 4F 66 66 69 63 65 2C 20 79 6F 75 20 6D 61 79 20 72 65 76 69 73 65 20 79 6F 75 72 20 63 68 61 72 61 63 74 65 72 2E 00 00 04 00 01 00 09 00 45 64 69 74 20 52 61 63 65 01 00 0E 00 45 64 69 74 20 42 69 72 74 68 73 69 67 6E 01 00 0A 00 45 64 69 74 20 43 6C 61 73 73 01 00 0F 00 46 69 6E 69 73 68 65 64 20 2D 20 45 78 69 74 18 00 24 00 04 00 20 00 20 58 3A 10 05 00 01 00 72 02 00 20 33 30 20 3D 3D 20 72 02 00 73 1A 00 20 31 20 3D 3D 20 26 26 1C 00 01 00 01 11 00 00 15 00 0A 00 72 02 00 66 0C 00 02 00 20 31 15 00 0C 00 72 02 00 73 0D 00 04 00 20 31 30 30 0D 10 02 00 00 00 17 00 02 00 02 00 1C 00 01 00 01 11 00 00 0D 10 02 00 00 00 19 00 00 00 11 00 00 00 10 00 06 00 00 00 D7 00 00 00 16 00 0D 00 01 00 09 00 20 73 02 00 20 31 20 3D 3D 1E 00 00 00 19 00 00 00 15 00 0B 00 73 01 00 06 00 20 58 1F 10 00 00 16 00 0E 00 0D 00 0A 00 20 73 01 00 20 31 20 7E 20 3E 16 00 0D 00 04 00 09 00 20 73 01 00 20 33 20 3D 3D 15 00 07 00 73 02 00 02 00 20 31 15 00 0A 00 72 02 00 66 0C 00 02 00 20 31 15 00 0C 00 72 02 00 73 0D 00 04 00 20 31 30 30 0D 10 05 00 01 00 72 01 00 18 00 0D 00 01 00 09 00 20 73 01 00 20 30 20 3D 3D DA 10 00 00 18 00 0D 00 01 00 09 00 20 73 01 00 20 31 20 3D 3D DB 10 00 00 18 00 0D 00 01 00 09 00 20 73 01 00 20 32 20 3D 3D D9 10 00 00 19 00 00 00 1C 00 01 00 75 10 07 00 01 00 6E 00 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwCGCensusExitDootScript\n\nshort button\nshort runonce\n\nbegin OnActivate\n\n	if (runonce == 1) || (IsActionRef Player != 1)\n		Activate\n		return\n	endif\n	\n	if (GetStage fbmwChargen == 30) && (fbmwChargen.bAltStart_Detected == 0)\n		Player.scaonactor\n		MessageBox \"Before exiting the Census Office, you may revise your character.\", \"Edit Race\", \"Edit Birthsign\", \"Edit Class\", \"Finished - Exit\"\n	elseif (GetStage fbmwChargen == 30) && (fbmwChargen.bAltStart_Detected == 1)\n		Player.scaonactor\n		set fbmwChargen.waittimer to 1\n		set fbmwChargen.gotoStage to 100\n;		fbmwfargothref.moveto mwCGFargothStartMarker\n		Activate\n	else\n		Player.scaonactor\n		Activate\n	endif\n\nend\n\nbegin gamemode\n\n	if (runonce == 1)\n		return\n	endif\n	\n	set button to GetButtonPressed\n	if (button > -1)\n\n		if (button == 3)\n			; stop menu from appearing again\n			set runonce to 1 			\n			; advance and complete Morroblivion chargen quest\n			set fbmwChargen.waittimer to 1\n			set fbmwChargen.gotoStage to 100\n;			fbmwfargothref.moveto mwCGFargothStartMarker\n			Activate Player\n		elseif (button == 0)\n			ShowRaceMenu\n		elseif (button == 1)\n			ShowBirthSignMenu\n		elseif (button == 2)\n			ShowClassMenu\n		endif\n\n		; just in case\n		Player.SetCrimeGold 0\n\n	endif\n\nend", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 08 C7 4E 11"
+            }, 
+            "SCVR - Name": "button"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "runonce"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "fbmwChargen [QUST:01F0A28C]"
+    ]
+}

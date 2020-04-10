@@ -1,0 +1,100 @@
+{
+    "Topic": "1snowSwolfSarmor [DIAL:0131135B]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 537, 
+        "Record Flags": {}, 
+        "FormID": "040052CC", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwBMFurArmor [QUST:0101B6C5]", 
+    "PNAM - Previous INFO": "01321171", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "79 6E 6A"
+            }, 
+            "NAM1 - Response Text": "You bring me the snow wolf pelts and gold, and I'll make a piece of custom snow wolf armor.  I'll have it ready in twenty-four hours.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "79 6E 6A"
+            }, 
+            "NAM1 - Response Text": "You've got my list of prices and pelt requirements.  Which piece of armor were you interested in?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMFurArmor "Fur Armor" [QUST:0101B6C5]", 
+            "Parameter #2": "StartDay", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 10.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwBMFurArmor "Fur Armor" [QUST:0101B6C5]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0brynjolfr "Brynjolfr" [NPC_:01260B31]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetInFaction:71", 
+            "Unused": "00 00", 
+            "Parameter #1": "0factMorrowind "factMorrowind" [FACT:0122001B]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1snowSwolfSarmor1 [DIAL:06073633]", 
+        "TCLT - Choice": "1snowSwolfSarmor2 [DIAL:060052C8]", 
+        "TCLT - Choice": "1snowSwolfSarmor3 [DIAL:060052C9]", 
+        "TCLT - Choice": "1snowSwolfSarmor4 [DIAL:060052CA]", 
+        "TCLT - Choice": "1snowSwolfSarmor5 [DIAL:060052CB]", 
+        "TCLT - Choice": "1snowSwolfSarmor9 [DIAL:01321170]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

@@ -1,0 +1,80 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1917, 
+        "Record Flags": {}, 
+        "FormID": "03004338", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwCWUInitScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 6, 
+        "CompiledSize": 509, 
+        "VariableCount": 13, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 EF 01 00 00 16 00 13 00 17 00 0F 00 20 58 E7 14 00 00 20 58 D4 15 00 00 20 7C 7C 15 00 0C 00 72 02 00 66 01 00 04 00 20 2E 30 31 16 00 27 00 01 00 23 00 20 58 51 16 1D 00 01 00 19 00 4F 62 6C 69 76 69 6F 6E 69 7A 65 64 20 45 6E 63 68 61 6E 74 73 2E 65 73 70 00 10 4D 00 01 00 45 00 43 61 73 74 20 57 68 65 6E 20 55 73 65 64 20 53 79 73 74 65 6D 20 69 73 20 69 6E 63 6F 6D 70 61 74 69 62 6C 65 20 77 69 74 68 20 4F 62 6C 69 76 69 6F 6E 69 7A 65 64 20 45 6E 63 68 61 6E 74 73 20 6D 6F 64 2E 00 00 00 00 19 00 00 00 16 00 12 00 01 00 0E 00 20 58 BE 15 08 00 01 00 04 00 4F 42 4D 45 83 18 07 00 01 05 00 52 03 00 00 19 00 00 00 16 00 0B 00 02 00 07 00 20 72 02 00 66 03 00 76 19 16 00 02 10 00 53 0B 00 4F 6E 53 70 65 6C 6C 43 61 73 74 05 00 52 04 00 15 00 0A 00 72 02 00 73 1B 00 02 00 20 31 19 00 00 00 16 00 0D 00 02 00 09 00 20 73 0D 00 20 30 20 3D 3D 65 17 1A 00 01 19 00 56 03 00 00 0B 00 58 00 00 66 17 0B 00 01 00 05 00 41 72 72 61 79 00 15 00 07 00 73 0D 00 02 00 20 31 19 00 00 00 16 00 20 00 04 00 1C 00 20 58 BE 15 16 00 01 00 12 00 4F 42 53 45 5F 4B 79 6F 6D 61 5F 4D 65 6E 75 51 75 65 65 17 0D 00 01 0C 00 56 04 00 00 0A 00 52 05 00 00 B6 26 12 00 03 00 06 00 4F 6E 4F 70 65 6E 72 01 00 6E 19 04 00 00 65 17 0D 00 01 0C 00 56 04 00 00 0A 00 52 06 00 00 B6 26 13 00 03 00 07 00 4F 6E 43 6C 6F 73 65 72 01 00 6E 19 04 00 00 17 00 02 00 01 00 00 10 21 00 01 00 19 00 4D 65 6E 75 51 75 65 20 69 73 20 6E 6F 74 20 69 6E 73 74 61 6C 6C 65 64 2E 00 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwCWUInitScript\n\nshort Init\nshort menuque\n\nref func\nshort DoOnce\narray_var inventory\n\nBegin GameMode\n\n	if GetGameLoaded || GetGameRestarted\n\n		set mwCWU.fQuestDelayTime to .01\n\n		if IsModLoaded \"Oblivionized Enchants.esp\"\n			MessageBox \"Cast When Used System is incompatible with Oblivionized Enchants mod.\"\n		endif\n\n		if IsPluginInstalled \"OBME\"\n			Call mwCWUOBMEFunction\n		endif\n\n		if mwCWU.Item\n			RemoveEventHandler \"OnSpellCast\" mwCWUCastEventHandler\n			set mwCWU.onplayer to 1\n		endif\n\n		if DoOnce == 0\n			Let inventory := ar_Construct Array\n			set DoOnce to 1\n		endif\n\n;		SetEventHandler \"OnActorEquip\" mwCWUVarlaStoneHandler \"ref\"::Player \"object\"::VarlaStone\n;		SetEventHandler \"OnMagicApply\" mwCWUOnMagicApplyHandler\n\n		if IsPluginInstalled \"OBSE_Kyoma_MenuQue\"\n			Let func := mwCWURechargeOnOpenFunc\n			SetMenuEventHandler \"OnOpen\", func, 1049\n\n			Let func := mwCWURechargeOnCloseFunc\n			SetMenuEventHandler \"OnClose\", func, 1049\n		else\n			MessageBox \"MenuQue is not installed.\"\n		endif\n\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 673 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "98 35 11 4C 00 00 00"
+            }, 
+            "SCVR - Name": "Init"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "menuque"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000A", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "func"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000B", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "inventory"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000D", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "DoOnce"
+        }
+    ], 
+    "References": [
+        "SCRV - Local Variable": "0000000A", 
+        "SCRO - Global Reference": " [:03001075]", 
+        "SCRO - Global Reference": " [:03029D73]", 
+        "SCRO - Global Reference": "mwCWUCastEventHandler [SCPT:0300650C]", 
+        "SCRO - Global Reference": "mwCWURechargeOnOpenFunc [SCPT:03004BAE]", 
+        "SCRO - Global Reference": "mwCWURechargeOnCloseFunc [SCPT:03004BB0]"
+    ]
+}

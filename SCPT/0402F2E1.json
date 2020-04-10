@@ -1,0 +1,48 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 826, 
+        "Record Flags": {}, 
+        "FormID": "0402F2E1", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwBMSetClawValueAndEncumbereance", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 3, 
+        "CompiledSize": 168, 
+        "VariableCount": 2, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0C 00 07 00 94 00 00 00 01 01 01 00 01 00 16 00 08 00 03 00 04 00 20 73 01 00 15 00 14 00 73 02 00 0F 00 20 34 20 58 4A 10 05 00 01 00 72 01 00 20 2A 8D 14 08 00 02 00 73 02 00 72 02 00 69 14 2A 00 02 00 1D 00 66 41 63 74 6F 72 53 74 72 65 6E 67 74 68 45 6E 63 75 6D 62 72 61 6E 63 65 4D 75 6C 74 7A 00 00 00 00 80 87 C3 40 17 00 02 00 01 00 69 14 24 00 02 00 1D 00 66 41 63 74 6F 72 53 74 72 65 6E 67 74 68 45 6E 63 75 6D 62 72 61 6E 63 65 4D 75 6C 74 47 03 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwBMSetClawValueAndEncumbereance\nshort modify\nlong attackclaws\n;TODO incomplete Do Not Use still\nBegin Function{modify}\n	if(modify)\n		set attackclaws  to (4)*(GetGlobalValue fbmwbmclawcost)\n		SetAttackDamage attackclaws fbmwbmwerewolfclawPC\n		SetNumericGameSetting fActorStrengthEncumbranceMult 9999\n	else\n		SetNumericGameSetting fActorStrengthEncumbranceMult oldencoumbrancesetting\n	endif\nEnd\n;<CSEBlock>\n;<CSECaretPos> 70 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "modify"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 CD CD CD CD"
+            }, 
+            "SCVR - Name": "attackclaws"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "fbmwbmclawcost [GLOB:0106F418]", 
+        "SCRO - Global Reference": "fbmwbmwerewolfclawPC [WEAP:0103D74E]", 
+        "SCRO - Global Reference": "oldencoumbrancesetting [GLOB:010024D8]"
+    ]
+}

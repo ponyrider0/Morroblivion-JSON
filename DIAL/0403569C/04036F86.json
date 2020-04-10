@@ -1,0 +1,51 @@
+{
+    "Topic": "mwCGTalkClassQuiz [DIAL:0403569C]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 405, 
+        "Record Flags": {}, 
+        "FormID": "04036F86", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "01", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "fbmwChargen [QUST:01F0A28C]", 
+    "PNAM - Previous INFO": "06036F85", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "There is a lot of heated discussion at the local tavern over a group of people called 'Telepaths'. They have been hired by certain city-state kings. Rumor has it these telepaths read a person's mind and tell their lord whether a follower is telling the truth or not. You believe what?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 8.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwChargen "Stranger in a Strange Land" [QUST:01F0A28C]", 
+            "Parameter #2": "ClassQuizStage", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

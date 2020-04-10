@@ -1,0 +1,43 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1353, 
+        "Record Flags": {}, 
+        "FormID": "040119DB", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwbmWerewolfManageControlPC", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 0, 
+        "CompiledSize": 382, 
+        "VariableCount": 2, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0F 00 07 00 67 01 00 00 01 02 01 00 01 02 00 01 00 16 00 0D 00 0F 00 09 00 20 73 01 00 20 31 20 3D 3D A7 15 07 00 01 00 6E 05 00 00 00 A7 15 07 00 01 00 6E 07 00 00 00 A7 15 07 00 01 00 6E 0F 00 00 00 16 00 0D 00 01 00 09 00 20 73 02 00 20 30 20 3D 3D A7 15 07 00 01 00 6E 10 00 00 00 19 00 00 00 A7 15 07 00 01 00 6E 11 00 00 00 A7 15 07 00 01 00 6E 12 00 00 00 A7 15 07 00 01 00 6E 13 00 00 00 A7 15 07 00 01 00 6E 14 00 00 00 A7 15 07 00 01 00 6E 15 00 00 00 A7 15 07 00 01 00 6E 16 00 00 00 A7 15 07 00 01 00 6E 17 00 00 00 A7 15 07 00 01 00 6E 18 00 00 00 A7 15 07 00 01 00 6E 19 00 00 00 17 00 02 00 0F 00 A8 15 07 00 01 00 6E 05 00 00 00 A8 15 07 00 01 00 6E 07 00 00 00 A8 15 07 00 01 00 6E 0F 00 00 00 16 00 0D 00 01 00 09 00 20 73 02 00 20 30 20 3D 3D A8 15 07 00 01 00 6E 10 00 00 00 19 00 00 00 A8 15 07 00 01 00 6E 11 00 00 00 A8 15 07 00 01 00 6E 12 00 00 00 A8 15 07 00 01 00 6E 13 00 00 00 A8 15 07 00 01 00 6E 14 00 00 00 A8 15 07 00 01 00 6E 15 00 00 00 A8 15 07 00 01 00 6E 16 00 00 00 A8 15 07 00 01 00 6E 17 00 00 00 A8 15 07 00 01 00 6E 18 00 00 00 A8 15 07 00 01 00 6E 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwbmWerewolfManageControlPC\n\nshort toDisable\nshort hircineRing\n;TODO Handle Wait and BloodLust\nBegin Function{toDisable, hircineRing}\n	if(toDisable == 1)\n		DisableControl 5\n		DisableControl 7\n		DisableControl 15\n		if(hircineRing == 0)\n			DisableControl 16\n		endif\n		DisableControl 17\n		DisableControl 18\n		DisableControl 19\n		DisableControl 20\n		DisableControl 21\n		DisableControl 22\n		DisableControl 23\n		DisableControl 24\n		DisableControl 25\n	else\n		EnableControl 5\n		EnableControl 7\n		EnableControl 15\n		if(hircineRing == 0)\n			EnableControl 16\n		endif\n		EnableControl 17\n		EnableControl 18\n		EnableControl 19\n		EnableControl 20\n		EnableControl 21\n		EnableControl 22\n		EnableControl 23\n		EnableControl 24\n		EnableControl 25\n	endif\nEnd\n;<CSEBlock>\n;<CSECaretPos> 153 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "toDisable"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "hircineRing"
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1896, 
+        "Record Flags": {}, 
+        "FormID": "040768B7", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwLanternHavocOnScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 11, 
+        "CompiledSize": 472, 
+        "VariableCount": 5, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 03 00 E4 00 00 00 00 00 15 00 07 00 73 01 00 02 00 20 30 15 00 0B 00 66 02 00 06 00 20 58 50 14 00 00 15 00 0B 00 66 03 00 06 00 20 58 CF 10 00 00 16 00 2D 00 02 00 29 00 20 58 69 17 23 00 01 22 00 56 04 00 00 02 00 52 03 00 04 56 04 00 00 02 00 52 04 00 04 01 56 04 00 00 02 00 52 05 00 04 01 1C 00 01 00 66 16 0A 00 02 00 72 06 00 6E 01 00 00 00 15 00 07 00 73 01 00 02 00 20 31 18 00 38 00 02 00 34 00 20 58 69 17 2E 00 01 2D 00 56 04 00 00 02 00 52 07 00 04 56 04 00 00 02 00 52 08 00 04 01 56 04 00 00 02 00 52 09 00 04 01 56 04 00 00 02 00 52 0A 00 04 01 1C 00 01 00 66 16 0A 00 02 00 72 0B 00 6E 01 00 00 00 15 00 07 00 73 01 00 02 00 20 31 19 00 00 00 15 00 08 00 73 04 00 03 00 20 31 30 11 00 00 00 10 00 06 00 00 00 67 00 00 00 16 00 0C 00 05 00 08 00 20 73 04 00 20 30 20 3E 15 00 0D 00 73 04 00 08 00 20 73 04 00 20 31 20 2D 16 00 19 00 02 00 15 00 20 73 04 00 20 30 20 3D 3D 20 73 01 00 20 31 20 3D 3D 20 26 26 1C 00 01 00 67 16 0A 00 02 00 72 02 00 6E 01 00 00 00 15 00 07 00 73 01 00 02 00 20 30 19 00 00 00 19 00 00 00 11 00 00 00 10 00 08 00 01 00 67 00 00 00 00 00 16 00 0C 00 05 00 08 00 20 73 04 00 20 30 20 3E 15 00 0D 00 73 04 00 08 00 20 73 04 00 20 31 20 2D 16 00 19 00 02 00 15 00 20 73 04 00 20 30 20 3D 3D 20 73 01 00 20 31 20 3D 3D 20 26 26 1C 00 01 00 67 16 0A 00 02 00 72 02 00 6E 01 00 00 00 15 00 07 00 73 01 00 02 00 20 30 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "; change static/no havok lanterns into havok-enabled lantern on pickup\nScriptName mwLanternHavocOnScript\n\nshort bRemoveMe\nref me\nref actorRef\nshort removeTimer\n\nBegin OnAdd \n\n	set bRemoveMe to 0\n	set me to GetBaseObject\n	set actorRef to GetContainer\n\n	if eval(me == 0lightUdeUlanternU07 || me == 0lightUdeUlanternU07U128 || me == 0lightUdeUlanternU07Uwarm )\n		actorRef.AddItemNS 0lightUdeUlanternU07havoc 1\n		set bRemoveMe to 1\n	elseif eval(me == 0lightUdeUlanternU05 || me == 0lightUdeUlanternU05U128UCarry || me == 0lightUdeUlanternU05U200 || me == 0lightUdeUlanternU05UCarry )\n		actorRef.AddItemNS 0lightUdeUlanternU05havoc 1\n		set bRemoveMe to 1\n	endif\n\n	set removeTimer to 10\n	\nEnd\n\nBegin GameMode\n\n	if (removeTimer > 0)\n		set removeTimer to removeTimer - 1\n		if (removeTimer == 0 && bRemoveMe == 1)\n			actorRef.RemoveItemNS me 1\n			set bRemoveMe to 0\n		endif\n	endif\n	\nEnd\n\nBegin MenuMode\n\n	if (removeTimer > 0)\n		set removeTimer to removeTimer - 1\n		if (removeTimer == 0 && bRemoveMe == 1)\n			actorRef.RemoveItemNS me 1\n			set bRemoveMe to 0\n		endif\n	endif\n	\nEnd", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "bRemoveMe"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "me"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "actorRef"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "removeTimer"
+        }
+    ], 
+    "References": [
+        "SCRV - Local Variable": "00000003", 
+        "SCRV - Local Variable": "00000002", 
+        "SCRO - Global Reference": "0lightUdeUlanternU07 [LIGH:012C0094]", 
+        "SCRO - Global Reference": "0lightUdeUlanternU07U128 [LIGH:012C01B7]", 
+        "SCRO - Global Reference": "0lightUdeUlanternU07Uwarm [LIGH:012C0106]", 
+        "SCRO - Global Reference": "0lightUdeUlanternU07havoc [LIGH:070768B8]", 
+        "SCRO - Global Reference": "0lightUdeUlanternU05 [LIGH:012C005B]", 
+        "SCRO - Global Reference": "0lightUdeUlanternU05U128UCarry [LIGH:012C01BB]", 
+        "SCRO - Global Reference": "0lightUdeUlanternU05U200 [LIGH:012C0192]", 
+        "SCRO - Global Reference": "0lightUdeUlanternU05UCarry [LIGH:012C019B]", 
+        "SCRO - Global Reference": "0lightUdeUlanternU05havoc [LIGH:070768B6]"
+    ]
+}

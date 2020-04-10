@@ -1,0 +1,45 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1761, 
+        "Record Flags": {}, 
+        "FormID": "040119DD", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwBMWerewolfEquip", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 13, 
+        "CompiledSize": 389, 
+        "VariableCount": 1, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0C 00 07 00 71 01 00 00 01 01 01 00 04 00 16 00 0F 00 0B 00 0B 00 20 66 01 00 20 5A 02 00 20 3D 3D 1C 00 01 00 66 16 0A 00 02 00 72 03 00 6E 01 00 00 00 1C 00 01 00 C3 19 05 00 01 00 72 03 00 1C 00 01 00 66 16 0A 00 02 00 72 04 00 6E 01 00 00 00 1C 00 01 00 C3 19 05 00 01 00 72 04 00 1C 00 01 00 66 16 0A 00 02 00 72 05 00 6E 01 00 00 00 1C 00 01 00 C3 19 05 00 01 00 72 05 00 1C 00 01 00 66 16 0A 00 02 00 72 06 00 6E 01 00 00 00 1C 00 01 00 C3 19 05 00 01 00 72 06 00 1C 00 01 00 6A 16 05 00 01 00 72 07 00 1C 00 01 00 6A 16 05 00 01 00 72 08 00 1C 00 01 00 89 10 0A 00 02 00 72 09 00 6E 00 00 00 00 17 00 02 00 0B 00 1C 00 01 00 66 16 0A 00 02 00 72 0A 00 6E 01 00 00 00 1C 00 01 00 C3 19 05 00 01 00 72 0A 00 1C 00 01 00 66 16 0A 00 02 00 72 0B 00 6E 01 00 00 00 1C 00 01 00 C3 19 05 00 01 00 72 0B 00 1C 00 01 00 66 16 0A 00 02 00 72 0C 00 6E 01 00 00 00 1C 00 01 00 C3 19 05 00 01 00 72 0C 00 1C 00 01 00 66 16 0A 00 02 00 72 0D 00 6E 01 00 00 00 1C 00 01 00 C3 19 05 00 01 00 72 0D 00 1C 00 01 00 6A 16 05 00 01 00 72 07 00 1C 00 01 00 6A 16 05 00 01 00 72 08 00 1C 00 01 00 89 10 0A 00 02 00 72 09 00 6E 00 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwBMWerewolfEquip\n\n\nref ActorRef\nBegin Function {ActorRef}\n	if(ActorRef == Player)\n		ActorRef.AddItemNS fbmwWereBodyPC 1\n		ActorRef.EquipItemSilent fbmwWereBodyPC\n		ActorRef.AddItemNS fbmwWereHeadPC 1\n		ActorRef.EquipItemSilent fbmwWereHeadPC\n		ActorRef.AddItemNS fbmwbmwerewolfclawPC 1\n		ActorRef.EquipItemSilent fbmwbmwerewolfclawPC\n		ActorRef.AddItemNS fbmwbmWerewolfClawShieldPC 1\n		ActorRef.EquipItemSilent fbmwbmWerewolfClawShieldPC\n		ActorRef.AddSpellNS 0werewolfSregeneration\n		ActorRef.AddSpellNS 0werewolfSresists\n		ActorRef.SetFactionRank fbmwWereFaction 0\n	else\n		ActorRef.AddItemNS fbmwWereBodyNPC 1\n		ActorRef.EquipItemSilent fbmwWereBodyNPC\n		ActorRef.AddItemNS fbmwWereHeadNPC 1\n		ActorRef.EquipItemSilent fbmwWereHeadNPC\n		ActorRef.AddItemNS fbmwbmwerewolfclaw 1\n		ActorRef.EquipItemSilent fbmwbmwerewolfclaw\n		ActorRef.AddItemNS fbmwbmWerewolfClawShield 1\n		ActorRef.EquipItemSilent fbmwbmWerewolfClawShield\n		ActorRef.AddSpellNS 0werewolfSregeneration\n		ActorRef.AddSpellNS 0werewolfSresists\n		ActorRef.SetFactionRank fbmwWereFaction 0\n	endif		\nEnd\n;<CSEBlock>\n;<CSECaretPos> 859 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "ActorRef"
+        }
+    ], 
+    "References": [
+        "SCRV - Local Variable": "00000001", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "fbmwWereBodyPC [CLOT:01F8AF93]", 
+        "SCRO - Global Reference": "fbmwWereHeadPC [CLOT:01F8AF94]", 
+        "SCRO - Global Reference": "fbmwbmwerewolfclawPC [WEAP:0103D74E]", 
+        "SCRO - Global Reference": "fbmwbmWerewolfClawShieldPC [ARMO:0103D74F]", 
+        "SCRO - Global Reference": "0werewolfSregeneration [SPEL:01060419]", 
+        "SCRO - Global Reference": "0werewolfSresists [SPEL:01060428]", 
+        "SCRO - Global Reference": "fbmwWereFaction [FACT:01F8B1A0]", 
+        "SCRO - Global Reference": "fbmwWereBodyNPC [CLOT:01F8AF95]", 
+        "SCRO - Global Reference": "fbmwWereHeadNPC [CLOT:01F8AF96]", 
+        "SCRO - Global Reference": "fbmwbmwerewolfclaw [WEAP:010168D5]", 
+        "SCRO - Global Reference": "fbmwbmWerewolfClawShield [ARMO:0101CC71]"
+    ]
+}

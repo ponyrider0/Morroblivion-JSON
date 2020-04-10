@@ -1,0 +1,22 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 363, 
+        "Record Flags": {}, 
+        "FormID": "04073638", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwElvilScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 80, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 40 00 00 00 00 00 16 00 26 00 01 00 22 00 20 58 3A 10 05 00 01 00 72 01 00 20 31 20 3E 20 58 3A 10 05 00 01 00 72 01 00 20 35 30 20 3C 20 26 26 39 10 0A 00 02 00 72 01 00 6E 3C 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwElvilScript\n\nBegin OnDeath\n	if GetStage fbmwTTFalseIncarnate > 1 && GetStage fbmwTTFalseIncarnate < 50\n		SetStage fbmwTTFalseIncarnate 60\n	endif\nEnd\n\n;<CSEBlock>\n;<CSECaretPos> 155 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "fbmwTTFalseIncarnate [QUST:01F0A298]"
+    ]
+}

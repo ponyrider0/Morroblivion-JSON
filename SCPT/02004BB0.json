@@ -1,0 +1,88 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1435, 
+        "Record Flags": {}, 
+        "FormID": "03004BB0", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwCWURechargeOnCloseFunc", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 7, 
+        "CompiledSize": 314, 
+        "VariableCount": 12, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 10 00 07 00 22 01 00 00 01 01 07 00 01 02 08 00 09 00 65 17 1A 00 01 19 00 56 01 00 00 0C 00 58 00 00 67 17 0B 00 01 08 00 56 03 03 00 0B 00 00 16 00 08 00 0E 00 04 00 20 73 0C 00 6D 17 14 00 2E 01 00 00 01 0F 00 56 03 00 00 08 00 56 03 03 00 0B 00 1A 65 17 19 00 01 18 00 56 04 00 00 0B 00 56 03 00 00 08 00 53 05 00 76 61 6C 75 65 18 00 16 00 23 00 08 00 1F 00 20 58 69 17 19 00 01 18 00 58 00 00 83 18 11 00 01 05 00 52 04 00 01 08 00 56 04 00 00 0B 00 65 17 16 00 01 15 00 56 03 00 00 09 00 58 05 00 80 19 07 00 01 00 72 02 00 00 65 17 13 00 01 12 00 56 04 00 00 0A 00 56 03 00 00 09 00 42 00 18 00 16 00 11 00 04 00 0D 00 20 72 01 00 58 55 16 00 00 20 30 20 3E 16 00 12 00 01 00 0E 00 20 66 0B 00 20 72 06 00 66 14 00 20 3D 3D 65 17 13 00 01 12 00 56 01 06 00 20 00 58 01 00 1B 15 04 00 00 00 00 19 00 00 00 1C 00 01 00 48 19 05 00 01 00 72 07 00 19 00 00 00 19 00 00 00 6C 17 00 00 E4 16 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwCWURechargeOnCloseFunc\n\nshort menu\narray_var iter\narray_var ar\nref ir\nref item\nshort size\n\nbegin function { menu }\n\n	Let size := ar_Size mwCWUInit.Inventory\n\n	if size\n\n		ForEach iter <- mwCWUInit.Inventory\n			Let item := iter[\"value\"]\n			\n			if eval (Call mwCWUCompareItemNameFunc item)\n				Let ar := Player.GetInvRefsForItem item\n				Let ir := ar[0]\n\n				if (ir.GetRefCount > 0)\n					if (item == mwCWU.ItemWeap)\n						; update quest value with current charge\n						let mwCWU.ItemChargeCurrent := ir.GetCurrentCharge\n					endif\n					\n					ir.RemoveMeIR mwCWUHolderREF\n				endif\n			endif\n		loop\n		; the above inventory ref manipulations cause badness in inventory menu, so close out menu so it can refresh\n		CloseAllMenus\n	endif\n	\nend", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000007", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "menu"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000008", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "iter"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000009", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "ar"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000A", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "ir"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000B", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "item"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000C", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "size"
+        }
+    ], 
+    "References": [
+        "SCRV - Local Variable": "0000000A", 
+        "SCRV - Local Variable": "0000000B", 
+        "SCRO - Global Reference": " [:03004337]", 
+        "SCRO - Global Reference": "mwCWUCompareItemNameFunc [SCPT:0307363B]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": " [:03001075]", 
+        "SCRO - Global Reference": " [:03004BB2]"
+    ]
+}

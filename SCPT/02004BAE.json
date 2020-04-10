@@ -1,0 +1,107 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 2079, 
+        "Record Flags": {}, 
+        "FormID": "03004BAE", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwCWURechargeOnOpenFunc", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 6, 
+        "CompiledSize": 616, 
+        "VariableCount": 21, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 12 00 07 00 4E 02 00 00 01 01 0E 00 01 03 0F 00 10 00 15 00 65 17 1A 00 01 19 00 56 01 00 00 13 00 58 00 00 67 17 0B 00 01 08 00 56 03 03 00 0B 00 00 65 17 1A 00 01 19 00 56 03 00 00 15 00 58 00 00 66 17 0B 00 01 00 05 00 41 72 72 61 79 00 16 00 08 00 0D 00 04 00 20 73 13 00 6D 17 14 00 86 01 00 00 01 0F 00 56 03 00 00 0F 00 56 03 03 00 0B 00 1A 65 17 19 00 01 18 00 56 04 00 00 12 00 56 03 00 00 0F 00 53 05 00 76 61 6C 75 65 18 00 16 00 23 00 06 00 1F 00 20 58 69 17 19 00 01 18 00 58 00 00 83 18 11 00 01 05 00 52 04 00 01 08 00 56 04 00 00 12 00 65 17 16 00 01 15 00 56 03 00 00 10 00 58 05 00 80 19 07 00 01 00 72 02 00 00 65 17 13 00 01 12 00 56 04 00 00 11 00 56 03 00 00 10 00 42 00 18 00 16 00 11 00 02 00 0D 00 20 72 01 00 58 55 16 00 00 20 30 20 3E 1C 00 01 00 48 19 05 00 01 00 72 06 00 06 14 4A 00 04 00 3D 00 44 45 42 55 47 3A 20 6D 6F 76 69 6E 67 20 70 6C 61 63 65 68 6F 6C 64 65 72 20 25 6E 28 25 69 29 2C 20 49 52 3D 28 25 69 29 20 74 6F 20 70 6C 61 79 65 72 20 69 6E 76 65 6E 74 6F 72 79 66 12 00 66 12 00 66 11 00 19 00 00 00 17 00 02 00 01 00 49 19 11 00 02 08 00 56 03 00 00 15 00 08 00 56 04 00 00 12 00 19 00 00 00 6C 17 00 00 19 00 00 00 65 17 1A 00 01 19 00 56 01 00 00 13 00 58 00 00 67 17 0B 00 01 08 00 56 03 00 00 15 00 00 16 00 08 00 06 00 04 00 20 73 13 00 6D 17 14 00 60 02 00 00 01 0F 00 56 03 00 00 0F 00 56 03 00 00 15 00 1A 65 17 19 00 01 18 00 56 04 00 00 12 00 56 03 00 00 0F 00 53 05 00 76 61 6C 75 65 18 00 06 14 34 00 03 00 2A 00 44 45 42 55 47 3A 20 72 65 6D 6F 76 69 6E 67 20 25 6E 28 25 69 29 20 66 72 6F 6D 20 69 6E 76 65 6E 74 6F 72 79 20 6C 69 73 74 66 12 00 66 12 00 65 17 22 00 01 21 00 56 01 00 00 14 00 58 00 00 65 18 13 00 02 08 00 56 04 00 00 12 00 08 00 56 03 03 00 0B 00 00 76 17 11 00 02 08 00 56 03 03 00 0B 00 08 00 56 01 00 00 14 00 6C 17 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwCWURechargeOnOpenFunc\n\nshort menu\narray_var iter\narray_var ar\nref ir\nref item\nshort size\n\narray_var toRemove\nshort index\n\nbegin function { menu }\n\n	Let size := ar_Size mwCWUInit.Inventory\n	Let toRemove := ar_Construct Array\n\n	if size\n		ForEach iter <- mwCWUInit.Inventory\n			Let item := iter[\"value\"]\n\n			if eval (Call mwCWUCompareItemNameFunc item)\n				Let ar := mwCWUHolderREF.GetInvRefsForItem item\n				Let ir := ar[0]\n\n				if (ir.GetRefCount > 0)\n					ir.RemoveMeIR Player\n					printc \"DEBUG: moving placeholder %n(%i), IR=(%i) to player inventory\", item, item, ir\n				endif\n			else\n				; item not found in player inventory, mark placeholder for removal from inventory list\n				ar_Append toRemove item\n			endif\n		loop\n	endif\n\n	Let size := ar_Size toRemove\n	if size\n		ForEach iter <- toRemove\n			Let item := iter[\"value\"]\n\n			printc \"DEBUG: removing %n(%i) from inventory list\", item, item\n			Let index := ar_Find item mwCWUInit.Inventory\n			ar_Erase mwCWUInit.Inventory index\n		loop\n	endif\n	\nend", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000E", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "menu"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000F", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "iter"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000010", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "ar"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000011", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "ir"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000012", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "item"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000013", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "size"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000014", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "index"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000015", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "toRemove"
+        }
+    ], 
+    "References": [
+        "SCRV - Local Variable": "00000011", 
+        "SCRV - Local Variable": "00000012", 
+        "SCRO - Global Reference": " [:03004337]", 
+        "SCRO - Global Reference": "mwCWUCompareItemNameFunc [SCPT:0307363B]", 
+        "SCRO - Global Reference": " [:03004BB2]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+    ]
+}

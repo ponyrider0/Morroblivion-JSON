@@ -1,0 +1,72 @@
+{
+    "Topic": "aaaCATyes [DIAL:020021C9]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 459, 
+        "Record Flags": {}, 
+        "FormID": "020021CF", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Goodbye": true
+        }
+    }, 
+    "QSTI - Quest": "aaaCATworldtransport [QUST:02001948]", 
+    "PNAM - Previous INFO": "020021CA", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "6F 72 6C"
+            }, 
+            "NAM1 - Response Text": "Very well. If you'll follow me, we can start making preparations...", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "CATWorldTransportNPC1 "Jo'Tesh" [NPC_:030010CE]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1000.000000000000000, 
+            "Function": "GetItemCount:47", 
+            "Unused": "00 00", 
+            "Parameter #1": "Gold001 "Gold" [MISC:0000000F]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 59, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "1C 00 01 00 52 10 0A 00 02 00 72 02 00 6E E8 03 00 00 15 00 08 00 47 03 00 03 00 20 31 31 15 00 0E 00 47 04 00 09 00 20 47 04 00 20 36 38 20 2B 15 00 07 00 47 05 00 02 00 20 30", 
+        "SCTX - Result script source": "Player.RemoveItem Gold001 1000\r\nSet CATDestinationCode to 11\r\nSet GameHour to GameHour + 68\r\nSET PlayerInMorrowind TO 0", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "CATDestinationCode [GLOB:020021D0]", 
+            "SCRO - Global Reference": "GameHour [GLOB:00000038]", 
+            "SCRO - Global Reference": "PlayerInMorrowind [GLOB:01003249]"
+        ]
+    }
+}

@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "QUST", 
-        "Data Size": 25636, 
+        "Data Size": 25778, 
         "Record Flags": {}, 
         "FormID": "0002466E", 
         "Version Control Info": "00 00 00 00"
@@ -2208,13 +2208,16 @@
                     "Result Script": {
                         "SCHR - Basic Script Data": {
                             "Unused": "00 00 00 00", 
-                            "RefCount": 0, 
-                            "CompiledSize": 4, 
+                            "RefCount": 1, 
+                            "CompiledSize": 33, 
                             "VariableCount": 0, 
                             "Type": "Quest:1"
                         }, 
-                        "SCDA - Compiled result script": "D9 10 00 00", 
-                        "SCTX - Result script source": "; Baurus asks you for class\r\nshowclassmenu"
+                        "SCDA - Compiled result script": "16 00 15 00 01 00 11 00 20 58 3A 10 05 00 01 00 72 01 00 20 31 30 30 20 3C D9 10 00 00 19 00 00 00", 
+                        "SCTX - Result script source": "; Baurus asks you for class\r\nif getstage fbmwChargen < 100\r\n	showclassmenu\r\nendif", 
+                        "References": [
+                            "SCRO - Global Reference": "fbmwChargen [QUST:01F0A28C]"
+                        ]
                     }
                 }
             ]

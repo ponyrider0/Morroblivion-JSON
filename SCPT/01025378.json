@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 565, 
+        "Data Size": 2768, 
         "Record Flags": {}, 
         "FormID": "01025378", 
         "Version Control Info": "00 00 00 00"
@@ -9,13 +9,13 @@
     "EDID - Editor ID": "fbmwHRrescueSarethiScript", 
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
-        "RefCount": 4, 
-        "CompiledSize": 118, 
-        "VariableCount": 2, 
+        "RefCount": 15, 
+        "CompiledSize": 613, 
+        "VariableCount": 6, 
         "Type": "Quest:1"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 68 00 00 00 16 00 15 00 01 00 11 00 20 58 3A 10 05 00 01 00 72 01 00 20 35 30 20 21 3D 1E 00 00 00 19 00 00 00 16 00 2D 00 01 00 29 00 20 72 02 00 58 43 10 05 00 01 00 72 03 00 20 31 20 3D 3D 20 72 04 00 58 20 10 05 00 01 00 72 02 00 20 31 20 3D 3D 20 26 26 39 10 0A 00 02 00 72 01 00 6E 46 00 00 00 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "ScriptName fbmwHRrescueSarethiScript\r\n\r\nSHORT FollowNow\r\n\r\nBEGIN GameMode\r\n	IF GetStage fbmwHRRescueSarethi != 50\r\n		RETURN\r\n	ENDIF\r\n\r\n	IF Player.GetInCell AldTruhnVSSarethiSManor == 1 && mwVarvurSarethiREF.GetInSameCell Player == 1\r\n		SetStage fbmwHRRescueSarethi 70\r\n	ENDIF\r\nEND ; GameMode", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 57 02 00 00 16 00 15 00 01 00 11 00 20 58 3A 10 05 00 01 00 72 02 00 20 35 30 20 21 3D 1E 00 00 00 19 00 00 00 16 00 0D 00 0C 00 09 00 20 73 03 00 20 30 20 3D 3D 65 17 1A 00 01 19 00 56 03 00 00 04 00 58 00 00 66 17 0B 00 01 00 05 00 41 72 72 61 79 00 65 17 10 00 01 0F 00 56 03 00 00 04 00 42 00 18 52 03 00 00 65 17 10 00 01 0F 00 56 03 00 00 04 00 42 01 18 52 04 00 00 65 17 10 00 01 0F 00 56 03 00 00 04 00 42 02 18 52 05 00 00 65 17 10 00 01 0F 00 56 03 00 00 04 00 42 03 18 52 06 00 00 65 17 10 00 01 0F 00 56 03 00 00 04 00 42 04 18 52 07 00 00 65 17 10 00 01 0F 00 56 03 00 00 04 00 42 05 18 52 08 00 00 65 17 10 00 01 0F 00 56 03 00 00 04 00 42 06 18 52 09 00 00 65 17 10 00 01 0F 00 56 03 00 00 04 00 42 07 18 52 0A 00 00 65 17 10 00 01 0F 00 56 03 00 00 04 00 42 08 18 52 0B 00 00 65 17 10 00 01 0F 00 56 03 00 00 04 00 42 09 18 52 0C 00 00 15 00 07 00 73 03 00 02 00 20 31 19 00 00 00 16 00 19 00 06 00 15 00 20 73 01 00 20 31 20 3D 3D 20 73 03 00 20 31 20 3D 3D 20 26 26 6D 17 14 00 AE 01 00 00 01 0F 00 56 03 00 00 05 00 56 03 00 00 04 00 1A 65 17 19 00 01 18 00 56 04 00 00 06 00 56 03 00 00 05 00 53 05 00 76 61 6C 75 65 23 00 1C 00 01 00 10 10 09 00 02 00 21 00 6E 0F 00 00 00 1C 00 01 00 53 10 0A 00 02 00 72 0D 00 6E 9C FF FF FF 6C 17 00 00 15 00 07 00 73 03 00 02 00 20 32 19 00 00 00 16 00 2D 00 06 00 29 00 20 72 0D 00 58 43 10 05 00 01 00 72 0E 00 20 31 20 3D 3D 20 72 0F 00 58 20 10 05 00 01 00 72 0D 00 20 31 20 3D 3D 20 26 26 39 10 0A 00 02 00 72 02 00 6E 46 00 00 00 6D 17 14 00 46 02 00 00 01 0F 00 56 03 00 00 05 00 56 03 00 00 04 00 1A 65 17 19 00 01 18 00 56 04 00 00 06 00 56 03 00 00 05 00 53 05 00 76 61 6C 75 65 23 00 1C 00 01 00 10 10 09 00 02 00 21 00 6E F1 FF FF FF 6C 17 00 00 65 17 13 00 01 12 00 56 03 00 00 04 00 58 00 00 78 18 04 00 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName fbmwHRrescueSarethiScript\n\nSHORT FollowNow\nshort init\narray_var venimGuardList\narray_var iter\nref guardRef\n\nBEGIN GameMode\n	IF GetStage fbmwHRRescueSarethi != 50\n		RETURN\n	ENDIF\n\n	if (init == 0)\n		; list of venim guards by referenceID (#10)\n		; mwMalsaUlesRef, mwTedrasDeltisRef, mwVevulAlverRef, mwVelsaOrethiRef, mwBevadarBelsRef, mwTereriIrethiRef, mwNovorGorvasRef, mwIdrosGivynRef, mwNathyneUvelasRef, mwNidryneRedasRef\n		let venimGuardList := ar_Construct Array\n		let venimGuardList[0] := mwMalsaUlesRef\n		let venimGuardList[1] := mwTedrasDeltisRef\n		let venimGuardList[2] := mwVevulAlverRef\n		let venimGuardList[3] := mwVelsaOrethiRef\n		let venimGuardList[4] := mwBevadarBelsRef\n		let venimGuardList[5] := mwTereriIrethiRef\n		let venimGuardList[6] := mwNovorGorvasRef\n		let venimGuardList[7] := mwIdrosGivynRef\n		let venimGuardList[8] := mwNathyneUvelasRef\n		let venimGuardList[9] := mwNidryneRedasRef\n		set init to 1\n	endif\n	\n	; Venim Guards attack if they see you with Varvur\n	if (FollowNow == 1) && (init == 1)\n		foreach iter <- venimGuardList\n			let guardRef := iter->value\n			guardRef.modav aggression 15 ; (total aggression now 5+1), will initiate attack if disposition lower than 1\n			guardRef.ModDisposition player -100 ; lower the disposition below 1\n		loop\n		set init to 2\n	endif\n	\n	IF Player.GetInCell AldTruhnVSSarethiSManor == 1 && mwVarvurSarethiREF.GetInSameCell Player == 1\n		SetStage fbmwHRRescueSarethi 70\n\n		; disable aggression from venim guards\n		foreach iter <- venimGuardList\n			let guardRef := iter->value\n			guardRef.modav aggression -15 ; they will no longer initiate attack but they still dislike player\n		loop\n		let venimGuardList := ar_Null\n	ENDIF\n\nEND ; GameMode", 
     "Local Variables": [
         {
             "SLSD - Local Variable Data": {
@@ -24,13 +24,62 @@
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "00 00 00 00 00 00 00"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "FollowNow"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "init"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "venimGuardList"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "iter"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "guardRef"
         }
     ], 
     "References": [
+        "SCRV - Local Variable": "00000006", 
         "SCRO - Global Reference": "fbmwHRRescueSarethi [QUST:01005198]", 
+        "SCRO - Global Reference": "[ACHR:0183CFC8]", 
+        "SCRO - Global Reference": "[ACHR:0183CFC6]", 
+        "SCRO - Global Reference": "[ACHR:0183CF90]", 
+        "SCRO - Global Reference": "[ACHR:0183CF8F]", 
+        "SCRO - Global Reference": "[ACHR:0183D053]", 
+        "SCRO - Global Reference": "[ACHR:01F8B5D6]", 
+        "SCRO - Global Reference": "[ACHR:01F8B5D7]", 
+        "SCRO - Global Reference": "[ACHR:0183D054]", 
+        "SCRO - Global Reference": "[ACHR:0183D055]", 
+        "SCRO - Global Reference": "[ACHR:0183D052]", 
         "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
         "SCRO - Global Reference": "AldTruhnVSSarethiSManor [CELL:014800B5]", 
         "SCRO - Global Reference": "mwVarvurSarethiREF [ACHR:0183CFC7]"

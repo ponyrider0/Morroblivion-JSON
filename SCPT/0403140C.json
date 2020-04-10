@@ -1,0 +1,22 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 334, 
+        "Record Flags": {}, 
+        "FormID": "0403140C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwTanuseaVelothDeathScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 63, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 08 00 0A 00 2F 00 00 00 00 00 16 00 15 00 01 00 11 00 20 58 3A 10 05 00 01 00 72 01 00 20 31 30 20 3E 3D 39 10 0A 00 02 00 72 01 00 6E 28 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName mwTanuseaVelothDeathScript\n\nBegin OnDeath\n\n	if (GetStage fbmwTTDisease >= 10)\n		SetStage fbmwTTDisease 40\n	endif\n	\nEnd\n\n;<CSEBlock>\n;<CSECaretPos> 115 </CSECaretPos>\n;</CSEBlock>", 
+    "References": [
+        "SCRO - Global Reference": "fbmwTTDisease [QUST:01002C75]"
+    ]
+}

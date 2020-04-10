@@ -1,0 +1,23 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 730, 
+        "Record Flags": {}, 
+        "FormID": "0406C61C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwFixesLoadSettings", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 2, 
+        "CompiledSize": 154, 
+        "VariableCount": 0, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 09 00 07 00 89 00 00 00 01 00 00 16 00 10 00 07 00 0C 00 20 72 01 00 73 04 00 20 31 20 3D 3D 15 00 0A 00 72 01 00 73 05 00 02 00 20 31 15 00 0A 00 72 01 00 73 06 00 02 00 20 31 15 00 0A 00 72 01 00 73 07 00 02 00 20 31 15 00 0A 00 72 01 00 73 08 00 02 00 20 31 15 00 0A 00 72 01 00 73 09 00 02 00 20 31 15 00 0A 00 72 01 00 73 0B 00 02 00 20 31 15 00 0A 00 72 01 00 73 0D 00 02 00 20 31 19 00 00 00 83 18 07 00 01 05 00 52 02 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName mwFixesLoadSettings\n\nBegin Function { }\n\n	; Enable/Disable all Strict Morrowind Settings\n	if (mwFixes.StrictMWAll == 1)\n		set mwFixes.StrictMWWaterBreathing to 1\n		set mwFixes.StrictMWSpells to 1\n		set mwFixes.StrictMWRunSpeed to 1\n		set mwFixes.StrictMWFatigueDrain to 1\n		set mwFixes.StrictMWEncumbranceSlowing to 1\n		set mwFixes.StrictMWEnchantmentSelection to 1\n		set mwFixes.EnableRaceRestrictions to 1\n	endif\n\n	; Set up run/walk/fatigue speeds\n	Call mwSetWalkRunFatigue\n\nEnd", 
+    "References": [
+        "SCRO - Global Reference": "mwFixes [QUST:0604897B]", 
+        "SCRO - Global Reference": "mwSetWalkRunFatigue [SCPT:0606AD36]"
+    ]
+}

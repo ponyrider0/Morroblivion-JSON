@@ -1,7 +1,7 @@
 {
     "Record Header": {
         "Signature": "SCPT", 
-        "Data Size": 891, 
+        "Data Size": 1761, 
         "Record Flags": {}, 
         "FormID": "01F8E955", 
         "Version Control Info": "00 00 00 00"
@@ -9,36 +9,49 @@
     "EDID - Editor ID": "mwMainMenuScript", 
     "SCHR - Basic Script Data": {
         "Unused": "00 00 00 00", 
-        "RefCount": 2, 
-        "CompiledSize": 183, 
-        "VariableCount": 2, 
+        "RefCount": 4, 
+        "CompiledSize": 382, 
+        "VariableCount": 3, 
         "Type": "Quest:1"
     }, 
-    "SCDA - Compiled Script": "1D 00 00 00 10 00 0D 00 01 00 A2 00 00 00 01 00 6E 14 04 00 00 16 00 0A 00 06 00 06 00 20 58 D4 15 00 00 72 15 1D 00 01 00 19 00 44 61 74 61 5C 69 6E 69 5C 4D 6F 72 72 6F 62 6C 69 76 69 6F 6E 2E 69 6E 69 15 00 09 00 66 01 00 04 00 20 2E 30 31 75 19 14 00 02 0E 00 53 09 00 4F 6E 4E 65 77 47 61 6D 65 05 00 52 01 00 75 19 13 00 02 0D 00 53 08 00 45 78 69 74 47 61 6D 65 05 00 52 02 00 75 19 19 00 02 13 00 53 0E 00 45 78 69 74 54 6F 4D 61 69 6E 4D 65 6E 75 05 00 52 02 00 75 19 0E 00 02 08 00 53 03 00 51 51 51 05 00 52 02 00 19 00 00 00 11 00 00 00", 
-    "SCTX - Script Source": "scn mwMainMenuScript\n\nfloat fQuestDelayTime\nshort AltStart\n\nBegin MenuMode 1044\n	if GetGameRestarted\n\n		RunBatchScript \"Data\\ini\\Morroblivion.ini\"\n\n		set fQuestDelayTime to .01\n		SetEventHandler \"OnNewGame\" mwCinematicNewGameHandler\n;		SetEventHandler \"PostLoadGame\" mwCinematicRestoreHandler\n		SetEventHandler \"ExitGame\" mwCinematicRestoreHandler\n		SetEventHandler \"ExitToMainMenu\" mwCinematicRestoreHandler\n		SetEventHandler \"QQQ\" mwCinematicRestoreHandler\n\n	endif\nend\n;<CSEBlock>\n;<CSECaretPos> 234 </CSECaretPos>\n;</CSEBlock>", 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0D 00 01 00 69 01 00 00 01 00 6E 14 04 00 00 16 00 0D 00 07 00 09 00 20 73 03 00 20 30 20 3D 3D 72 15 1D 00 01 00 19 00 44 61 74 61 5C 69 6E 69 5C 4D 6F 72 72 6F 62 6C 69 76 69 6F 6E 2E 69 6E 69 83 18 07 00 01 05 00 52 01 00 00 83 18 0F 00 01 05 00 52 02 00 01 08 00 56 01 00 00 02 00 59 10 1B 00 01 00 11 00 4D 6F 72 72 6F 62 6C 69 76 69 6F 6E 20 76 30 36 34 00 00 00 00 00 00 06 14 30 00 01 00 2C 00 4D 6F 72 72 6F 62 6C 69 76 69 6F 6E 20 55 6E 6F 66 66 69 63 69 61 6C 20 50 61 74 63 68 20 76 31 2E 30 20 69 6E 73 74 61 6C 6C 65 64 3D 17 34 00 03 00 1E 00 62 75 74 74 6F 6E 5F 6C 61 79 6F 75 74 5C 6D 61 69 6E 5F 6E 65 77 5C 76 69 73 69 62 6C 65 7A 00 00 00 00 00 50 90 40 7A 00 00 00 00 00 00 00 40 15 00 07 00 73 03 00 02 00 20 31 19 00 00 00 16 00 0A 00 05 00 06 00 20 58 D4 15 00 00 15 00 07 00 66 01 00 02 00 20 30 75 19 14 00 02 0E 00 53 09 00 4F 6E 4E 65 77 47 61 6D 65 05 00 52 03 00 75 19 13 00 02 0D 00 53 08 00 45 78 69 74 47 61 6D 65 05 00 52 04 00 75 19 19 00 02 13 00 53 0E 00 45 78 69 74 54 6F 4D 61 69 6E 4D 65 6E 75 05 00 52 04 00 75 19 0E 00 02 08 00 53 03 00 51 51 51 05 00 52 04 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwMainMenuScript\n\nfloat fQuestDelayTime\nshort AltStart\nshort DoOnce\n\nBegin MenuMode 1044 ; Main Menu\n	if (DoOnce == 0)\n		; Load INI Settings\n		RunBatchScript \"Data\\ini\\Morroblivion.ini\"\n\n		; Process Loaded INI Settings\n		Call mwFixesLoadSettings\n		; Set up starting spells\n		Call mwSetStartingSpells AltStart\n		\n		Message \"Morroblivion v064\"\n		PrintC \"Morroblivion Unofficial Patch v1.0 installed\"\n\n		; Enable New Game Button once script initialized		\n		SetMenuFloatValue \"button_layout\\main_new\\visible\" 1044 2\n;		if (AltStart == 0)\n;			SetMenuStringValue \"button_layout\\main_new\\string|*Oblivion*\" 1044\n;		else\n;			SetMenuStringValue \"button_layout\\main_new\\string|*Morroblivion*\" 1044\n;		endif			\n \n		set DoOnce to 1\n	endif\n		\n	if (GetGameRestarted)\n\n		set fQuestDelayTime to 0\n		SetEventHandler \"OnNewGame\" mwCinematicNewGameHandler\n;		SetEventHandler \"PostLoadGame\" mwCinematicRestoreHandler\n		SetEventHandler \"ExitGame\" mwCinematicRestoreHandler\n		SetEventHandler \"ExitToMainMenu\" mwCinematicRestoreHandler\n		SetEventHandler \"QQQ\" mwCinematicRestoreHandler\n	endif\n\nEnd\n;<CSEBlock>\n;<CSECaretPos> 402 </CSECaretPos>\n;</CSEBlock>", 
     "Local Variables": [
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000001", 
-                "Unused": "6E 65 6D 61 00 00 00 00 00 00 00 00", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {}, 
-                "Unused": "65 48 61 6E 64 6C 65"
+                "Unused": "C1 CB 10 08 00 00 00"
             }, 
             "SCVR - Name": "fQuestDelayTime"
         }, 
         {
             "SLSD - Local Variable Data": {
                 "Index": "00000002", 
-                "Unused": "6E 65 6D 61 00 00 00 00 00 00 00 00", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
                 "Flags": {
                     "IsLongOrShort": true
                 }, 
-                "Unused": "65 48 61 6E 64 6C 65"
+                "Unused": "CD CD CD CD CD CD CD"
             }, 
             "SCVR - Name": "AltStart"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "DoOnce"
         }
     ], 
     "References": [
+        "SCRO - Global Reference": "mwFixesLoadSettings [SCPT:0606C61C]", 
+        "SCRO - Global Reference": "mwSetStartingSpells [SCPT:06073636]", 
         "SCRO - Global Reference": "mwCinematicNewGameHandler [SCPT:01F8E956]", 
         "SCRO - Global Reference": "mwCinematicRestoreHandler [SCPT:01F8E957]"
     ]

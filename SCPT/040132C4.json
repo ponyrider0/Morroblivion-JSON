@@ -1,0 +1,46 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 767, 
+        "Record Flags": {}, 
+        "FormID": "040132C4", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwBMWerewolfReequip", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 3, 
+        "CompiledSize": 194, 
+        "VariableCount": 2, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 09 00 07 00 B1 00 00 00 01 00 00 65 17 0C 00 01 0B 00 56 01 00 00 01 00 42 00 00 16 00 20 00 05 00 1C 00 20 58 69 17 16 00 01 15 00 58 00 00 67 17 0B 00 01 08 00 56 03 03 00 0D 00 42 00 06 6B 17 1E 00 A3 00 00 00 01 19 00 56 01 00 00 01 00 58 00 00 67 17 0B 00 01 08 00 56 03 03 00 0D 00 07 65 17 17 00 01 16 00 56 04 00 00 02 00 56 03 03 00 0D 00 56 01 00 00 01 00 18 00 1C 00 01 00 14 19 05 00 01 00 72 02 00 65 17 0C 00 01 0B 00 56 01 00 00 01 00 42 01 1C 6C 17 00 00 19 00 00 00 65 17 13 00 01 12 00 56 03 03 00 0D 00 58 00 00 78 18 04 00 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwBMWerewolfReequip\n\nshort i\nref item\n\nBegin Function {}\n	Let i := 0\n	if eval ((ar_Size fbmwBMAAAImAWere.equippeditem) > 0)\n		while i < ar_Size fbmwBMAAAImAWere.equippeditem\n			Let item := fbmwBMAAAImAWere.equippeditem[i]\n			Player.EquipItem2NS item\n			Let i += 1\n		loop				\n	endif\n	Let fbmwBMAAAImAWere.equippeditem  := ar_Null\nEnd\n;<CSEBlock>\n;<CSECaretPos> 210 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "4F 62 6A 65 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "50 69 65 63 65 2E 4E"
+            }, 
+            "SCVR - Name": "i"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "4F 62 6A 65 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "53 6D 69 74 68 43 6C"
+            }, 
+            "SCVR - Name": "item"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRV - Local Variable": "00000002", 
+        "SCRO - Global Reference": "fbmwBMAAAImAWere [QUST:01F8B08D]"
+    ]
+}

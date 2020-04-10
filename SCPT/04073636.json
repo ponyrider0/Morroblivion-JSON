@@ -1,0 +1,71 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 2883, 
+        "Record Flags": {}, 
+        "FormID": "04073636", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwSetStartingSpells", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 26, 
+        "CompiledSize": 581, 
+        "VariableCount": 2, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0C 00 07 00 31 02 00 00 01 01 01 00 01 00 16 00 0D 00 05 00 09 00 20 73 01 00 20 31 20 3D 3D 16 00 10 00 02 00 0C 00 20 72 02 00 73 06 00 20 31 20 3D 3D 1C 00 01 00 6B 16 05 00 01 00 72 03 00 1C 00 01 00 6B 16 05 00 01 00 72 04 00 19 00 00 00 1C 00 01 00 67 16 0A 00 02 00 72 05 00 6E 01 00 00 00 17 00 02 00 06 00 1C 00 01 00 6A 16 05 00 01 00 72 03 00 1C 00 01 00 6A 16 05 00 01 00 72 04 00 16 00 17 00 02 00 13 00 20 72 01 00 58 2F 10 05 00 01 00 72 05 00 20 30 20 3D 3D 1C 00 01 00 66 16 0A 00 02 00 72 05 00 6E 01 00 00 00 1C 00 01 00 14 19 05 00 01 00 72 05 00 19 00 00 00 19 00 00 00 15 00 09 00 73 02 00 04 00 20 73 01 00 23 19 08 00 02 00 73 02 00 72 06 00 23 19 08 00 02 00 73 02 00 72 07 00 23 19 08 00 02 00 73 02 00 72 08 00 23 19 08 00 02 00 73 02 00 72 09 00 23 19 08 00 02 00 73 02 00 72 0A 00 23 19 08 00 02 00 73 02 00 72 0B 00 23 19 08 00 02 00 73 02 00 72 0C 00 16 00 10 00 02 00 0C 00 20 72 02 00 73 06 00 20 31 20 3D 3D 23 19 08 00 02 00 73 02 00 72 0D 00 23 19 08 00 02 00 73 02 00 72 0E 00 17 00 02 00 02 00 23 19 0A 00 02 00 6E 00 00 00 00 72 0D 00 23 19 0A 00 02 00 6E 00 00 00 00 72 0E 00 19 00 00 00 23 19 0A 00 02 00 6E 00 00 00 00 72 0F 00 16 00 0D 00 01 00 09 00 20 73 02 00 20 31 20 3D 3D 15 00 07 00 73 02 00 02 00 20 30 17 00 02 00 01 00 15 00 07 00 73 02 00 02 00 20 31 19 00 00 00 23 19 08 00 02 00 73 02 00 72 10 00 23 19 08 00 02 00 73 02 00 72 11 00 23 19 08 00 02 00 73 02 00 72 12 00 23 19 08 00 02 00 73 02 00 72 13 00 23 19 08 00 02 00 73 02 00 72 14 00 23 19 08 00 02 00 73 02 00 72 15 00 23 19 08 00 02 00 73 02 00 72 16 00 23 19 08 00 02 00 73 02 00 72 17 00 23 19 08 00 02 00 73 02 00 72 18 00 23 19 08 00 02 00 73 02 00 72 19 00 23 19 08 00 02 00 73 02 00 72 1A 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwSetStartingSpells\n\nshort bMorrowindSpells\nshort bOnOff\n\nBegin Function { bMorrowindSpells }\n\n	if (bMorrowindSpells == 1)\n		; if \"StrictMorrowind\" then disable the default spells\n		if (mwFixes.StrictMWSpells == 1)\n			Player.RemoveSpellNS DefaultPlayerSpell\n			Player.RemoveSpellNS StandardFireDamageTarget1Novice\n		endif\n		Player.RemoveItemNS WristIrons 1\n	else\n		Player.AddSpellNS DefaultPlayerSpell\n		Player.AddSpellNS StandardFireDamageTarget1Novice\n		if (Player.GetItemCount WristIrons == 0)\n			Player.AddItemNS WristIrons 1\n			Player.EquipItem2NS WristIrons\n		endif\n	endif\n	\n	set bOnOff to bMorrowindSpells\n	; Set Morrowind Starting Spells On or Off\n	SetSpellPCStart bOnOff 0summonSancestralSghost\n	SetSpellPCStart bOnOff 0shield\n	SetSpellPCStart bOnOff 0detectUcreature\n	SetSpellPCStart bOnOff 0chameleon\n	SetSpellPCStart bOnOff 0sanctuary\n	SetSpellPCStart bOnOff 0waterSwalking\n	SetSpellPCStart bOnOff 0boundSdagger\n	if (mwFixes.StrictMWSpells == 1)\n		SetSpellPCStart bOnOff 0hearthSheal\n		SetSpellPCStart bOnOff 0fireSbite\n	else\n		SetSpellPCStart 0 0hearthSheal\n		SetSpellPCStart 0 0fireSbite		\n	endif\n;	SetSpellPCStart bOnOff 0exhaustingStouch\n	SetSpellPCStart 0 0exhaustingStouch\n\n	; Reverse value of bOnOff\n	if bOnOff == 1\n		set bOnOff to 0\n	else\n		set bOnOff to 1\n	endif\n	; Set Oblivion Starting Spells\n	SetSpellPCStart bOnOff StandardDispelSelf1Novice\n	SetSpellPCStart bOnOff StandardAbsorbHealth1Novice\n	SetSpellPCStart bOnOff StandardShield1Novice\n	SetSpellPCStart bOnOff StandardCalmTouch1Novice\n	SetSpellPCStart bOnOff StandardDetectLife1Novice\n	SetSpellPCStart bOnOff StandardFrostDamageTouch1Novice\n	SetSpellPCStart bOnOff StandardShockDamageTouch1Novice\n	SetSpellPCStart bOnOff StandardOpen1Novice\n	SetSpellPCStart bOnOff StandardLight1Novice\n	SetSpellPCStart bOnOff StandardSummonSkeletonApprentice\n	SetSpellPCStart bOnOff StandardTurnUndead1Novice\n	\nEnd\n", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "bMorrowindSpells"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "bOnOff"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "mwFixes [QUST:0604897B]", 
+        "SCRO - Global Reference": "DefaultPlayerSpell [SPEL:00000136]", 
+        "SCRO - Global Reference": "StandardFireDamageTarget1Novice [SPEL:000A97DF]", 
+        "SCRO - Global Reference": "WristIrons [CLOT:000BE335]", 
+        "SCRO - Global Reference": "0summonSancestralSghost [SPEL:01060063]", 
+        "SCRO - Global Reference": "0shield [SPEL:01060043]", 
+        "SCRO - Global Reference": "0detectUcreature [SPEL:01060374]", 
+        "SCRO - Global Reference": "0chameleon [SPEL:01060159]", 
+        "SCRO - Global Reference": "0sanctuary [SPEL:01060168]", 
+        "SCRO - Global Reference": "0waterSwalking [SPEL:01060050]", 
+        "SCRO - Global Reference": "0boundSdagger [SPEL:01060057]", 
+        "SCRO - Global Reference": "0hearthSheal [SPEL:0106001A]", 
+        "SCRO - Global Reference": "0fireSbite [SPEL:01060117]", 
+        "SCRO - Global Reference": "0exhaustingStouch [SPEL:010600B1]", 
+        "SCRO - Global Reference": "StandardDispelSelf1Novice [SPEL:0008D1E9]", 
+        "SCRO - Global Reference": "StandardAbsorbHealth1Novice [SPEL:000A9367]", 
+        "SCRO - Global Reference": "StandardShield1Novice [SPEL:000A97A7]", 
+        "SCRO - Global Reference": "StandardCalmTouch1Novice [SPEL:000A97C9]", 
+        "SCRO - Global Reference": "StandardDetectLife1Novice [SPEL:000A97DC]", 
+        "SCRO - Global Reference": "StandardFrostDamageTouch1Novice [SPEL:000A97EF]", 
+        "SCRO - Global Reference": "StandardShockDamageTouch1Novice [SPEL:000A97FA]", 
+        "SCRO - Global Reference": "StandardOpen1Novice [SPEL:000A97FE]", 
+        "SCRO - Global Reference": "StandardLight1Novice [SPEL:000A9825]", 
+        "SCRO - Global Reference": "StandardSummonSkeletonApprentice [SPEL:000AA05F]", 
+        "SCRO - Global Reference": "StandardTurnUndead1Novice [SPEL:000AA068]"
+    ]
+}

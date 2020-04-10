@@ -1,0 +1,45 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1395, 
+        "Record Flags": {}, 
+        "FormID": "040132C5", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "fbmwBMWerewolfAttacked", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 4, 
+        "CompiledSize": 295, 
+        "VariableCount": 2, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 0C 00 07 00 13 01 00 00 01 01 01 00 04 00 16 00 28 00 0B 00 24 00 20 58 3A 10 05 00 01 00 72 03 00 20 31 30 20 3C 20 58 3A 10 05 00 01 00 72 03 00 20 31 30 30 20 3E 20 7C 7C 65 17 18 00 01 17 00 56 04 00 00 02 00 58 00 00 08 16 09 00 01 00 6E 23 00 00 00 00 6B 17 0D 00 1F 01 00 00 01 08 00 56 04 00 00 02 00 16 00 23 00 05 00 1F 00 20 72 01 00 58 40 10 00 00 20 31 20 21 3D 20 72 01 00 58 2E 10 00 00 20 30 20 3D 3D 20 26 26 16 00 2D 00 03 00 29 00 20 72 01 00 58 B4 10 05 00 01 00 72 02 00 20 33 20 3D 3D 20 72 01 00 58 47 10 05 00 01 00 72 04 00 20 30 20 3D 3D 20 26 26 16 00 22 00 01 00 1E 00 20 72 01 00 58 0E 10 04 00 01 00 21 00 20 72 01 00 58 4C 10 05 00 01 00 72 02 00 20 3E 3D 1C 00 01 00 16 10 05 00 01 00 72 02 00 19 00 00 00 19 00 00 00 19 00 00 00 65 17 13 00 01 12 00 56 04 00 00 02 00 58 00 00 09 16 04 00 00 00 00 6C 17 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn fbmwBMWerewolfAttacked\n\nref ActorRef\n\nref potentialAttacker\nBegin Function{ActorRef}\n	if(GetStage fbmwBMWildHunt < 10)||(GetStage fbmwBMWildHunt > 100)  ;experimental fix for combat\n		Let potentialAttacker := GetFirstRef 35  \n		while (potentialattacker)\n			if(potentialattacker.GetIsCreature != 1)&&(potentialattacker.GetDead == 0)  ; to avoid permanent detection values to dead npcs\n				if(potentialattacker.GetDetectionLevel ActorRef == 3)&&(potentialattacker.GetInFaction fbmwbmWerewolfFaction == 0) ; so they will attack only when they \"see\" you\n					if(potentialattacker.GetActorValue Aggression >= potentialattacker.GetDisposition ActorRef); to avoid being attacked by non morroblivion npcs\n						potentialAttacker.StartCombat ActorRef\n					endif\n				endif\n			endif\n\n			Let potentiAlattacker := GetNextRef\n		loop\n	endif\n\nEnd\n;<CSEBlock>\n;<CSECaretPos> 792 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "73 5C 4C 6F 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "64 70 61 6C 61 63 65"
+            }, 
+            "SCVR - Name": "ActorRef"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "62 6D 68 61 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "68 62 79 77 65 72 65"
+            }, 
+            "SCVR - Name": "potentialAttacker"
+        }
+    ], 
+    "References": [
+        "SCRV - Local Variable": "00000002", 
+        "SCRV - Local Variable": "00000001", 
+        "SCRO - Global Reference": "fbmwBMWildHunt [QUST:0101B6DA]", 
+        "SCRO - Global Reference": "fbmwbmWerewolfFaction [FACT:01F8B824]"
+    ]
+}

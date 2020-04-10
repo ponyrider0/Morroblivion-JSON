@@ -1,0 +1,60 @@
+{
+    "Topic": "mwBelongings2Pay1000 [DIAL:0401966D]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 570, 
+        "Record Flags": {}, 
+        "FormID": "0401966E", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {}
+    }, 
+    "QSTI - Quest": "mwNerevarineOblivion [QUST:06009D67]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000002", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "So says the Liar trying to steal the contents of the Evidence chest.  Finish your business and leave, \"Maiq\".", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "62", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1000.000000000000000, 
+            "Function": "GetGold:48", 
+            "Unused": "00 00", 
+            "Parameter #1": "00 00 00 00", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 5, 
+            "CompiledSize": 70, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "15 00 0A 00 72 03 00 73 09 00 02 00 20 31 1C 00 01 00 52 10 0A 00 02 00 72 04 00 6E E8 03 00 00 1C 00 02 00 73 10 02 00 00 00 1C 00 02 00 AA 19 05 00 01 00 72 05 00 15 00 0B 00 72 03 00 73 0D 00 03 00 20 33 30", 
+        "SCTX - Result script source": "set mwNerevarineOblivion.isStuffRegained to 1\r\nplayer.removeitem Gold001 1000\r\nmwStolenGoodsNerevarine.unlock\r\nmwStolenGoodsNerevarine.SetOwnership_T PlayerFaction\r\nset mwNerevarineOblivion.gotoStage to 30\r\n", 
+        "References": [
+            "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+            "SCRO - Global Reference": "mwStolenGoodsNerevarine [REFR:0008526F]", 
+            "SCRO - Global Reference": "mwNerevarineOblivion [QUST:06009D67]", 
+            "SCRO - Global Reference": "Gold001 [MISC:0000000F]", 
+            "SCRO - Global Reference": "PlayerFaction [FACT:0001DBCD]"
+        ]
+    }
+}

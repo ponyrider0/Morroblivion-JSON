@@ -1,0 +1,93 @@
+{
+    "Topic": "mwSkillTrain0 [DIAL:04073667]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 504, 
+        "Record Flags": {}, 
+        "FormID": "04073666", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Info Refusal": true
+        }
+    }, 
+    "QSTI - Quest": "mwSkillTrain [QUST:06073668]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000005", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "00 00 00"
+            }, 
+            "NAM1 - Response Text": "I can train you in several skills.  Which of these interests you, friend?", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 50.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "TARGET - Target Reference [00000000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetQuestVariable:79", 
+            "Unused": "00 00", 
+            "Parameter #1": "mwSkillTrain "morroblivion-multiskill-trainers" [QUST:04073668]", 
+            "Parameter #2": "isTrainer", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "mwSkillTrain1Acrobatics [DIAL:0607365B]", 
+        "TCLT - Choice": "mwSkillTrain1Alchemy [DIAL:06073654]", 
+        "TCLT - Choice": "mwSkillTrain1Alteration [DIAL:060039E3]", 
+        "TCLT - Choice": "mwSkillTrain1Armorer [DIAL:06073657]", 
+        "TCLT - Choice": "mwSkillTrain1Athletics [DIAL:06073658]", 
+        "TCLT - Choice": "mwSkillTrain1Blade [DIAL:0607365F]", 
+        "TCLT - Choice": "mwSkillTrain1Block [DIAL:06073656]", 
+        "TCLT - Choice": "mwSkillTrain1Blunt [DIAL:0607365E]", 
+        "TCLT - Choice": "mwSkillTrain1Conjuration [DIAL:06073653]", 
+        "TCLT - Choice": "mwSkillTrain1Destruction [DIAL:060039DF]", 
+        "TCLT - Choice": "mwSkillTrain1Hand [DIAL:06073665]", 
+        "TCLT - Choice": "mwSkillTrain1HeavyArmor [DIAL:06073659]", 
+        "TCLT - Choice": "mwSkillTrain1Illusion [DIAL:060039E1]", 
+        "TCLT - Choice": "mwSkillTrain1LightArmor [DIAL:0607365A]", 
+        "TCLT - Choice": "mwSkillTrain1Marksman [DIAL:06073655]", 
+        "TCLT - Choice": "mwSkillTrain1Mercantile [DIAL:06073661]", 
+        "TCLT - Choice": "mwSkillTrain1Mysticism [DIAL:060039E2]", 
+        "TCLT - Choice": "mwSkillTrain1Restoration [DIAL:060039E0]", 
+        "TCLT - Choice": "mwSkillTrain1Security [DIAL:0607365D]", 
+        "TCLT - Choice": "mwSkillTrain1Sneak [DIAL:0607365C]", 
+        "TCLT - Choice": "mwSkillTrain1Speechcraft [DIAL:06073663]", 
+        "TCLT - Choice": "mwSkillTrain1Axe [DIAL:0600E842]", 
+        "TCLT - Choice": "mwSkillTrain1Enchantment [DIAL:0600E841]", 
+        "TCLT - Choice": "mwSkillTrain1MediumArmor [DIAL:0600E840]", 
+        "TCLT - Choice": "mwSkillTrain1ShortBlade [DIAL:0600E83F]", 
+        "TCLT - Choice": "mwSkillTrain1Spear [DIAL:0600E843]", 
+        "TCLT - Choice": "mwSkillTrain1Unarmored [DIAL:06011A13]", 
+        "TCLT - Choice": "mwSkillTrain2Nevermind [DIAL:06006BC2]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 0, 
+            "CompiledSize": 0, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }
+    }
+}

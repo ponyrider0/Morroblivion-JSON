@@ -1,0 +1,110 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 2910, 
+        "Record Flags": {}, 
+        "FormID": "0300650C", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwCWUCastEventHandler", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 9, 
+        "CompiledSize": 591, 
+        "VariableCount": 9, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 11 00 07 00 36 02 00 00 01 02 01 00 04 02 00 04 01 03 00 16 00 15 00 16 00 11 00 20 72 05 00 73 20 00 20 72 05 00 73 1F 00 20 3E 3D 15 00 0C 00 66 06 00 07 00 20 72 05 00 66 14 00 16 00 14 00 01 00 10 00 20 58 89 14 05 00 01 00 72 04 00 20 30 20 3D 3D 8A 14 08 00 02 00 72 06 00 72 04 00 19 00 00 00 65 17 16 00 01 15 00 56 03 00 00 03 00 58 07 00 80 19 07 00 01 00 72 04 00 00 65 17 13 00 01 12 00 56 04 00 00 04 00 56 03 00 00 03 00 42 00 18 00 1C 00 01 00 48 19 05 00 01 00 72 08 00 65 17 16 00 01 15 00 56 03 00 00 03 00 58 09 00 80 19 07 00 01 00 72 04 00 00 65 17 13 00 01 12 00 56 04 00 00 04 00 56 03 00 00 03 00 42 00 18 00 65 17 14 00 01 13 00 56 01 00 00 05 00 42 01 14 56 01 05 00 1F 00 10 00 1C 00 01 00 DF 18 05 00 01 00 73 05 00 65 17 13 00 01 12 00 56 01 05 00 20 00 58 01 00 1B 15 04 00 00 00 00 1C 00 01 00 48 19 05 00 01 00 72 07 00 06 14 39 00 04 00 23 00 25 6E 20 2D 20 43 68 61 72 67 65 20 25 2E 30 66 2F 25 2E 30 66 20 28 61 63 74 69 76 65 20 69 74 65 6D 29 72 05 00 66 03 00 72 05 00 73 20 00 72 05 00 73 1E 00 16 00 18 00 06 00 14 00 20 58 51 16 0E 00 01 00 0A 00 4D 69 67 46 45 41 2E 65 73 70 F9 16 2B 00 01 00 27 00 73 65 74 20 6D 77 43 57 55 2E 46 45 41 63 6F 64 65 20 74 6F 20 6D 69 67 46 65 61 51 2E 78 53 6B 69 6C 6C 43 6F 64 65 F9 16 2A 00 01 00 26 00 73 65 74 20 6D 77 43 57 55 2E 46 45 41 55 73 65 45 78 70 20 74 6F 20 6D 69 67 46 65 61 51 2E 66 55 73 65 45 78 70 F9 16 32 00 01 00 2E 00 73 65 74 20 6D 77 43 57 55 2E 46 45 41 4D 75 6C 74 20 74 6F 20 6D 69 67 46 65 61 51 2E 66 4D 61 67 69 63 49 74 65 6D 55 73 65 4D 75 6C 74 15 00 0C 00 73 07 00 07 00 20 72 05 00 73 22 00 15 00 13 00 73 08 00 0E 00 20 72 08 00 58 08 40 05 00 01 00 73 07 00 FA 18 0A 00 02 00 73 07 00 6E 01 00 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwCWUCastEventHandler\n\n;This is OBSE event handler to track when CWU spell is casted\n;DO NOT attach this script to any object\n\nref caster\nref spell\n\narray_var ar\nref ir\nshort cost\nref rWeap\n\nint code\nint skill\n\n;ref token\n\nbegin Function { caster, spell }\n\n	if mwCWU.ItemChargeCurrent >= mwCWU.ItemChargeCost\n\n		set rWeap to mwCWU.ItemWeap\n\n		if GetEnchantment rWeap == 0	;Some weird bug when weapon token loses it's enchantment\n			SetEnchantment mwCWUDummyWeaponEnch rWeap\n		endif\n\n		; find placeholder weapon in global container: CWUHolderRef\n		Let ar := mwCWUHolderREF.GetInvRefsForItem rWeap\n		Let ir := ar[0]\n		; move placeholder weapon from CWUHolderRef to Player's inventory\n		ir.RemoveMeIR Player\n\n		; re-acquire placeholder weapon from Player's inventory\n		Let ar := Player.GetInvRefsForItem rWeap\n		Let ir := ar[0]\n		Let cost := (-1 * mwCWU.ItemChargeCost)\n\n		; modify current charge of placeholder item\n		ir.ModCurrentCharge cost\n\n		; update quest value for current charge\n		Let mwCWU.ItemChargeCurrent := ir.GetCurrentCharge\n\n		; move placeholder weapon back to global container\n		ir.RemoveMeIR mwCWUHolderREF\n\n		printc \"%n - Charge %.0f/%.0f (active item)\", mwCWU.Item, mwCWU.ItemChargeCurrent, mwCWU.ItemChargeMax\n\n		; if Fundement of Enchantment mod loaded, then add to enchantment skill for use of skill\n		if IsModLoaded \"MigFEA.esp\"\n			RunScriptLine \"set mwCWU.FEAcode to migFeaQ.xSkillCode\"\n			RunScriptLine \"set mwCWU.FEAUseExp to migFeaQ.fUseExp\"\n			RunScriptLine \"set mwCWU.FEAMult to migFeaQ.fMagicItemUseMult\"\n			set code to mwCWU.FEAcode\n;			set token to GetFormFromMod \"MigFEA.esp\" 000ED5\n			set skill to Player.GetAVBaseCalcC code\n;			set skill to player.GetAVBaseCalcF token\n\n			TriggerPlayerSkillUseC code 1 ((mwCWU.FEAMult)*(Pow ((mwCWU.ItemChargeCost)/skill) (mwCWU.FEAUseExp)))\n\n		endif\n	endif\n\nend", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000001", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "caster"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "spell"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000003", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "ar"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "ir"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000005", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "cost"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000006", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "rWeap"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000007", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "code"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000008", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "skill"
+        }
+    ], 
+    "References": [
+        "SCRV - Local Variable": "00000004", 
+        "SCRV - Local Variable": "00000001", 
+        "SCRV - Local Variable": "00000002", 
+        "SCRV - Local Variable": "00000006", 
+        "SCRO - Global Reference": " [:03001075]", 
+        "SCRO - Global Reference": "mwCWUDummyWeaponEnch [ENCH:03004BAD]", 
+        "SCRO - Global Reference": " [:03004BB2]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]", 
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+    ]
+}

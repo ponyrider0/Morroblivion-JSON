@@ -1,0 +1,105 @@
+{
+    "Topic": "1RedoranSHortator [DIAL:01310819]", 
+    "Record Header": {
+        "Signature": "INFO", 
+        "Data Size": 769, 
+        "Record Flags": {}, 
+        "FormID": "01025B09", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "DATA - DATA": {
+        "Type": "00", 
+        "Next Speaker": "00", 
+        "Flags": {
+            "Say Once": true
+        }
+    }, 
+    "QSTI - Quest": "fbmwMQRedoranSarethi [QUST:01001DE1]", 
+    "PNAM - Previous INFO": "00000000", 
+    "Responses": [
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "01", 
+                "Unused": "68 79 6E"
+            }, 
+            "NAM1 - Response Text": "You rescued my son. Words cannot express my gratitude. Therefore, I name you Hortator of House Redoran.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "02", 
+                "Unused": "68 79 6E"
+            }, 
+            "NAM1 - Response Text": "I also promise that I will use my influence with the other councilors of House Redoran. Alas, there is one obstacle.", 
+            "NAM2 - Actor notes": ""
+        }, 
+        {
+            "TRDT - Response Data": {
+                "Emotion Type": "00000000", 
+                "Emotion Value": 50, 
+                "Unused": "00 00 00 00", 
+                "Response number": "03", 
+                "Unused": "68 79 6E"
+            }, 
+            "NAM1 - Response Text": "Bolvyn Venim will never name an outlander Hortator. But if you have the full support of the council, he may agree to an honorable duel.", 
+            "NAM2 - Actor notes": ""
+        }
+    ], 
+    "Conditions": [
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 0.000000000000000, 
+            "Function": "GetPCInFaction:132", 
+            "Unused": "00 00", 
+            "Parameter #1": "0Redoran "Great House Redoran" [FACT:01220000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "60", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 100.000000000000000, 
+            "Function": "GetStage:58", 
+            "Unused": "00 00", 
+            "Parameter #1": "fbmwHRRescueSarethi "House Redoran: Rescue Varvur Sarethi" [QUST:01005198]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }, 
+        {
+            "Type": "00", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 1.000000000000000, 
+            "Function": "GetIsID:72", 
+            "Unused": "00 00", 
+            "Parameter #1": "0athynSsarethi "Athyn Sarethi" [NPC_:012600B2]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
+        }
+    ], 
+    "Choices": [
+        "TCLT - Choice": "1RedoranScouncilors [DIAL:0131076B]"
+    ], 
+    "Result Script": {
+        "SCHR - Basic Script Data": {
+            "Unused": "00 00 00 00", 
+            "RefCount": 3, 
+            "CompiledSize": 31, 
+            "VariableCount": 0, 
+            "Type": "Object:0"
+        }, 
+        "SCDA - Compiled result script": "39 10 0A 00 02 00 72 01 00 6E 32 00 00 00 A9 10 0D 00 03 00 72 02 00 72 03 00 6E 14 00 00 00", 
+        "SCTX - Result script source": "setstage fbmwMQRedoranSarethi 50\r\nmodfactionreaction 0redoran 0nerevarine 20\r\n", 
+        "References": [
+            "SCRO - Global Reference": "fbmwMQRedoranSarethi [QUST:01001DE1]", 
+            "SCRO - Global Reference": "0Redoran [FACT:01220000]", 
+            "SCRO - Global Reference": "0Nerevarine [FACT:01220014]"
+        ]
+    }
+}

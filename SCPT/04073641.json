@@ -1,0 +1,75 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 1544, 
+        "Record Flags": {}, 
+        "FormID": "04073641", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwSkillTrainScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 3, 
+        "CompiledSize": 285, 
+        "VariableCount": 16, 
+        "Type": "Quest:1"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 0F 01 00 00 16 00 0D 00 07 00 09 00 20 73 10 00 20 31 20 3D 3D 58 10 05 00 01 00 72 03 00 15 00 0A 00 66 0A 00 05 00 20 30 2E 30 37 15 00 07 00 73 10 00 02 00 20 30 15 00 07 00 73 04 00 02 00 20 30 15 00 07 00 66 09 00 02 00 20 30 15 00 07 00 66 0F 00 02 00 20 30 06 14 42 00 01 00 3E 00 4D 6F 72 72 6F 62 6C 69 76 69 6F 6E 2D 4D 75 6C 74 69 53 6B 69 6C 6C 2D 54 72 61 69 6E 65 72 73 20 76 31 2E 35 3A 20 69 6E 69 74 69 61 6C 69 7A 65 64 20 61 6E 64 20 72 75 6E 6E 69 6E 67 19 00 00 00 15 00 0B 00 66 09 00 06 00 20 58 27 16 00 00 16 00 0D 00 04 00 09 00 20 66 09 00 20 30 20 21 3D 16 00 20 00 02 00 1C 00 20 66 09 00 20 66 0F 00 20 21 3D 20 72 01 00 58 61 11 00 00 20 31 20 3D 3D 20 26 26 15 00 10 00 73 04 00 0B 00 20 72 01 00 58 92 16 02 00 00 00 15 00 09 00 66 0F 00 04 00 20 66 09 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "ScriptName mwSkillTrainScript\n; Morroblivion MultiSkill Trainers v1.5\n; Script for dyanmically enabling Dialog option to change Trainer Skill\n; The actual choices for which Skills a trainer can offer is stored in\n;  the dialog conditional statements for each skill.\n; The Trainer level for each skill is based off the npc's own level in\n;  that skill.\n\nfloat fQuestDelayTime\nshort reset\n\nshort isTrainer\nref npcRef\nref lastNPC\n\nBegin GameMode\n	if (reset == 1)\n		addtopic mwSkillTrain0\n		set fQuestDelayTime to 0.07 ; 15 times per second\n		set reset to 0\n		set isTrainer to 0\n		set npcRef to 0\n		set lastNPC to 0\n		PrintC \"Morroblivion-MultiSkill-Trainers v1.5: initialized and running\"\n	endif\n\n	set npcRef to GetCrosshairRef\n	if (npcRef != 0)\n		if (npcRef != lastNPC && npcRef.IsActor == 1)\n			set isTrainer to npcRef.OffersTraining\n			set lastNPC to npcRef\n		endif\n	endif\n	\nEnd\n\n;<CSEBlock>\n;<CSECaretPos> 693 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000004", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "isTrainer"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000009", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "AA C9 10 08 00 00 00"
+            }, 
+            "SCVR - Name": "npcRef"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000A", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "A9 C9 10 0C 00 00 00"
+            }, 
+            "SCVR - Name": "fQuestDelayTime"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "0000000F", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {}, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "lastNPC"
+        }, 
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000010", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "00 00 00 00 00 00 00"
+            }, 
+            "SCVR - Name": "reset"
+        }
+    ], 
+    "References": [
+        "SCRV - Local Variable": "00000009", 
+        "SCRV - Local Variable": "0000000F", 
+        "SCRO - Global Reference": "mwSkillTrain0 [DIAL:06073667]"
+    ]
+}

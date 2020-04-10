@@ -1,0 +1,35 @@
+{
+    "Record Header": {
+        "Signature": "SCPT", 
+        "Data Size": 940, 
+        "Record Flags": {}, 
+        "FormID": "040052B2", 
+        "Version Control Info": "00 00 00 00"
+    }, 
+    "EDID - Editor ID": "mwMudcrabScript", 
+    "SCHR - Basic Script Data": {
+        "Unused": "00 00 00 00", 
+        "RefCount": 1, 
+        "CompiledSize": 217, 
+        "VariableCount": 5, 
+        "Type": "Object:0"
+    }, 
+    "SCDA - Compiled Script": "1D 00 00 00 10 00 06 00 00 00 CB 00 00 00 15 00 10 00 73 02 00 0B 00 20 58 01 10 05 00 01 00 72 01 00 16 00 0F 00 01 00 0B 00 20 58 2E 10 00 00 20 31 20 3D 3D 1E 00 00 00 19 00 00 00 16 00 0C 00 01 00 08 00 20 73 02 00 20 30 20 3C 1E 00 00 00 19 00 00 00 16 00 0E 00 01 00 0A 00 20 73 02 00 20 32 30 30 20 3C 6F 19 15 00 03 00 21 00 06 00 73 63 72 69 70 74 7A 00 00 00 00 00 00 2E 40 17 00 02 00 01 00 6F 19 15 00 03 00 21 00 06 00 73 63 72 69 70 74 7A 00 00 00 00 00 00 00 00 19 00 00 00 16 00 0F 00 03 00 0B 00 20 73 02 00 20 31 30 30 30 20 3E 16 00 0F 00 01 00 0B 00 20 58 21 11 00 00 20 31 20 3D 3D 17 10 00 00 19 00 00 00 19 00 00 00 11 00 00 00", 
+    "SCTX - Script Source": "scn mwMudcrabScript\nshort distance\n\nBegin Gamemode\n\n	set distance to (GetDistance Player)\n\n	if (GetDead == 1)\n		return\n	endif\n\n	if (distance < 0)\n		return\n	endif\n\n	; Use ModAV/SetAVMod to affect the local reference and not the global base value for all creatures\n	; balanced for base aggression level of 15\n	if (distance < 200)\n		SetAVMod aggression script 15 ; total aggression 30 (will start combat with personality < 90)\n	else\n		SetAVMod aggression script 0\n	endif\n\n	if (distance > 1000)\n		if (IsInCombat == 1)\n			StopCombat\n		endif\n	endif\n	\nEnd\n\n;<CSEBlock>\n;<CSECaretPos> 35 </CSECaretPos>\n;</CSEBlock>", 
+    "Local Variables": [
+        {
+            "SLSD - Local Variable Data": {
+                "Index": "00000002", 
+                "Unused": "00 00 00 00 00 00 00 00 00 00 00 00", 
+                "Flags": {
+                    "IsLongOrShort": true
+                }, 
+                "Unused": "CD CD CD CD CD CD CD"
+            }, 
+            "SCVR - Name": "distance"
+        }
+    ], 
+    "References": [
+        "SCRO - Global Reference": "PlayerRef [PLYR:00000014]"
+    ]
+}
