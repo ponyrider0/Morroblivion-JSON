@@ -1,8 +1,8 @@
 {
-    "Topic": "1RedoranSHortator [DIAL:01310819]", 
+    "Topic": "1RedoranSHortator2 [DIAL:01320E78]", 
     "Record Header": {
         "Signature": "INFO", 
-        "Data Size": 719, 
+        "Data Size": 559, 
         "Record Flags": {}, 
         "FormID": "01004A76", 
         "Version Control Info": "00 00 00 00"
@@ -14,7 +14,7 @@
             "Goodbye": true
         }
     }, 
-    "QSTI - Quest": "fbmwMQRedoranVenim [QUST:01001DE2]", 
+    "QSTI - Quest": "fbmwMQRedoran [QUST:01001DDC]", 
     "PNAM - Previous INFO": "00000000", 
     "Responses": [
         {
@@ -53,66 +53,6 @@
     ], 
     "Conditions": [
         {
-            "Type": "81", 
-            "Unused": "00 00 00", 
-            "Comparison Value": 20.000000000000000, 
-            "Function": "GetStage:58", 
-            "Unused": "00 00", 
-            "Parameter #1": "fbmwMQRedoranVenim "Convincing Bolyn Venim" [QUST:01001DE2]", 
-            "Parameter #2": "00 00 00 00", 
-            "Unused": "00000000"
-        }, 
-        {
-            "Type": "A1", 
-            "Unused": "00 00 00", 
-            "Comparison Value": 50.000000000000000, 
-            "Function": "GetStage:58", 
-            "Unused": "00 00", 
-            "Parameter #1": "fbmwMQRamoran "Convincing Ramoran" [QUST:01001DE0]", 
-            "Parameter #2": "00 00 00 00", 
-            "Unused": "00000000"
-        }, 
-        {
-            "Type": "A1", 
-            "Unused": "00 00 00", 
-            "Comparison Value": 50.000000000000000, 
-            "Function": "GetStage:58", 
-            "Unused": "00 00", 
-            "Parameter #1": "fbmwMQRedoranArobar "Convincing Miner Arobar" [QUST:01001DDD]", 
-            "Parameter #2": "00 00 00 00", 
-            "Unused": "00000000"
-        }, 
-        {
-            "Type": "A1", 
-            "Unused": "00 00 00", 
-            "Comparison Value": 50.000000000000000, 
-            "Function": "GetStage:58", 
-            "Unused": "00 00", 
-            "Parameter #1": "fbmwMQRedoranLlethri "Convincing Garisa Llethri" [QUST:01001DDE]", 
-            "Parameter #2": "00 00 00 00", 
-            "Unused": "00000000"
-        }, 
-        {
-            "Type": "A1", 
-            "Unused": "00 00 00", 
-            "Comparison Value": 50.000000000000000, 
-            "Function": "GetStage:58", 
-            "Unused": "00 00", 
-            "Parameter #1": "fbmwMQRedoranMorvayn "Convincing Morvayn" [QUST:01001DDF]", 
-            "Parameter #2": "00 00 00 00", 
-            "Unused": "00000000"
-        }, 
-        {
-            "Type": "60", 
-            "Unused": "00 00 00", 
-            "Comparison Value": 50.000000000000000, 
-            "Function": "GetStage:58", 
-            "Unused": "00 00", 
-            "Parameter #1": "fbmwMQRedoranSarethi "Convincing Sarethi" [QUST:01001DE1]", 
-            "Parameter #2": "00 00 00 00", 
-            "Unused": "00000000"
-        }, 
-        {
             "Type": "00", 
             "Unused": "00 00 00", 
             "Comparison Value": 1.000000000000000, 
@@ -121,10 +61,17 @@
             "Parameter #1": "0bolvynSvenim "Bolvyn Venim" [NPC_:012600B4]", 
             "Parameter #2": "00 00 00 00", 
             "Unused": "00000000"
+        }, 
+        {
+            "Type": "40", 
+            "Unused": "00 00 00", 
+            "Comparison Value": 75.000000000000000, 
+            "Function": "GetDisposition:76", 
+            "Unused": "00 00", 
+            "Parameter #1": "TARGET - Target Reference [00000000]", 
+            "Parameter #2": "00 00 00 00", 
+            "Unused": "00000000"
         }
-    ], 
-    "Choices": [
-        "TCLT - Choice": "1RedoranSHortator2 [DIAL:01320E78]"
     ], 
     "Result Script": {
         "SCHR - Basic Script Data": {
